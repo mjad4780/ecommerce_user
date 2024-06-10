@@ -1,10 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_login/flutter_login.dart';
-import 'package:meta/meta.dart';
-
 import '../../data/data_login.dart';
-
 part 'login_state.dart';
 
 class LoginCubit extends Cubit<LoginState> {
