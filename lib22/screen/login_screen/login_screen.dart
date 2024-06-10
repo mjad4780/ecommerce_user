@@ -1,8 +1,9 @@
-import 'package:ecommerce_user/utility/extensions.dart';
+import 'package:flutter_login/flutter_login.dart';
 
 import '../../utility/app_color.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_login/flutter_login.dart';
+// import 'package:flutter_login/flutter_login.dart';
+import '../../utility/extensions.dart';
 import '../home_screen.dart';
 
 class LoginScreen extends StatelessWidget {
