@@ -9,9 +9,10 @@ class LoginCubit extends Cubit<LoginState> {
   TextEditingController password = TextEditingController();
   GlobalKey<FormState> formstate = GlobalKey<FormState>();
   final LoginDate loginData;
-  login() async {
+  login(BuildContext context) async {
     emit(LoginLoading());
-    final response = await loginData.loginData(email.text, password.text);
+    final response =
+        await loginData.loginData(email.text, password.text, context);
     response.fold((l) => emit(LoginFailer(error: l.errMessage)),
         (r) => emit(LoginSuccess()));
   }

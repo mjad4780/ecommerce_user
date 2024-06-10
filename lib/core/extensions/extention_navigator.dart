@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:go_router/go_router.dart';
 
 extension Navigation on BuildContext {
   Future<dynamic> pushNamed(String routeName, {Object? arguments}) {
@@ -17,4 +18,20 @@ extension Navigation on BuildContext {
   }
 
   void pop() => Navigator.of(this).pop();
+
+  Future<dynamic> pushpushReplacement(
+    String path,
+  ) {
+    return GoRouter.of(this).pushReplacement(path);
+  }
+
+  Future<dynamic> push(String path, {String? arguments}) {
+    return GoRouter.of(this).push(path, extra: {'email': arguments});
+  }
+
+  Map<dynamic, dynamic> argument() {
+    Map<dynamic, dynamic> argument =
+        GoRouterState.of(this).extra! as Map<dynamic, dynamic>;
+    return argument;
+  }
 }

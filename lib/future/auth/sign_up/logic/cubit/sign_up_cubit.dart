@@ -3,6 +3,8 @@ import 'package:ecommerce_user/future/auth/sign_up/data/data_sigin_up.dart';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
+import '../../../../../core/extensions/extention_navigator.dart';
+
 part 'sign_up_state.dart';
 
 class SignUpCubit extends Cubit<SignUpState> {
@@ -15,7 +17,7 @@ class SignUpCubit extends Cubit<SignUpState> {
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
   final SignUpDate signUpDate;
 
-  signUp() async {
+  signUp(BuildContext context) async {
     if (formstateSignUp.currentState!.validate()) {
       emit(SignUpLoading());
       final response = await signUpDate.signUpData(
@@ -24,8 +26,14 @@ class SignUpCubit extends Cubit<SignUpState> {
         username.text,
         phone.text,
       );
-      response.fold((l) => emit(SignUpFailer(failer: l.errMessage)),
-          (r) => emit(SignUpSuccess()));
+      response.fold((l) => emit(SignUpFailer(failer: l.errMessage)), (r) async {
+        await Navigation(context).push(
+          '/',
+          arguments: emailSignUp.text,
+        );
+
+        emit(SignUpSuccess());
+      });
     } else {
       autovalidateMode = AutovalidateMode.always;
     }

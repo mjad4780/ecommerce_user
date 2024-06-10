@@ -22,9 +22,9 @@ void push(context, String path) {
   );
 }
 
-void pushpushReplacement(context, String path) {
-  GoRouter.of(context).pushReplacement(path);
-}
+// void pushpushReplacement(context, String path) {
+//   GoRouter.of(context).pushReplacement(path);
+// }
 
 void navigaton(context, Widget path) {
   Navigator.push(

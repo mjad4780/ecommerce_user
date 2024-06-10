@@ -1,9 +1,12 @@
 import 'package:dartz/dartz.dart';
 import 'package:ecommerce_user/my%20core/errors/failure.dart';
-
+import 'package:flutter/material.dart';
+import '../../../../core/extensions/extention_navigator.dart';
 import '../../../../my core/databases/api/api_consumer.dart';
 import '../../../../my core/databases/api/end_ponits.dart';
+import '../../../../my core/databases/cache/cache_helper.dart';
 import '../../../../my core/errors/expentions.dart';
+import '../../../../my core/get_it/get_it.dart';
 
 class LoginDate {
   final ApiConsumer api;
@@ -11,11 +14,19 @@ class LoginDate {
   LoginDate({required this.api});
 
   Future<Either<Failure, dynamic>> loginData(
-      String email, String password) async {
+      String email, String password, BuildContext context) async {
     try {
       var response = await api.post(EndPoint.linklogin,
           isFromData: true, data: {"email": email, "password": password});
       if (response['status'] == 'success') {
+        if (response['data']['user_improve'] != 1) {
+          await Navigation(context).pushpushReplacement('/');
+        } else {
+          getIt<CacheHelper>()
+              .saveData(key: 'id', value: response['data']['user_id']);
+          getIt<CacheHelper>()
+              .saveData(key: 'email', value: response['data']['user_email']);
+        }
         return Right(response);
       } else {
         return Left(Failure(errMessage: response['status']));
