@@ -16,3 +16,6 @@ final class SignUpFailer extends SignUpState {
 }
 
 final class SignImage extends SignUpState {}
+
+/// ::ObscureText
+final class ObscureText extends SignUpState {}

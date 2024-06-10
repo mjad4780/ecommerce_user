@@ -31,11 +31,25 @@ class SignUpCubit extends Cubit<SignUpState> {
           '/',
           arguments: emailSignUp.text,
         );
-
         emit(SignUpSuccess());
       });
     } else {
       autovalidateMode = AutovalidateMode.always;
     }
+  }
+
+  bool obscureText = true;
+
+  obscuretext() {
+    obscureText = !obscureText;
+    emit(ObscureText());
+  }
+
+  //////////////
+  dispose3() {
+    emailSignUp.clear();
+    passwordSignUp.clear();
+    username.clear();
+    phone.clear();
   }
 }

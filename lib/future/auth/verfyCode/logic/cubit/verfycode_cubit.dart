@@ -16,6 +16,7 @@ class VerfycodeCubit extends Cubit<VerfycodeState> {
     responsse.fold((l) => emit(VerfycodeFailer(failer: l.errMessage)),
         (r) => emit(VerfycodeSuccess()));
   }
+  // : send agin
 
   sendverfycodeagin(int verfycode, BuildContext context) async {
     final responsse = await verfyCodeDate.sendverfyCodeagin(context);

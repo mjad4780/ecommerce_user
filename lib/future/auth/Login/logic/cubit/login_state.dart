@@ -14,3 +14,5 @@ final class LoginFailer extends LoginState {
 
   LoginFailer({required this.error});
 }
+
+final class ObscureText extends LoginState {}
