@@ -1,36 +1,33 @@
-// ignore_for_file: file_names
-
-import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-
-import '../../test/test.dart';
+import '../../future/auth/Login/login_screen.dart';
+import '../../future/auth/sign_up/SignUp.dart';
 
 final GoRouter router = GoRouter(routes: [
-  GoRoute(path: "/", builder: (context, state) => const name()),
+  GoRoute(path: "/", builder: (context, state) => const LoginScreen()),
 
-  // GoRoute(
-  //   path: "/Login",
-  //   builder: (context, state) => const Login(),
-  // ),
+  GoRoute(
+    path: "/SignUp",
+    builder: (context, state) => const SignUp(),
+  ),
 
   // NotificationView
 ]);
 
-void push(context, String path) {
-  GoRouter.of(context).push(
-    path,
-  );
-}
+// void push(context, String path) {
+//   GoRouter.of(context).push(
+//     path,
+//   );
+// }
 
 // void pushpushReplacement(context, String path) {
 //   GoRouter.of(context).pushReplacement(path);
 // }
 
-void navigaton(context, Widget path) {
-  Navigator.push(
-    context,
-    MaterialPageRoute(
-      builder: (context) => path,
-    ),
-  );
-}
+// void navigaton(context, Widget path) {
+//   Navigator.push(
+//     context,
+//     MaterialPageRoute(
+//       builder: (context) => path,
+//     ),
+//   );
+// }

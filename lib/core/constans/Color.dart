@@ -16,4 +16,11 @@ class AppColor {
   static const blueGray = Color(0xff778DA9);
   static const textWhite = Color(0xffFFFFFF);
   static const errorRed = Color(0xffFF6E6E);
+  static const darkOrange = Color(0xFFEC6813);
+  static const lightOrange = Color(0xFFf8b89a);
+
+  static const darkGrey = Color(0xFFA6A3A0);
+  static const lightGrey = Color(0xFFE5E6E8);
+  static const textColor1 = Color(0xff353047);
+  static const textColor2 = Color(0xff6f687A);
 }

@@ -1,11 +1,13 @@
 import 'package:ecommerce_user/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'core/class/observer.dart';
 
 import 'core/constans/Color.dart';
 import 'my core/Navigator/Navigator.dart';
 import 'my core/databases/cache/cache_helper.dart';
 import 'my core/get_it/get_it.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -13,6 +15,8 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  Bloc.observer = MyBlocObserver();
+
   setupServise();
   await getIt<CacheHelper>().init();
   runApp(const MyApp());

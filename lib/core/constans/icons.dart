@@ -1,140 +1,144 @@
 class Assets {
   Assets._();
   
-  /// Assets for iconsDelivery1
-  /// assets/icons/delivery1.svg
-  static const String iconsDelivery1 = "assets/icons/delivery1.svg";
+  /// Assets for images001Sale
+  /// assets/images/001-sale.png
+  static const String images001Sale = "assets/images/001-sale.png";
 
-  /// Assets for iconsDelivery2
-  /// assets/icons/delivery2.svg
-  static const String iconsDelivery2 = "assets/icons/delivery2.svg";
+  /// Assets for images002DeliveryTruck
+  /// assets/images/002-delivery-truck.png
+  static const String images002DeliveryTruck = "assets/images/002-delivery-truck.png";
 
-  /// Assets for iconsDelivery3
-  /// assets/icons/delivery3.svg
-  static const String iconsDelivery3 = "assets/icons/delivery3.svg";
+  /// Assets for images002SaleTag
+  /// assets/images/002-sale-tag.png
+  static const String images002SaleTag = "assets/images/002-sale-tag.png";
 
-  /// Assets for iconsDelivery4
-  /// assets/icons/delivery4.svg
-  static const String iconsDelivery4 = "assets/icons/delivery4.svg";
+  /// Assets for images003CashOnDelivery
+  /// assets/images/003-cash-on-delivery.png
+  static const String images003CashOnDelivery = "assets/images/003-cash-on-delivery.png";
 
-  /// Assets for iconsDelivery5
-  /// assets/icons/delivery5.svg
-  static const String iconsDelivery5 = "assets/icons/delivery5.svg";
+  /// Assets for images003Sale1
+  /// assets/images/003-sale-1.png
+  static const String images003Sale1 = "assets/images/003-sale-1.png";
 
-  /// Assets for iconsDelivery6
-  /// assets/icons/delivery6.svg
-  static const String iconsDelivery6 = "assets/icons/delivery6.svg";
+  /// Assets for images004Box
+  /// assets/images/004-box.png
+  static const String images004Box = "assets/images/004-box.png";
 
-  /// Assets for iconsDocFile
-  /// assets/icons/doc_file.svg
-  static const String iconsDocFile = "assets/icons/doc_file.svg";
+  /// Assets for images005DeliveryMan
+  /// assets/images/005-delivery-man.png
+  static const String images005DeliveryMan = "assets/images/005-delivery-man.png";
 
-  /// Assets for iconsDropBox
-  /// assets/icons/drop_box.svg
-  static const String iconsDropBox = "assets/icons/drop_box.svg";
+  /// Assets for images006Delivery
+  /// assets/images/006-delivery.png
+  static const String images006Delivery = "assets/images/006-delivery.png";
 
-  /// Assets for iconsExcelFile
-  /// assets/icons/excel_file.svg
-  static const String iconsExcelFile = "assets/icons/excel_file.svg";
+  /// Assets for images1
+  /// assets/images/1.png
+  static const String images1 = "assets/images/1.png";
 
-  /// Assets for iconsFigmaFile
-  /// assets/icons/Figma_file.svg
-  static const String iconsFigmaFile = "assets/icons/Figma_file.svg";
+  /// Assets for images2
+  /// assets/images/2.png
+  static const String images2 = "assets/images/2.png";
 
-  /// Assets for iconsFolder
-  /// assets/icons/folder.svg
-  static const String iconsFolder = "assets/icons/folder.svg";
+  /// Assets for images3
+  /// assets/images/3.png
+  static const String images3 = "assets/images/3.png";
 
-  /// Assets for iconsGoogleDrive
-  /// assets/icons/google_drive.svg
-  static const String iconsGoogleDrive = "assets/icons/google_drive.svg";
+  /// Assets for images5
+  /// assets/images/5.png
+  static const String images5 = "assets/images/5.png";
 
-  /// Assets for iconsLogo
-  /// assets/icons/logo.svg
-  static const String iconsLogo = "assets/icons/logo.svg";
+  /// Assets for images65e9c8b6d762a
+  /// assets/images/65e9c8b6d762a.png
+  static const String images65e9c8b6d762a = "assets/images/65e9c8b6d762a.png";
 
-  /// Assets for iconsMedia
-  /// assets/icons/media.svg
-  static const String iconsMedia = "assets/icons/media.svg";
+  /// Assets for imagesAvatar
+  /// assets/images/avatar.png
+  static const String imagesAvatar = "assets/images/avatar.png";
 
-  /// Assets for iconsMediaFile
-  /// assets/icons/media_file.svg
-  static const String iconsMediaFile = "assets/icons/media_file.svg";
+  /// Assets for imagesBackup
+  /// assets/images/backup.txt
+  static const String imagesBackup = "assets/images/backup.txt";
 
-  /// Assets for iconsMenuDashboard
-  /// assets/icons/menu_dashboard.svg
-  static const String iconsMenuDashboard = "assets/icons/menu_dashboard.svg";
+  /// Assets for imagesCamera
+  /// assets/images/camera.png
+  static const String imagesCamera = "assets/images/camera.png";
 
-  /// Assets for iconsMenuDoc
-  /// assets/icons/menu_doc.svg
-  static const String iconsMenuDoc = "assets/icons/menu_doc.svg";
+  /// Assets for imagesCategories
+  /// assets/images/categories.png
+  static const String imagesCategories = "assets/images/categories.png";
 
-  /// Assets for iconsMenuNotification
-  /// assets/icons/menu_notification.svg
-  static const String iconsMenuNotification = "assets/icons/menu_notification.svg";
+  /// Assets for imagesDrivethru
+  /// assets/images/drivethru.png
+  static const String imagesDrivethru = "assets/images/drivethru.png";
 
-  /// Assets for iconsMenuProfile
-  /// assets/icons/menu_profile.svg
-  static const String iconsMenuProfile = "assets/icons/menu_profile.svg";
+  /// Assets for imagesEcomLogo
+  /// assets/images/ecom-logo.png
+  static const String imagesEcomLogo = "assets/images/ecom-logo.png";
 
-  /// Assets for iconsMenuSetting
-  /// assets/icons/menu_setting.svg
-  static const String iconsMenuSetting = "assets/icons/menu_setting.svg";
+  /// Assets for imagesEmptyCart
+  /// assets/images/empty_cart.png
+  static const String imagesEmptyCart = "assets/images/empty_cart.png";
 
-  /// Assets for iconsMenuStore
-  /// assets/icons/menu_store.svg
-  static const String iconsMenuStore = "assets/icons/menu_store.svg";
+  /// Assets for imagesGithub
+  /// assets/images/github.png
+  static const String imagesGithub = "assets/images/github.png";
 
-  /// Assets for iconsMenuTask
-  /// assets/icons/menu_task.svg
-  static const String iconsMenuTask = "assets/icons/menu_task.svg";
+  /// Assets for imagesIllustration
+  /// assets/images/illustration.png
+  static const String imagesIllustration = "assets/images/illustration.png";
 
-  /// Assets for iconsMenuTran
-  /// assets/icons/menu_tran.svg
-  static const String iconsMenuTran = "assets/icons/menu_tran.svg";
+  /// Assets for imagesIllustration2
+  /// assets/images/illustration2.png
+  static const String imagesIllustration2 = "assets/images/illustration2.png";
 
-  /// Assets for iconsNotification
-  /// assets/icons/notification.svg
-  static const String iconsNotification = "assets/icons/notification.svg";
+  /// Assets for imagesIllustration3
+  /// assets/images/illustration3.png
+  static const String imagesIllustration3 = "assets/images/illustration3.png";
 
-  /// Assets for iconsOneDrive
-  /// assets/icons/one_drive.svg
-  static const String iconsOneDrive = "assets/icons/one_drive.svg";
+  /// Assets for imagesInfographic
+  /// assets/images/infographic.png
+  static const String imagesInfographic = "assets/images/infographic.png";
 
-  /// Assets for iconsPdfFile
-  /// assets/icons/pdf_file.svg
-  static const String iconsPdfFile = "assets/icons/pdf_file.svg";
+  /// Assets for imagesLaptop
+  /// assets/images/laptop.png
+  static const String imagesLaptop = "assets/images/laptop.png";
 
-  /// Assets for iconsProduct
-  /// assets/icons/Product.svg
-  static const String iconsProduct = "assets/icons/Product.svg";
+  /// Assets for imagesLogo
+  /// assets/images/logo.png
+  static const String imagesLogo = "assets/images/logo.png";
 
-  /// Assets for iconsProduct2
-  /// assets/icons/Product2.svg
-  static const String iconsProduct2 = "assets/icons/Product2.svg";
+  /// Assets for imagesLogoapp
+  /// assets/images/logoapp.png
+  static const String imagesLogoapp = "assets/images/logoapp.png";
 
-  /// Assets for iconsProduct3
-  /// assets/icons/Product3.svg
-  static const String iconsProduct3 = "assets/icons/Product3.svg";
+  /// Assets for imagesNodata
+  /// assets/images/nodata.gif
+  static const String imagesNodata = "assets/images/nodata.gif";
 
-  /// Assets for iconsProduct4
-  /// assets/icons/Product4.svg
-  static const String iconsProduct4 = "assets/icons/Product4.svg";
+  /// Assets for imagesOne
+  /// assets/images/one.PNG
+  static const String imagesOne = "assets/images/one.PNG";
 
-  /// Assets for iconsSearch
-  /// assets/icons/Search.svg
-  static const String iconsSearch = "assets/icons/Search.svg";
+  /// Assets for imagesProductPhoto
+  /// assets/images/product-photo.png
+  static const String imagesProductPhoto = "assets/images/product-photo.png";
 
-  /// Assets for iconsSoundFile
-  /// assets/icons/sound_file.svg
-  static const String iconsSoundFile = "assets/icons/sound_file.svg";
+  /// Assets for imagesProfile
+  /// assets/images/profile.png
+  static const String imagesProfile = "assets/images/profile.png";
 
-  /// Assets for iconsUnknown
-  /// assets/icons/unknown.svg
-  static const String iconsUnknown = "assets/icons/unknown.svg";
+  /// Assets for imagesProfilePic
+  /// assets/images/profile_pic.png
+  static const String imagesProfilePic = "assets/images/profile_pic.png";
 
-  /// Assets for iconsXdFile
-  /// assets/icons/xd_file.svg
-  static const String iconsXdFile = "assets/icons/xd_file.svg";
+  /// Assets for imagesThree
+  /// assets/images/three.PNG
+  static const String imagesThree = "assets/images/three.PNG";
+
+  /// Assets for imagesTwo
+  /// assets/images/two.PNG
+  static const String imagesTwo = "assets/images/two.PNG";
 }
 

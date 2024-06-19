@@ -15,7 +15,7 @@ class LoginScreen extends StatelessWidget {
       // savedEmail: 'testing@gmail.com',
       // savedPassword: '12345',
       loginAfterSignUp: false,
-      logo: const AssetImage('assets/images/logo.png'),
+      // logo: const AssetImage('assets/images/logo.png'),
       onLogin: (loginData) {
         return null;
 
