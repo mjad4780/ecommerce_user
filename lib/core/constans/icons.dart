@@ -1,13 +1,19 @@
 class Assets {
   Assets._();
-  
+
+  static const String onbording1 = "assets/lottie/onbording1.json";
+
+  static const String onbording2 = "assets/lottie/onbording2.json";
+  static const String onbording3 = "assets/lottie/onbording3.json";
+
   /// Assets for images001Sale
   /// assets/images/001-sale.png
   static const String images001Sale = "assets/images/001-sale.png";
 
   /// Assets for images002DeliveryTruck
   /// assets/images/002-delivery-truck.png
-  static const String images002DeliveryTruck = "assets/images/002-delivery-truck.png";
+  static const String images002DeliveryTruck =
+      "assets/images/002-delivery-truck.png";
 
   /// Assets for images002SaleTag
   /// assets/images/002-sale-tag.png
@@ -15,7 +21,8 @@ class Assets {
 
   /// Assets for images003CashOnDelivery
   /// assets/images/003-cash-on-delivery.png
-  static const String images003CashOnDelivery = "assets/images/003-cash-on-delivery.png";
+  static const String images003CashOnDelivery =
+      "assets/images/003-cash-on-delivery.png";
 
   /// Assets for images003Sale1
   /// assets/images/003-sale-1.png
@@ -27,7 +34,8 @@ class Assets {
 
   /// Assets for images005DeliveryMan
   /// assets/images/005-delivery-man.png
-  static const String images005DeliveryMan = "assets/images/005-delivery-man.png";
+  static const String images005DeliveryMan =
+      "assets/images/005-delivery-man.png";
 
   /// Assets for images006Delivery
   /// assets/images/006-delivery.png
@@ -141,4 +149,3 @@ class Assets {
   /// assets/images/two.PNG
   static const String imagesTwo = "assets/images/two.PNG";
 }
-

@@ -16,7 +16,6 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-
     return Scaffold(
       body: Container(
         width: size.width,
@@ -31,29 +30,31 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: size.height * 0.53,
               ),
             ),
-            GestureDetector(
-                onTap: () {
-                  setState(() {
-                    fontsize = first ? 35 : 20;
-                    color = first ? Colors.red : AppColor.textColor1;
-                    first = !first;
-                  });
-                  Future.delayed(
-                    const Duration(
-                      milliseconds: 1000,
-                    ),
-                    () => Navigation(context).push('/SignUp'),
-                  );
-                },
-                child: AnimatedDefaultTextStyle(
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: color,
-                        fontSize: fontsize),
-                    duration: const Duration(seconds: 1),
-                    child: const Text(
-                      'Sign In',
-                    )))
+            Center(
+              child: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      fontsize = first ? 35 : 20;
+                      color = first ? Colors.red : AppColor.textColor1;
+                      first = !first;
+                    });
+                    Future.delayed(
+                      const Duration(
+                        milliseconds: 1000,
+                      ),
+                      () => Navigation(context).push('/SignUp'),
+                    );
+                  },
+                  child: AnimatedDefaultTextStyle(
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: color,
+                          fontSize: fontsize),
+                      duration: const Duration(seconds: 1),
+                      child: const Text(
+                        'Sign In',
+                      ))),
+            )
           ],
         ),
       ),
