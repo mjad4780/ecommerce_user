@@ -1,12 +1,12 @@
 class EndPoint {
-  static String baseUrl = "http://10.0.2.2/e-ecommerse";
+  static const String baseUrl = "http://10.0.2.2/e-ecommerse";
 
 //ده خاص باالاميلوتر لانه غير مرفوع علي استضافه
   static String test = "$baseUrl/test.php";
 
 ///////Auth
   static String sugin_up = "$baseUrl/auth/sign_up.php";
-  static String linklogin = "$baseUrl/auth/login.php";
+  static const String linklogin = "$baseUrl/auth/login.php";
   static String verfycode = "$baseUrl/auth/verfycode.php";
   static String sendverfycode = "$baseUrl/auth/sendverfycode.php";
 
@@ -20,7 +20,7 @@ class EndPoint {
   static String categories = "$baseUrl/items/categories_item.php";
   static String offers = "$baseUrl/items/offers.php";
 
-  static String home = "$baseUrl/home.php";
+  static const String home = "$baseUrl/home.php";
 
 //////////////favorite//////////////
   static String removefavorite = "$baseUrl/favorite/removefavorite.php";
@@ -36,7 +36,7 @@ class EndPoint {
   static String image_cat = '$baseUrl/upload/categories';
   static String image_item = '$baseUrl/upload/item';
   //////////////////searchitem
-  static String search = '$baseUrl/items/search.php';
+  static const String search = '$baseUrl/items/search.php';
   ////////////////adress/////////////
   static String adress_get = '$baseUrl/adress/get_adress.php';
   static String adress_add = '$baseUrl/adress/add_adress.php';

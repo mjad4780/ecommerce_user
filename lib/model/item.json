@@ -1,0 +1,25 @@
+{
+    "status": "success",
+    "data": [
+      {
+        "item_id": 4,
+        "item_name": "Dell G15-5511",
+        "item_name_ar": "لاب توب ديل G15-5511 ",
+        "item_decs": "Dell G15-5511 Gaming Laptop, Intel Core i5-11260H Six-Core, RAM 8GB, SSD 512GB, NVIDIA GeForce RTX3050 4GB, GDDR6 15.6 inch, 120Hz, Backlit Keyboard, Windows 10, Gray",
+        "item_decs_ar": "لاب توب ديل G15-5511 للالعاب، انتل كور جيل11-i5 11260H ستة نواة، RAM\u200f 8 جيجابايت هارد SSD 512 جيجا، انفيديا جيفورس RTX3050 جيجا 4، GDDR6 15.6 بوصة، 120هرتز، كيبورد باضاءة خلفية، ويندوز 10، رمادي",
+        "item_image": "2.png",
+        "item_count": 1,
+        "item_active": 1,
+        "item_price": 37000,
+        "item_discount": 10,
+        "item_data": "2024-03-25 17:52:40",
+        "item_categories": 14,
+        "categories_id": 14,
+        "categories_name": "laptop",
+        "categories_name_ar": "لابتوب",
+        "categories_Image": "4638laptop.png",
+        "categories_Data": "2024-03-20 10:11:45",
+        "itemprice_discount": 33300
+      }
+    ]
+  }

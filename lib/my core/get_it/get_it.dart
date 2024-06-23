@@ -1,28 +1,22 @@
 import 'package:dio/dio.dart';
+import 'package:ecommerce_user/test/cubit/test_cubit.dart';
+import 'package:ecommerce_user/test/networking/api_service_test.dart';
 import 'package:get_it/get_it.dart';
-import '../../future/auth/Login/data/data_login.dart';
-import '../../future/auth/Login/logic/cubit/login_cubit.dart';
-import '../../future/auth/forgetpassword/data/ForgetPassword.dart';
-import '../../future/auth/forgetpassword/logic/cubit/forger_password_cubit.dart';
-import '../../future/auth/sign_up/data/data_sigin_up.dart';
-import '../../future/auth/sign_up/logic/cubit/sign_up_cubit.dart';
-import '../../future/auth/verfyCode/data/data_verfycode.dart';
-import '../../future/auth/verfyCode/logic/cubit/verfycode_cubit.dart';
-import '../databases/api/dio_consumer.dart';
+
+import '../../core/networking/api_service.dart';
+import '../../core/networking/dio_factory.dart';
+import '../../test/repo.dart';
 import '../databases/cache/cache_helper.dart';
 
 final getIt = GetIt.instance;
 void setupServise() {
+  Dio dio = DioFactory.getDio();
+  getIt.registerLazySingleton<ApiService>(() => ApiService(dio));
+  getIt.registerLazySingleton<ApiServiceTest>(() => ApiServiceTest(dio));
+
+  getIt.registerLazySingleton<LoginRepo>(() => LoginRepo(getIt()));
+  getIt.registerFactory<TestCubit>(() => TestCubit(getIt()));
   getIt.registerSingleton<CacheHelper>(CacheHelper());
-  getIt.registerSingleton<Dio>(Dio());
-  getIt.registerSingleton<DioConsumer>(DioConsumer(dio: getIt<Dio>()));
-  getIt.registerFactory(
-      () => ForgerPasswordCubit(ForgetPassword(api: getIt<DioConsumer>())));
-  getIt.registerFactory(() => LoginCubit(LoginDate(api: getIt<DioConsumer>())));
-  getIt.registerFactory(
-      () => SignUpCubit(SignUpDate(api: getIt<DioConsumer>())));
-  getIt.registerFactory(
-      () => VerfycodeCubit(VerfyCodeDate(api: getIt<DioConsumer>())));
 
   // getIt.registerSingleton<Crud>(
   //     Crud(api: getIt<DioConsumer>(), networkInfo: getIt<NetworkInfoImpl>()));

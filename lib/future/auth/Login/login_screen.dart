@@ -1,6 +1,8 @@
 import 'package:ecommerce_user/core/constans/Color.dart';
 import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
+import 'package:ecommerce_user/test/cubit/test_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -32,18 +34,22 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             Center(
               child: GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      fontsize = first ? 35 : 20;
-                      color = first ? Colors.red : AppColor.textColor1;
-                      first = !first;
-                    });
-                    Future.delayed(
-                      const Duration(
-                        milliseconds: 1000,
-                      ),
-                      () => Navigation(context).push('/SignUp'),
-                    );
+                  onTap: () async {
+                    context.read<TestCubit>().emitLoginStates();
+
+                    context.read<TestCubit>().emitHomeStates();
+
+                    // setState(() {
+                    //   fontsize = first ? 35 : 20;
+                    //   color = first ? Colors.red : AppColor.textColor1;
+                    //   first = !first;
+                    // });
+                    // Future.delayed(
+                    //   const Duration(
+                    //     milliseconds: 1000,
+                    //   ),
+                    //   () => Navigation(context).push('/SignUp'),
+                    // );
                   },
                   child: AnimatedDefaultTextStyle(
                       style: TextStyle(

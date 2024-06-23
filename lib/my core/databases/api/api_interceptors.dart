@@ -8,7 +8,8 @@ class ApiInterceptor extends Interceptor {
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
 //options.queryParameters[]
-    options.headers['Accept-Language'] = "ar";
+
+    options.headers['Accept-Language'] = "en";
 
     options.headers['Content-Type'] = "application/json";
 

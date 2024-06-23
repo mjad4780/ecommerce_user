@@ -1,3 +1,14 @@
+class ItemsResponse2 {
+  String? status;
+  List<ItemsModel?>? data;
+
+  ItemsResponse2({this.status, this.data});
+  ItemsResponse2.fromJson(Map<String, dynamic> json) {
+    status = json['status'];
+    data = json['data'];
+  }
+}
+
 class ItemsModel {
   int? itemsId;
 

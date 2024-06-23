@@ -2,8 +2,6 @@
 // import 'package:flutter/widgets.dart';
 // import 'package:lottie/lottie.dart';
 
-
-
 // class HandlingDataView extends StatelessWidget {
 //   final Widget widget;
 //   final StatusReqest statusReqest1;
