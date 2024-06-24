@@ -1,10 +1,11 @@
 import 'package:dartz/dartz.dart';
 import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
-import 'package:ecommerce_user/my%20core/errors/failure.dart';
 import 'package:flutter/material.dart';
+import '../../../../core/errors/expentions.dart';
+import '../../../../core/errors/failure.dart';
+import '../../../../core/networking/api_constants.dart';
 import '../../../../my core/databases/api/api_consumer.dart';
 import '../../../../my core/databases/api/end_ponits.dart';
-import '../../../../my core/errors/expentions.dart';
 
 class VerfyCodeDate {
   final ApiConsumer api;
@@ -15,7 +16,7 @@ class VerfyCodeDate {
       int verfycode, BuildContext context) async {
     try {
       var response =
-          await api.post(EndPoint.verfycode, isFromData: true, data: {
+          await api.post(ApiConstants.verfycode, isFromData: true, data: {
         'email': Navigation(context).argument()['email'],
         'verfycode': verfycode,
       });
@@ -34,7 +35,7 @@ class VerfyCodeDate {
       BuildContext context) async {
     try {
       var response =
-          await api.post(EndPoint.sendverfycode, isFromData: true, data: {
+          await api.post(ApiConstants.sendverfycode, isFromData: true, data: {
         'email': Navigation(context).argument()['email'],
       });
       if (response['status'] == 'success') {

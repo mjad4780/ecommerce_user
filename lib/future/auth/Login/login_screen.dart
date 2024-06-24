@@ -35,9 +35,9 @@ class _LoginScreenState extends State<LoginScreen> {
             Center(
               child: GestureDetector(
                   onTap: () async {
-                    context.read<TestCubit>().emitLoginStates();
+                    // context.read<TestCubit>().emitLoginStates();
 
-                    context.read<TestCubit>().emitHomeStates();
+                    // context.read<TestCubit>().emitHomeStates();
 
                     // setState(() {
                     //   fontsize = first ? 35 : 20;

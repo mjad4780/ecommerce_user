@@ -1,0 +1,200 @@
+{
+    "status": "success",
+    "setting": {
+      "status": "success",
+      "data": [
+        {
+          "setting_id": 1,
+          "setting_title": "A summer surprise",
+          "setting_body": "Cashback 80%",
+          "setting_datedelvery": 30,
+          "setting_image": "['ggggg','jjjjjj']"
+        },
+        {
+          "setting_id": 2,
+          "setting_title": "hello",
+          "setting_body": "20% discount",
+          "setting_datedelvery": 30,
+          "setting_image": ""
+        },
+        {
+          "setting_id": 3,
+          "setting_title": "hello2",
+          "setting_body": "20% discount",
+          "setting_datedelvery": 30,
+          "setting_image": ""
+        }
+      ]
+    },
+    "itemtopselling": {
+      "status": "success",
+      "data": [
+        {
+          "itemprice_discount": 160,
+          "cart_id": 137,
+          "cart_itemid": 2,
+          "cart_userid": 100,
+          "cart_orders": 71,
+          "item_id": 2,
+          "item_name": "Xiaomi Redmi 13C",
+          "item_name_ar": "شاومي ريدمي 13C",
+          "item_decs": "Xiaomi Redmi 13C (8GB RAM + 256GB RAM) 168 x 78 x 8.1 mm, Midnight Black, Dual SIM",
+          "item_decs_ar": "شاومي ريدمي 13C (ذاكرة رام 8 جيجابايت + ذاكرة رام 256 جيجابايت) 168 × 78 × 8.1 ملم، اسود ميدنايت، بشريحتين",
+          "item_image": "1.png",
+          "item_count": 1,
+          "item_active": 1,
+          "item_price": 200,
+          "item_discount": 20,
+          "item_data": "2024-03-21 15:40:28",
+          "item_categories": 15,
+          "countorders": 3
+        }
+      ]
+    },
+    "categories": {
+      "status": "success",
+      "data": [
+        {
+          "categories_id": 11,
+          "categories_name": "choise",
+          "categories_name_ar": "حذاء",
+          "categories_Image": "1300sneakers.png",
+          "categories_Data": "2024-03-20 10:10:08"
+        },
+        {
+          "categories_id": 12,
+          "categories_name": "camera",
+          "categories_name_ar": "كاميرا",
+          "categories_Image": "3852camera.png",
+          "categories_Data": "2024-03-20 10:10:59"
+        },
+        {
+          "categories_id": 14,
+          "categories_name": "laptop",
+          "categories_name_ar": "لابتوب",
+          "categories_Image": "4638laptop.png",
+          "categories_Data": "2024-03-20 10:11:45"
+        },
+        {
+          "categories_id": 15,
+          "categories_name": "mobile",
+          "categories_name_ar": "موبايل",
+          "categories_Image": "7874cell-phone.png",
+          "categories_Data": "2024-03-20 10:13:16"
+        },
+        {
+          "categories_id": 17,
+          "categories_name": "PC2",
+          "categories_name_ar": "كمبيوتر",
+          "categories_Image": "7152monitor.png",
+          "categories_Data": "2024-03-20 10:14:54"
+        },
+        {
+          "categories_id": 44,
+          "categories_name": "gggggggaff",
+          "categories_name_ar": "ggggggggg",
+          "categories_Image": "9843Screenshot (205).png",
+          "categories_Data": "2024-05-14 22:34:54"
+        },
+        {
+          "categories_id": 45,
+          "categories_name": "gg67r4e55dgd",
+          "categories_name_ar": "gggggggggsfa",
+          "categories_Image": "80232269e301-8a24-462d-8185-ff4f2571ca601043951668385361579.jpg",
+          "categories_Data": "2024-05-14 22:36:46"
+        },
+        {
+          "categories_id": 48,
+          "categories_name": "mohamed",
+          "categories_name_ar": "wszhgdrhyd",
+          "categories_Image": "6490IMG_20240303_213314.jpg",
+          "categories_Data": "2024-05-15 19:11:41"
+        }
+      ]
+    },
+    "item1view": {
+      "status": "success",
+      "data": [
+        {
+          "item_id": 2,
+          "item_name": "Xiaomi Redmi 13C",
+          "item_name_ar": "شاومي ريدمي 13C",
+          "item_decs": "Xiaomi Redmi 13C (8GB RAM + 256GB RAM) 168 x 78 x 8.1 mm, Midnight Black, Dual SIM",
+          "item_decs_ar": "شاومي ريدمي 13C (ذاكرة رام 8 جيجابايت + ذاكرة رام 256 جيجابايت) 168 × 78 × 8.1 ملم، اسود ميدنايت، بشريحتين",
+          "item_image": "1.png",
+          "item_count": 1,
+          "item_active": 1,
+          "item_price": 200,
+          "item_discount": 20,
+          "item_data": "2024-03-21 15:40:28",
+          "item_categories": 15,
+          "categories_id": 15,
+          "categories_name": "mobile",
+          "categories_name_ar": "موبايل",
+          "categories_Image": "7874cell-phone.png",
+          "categories_Data": "2024-03-20 10:13:16",
+          "itemprice_discount": 160
+        },
+        {
+          "item_id": 4,
+          "item_name": "Dell G15-5511",
+          "item_name_ar": "لاب توب ديل G15-5511 ",
+          "item_decs": "Dell G15-5511 Gaming Laptop, Intel Core i5-11260H Six-Core, RAM 8GB, SSD 512GB, NVIDIA GeForce RTX3050 4GB, GDDR6 15.6 inch, 120Hz, Backlit Keyboard, Windows 10, Gray",
+          "item_decs_ar": "لاب توب ديل G15-5511 للالعاب، انتل كور جيل11-i5 11260H ستة نواة، RAM\u200f 8 جيجابايت هارد SSD 512 جيجا، انفيديا جيفورس RTX3050 جيجا 4، GDDR6 15.6 بوصة، 120هرتز، كيبورد باضاءة خلفية، ويندوز 10، رمادي",
+          "item_image": "2.png",
+          "item_count": 1,
+          "item_active": 1,
+          "item_price": 37000,
+          "item_discount": 10,
+          "item_data": "2024-03-25 17:52:40",
+          "item_categories": 14,
+          "categories_id": 14,
+          "categories_name": "laptop",
+          "categories_name_ar": "لابتوب",
+          "categories_Image": "4638laptop.png",
+          "categories_Data": "2024-03-20 10:11:45",
+          "itemprice_discount": 33300
+        },
+        {
+          "item_id": 5,
+          "item_name": "Canon EOS 4000D Camera",
+          "item_name_ar": "كاميرا كانون اي او اس 4000",
+          "item_decs": "Canon EOS 4000D Camera, EF18-55 Electronic Focus Lens and Defocus Control, Black",
+          "item_decs_ar": "كاميرا كانون اي او اس 4000 دي، بعدسات الكترونية التركيز EF18-55 وميزة التحكم في الغاء الضبط البؤري، اسود\r\n",
+          "item_image": "5.png",
+          "item_count": 3,
+          "item_active": 1,
+          "item_price": 35000,
+          "item_discount": 80,
+          "item_data": "2024-03-25 17:52:40",
+          "item_categories": 12,
+          "categories_id": 12,
+          "categories_name": "camera",
+          "categories_name_ar": "كاميرا",
+          "categories_Image": "3852camera.png",
+          "categories_Data": "2024-03-20 10:10:59",
+          "itemprice_discount": 7000
+        },
+        {
+          "item_id": 27,
+          "item_name": "product2",
+          "item_name_ar": "منتج2",
+          "item_decs": "hellooo",
+          "item_decs_ar": "مرحبا",
+          "item_image": "1045Screenshot_٢٠٢٣-٠٤-٠٣-٢١-٠٩-١١-٤٩_f9ee0578fe1cc94de7482bd41accb329.jpg",
+          "item_count": 3,
+          "item_active": 1,
+          "item_price": 400,
+          "item_discount": 20,
+          "item_data": "2024-05-26 23:37:03",
+          "item_categories": 11,
+          "categories_id": 11,
+          "categories_name": "choise",
+          "categories_name_ar": "حذاء",
+          "categories_Image": "1300sneakers.png",
+          "categories_Data": "2024-03-20 10:10:08",
+          "itemprice_discount": 320
+        }
+      ]
+    }
+  }

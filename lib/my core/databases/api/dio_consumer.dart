@@ -1,17 +1,18 @@
 import 'dart:convert';
 
+import 'package:ecommerce_user/core/networking/api_constants.dart';
+
+import '../../../core/errors/expentions.dart';
 import 'api_consumer.dart';
 import 'api_interceptors.dart';
 import 'end_ponits.dart';
 import 'package:dio/dio.dart';
 
-import '../../errors/expentions.dart';
-
 class DioConsumer extends ApiConsumer {
   final Dio dio;
 
   DioConsumer({required this.dio}) {
-    dio.options.baseUrl = EndPoint.baseUrl;
+    dio.options.baseUrl = ApiConstants.baseUrl;
 //dio.options.queryParameters.addAll(other)
     dio.interceptors.add(ApiInterceptor());
 

@@ -2,13 +2,15 @@ import 'package:ecommerce_user/firebase_options.dart';
 import 'package:ecommerce_user/test/cubit/test_cubit.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'core/Navigator/Navigator.dart';
+import 'core/class/cache_helper.dart';
 import 'core/class/observer.dart';
 
 import 'core/constans/Color.dart';
-import 'my core/Navigator/Navigator.dart';
-import 'my core/databases/cache/cache_helper.dart';
-import 'my core/get_it/get_it.dart';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'core/get_it/get_it.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,18 +30,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => getIt<TestCubit>(),
-      child: MaterialApp.router(
-        routerConfig: router,
-        debugShowCheckedModeBanner: false,
-        title: 'Flutter Admin Panel',
-        theme: ThemeData.light().copyWith(
-          scaffoldBackgroundColor: AppColor.lightGrey,
-          // textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
-          //     .apply(bodyColor: Colors.white),
-          canvasColor: AppColor.secondaryColor,
-        ),
+    return MaterialApp.router(
+      routerConfig: router,
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Admin Panel',
+      theme: ThemeData.light().copyWith(
+        scaffoldBackgroundColor: AppColor.lightGrey,
+        // textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
+        //     .apply(bodyColor: Colors.white),
+        canvasColor: AppColor.secondaryColor,
       ),
     );
   }

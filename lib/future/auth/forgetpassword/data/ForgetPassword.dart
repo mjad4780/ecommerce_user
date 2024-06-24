@@ -1,10 +1,11 @@
 import 'package:dartz/dartz.dart';
-import 'package:ecommerce_user/my%20core/errors/failure.dart';
+import 'package:ecommerce_user/core/networking/api_constants.dart';
+import '../../../../core/class/cache_helper.dart';
+import '../../../../core/errors/expentions.dart';
+import '../../../../core/errors/failure.dart';
+import '../../../../core/get_it/get_it.dart';
 import '../../../../my core/databases/api/api_consumer.dart';
 import '../../../../my core/databases/api/end_ponits.dart';
-import '../../../../my core/databases/cache/cache_helper.dart';
-import '../../../../my core/errors/expentions.dart';
-import '../../../../my core/get_it/get_it.dart';
 
 class ForgetPassword {
   final ApiConsumer api;
@@ -15,7 +16,7 @@ class ForgetPassword {
   Future<Either<Failure, dynamic>> checkEmail() async {
     try {
       var response =
-          await api.post(EndPoint.check_email, isFromData: true, data: {
+          await api.post(ApiConstants.checkEmail, isFromData: true, data: {
         'email': getIt<CacheHelper>().getData(key: 'email'),
       });
       if (response['status'] == 'success') {
@@ -33,7 +34,7 @@ class ForgetPassword {
   Future<Either<Failure, dynamic>> repassword(String password) async {
     try {
       var response =
-          await api.post(EndPoint.Repassword, isFromData: true, data: {
+          await api.post(ApiConstants.repassword, isFromData: true, data: {
         'email': getIt<CacheHelper>().getData(key: 'email'),
         'password': password,
       });
@@ -52,7 +53,7 @@ class ForgetPassword {
   Future<Either<Failure, dynamic>> verfyCodeForget(int verfycode) async {
     try {
       var response =
-          await api.post(EndPoint.verfycode_forget, isFromData: true, data: {
+          await api.post(ApiConstants.verfyCodeForget, isFromData: true, data: {
         'email': getIt<CacheHelper>().getData(key: 'email'),
         'verfycode': verfycode,
       });

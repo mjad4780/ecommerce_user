@@ -1,9 +1,10 @@
 import 'package:dartz/dartz.dart';
-import 'package:ecommerce_user/my%20core/errors/failure.dart';
 
+import '../../../../core/errors/expentions.dart';
+import '../../../../core/errors/failure.dart';
+import '../../../../core/networking/api_constants.dart';
 import '../../../../my core/databases/api/api_consumer.dart';
 import '../../../../my core/databases/api/end_ponits.dart';
-import '../../../../my core/errors/expentions.dart';
 
 class SignUpDate {
   final ApiConsumer api;
@@ -13,7 +14,8 @@ class SignUpDate {
   Future<Either<Failure, dynamic>> signUpData(
       String email, String password, String username, String phone) async {
     try {
-      var response = await api.post(EndPoint.sugin_up, isFromData: true, data: {
+      var response =
+          await api.post(ApiConstants.signUp, isFromData: true, data: {
         'username': username,
         'email': email,
         'phone': phone,
