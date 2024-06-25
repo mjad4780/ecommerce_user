@@ -1,21 +1,11 @@
 part of 'sign_up_cubit.dart';
 
-@immutable
-sealed class SignUpState {}
+@freezed
+class SignUpState with _$SignUpState {
+  const factory SignUpState.initial() = _Initial;
+  const factory SignUpState.laoding() = Laoding;
+  const factory SignUpState.success() = Success;
+  const factory SignUpState.error({required String error}) = Error;
 
-final class SignUpInitial extends SignUpState {}
-
-final class SignUpLoading extends SignUpState {}
-
-final class SignUpSuccess extends SignUpState {}
-
-final class SignUpFailer extends SignUpState {
-  final String failer;
-
-  SignUpFailer({required this.failer});
+  const factory SignUpState.obscureText() = ObscureText;
 }
-
-final class SignImage extends SignUpState {}
-
-/// ::ObscureText
-final class ObscureText extends SignUpState {}

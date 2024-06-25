@@ -1,33 +1,28 @@
-import 'package:dartz/dartz.dart';
+import 'package:ecommerce_user/model/response_status/response_status.dart';
 
-import '../../../../core/errors/expentions.dart';
-import '../../../../core/errors/failure.dart';
-import '../../../../core/networking/api_constants.dart';
-import '../../../../my core/databases/api/api_consumer.dart';
-import '../../../../my core/databases/api/end_ponits.dart';
+import '../../../../core/function/formDataPost.dart';
+import '../../../../core/networking/api_error_handler.dart';
+import '../../../../core/networking/api_result.dart';
+import '../../../../core/networking/api_service.dart';
 
 class SignUpDate {
-  final ApiConsumer api;
+  final ApiService _api;
 
-  SignUpDate({required this.api});
+  SignUpDate(this._api);
 
-  Future<Either<Failure, dynamic>> signUpData(
-      String email, String password, String username, String phone) async {
+  Future<ApiResult<ResponseStatus>> signUp(
+      String email, String password, String phone, String username) async {
+    Map<String, dynamic> map = {
+      "username": username,
+      "email": email,
+      "phone": phone,
+      "password": password
+    };
     try {
-      var response =
-          await api.post(ApiConstants.signUp, isFromData: true, data: {
-        'username': username,
-        'email': email,
-        'phone': phone,
-        'password': password,
-      });
-      if (response['status'] == 'success') {
-        return Right(response);
-      } else {
-        return Left(Failure(errMessage: response['status']));
-      }
-    } on ServerException catch (e) {
-      return Left(Failure(errMessage: e.errorModel.errorMessage));
+      final response = await _api.signUp(formDataPost(map));
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ErrorHandler.handle(e));
     }
   }
 }

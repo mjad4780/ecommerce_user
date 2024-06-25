@@ -1,14 +1,14 @@
 import 'package:bloc/bloc.dart';
-import 'package:ecommerce_user/future/auth/sign_up/data/data_sigin_up.dart';
 import 'package:flutter/material.dart';
-import 'package:meta/meta.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../../../core/extensions/extention_navigator.dart';
+import '../../data/data_sigin_up.dart';
 
 part 'sign_up_state.dart';
+part 'sign_up_cubit.freezed.dart';
 
 class SignUpCubit extends Cubit<SignUpState> {
-  SignUpCubit(this.signUpDate) : super(SignUpInitial());
+  SignUpCubit(this.signUpDate) : super(const SignUpState.initial());
   TextEditingController username = TextEditingController();
   TextEditingController emailSignUp = TextEditingController();
   TextEditingController phone = TextEditingController();
@@ -17,21 +17,19 @@ class SignUpCubit extends Cubit<SignUpState> {
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
   final SignUpDate signUpDate;
 
-  signUp(BuildContext context) async {
+  signUp() async {
     if (formstateSignUp.currentState!.validate()) {
-      emit(SignUpLoading());
-      final response = await signUpDate.signUpData(
+      emit(const SignUpState.laoding());
+      final response = await signUpDate.signUp(
         emailSignUp.text,
         passwordSignUp.text,
-        username.text,
         phone.text,
+        username.text,
       );
-      response.fold((l) => emit(SignUpFailer(failer: l.errMessage)), (r) async {
-        await Navigation(context).push(
-          '/',
-          arguments: emailSignUp.text,
-        );
-        emit(SignUpSuccess());
+      response.when(success: (responseStatus) {
+        emit(const SignUpState.success());
+      }, failure: (error) {
+        emit(SignUpState.error(error: error.apiErrorModel.messege ?? ''));
       });
     } else {
       autovalidateMode = AutovalidateMode.always;
@@ -42,7 +40,7 @@ class SignUpCubit extends Cubit<SignUpState> {
 
   obscuretext() {
     obscureText = !obscureText;
-    emit(ObscureText());
+    emit(const SignUpState.obscureText());
   }
 
   //////////////

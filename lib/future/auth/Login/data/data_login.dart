@@ -1,39 +1,23 @@
-import 'package:dartz/dartz.dart';
-import 'package:flutter/material.dart';
-import '../../../../core/class/cache_helper.dart';
-import '../../../../core/errors/expentions.dart';
-import '../../../../core/errors/failure.dart';
-import '../../../../core/extensions/extention_navigator.dart';
-import '../../../../core/get_it/get_it.dart';
-import '../../../../core/networking/api_constants.dart';
-import '../../../../my core/databases/api/api_consumer.dart';
-import '../../../../my core/databases/api/end_ponits.dart';
+import '../../../../core/function/formDataPost.dart';
 
-class LoginDate {
-  final ApiConsumer api;
+import '../../../../core/networking/api_error_handler.dart';
+import '../../../../core/networking/api_result.dart';
+import '../../../../core/networking/api_service.dart';
+import '../../../../model/response_login/response_login.dart';
 
-  LoginDate({required this.api});
+class LoginRepo {
+  final ApiService _apiService;
 
-  Future<Either<Failure, dynamic>> loginData(
-      String email, String password, BuildContext context) async {
+  LoginRepo(this._apiService);
+
+  Future<ApiResult<ResponseLogin>> login(String email, String password) async {
+    Map<String, dynamic> ff = {"email": email, "password": password};
+
     try {
-      var response = await api.post(ApiConstants.linklogin,
-          isFromData: true, data: {"email": email, "password": password});
-      if (response['status'] == 'success') {
-        if (response['data']['user_improve'] != 1) {
-          await Navigation(context).pushpushReplacement('/');
-        } else {
-          getIt<CacheHelper>()
-              .saveData(key: 'id', value: response['data']['user_id']);
-          getIt<CacheHelper>()
-              .saveData(key: 'email', value: response['data']['user_email']);
-        }
-        return Right(response);
-      } else {
-        return Left(Failure(errMessage: response['status']));
-      }
-    } on ServerException catch (e) {
-      return Left(Failure(errMessage: e.errorModel.errorMessage));
+      final response = await _apiService.login(formDataPost(ff));
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ErrorHandler.handle(e));
     }
   }
 }

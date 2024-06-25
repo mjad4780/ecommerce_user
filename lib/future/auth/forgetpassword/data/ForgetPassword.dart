@@ -1,69 +1,56 @@
-import 'package:dartz/dartz.dart';
-import 'package:ecommerce_user/core/networking/api_constants.dart';
-import '../../../../core/class/cache_helper.dart';
-import '../../../../core/errors/expentions.dart';
-import '../../../../core/errors/failure.dart';
-import '../../../../core/get_it/get_it.dart';
-import '../../../../my core/databases/api/api_consumer.dart';
-import '../../../../my core/databases/api/end_ponits.dart';
+import '../../../../core/function/formDataPost.dart';
+import '../../../../core/networking/api_error_handler.dart';
+import '../../../../core/networking/api_result.dart';
+import '../../../../core/networking/api_service.dart';
+import '../../../../model/response_status/response_status.dart';
 
 class ForgetPassword {
-  final ApiConsumer api;
+  final ApiService _apiService;
 
-  ForgetPassword({required this.api});
+  ForgetPassword(this._apiService);
 
   /// :check email
-  Future<Either<Failure, dynamic>> checkEmail() async {
+
+  Future<ApiResult<ResponseStatus>> checkEmail(
+    String email,
+  ) async {
+    Map<String, dynamic> map = {
+      "email": email,
+    };
+
     try {
-      var response =
-          await api.post(ApiConstants.checkEmail, isFromData: true, data: {
-        'email': getIt<CacheHelper>().getData(key: 'email'),
-      });
-      if (response['status'] == 'success') {
-        return Right(response);
-      } else {
-        return Left(Failure(errMessage: response['status']));
-      }
-    } on ServerException catch (e) {
-      return Left(Failure(errMessage: e.errorModel.errorMessage));
+      final response = await _apiService.checkEmail(formDataPost(map));
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ErrorHandler.handle(e));
     }
   }
 
   /// :repassword
 
-  Future<Either<Failure, dynamic>> repassword(String password) async {
+  Future<ApiResult<ResponseStatus>> repassword(
+      String email, String password) async {
+    Map<String, dynamic> map = {"email": email, 'password': password};
+
     try {
-      var response =
-          await api.post(ApiConstants.repassword, isFromData: true, data: {
-        'email': getIt<CacheHelper>().getData(key: 'email'),
-        'password': password,
-      });
-      if (response['status'] == 'success') {
-        return Right(response);
-      } else {
-        return Left(Failure(errMessage: response['status']));
-      }
-    } on ServerException catch (e) {
-      return Left(Failure(errMessage: e.errorModel.errorMessage));
+      final response = await _apiService.repassword(formDataPost(map));
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ErrorHandler.handle(e));
     }
   }
 
   /// :verfycode_forget
+  Future<ApiResult<ResponseStatus>> verfyCodeForget(
+      String email, int verfycode) async {
+    Map<String, dynamic> map = {"email": email, 'verfycode': verfycode};
 
-  Future<Either<Failure, dynamic>> verfyCodeForget(int verfycode) async {
     try {
-      var response =
-          await api.post(ApiConstants.verfyCodeForget, isFromData: true, data: {
-        'email': getIt<CacheHelper>().getData(key: 'email'),
-        'verfycode': verfycode,
-      });
-      if (response['status'] == 'success') {
-        return Right(response);
-      } else {
-        return Left(Failure(errMessage: response['status']));
-      }
-    } on ServerException catch (e) {
-      return Left(Failure(errMessage: e.errorModel.errorMessage));
+      final response =
+          await _apiService.verfCodeForgertPassword(formDataPost(map));
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ErrorHandler.handle(e));
     }
   }
 }

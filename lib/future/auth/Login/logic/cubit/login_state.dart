@@ -1,18 +1,9 @@
 part of 'login_cubit.dart';
 
-@immutable
-sealed class LoginState {}
-
-final class LoginInitial extends LoginState {}
-
-final class LoginLoading extends LoginState {}
-
-final class LoginSuccess extends LoginState {}
-
-final class LoginFailer extends LoginState {
-  final String error;
-
-  LoginFailer({required this.error});
+@freezed
+class LoginState with _$LoginState {
+  const factory LoginState.initial() = _Initial;
+  const factory LoginState.loading() = Loading;
+  const factory LoginState.success() = Success;
+  const factory LoginState.error({required String error}) = Error;
 }
-
-final class ObscureText extends LoginState {}

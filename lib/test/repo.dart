@@ -6,6 +6,12 @@
 // import '../model/items_response/items_response.dart';
 // import 'networking/api_service_test.dart';
 
+import 'package:dio/src/dio_exception.dart';
+
+import '../core/errors/expentions.dart';
+import '../core/networking/api_error_handler.dart';
+import '../core/networking/api_result.dart';
+
 // class LoginRepo {
 //   final ApiServiceTest _apiService;
 
@@ -13,14 +19,18 @@
 
 //   Future<ApiResult<ItemsResponse>> search() async {
 //     Map<String, dynamic> ff = {"search": "z"};
+
 //     try {
 //       final response = await _apiService.search(formDataPost(ff));
 //       // List<Datum> data = response.data!;
 //       return ApiResult.success(response);
-//     } catch (errro) {
-//       return ApiResult.failure(ErrorHandler.handle(errro));
+//     } catch (e) {
+//       return ApiResult.failure(ErrorHandler.handle(e));
 //     }
 //   }
+// }
+
+  
 
 //   Future<ApiResult<dynamic>> home() async {
 //     try {

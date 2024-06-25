@@ -31,7 +31,7 @@ class ResponseCode {
   static const int NOT_FOUND = 404; // failure, not found
   static const int API_LOGIC_ERROR = 422; // API , lOGIC ERROR
 
-  // local status code
+  // local status status
   static const int CONNECT_TIMEOUT = -1;
   static const int CANCEL = -2;
   static const int RECIEVE_TIMEOUT = -3;
@@ -55,7 +55,7 @@ class ResponseMessage {
   static const String NOT_FOUND =
       ApiErrors.notFoundError; // failure, crash in server side
 
-  // local status code
+  // local status status
   static String CONNECT_TIMEOUT = ApiErrors.timeoutError;
   static String CANCEL = ApiErrors.defaultError;
   static String RECIEVE_TIMEOUT = ApiErrors.timeoutError;
@@ -70,51 +70,52 @@ extension DataSourceExtension on DataSource {
     switch (this) {
       case DataSource.NO_CONTENT:
         return ApiErrorModel(
-            code: ResponseCode.NO_CONTENT, message: ResponseMessage.NO_CONTENT);
+            status: ResponseCode.NO_CONTENT,
+            messege: ResponseMessage.NO_CONTENT);
       case DataSource.BAD_REQUEST:
         return ApiErrorModel(
-            code: ResponseCode.BAD_REQUEST,
-            message: ResponseMessage.BAD_REQUEST);
+            status: ResponseCode.BAD_REQUEST,
+            messege: ResponseMessage.BAD_REQUEST);
       case DataSource.FORBIDDEN:
         return ApiErrorModel(
-            code: ResponseCode.FORBIDDEN, message: ResponseMessage.FORBIDDEN);
+            status: ResponseCode.FORBIDDEN, messege: ResponseMessage.FORBIDDEN);
       case DataSource.UNAUTORISED:
         return ApiErrorModel(
-            code: ResponseCode.UNAUTORISED,
-            message: ResponseMessage.UNAUTORISED);
+            status: ResponseCode.UNAUTORISED,
+            messege: ResponseMessage.UNAUTORISED);
       case DataSource.NOT_FOUND:
         return ApiErrorModel(
-            code: ResponseCode.NOT_FOUND, message: ResponseMessage.NOT_FOUND);
+            status: ResponseCode.NOT_FOUND, messege: ResponseMessage.NOT_FOUND);
       case DataSource.INTERNAL_SERVER_ERROR:
         return ApiErrorModel(
-            code: ResponseCode.INTERNAL_SERVER_ERROR,
-            message: ResponseMessage.INTERNAL_SERVER_ERROR);
+            status: ResponseCode.INTERNAL_SERVER_ERROR,
+            messege: ResponseMessage.INTERNAL_SERVER_ERROR);
       case DataSource.CONNECT_TIMEOUT:
         return ApiErrorModel(
-            code: ResponseCode.CONNECT_TIMEOUT,
-            message: ResponseMessage.CONNECT_TIMEOUT);
+            status: ResponseCode.CONNECT_TIMEOUT,
+            messege: ResponseMessage.CONNECT_TIMEOUT);
       case DataSource.CANCEL:
         return ApiErrorModel(
-            code: ResponseCode.CANCEL, message: ResponseMessage.CANCEL);
+            status: ResponseCode.CANCEL, messege: ResponseMessage.CANCEL);
       case DataSource.RECIEVE_TIMEOUT:
         return ApiErrorModel(
-            code: ResponseCode.RECIEVE_TIMEOUT,
-            message: ResponseMessage.RECIEVE_TIMEOUT);
+            status: ResponseCode.RECIEVE_TIMEOUT,
+            messege: ResponseMessage.RECIEVE_TIMEOUT);
       case DataSource.SEND_TIMEOUT:
         return ApiErrorModel(
-            code: ResponseCode.SEND_TIMEOUT,
-            message: ResponseMessage.SEND_TIMEOUT);
+            status: ResponseCode.SEND_TIMEOUT,
+            messege: ResponseMessage.SEND_TIMEOUT);
       case DataSource.CACHE_ERROR:
         return ApiErrorModel(
-            code: ResponseCode.CACHE_ERROR,
-            message: ResponseMessage.CACHE_ERROR);
+            status: ResponseCode.CACHE_ERROR,
+            messege: ResponseMessage.CACHE_ERROR);
       case DataSource.NO_INTERNET_CONNECTION:
         return ApiErrorModel(
-            code: ResponseCode.NO_INTERNET_CONNECTION,
-            message: ResponseMessage.NO_INTERNET_CONNECTION);
+            status: ResponseCode.NO_INTERNET_CONNECTION,
+            messege: ResponseMessage.NO_INTERNET_CONNECTION);
       case DataSource.DEFAULT:
         return ApiErrorModel(
-            code: ResponseCode.DEFAULT, message: ResponseMessage.DEFAULT);
+            status: ResponseCode.DEFAULT, messege: ResponseMessage.DEFAULT);
     }
   }
 }

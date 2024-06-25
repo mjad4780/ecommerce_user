@@ -1,5 +1,7 @@
-import 'package:ecommerce_user/core/networking/api_error_handler.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+
+import '../errors/error_model.dart';
+import 'api_error_handler.dart';
 part 'api_result.freezed.dart';
 
 @Freezed()
