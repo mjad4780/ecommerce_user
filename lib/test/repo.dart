@@ -30,8 +30,6 @@ import '../core/networking/api_result.dart';
 //   }
 // }
 
-  
-
 //   Future<ApiResult<dynamic>> home() async {
 //     try {
 //       final response = await _apiService.home();

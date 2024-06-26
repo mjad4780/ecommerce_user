@@ -441,10 +441,10 @@ class __$$SuccessHomeImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? responseHome = freezed,
+    Object? responseHome = null,
   }) {
     return _then(_$SuccessHomeImpl(
-      responseHome: freezed == responseHome
+      responseHome: null == responseHome
           ? _value.responseHome
           : responseHome // ignore: cast_nullable_to_non_nullable
               as ResponseHome,
@@ -470,13 +470,12 @@ class _$SuccessHomeImpl implements SuccessHome {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SuccessHomeImpl &&
-            const DeepCollectionEquality()
-                .equals(other.responseHome, responseHome));
+            (identical(other.responseHome, responseHome) ||
+                other.responseHome == responseHome));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(responseHome));
+  int get hashCode => Object.hash(runtimeType, responseHome);
 
   @JsonKey(ignore: true)
   @override
@@ -956,10 +955,10 @@ class __$$SuccessSearchImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? itemsResponse = freezed,
+    Object? itemsResponse = null,
   }) {
     return _then(_$SuccessSearchImpl(
-      itemsResponse: freezed == itemsResponse
+      itemsResponse: null == itemsResponse
           ? _value.itemsResponse
           : itemsResponse // ignore: cast_nullable_to_non_nullable
               as ItemsResponse,
@@ -985,13 +984,12 @@ class _$SuccessSearchImpl implements SuccessSearch {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SuccessSearchImpl &&
-            const DeepCollectionEquality()
-                .equals(other.itemsResponse, itemsResponse));
+            (identical(other.itemsResponse, itemsResponse) ||
+                other.itemsResponse == itemsResponse));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(itemsResponse));
+  int get hashCode => Object.hash(runtimeType, itemsResponse);
 
   @JsonKey(ignore: true)
   @override
@@ -1471,10 +1469,10 @@ class __$$SuccessoffersImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? itemsResponse = freezed,
+    Object? itemsResponse = null,
   }) {
     return _then(_$SuccessoffersImpl(
-      freezed == itemsResponse
+      null == itemsResponse
           ? _value.itemsResponse
           : itemsResponse // ignore: cast_nullable_to_non_nullable
               as ItemsResponse,
@@ -1500,13 +1498,12 @@ class _$SuccessoffersImpl implements Successoffers {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SuccessoffersImpl &&
-            const DeepCollectionEquality()
-                .equals(other.itemsResponse, itemsResponse));
+            (identical(other.itemsResponse, itemsResponse) ||
+                other.itemsResponse == itemsResponse));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(itemsResponse));
+  int get hashCode => Object.hash(runtimeType, itemsResponse);
 
   @JsonKey(ignore: true)
   @override

@@ -1,0 +1,14 @@
+{
+    "status": "success",
+    "data": [
+      {
+        "adress_id": 2,
+        "adress_userid": 104,
+        "adress_city": "alex",
+        "adress_name": "home",
+        "adress_street": "abdo",
+        "adress_lat": "37.340248333333335",
+        "adress_long": "-122.09828333333333"
+      }
+    ]
+  }

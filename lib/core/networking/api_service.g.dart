@@ -306,6 +306,500 @@ class _ApiService implements ApiService {
     return value;
   }
 
+  @override
+  Future<ResponseStatus> addAdress(dynamic body) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = body;
+    final _result = await _dio.fetch(_setStreamType<ResponseStatus>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          'http://10.0.2.2/e-ecommerse/adress/add_adress.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        ))));
+    final value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+    return value;
+  }
+
+  @override
+  Future<ResponseStatus> deleteAdress(dynamic body) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = body;
+    final _result = await _dio.fetch(_setStreamType<ResponseStatus>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          'http://10.0.2.2/e-ecommerse/adress/delete_adress.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        ))));
+    final value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+    return value;
+  }
+
+  @override
+  Future<ResponseStatus> editAdress(dynamic body) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = body;
+    final _result = await _dio.fetch(_setStreamType<ResponseStatus>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          'http://10.0.2.2/e-ecommerse/adress/edit_adress.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        ))));
+    final value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+    return value;
+  }
+
+  @override
+  Future<AdressResponse> getAdress(dynamic body) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = body;
+    final _result = await _dio.fetch(_setStreamType<AdressResponse>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          'http://10.0.2.2/e-ecommerse/adress/get_adress.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        ))));
+    final value = AdressResponse.fromJson(jsonDecode(_result.data!));
+    return value;
+  }
+
+  @override
+  Future<ResponseStatus> addCart(dynamic body) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = body;
+    final _result = await _dio.fetch(_setStreamType<ResponseStatus>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          'http://10.0.2.2/e-ecommerse/cart/add_cart.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        ))));
+    final value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+    return value;
+  }
+
+  @override
+  Future<ResponseStatus> deleteCart(dynamic body) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = body;
+    final _result = await _dio.fetch(_setStreamType<ResponseStatus>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          'http://10.0.2.2/e-ecommerse/cart/delete_cart.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        ))));
+    final value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+    return value;
+  }
+
+  @override
+  Future<GetCurrentCart> getCurrentCart(dynamic body) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = body;
+    final _result = await _dio.fetch(_setStreamType<GetCurrentCart>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          'http://10.0.2.2/e-ecommerse/cart/get_count_cart.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        ))));
+    final value = GetCurrentCart.fromJson(jsonDecode(_result.data!));
+    return value;
+  }
+
+  @override
+  Future<CartResponse> getCart(dynamic body) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = body;
+    final _result = await _dio.fetch(_setStreamType<CartResponse>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          'http://10.0.2.2/e-ecommerse/cart/getcart.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        ))));
+    final value = CartResponse.fromJson(jsonDecode(_result.data!));
+    return value;
+  }
+
+  @override
+  Future<CouponResponse> checkCoupon(dynamic body) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = body;
+    final _result = await _dio.fetch(_setStreamType<CouponResponse>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          'http://10.0.2.2/e-ecommerse/coupon/checkCoupon.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        ))));
+    final value = CouponResponse.fromJson(jsonDecode(_result.data!));
+    return value;
+  }
+
+  @override
+  Future<ResponseStatus> addFavorite(dynamic body) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = body;
+    final _result = await _dio.fetch(_setStreamType<ResponseStatus>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          'http://10.0.2.2/e-ecommerse/favorite/addfavorite.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        ))));
+    final value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+    return value;
+  }
+
+  @override
+  Future<ResponseStatus> deletefavorite(dynamic body) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = body;
+    final _result = await _dio.fetch(_setStreamType<ResponseStatus>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          'http://10.0.2.2/e-ecommerse/favorite/removefavorite.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        ))));
+    final value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+    return value;
+  }
+
+  @override
+  Future<FavoriteResponse> getFavorite(dynamic body) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = body;
+    final _result = await _dio.fetch(_setStreamType<FavoriteResponse>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          'http://10.0.2.2/e-ecommerse/favorite/get_favorite.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        ))));
+    final value = FavoriteResponse.fromJson(jsonDecode(_result.data!));
+    return value;
+  }
+
+  @override
+  Future<ResponseStatus> rating(dynamic body) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = body;
+    final _result = await _dio.fetch(_setStreamType<ResponseStatus>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          'http://10.0.2.2/e-ecommerse/orders/Rating.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        ))));
+    final value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+    return value;
+  }
+
+  @override
+  Future<PendingResponse> archive(dynamic body) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = body;
+    final _result = await _dio.fetch(_setStreamType<PendingResponse>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          'http://10.0.2.2/e-ecommerse/orders/archive.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        ))));
+    final value = PendingResponse.fromJson(jsonDecode(_result.data!));
+    return value;
+  }
+
+  @override
+  Future<ResponseStatus> checkout(dynamic body) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = body;
+    final _result = await _dio.fetch(_setStreamType<ResponseStatus>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          'http://10.0.2.2/e-ecommerse/orders/checkout.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        ))));
+    final value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+    return value;
+  }
+
+  @override
+  Future<ResponseStatus> deleteOrders(dynamic body) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = body;
+    final _result = await _dio.fetch(_setStreamType<ResponseStatus>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          'http://10.0.2.2/e-ecommerse/orders/delete.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        ))));
+    final value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+    return value;
+  }
+
+  @override
+  Future<OrdersDetails> detailsOrders(dynamic body) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = body;
+    final _result = await _dio.fetch(_setStreamType<OrdersDetails>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          'http://10.0.2.2/e-ecommerse/orders/details.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        ))));
+    final value = OrdersDetails.fromJson(jsonDecode(_result.data!));
+    return value;
+  }
+
+  @override
+  Future<OrderResponse> getorder(dynamic body) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = body;
+    final _result = await _dio.fetch(_setStreamType<OrderResponse>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          'http://10.0.2.2/e-ecommerse/orders/get_order.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        ))));
+    final value = OrderResponse.fromJson(jsonDecode(_result.data!));
+    return value;
+  }
+
+  @override
+  Future<PendingResponse> pending(dynamic body) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = body;
+    final _result = await _dio.fetch(_setStreamType<PendingResponse>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          'http://10.0.2.2/e-ecommerse/orders/pending.php',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        ))));
+    final value = PendingResponse.fromJson(jsonDecode(_result.data!));
+    return value;
+  }
+
   RequestOptions _setStreamType<T>(RequestOptions requestOptions) {
     if (T != dynamic &&
         !(requestOptions.responseType == ResponseType.bytes ||

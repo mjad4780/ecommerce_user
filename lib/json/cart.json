@@ -1,0 +1,33 @@
+{
+    "status": "success",
+    "datacart": {
+      "status": "success",
+      "data": [
+        {
+          "items_prices": 500,
+          "itemprice_discount": 500,
+          "countitems": 1,
+          "cart_id": 140,
+          "cart_itemid": 6,
+          "cart_userid": 100,
+          "cart_orders": 0,
+          "item_id": 6,
+          "item_name": "Athletic Shoe",
+          "item_name_ar": "حذاء رياضي",
+          "item_decs": "Special Active sneakers for men from Active",
+          "item_decs_ar": "حذاء رياضي سبيشيال اكتف للرجال من اكتيف\r\n",
+          "item_image": "3.png",
+          "item_count": 2,
+          "item_active": 1,
+          "item_price": 500,
+          "item_discount": 0,
+          "item_data": "2024-03-25 17:56:19",
+          "item_categories": 11
+        }
+      ]
+    },
+    "countprice": {
+      "totalprice": 500,
+      "totalcount": "1"
+    }
+  }
