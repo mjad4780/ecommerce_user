@@ -8,7 +8,7 @@ part 'adress_response.g.dart';
 @JsonSerializable()
 class AdressResponse {
   final String? status;
-  final List<Datum>? data;
+  final List<AdressData>? data;
 
   const AdressResponse({this.status, this.data});
 

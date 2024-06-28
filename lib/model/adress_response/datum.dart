@@ -4,7 +4,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'datum.g.dart';
 
 @JsonSerializable()
-class Datum {
+class AdressData {
   @JsonKey(name: 'adress_id')
   final int? adressId;
   @JsonKey(name: 'adress_userid')
@@ -20,7 +20,7 @@ class Datum {
   @JsonKey(name: 'adress_long')
   final String? adressLong;
 
-  const Datum({
+  const AdressData({
     this.adressId,
     this.adressUserid,
     this.adressCity,
@@ -30,14 +30,15 @@ class Datum {
     this.adressLong,
   });
 
-  factory Datum.fromJson(Map<String, dynamic> json) => _$DatumFromJson(json);
+  factory AdressData.fromJson(Map<String, dynamic> json) =>
+      _$AdressDataFromJson(json);
 
-  Map<String, dynamic> toJson() => _$DatumToJson(this);
+  Map<String, dynamic> toJson() => _$AdressDataToJson(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    if (other is! Datum) return false;
+    if (other is! AdressData) return false;
     final mapEquals = const DeepCollectionEquality().equals;
     return mapEquals(other.toJson(), toJson());
   }

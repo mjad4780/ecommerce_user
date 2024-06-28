@@ -59,34 +59,9 @@ class CheckCartOrder {
     }
   }
 
-  /// :rating
-
-  Future<ApiResult<ResponseStatus>> rating(
-    int orderid,
-    String rating,
-    String comment,
-  ) async {
-    try {
-      Map<String, dynamic> map = {
-        'id': orderid,
-        "rating": rating,
-        "comment": comment,
-      };
-
-      final response = await _apiService.rating(formDataPost(map));
-      return ApiResult.success(response);
-    } catch (e) {
-      return ApiResult.failure(ErrorHandler.handle(e));
-    }
-  }
-
   /// :pending
 
-  Future<ApiResult<PendingResponse>> pending(
-    int orderid,
-    String rating,
-    String comment,
-  ) async {
+  Future<ApiResult<PendingResponse>> pending() async {
     try {
       Map<String, dynamic> map = {
         "id": getIt<CacheHelper>().getData(key: 'id')

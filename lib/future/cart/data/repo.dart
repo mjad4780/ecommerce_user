@@ -83,7 +83,7 @@ class CartRepo {
   /// :checkCoupon
 
   Future<ApiResult<CouponResponse>> checkCoupon(
-    int couponName,
+    String couponName,
   ) async {
     try {
       Map<String, dynamic> map = {

@@ -10,7 +10,7 @@ AdressResponse _$AdressResponseFromJson(Map<String, dynamic> json) =>
     AdressResponse(
       status: json['status'] as String?,
       data: (json['data'] as List<dynamic>?)
-          ?.map((e) => Datum.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => AdressData.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
