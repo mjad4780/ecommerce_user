@@ -1,12 +1,11 @@
 import 'package:ecommerce_user/firebase_options.dart';
-import 'package:ecommerce_user/test/cubit/test_cubit.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'core/Navigator/Navigator.dart';
 import 'core/class/cache_helper.dart';
 import 'core/class/observer.dart';
 
-import 'core/constans/Color.dart';
+import 'core/theming/color.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 

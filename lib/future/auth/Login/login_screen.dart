@@ -1,8 +1,6 @@
-import 'package:ecommerce_user/core/constans/Color.dart';
-import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
-import 'package:ecommerce_user/test/cubit/test_cubit.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+
+import '../../../core/theming/colors.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

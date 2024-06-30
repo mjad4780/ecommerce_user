@@ -3,6 +3,7 @@ import '../../future/auth/Login/login_screen.dart';
 import '../../future/auth/sign_up/SignUp.dart';
 import '../../future/onbording/onbordingScreen.dart';
 import '../class/cache_helper.dart';
+import '../function/animation_page.dart';
 import '../get_it/get_it.dart';
 
 final GoRouter router = GoRouter(routes: [
@@ -10,37 +11,15 @@ final GoRouter router = GoRouter(routes: [
       path: "/",
       builder: (context, state) =>
           getIt<CacheHelper>().getData(key: 'onbourding') == true
-              ? const LoginScreen()
+              ? const SignUp()
               : const OnbordingScreen()),
-
   GoRoute(
-    path: "/Login",
-    builder: (context, state) => const LoginScreen(),
-  ),
-
+      path: "/Login",
+      pageBuilder: (context, state) {
+        return myCustomtransitionPage(const LoginScreen(), state);
+      }),
   GoRoute(
     path: "/SignUp",
     builder: (context, state) => const SignUp(),
   ),
-
-  // NotificationView
 ]);
-
-// void push(context, String path) {
-//   GoRouter.of(context).push(
-//     path,
-//   );
-// }
-
-// void pushpushReplacement(context, String path) {
-//   GoRouter.of(context).pushReplacement(path);
-// }
-
-// void navigaton(context, Widget path) {
-//   Navigator.push(
-//     context,
-//     MaterialPageRoute(
-//       builder: (context) => path,
-//     ),
-//   );
-// }

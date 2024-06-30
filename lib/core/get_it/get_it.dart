@@ -3,6 +3,7 @@ import 'package:ecommerce_user/future/archive/logic/cubit/archive_cubit.dart';
 import 'package:ecommerce_user/future/auth/sign_up/logic/cubit/sign_up_cubit.dart';
 import 'package:ecommerce_user/future/auth/verfyCode/data/data_verfycode.dart';
 import 'package:ecommerce_user/future/cart/logic/cubit/cart_cubit.dart';
+import 'package:ecommerce_user/future/check_cart_order/data/repo.dart';
 import 'package:ecommerce_user/future/check_cart_order/logic/cubit/check_cart_cubit.dart';
 import 'package:ecommerce_user/future/favorite/logic/cubit/favorite_cubit.dart';
 import 'package:ecommerce_user/future/home/data/repo.dart';
@@ -65,7 +66,7 @@ void setupServise() {
   getIt.registerFactory<CartCubit>(() => CartCubit(getIt()));
 
   // CheckCartOrder
-  getIt.registerLazySingleton<OrdersRepo>(() => OrdersRepo(getIt()));
+  getIt.registerLazySingleton<CheckCartOrder>(() => CheckCartOrder(getIt()));
   getIt.registerFactory<CheckCartCubit>(() => CheckCartCubit(getIt()));
 
   // Favorite

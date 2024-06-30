@@ -1,11 +1,5 @@
-import 'dart:convert';
 
-import 'package:dio/dio.dart';
-import 'package:ecommerce_user/my%20core/databases/api/end_ponits.dart';
 
-import 'package:retrofit/retrofit.dart';
-
-import '../../model/items_response/items_response.dart';
 
 // part 'api_service_test.g.dart';
 

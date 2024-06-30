@@ -1,3 +1,4 @@
+import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
 import 'package:flutter/material.dart';
 
 class SignUp extends StatelessWidget {
@@ -5,8 +6,12 @@ class SignUp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: Text('data')),
+    return Scaffold(
+      body: Center(
+          child: GestureDetector(
+        child: const Text('data'),
+        onTap: () => Navigation(context).push('/Login'),
+      )),
     );
   }
 }
