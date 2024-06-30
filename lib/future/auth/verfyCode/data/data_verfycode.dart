@@ -1,50 +1,41 @@
-import 'package:dartz/dartz.dart';
-import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
-import 'package:flutter/material.dart';
-import '../../../../core/errors/expentions.dart';
-import '../../../../core/errors/failure.dart';
-import '../../../../core/networking/api_constants.dart';
-import '../../../../my core/databases/api/api_consumer.dart';
-import '../../../../my core/databases/api/end_ponits.dart';
+import '../../../../core/function/formDataPost.dart';
+import '../../../../core/networking/api_error_handler.dart';
+import '../../../../core/networking/api_result.dart';
+import '../../../../core/networking/api_service.dart';
+import '../../../../model/response_status/response_status.dart';
 
 class VerfyCodeDate {
-  final ApiConsumer api;
+  final ApiService _api;
 
-  VerfyCodeDate({required this.api});
+  VerfyCodeDate(this._api);
 
-  Future<Either<Failure, dynamic>> verfyCodeDate(
-      int verfycode, BuildContext context) async {
+  ///:verfycode
+  Future<ApiResult<ResponseStatus>> verfycode(
+      String email, int veryfycode) async {
+    Map<String, dynamic> map = {
+      "email": email,
+      "verfycode": veryfycode,
+    };
     try {
-      var response =
-          await api.post(ApiConstants.verfycode, isFromData: true, data: {
-        'email': Navigation(context).argument()['email'],
-        'verfycode': verfycode,
-      });
-      if (response['status'] == 'success') {
-        return Right(response);
-      } else {
-        return Left(Failure(errMessage: response['status']));
-      }
-    } on ServerException catch (e) {
-      return Left(Failure(errMessage: e.errorModel.errorMessage));
+      final response = await _api.verfCode(formDataPost(map));
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ErrorHandler.handle(e));
     }
   }
 
-  //:send agin
-  Future<Either<Failure, dynamic>> sendverfyCodeagin(
-      BuildContext context) async {
+  ///: Sendverfycode
+  Future<ApiResult<ResponseStatus>> sendVerfyCode(
+    String email,
+  ) async {
+    Map<String, dynamic> map = {
+      "email": email,
+    };
     try {
-      var response =
-          await api.post(ApiConstants.sendverfycode, isFromData: true, data: {
-        'email': Navigation(context).argument()['email'],
-      });
-      if (response['status'] == 'success') {
-        return Right(response);
-      } else {
-        return Left(Failure(errMessage: response['status']));
-      }
-    } on ServerException catch (e) {
-      return Left(Failure(errMessage: e.errorModel.errorMessage));
+      final response = await _api.sendVerfCode(formDataPost(map));
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ErrorHandler.handle(e));
     }
   }
 }

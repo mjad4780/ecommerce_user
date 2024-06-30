@@ -10,10 +10,10 @@ import '../../../model/orders_details/orders_details.dart';
 import '../../../model/pending_response/pending_response.dart';
 import '../../../model/response_status/response_status.dart';
 
-class CheckCartOrder {
+class OrdersRepo {
   final ApiService _apiService;
 
-  CheckCartOrder(this._apiService);
+  OrdersRepo(this._apiService);
 
   /// :GetOrders
 

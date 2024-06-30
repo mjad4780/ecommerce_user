@@ -6,7 +6,7 @@ import 'orders_state.dart';
 class OrdersCubit extends Cubit<OrdersState> {
   OrdersCubit(this._checkCartOrder) : super(const OrdersState.initial());
 
-  final CheckCartOrder _checkCartOrder;
+  final OrdersRepo _checkCartOrder;
 //:GetOrders
   emitGetOrders(int id) async {
     emit(const OrdersState.loadingGet());

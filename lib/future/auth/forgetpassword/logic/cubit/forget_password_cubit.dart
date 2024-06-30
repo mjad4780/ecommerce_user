@@ -1,6 +1,5 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../data/ForgetPassword.dart';
 import 'forget_password_state.dart';
@@ -18,7 +17,7 @@ class ForgetPasswordCubit extends Cubit<ForgetPasswordState> {
 
   checkEmail() async {
     if (formstate.currentState!.validate()) {
-      emit(ForgetPasswordState.loadingCheck());
+      emit(const ForgetPasswordState.loadingCheck());
       final response = await forgetPassword.checkEmail(email.text);
       response.when(success: (loginResponse) {
         emit(const ForgetPasswordState.successCheck());
@@ -34,7 +33,7 @@ class ForgetPasswordCubit extends Cubit<ForgetPasswordState> {
   ///:repassword
   repassword() async {
     if (formstate.currentState!.validate()) {
-      emit(ForgetPasswordState.loadingrepassword());
+      emit(const ForgetPasswordState.loadingrepassword());
       final response =
           await forgetPassword.repassword(email.text, password.text);
       response.when(success: (loginResponse) {
@@ -51,7 +50,7 @@ class ForgetPasswordCubit extends Cubit<ForgetPasswordState> {
   ///:veryfycode
   veryfycode(int veryfycode) async {
     if (formstate.currentState!.validate()) {
-      emit(ForgetPasswordState.loadingveryfycode());
+      emit(const ForgetPasswordState.loadingveryfycode());
       final response =
           await forgetPassword.verfyCodeForget(email.text, veryfycode);
       response.when(success: (loginResponse) {

@@ -1,9 +1,32 @@
 import 'package:dio/dio.dart';
+import 'package:ecommerce_user/future/archive/logic/cubit/archive_cubit.dart';
+import 'package:ecommerce_user/future/auth/sign_up/logic/cubit/sign_up_cubit.dart';
+import 'package:ecommerce_user/future/auth/verfyCode/data/data_verfycode.dart';
+import 'package:ecommerce_user/future/cart/logic/cubit/cart_cubit.dart';
+import 'package:ecommerce_user/future/check_cart_order/logic/cubit/check_cart_cubit.dart';
+import 'package:ecommerce_user/future/favorite/logic/cubit/favorite_cubit.dart';
+import 'package:ecommerce_user/future/home/data/repo.dart';
+import 'package:ecommerce_user/future/home/logic/cubit/home_cubit.dart';
+import 'package:ecommerce_user/future/item_categories/data/repo.dart';
 
 import 'package:get_it/get_it.dart';
 
 import '../../core/networking/api_service.dart';
 import '../../core/networking/dio_factory.dart';
+import '../../future/adress/data/repo.dart';
+import '../../future/adress/logic/cubit/adress_cubit.dart';
+import '../../future/archive/data/repo.dart';
+import '../../future/auth/Login/data/data_login.dart';
+import '../../future/auth/Login/logic/cubit/login_cubit.dart';
+import '../../future/auth/forgetpassword/data/ForgetPassword.dart';
+import '../../future/auth/forgetpassword/logic/cubit/forget_password_cubit.dart';
+import '../../future/auth/sign_up/data/data_sigin_up.dart';
+import '../../future/auth/verfyCode/logic/cubit/verfy_code_cubit.dart';
+import '../../future/cart/data/repo.dart';
+import '../../future/favorite/data/repo.dart';
+import '../../future/item_categories/logic/cubit/item_categories_cubit.dart';
+import '../../future/orders/data/repo.dart';
+import '../../future/orders/logic/cubit/orders_cubit.dart';
 import '../class/cache_helper.dart';
 
 final getIt = GetIt.instance;
@@ -13,5 +36,51 @@ void setupServise() {
 
   getIt.registerSingleton<CacheHelper>(CacheHelper());
 
+  // login
+  getIt.registerLazySingleton<LoginRepo>(() => LoginRepo(getIt()));
+  getIt.registerFactory<LoginCubit>(() => LoginCubit(getIt()));
 
+  // signUp
+  getIt.registerLazySingleton<SignUpDate>(() => SignUpDate(getIt()));
+  getIt.registerFactory<SignUpCubit>(() => SignUpCubit(getIt()));
+  // verfycode
+  getIt.registerLazySingleton<VerfyCodeDate>(() => VerfyCodeDate(getIt()));
+  getIt.registerFactory<VerfyCodeCubit>(() => VerfyCodeCubit(getIt()));
+
+  // ForgetPassword
+  getIt.registerLazySingleton<ForgetPassword>(() => ForgetPassword(getIt()));
+  getIt
+      .registerFactory<ForgetPasswordCubit>(() => ForgetPasswordCubit(getIt()));
+
+  // Adress
+  getIt.registerLazySingleton<AdressRepo>(() => AdressRepo(getIt()));
+  getIt.registerFactory<AdressCubit>(() => AdressCubit(getIt()));
+
+  // OrderArchive
+  getIt.registerLazySingleton<OrderArchive>(() => OrderArchive(getIt()));
+  getIt.registerFactory<ArchiveCubit>(() => ArchiveCubit(getIt()));
+
+  // Cart
+  getIt.registerLazySingleton<CartRepo>(() => CartRepo(getIt()));
+  getIt.registerFactory<CartCubit>(() => CartCubit(getIt()));
+
+  // CheckCartOrder
+  getIt.registerLazySingleton<OrdersRepo>(() => OrdersRepo(getIt()));
+  getIt.registerFactory<CheckCartCubit>(() => CheckCartCubit(getIt()));
+
+  // Favorite
+  getIt.registerLazySingleton<FavoriteRepo>(() => FavoriteRepo(getIt()));
+  getIt.registerFactory<FavoriteCubit>(() => FavoriteCubit(getIt()));
+
+  // home
+  getIt.registerLazySingleton<HomeRepo>(() => HomeRepo(getIt()));
+  getIt.registerFactory<HomeCubit>(() => HomeCubit(getIt()));
+  // itemCategories
+  getIt.registerLazySingleton<ItemCategoriesRepo>(
+      () => ItemCategoriesRepo(getIt()));
+  getIt
+      .registerFactory<ItemCategoriesCubit>(() => ItemCategoriesCubit(getIt()));
+  // orders
+  getIt.registerLazySingleton<OrdersRepo>(() => OrdersRepo(getIt()));
+  getIt.registerFactory<OrdersCubit>(() => OrdersCubit(getIt()));
 }
