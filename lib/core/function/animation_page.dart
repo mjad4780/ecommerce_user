@@ -5,12 +5,12 @@ myCustomtransitionPage(Widget child, GoRouterState state) {
   return CustomTransitionPage(
     key: state.pageKey,
     child: child,
-    transitionDuration: const Duration(seconds: 3),
+    transitionDuration: const Duration(milliseconds: 2000),
     transitionsBuilder: (BuildContext context, Animation<double> animation,
         Animation<double> secondaryAnimation, Widget child2) {
       return FadeTransition(
           opacity: CurveTween(
-            curve: Curves.easeInCirc,
+            curve: Curves.slowMiddle,
           ).animate(animation),
           child: child2);
     },

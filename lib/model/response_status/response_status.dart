@@ -10,7 +10,7 @@ class ResponseStatus {
   });
 
   factory ResponseStatus.fromJson(Map<String, dynamic> json) =>
-      _$ApiResponseStatusFromJson(json);
+      _$ResponseStatusFromJson(json);
 
-  Map<String, dynamic> toJson() => _$ApiResponseStatusToJson(this);
+  Map<String, dynamic> toJson() => _$ResponseStatusToJson(this);
 }

@@ -1,7 +1,10 @@
 import 'package:bloc/bloc.dart';
+import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import '../../../../../core/class/cache_helper.dart';
+import '../../../../../core/get_it/get_it.dart';
 import '../../data/data_login.dart';
 
 part 'login_state.dart';
@@ -9,17 +12,30 @@ part 'login_cubit.freezed.dart';
 
 class LoginCubit extends Cubit<LoginState> {
   LoginCubit(this._loginRepo) : super(const LoginState.initial());
-  TextEditingController email = TextEditingController();
-  TextEditingController password = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  GlobalKey<FormState> login = GlobalKey<FormState>();
 
   final LoginRepo _loginRepo;
-  void emitLoginStates() async {
-    emit(const LoginState.loading());
-    final response = await _loginRepo.login(email.text, password.text);
-    response.when(success: (loginResponse) {
-      emit(const LoginState.success());
-    }, failure: (error) {
-      emit(LoginState.error(error: error.apiErrorModel.messege ?? ''));
-    });
+  void emitLoginStates(BuildContext context) async {
+    if (login.currentState!.validate()) {
+      emit(const LoginState.loading());
+      final response =
+          await _loginRepo.login(emailController.text, passwordController.text);
+      response.when(success: (loginResponse) {
+        if (loginResponse.data!.userImprove != 1) {
+          context.push('/VerfyCodeScrean');
+        } else {
+          getIt<CacheHelper>()
+              .saveData(key: 'id', value: loginResponse.data!.userId);
+          getIt<CacheHelper>()
+              .saveData(key: 'email', value: loginResponse.data!.userEmail);
+
+          emit(const LoginState.success());
+        }
+      }, failure: (error) {
+        emit(LoginState.error(error: error.apiErrorModel.messege ?? ''));
+      });
+    }
   }
 }

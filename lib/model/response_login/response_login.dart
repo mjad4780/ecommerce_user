@@ -1,4 +1,3 @@
-import 'package:collection/collection.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'data.dart';
@@ -18,14 +17,14 @@ class ResponseLogin {
 
   Map<String, dynamic> toJson() => _$ResponseLoginToJson(this);
 
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    if (other is! ResponseLogin) return false;
-    final mapEquals = const DeepCollectionEquality().equals;
-    return mapEquals(other.toJson(), toJson());
-  }
+  // @override
+  // bool operator ==(Object other) {
+  //   if (identical(other, this)) return true;
+  //   if (other is! ResponseLogin) return false;
+  //   final mapEquals = const DeepCollectionEquality().equals;
+  //   return mapEquals(other.toJson(), toJson());
+  // }
 
-  @override
-  int get hashCode => status.hashCode ^ data.hashCode;
+  // @override
+  // int get hashCode => status.hashCode ^ data.hashCode;
 }
