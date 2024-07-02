@@ -142,7 +142,7 @@ class TextStyles {
     fontWeight: FontWeightHelper.medium,
   );
   static TextStyle signUp = TextStyle(
-      fontSize: 18.sp,
+      fontSize: 16.sp,
       fontWeight: FontWeightHelper.medium,
       color: AppColor.mainBlue);
 }

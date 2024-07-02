@@ -16,6 +16,7 @@ class AppTextFormField extends StatelessWidget {
   final Widget? suffixIcon;
   final Color? backgroundColor;
   final TextEditingController? controller;
+  final TextInputType? keyboardType;
   final Function(String?) validator;
   const AppTextFormField({
     super.key,
@@ -30,11 +31,13 @@ class AppTextFormField extends StatelessWidget {
     this.backgroundColor,
     this.controller,
     required this.validator,
+    this.keyboardType,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      keyboardType: keyboardType,
       controller: controller,
       decoration: InputDecoration(
         isDense: true,

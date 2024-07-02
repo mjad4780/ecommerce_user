@@ -3,10 +3,11 @@ part 'response_status.g.dart';
 
 @JsonSerializable()
 class ResponseStatus {
-  final String? status;
-
+  final int? status;
+  final String? messege;
   ResponseStatus({
     required this.status,
+    required this.messege,
   });
 
   factory ResponseStatus.fromJson(Map<String, dynamic> json) =>

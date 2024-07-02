@@ -1,15 +1,15 @@
+import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
 import 'package:ecommerce_user/core/get_it/get_it.dart';
 import 'package:ecommerce_user/future/auth/Login/logic/cubit/login_cubit.dart';
-import 'package:ecommerce_user/future/auth/sign_up/SignUp.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../core/animation/open_container_wrapper.dart';
 import '../../../core/helpers/spacing.dart';
 import '../../../core/theming/styles.dart';
 import '../../../core/widgets/app_text_button.dart';
-import '../forgetpassword/forget_password.dart';
+
 import 'widget/emailAndPassword.dart';
 import 'widget/login_bloc_listener.dart';
 import 'widget/logoauth.dart';
@@ -26,37 +26,36 @@ class LoginScreen extends StatelessWidget {
               child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 30.h),
         child: SingleChildScrollView(
-            child:
-                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            child: Column(children: [
           const LogoAuth(),
           verticalSpace(36),
           const EmailAndPassword(),
           verticalSpace(15),
           Align(
-            alignment: AlignmentDirectional.centerEnd,
-            child: OpenContainerWrapper(
-              nextScresan: const ForgetPasswordScrean(),
-              child: Text(
-                'Forgot Password?',
-                style: TextStyles.font13BlueRegular,
-              ),
-            ),
-          ),
+              alignment: AlignmentDirectional.centerEnd,
+              child: GestureDetector(
+                onTap: () => context.push('/SignUp'),
+                child: Text(
+                  'Forgot Password?',
+                  style: TextStyles.font13BlueRegular,
+                ),
+              )),
           verticalSpace(10),
           Builder(builder: (context) {
             return AppTextButton(
                 buttonText: "Login",
                 textStyle: TextStyles.font16WhiteSemiBold,
                 onPressed: () {
-                  context.read<LoginCubit>().emitLoginStates(context);
+                  print('2');
+                  // context.read<LoginCubit>().emitLoginStates(context);
                 });
           }),
           verticalSpace(30),
           Row(
             children: [
               const Text('Dont Have An Account ?'),
-              OpenContainerWrapper(
-                nextScresan: const SignUp(),
+              GestureDetector(
+                onTap: () => context.push('/SignUp'),
                 child: Text(
                   'SignUp',
                   style: TextStyles.signUp,

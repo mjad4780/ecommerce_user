@@ -26,10 +26,7 @@ extension Navigation on BuildContext {
   }
 
   Future<dynamic> push(String path, {String? arguments}) {
-    return GoRouter.of(this).push(
-      path,
-      extra: {'email': arguments},
-    );
+    return GoRouter.of(this).push(path, extra: arguments);
   }
 
   Map<dynamic, dynamic> argument() {
