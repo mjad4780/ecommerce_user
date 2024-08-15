@@ -10,13 +10,18 @@ class PasswordValidations extends StatelessWidget {
   final bool hasSpecialCharacters;
   final bool hasNumber;
   final bool hasMinLength;
+  final bool? repassword;
+  final String? forgetpassord;
+
   const PasswordValidations({
     super.key,
+    this.repassword,
     required this.hasLowerCase,
     required this.hasUpperCase,
     required this.hasSpecialCharacters,
     required this.hasNumber,
     required this.hasMinLength,
+    this.forgetpassord,
   });
 
   @override
@@ -33,6 +38,9 @@ class PasswordValidations extends StatelessWidget {
         buildValidationRow('At least 1 number', hasNumber),
         verticalSpace(2),
         buildValidationRow('At least 8 characters long', hasMinLength),
+        verticalSpace(2),
+        if (forgetpassord == 'q')
+          buildValidationRow('At password == newpassword', repassword!),
       ],
     );
   }

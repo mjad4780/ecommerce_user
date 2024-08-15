@@ -6,14 +6,7 @@ part of 'datum.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Datum _$DatumFromJson(Map<String, dynamic> json) => Datum(
-      itemsPrices: (json['items_prices'] as num?)?.toInt(),
-      itempriceDiscount: (json['itemprice_discount'] as num?)?.toInt(),
-      countitems: (json['countitems'] as num?)?.toInt(),
-      cartId: (json['cart_id'] as num?)?.toInt(),
-      cartItemid: (json['cart_itemid'] as num?)?.toInt(),
-      cartUserid: (json['cart_userid'] as num?)?.toInt(),
-      cartOrders: (json['cart_orders'] as num?)?.toInt(),
+DataDetails _$DataDetailsFromJson(Map<String, dynamic> json) => DataDetails(
       itemId: (json['item_id'] as num?)?.toInt(),
       itemName: json['item_name'] as String?,
       itemNameAr: json['item_name_ar'] as String?,
@@ -26,17 +19,22 @@ Datum _$DatumFromJson(Map<String, dynamic> json) => Datum(
       itemDiscount: (json['item_discount'] as num?)?.toInt(),
       itemData: json['item_data'] as String?,
       itemCategories: (json['item_categories'] as num?)?.toInt(),
-      size: json['Size'] as String?,
+      itemsPrices: (json['items_prices'] as num?)?.toInt(),
+      itempriceDiscount: (json['itemprice_discount'] as num?)?.toDouble(),
+      countitems: (json['countitems'] as num?)?.toInt(),
+      cartId: (json['cart_id'] as num?)?.toInt(),
+      cartItemid: (json['cart_itemid'] as num?)?.toInt(),
+      cartUserid: (json['cart_userid'] as num?)?.toInt(),
+      cartOrders: (json['cart_orders'] as num?)?.toInt(),
+      images:
+          (json['images'] as List<dynamic>?)?.map((e) => e as String).toList(),
+      size: (json['size'] as List<dynamic>?)
+          ?.map((e) => ItemSize.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
-Map<String, dynamic> _$DatumToJson(Datum instance) => <String, dynamic>{
-      'items_prices': instance.itemsPrices,
-      'itemprice_discount': instance.itempriceDiscount,
-      'countitems': instance.countitems,
-      'cart_id': instance.cartId,
-      'cart_itemid': instance.cartItemid,
-      'cart_userid': instance.cartUserid,
-      'cart_orders': instance.cartOrders,
+Map<String, dynamic> _$DataDetailsToJson(DataDetails instance) =>
+    <String, dynamic>{
       'item_id': instance.itemId,
       'item_name': instance.itemName,
       'item_name_ar': instance.itemNameAr,
@@ -49,5 +47,13 @@ Map<String, dynamic> _$DatumToJson(Datum instance) => <String, dynamic>{
       'item_discount': instance.itemDiscount,
       'item_data': instance.itemData,
       'item_categories': instance.itemCategories,
-      'Size': instance.size,
+      'items_prices': instance.itemsPrices,
+      'itemprice_discount': instance.itempriceDiscount,
+      'countitems': instance.countitems,
+      'cart_id': instance.cartId,
+      'cart_itemid': instance.cartItemid,
+      'cart_userid': instance.cartUserid,
+      'cart_orders': instance.cartOrders,
+      'images': instance.images,
+      'size': instance.size,
     };

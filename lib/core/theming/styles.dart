@@ -15,13 +15,13 @@ class TextStyles {
   static TextStyle font32BlueBold = TextStyle(
     fontSize: 32.sp,
     fontWeight: FontWeightHelper.bold,
-    color: AppColor.mainBlue,
+    color: AppColor.primaryColor,
   );
 
   static TextStyle font13BlueSemiBold = TextStyle(
     fontSize: 13.sp,
     fontWeight: FontWeightHelper.semiBold,
-    color: AppColor.mainBlue,
+    color: AppColor.primaryColor,
   );
 
   static TextStyle font13DarkBlueMedium = TextStyle(
@@ -75,13 +75,13 @@ class TextStyles {
   static TextStyle font12BlueRegular = TextStyle(
     fontSize: 12.sp,
     fontWeight: FontWeightHelper.regular,
-    color: AppColor.mainBlue,
+    color: AppColor.primaryColor,
   );
 
   static TextStyle font13BlueRegular = TextStyle(
     fontSize: 16.sp,
     fontWeight: FontWeightHelper.regular,
-    color: AppColor.mainBlue,
+    color: AppColor.primaryColor,
   );
 
   static TextStyle font14GrayRegular = TextStyle(
@@ -110,7 +110,7 @@ class TextStyles {
   static TextStyle font14BlueSemiBold = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.semiBold,
-    color: AppColor.mainBlue,
+    color: AppColor.primaryColor,
   );
 
   static TextStyle font15DarkBlueMedium = TextStyle(
@@ -144,5 +144,10 @@ class TextStyles {
   static TextStyle signUp = TextStyle(
       fontSize: 16.sp,
       fontWeight: FontWeightHelper.medium,
-      color: AppColor.mainBlue);
+      color: AppColor.primaryColor);
+
+  static TextStyle checkEmail = TextStyle(
+      fontSize: 20.sp,
+      fontWeight: FontWeightHelper.semiBold,
+      color: AppColor.primaryColor);
 }

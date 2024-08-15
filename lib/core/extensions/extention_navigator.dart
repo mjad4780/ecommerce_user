@@ -25,7 +25,7 @@ extension Navigation on BuildContext {
     return GoRouter.of(this).pushReplacement(path);
   }
 
-  Future<dynamic> push(String path, {String? arguments}) {
+  Future<dynamic> push(String path, {Object? arguments}) {
     return GoRouter.of(this).push(path, extra: arguments);
   }
 

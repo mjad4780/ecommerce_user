@@ -2,8 +2,8 @@ import '../../../../core/function/formDataPost.dart';
 import '../../../../core/networking/api_error_handler.dart';
 import '../../../../core/networking/api_result.dart';
 import '../../../../core/networking/api_service.dart';
-import '../../../model/items_response/items_response.dart';
 import '../../../model/response_home/response_home.dart';
+import '../../../model/response_items/response_items.dart';
 
 class HomeRepo {
   final ApiService _apiService;
@@ -23,7 +23,7 @@ class HomeRepo {
 
   /// :search
 
-  Future<ApiResult<ItemsResponse>> search(
+  Future<ApiResult<ResponseItems>> search(
     String search,
   ) async {
     Map<String, dynamic> map = {
@@ -39,7 +39,7 @@ class HomeRepo {
   }
 
   /// :offers
-  Future<ApiResult<ItemsResponse>> offers() async {
+  Future<ApiResult<ResponseItems>> offers() async {
     try {
       final response = await _apiService.offers();
       return ApiResult.success(response);

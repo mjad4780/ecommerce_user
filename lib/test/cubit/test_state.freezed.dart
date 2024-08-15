@@ -20,7 +20,7 @@ mixin _$TestState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(ItemsResponse data) success,
+    required TResult Function(ResponseItems data) success,
     required TResult Function(String error) error,
     required TResult Function() loadingHome,
     required TResult Function() successHome,
@@ -31,7 +31,7 @@ mixin _$TestState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(ItemsResponse data)? success,
+    TResult? Function(ResponseItems data)? success,
     TResult? Function(String error)? error,
     TResult? Function()? loadingHome,
     TResult? Function()? successHome,
@@ -42,7 +42,7 @@ mixin _$TestState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(ItemsResponse data)? success,
+    TResult Function(ResponseItems data)? success,
     TResult Function(String error)? error,
     TResult Function()? loadingHome,
     TResult Function()? successHome,
@@ -143,7 +143,7 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(ItemsResponse data) success,
+    required TResult Function(ResponseItems data) success,
     required TResult Function(String error) error,
     required TResult Function() loadingHome,
     required TResult Function() successHome,
@@ -157,7 +157,7 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(ItemsResponse data)? success,
+    TResult? Function(ResponseItems data)? success,
     TResult? Function(String error)? error,
     TResult? Function()? loadingHome,
     TResult? Function()? successHome,
@@ -171,7 +171,7 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(ItemsResponse data)? success,
+    TResult Function(ResponseItems data)? success,
     TResult Function(String error)? error,
     TResult Function()? loadingHome,
     TResult Function()? successHome,
@@ -275,7 +275,7 @@ class _$LoadingImpl implements Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(ItemsResponse data) success,
+    required TResult Function(ResponseItems data) success,
     required TResult Function(String error) error,
     required TResult Function() loadingHome,
     required TResult Function() successHome,
@@ -289,7 +289,7 @@ class _$LoadingImpl implements Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(ItemsResponse data)? success,
+    TResult? Function(ResponseItems data)? success,
     TResult? Function(String error)? error,
     TResult? Function()? loadingHome,
     TResult? Function()? successHome,
@@ -303,7 +303,7 @@ class _$LoadingImpl implements Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(ItemsResponse data)? success,
+    TResult Function(ResponseItems data)? success,
     TResult Function(String error)? error,
     TResult Function()? loadingHome,
     TResult Function()? successHome,
@@ -373,7 +373,7 @@ abstract class _$$SuccessImplCopyWith<$Res> {
           _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
       __$$SuccessImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({ItemsResponse data});
+  $Res call({ResponseItems data});
 }
 
 /// @nodoc
@@ -393,7 +393,7 @@ class __$$SuccessImplCopyWithImpl<$Res>
       null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as ItemsResponse,
+              as ResponseItems,
     ));
   }
 }
@@ -404,7 +404,7 @@ class _$SuccessImpl implements Success {
   const _$SuccessImpl(this.data);
 
   @override
-  final ItemsResponse data;
+  final ResponseItems data;
 
   @override
   String toString() {
@@ -433,7 +433,7 @@ class _$SuccessImpl implements Success {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(ItemsResponse data) success,
+    required TResult Function(ResponseItems data) success,
     required TResult Function(String error) error,
     required TResult Function() loadingHome,
     required TResult Function() successHome,
@@ -447,7 +447,7 @@ class _$SuccessImpl implements Success {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(ItemsResponse data)? success,
+    TResult? Function(ResponseItems data)? success,
     TResult? Function(String error)? error,
     TResult? Function()? loadingHome,
     TResult? Function()? successHome,
@@ -461,7 +461,7 @@ class _$SuccessImpl implements Success {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(ItemsResponse data)? success,
+    TResult Function(ResponseItems data)? success,
     TResult Function(String error)? error,
     TResult Function()? loadingHome,
     TResult Function()? successHome,
@@ -522,9 +522,9 @@ class _$SuccessImpl implements Success {
 }
 
 abstract class Success implements TestState {
-  const factory Success(final ItemsResponse data) = _$SuccessImpl;
+  const factory Success(final ResponseItems data) = _$SuccessImpl;
 
-  ItemsResponse get data;
+  ResponseItems get data;
   @JsonKey(ignore: true)
   _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -596,7 +596,7 @@ class _$ErrorImpl implements Error {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(ItemsResponse data) success,
+    required TResult Function(ResponseItems data) success,
     required TResult Function(String error) error,
     required TResult Function() loadingHome,
     required TResult Function() successHome,
@@ -610,7 +610,7 @@ class _$ErrorImpl implements Error {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(ItemsResponse data)? success,
+    TResult? Function(ResponseItems data)? success,
     TResult? Function(String error)? error,
     TResult? Function()? loadingHome,
     TResult? Function()? successHome,
@@ -624,7 +624,7 @@ class _$ErrorImpl implements Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(ItemsResponse data)? success,
+    TResult Function(ResponseItems data)? success,
     TResult Function(String error)? error,
     TResult Function()? loadingHome,
     TResult Function()? successHome,
@@ -733,7 +733,7 @@ class _$loadingHomeImpl implements loadingHome {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(ItemsResponse data) success,
+    required TResult Function(ResponseItems data) success,
     required TResult Function(String error) error,
     required TResult Function() loadingHome,
     required TResult Function() successHome,
@@ -747,7 +747,7 @@ class _$loadingHomeImpl implements loadingHome {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(ItemsResponse data)? success,
+    TResult? Function(ResponseItems data)? success,
     TResult? Function(String error)? error,
     TResult? Function()? loadingHome,
     TResult? Function()? successHome,
@@ -761,7 +761,7 @@ class _$loadingHomeImpl implements loadingHome {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(ItemsResponse data)? success,
+    TResult Function(ResponseItems data)? success,
     TResult Function(String error)? error,
     TResult Function()? loadingHome,
     TResult Function()? successHome,
@@ -865,7 +865,7 @@ class _$SuccessHomeImpl implements SuccessHome {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(ItemsResponse data) success,
+    required TResult Function(ResponseItems data) success,
     required TResult Function(String error) error,
     required TResult Function() loadingHome,
     required TResult Function() successHome,
@@ -879,7 +879,7 @@ class _$SuccessHomeImpl implements SuccessHome {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(ItemsResponse data)? success,
+    TResult? Function(ResponseItems data)? success,
     TResult? Function(String error)? error,
     TResult? Function()? loadingHome,
     TResult? Function()? successHome,
@@ -893,7 +893,7 @@ class _$SuccessHomeImpl implements SuccessHome {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(ItemsResponse data)? success,
+    TResult Function(ResponseItems data)? success,
     TResult Function(String error)? error,
     TResult Function()? loadingHome,
     TResult Function()? successHome,
@@ -1023,7 +1023,7 @@ class _$ErrorHomeImpl implements ErrorHome {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(ItemsResponse data) success,
+    required TResult Function(ResponseItems data) success,
     required TResult Function(String error) error,
     required TResult Function() loadingHome,
     required TResult Function() successHome,
@@ -1037,7 +1037,7 @@ class _$ErrorHomeImpl implements ErrorHome {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(ItemsResponse data)? success,
+    TResult? Function(ResponseItems data)? success,
     TResult? Function(String error)? error,
     TResult? Function()? loadingHome,
     TResult? Function()? successHome,
@@ -1051,7 +1051,7 @@ class _$ErrorHomeImpl implements ErrorHome {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(ItemsResponse data)? success,
+    TResult Function(ResponseItems data)? success,
     TResult Function(String error)? error,
     TResult Function()? loadingHome,
     TResult Function()? successHome,

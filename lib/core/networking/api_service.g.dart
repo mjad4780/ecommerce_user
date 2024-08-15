@@ -26,23 +26,24 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<ResponseLogin>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<ResponseLogin>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/auth/login.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = ResponseLogin.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/auth/login.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = ResponseLogin.fromJson(_result.data!);
     return value;
   }
 
@@ -52,23 +53,24 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<ResponseStatus>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<ResponseStatus>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/auth/sign_up.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/auth/sign_up.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = ResponseStatus.fromJson(_result.data!);
     return value;
   }
 
@@ -78,23 +80,24 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<ResponseStatus>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<ResponseStatus>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/auth/verfycode.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/auth/verfycode.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = ResponseStatus.fromJson(_result.data!);
     return value;
   }
 
@@ -104,23 +107,24 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<ResponseStatus>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<ResponseStatus>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/auth/sendverfycode.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/auth/sendverfycode.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = ResponseStatus.fromJson(_result.data!);
     return value;
   }
 
@@ -130,23 +134,24 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<ResponseStatus>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<ResponseStatus>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/forget_password/check_email.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/forget_password/check_email.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = ResponseStatus.fromJson(_result.data!);
     return value;
   }
 
@@ -156,23 +161,24 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<ResponseStatus>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<ResponseStatus>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/forget_password/Repassword.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/forget_password/Repassword.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = ResponseStatus.fromJson(_result.data!);
     return value;
   }
 
@@ -182,23 +188,24 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<ResponseStatus>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<ResponseStatus>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/forget_password/verfycode_forget_password.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/forget_password/verfycode_forget_password.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = ResponseStatus.fromJson(_result.data!);
     return value;
   }
 
@@ -208,101 +215,105 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result = await _dio.fetch(_setStreamType<ResponseHome>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<ResponseHome>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/home.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = ResponseHome.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/home.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = ResponseHome.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<ItemsResponse> search(dynamic body) async {
+  Future<ResponseItems> search(dynamic body) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<ItemsResponse>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<ResponseItems>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/items/search.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = ItemsResponse.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/items/search.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = ResponseItems.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<ItemsResponse> itemCategories(dynamic body) async {
+  Future<ResponseItems> itemCategories(dynamic body) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<ItemsResponse>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<ResponseItems>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/items/categories_item.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = ItemsResponse.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/items/categories_item.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = ResponseItems.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<ItemsResponse> offers() async {
+  Future<ResponseItems> offers() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result = await _dio.fetch(_setStreamType<ItemsResponse>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<ResponseItems>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/items/offers.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = ItemsResponse.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/items/offers.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = ResponseItems.fromJson(_result.data!);
     return value;
   }
 
@@ -312,23 +323,24 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<ResponseStatus>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<ResponseStatus>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/adress/add_adress.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/adress/add_adress.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = ResponseStatus.fromJson(_result.data!);
     return value;
   }
 
@@ -338,23 +350,24 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<ResponseStatus>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<ResponseStatus>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/adress/delete_adress.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/adress/delete_adress.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = ResponseStatus.fromJson(_result.data!);
     return value;
   }
 
@@ -364,23 +377,24 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<ResponseStatus>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<ResponseStatus>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/adress/edit_adress.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/adress/edit_adress.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = ResponseStatus.fromJson(_result.data!);
     return value;
   }
 
@@ -390,23 +404,24 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<AdressResponse>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<AdressResponse>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/adress/get_adress.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = AdressResponse.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/adress/get_adress.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = AdressResponse.fromJson(_result.data!);
     return value;
   }
 
@@ -416,23 +431,24 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<ResponseStatus>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<ResponseStatus>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/cart/add_cart.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/cart/add_cart.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = ResponseStatus.fromJson(_result.data!);
     return value;
   }
 
@@ -442,23 +458,24 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<ResponseStatus>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<ResponseStatus>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/cart/delete_cart.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/cart/delete_cart.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = ResponseStatus.fromJson(_result.data!);
     return value;
   }
 
@@ -468,23 +485,24 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<GetCurrentCart>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<GetCurrentCart>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/cart/get_count_cart.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = GetCurrentCart.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/cart/get_count_cart.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = GetCurrentCart.fromJson(_result.data!);
     return value;
   }
 
@@ -494,23 +512,24 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<CartResponse>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<CartResponse>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/cart/getcart.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = CartResponse.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/cart/getcart.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = CartResponse.fromJson(_result.data!);
     return value;
   }
 
@@ -520,23 +539,24 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<CouponResponse>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<CouponResponse>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/coupon/checkCoupon.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = CouponResponse.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/coupon/checkCoupon.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = CouponResponse.fromJson(_result.data!);
     return value;
   }
 
@@ -546,23 +566,24 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<ResponseStatus>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<ResponseStatus>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/favorite/addfavorite.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/favorite/addfavorite.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = ResponseStatus.fromJson(_result.data!);
     return value;
   }
 
@@ -572,23 +593,24 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<ResponseStatus>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<ResponseStatus>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/favorite/removefavorite.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/favorite/removefavorite.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = ResponseStatus.fromJson(_result.data!);
     return value;
   }
 
@@ -598,23 +620,24 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<FavoriteResponse>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<FavoriteResponse>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/favorite/get_favorite.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = FavoriteResponse.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/favorite/get_favorite.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = FavoriteResponse.fromJson(_result.data!);
     return value;
   }
 
@@ -624,23 +647,24 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<ResponseStatus>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<ResponseStatus>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/orders/Rating.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/orders/Rating.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = ResponseStatus.fromJson(_result.data!);
     return value;
   }
 
@@ -650,23 +674,24 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<PendingResponse>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<PendingResponse>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/orders/archive.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = PendingResponse.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/orders/archive.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = PendingResponse.fromJson(_result.data!);
     return value;
   }
 
@@ -676,23 +701,24 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<ResponseStatus>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<ResponseStatus>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/orders/checkout.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/orders/checkout.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = ResponseStatus.fromJson(_result.data!);
     return value;
   }
 
@@ -702,49 +728,51 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<ResponseStatus>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<ResponseStatus>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/orders/delete.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/orders/delete.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = ResponseStatus.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<OrdersDetails> detailsOrders(dynamic body) async {
+  Future<ResponseDetails> detailsOrders(dynamic body) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<OrdersDetails>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<ResponseDetails>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/orders/details.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = OrdersDetails.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/orders/details.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = ResponseDetails.fromJson(_result.data!);
     return value;
   }
 
@@ -754,23 +782,24 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<OrderResponse>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<OrderResponse>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/orders/get_order.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = OrderResponse.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/orders/get_order.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = OrderResponse.fromJson(_result.data!);
     return value;
   }
 
@@ -780,23 +809,24 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<PendingResponse>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<PendingResponse>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'http://10.0.2.2/e-ecommerse/orders/pending.php',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = PendingResponse.fromJson(jsonDecode(_result.data!));
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/orders/pending.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = PendingResponse.fromJson(_result.data!);
     return value;
   }
 

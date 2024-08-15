@@ -10,7 +10,7 @@ class AppRegex {
         .hasMatch(password);
   }
 
-    static bool isPhoneNumberValid(String phoneNumber) {
+  static bool isPhoneNumberValid(String phoneNumber) {
     return RegExp(r'^(010|011|012|015)[0-9]{8}$').hasMatch(phoneNumber);
   }
 
@@ -32,5 +32,13 @@ class AppRegex {
 
   static bool hasMinLength(String password) {
     return RegExp(r'^(?=.{8,})').hasMatch(password);
+  }
+
+  static bool repassword(String password, String repssword) {
+    if (password == repssword && password.isNotEmpty && repssword.isNotEmpty) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }

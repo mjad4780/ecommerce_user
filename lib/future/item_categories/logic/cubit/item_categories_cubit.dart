@@ -13,7 +13,7 @@ class ItemCategoriesCubit extends Cubit<ItemCategoriesState> {
     emit(const ItemCategoriesState.loading());
     final response = await itemCategoriesRepo.itemCategories(categoriesId);
     response.when(success: (responsehome) {
-      emit(ItemCategoriesState.success(responsehome));
+      emit(ItemCategoriesState.success(responseItems: responsehome));
     }, failure: (error) {
       emit(ItemCategoriesState.erorr(erorr: error.apiErrorModel.messege ?? ''));
     });

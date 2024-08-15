@@ -1,8 +1,8 @@
 import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
 import 'package:ecommerce_user/core/get_it/get_it.dart';
+import 'package:ecommerce_user/core/theming/colors.dart';
 import 'package:ecommerce_user/future/auth/Login/logic/cubit/login_cubit.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -34,7 +34,7 @@ class LoginScreen extends StatelessWidget {
           Align(
               alignment: AlignmentDirectional.centerEnd,
               child: GestureDetector(
-                onTap: () => context.push('/SignUp'),
+                onTap: () => context.push('/CheckEmail'),
                 child: Text(
                   'Forgot Password?',
                   style: TextStyles.font13BlueRegular,
@@ -43,10 +43,10 @@ class LoginScreen extends StatelessWidget {
           verticalSpace(10),
           Builder(builder: (context) {
             return AppTextButton(
+                backgroundColor: AppColor.primaryColor,
                 buttonText: "Login",
                 textStyle: TextStyles.font16WhiteSemiBold,
                 onPressed: () {
-                  print('2');
                   // context.read<LoginCubit>().emitLoginStates(context);
                 });
           }),

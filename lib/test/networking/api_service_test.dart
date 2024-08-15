@@ -8,7 +8,7 @@
 //   factory ApiServiceTest(Dio dio, {String baseUrl}) = _ApiServiceTest;
 
 //   @POST(EndPoint.search)
-//   Future<ItemsResponse> search(@Body() dynamic body);
+//   Future<ResponseItems> search(@Body() dynamic body);
 
 //   @GET(EndPoint.home)
 //   Future<dynamic> home();

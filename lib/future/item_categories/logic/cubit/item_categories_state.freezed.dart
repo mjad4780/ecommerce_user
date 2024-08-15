@@ -20,7 +20,7 @@ mixin _$ItemCategoriesState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(ItemsResponse itemsResponse) success,
+    required TResult Function(ResponseItems responseItems) success,
     required TResult Function(String erorr) erorr,
   }) =>
       throw _privateConstructorUsedError;
@@ -28,7 +28,7 @@ mixin _$ItemCategoriesState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(ItemsResponse itemsResponse)? success,
+    TResult? Function(ResponseItems responseItems)? success,
     TResult? Function(String erorr)? erorr,
   }) =>
       throw _privateConstructorUsedError;
@@ -36,7 +36,7 @@ mixin _$ItemCategoriesState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(ItemsResponse itemsResponse)? success,
+    TResult Function(ResponseItems responseItems)? success,
     TResult Function(String erorr)? erorr,
     required TResult orElse(),
   }) =>
@@ -126,7 +126,7 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(ItemsResponse itemsResponse) success,
+    required TResult Function(ResponseItems responseItems) success,
     required TResult Function(String erorr) erorr,
   }) {
     return initial();
@@ -137,7 +137,7 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(ItemsResponse itemsResponse)? success,
+    TResult? Function(ResponseItems responseItems)? success,
     TResult? Function(String erorr)? erorr,
   }) {
     return initial?.call();
@@ -148,7 +148,7 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(ItemsResponse itemsResponse)? success,
+    TResult Function(ResponseItems responseItems)? success,
     TResult Function(String erorr)? erorr,
     required TResult orElse(),
   }) {
@@ -240,7 +240,7 @@ class _$LoadingImpl implements Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(ItemsResponse itemsResponse) success,
+    required TResult Function(ResponseItems responseItems) success,
     required TResult Function(String erorr) erorr,
   }) {
     return loading();
@@ -251,7 +251,7 @@ class _$LoadingImpl implements Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(ItemsResponse itemsResponse)? success,
+    TResult? Function(ResponseItems responseItems)? success,
     TResult? Function(String erorr)? erorr,
   }) {
     return loading?.call();
@@ -262,7 +262,7 @@ class _$LoadingImpl implements Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(ItemsResponse itemsResponse)? success,
+    TResult Function(ResponseItems responseItems)? success,
     TResult Function(String erorr)? erorr,
     required TResult orElse(),
   }) {
@@ -320,7 +320,7 @@ abstract class _$$SuccessImplCopyWith<$Res> {
           _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
       __$$SuccessImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({ItemsResponse itemsResponse});
+  $Res call({ResponseItems responseItems});
 }
 
 /// @nodoc
@@ -334,13 +334,13 @@ class __$$SuccessImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? itemsResponse = null,
+    Object? responseItems = null,
   }) {
     return _then(_$SuccessImpl(
-      null == itemsResponse
-          ? _value.itemsResponse
-          : itemsResponse // ignore: cast_nullable_to_non_nullable
-              as ItemsResponse,
+      responseItems: null == responseItems
+          ? _value.responseItems
+          : responseItems // ignore: cast_nullable_to_non_nullable
+              as ResponseItems,
     ));
   }
 }
@@ -348,14 +348,14 @@ class __$$SuccessImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$SuccessImpl implements Success {
-  const _$SuccessImpl(this.itemsResponse);
+  const _$SuccessImpl({required this.responseItems});
 
   @override
-  final ItemsResponse itemsResponse;
+  final ResponseItems responseItems;
 
   @override
   String toString() {
-    return 'ItemCategoriesState.success(itemsResponse: $itemsResponse)';
+    return 'ItemCategoriesState.success(responseItems: $responseItems)';
   }
 
   @override
@@ -363,12 +363,12 @@ class _$SuccessImpl implements Success {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SuccessImpl &&
-            (identical(other.itemsResponse, itemsResponse) ||
-                other.itemsResponse == itemsResponse));
+            (identical(other.responseItems, responseItems) ||
+                other.responseItems == responseItems));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, itemsResponse);
+  int get hashCode => Object.hash(runtimeType, responseItems);
 
   @JsonKey(ignore: true)
   @override
@@ -381,10 +381,10 @@ class _$SuccessImpl implements Success {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(ItemsResponse itemsResponse) success,
+    required TResult Function(ResponseItems responseItems) success,
     required TResult Function(String erorr) erorr,
   }) {
-    return success(itemsResponse);
+    return success(responseItems);
   }
 
   @override
@@ -392,10 +392,10 @@ class _$SuccessImpl implements Success {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(ItemsResponse itemsResponse)? success,
+    TResult? Function(ResponseItems responseItems)? success,
     TResult? Function(String erorr)? erorr,
   }) {
-    return success?.call(itemsResponse);
+    return success?.call(responseItems);
   }
 
   @override
@@ -403,12 +403,12 @@ class _$SuccessImpl implements Success {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(ItemsResponse itemsResponse)? success,
+    TResult Function(ResponseItems responseItems)? success,
     TResult Function(String erorr)? erorr,
     required TResult orElse(),
   }) {
     if (success != null) {
-      return success(itemsResponse);
+      return success(responseItems);
     }
     return orElse();
   }
@@ -452,9 +452,10 @@ class _$SuccessImpl implements Success {
 }
 
 abstract class Success implements ItemCategoriesState {
-  const factory Success(final ItemsResponse itemsResponse) = _$SuccessImpl;
+  const factory Success({required final ResponseItems responseItems}) =
+      _$SuccessImpl;
 
-  ItemsResponse get itemsResponse;
+  ResponseItems get responseItems;
   @JsonKey(ignore: true)
   _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -526,7 +527,7 @@ class _$ErorrImpl implements Erorr {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(ItemsResponse itemsResponse) success,
+    required TResult Function(ResponseItems responseItems) success,
     required TResult Function(String erorr) erorr,
   }) {
     return erorr(this.erorr);
@@ -537,7 +538,7 @@ class _$ErorrImpl implements Erorr {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(ItemsResponse itemsResponse)? success,
+    TResult? Function(ResponseItems responseItems)? success,
     TResult? Function(String erorr)? erorr,
   }) {
     return erorr?.call(this.erorr);
@@ -548,7 +549,7 @@ class _$ErorrImpl implements Erorr {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(ItemsResponse itemsResponse)? success,
+    TResult Function(ResponseItems responseItems)? success,
     TResult Function(String erorr)? erorr,
     required TResult orElse(),
   }) {

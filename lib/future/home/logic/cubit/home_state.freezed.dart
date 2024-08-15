@@ -23,10 +23,10 @@ mixin _$HomeState {
     required TResult Function(ResponseHome responseHome) successHome,
     required TResult Function(String erorr) errorHome,
     required TResult Function() loadingsearch,
-    required TResult Function(ItemsResponse itemsResponse) successSearch,
+    required TResult Function(ResponseItems responseItems) successSearch,
     required TResult Function(String erorr) errorSearch,
     required TResult Function() loadingoffers,
-    required TResult Function(ItemsResponse itemsResponse) successoffers,
+    required TResult Function(ResponseItems responseItems) successoffers,
     required TResult Function(String erorr) erroroffers,
   }) =>
       throw _privateConstructorUsedError;
@@ -37,10 +37,10 @@ mixin _$HomeState {
     TResult? Function(ResponseHome responseHome)? successHome,
     TResult? Function(String erorr)? errorHome,
     TResult? Function()? loadingsearch,
-    TResult? Function(ItemsResponse itemsResponse)? successSearch,
+    TResult? Function(ResponseItems responseItems)? successSearch,
     TResult? Function(String erorr)? errorSearch,
     TResult? Function()? loadingoffers,
-    TResult? Function(ItemsResponse itemsResponse)? successoffers,
+    TResult? Function(ResponseItems responseItems)? successoffers,
     TResult? Function(String erorr)? erroroffers,
   }) =>
       throw _privateConstructorUsedError;
@@ -51,10 +51,10 @@ mixin _$HomeState {
     TResult Function(ResponseHome responseHome)? successHome,
     TResult Function(String erorr)? errorHome,
     TResult Function()? loadingsearch,
-    TResult Function(ItemsResponse itemsResponse)? successSearch,
+    TResult Function(ResponseItems responseItems)? successSearch,
     TResult Function(String erorr)? errorSearch,
     TResult Function()? loadingoffers,
-    TResult Function(ItemsResponse itemsResponse)? successoffers,
+    TResult Function(ResponseItems responseItems)? successoffers,
     TResult Function(String erorr)? erroroffers,
     required TResult orElse(),
   }) =>
@@ -164,10 +164,10 @@ class _$InitialImpl implements _Initial {
     required TResult Function(ResponseHome responseHome) successHome,
     required TResult Function(String erorr) errorHome,
     required TResult Function() loadingsearch,
-    required TResult Function(ItemsResponse itemsResponse) successSearch,
+    required TResult Function(ResponseItems responseItems) successSearch,
     required TResult Function(String erorr) errorSearch,
     required TResult Function() loadingoffers,
-    required TResult Function(ItemsResponse itemsResponse) successoffers,
+    required TResult Function(ResponseItems responseItems) successoffers,
     required TResult Function(String erorr) erroroffers,
   }) {
     return initial();
@@ -181,10 +181,10 @@ class _$InitialImpl implements _Initial {
     TResult? Function(ResponseHome responseHome)? successHome,
     TResult? Function(String erorr)? errorHome,
     TResult? Function()? loadingsearch,
-    TResult? Function(ItemsResponse itemsResponse)? successSearch,
+    TResult? Function(ResponseItems responseItems)? successSearch,
     TResult? Function(String erorr)? errorSearch,
     TResult? Function()? loadingoffers,
-    TResult? Function(ItemsResponse itemsResponse)? successoffers,
+    TResult? Function(ResponseItems responseItems)? successoffers,
     TResult? Function(String erorr)? erroroffers,
   }) {
     return initial?.call();
@@ -198,10 +198,10 @@ class _$InitialImpl implements _Initial {
     TResult Function(ResponseHome responseHome)? successHome,
     TResult Function(String erorr)? errorHome,
     TResult Function()? loadingsearch,
-    TResult Function(ItemsResponse itemsResponse)? successSearch,
+    TResult Function(ResponseItems responseItems)? successSearch,
     TResult Function(String erorr)? errorSearch,
     TResult Function()? loadingoffers,
-    TResult Function(ItemsResponse itemsResponse)? successoffers,
+    TResult Function(ResponseItems responseItems)? successoffers,
     TResult Function(String erorr)? erroroffers,
     required TResult orElse(),
   }) {
@@ -314,10 +314,10 @@ class _$LoadingHomeImpl implements LoadingHome {
     required TResult Function(ResponseHome responseHome) successHome,
     required TResult Function(String erorr) errorHome,
     required TResult Function() loadingsearch,
-    required TResult Function(ItemsResponse itemsResponse) successSearch,
+    required TResult Function(ResponseItems responseItems) successSearch,
     required TResult Function(String erorr) errorSearch,
     required TResult Function() loadingoffers,
-    required TResult Function(ItemsResponse itemsResponse) successoffers,
+    required TResult Function(ResponseItems responseItems) successoffers,
     required TResult Function(String erorr) erroroffers,
   }) {
     return loadingHome();
@@ -331,10 +331,10 @@ class _$LoadingHomeImpl implements LoadingHome {
     TResult? Function(ResponseHome responseHome)? successHome,
     TResult? Function(String erorr)? errorHome,
     TResult? Function()? loadingsearch,
-    TResult? Function(ItemsResponse itemsResponse)? successSearch,
+    TResult? Function(ResponseItems responseItems)? successSearch,
     TResult? Function(String erorr)? errorSearch,
     TResult? Function()? loadingoffers,
-    TResult? Function(ItemsResponse itemsResponse)? successoffers,
+    TResult? Function(ResponseItems responseItems)? successoffers,
     TResult? Function(String erorr)? erroroffers,
   }) {
     return loadingHome?.call();
@@ -348,10 +348,10 @@ class _$LoadingHomeImpl implements LoadingHome {
     TResult Function(ResponseHome responseHome)? successHome,
     TResult Function(String erorr)? errorHome,
     TResult Function()? loadingsearch,
-    TResult Function(ItemsResponse itemsResponse)? successSearch,
+    TResult Function(ResponseItems responseItems)? successSearch,
     TResult Function(String erorr)? errorSearch,
     TResult Function()? loadingoffers,
-    TResult Function(ItemsResponse itemsResponse)? successoffers,
+    TResult Function(ResponseItems responseItems)? successoffers,
     TResult Function(String erorr)? erroroffers,
     required TResult orElse(),
   }) {
@@ -491,10 +491,10 @@ class _$SuccessHomeImpl implements SuccessHome {
     required TResult Function(ResponseHome responseHome) successHome,
     required TResult Function(String erorr) errorHome,
     required TResult Function() loadingsearch,
-    required TResult Function(ItemsResponse itemsResponse) successSearch,
+    required TResult Function(ResponseItems responseItems) successSearch,
     required TResult Function(String erorr) errorSearch,
     required TResult Function() loadingoffers,
-    required TResult Function(ItemsResponse itemsResponse) successoffers,
+    required TResult Function(ResponseItems responseItems) successoffers,
     required TResult Function(String erorr) erroroffers,
   }) {
     return successHome(responseHome);
@@ -508,10 +508,10 @@ class _$SuccessHomeImpl implements SuccessHome {
     TResult? Function(ResponseHome responseHome)? successHome,
     TResult? Function(String erorr)? errorHome,
     TResult? Function()? loadingsearch,
-    TResult? Function(ItemsResponse itemsResponse)? successSearch,
+    TResult? Function(ResponseItems responseItems)? successSearch,
     TResult? Function(String erorr)? errorSearch,
     TResult? Function()? loadingoffers,
-    TResult? Function(ItemsResponse itemsResponse)? successoffers,
+    TResult? Function(ResponseItems responseItems)? successoffers,
     TResult? Function(String erorr)? erroroffers,
   }) {
     return successHome?.call(responseHome);
@@ -525,10 +525,10 @@ class _$SuccessHomeImpl implements SuccessHome {
     TResult Function(ResponseHome responseHome)? successHome,
     TResult Function(String erorr)? errorHome,
     TResult Function()? loadingsearch,
-    TResult Function(ItemsResponse itemsResponse)? successSearch,
+    TResult Function(ResponseItems responseItems)? successSearch,
     TResult Function(String erorr)? errorSearch,
     TResult Function()? loadingoffers,
-    TResult Function(ItemsResponse itemsResponse)? successoffers,
+    TResult Function(ResponseItems responseItems)? successoffers,
     TResult Function(String erorr)? erroroffers,
     required TResult orElse(),
   }) {
@@ -673,10 +673,10 @@ class _$ErrorHomeImpl implements ErrorHome {
     required TResult Function(ResponseHome responseHome) successHome,
     required TResult Function(String erorr) errorHome,
     required TResult Function() loadingsearch,
-    required TResult Function(ItemsResponse itemsResponse) successSearch,
+    required TResult Function(ResponseItems responseItems) successSearch,
     required TResult Function(String erorr) errorSearch,
     required TResult Function() loadingoffers,
-    required TResult Function(ItemsResponse itemsResponse) successoffers,
+    required TResult Function(ResponseItems responseItems) successoffers,
     required TResult Function(String erorr) erroroffers,
   }) {
     return errorHome(erorr);
@@ -690,10 +690,10 @@ class _$ErrorHomeImpl implements ErrorHome {
     TResult? Function(ResponseHome responseHome)? successHome,
     TResult? Function(String erorr)? errorHome,
     TResult? Function()? loadingsearch,
-    TResult? Function(ItemsResponse itemsResponse)? successSearch,
+    TResult? Function(ResponseItems responseItems)? successSearch,
     TResult? Function(String erorr)? errorSearch,
     TResult? Function()? loadingoffers,
-    TResult? Function(ItemsResponse itemsResponse)? successoffers,
+    TResult? Function(ResponseItems responseItems)? successoffers,
     TResult? Function(String erorr)? erroroffers,
   }) {
     return errorHome?.call(erorr);
@@ -707,10 +707,10 @@ class _$ErrorHomeImpl implements ErrorHome {
     TResult Function(ResponseHome responseHome)? successHome,
     TResult Function(String erorr)? errorHome,
     TResult Function()? loadingsearch,
-    TResult Function(ItemsResponse itemsResponse)? successSearch,
+    TResult Function(ResponseItems responseItems)? successSearch,
     TResult Function(String erorr)? errorSearch,
     TResult Function()? loadingoffers,
-    TResult Function(ItemsResponse itemsResponse)? successoffers,
+    TResult Function(ResponseItems responseItems)? successoffers,
     TResult Function(String erorr)? erroroffers,
     required TResult orElse(),
   }) {
@@ -828,10 +828,10 @@ class _$LoadingsearchImpl implements Loadingsearch {
     required TResult Function(ResponseHome responseHome) successHome,
     required TResult Function(String erorr) errorHome,
     required TResult Function() loadingsearch,
-    required TResult Function(ItemsResponse itemsResponse) successSearch,
+    required TResult Function(ResponseItems responseItems) successSearch,
     required TResult Function(String erorr) errorSearch,
     required TResult Function() loadingoffers,
-    required TResult Function(ItemsResponse itemsResponse) successoffers,
+    required TResult Function(ResponseItems responseItems) successoffers,
     required TResult Function(String erorr) erroroffers,
   }) {
     return loadingsearch();
@@ -845,10 +845,10 @@ class _$LoadingsearchImpl implements Loadingsearch {
     TResult? Function(ResponseHome responseHome)? successHome,
     TResult? Function(String erorr)? errorHome,
     TResult? Function()? loadingsearch,
-    TResult? Function(ItemsResponse itemsResponse)? successSearch,
+    TResult? Function(ResponseItems responseItems)? successSearch,
     TResult? Function(String erorr)? errorSearch,
     TResult? Function()? loadingoffers,
-    TResult? Function(ItemsResponse itemsResponse)? successoffers,
+    TResult? Function(ResponseItems responseItems)? successoffers,
     TResult? Function(String erorr)? erroroffers,
   }) {
     return loadingsearch?.call();
@@ -862,10 +862,10 @@ class _$LoadingsearchImpl implements Loadingsearch {
     TResult Function(ResponseHome responseHome)? successHome,
     TResult Function(String erorr)? errorHome,
     TResult Function()? loadingsearch,
-    TResult Function(ItemsResponse itemsResponse)? successSearch,
+    TResult Function(ResponseItems responseItems)? successSearch,
     TResult Function(String erorr)? errorSearch,
     TResult Function()? loadingoffers,
-    TResult Function(ItemsResponse itemsResponse)? successoffers,
+    TResult Function(ResponseItems responseItems)? successoffers,
     TResult Function(String erorr)? erroroffers,
     required TResult orElse(),
   }) {
@@ -941,7 +941,7 @@ abstract class _$$SuccessSearchImplCopyWith<$Res> {
           _$SuccessSearchImpl value, $Res Function(_$SuccessSearchImpl) then) =
       __$$SuccessSearchImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({ItemsResponse itemsResponse});
+  $Res call({ResponseItems responseItems});
 }
 
 /// @nodoc
@@ -955,13 +955,13 @@ class __$$SuccessSearchImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? itemsResponse = null,
+    Object? responseItems = null,
   }) {
     return _then(_$SuccessSearchImpl(
-      itemsResponse: null == itemsResponse
-          ? _value.itemsResponse
-          : itemsResponse // ignore: cast_nullable_to_non_nullable
-              as ItemsResponse,
+      responseItems: null == responseItems
+          ? _value.responseItems
+          : responseItems // ignore: cast_nullable_to_non_nullable
+              as ResponseItems,
     ));
   }
 }
@@ -969,14 +969,14 @@ class __$$SuccessSearchImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$SuccessSearchImpl implements SuccessSearch {
-  const _$SuccessSearchImpl({required this.itemsResponse});
+  const _$SuccessSearchImpl({required this.responseItems});
 
   @override
-  final ItemsResponse itemsResponse;
+  final ResponseItems responseItems;
 
   @override
   String toString() {
-    return 'HomeState.successSearch(itemsResponse: $itemsResponse)';
+    return 'HomeState.successSearch(responseItems: $responseItems)';
   }
 
   @override
@@ -984,12 +984,12 @@ class _$SuccessSearchImpl implements SuccessSearch {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SuccessSearchImpl &&
-            (identical(other.itemsResponse, itemsResponse) ||
-                other.itemsResponse == itemsResponse));
+            (identical(other.responseItems, responseItems) ||
+                other.responseItems == responseItems));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, itemsResponse);
+  int get hashCode => Object.hash(runtimeType, responseItems);
 
   @JsonKey(ignore: true)
   @override
@@ -1005,13 +1005,13 @@ class _$SuccessSearchImpl implements SuccessSearch {
     required TResult Function(ResponseHome responseHome) successHome,
     required TResult Function(String erorr) errorHome,
     required TResult Function() loadingsearch,
-    required TResult Function(ItemsResponse itemsResponse) successSearch,
+    required TResult Function(ResponseItems responseItems) successSearch,
     required TResult Function(String erorr) errorSearch,
     required TResult Function() loadingoffers,
-    required TResult Function(ItemsResponse itemsResponse) successoffers,
+    required TResult Function(ResponseItems responseItems) successoffers,
     required TResult Function(String erorr) erroroffers,
   }) {
-    return successSearch(itemsResponse);
+    return successSearch(responseItems);
   }
 
   @override
@@ -1022,13 +1022,13 @@ class _$SuccessSearchImpl implements SuccessSearch {
     TResult? Function(ResponseHome responseHome)? successHome,
     TResult? Function(String erorr)? errorHome,
     TResult? Function()? loadingsearch,
-    TResult? Function(ItemsResponse itemsResponse)? successSearch,
+    TResult? Function(ResponseItems responseItems)? successSearch,
     TResult? Function(String erorr)? errorSearch,
     TResult? Function()? loadingoffers,
-    TResult? Function(ItemsResponse itemsResponse)? successoffers,
+    TResult? Function(ResponseItems responseItems)? successoffers,
     TResult? Function(String erorr)? erroroffers,
   }) {
-    return successSearch?.call(itemsResponse);
+    return successSearch?.call(responseItems);
   }
 
   @override
@@ -1039,15 +1039,15 @@ class _$SuccessSearchImpl implements SuccessSearch {
     TResult Function(ResponseHome responseHome)? successHome,
     TResult Function(String erorr)? errorHome,
     TResult Function()? loadingsearch,
-    TResult Function(ItemsResponse itemsResponse)? successSearch,
+    TResult Function(ResponseItems responseItems)? successSearch,
     TResult Function(String erorr)? errorSearch,
     TResult Function()? loadingoffers,
-    TResult Function(ItemsResponse itemsResponse)? successoffers,
+    TResult Function(ResponseItems responseItems)? successoffers,
     TResult Function(String erorr)? erroroffers,
     required TResult orElse(),
   }) {
     if (successSearch != null) {
-      return successSearch(itemsResponse);
+      return successSearch(responseItems);
     }
     return orElse();
   }
@@ -1109,10 +1109,10 @@ class _$SuccessSearchImpl implements SuccessSearch {
 }
 
 abstract class SuccessSearch implements HomeState {
-  const factory SuccessSearch({required final ItemsResponse itemsResponse}) =
+  const factory SuccessSearch({required final ResponseItems responseItems}) =
       _$SuccessSearchImpl;
 
-  ItemsResponse get itemsResponse;
+  ResponseItems get responseItems;
   @JsonKey(ignore: true)
   _$$SuccessSearchImplCopyWith<_$SuccessSearchImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1187,10 +1187,10 @@ class _$ErrorSearchImpl implements ErrorSearch {
     required TResult Function(ResponseHome responseHome) successHome,
     required TResult Function(String erorr) errorHome,
     required TResult Function() loadingsearch,
-    required TResult Function(ItemsResponse itemsResponse) successSearch,
+    required TResult Function(ResponseItems responseItems) successSearch,
     required TResult Function(String erorr) errorSearch,
     required TResult Function() loadingoffers,
-    required TResult Function(ItemsResponse itemsResponse) successoffers,
+    required TResult Function(ResponseItems responseItems) successoffers,
     required TResult Function(String erorr) erroroffers,
   }) {
     return errorSearch(erorr);
@@ -1204,10 +1204,10 @@ class _$ErrorSearchImpl implements ErrorSearch {
     TResult? Function(ResponseHome responseHome)? successHome,
     TResult? Function(String erorr)? errorHome,
     TResult? Function()? loadingsearch,
-    TResult? Function(ItemsResponse itemsResponse)? successSearch,
+    TResult? Function(ResponseItems responseItems)? successSearch,
     TResult? Function(String erorr)? errorSearch,
     TResult? Function()? loadingoffers,
-    TResult? Function(ItemsResponse itemsResponse)? successoffers,
+    TResult? Function(ResponseItems responseItems)? successoffers,
     TResult? Function(String erorr)? erroroffers,
   }) {
     return errorSearch?.call(erorr);
@@ -1221,10 +1221,10 @@ class _$ErrorSearchImpl implements ErrorSearch {
     TResult Function(ResponseHome responseHome)? successHome,
     TResult Function(String erorr)? errorHome,
     TResult Function()? loadingsearch,
-    TResult Function(ItemsResponse itemsResponse)? successSearch,
+    TResult Function(ResponseItems responseItems)? successSearch,
     TResult Function(String erorr)? errorSearch,
     TResult Function()? loadingoffers,
-    TResult Function(ItemsResponse itemsResponse)? successoffers,
+    TResult Function(ResponseItems responseItems)? successoffers,
     TResult Function(String erorr)? erroroffers,
     required TResult orElse(),
   }) {
@@ -1342,10 +1342,10 @@ class _$LoadingoffersImpl implements Loadingoffers {
     required TResult Function(ResponseHome responseHome) successHome,
     required TResult Function(String erorr) errorHome,
     required TResult Function() loadingsearch,
-    required TResult Function(ItemsResponse itemsResponse) successSearch,
+    required TResult Function(ResponseItems responseItems) successSearch,
     required TResult Function(String erorr) errorSearch,
     required TResult Function() loadingoffers,
-    required TResult Function(ItemsResponse itemsResponse) successoffers,
+    required TResult Function(ResponseItems responseItems) successoffers,
     required TResult Function(String erorr) erroroffers,
   }) {
     return loadingoffers();
@@ -1359,10 +1359,10 @@ class _$LoadingoffersImpl implements Loadingoffers {
     TResult? Function(ResponseHome responseHome)? successHome,
     TResult? Function(String erorr)? errorHome,
     TResult? Function()? loadingsearch,
-    TResult? Function(ItemsResponse itemsResponse)? successSearch,
+    TResult? Function(ResponseItems responseItems)? successSearch,
     TResult? Function(String erorr)? errorSearch,
     TResult? Function()? loadingoffers,
-    TResult? Function(ItemsResponse itemsResponse)? successoffers,
+    TResult? Function(ResponseItems responseItems)? successoffers,
     TResult? Function(String erorr)? erroroffers,
   }) {
     return loadingoffers?.call();
@@ -1376,10 +1376,10 @@ class _$LoadingoffersImpl implements Loadingoffers {
     TResult Function(ResponseHome responseHome)? successHome,
     TResult Function(String erorr)? errorHome,
     TResult Function()? loadingsearch,
-    TResult Function(ItemsResponse itemsResponse)? successSearch,
+    TResult Function(ResponseItems responseItems)? successSearch,
     TResult Function(String erorr)? errorSearch,
     TResult Function()? loadingoffers,
-    TResult Function(ItemsResponse itemsResponse)? successoffers,
+    TResult Function(ResponseItems responseItems)? successoffers,
     TResult Function(String erorr)? erroroffers,
     required TResult orElse(),
   }) {
@@ -1455,7 +1455,7 @@ abstract class _$$SuccessoffersImplCopyWith<$Res> {
           _$SuccessoffersImpl value, $Res Function(_$SuccessoffersImpl) then) =
       __$$SuccessoffersImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({ItemsResponse itemsResponse});
+  $Res call({ResponseItems responseItems});
 }
 
 /// @nodoc
@@ -1469,13 +1469,13 @@ class __$$SuccessoffersImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? itemsResponse = null,
+    Object? responseItems = null,
   }) {
     return _then(_$SuccessoffersImpl(
-      null == itemsResponse
-          ? _value.itemsResponse
-          : itemsResponse // ignore: cast_nullable_to_non_nullable
-              as ItemsResponse,
+      responseItems: null == responseItems
+          ? _value.responseItems
+          : responseItems // ignore: cast_nullable_to_non_nullable
+              as ResponseItems,
     ));
   }
 }
@@ -1483,14 +1483,14 @@ class __$$SuccessoffersImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$SuccessoffersImpl implements Successoffers {
-  const _$SuccessoffersImpl(this.itemsResponse);
+  const _$SuccessoffersImpl({required this.responseItems});
 
   @override
-  final ItemsResponse itemsResponse;
+  final ResponseItems responseItems;
 
   @override
   String toString() {
-    return 'HomeState.successoffers(itemsResponse: $itemsResponse)';
+    return 'HomeState.successoffers(responseItems: $responseItems)';
   }
 
   @override
@@ -1498,12 +1498,12 @@ class _$SuccessoffersImpl implements Successoffers {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SuccessoffersImpl &&
-            (identical(other.itemsResponse, itemsResponse) ||
-                other.itemsResponse == itemsResponse));
+            (identical(other.responseItems, responseItems) ||
+                other.responseItems == responseItems));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, itemsResponse);
+  int get hashCode => Object.hash(runtimeType, responseItems);
 
   @JsonKey(ignore: true)
   @override
@@ -1519,13 +1519,13 @@ class _$SuccessoffersImpl implements Successoffers {
     required TResult Function(ResponseHome responseHome) successHome,
     required TResult Function(String erorr) errorHome,
     required TResult Function() loadingsearch,
-    required TResult Function(ItemsResponse itemsResponse) successSearch,
+    required TResult Function(ResponseItems responseItems) successSearch,
     required TResult Function(String erorr) errorSearch,
     required TResult Function() loadingoffers,
-    required TResult Function(ItemsResponse itemsResponse) successoffers,
+    required TResult Function(ResponseItems responseItems) successoffers,
     required TResult Function(String erorr) erroroffers,
   }) {
-    return successoffers(itemsResponse);
+    return successoffers(responseItems);
   }
 
   @override
@@ -1536,13 +1536,13 @@ class _$SuccessoffersImpl implements Successoffers {
     TResult? Function(ResponseHome responseHome)? successHome,
     TResult? Function(String erorr)? errorHome,
     TResult? Function()? loadingsearch,
-    TResult? Function(ItemsResponse itemsResponse)? successSearch,
+    TResult? Function(ResponseItems responseItems)? successSearch,
     TResult? Function(String erorr)? errorSearch,
     TResult? Function()? loadingoffers,
-    TResult? Function(ItemsResponse itemsResponse)? successoffers,
+    TResult? Function(ResponseItems responseItems)? successoffers,
     TResult? Function(String erorr)? erroroffers,
   }) {
-    return successoffers?.call(itemsResponse);
+    return successoffers?.call(responseItems);
   }
 
   @override
@@ -1553,15 +1553,15 @@ class _$SuccessoffersImpl implements Successoffers {
     TResult Function(ResponseHome responseHome)? successHome,
     TResult Function(String erorr)? errorHome,
     TResult Function()? loadingsearch,
-    TResult Function(ItemsResponse itemsResponse)? successSearch,
+    TResult Function(ResponseItems responseItems)? successSearch,
     TResult Function(String erorr)? errorSearch,
     TResult Function()? loadingoffers,
-    TResult Function(ItemsResponse itemsResponse)? successoffers,
+    TResult Function(ResponseItems responseItems)? successoffers,
     TResult Function(String erorr)? erroroffers,
     required TResult orElse(),
   }) {
     if (successoffers != null) {
-      return successoffers(itemsResponse);
+      return successoffers(responseItems);
     }
     return orElse();
   }
@@ -1623,10 +1623,10 @@ class _$SuccessoffersImpl implements Successoffers {
 }
 
 abstract class Successoffers implements HomeState {
-  const factory Successoffers(final ItemsResponse itemsResponse) =
+  const factory Successoffers({required final ResponseItems responseItems}) =
       _$SuccessoffersImpl;
 
-  ItemsResponse get itemsResponse;
+  ResponseItems get responseItems;
   @JsonKey(ignore: true)
   _$$SuccessoffersImplCopyWith<_$SuccessoffersImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1701,10 +1701,10 @@ class _$ErroroffersImpl implements Erroroffers {
     required TResult Function(ResponseHome responseHome) successHome,
     required TResult Function(String erorr) errorHome,
     required TResult Function() loadingsearch,
-    required TResult Function(ItemsResponse itemsResponse) successSearch,
+    required TResult Function(ResponseItems responseItems) successSearch,
     required TResult Function(String erorr) errorSearch,
     required TResult Function() loadingoffers,
-    required TResult Function(ItemsResponse itemsResponse) successoffers,
+    required TResult Function(ResponseItems responseItems) successoffers,
     required TResult Function(String erorr) erroroffers,
   }) {
     return erroroffers(erorr);
@@ -1718,10 +1718,10 @@ class _$ErroroffersImpl implements Erroroffers {
     TResult? Function(ResponseHome responseHome)? successHome,
     TResult? Function(String erorr)? errorHome,
     TResult? Function()? loadingsearch,
-    TResult? Function(ItemsResponse itemsResponse)? successSearch,
+    TResult? Function(ResponseItems responseItems)? successSearch,
     TResult? Function(String erorr)? errorSearch,
     TResult? Function()? loadingoffers,
-    TResult? Function(ItemsResponse itemsResponse)? successoffers,
+    TResult? Function(ResponseItems responseItems)? successoffers,
     TResult? Function(String erorr)? erroroffers,
   }) {
     return erroroffers?.call(erorr);
@@ -1735,10 +1735,10 @@ class _$ErroroffersImpl implements Erroroffers {
     TResult Function(ResponseHome responseHome)? successHome,
     TResult Function(String erorr)? errorHome,
     TResult Function()? loadingsearch,
-    TResult Function(ItemsResponse itemsResponse)? successSearch,
+    TResult Function(ResponseItems responseItems)? successSearch,
     TResult Function(String erorr)? errorSearch,
     TResult Function()? loadingoffers,
-    TResult Function(ItemsResponse itemsResponse)? successoffers,
+    TResult Function(ResponseItems responseItems)? successoffers,
     TResult Function(String erorr)? erroroffers,
     required TResult orElse(),
   }) {

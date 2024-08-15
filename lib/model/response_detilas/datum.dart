@@ -1,58 +1,53 @@
 import 'package:collection/collection.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import 'size.dart';
+
 part 'datum.g.dart';
 
 @JsonSerializable()
-class Datum {
-  @JsonKey(name: 'items_prices')
-  final int? itemsPrices;
-  @JsonKey(name: 'itemprice_discount')
-  final int? itempriceDiscount;
-  final int? countitems;
-  @JsonKey(name: 'cart_id')
-  final int? cartId;
-  @JsonKey(name: 'cart_itemid')
-  final int? cartItemid;
-  @JsonKey(name: 'cart_userid')
-  final int? cartUserid;
-  @JsonKey(name: 'cart_orders')
-  final int? cartOrders;
+class DataDetails {
   @JsonKey(name: 'item_id')
-  final int? itemId;
+  int? itemId;
   @JsonKey(name: 'item_name')
-  final String? itemName;
+  String? itemName;
   @JsonKey(name: 'item_name_ar')
-  final String? itemNameAr;
+  String? itemNameAr;
   @JsonKey(name: 'item_decs')
-  final String? itemDecs;
+  String? itemDecs;
   @JsonKey(name: 'item_decs_ar')
-  final String? itemDecsAr;
+  String? itemDecsAr;
   @JsonKey(name: 'item_image')
-  final String? itemImage;
+  String? itemImage;
   @JsonKey(name: 'item_count')
-  final int? itemCount;
+  int? itemCount;
   @JsonKey(name: 'item_active')
-  final int? itemActive;
+  int? itemActive;
   @JsonKey(name: 'item_price')
-  final int? itemPrice;
+  int? itemPrice;
   @JsonKey(name: 'item_discount')
-  final int? itemDiscount;
+  int? itemDiscount;
   @JsonKey(name: 'item_data')
-  final String? itemData;
+  String? itemData;
   @JsonKey(name: 'item_categories')
-  final int? itemCategories;
-  @JsonKey(name: 'Size')
-  final String? size;
+  int? itemCategories;
+  @JsonKey(name: 'items_prices')
+  int? itemsPrices;
+  @JsonKey(name: 'itemprice_discount')
+  double? itempriceDiscount;
+  int? countitems;
+  @JsonKey(name: 'cart_id')
+  int? cartId;
+  @JsonKey(name: 'cart_itemid')
+  int? cartItemid;
+  @JsonKey(name: 'cart_userid')
+  int? cartUserid;
+  @JsonKey(name: 'cart_orders')
+  int? cartOrders;
+  List<String>? images;
+  List<ItemSize>? size;
 
-  const Datum({
-    this.itemsPrices,
-    this.itempriceDiscount,
-    this.countitems,
-    this.cartId,
-    this.cartItemid,
-    this.cartUserid,
-    this.cartOrders,
+  DataDetails({
     this.itemId,
     this.itemName,
     this.itemNameAr,
@@ -65,30 +60,32 @@ class Datum {
     this.itemDiscount,
     this.itemData,
     this.itemCategories,
+    this.itemsPrices,
+    this.itempriceDiscount,
+    this.countitems,
+    this.cartId,
+    this.cartItemid,
+    this.cartUserid,
+    this.cartOrders,
+    this.images,
     this.size,
   });
 
-  factory Datum.fromJson(Map<String, dynamic> json) => _$DatumFromJson(json);
+  factory DataDetails.fromJson(Map<String, dynamic> json) =>
+      _$DataDetailsFromJson(json);
 
-  Map<String, dynamic> toJson() => _$DatumToJson(this);
+  Map<String, dynamic> toJson() => _$DataDetailsToJson(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    if (other is! Datum) return false;
+    if (other is! DataDetails) return false;
     final mapEquals = const DeepCollectionEquality().equals;
     return mapEquals(other.toJson(), toJson());
   }
 
   @override
   int get hashCode =>
-      itemsPrices.hashCode ^
-      itempriceDiscount.hashCode ^
-      countitems.hashCode ^
-      cartId.hashCode ^
-      cartItemid.hashCode ^
-      cartUserid.hashCode ^
-      cartOrders.hashCode ^
       itemId.hashCode ^
       itemName.hashCode ^
       itemNameAr.hashCode ^
@@ -101,5 +98,13 @@ class Datum {
       itemDiscount.hashCode ^
       itemData.hashCode ^
       itemCategories.hashCode ^
+      itemsPrices.hashCode ^
+      itempriceDiscount.hashCode ^
+      countitems.hashCode ^
+      cartId.hashCode ^
+      cartItemid.hashCode ^
+      cartUserid.hashCode ^
+      cartOrders.hashCode ^
+      images.hashCode ^
       size.hashCode;
 }

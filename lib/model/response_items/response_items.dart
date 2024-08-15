@@ -1,10 +1,12 @@
 import 'package:collection/collection.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-part 'datum.g.dart';
+import 'size.dart';
+
+part 'response_items.g.dart';
 
 @JsonSerializable()
-class Datum {
+class ResponseItems {
   @JsonKey(name: 'item_id')
   int? itemId;
   @JsonKey(name: 'item_name')
@@ -29,20 +31,10 @@ class Datum {
   String? itemData;
   @JsonKey(name: 'item_categories')
   int? itemCategories;
-  @JsonKey(name: 'categories_id')
-  int? categoriesId;
-  @JsonKey(name: 'categories_name')
-  String? categoriesName;
-  @JsonKey(name: 'categories_name_ar')
-  String? categoriesNameAr;
-  @JsonKey(name: 'categories_Image')
-  String? categoriesImage;
-  @JsonKey(name: 'categories_Data')
-  String? categoriesData;
-  @JsonKey(name: 'itemprice_discount')
-  int? itempriceDiscount;
+  List<String>? images;
+  List<ItemSize>? size;
 
-  Datum({
+  ResponseItems({
     this.itemId,
     this.itemName,
     this.itemNameAr,
@@ -55,22 +47,20 @@ class Datum {
     this.itemDiscount,
     this.itemData,
     this.itemCategories,
-    this.categoriesId,
-    this.categoriesName,
-    this.categoriesNameAr,
-    this.categoriesImage,
-    this.categoriesData,
-    this.itempriceDiscount,
+    this.images,
+    this.size,
   });
 
-  factory Datum.fromJson(Map<String, dynamic> json) => _$DatumFromJson(json);
+  factory ResponseItems.fromJson(Map<String, dynamic> json) {
+    return _$ResponseItemsFromJson(json);
+  }
 
-  Map<String, dynamic> toJson() => _$DatumToJson(this);
+  Map<String, dynamic> toJson() => _$ResponseItemsToJson(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    if (other is! Datum) return false;
+    if (other is! ResponseItems) return false;
     final mapEquals = const DeepCollectionEquality().equals;
     return mapEquals(other.toJson(), toJson());
   }
@@ -89,10 +79,6 @@ class Datum {
       itemDiscount.hashCode ^
       itemData.hashCode ^
       itemCategories.hashCode ^
-      categoriesId.hashCode ^
-      categoriesName.hashCode ^
-      categoriesNameAr.hashCode ^
-      categoriesImage.hashCode ^
-      categoriesData.hashCode ^
-      itempriceDiscount.hashCode;
+      images.hashCode ^
+      size.hashCode;
 }

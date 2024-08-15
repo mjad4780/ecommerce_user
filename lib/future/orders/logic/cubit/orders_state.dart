@@ -1,8 +1,8 @@
-import 'package:ecommerce_user/model/orders_details/orders_details.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../model/order_response/order_response.dart';
 import '../../../../model/pending_response/pending_response.dart';
+import '../../../../model/response_detilas/response_detilas.dart';
 part 'orders_state.freezed.dart';
 
 @freezed
@@ -22,8 +22,8 @@ class OrdersState with _$OrdersState {
 
   ///:detailsOrder
   const factory OrdersState.loadingDetails() = LoadingDetails;
-  const factory OrdersState.successDetails(OrdersDetails ordersDetails) =
-      SuccessDetails;
+  const factory OrdersState.successDetails(
+      {required ResponseDetails responseDetails}) = SuccessDetails;
   const factory OrdersState.erorrDetails({required String erorr}) =
       ErorrDetails;
 

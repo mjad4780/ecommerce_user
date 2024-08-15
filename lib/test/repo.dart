@@ -17,7 +17,7 @@ import '../core/networking/api_result.dart';
 
 //   LoginRepo(this._apiService);
 
-//   Future<ApiResult<ItemsResponse>> search() async {
+//   Future<ApiResult<ResponseItems>> search() async {
 //     Map<String, dynamic> ff = {"search": "z"};
 
 //     try {

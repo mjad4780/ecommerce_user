@@ -10,39 +10,39 @@ part 'response_home.g.dart';
 
 @JsonSerializable()
 class ResponseHome {
-  final String? status;
-  final Setting? setting;
-  final Itemtopselling? itemtopselling;
-  final Categories? categories;
-  final Item1view? item1view;
+	final String? status;
+	final Setting? setting;
+	final Categories? categories;
+	final List<Itemtopselling>? itemtopselling;
+	final List<Item1view>? item1view;
 
-  const ResponseHome({
-    this.status,
-    this.setting,
-    this.itemtopselling,
-    this.categories,
-    this.item1view,
-  });
+	const ResponseHome({
+		this.status, 
+		this.setting, 
+		this.categories, 
+		this.itemtopselling, 
+		this.item1view, 
+	});
 
-  factory ResponseHome.fromJson(Map<String, dynamic> json) {
-    return _$ResponseHomeFromJson(json);
-  }
+	factory ResponseHome.fromJson(Map<String, dynamic> json) {
+		return _$ResponseHomeFromJson(json);
+	}
 
-  Map<String, dynamic> toJson() => _$ResponseHomeToJson(this);
+	Map<String, dynamic> toJson() => _$ResponseHomeToJson(this);
 
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    if (other is! ResponseHome) return false;
-    final mapEquals = const DeepCollectionEquality().equals;
-    return mapEquals(other.toJson(), toJson());
-  }
+	@override
+	bool operator ==(Object other) {
+		if (identical(other, this)) return true;
+		if (other is! ResponseHome) return false;
+		final mapEquals = const DeepCollectionEquality().equals;
+		return mapEquals(other.toJson(), toJson());
+	}
 
-  @override
-  int get hashCode =>
-      status.hashCode ^
-      setting.hashCode ^
-      itemtopselling.hashCode ^
-      categories.hashCode ^
-      item1view.hashCode;
+	@override
+	int get hashCode =>
+			status.hashCode ^
+			setting.hashCode ^
+			categories.hashCode ^
+			itemtopselling.hashCode ^
+			item1view.hashCode;
 }

@@ -1,12 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'datum.dart';
+part of 'response_items.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-Datum _$DatumFromJson(Map<String, dynamic> json) => Datum(
+ResponseItems _$ResponseItemsFromJson(Map<String, dynamic> json) =>
+    ResponseItems(
       itemId: (json['item_id'] as num?)?.toInt(),
       itemName: json['item_name'] as String?,
       itemNameAr: json['item_name_ar'] as String?,
@@ -19,15 +20,15 @@ Datum _$DatumFromJson(Map<String, dynamic> json) => Datum(
       itemDiscount: (json['item_discount'] as num?)?.toInt(),
       itemData: json['item_data'] as String?,
       itemCategories: (json['item_categories'] as num?)?.toInt(),
-      categoriesId: (json['categories_id'] as num?)?.toInt(),
-      categoriesName: json['categories_name'] as String?,
-      categoriesNameAr: json['categories_name_ar'] as String?,
-      categoriesImage: json['categories_Image'] as String?,
-      categoriesData: json['categories_Data'] as String?,
-      itempriceDiscount: (json['itemprice_discount'] as num?)?.toInt(),
+      images:
+          (json['images'] as List<dynamic>?)?.map((e) => e as String).toList(),
+      size: (json['size'] as List<dynamic>?)
+          ?.map((e) => ItemSize.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
-Map<String, dynamic> _$DatumToJson(Datum instance) => <String, dynamic>{
+Map<String, dynamic> _$ResponseItemsToJson(ResponseItems instance) =>
+    <String, dynamic>{
       'item_id': instance.itemId,
       'item_name': instance.itemName,
       'item_name_ar': instance.itemNameAr,
@@ -40,10 +41,6 @@ Map<String, dynamic> _$DatumToJson(Datum instance) => <String, dynamic>{
       'item_discount': instance.itemDiscount,
       'item_data': instance.itemData,
       'item_categories': instance.itemCategories,
-      'categories_id': instance.categoriesId,
-      'categories_name': instance.categoriesName,
-      'categories_name_ar': instance.categoriesNameAr,
-      'categories_Image': instance.categoriesImage,
-      'categories_Data': instance.categoriesData,
-      'itemprice_discount': instance.itempriceDiscount,
+      'images': instance.images,
+      'size': instance.size,
     };

@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../../model/items_response/items_response.dart';
 import '../../../../model/response_home/response_home.dart';
+import '../../../../model/response_items/response_items.dart';
 
 part 'home_state.freezed.dart';
 
@@ -15,11 +15,11 @@ class HomeState with _$HomeState {
   //:repassword
   const factory HomeState.loadingsearch() = Loadingsearch;
   const factory HomeState.successSearch(
-      {required ItemsResponse itemsResponse}) = SuccessSearch;
+      {required ResponseItems responseItems}) = SuccessSearch;
   const factory HomeState.errorSearch({required String erorr}) = ErrorSearch;
   //:veryfycode
   const factory HomeState.loadingoffers() = Loadingoffers;
-  const factory HomeState.successoffers(ItemsResponse itemsResponse) =
-      Successoffers;
+  const factory HomeState.successoffers(
+      {required ResponseItems responseItems}) = Successoffers;
   const factory HomeState.erroroffers({required String erorr}) = Erroroffers;
 }

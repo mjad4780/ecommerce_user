@@ -1,22 +1,26 @@
 import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
 import 'package:ecommerce_user/core/theming/colors.dart';
-import 'package:ecommerce_user/future/auth/sign_up/logic/cubit/sign_up_cubit.dart';
+import 'package:ecommerce_user/future/auth/verfyCode/logic/cubit/verfy_code_cubit.dart';
+import 'package:ecommerce_user/future/auth/verfyCode/logic/cubit/verfy_code_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../core/function/AlertDialog.dart';
 import '../../../../core/theming/styles.dart';
 
-class SignUpBlocListener extends StatelessWidget {
-  const SignUpBlocListener({super.key});
+class SendCodeBlocListener extends StatelessWidget {
+  const SendCodeBlocListener({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return BlocListener<SignUpCubit, SignUpState>(
+    return BlocListener<VerfyCodeCubit, VerfyCodeState>(
       listenWhen: (previous, current) =>
-          current is Laoding || current is Success || current is Error,
+          current is LoadingSend ||
+          current is SuccessSend ||
+          current is ErorrSend,
       listener: (context, state) {
         state.whenOrNull(
-          laoding: () {
+          loadingveryfyCode: () {
             showDialog(
               context: context,
               builder: (context) => const Center(
@@ -26,11 +30,11 @@ class SignUpBlocListener extends StatelessWidget {
               ),
             );
           },
-          success: () {
+          successVerfyCode: () {
             context.pop();
-            context.push('/VerfyCodeScrean');
+            showSuccessDialog(context, 'code has been sent');
           },
-          error: (error) {
+          erorrVerfycode: (error) {
             setupErrorState(context, error);
           },
         );

@@ -5,7 +5,7 @@ import '../../../../core/function/formDataPost.dart';
 import '../../../../core/networking/api_error_handler.dart';
 import '../../../../core/networking/api_result.dart';
 import '../../../../core/networking/api_service.dart';
-import '../../../model/items_response/items_response.dart';
+import '../../../model/response_items/response_items.dart';
 
 class ItemCategoriesRepo {
   final ApiService _apiService;
@@ -14,7 +14,7 @@ class ItemCategoriesRepo {
 
   /// :itemCategories
 
-  Future<ApiResult<ItemsResponse>> itemCategories(int categoriesid) async {
+  Future<ApiResult<ResponseItems>> itemCategories(int categoriesid) async {
     try {
       Map<String, dynamic> map = {
         'id': categoriesid,

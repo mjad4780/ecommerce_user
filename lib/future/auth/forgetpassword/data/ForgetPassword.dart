@@ -1,3 +1,5 @@
+import 'package:go_router/go_router.dart';
+
 import '../../../../core/function/formDataPost.dart';
 import '../../../../core/networking/api_error_handler.dart';
 import '../../../../core/networking/api_result.dart';
@@ -42,7 +44,7 @@ class ForgetPassword {
 
   /// :verfycode_forget
   Future<ApiResult<ResponseStatus>> verfyCodeForget(
-      String email, int verfycode) async {
+      String email, String verfycode) async {
     Map<String, dynamic> map = {"email": email, 'verfycode': verfycode};
 
     try {

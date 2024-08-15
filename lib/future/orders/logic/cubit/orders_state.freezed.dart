@@ -26,7 +26,7 @@ mixin _$OrdersState {
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrdelete,
     required TResult Function() loadingDetails,
-    required TResult Function(OrdersDetails ordersDetails) successDetails,
+    required TResult Function(ResponseDetails responseDetails) successDetails,
     required TResult Function(String erorr) erorrDetails,
     required TResult Function() loadingPeinding,
     required TResult Function(PendingResponse pendingResponse) successPeinding,
@@ -43,7 +43,7 @@ mixin _$OrdersState {
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrdelete,
     TResult? Function()? loadingDetails,
-    TResult? Function(OrdersDetails ordersDetails)? successDetails,
+    TResult? Function(ResponseDetails responseDetails)? successDetails,
     TResult? Function(String erorr)? erorrDetails,
     TResult? Function()? loadingPeinding,
     TResult? Function(PendingResponse pendingResponse)? successPeinding,
@@ -60,7 +60,7 @@ mixin _$OrdersState {
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrdelete,
     TResult Function()? loadingDetails,
-    TResult Function(OrdersDetails ordersDetails)? successDetails,
+    TResult Function(ResponseDetails responseDetails)? successDetails,
     TResult Function(String erorr)? erorrDetails,
     TResult Function()? loadingPeinding,
     TResult Function(PendingResponse pendingResponse)? successPeinding,
@@ -186,7 +186,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrdelete,
     required TResult Function() loadingDetails,
-    required TResult Function(OrdersDetails ordersDetails) successDetails,
+    required TResult Function(ResponseDetails responseDetails) successDetails,
     required TResult Function(String erorr) erorrDetails,
     required TResult Function() loadingPeinding,
     required TResult Function(PendingResponse pendingResponse) successPeinding,
@@ -206,7 +206,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrdelete,
     TResult? Function()? loadingDetails,
-    TResult? Function(OrdersDetails ordersDetails)? successDetails,
+    TResult? Function(ResponseDetails responseDetails)? successDetails,
     TResult? Function(String erorr)? erorrDetails,
     TResult? Function()? loadingPeinding,
     TResult? Function(PendingResponse pendingResponse)? successPeinding,
@@ -226,7 +226,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrdelete,
     TResult Function()? loadingDetails,
-    TResult Function(OrdersDetails ordersDetails)? successDetails,
+    TResult Function(ResponseDetails responseDetails)? successDetails,
     TResult Function(String erorr)? erorrDetails,
     TResult Function()? loadingPeinding,
     TResult Function(PendingResponse pendingResponse)? successPeinding,
@@ -354,7 +354,7 @@ class _$LoadingGetImpl implements LoadingGet {
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrdelete,
     required TResult Function() loadingDetails,
-    required TResult Function(OrdersDetails ordersDetails) successDetails,
+    required TResult Function(ResponseDetails responseDetails) successDetails,
     required TResult Function(String erorr) erorrDetails,
     required TResult Function() loadingPeinding,
     required TResult Function(PendingResponse pendingResponse) successPeinding,
@@ -374,7 +374,7 @@ class _$LoadingGetImpl implements LoadingGet {
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrdelete,
     TResult? Function()? loadingDetails,
-    TResult? Function(OrdersDetails ordersDetails)? successDetails,
+    TResult? Function(ResponseDetails responseDetails)? successDetails,
     TResult? Function(String erorr)? erorrDetails,
     TResult? Function()? loadingPeinding,
     TResult? Function(PendingResponse pendingResponse)? successPeinding,
@@ -394,7 +394,7 @@ class _$LoadingGetImpl implements LoadingGet {
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrdelete,
     TResult Function()? loadingDetails,
-    TResult Function(OrdersDetails ordersDetails)? successDetails,
+    TResult Function(ResponseDetails responseDetails)? successDetails,
     TResult Function(String erorr)? erorrDetails,
     TResult Function()? loadingPeinding,
     TResult Function(PendingResponse pendingResponse)? successPeinding,
@@ -549,7 +549,7 @@ class _$SuccessGetImpl implements SuccessGet {
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrdelete,
     required TResult Function() loadingDetails,
-    required TResult Function(OrdersDetails ordersDetails) successDetails,
+    required TResult Function(ResponseDetails responseDetails) successDetails,
     required TResult Function(String erorr) erorrDetails,
     required TResult Function() loadingPeinding,
     required TResult Function(PendingResponse pendingResponse) successPeinding,
@@ -569,7 +569,7 @@ class _$SuccessGetImpl implements SuccessGet {
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrdelete,
     TResult? Function()? loadingDetails,
-    TResult? Function(OrdersDetails ordersDetails)? successDetails,
+    TResult? Function(ResponseDetails responseDetails)? successDetails,
     TResult? Function(String erorr)? erorrDetails,
     TResult? Function()? loadingPeinding,
     TResult? Function(PendingResponse pendingResponse)? successPeinding,
@@ -589,7 +589,7 @@ class _$SuccessGetImpl implements SuccessGet {
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrdelete,
     TResult Function()? loadingDetails,
-    TResult Function(OrdersDetails ordersDetails)? successDetails,
+    TResult Function(ResponseDetails responseDetails)? successDetails,
     TResult Function(String erorr)? erorrDetails,
     TResult Function()? loadingPeinding,
     TResult Function(PendingResponse pendingResponse)? successPeinding,
@@ -749,7 +749,7 @@ class _$ErorrGetImpl implements ErorrGet {
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrdelete,
     required TResult Function() loadingDetails,
-    required TResult Function(OrdersDetails ordersDetails) successDetails,
+    required TResult Function(ResponseDetails responseDetails) successDetails,
     required TResult Function(String erorr) erorrDetails,
     required TResult Function() loadingPeinding,
     required TResult Function(PendingResponse pendingResponse) successPeinding,
@@ -769,7 +769,7 @@ class _$ErorrGetImpl implements ErorrGet {
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrdelete,
     TResult? Function()? loadingDetails,
-    TResult? Function(OrdersDetails ordersDetails)? successDetails,
+    TResult? Function(ResponseDetails responseDetails)? successDetails,
     TResult? Function(String erorr)? erorrDetails,
     TResult? Function()? loadingPeinding,
     TResult? Function(PendingResponse pendingResponse)? successPeinding,
@@ -789,7 +789,7 @@ class _$ErorrGetImpl implements ErorrGet {
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrdelete,
     TResult Function()? loadingDetails,
-    TResult Function(OrdersDetails ordersDetails)? successDetails,
+    TResult Function(ResponseDetails responseDetails)? successDetails,
     TResult Function(String erorr)? erorrDetails,
     TResult Function()? loadingPeinding,
     TResult Function(PendingResponse pendingResponse)? successPeinding,
@@ -922,7 +922,7 @@ class _$LoadingDeleteImpl implements LoadingDelete {
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrdelete,
     required TResult Function() loadingDetails,
-    required TResult Function(OrdersDetails ordersDetails) successDetails,
+    required TResult Function(ResponseDetails responseDetails) successDetails,
     required TResult Function(String erorr) erorrDetails,
     required TResult Function() loadingPeinding,
     required TResult Function(PendingResponse pendingResponse) successPeinding,
@@ -942,7 +942,7 @@ class _$LoadingDeleteImpl implements LoadingDelete {
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrdelete,
     TResult? Function()? loadingDetails,
-    TResult? Function(OrdersDetails ordersDetails)? successDetails,
+    TResult? Function(ResponseDetails responseDetails)? successDetails,
     TResult? Function(String erorr)? erorrDetails,
     TResult? Function()? loadingPeinding,
     TResult? Function(PendingResponse pendingResponse)? successPeinding,
@@ -962,7 +962,7 @@ class _$LoadingDeleteImpl implements LoadingDelete {
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrdelete,
     TResult Function()? loadingDetails,
-    TResult Function(OrdersDetails ordersDetails)? successDetails,
+    TResult Function(ResponseDetails responseDetails)? successDetails,
     TResult Function(String erorr)? erorrDetails,
     TResult Function()? loadingPeinding,
     TResult Function(PendingResponse pendingResponse)? successPeinding,
@@ -1090,7 +1090,7 @@ class _$SuccessdeleteImpl implements Successdelete {
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrdelete,
     required TResult Function() loadingDetails,
-    required TResult Function(OrdersDetails ordersDetails) successDetails,
+    required TResult Function(ResponseDetails responseDetails) successDetails,
     required TResult Function(String erorr) erorrDetails,
     required TResult Function() loadingPeinding,
     required TResult Function(PendingResponse pendingResponse) successPeinding,
@@ -1110,7 +1110,7 @@ class _$SuccessdeleteImpl implements Successdelete {
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrdelete,
     TResult? Function()? loadingDetails,
-    TResult? Function(OrdersDetails ordersDetails)? successDetails,
+    TResult? Function(ResponseDetails responseDetails)? successDetails,
     TResult? Function(String erorr)? erorrDetails,
     TResult? Function()? loadingPeinding,
     TResult? Function(PendingResponse pendingResponse)? successPeinding,
@@ -1130,7 +1130,7 @@ class _$SuccessdeleteImpl implements Successdelete {
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrdelete,
     TResult Function()? loadingDetails,
-    TResult Function(OrdersDetails ordersDetails)? successDetails,
+    TResult Function(ResponseDetails responseDetails)? successDetails,
     TResult Function(String erorr)? erorrDetails,
     TResult Function()? loadingPeinding,
     TResult Function(PendingResponse pendingResponse)? successPeinding,
@@ -1284,7 +1284,7 @@ class _$ErorrdeleteImpl implements Erorrdelete {
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrdelete,
     required TResult Function() loadingDetails,
-    required TResult Function(OrdersDetails ordersDetails) successDetails,
+    required TResult Function(ResponseDetails responseDetails) successDetails,
     required TResult Function(String erorr) erorrDetails,
     required TResult Function() loadingPeinding,
     required TResult Function(PendingResponse pendingResponse) successPeinding,
@@ -1304,7 +1304,7 @@ class _$ErorrdeleteImpl implements Erorrdelete {
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrdelete,
     TResult? Function()? loadingDetails,
-    TResult? Function(OrdersDetails ordersDetails)? successDetails,
+    TResult? Function(ResponseDetails responseDetails)? successDetails,
     TResult? Function(String erorr)? erorrDetails,
     TResult? Function()? loadingPeinding,
     TResult? Function(PendingResponse pendingResponse)? successPeinding,
@@ -1324,7 +1324,7 @@ class _$ErorrdeleteImpl implements Erorrdelete {
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrdelete,
     TResult Function()? loadingDetails,
-    TResult Function(OrdersDetails ordersDetails)? successDetails,
+    TResult Function(ResponseDetails responseDetails)? successDetails,
     TResult Function(String erorr)? erorrDetails,
     TResult Function()? loadingPeinding,
     TResult Function(PendingResponse pendingResponse)? successPeinding,
@@ -1457,7 +1457,7 @@ class _$LoadingDetailsImpl implements LoadingDetails {
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrdelete,
     required TResult Function() loadingDetails,
-    required TResult Function(OrdersDetails ordersDetails) successDetails,
+    required TResult Function(ResponseDetails responseDetails) successDetails,
     required TResult Function(String erorr) erorrDetails,
     required TResult Function() loadingPeinding,
     required TResult Function(PendingResponse pendingResponse) successPeinding,
@@ -1477,7 +1477,7 @@ class _$LoadingDetailsImpl implements LoadingDetails {
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrdelete,
     TResult? Function()? loadingDetails,
-    TResult? Function(OrdersDetails ordersDetails)? successDetails,
+    TResult? Function(ResponseDetails responseDetails)? successDetails,
     TResult? Function(String erorr)? erorrDetails,
     TResult? Function()? loadingPeinding,
     TResult? Function(PendingResponse pendingResponse)? successPeinding,
@@ -1497,7 +1497,7 @@ class _$LoadingDetailsImpl implements LoadingDetails {
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrdelete,
     TResult Function()? loadingDetails,
-    TResult Function(OrdersDetails ordersDetails)? successDetails,
+    TResult Function(ResponseDetails responseDetails)? successDetails,
     TResult Function(String erorr)? erorrDetails,
     TResult Function()? loadingPeinding,
     TResult Function(PendingResponse pendingResponse)? successPeinding,
@@ -1585,7 +1585,7 @@ abstract class _$$SuccessDetailsImplCopyWith<$Res> {
           $Res Function(_$SuccessDetailsImpl) then) =
       __$$SuccessDetailsImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({OrdersDetails ordersDetails});
+  $Res call({ResponseDetails responseDetails});
 }
 
 /// @nodoc
@@ -1599,13 +1599,13 @@ class __$$SuccessDetailsImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? ordersDetails = null,
+    Object? responseDetails = null,
   }) {
     return _then(_$SuccessDetailsImpl(
-      null == ordersDetails
-          ? _value.ordersDetails
-          : ordersDetails // ignore: cast_nullable_to_non_nullable
-              as OrdersDetails,
+      responseDetails: null == responseDetails
+          ? _value.responseDetails
+          : responseDetails // ignore: cast_nullable_to_non_nullable
+              as ResponseDetails,
     ));
   }
 }
@@ -1613,14 +1613,14 @@ class __$$SuccessDetailsImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$SuccessDetailsImpl implements SuccessDetails {
-  const _$SuccessDetailsImpl(this.ordersDetails);
+  const _$SuccessDetailsImpl({required this.responseDetails});
 
   @override
-  final OrdersDetails ordersDetails;
+  final ResponseDetails responseDetails;
 
   @override
   String toString() {
-    return 'OrdersState.successDetails(ordersDetails: $ordersDetails)';
+    return 'OrdersState.successDetails(responseDetails: $responseDetails)';
   }
 
   @override
@@ -1628,12 +1628,12 @@ class _$SuccessDetailsImpl implements SuccessDetails {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SuccessDetailsImpl &&
-            (identical(other.ordersDetails, ordersDetails) ||
-                other.ordersDetails == ordersDetails));
+            (identical(other.responseDetails, responseDetails) ||
+                other.responseDetails == responseDetails));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, ordersDetails);
+  int get hashCode => Object.hash(runtimeType, responseDetails);
 
   @JsonKey(ignore: true)
   @override
@@ -1653,13 +1653,13 @@ class _$SuccessDetailsImpl implements SuccessDetails {
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrdelete,
     required TResult Function() loadingDetails,
-    required TResult Function(OrdersDetails ordersDetails) successDetails,
+    required TResult Function(ResponseDetails responseDetails) successDetails,
     required TResult Function(String erorr) erorrDetails,
     required TResult Function() loadingPeinding,
     required TResult Function(PendingResponse pendingResponse) successPeinding,
     required TResult Function(String erorr) erorrPeinding,
   }) {
-    return successDetails(ordersDetails);
+    return successDetails(responseDetails);
   }
 
   @override
@@ -1673,13 +1673,13 @@ class _$SuccessDetailsImpl implements SuccessDetails {
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrdelete,
     TResult? Function()? loadingDetails,
-    TResult? Function(OrdersDetails ordersDetails)? successDetails,
+    TResult? Function(ResponseDetails responseDetails)? successDetails,
     TResult? Function(String erorr)? erorrDetails,
     TResult? Function()? loadingPeinding,
     TResult? Function(PendingResponse pendingResponse)? successPeinding,
     TResult? Function(String erorr)? erorrPeinding,
   }) {
-    return successDetails?.call(ordersDetails);
+    return successDetails?.call(responseDetails);
   }
 
   @override
@@ -1693,7 +1693,7 @@ class _$SuccessDetailsImpl implements SuccessDetails {
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrdelete,
     TResult Function()? loadingDetails,
-    TResult Function(OrdersDetails ordersDetails)? successDetails,
+    TResult Function(ResponseDetails responseDetails)? successDetails,
     TResult Function(String erorr)? erorrDetails,
     TResult Function()? loadingPeinding,
     TResult Function(PendingResponse pendingResponse)? successPeinding,
@@ -1701,7 +1701,7 @@ class _$SuccessDetailsImpl implements SuccessDetails {
     required TResult orElse(),
   }) {
     if (successDetails != null) {
-      return successDetails(ordersDetails);
+      return successDetails(responseDetails);
     }
     return orElse();
   }
@@ -1772,10 +1772,10 @@ class _$SuccessDetailsImpl implements SuccessDetails {
 }
 
 abstract class SuccessDetails implements OrdersState {
-  const factory SuccessDetails(final OrdersDetails ordersDetails) =
-      _$SuccessDetailsImpl;
+  const factory SuccessDetails(
+      {required final ResponseDetails responseDetails}) = _$SuccessDetailsImpl;
 
-  OrdersDetails get ordersDetails;
+  ResponseDetails get responseDetails;
   @JsonKey(ignore: true)
   _$$SuccessDetailsImplCopyWith<_$SuccessDetailsImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1853,7 +1853,7 @@ class _$ErorrDetailsImpl implements ErorrDetails {
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrdelete,
     required TResult Function() loadingDetails,
-    required TResult Function(OrdersDetails ordersDetails) successDetails,
+    required TResult Function(ResponseDetails responseDetails) successDetails,
     required TResult Function(String erorr) erorrDetails,
     required TResult Function() loadingPeinding,
     required TResult Function(PendingResponse pendingResponse) successPeinding,
@@ -1873,7 +1873,7 @@ class _$ErorrDetailsImpl implements ErorrDetails {
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrdelete,
     TResult? Function()? loadingDetails,
-    TResult? Function(OrdersDetails ordersDetails)? successDetails,
+    TResult? Function(ResponseDetails responseDetails)? successDetails,
     TResult? Function(String erorr)? erorrDetails,
     TResult? Function()? loadingPeinding,
     TResult? Function(PendingResponse pendingResponse)? successPeinding,
@@ -1893,7 +1893,7 @@ class _$ErorrDetailsImpl implements ErorrDetails {
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrdelete,
     TResult Function()? loadingDetails,
-    TResult Function(OrdersDetails ordersDetails)? successDetails,
+    TResult Function(ResponseDetails responseDetails)? successDetails,
     TResult Function(String erorr)? erorrDetails,
     TResult Function()? loadingPeinding,
     TResult Function(PendingResponse pendingResponse)? successPeinding,
@@ -2027,7 +2027,7 @@ class _$LoadingPeindingImpl implements LoadingPeinding {
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrdelete,
     required TResult Function() loadingDetails,
-    required TResult Function(OrdersDetails ordersDetails) successDetails,
+    required TResult Function(ResponseDetails responseDetails) successDetails,
     required TResult Function(String erorr) erorrDetails,
     required TResult Function() loadingPeinding,
     required TResult Function(PendingResponse pendingResponse) successPeinding,
@@ -2047,7 +2047,7 @@ class _$LoadingPeindingImpl implements LoadingPeinding {
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrdelete,
     TResult? Function()? loadingDetails,
-    TResult? Function(OrdersDetails ordersDetails)? successDetails,
+    TResult? Function(ResponseDetails responseDetails)? successDetails,
     TResult? Function(String erorr)? erorrDetails,
     TResult? Function()? loadingPeinding,
     TResult? Function(PendingResponse pendingResponse)? successPeinding,
@@ -2067,7 +2067,7 @@ class _$LoadingPeindingImpl implements LoadingPeinding {
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrdelete,
     TResult Function()? loadingDetails,
-    TResult Function(OrdersDetails ordersDetails)? successDetails,
+    TResult Function(ResponseDetails responseDetails)? successDetails,
     TResult Function(String erorr)? erorrDetails,
     TResult Function()? loadingPeinding,
     TResult Function(PendingResponse pendingResponse)? successPeinding,
@@ -2223,7 +2223,7 @@ class _$SuccessPeindingImpl implements SuccessPeinding {
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrdelete,
     required TResult Function() loadingDetails,
-    required TResult Function(OrdersDetails ordersDetails) successDetails,
+    required TResult Function(ResponseDetails responseDetails) successDetails,
     required TResult Function(String erorr) erorrDetails,
     required TResult Function() loadingPeinding,
     required TResult Function(PendingResponse pendingResponse) successPeinding,
@@ -2243,7 +2243,7 @@ class _$SuccessPeindingImpl implements SuccessPeinding {
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrdelete,
     TResult? Function()? loadingDetails,
-    TResult? Function(OrdersDetails ordersDetails)? successDetails,
+    TResult? Function(ResponseDetails responseDetails)? successDetails,
     TResult? Function(String erorr)? erorrDetails,
     TResult? Function()? loadingPeinding,
     TResult? Function(PendingResponse pendingResponse)? successPeinding,
@@ -2263,7 +2263,7 @@ class _$SuccessPeindingImpl implements SuccessPeinding {
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrdelete,
     TResult Function()? loadingDetails,
-    TResult Function(OrdersDetails ordersDetails)? successDetails,
+    TResult Function(ResponseDetails responseDetails)? successDetails,
     TResult Function(String erorr)? erorrDetails,
     TResult Function()? loadingPeinding,
     TResult Function(PendingResponse pendingResponse)? successPeinding,
@@ -2423,7 +2423,7 @@ class _$ErorrPeindingImpl implements ErorrPeinding {
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrdelete,
     required TResult Function() loadingDetails,
-    required TResult Function(OrdersDetails ordersDetails) successDetails,
+    required TResult Function(ResponseDetails responseDetails) successDetails,
     required TResult Function(String erorr) erorrDetails,
     required TResult Function() loadingPeinding,
     required TResult Function(PendingResponse pendingResponse) successPeinding,
@@ -2443,7 +2443,7 @@ class _$ErorrPeindingImpl implements ErorrPeinding {
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrdelete,
     TResult? Function()? loadingDetails,
-    TResult? Function(OrdersDetails ordersDetails)? successDetails,
+    TResult? Function(ResponseDetails responseDetails)? successDetails,
     TResult? Function(String erorr)? erorrDetails,
     TResult? Function()? loadingPeinding,
     TResult? Function(PendingResponse pendingResponse)? successPeinding,
@@ -2463,7 +2463,7 @@ class _$ErorrPeindingImpl implements ErorrPeinding {
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrdelete,
     TResult Function()? loadingDetails,
-    TResult Function(OrdersDetails ordersDetails)? successDetails,
+    TResult Function(ResponseDetails responseDetails)? successDetails,
     TResult Function(String erorr)? erorrDetails,
     TResult Function()? loadingPeinding,
     TResult Function(PendingResponse pendingResponse)? successPeinding,

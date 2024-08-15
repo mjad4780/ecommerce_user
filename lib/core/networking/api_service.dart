@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:dio/dio.dart';
 import 'package:ecommerce_user/model/pending_response/pending_response.dart';
 
@@ -10,10 +8,10 @@ import '../../model/cart_response/cart_response.dart';
 import '../../model/coupon_response/coupon_response.dart';
 import '../../model/favorite_response/favorite_response.dart';
 import '../../model/get_current_cart/get_current_cart.dart';
-import '../../model/items_response/items_response.dart';
 import '../../model/order_response/order_response.dart';
-import '../../model/orders_details/orders_details.dart';
+import '../../model/response_detilas/response_detilas.dart';
 import '../../model/response_home/response_home.dart';
+import '../../model/response_items/response_items.dart';
 import '../../model/response_login/response_login.dart';
 import '../../model/response_status/response_status.dart';
 import 'api_constants.dart';
@@ -52,13 +50,13 @@ abstract class ApiService {
   Future<ResponseHome> home();
 
   @POST(ApiConstants.search)
-  Future<ItemsResponse> search(@Body() dynamic body);
+  Future<ResponseItems> search(@Body() dynamic body);
 
   @POST(ApiConstants.categories)
-  Future<ItemsResponse> itemCategories(@Body() dynamic body);
+  Future<ResponseItems> itemCategories(@Body() dynamic body);
 
   @GET(ApiConstants.offers)
-  Future<ItemsResponse> offers();
+  Future<ResponseItems> offers();
   //// Address
   @POST(ApiConstants.adressAdd)
   Future<ResponseStatus> addAdress(@Body() dynamic body);
@@ -111,7 +109,7 @@ abstract class ApiService {
   Future<ResponseStatus> deleteOrders(@Body() dynamic body);
 
   @POST(ApiConstants.details)
-  Future<OrdersDetails> detailsOrders(@Body() dynamic body);
+  Future<ResponseDetails> detailsOrders(@Body() dynamic body);
 
   @POST(ApiConstants.getorder)
   Future<OrderResponse> getorder(@Body() dynamic body);

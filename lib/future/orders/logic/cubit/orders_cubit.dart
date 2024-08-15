@@ -4,6 +4,7 @@ import '../../data/repo.dart';
 import 'orders_state.dart';
 
 class OrdersCubit extends Cubit<OrdersState> {
+  // OrdersCubit(super.initialState);
   OrdersCubit(this._checkCartOrder) : super(const OrdersState.initial());
 
   final OrdersRepo _checkCartOrder;
@@ -23,7 +24,7 @@ class OrdersCubit extends Cubit<OrdersState> {
     emit(const OrdersState.loadingDetails());
     final response = await _checkCartOrder.getDetailas(id);
     response.when(success: (responsehome) {
-      emit(OrdersState.successDetails(responsehome));
+      emit(OrdersState.successDetails(responseDetails: responsehome));
     }, failure: (error) {
       emit(OrdersState.erorrDetails(erorr: error.apiErrorModel.messege ?? ''));
     });

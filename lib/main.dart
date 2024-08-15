@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp.router(
         routerConfig: router,
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Admin Panel',
+        title: 'Flutter e-ecommerce ',
         theme: ThemeData.light().copyWith(
           scaffoldBackgroundColor: AppColor.lightGrey,
           // textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)

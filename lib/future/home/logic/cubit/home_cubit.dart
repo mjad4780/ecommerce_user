@@ -25,7 +25,7 @@ class HomeCubit extends Cubit<HomeState> {
     emit(const HomeState.loadingsearch());
     final response = await homeRepo.search(search.text);
     response.when(success: (loginResponse) {
-      emit(HomeState.successSearch(itemsResponse: loginResponse));
+      emit(HomeState.successSearch(responseItems: loginResponse));
     }, failure: (error) {
       emit(HomeState.errorSearch(erorr: error.apiErrorModel.messege ?? ''));
     });
@@ -36,7 +36,7 @@ class HomeCubit extends Cubit<HomeState> {
     emit(const HomeState.loadingoffers());
     final response = await homeRepo.offers();
     response.when(success: (loginResponse) {
-      emit(HomeState.successoffers(loginResponse));
+      emit(HomeState.successoffers(responseItems: loginResponse));
     }, failure: (error) {
       emit(HomeState.erroroffers(erorr: error.apiErrorModel.messege ?? ''));
     });

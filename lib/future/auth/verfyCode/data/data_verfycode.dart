@@ -11,7 +11,7 @@ class VerfyCodeDate {
 
   ///:verfycode
   Future<ApiResult<ResponseStatus>> verfycode(
-      String email, int veryfycode) async {
+      String email, String veryfycode) async {
     Map<String, dynamic> map = {
       "email": email,
       "verfycode": veryfycode,

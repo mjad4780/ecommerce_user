@@ -28,6 +28,7 @@ class LoginBlocListener extends StatelessWidget {
           },
           success: () {
             context.pop();
+            context.push('/Home');
           },
           error: (error) {
             setupErrorState(context, error);

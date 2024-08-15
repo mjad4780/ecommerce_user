@@ -1,20 +1,20 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'orders_details.dart';
+part of 'response_detilas.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-OrdersDetails _$OrdersDetailsFromJson(Map<String, dynamic> json) =>
-    OrdersDetails(
+ResponseDetails _$ResponseDetailsFromJson(Map<String, dynamic> json) =>
+    ResponseDetails(
       status: json['status'] as String?,
       data: (json['data'] as List<dynamic>?)
-          ?.map((e) => Datum.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => DataDetails.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$OrdersDetailsToJson(OrdersDetails instance) =>
+Map<String, dynamic> _$ResponseDetailsToJson(ResponseDetails instance) =>
     <String, dynamic>{
       'status': instance.status,
       'data': instance.data,

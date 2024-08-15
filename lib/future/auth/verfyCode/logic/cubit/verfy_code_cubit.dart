@@ -7,13 +7,12 @@ import 'verfy_code_state.dart';
 class VerfyCodeCubit extends Cubit<VerfyCodeState> {
   VerfyCodeCubit(this._verfyCodeDate) : super(const VerfyCodeState.initial());
 
-  TextEditingController email = TextEditingController();
   final VerfyCodeDate _verfyCodeDate;
 
   ///:verfycode
-  verfycode(int verfycode) async {
+  verfycode(String verfycode, String email) async {
     emit(const VerfyCodeState.loadingveryfyCode());
-    final response = await _verfyCodeDate.verfycode(email.text, verfycode);
+    final response = await _verfyCodeDate.verfycode(email, verfycode);
     response.when(success: (responseStatus) {
       emit(const VerfyCodeState.successVerfyCode());
     }, failure: (error) {
@@ -23,10 +22,10 @@ class VerfyCodeCubit extends Cubit<VerfyCodeState> {
   }
 
   ///:sendverfycode
-  sendverfycode() async {
+  sendverfycode(String email) async {
     emit(const VerfyCodeState.loadingSend());
     final response = await _verfyCodeDate.sendVerfyCode(
-      email.text,
+      email,
     );
     response.when(success: (responseStatus) {
       emit(const VerfyCodeState.successSend());

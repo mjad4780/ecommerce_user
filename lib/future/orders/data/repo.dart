@@ -6,8 +6,8 @@ import '../../../../core/networking/api_error_handler.dart';
 import '../../../../core/networking/api_result.dart';
 import '../../../../core/networking/api_service.dart';
 import '../../../model/order_response/order_response.dart';
-import '../../../model/orders_details/orders_details.dart';
 import '../../../model/pending_response/pending_response.dart';
+import '../../../model/response_detilas/response_detilas.dart';
 import '../../../model/response_status/response_status.dart';
 
 class OrdersRepo {
@@ -32,7 +32,7 @@ class OrdersRepo {
 
   /// :getDetailas
 
-  Future<ApiResult<OrdersDetails>> getDetailas(
+  Future<ApiResult<ResponseDetails>> getDetailas(
     int orderid,
   ) async {
     Map<String, dynamic> map = {

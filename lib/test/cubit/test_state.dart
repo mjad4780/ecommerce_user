@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../model/items_response/items_response.dart';
+import '../../model/response_items/response_items.dart';
 
 part 'test_state.freezed.dart';
 
@@ -8,7 +8,7 @@ part 'test_state.freezed.dart';
 class TestState with _$TestState {
   const factory TestState.initial() = _Initial;
   const factory TestState.loading() = Loading;
-  const factory TestState.success(ItemsResponse data) = Success;
+  const factory TestState.success(ResponseItems data) = Success;
   const factory TestState.error({required String error}) = Error;
 
   const factory TestState.loadingHome() = loadingHome;
