@@ -35,6 +35,11 @@ class _EmailAndPasswordSignUpState extends State<EmailAndPasswordSignUp> {
     setupPasswordControllerListener();
   }
 
+  obscuretext() {
+    isObscureText = !isObscureText;
+    setState(() {});
+  }
+
   void setupPasswordControllerListener() {
     passwordController.addListener(() {
       setState(() {
@@ -95,12 +100,10 @@ class _EmailAndPasswordSignUpState extends State<EmailAndPasswordSignUp> {
             isObscureText: isObscureText,
             suffixIcon: GestureDetector(
               onTap: () {
-                context.read<SignUpCubit>().obscuretext();
+                obscuretext();
               },
               child: Icon(
-                context.read<SignUpCubit>().obscureText
-                    ? Icons.visibility_off
-                    : Icons.visibility,
+                isObscureText ? Icons.visibility_off : Icons.visibility,
               ),
             ),
             validator: (value) {

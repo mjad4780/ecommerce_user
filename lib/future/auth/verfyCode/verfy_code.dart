@@ -1,6 +1,5 @@
 import 'package:ecommerce_user/core/get_it/get_it.dart';
 import 'package:ecommerce_user/core/theming/colors.dart';
-import 'package:ecommerce_user/future/auth/forgetpassword/logic/cubit/forget_password_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
@@ -71,7 +70,7 @@ class VerfyCodeScrean extends StatelessWidget {
                       Builder(builder: (context) {
                         return OtpTextField(
                           disabledBorderColor: AppColor.primaryColor,
-                          // enabled: false,
+                          enabled: false,
                           numberOfFields: 5,
                           borderColor: const Color(0xFF512DA8),
                           //set to true to show as box or false to show as dash

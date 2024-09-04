@@ -1,5 +1,4 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
 import 'package:ecommerce_user/core/get_it/get_it.dart';
 import 'package:ecommerce_user/future/auth/sign_up/logic/cubit/sign_up_cubit.dart';
 import 'package:flutter/material.dart';

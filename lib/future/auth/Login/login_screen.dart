@@ -47,7 +47,7 @@ class LoginScreen extends StatelessWidget {
                 buttonText: "Login",
                 textStyle: TextStyles.font16WhiteSemiBold,
                 onPressed: () {
-                  // context.read<LoginCubit>().emitLoginStates(context);
+                  context.read<LoginCubit>().emitLoginStates(context);
                 });
           }),
           verticalSpace(30),

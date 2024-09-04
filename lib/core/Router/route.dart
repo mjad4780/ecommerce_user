@@ -12,12 +12,7 @@ import '../function/animation_page.dart';
 import '../get_it/get_it.dart';
 
 final GoRouter router = GoRouter(routes: [
-  GoRoute(
-      path: "/",
-      builder: (context, state) =>
-          getIt<CacheHelper>().getData(key: 'email') != null
-              ? const Home()
-              : vvv()),
+  GoRoute(path: "/", builder: (context, state) => checkNavigate()),
   GoRoute(
       path: "/Login",
       pageBuilder: (context, state) {
@@ -50,8 +45,10 @@ final GoRouter router = GoRouter(routes: [
       pageBuilder: (context, state) =>
           myCustomtransitionPage(const Home(), state)),
 ]);
-vvv() {
-  if (getIt<CacheHelper>().getData(key: 'onbourding') == true) {
+checkNavigate() {
+  if (getIt<CacheHelper>().getData(key: 'email') != null) {
+    return const Home();
+  } else if (getIt<CacheHelper>().getData(key: 'onbourding') == true) {
     return const LoginScreen();
   } else {
     return const OnbordingScreen();

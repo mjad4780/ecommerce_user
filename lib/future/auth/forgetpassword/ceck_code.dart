@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:provider/provider.dart';
 
 import '../../../core/helpers/spacing.dart';
 import '../../../core/theming/styles.dart';
@@ -16,10 +15,10 @@ class CheckCodeForgetPassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
+    return Scaffold(
+        body: BlocProvider(
       create: (context) => getIt<ForgetPasswordCubit>(),
-      child: Scaffold(
-        body: SafeArea(
+      child: SafeArea(
           child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 30.h),
               child: SingleChildScrollView(
@@ -38,32 +37,29 @@ class CheckCodeForgetPassword extends StatelessWidget {
                           height: 2, color: AppColor.grey, fontSize: 16),
                     ),
                     verticalSpace(50),
-                    Builder(builder: (context) {
-                      return OtpTextField(
-                        disabledBorderColor: AppColor.primaryColor,
-                        // enabled: false,
-                        numberOfFields: 5,
-                        borderColor: const Color(0xFF512DA8),
-                        //set to true to show as box or false to show as dash
-                        showFieldAsBox: true,
-                        //runs when a code is typed in
-                        onCodeChanged: (String code) {
-                          //handle validation or checks here
-                        },
-                        //runs when every textfield is filled
-                        onSubmit: (String verificationCode) {
-                          context
-                              .read<ForgetPasswordCubit>()
-                              .veryfycode(verificationCode);
-                        }, // end onSubmit
-                      );
-                    }),
+                    OtpTextField(
+                      disabledBorderColor: AppColor.primaryColor,
+                      enabled: false,
+                      numberOfFields: 5,
+
+                      borderColor: const Color(0xFF512DA8),
+                      //set to true to show as box or false to show as dash
+                      showFieldAsBox: true,
+                      //runs when a code is typed in
+                      onCodeChanged: (String code) {
+                        //handle validation or checks here
+                      },
+                      //runs when every textfield is filled
+                      onSubmit: (String verificationCode) {
+                        context
+                            .read<ForgetPasswordCubit>()
+                            .veryfycode(verificationCode);
+                      }, // end onSubmit
+                    ),
                     const CheckCodeBlocListener()
                   ],
                 ),
-              )),
-        ),
-      ),
-    );
+              ))),
+    ));
   }
 }

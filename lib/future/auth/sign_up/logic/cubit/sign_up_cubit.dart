@@ -38,11 +38,6 @@ class SignUpCubit extends Cubit<SignUpState> {
 
   bool obscureText = true;
 
-  obscuretext() {
-    obscureText = !obscureText;
-    emit(const SignUpState.obscureText());
-  }
-
   //////////////
   dispose3() {
     emailSignUp.clear();
