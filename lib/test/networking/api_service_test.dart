@@ -1,6 +1,3 @@
-
-
-
 // part 'api_service_test.g.dart';
 
 // @RestApi(baseUrl: EndPoint.baseUrl)

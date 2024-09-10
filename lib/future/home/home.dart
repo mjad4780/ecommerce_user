@@ -1,80 +1,59 @@
+import '../../core/data/data_provider.dart';
 import 'package:flutter/material.dart';
-import 'package:animations/animations.dart';
-
-import 'widget/page_wrapper.dart';
+import 'package:provider/provider.dart';
+import 'components/custom_app_bar.dart';
+import '../../widget/product_grid_view.dart';
+import 'components/category_selector.dart';
+import 'components/poster_section.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: const CustomAppBar(),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Hello Sina",
+                  style: Theme.of(context).textTheme.displayLarge,
+                ),
+                Text(
+                  "Lets gets somethings?",
+                  style: Theme.of(context).textTheme.headlineSmall,
+                ),
+                const PosterSection(),
+                Text(
+                  "Top categories",
+                  style: Theme.of(context).textTheme.headlineMedium,
+                ),
+                const SizedBox(height: 5),
+                Consumer<DataProvider>(
+                  builder: (context, dataProvider, child) {
+                    return CategorySelector(
+                      categories: dataProvider.categories,
+                    );
+                  },
+                ),
+                Consumer<DataProvider>(
+                  builder: (context, dataProvider, child) {
+                    return ProductGridView(
+                      items: dataProvider.allProducts,
+                    );
+                  },
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
-
-
-
-
-
-
-
-
-
-// class Home2 extends StatefulWidget {
-//   const Home2({super.key});
-
-//   static const List<Widget> screens = [
-//     // ProductListScreen(),
-//     // FavoriteScreen(),
-//     // CartScreen(),
-//     // ProfileScreen()
-//   ];
-
-//   @override
-//   State<Home> createState() => _HomeScreenState();
-// }
-
-// class _HomeScreenState extends State<Home> {
-//   int newIndex = 0;
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return PageWrapper(
-//       child: Scaffold(
-//         bottomNavigationBar: BottomNavyBar(
-//           itemCornerRadius: 10,
-//           selectedIndex: newIndex,
-//           items: AppData.bottomNavyBarItems
-//               .map(
-//                 (item) => BottomNavyBarItem(
-//                   icon: item.icon,
-//                   title: Text(item.title),
-//                   activeColor: item.activeColor,
-//                   inactiveColor: item.inActiveColor,
-//                 ),
-//               )
-//               .toList(),
-//           onItemSelected: (currentIndex) {
-//             newIndex = currentIndex;
-//             setState(() {});
-//           },
-//         ),
-//         body: PageTransitionSwitcher(
-//           duration: const Duration(seconds: 1),
-//           transitionBuilder: (
-//             Widget child,
-//             Animation<double> animation,
-//             Animation<double> secondaryAnimation,
-//           ) {
-//             return FadeThroughTransition(
-//               animation: animation,
-//               secondaryAnimation: secondaryAnimation,
-//               child: child,
-//             );
-//           },
-//           child: Home.screens[newIndex],
-//         ),
-//       ),
-//     );
-//   }
-// }

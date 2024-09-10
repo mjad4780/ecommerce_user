@@ -1,13 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'itemtopselling.dart';
+part of 'datum.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-Itemtopselling _$ItemtopsellingFromJson(Map<String, dynamic> json) =>
-    Itemtopselling(
+Datum _$DatumFromJson(Map<String, dynamic> json) => Datum(
       itemId: (json['item_id'] as num?)?.toInt(),
       itemName: json['item_name'] as String?,
       itemNameAr: json['item_name_ar'] as String?,
@@ -20,12 +19,10 @@ Itemtopselling _$ItemtopsellingFromJson(Map<String, dynamic> json) =>
       itemDiscount: (json['item_discount'] as num?)?.toInt(),
       itemData: json['item_data'] as String?,
       itemCategories: (json['item_categories'] as num?)?.toInt(),
+      categoriesId: (json['categories_id'] as num?)?.toInt(),
+      categoriesName: json['categories_name'] as String?,
+      favorite: (json['favorite'] as num?)?.toInt(),
       itempriceDiscount: (json['itemprice_discount'] as num?)?.toDouble(),
-      countorders: (json['countorders'] as num?)?.toInt(),
-      cartId: (json['cart_id'] as num?)?.toInt(),
-      cartItemid: (json['cart_itemid'] as num?)?.toInt(),
-      cartUserid: (json['cart_userid'] as num?)?.toInt(),
-      cartOrders: (json['cart_orders'] as num?)?.toInt(),
       images:
           (json['images'] as List<dynamic>?)?.map((e) => e as String).toList(),
       size: (json['size'] as List<dynamic>?)
@@ -33,8 +30,7 @@ Itemtopselling _$ItemtopsellingFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$ItemtopsellingToJson(Itemtopselling instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$DatumToJson(Datum instance) => <String, dynamic>{
       'item_id': instance.itemId,
       'item_name': instance.itemName,
       'item_name_ar': instance.itemNameAr,
@@ -47,12 +43,10 @@ Map<String, dynamic> _$ItemtopsellingToJson(Itemtopselling instance) =>
       'item_discount': instance.itemDiscount,
       'item_data': instance.itemData,
       'item_categories': instance.itemCategories,
+      'categories_id': instance.categoriesId,
+      'categories_name': instance.categoriesName,
+      'favorite': instance.favorite,
       'itemprice_discount': instance.itempriceDiscount,
-      'countorders': instance.countorders,
-      'cart_id': instance.cartId,
-      'cart_itemid': instance.cartItemid,
-      'cart_userid': instance.cartUserid,
-      'cart_orders': instance.cartOrders,
       'images': instance.images,
       'size': instance.size,
     };

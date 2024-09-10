@@ -48,8 +48,8 @@ abstract class ApiService {
   Future<ResponseStatus> verfCodeForgertPassword(@Body() dynamic body);
 
   ///home
-  @GET(ApiConstants.home)
-  Future<ResponseHome> home();
+  @POST(ApiConstants.home)
+  Future<ResponseHome> home(@Body() dynamic body);
 
   @POST(ApiConstants.search)
   Future<ResponseItems> search(@Body() dynamic body);

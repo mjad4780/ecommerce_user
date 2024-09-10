@@ -1,25 +1,70 @@
 {
-    "status": "success",
-    "data": [
+  "data": [
+
       {
-        "item_id": 4,
-        "item_name": "Dell G15-5511",
-        "item_name_ar": "لاب توب ديل G15-5511 ",
-        "item_decs": "Dell G15-5511 Gaming Laptop, Intel Core i5-11260H Six-Core, RAM 8GB, SSD 512GB, NVIDIA GeForce RTX3050 4GB, GDDR6 15.6 inch, 120Hz, Backlit Keyboard, Windows 10, Gray",
-        "item_decs_ar": "لاب توب ديل G15-5511 للالعاب، انتل كور جيل11-i5 11260H ستة نواة، RAM\u200f 8 جيجابايت هارد SSD 512 جيجا، انفيديا جيفورس RTX3050 جيجا 4، GDDR6 15.6 بوصة، 120هرتز، كيبورد باضاءة خلفية، ويندوز 10، رمادي",
-        "item_image": "2.png",
-        "item_count": 1,
-        "item_active": 1,
-        "item_price": 37000,
-        "item_discount": 10,
-        "item_data": "2024-03-25 17:52:40",
-        "item_categories": 14,
-        "categories_id": 14,
-        "categories_name": "laptop",
-        "categories_name_ar": "لابتوب",
-        "categories_Image": "4638laptop.png",
-        "categories_Data": "2024-03-20 10:11:45",
-        "itemprice_discount": 33300
+          "item_id": 72,
+          "item_name": "Egypt",
+          "item_name_ar": "cairo",
+          "item_decs": "dturr",
+          "item_decs_ar": "ytfchtfuyf",
+          "item_image": "Screenshot_٢٠٢٣-٠٤-٠٣-٢١-٠٩-١١-٤٩_f9ee0578fe1cc94de7482bd41accb329.jpg",
+          "item_count": 212,
+          "item_active": 1,
+          "item_price": 33,
+          "item_discount": 123,
+          "item_data": "2024-08-09 14:56:40",
+          "item_categories": 12,
+          "categories_id": 12,
+          "categories_name": "camera",
+          "favorite": 0,
+          "itemprice_discount": -7.590000000000003,
+          "images": [
+              "",
+              "",
+              "",
+              "",
+              "Screenshot_٢٠٢٣-٠٤-٠٣-٢١-٠٩-١١-٤٩_f9ee0578fe1cc94de7482bd41accb329.jpg",
+              "Screenshot_٢٠٢٣-٠٤-٠٣-٢١-١١-٣٢-٥٩_f9ee0578fe1cc94de7482bd41accb329.jpg"
+          ],
+          "size": [
+              {
+                  "id": 307,
+                  "size": "",
+                  "quantity": 0,
+                  "color": "red"
+              },
+              {
+                  "id": 308,
+                  "size": "",
+                  "quantity": 0,
+                  "color": "orange"
+              },
+              {
+                  "id": 309,
+                  "size": "MM",
+                  "quantity": 0,
+                  "color": ""
+              },
+              {
+                  "id": 310,
+                  "size": "ML",
+                  "quantity": 0,
+                  "color": ""
+              },
+              {
+                  "id": 311,
+                  "size": "",
+                  "quantity": 0,
+                  "color": ""
+              },
+              {
+                  "id": 312,
+                  "size": "",
+                  "quantity": 0,
+                  "color": ""
+              }
+          ]
       }
-    ]
-  }
+     
+  ]
+}

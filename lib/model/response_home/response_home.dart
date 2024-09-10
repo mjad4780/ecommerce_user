@@ -1,48 +1,48 @@
 import 'package:collection/collection.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import 'categories.dart';
+import 'category.dart';
 import 'item1view.dart';
-import 'itemtopselling.dart';
+import 'offer.dart';
 import 'setting.dart';
 
 part 'response_home.g.dart';
 
 @JsonSerializable()
 class ResponseHome {
-	final String? status;
-	final Setting? setting;
-	final Categories? categories;
-	final List<Itemtopselling>? itemtopselling;
-	final List<Item1view>? item1view;
+  String? status;
+  List<Item1view>? item1view;
+  List<Offer>? offers;
+  List<List<Setting>>? setting;
+  List<List<Category>>? categories;
 
-	const ResponseHome({
-		this.status, 
-		this.setting, 
-		this.categories, 
-		this.itemtopselling, 
-		this.item1view, 
-	});
+  ResponseHome({
+    this.status,
+    this.item1view,
+    this.offers,
+    this.setting,
+    this.categories,
+  });
 
-	factory ResponseHome.fromJson(Map<String, dynamic> json) {
-		return _$ResponseHomeFromJson(json);
-	}
+  factory ResponseHome.fromJson(Map<String, dynamic> json) {
+    return _$ResponseHomeFromJson(json);
+  }
 
-	Map<String, dynamic> toJson() => _$ResponseHomeToJson(this);
+  Map<String, dynamic> toJson() => _$ResponseHomeToJson(this);
 
-	@override
-	bool operator ==(Object other) {
-		if (identical(other, this)) return true;
-		if (other is! ResponseHome) return false;
-		final mapEquals = const DeepCollectionEquality().equals;
-		return mapEquals(other.toJson(), toJson());
-	}
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    if (other is! ResponseHome) return false;
+    final mapEquals = const DeepCollectionEquality().equals;
+    return mapEquals(other.toJson(), toJson());
+  }
 
-	@override
-	int get hashCode =>
-			status.hashCode ^
-			setting.hashCode ^
-			categories.hashCode ^
-			itemtopselling.hashCode ^
-			item1view.hashCode;
+  @override
+  int get hashCode =>
+      status.hashCode ^
+      item1view.hashCode ^
+      offers.hashCode ^
+      setting.hashCode ^
+      categories.hashCode;
 }

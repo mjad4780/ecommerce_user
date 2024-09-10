@@ -3,10 +3,10 @@ import 'package:json_annotation/json_annotation.dart';
 
 import 'size.dart';
 
-part 'item1view.g.dart';
+part 'datum.g.dart';
 
 @JsonSerializable()
-class Item1view {
+class Datum {
   @JsonKey(name: 'item_id')
   int? itemId;
   @JsonKey(name: 'item_name')
@@ -31,13 +31,17 @@ class Item1view {
   String? itemData;
   @JsonKey(name: 'item_categories')
   int? itemCategories;
+  @JsonKey(name: 'categories_id')
+  int? categoriesId;
+  @JsonKey(name: 'categories_name')
+  String? categoriesName;
   int? favorite;
   @JsonKey(name: 'itemprice_discount')
   double? itempriceDiscount;
   List<String>? images;
   List<Size>? size;
 
-  Item1view({
+  Datum({
     this.itemId,
     this.itemName,
     this.itemNameAr,
@@ -50,22 +54,22 @@ class Item1view {
     this.itemDiscount,
     this.itemData,
     this.itemCategories,
+    this.categoriesId,
+    this.categoriesName,
     this.favorite,
     this.itempriceDiscount,
     this.images,
     this.size,
   });
 
-  factory Item1view.fromJson(Map<String, dynamic> json) {
-    return _$Item1viewFromJson(json);
-  }
+  factory Datum.fromJson(Map<String, dynamic> json) => _$DatumFromJson(json);
 
-  Map<String, dynamic> toJson() => _$Item1viewToJson(this);
+  Map<String, dynamic> toJson() => _$DatumToJson(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    if (other is! Item1view) return false;
+    if (other is! Datum) return false;
     final mapEquals = const DeepCollectionEquality().equals;
     return mapEquals(other.toJson(), toJson());
   }
@@ -84,6 +88,8 @@ class Item1view {
       itemDiscount.hashCode ^
       itemData.hashCode ^
       itemCategories.hashCode ^
+      categoriesId.hashCode ^
+      categoriesName.hashCode ^
       favorite.hashCode ^
       itempriceDiscount.hashCode ^
       images.hashCode ^

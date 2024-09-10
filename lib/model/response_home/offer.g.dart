@@ -1,12 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'item1view.dart';
+part of 'offer.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-Item1view _$Item1viewFromJson(Map<String, dynamic> json) => Item1view(
+Offer _$OfferFromJson(Map<String, dynamic> json) => Offer(
       itemId: (json['item_id'] as num?)?.toInt(),
       itemName: json['item_name'] as String?,
       itemNameAr: json['item_name_ar'] as String?,
@@ -19,6 +19,8 @@ Item1view _$Item1viewFromJson(Map<String, dynamic> json) => Item1view(
       itemDiscount: (json['item_discount'] as num?)?.toInt(),
       itemData: json['item_data'] as String?,
       itemCategories: (json['item_categories'] as num?)?.toInt(),
+      categoriesId: (json['categories_id'] as num?)?.toInt(),
+      categoriesName: json['categories_name'] as String?,
       favorite: (json['favorite'] as num?)?.toInt(),
       itempriceDiscount: (json['itemprice_discount'] as num?)?.toDouble(),
       images:
@@ -28,7 +30,7 @@ Item1view _$Item1viewFromJson(Map<String, dynamic> json) => Item1view(
           .toList(),
     );
 
-Map<String, dynamic> _$Item1viewToJson(Item1view instance) => <String, dynamic>{
+Map<String, dynamic> _$OfferToJson(Offer instance) => <String, dynamic>{
       'item_id': instance.itemId,
       'item_name': instance.itemName,
       'item_name_ar': instance.itemNameAr,
@@ -41,6 +43,8 @@ Map<String, dynamic> _$Item1viewToJson(Item1view instance) => <String, dynamic>{
       'item_discount': instance.itemDiscount,
       'item_data': instance.itemData,
       'item_categories': instance.itemCategories,
+      'categories_id': instance.categoriesId,
+      'categories_name': instance.categoriesName,
       'favorite': instance.favorite,
       'itemprice_discount': instance.itempriceDiscount,
       'images': instance.images,
