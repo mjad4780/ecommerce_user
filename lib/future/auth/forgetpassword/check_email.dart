@@ -1,5 +1,4 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
 import 'package:ecommerce_user/core/get_it/get_it.dart';
 import 'package:ecommerce_user/core/theming/colors.dart';
 import 'package:ecommerce_user/core/theming/styles.dart';
@@ -61,11 +60,9 @@ class CheckEmail extends StatelessWidget {
                               backgroundColor: AppColor.secondColor,
                               textStyle: TextStyles.font16WhiteSemiBold,
                               onPressed: () {
-                                context.push('/CheckCodeForgetPassword');
-
-                                // context
-                                //     .read<ForgetPasswordCubit>()
-                                //     .checkEmail();
+                                context
+                                    .read<ForgetPasswordCubit>()
+                                    .checkEmail();
                               },
                             );
                           }),

@@ -1,6 +1,6 @@
-import 'package:bloc/bloc.dart';
 import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../../core/class/cache_helper.dart';
@@ -24,7 +24,8 @@ class LoginCubit extends Cubit<LoginState> {
           await _loginRepo.login(emailController.text, passwordController.text);
       response.when(success: (loginResponse) {
         if (loginResponse.data!.userImprove != 1) {
-          context.push('/VerfyCodeScrean');
+          context.push('/VerfyCodeScrean',
+              arguments: {'email': loginResponse.data!.userEmail});
         } else {
           getIt<CacheHelper>()
               .saveData(key: 'id', value: loginResponse.data!.userId);

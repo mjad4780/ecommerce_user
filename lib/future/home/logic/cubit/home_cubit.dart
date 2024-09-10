@@ -1,7 +1,11 @@
-import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../favorite/favorite.dart';
+import '../../../offers/offers.dart';
+import '../../../setting/setting.dart';
 import '../../data/repo.dart';
+import '../../home.dart';
 import 'home_state.dart';
 
 class HomeCubit extends Cubit<HomeState> {
@@ -9,6 +13,21 @@ class HomeCubit extends Cubit<HomeState> {
   TextEditingController search = TextEditingController();
 
   final HomeRepo homeRepo;
+//:bottomNavigationBar
+  int currentPage = 0;
+  List<Widget> buttompage = [
+    const Home(),
+    const Favorite(),
+    const Offers(),
+    const Setting(),
+  ];
+
+  emitCurrentPage(int index) {
+    currentPage = index;
+
+    emit(HomeState.stateBottomNavigationBar(page: index));
+  }
+
 //:home
   emitHome() async {
     emit(const HomeState.loadingoffers());

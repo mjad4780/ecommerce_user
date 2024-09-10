@@ -22,4 +22,8 @@ class HomeState with _$HomeState {
   const factory HomeState.successoffers(
       {required ResponseItems responseItems}) = Successoffers;
   const factory HomeState.erroroffers({required String erorr}) = Erroroffers;
+
+  //:StateBottomNavigationBar
+  const factory HomeState.stateBottomNavigationBar({required int page}) =
+      StateBottomNavigationBar;
 }

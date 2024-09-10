@@ -51,26 +51,29 @@ class VerfyCodeScrean extends StatelessWidget {
                           children: [
                             const Text('Resend the verfication code'),
                             horizontalSpace(2),
-                            GestureDetector(
-                                onTap: () {
-                                  context.read<VerfyCodeCubit>().sendverfycode(
-                                      hello['email'] ??
-                                          getIt<CacheHelper>()
-                                              .getData(key: 'email'));
-                                  // cubit.SendVerfiCode();
-                                },
-                                child: const Text(
-                                  'press here',
-                                  style:
-                                      TextStyle(color: AppColor.primaryColor),
-                                ))
+                            Builder(builder: (context) {
+                              return GestureDetector(
+                                  onTap: () {
+                                    context
+                                        .read<VerfyCodeCubit>()
+                                        .sendverfycode(hello['email'] ??
+                                            getIt<CacheHelper>()
+                                                .getData(key: 'email'));
+                                    // cubit.SendVerfiCode();
+                                  },
+                                  child: const Text(
+                                    'press here',
+                                    style:
+                                        TextStyle(color: AppColor.primaryColor),
+                                  ));
+                            })
                           ],
                         ),
                       ),
                       Builder(builder: (context) {
                         return OtpTextField(
                           disabledBorderColor: AppColor.primaryColor,
-                          enabled: false,
+                          enabled: true,
                           numberOfFields: 5,
                           borderColor: const Color(0xFF512DA8),
                           //set to true to show as box or false to show as dash

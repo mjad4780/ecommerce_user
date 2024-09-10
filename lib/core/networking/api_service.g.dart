@@ -146,7 +146,7 @@ class _ApiService implements ApiService {
           _dio.options.baseUrl,
           baseUrl,
         ))));
-    final value = ResponseStatus.fromJson(jsonDecode(_result.data!)!);
+    final value = ResponseStatus.fromJson(jsonDecode(_result.data!));
     return value;
   }
 

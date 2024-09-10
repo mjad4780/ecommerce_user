@@ -28,6 +28,7 @@ mixin _$HomeState {
     required TResult Function() loadingoffers,
     required TResult Function(ResponseItems responseItems) successoffers,
     required TResult Function(String erorr) erroroffers,
+    required TResult Function(int page) stateBottomNavigationBar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -42,6 +43,7 @@ mixin _$HomeState {
     TResult? Function()? loadingoffers,
     TResult? Function(ResponseItems responseItems)? successoffers,
     TResult? Function(String erorr)? erroroffers,
+    TResult? Function(int page)? stateBottomNavigationBar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -56,6 +58,7 @@ mixin _$HomeState {
     TResult Function()? loadingoffers,
     TResult Function(ResponseItems responseItems)? successoffers,
     TResult Function(String erorr)? erroroffers,
+    TResult Function(int page)? stateBottomNavigationBar,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -71,6 +74,8 @@ mixin _$HomeState {
     required TResult Function(Loadingoffers value) loadingoffers,
     required TResult Function(Successoffers value) successoffers,
     required TResult Function(Erroroffers value) erroroffers,
+    required TResult Function(StateBottomNavigationBar value)
+        stateBottomNavigationBar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -85,6 +90,7 @@ mixin _$HomeState {
     TResult? Function(Loadingoffers value)? loadingoffers,
     TResult? Function(Successoffers value)? successoffers,
     TResult? Function(Erroroffers value)? erroroffers,
+    TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -99,6 +105,7 @@ mixin _$HomeState {
     TResult Function(Loadingoffers value)? loadingoffers,
     TResult Function(Successoffers value)? successoffers,
     TResult Function(Erroroffers value)? erroroffers,
+    TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -169,6 +176,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() loadingoffers,
     required TResult Function(ResponseItems responseItems) successoffers,
     required TResult Function(String erorr) erroroffers,
+    required TResult Function(int page) stateBottomNavigationBar,
   }) {
     return initial();
   }
@@ -186,6 +194,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loadingoffers,
     TResult? Function(ResponseItems responseItems)? successoffers,
     TResult? Function(String erorr)? erroroffers,
+    TResult? Function(int page)? stateBottomNavigationBar,
   }) {
     return initial?.call();
   }
@@ -203,6 +212,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loadingoffers,
     TResult Function(ResponseItems responseItems)? successoffers,
     TResult Function(String erorr)? erroroffers,
+    TResult Function(int page)? stateBottomNavigationBar,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -224,6 +234,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function(Loadingoffers value) loadingoffers,
     required TResult Function(Successoffers value) successoffers,
     required TResult Function(Erroroffers value) erroroffers,
+    required TResult Function(StateBottomNavigationBar value)
+        stateBottomNavigationBar,
   }) {
     return initial(this);
   }
@@ -241,6 +253,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(Loadingoffers value)? loadingoffers,
     TResult? Function(Successoffers value)? successoffers,
     TResult? Function(Erroroffers value)? erroroffers,
+    TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
   }) {
     return initial?.call(this);
   }
@@ -258,6 +271,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(Loadingoffers value)? loadingoffers,
     TResult Function(Successoffers value)? successoffers,
     TResult Function(Erroroffers value)? erroroffers,
+    TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -319,6 +333,7 @@ class _$LoadingHomeImpl implements LoadingHome {
     required TResult Function() loadingoffers,
     required TResult Function(ResponseItems responseItems) successoffers,
     required TResult Function(String erorr) erroroffers,
+    required TResult Function(int page) stateBottomNavigationBar,
   }) {
     return loadingHome();
   }
@@ -336,6 +351,7 @@ class _$LoadingHomeImpl implements LoadingHome {
     TResult? Function()? loadingoffers,
     TResult? Function(ResponseItems responseItems)? successoffers,
     TResult? Function(String erorr)? erroroffers,
+    TResult? Function(int page)? stateBottomNavigationBar,
   }) {
     return loadingHome?.call();
   }
@@ -353,6 +369,7 @@ class _$LoadingHomeImpl implements LoadingHome {
     TResult Function()? loadingoffers,
     TResult Function(ResponseItems responseItems)? successoffers,
     TResult Function(String erorr)? erroroffers,
+    TResult Function(int page)? stateBottomNavigationBar,
     required TResult orElse(),
   }) {
     if (loadingHome != null) {
@@ -374,6 +391,8 @@ class _$LoadingHomeImpl implements LoadingHome {
     required TResult Function(Loadingoffers value) loadingoffers,
     required TResult Function(Successoffers value) successoffers,
     required TResult Function(Erroroffers value) erroroffers,
+    required TResult Function(StateBottomNavigationBar value)
+        stateBottomNavigationBar,
   }) {
     return loadingHome(this);
   }
@@ -391,6 +410,7 @@ class _$LoadingHomeImpl implements LoadingHome {
     TResult? Function(Loadingoffers value)? loadingoffers,
     TResult? Function(Successoffers value)? successoffers,
     TResult? Function(Erroroffers value)? erroroffers,
+    TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
   }) {
     return loadingHome?.call(this);
   }
@@ -408,6 +428,7 @@ class _$LoadingHomeImpl implements LoadingHome {
     TResult Function(Loadingoffers value)? loadingoffers,
     TResult Function(Successoffers value)? successoffers,
     TResult Function(Erroroffers value)? erroroffers,
+    TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
     required TResult orElse(),
   }) {
     if (loadingHome != null) {
@@ -496,6 +517,7 @@ class _$SuccessHomeImpl implements SuccessHome {
     required TResult Function() loadingoffers,
     required TResult Function(ResponseItems responseItems) successoffers,
     required TResult Function(String erorr) erroroffers,
+    required TResult Function(int page) stateBottomNavigationBar,
   }) {
     return successHome(responseHome);
   }
@@ -513,6 +535,7 @@ class _$SuccessHomeImpl implements SuccessHome {
     TResult? Function()? loadingoffers,
     TResult? Function(ResponseItems responseItems)? successoffers,
     TResult? Function(String erorr)? erroroffers,
+    TResult? Function(int page)? stateBottomNavigationBar,
   }) {
     return successHome?.call(responseHome);
   }
@@ -530,6 +553,7 @@ class _$SuccessHomeImpl implements SuccessHome {
     TResult Function()? loadingoffers,
     TResult Function(ResponseItems responseItems)? successoffers,
     TResult Function(String erorr)? erroroffers,
+    TResult Function(int page)? stateBottomNavigationBar,
     required TResult orElse(),
   }) {
     if (successHome != null) {
@@ -551,6 +575,8 @@ class _$SuccessHomeImpl implements SuccessHome {
     required TResult Function(Loadingoffers value) loadingoffers,
     required TResult Function(Successoffers value) successoffers,
     required TResult Function(Erroroffers value) erroroffers,
+    required TResult Function(StateBottomNavigationBar value)
+        stateBottomNavigationBar,
   }) {
     return successHome(this);
   }
@@ -568,6 +594,7 @@ class _$SuccessHomeImpl implements SuccessHome {
     TResult? Function(Loadingoffers value)? loadingoffers,
     TResult? Function(Successoffers value)? successoffers,
     TResult? Function(Erroroffers value)? erroroffers,
+    TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
   }) {
     return successHome?.call(this);
   }
@@ -585,6 +612,7 @@ class _$SuccessHomeImpl implements SuccessHome {
     TResult Function(Loadingoffers value)? loadingoffers,
     TResult Function(Successoffers value)? successoffers,
     TResult Function(Erroroffers value)? erroroffers,
+    TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
     required TResult orElse(),
   }) {
     if (successHome != null) {
@@ -678,6 +706,7 @@ class _$ErrorHomeImpl implements ErrorHome {
     required TResult Function() loadingoffers,
     required TResult Function(ResponseItems responseItems) successoffers,
     required TResult Function(String erorr) erroroffers,
+    required TResult Function(int page) stateBottomNavigationBar,
   }) {
     return errorHome(erorr);
   }
@@ -695,6 +724,7 @@ class _$ErrorHomeImpl implements ErrorHome {
     TResult? Function()? loadingoffers,
     TResult? Function(ResponseItems responseItems)? successoffers,
     TResult? Function(String erorr)? erroroffers,
+    TResult? Function(int page)? stateBottomNavigationBar,
   }) {
     return errorHome?.call(erorr);
   }
@@ -712,6 +742,7 @@ class _$ErrorHomeImpl implements ErrorHome {
     TResult Function()? loadingoffers,
     TResult Function(ResponseItems responseItems)? successoffers,
     TResult Function(String erorr)? erroroffers,
+    TResult Function(int page)? stateBottomNavigationBar,
     required TResult orElse(),
   }) {
     if (errorHome != null) {
@@ -733,6 +764,8 @@ class _$ErrorHomeImpl implements ErrorHome {
     required TResult Function(Loadingoffers value) loadingoffers,
     required TResult Function(Successoffers value) successoffers,
     required TResult Function(Erroroffers value) erroroffers,
+    required TResult Function(StateBottomNavigationBar value)
+        stateBottomNavigationBar,
   }) {
     return errorHome(this);
   }
@@ -750,6 +783,7 @@ class _$ErrorHomeImpl implements ErrorHome {
     TResult? Function(Loadingoffers value)? loadingoffers,
     TResult? Function(Successoffers value)? successoffers,
     TResult? Function(Erroroffers value)? erroroffers,
+    TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
   }) {
     return errorHome?.call(this);
   }
@@ -767,6 +801,7 @@ class _$ErrorHomeImpl implements ErrorHome {
     TResult Function(Loadingoffers value)? loadingoffers,
     TResult Function(Successoffers value)? successoffers,
     TResult Function(Erroroffers value)? erroroffers,
+    TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
     required TResult orElse(),
   }) {
     if (errorHome != null) {
@@ -833,6 +868,7 @@ class _$LoadingsearchImpl implements Loadingsearch {
     required TResult Function() loadingoffers,
     required TResult Function(ResponseItems responseItems) successoffers,
     required TResult Function(String erorr) erroroffers,
+    required TResult Function(int page) stateBottomNavigationBar,
   }) {
     return loadingsearch();
   }
@@ -850,6 +886,7 @@ class _$LoadingsearchImpl implements Loadingsearch {
     TResult? Function()? loadingoffers,
     TResult? Function(ResponseItems responseItems)? successoffers,
     TResult? Function(String erorr)? erroroffers,
+    TResult? Function(int page)? stateBottomNavigationBar,
   }) {
     return loadingsearch?.call();
   }
@@ -867,6 +904,7 @@ class _$LoadingsearchImpl implements Loadingsearch {
     TResult Function()? loadingoffers,
     TResult Function(ResponseItems responseItems)? successoffers,
     TResult Function(String erorr)? erroroffers,
+    TResult Function(int page)? stateBottomNavigationBar,
     required TResult orElse(),
   }) {
     if (loadingsearch != null) {
@@ -888,6 +926,8 @@ class _$LoadingsearchImpl implements Loadingsearch {
     required TResult Function(Loadingoffers value) loadingoffers,
     required TResult Function(Successoffers value) successoffers,
     required TResult Function(Erroroffers value) erroroffers,
+    required TResult Function(StateBottomNavigationBar value)
+        stateBottomNavigationBar,
   }) {
     return loadingsearch(this);
   }
@@ -905,6 +945,7 @@ class _$LoadingsearchImpl implements Loadingsearch {
     TResult? Function(Loadingoffers value)? loadingoffers,
     TResult? Function(Successoffers value)? successoffers,
     TResult? Function(Erroroffers value)? erroroffers,
+    TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
   }) {
     return loadingsearch?.call(this);
   }
@@ -922,6 +963,7 @@ class _$LoadingsearchImpl implements Loadingsearch {
     TResult Function(Loadingoffers value)? loadingoffers,
     TResult Function(Successoffers value)? successoffers,
     TResult Function(Erroroffers value)? erroroffers,
+    TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
     required TResult orElse(),
   }) {
     if (loadingsearch != null) {
@@ -1010,6 +1052,7 @@ class _$SuccessSearchImpl implements SuccessSearch {
     required TResult Function() loadingoffers,
     required TResult Function(ResponseItems responseItems) successoffers,
     required TResult Function(String erorr) erroroffers,
+    required TResult Function(int page) stateBottomNavigationBar,
   }) {
     return successSearch(responseItems);
   }
@@ -1027,6 +1070,7 @@ class _$SuccessSearchImpl implements SuccessSearch {
     TResult? Function()? loadingoffers,
     TResult? Function(ResponseItems responseItems)? successoffers,
     TResult? Function(String erorr)? erroroffers,
+    TResult? Function(int page)? stateBottomNavigationBar,
   }) {
     return successSearch?.call(responseItems);
   }
@@ -1044,6 +1088,7 @@ class _$SuccessSearchImpl implements SuccessSearch {
     TResult Function()? loadingoffers,
     TResult Function(ResponseItems responseItems)? successoffers,
     TResult Function(String erorr)? erroroffers,
+    TResult Function(int page)? stateBottomNavigationBar,
     required TResult orElse(),
   }) {
     if (successSearch != null) {
@@ -1065,6 +1110,8 @@ class _$SuccessSearchImpl implements SuccessSearch {
     required TResult Function(Loadingoffers value) loadingoffers,
     required TResult Function(Successoffers value) successoffers,
     required TResult Function(Erroroffers value) erroroffers,
+    required TResult Function(StateBottomNavigationBar value)
+        stateBottomNavigationBar,
   }) {
     return successSearch(this);
   }
@@ -1082,6 +1129,7 @@ class _$SuccessSearchImpl implements SuccessSearch {
     TResult? Function(Loadingoffers value)? loadingoffers,
     TResult? Function(Successoffers value)? successoffers,
     TResult? Function(Erroroffers value)? erroroffers,
+    TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
   }) {
     return successSearch?.call(this);
   }
@@ -1099,6 +1147,7 @@ class _$SuccessSearchImpl implements SuccessSearch {
     TResult Function(Loadingoffers value)? loadingoffers,
     TResult Function(Successoffers value)? successoffers,
     TResult Function(Erroroffers value)? erroroffers,
+    TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
     required TResult orElse(),
   }) {
     if (successSearch != null) {
@@ -1192,6 +1241,7 @@ class _$ErrorSearchImpl implements ErrorSearch {
     required TResult Function() loadingoffers,
     required TResult Function(ResponseItems responseItems) successoffers,
     required TResult Function(String erorr) erroroffers,
+    required TResult Function(int page) stateBottomNavigationBar,
   }) {
     return errorSearch(erorr);
   }
@@ -1209,6 +1259,7 @@ class _$ErrorSearchImpl implements ErrorSearch {
     TResult? Function()? loadingoffers,
     TResult? Function(ResponseItems responseItems)? successoffers,
     TResult? Function(String erorr)? erroroffers,
+    TResult? Function(int page)? stateBottomNavigationBar,
   }) {
     return errorSearch?.call(erorr);
   }
@@ -1226,6 +1277,7 @@ class _$ErrorSearchImpl implements ErrorSearch {
     TResult Function()? loadingoffers,
     TResult Function(ResponseItems responseItems)? successoffers,
     TResult Function(String erorr)? erroroffers,
+    TResult Function(int page)? stateBottomNavigationBar,
     required TResult orElse(),
   }) {
     if (errorSearch != null) {
@@ -1247,6 +1299,8 @@ class _$ErrorSearchImpl implements ErrorSearch {
     required TResult Function(Loadingoffers value) loadingoffers,
     required TResult Function(Successoffers value) successoffers,
     required TResult Function(Erroroffers value) erroroffers,
+    required TResult Function(StateBottomNavigationBar value)
+        stateBottomNavigationBar,
   }) {
     return errorSearch(this);
   }
@@ -1264,6 +1318,7 @@ class _$ErrorSearchImpl implements ErrorSearch {
     TResult? Function(Loadingoffers value)? loadingoffers,
     TResult? Function(Successoffers value)? successoffers,
     TResult? Function(Erroroffers value)? erroroffers,
+    TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
   }) {
     return errorSearch?.call(this);
   }
@@ -1281,6 +1336,7 @@ class _$ErrorSearchImpl implements ErrorSearch {
     TResult Function(Loadingoffers value)? loadingoffers,
     TResult Function(Successoffers value)? successoffers,
     TResult Function(Erroroffers value)? erroroffers,
+    TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
     required TResult orElse(),
   }) {
     if (errorSearch != null) {
@@ -1347,6 +1403,7 @@ class _$LoadingoffersImpl implements Loadingoffers {
     required TResult Function() loadingoffers,
     required TResult Function(ResponseItems responseItems) successoffers,
     required TResult Function(String erorr) erroroffers,
+    required TResult Function(int page) stateBottomNavigationBar,
   }) {
     return loadingoffers();
   }
@@ -1364,6 +1421,7 @@ class _$LoadingoffersImpl implements Loadingoffers {
     TResult? Function()? loadingoffers,
     TResult? Function(ResponseItems responseItems)? successoffers,
     TResult? Function(String erorr)? erroroffers,
+    TResult? Function(int page)? stateBottomNavigationBar,
   }) {
     return loadingoffers?.call();
   }
@@ -1381,6 +1439,7 @@ class _$LoadingoffersImpl implements Loadingoffers {
     TResult Function()? loadingoffers,
     TResult Function(ResponseItems responseItems)? successoffers,
     TResult Function(String erorr)? erroroffers,
+    TResult Function(int page)? stateBottomNavigationBar,
     required TResult orElse(),
   }) {
     if (loadingoffers != null) {
@@ -1402,6 +1461,8 @@ class _$LoadingoffersImpl implements Loadingoffers {
     required TResult Function(Loadingoffers value) loadingoffers,
     required TResult Function(Successoffers value) successoffers,
     required TResult Function(Erroroffers value) erroroffers,
+    required TResult Function(StateBottomNavigationBar value)
+        stateBottomNavigationBar,
   }) {
     return loadingoffers(this);
   }
@@ -1419,6 +1480,7 @@ class _$LoadingoffersImpl implements Loadingoffers {
     TResult? Function(Loadingoffers value)? loadingoffers,
     TResult? Function(Successoffers value)? successoffers,
     TResult? Function(Erroroffers value)? erroroffers,
+    TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
   }) {
     return loadingoffers?.call(this);
   }
@@ -1436,6 +1498,7 @@ class _$LoadingoffersImpl implements Loadingoffers {
     TResult Function(Loadingoffers value)? loadingoffers,
     TResult Function(Successoffers value)? successoffers,
     TResult Function(Erroroffers value)? erroroffers,
+    TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
     required TResult orElse(),
   }) {
     if (loadingoffers != null) {
@@ -1524,6 +1587,7 @@ class _$SuccessoffersImpl implements Successoffers {
     required TResult Function() loadingoffers,
     required TResult Function(ResponseItems responseItems) successoffers,
     required TResult Function(String erorr) erroroffers,
+    required TResult Function(int page) stateBottomNavigationBar,
   }) {
     return successoffers(responseItems);
   }
@@ -1541,6 +1605,7 @@ class _$SuccessoffersImpl implements Successoffers {
     TResult? Function()? loadingoffers,
     TResult? Function(ResponseItems responseItems)? successoffers,
     TResult? Function(String erorr)? erroroffers,
+    TResult? Function(int page)? stateBottomNavigationBar,
   }) {
     return successoffers?.call(responseItems);
   }
@@ -1558,6 +1623,7 @@ class _$SuccessoffersImpl implements Successoffers {
     TResult Function()? loadingoffers,
     TResult Function(ResponseItems responseItems)? successoffers,
     TResult Function(String erorr)? erroroffers,
+    TResult Function(int page)? stateBottomNavigationBar,
     required TResult orElse(),
   }) {
     if (successoffers != null) {
@@ -1579,6 +1645,8 @@ class _$SuccessoffersImpl implements Successoffers {
     required TResult Function(Loadingoffers value) loadingoffers,
     required TResult Function(Successoffers value) successoffers,
     required TResult Function(Erroroffers value) erroroffers,
+    required TResult Function(StateBottomNavigationBar value)
+        stateBottomNavigationBar,
   }) {
     return successoffers(this);
   }
@@ -1596,6 +1664,7 @@ class _$SuccessoffersImpl implements Successoffers {
     TResult? Function(Loadingoffers value)? loadingoffers,
     TResult? Function(Successoffers value)? successoffers,
     TResult? Function(Erroroffers value)? erroroffers,
+    TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
   }) {
     return successoffers?.call(this);
   }
@@ -1613,6 +1682,7 @@ class _$SuccessoffersImpl implements Successoffers {
     TResult Function(Loadingoffers value)? loadingoffers,
     TResult Function(Successoffers value)? successoffers,
     TResult Function(Erroroffers value)? erroroffers,
+    TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
     required TResult orElse(),
   }) {
     if (successoffers != null) {
@@ -1706,6 +1776,7 @@ class _$ErroroffersImpl implements Erroroffers {
     required TResult Function() loadingoffers,
     required TResult Function(ResponseItems responseItems) successoffers,
     required TResult Function(String erorr) erroroffers,
+    required TResult Function(int page) stateBottomNavigationBar,
   }) {
     return erroroffers(erorr);
   }
@@ -1723,6 +1794,7 @@ class _$ErroroffersImpl implements Erroroffers {
     TResult? Function()? loadingoffers,
     TResult? Function(ResponseItems responseItems)? successoffers,
     TResult? Function(String erorr)? erroroffers,
+    TResult? Function(int page)? stateBottomNavigationBar,
   }) {
     return erroroffers?.call(erorr);
   }
@@ -1740,6 +1812,7 @@ class _$ErroroffersImpl implements Erroroffers {
     TResult Function()? loadingoffers,
     TResult Function(ResponseItems responseItems)? successoffers,
     TResult Function(String erorr)? erroroffers,
+    TResult Function(int page)? stateBottomNavigationBar,
     required TResult orElse(),
   }) {
     if (erroroffers != null) {
@@ -1761,6 +1834,8 @@ class _$ErroroffersImpl implements Erroroffers {
     required TResult Function(Loadingoffers value) loadingoffers,
     required TResult Function(Successoffers value) successoffers,
     required TResult Function(Erroroffers value) erroroffers,
+    required TResult Function(StateBottomNavigationBar value)
+        stateBottomNavigationBar,
   }) {
     return erroroffers(this);
   }
@@ -1778,6 +1853,7 @@ class _$ErroroffersImpl implements Erroroffers {
     TResult? Function(Loadingoffers value)? loadingoffers,
     TResult? Function(Successoffers value)? successoffers,
     TResult? Function(Erroroffers value)? erroroffers,
+    TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
   }) {
     return erroroffers?.call(this);
   }
@@ -1795,6 +1871,7 @@ class _$ErroroffersImpl implements Erroroffers {
     TResult Function(Loadingoffers value)? loadingoffers,
     TResult Function(Successoffers value)? successoffers,
     TResult Function(Erroroffers value)? erroroffers,
+    TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
     required TResult orElse(),
   }) {
     if (erroroffers != null) {
@@ -1811,4 +1888,196 @@ abstract class Erroroffers implements HomeState {
   @JsonKey(ignore: true)
   _$$ErroroffersImplCopyWith<_$ErroroffersImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$StateBottomNavigationBarImplCopyWith<$Res> {
+  factory _$$StateBottomNavigationBarImplCopyWith(
+          _$StateBottomNavigationBarImpl value,
+          $Res Function(_$StateBottomNavigationBarImpl) then) =
+      __$$StateBottomNavigationBarImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int page});
+}
+
+/// @nodoc
+class __$$StateBottomNavigationBarImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$StateBottomNavigationBarImpl>
+    implements _$$StateBottomNavigationBarImplCopyWith<$Res> {
+  __$$StateBottomNavigationBarImplCopyWithImpl(
+      _$StateBottomNavigationBarImpl _value,
+      $Res Function(_$StateBottomNavigationBarImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? page = null,
+  }) {
+    return _then(_$StateBottomNavigationBarImpl(
+      page: null == page
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$StateBottomNavigationBarImpl implements StateBottomNavigationBar {
+  const _$StateBottomNavigationBarImpl({required this.page});
+
+  @override
+  final int page;
+
+  @override
+  String toString() {
+    return 'HomeState.stateBottomNavigationBar(page: $page)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$StateBottomNavigationBarImpl &&
+            (identical(other.page, page) || other.page == page));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, page);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$StateBottomNavigationBarImplCopyWith<_$StateBottomNavigationBarImpl>
+      get copyWith => __$$StateBottomNavigationBarImplCopyWithImpl<
+          _$StateBottomNavigationBarImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingHome,
+    required TResult Function(ResponseHome responseHome) successHome,
+    required TResult Function(String erorr) errorHome,
+    required TResult Function() loadingsearch,
+    required TResult Function(ResponseItems responseItems) successSearch,
+    required TResult Function(String erorr) errorSearch,
+    required TResult Function() loadingoffers,
+    required TResult Function(ResponseItems responseItems) successoffers,
+    required TResult Function(String erorr) erroroffers,
+    required TResult Function(int page) stateBottomNavigationBar,
+  }) {
+    return stateBottomNavigationBar(page);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingHome,
+    TResult? Function(ResponseHome responseHome)? successHome,
+    TResult? Function(String erorr)? errorHome,
+    TResult? Function()? loadingsearch,
+    TResult? Function(ResponseItems responseItems)? successSearch,
+    TResult? Function(String erorr)? errorSearch,
+    TResult? Function()? loadingoffers,
+    TResult? Function(ResponseItems responseItems)? successoffers,
+    TResult? Function(String erorr)? erroroffers,
+    TResult? Function(int page)? stateBottomNavigationBar,
+  }) {
+    return stateBottomNavigationBar?.call(page);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingHome,
+    TResult Function(ResponseHome responseHome)? successHome,
+    TResult Function(String erorr)? errorHome,
+    TResult Function()? loadingsearch,
+    TResult Function(ResponseItems responseItems)? successSearch,
+    TResult Function(String erorr)? errorSearch,
+    TResult Function()? loadingoffers,
+    TResult Function(ResponseItems responseItems)? successoffers,
+    TResult Function(String erorr)? erroroffers,
+    TResult Function(int page)? stateBottomNavigationBar,
+    required TResult orElse(),
+  }) {
+    if (stateBottomNavigationBar != null) {
+      return stateBottomNavigationBar(page);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(LoadingHome value) loadingHome,
+    required TResult Function(SuccessHome value) successHome,
+    required TResult Function(ErrorHome value) errorHome,
+    required TResult Function(Loadingsearch value) loadingsearch,
+    required TResult Function(SuccessSearch value) successSearch,
+    required TResult Function(ErrorSearch value) errorSearch,
+    required TResult Function(Loadingoffers value) loadingoffers,
+    required TResult Function(Successoffers value) successoffers,
+    required TResult Function(Erroroffers value) erroroffers,
+    required TResult Function(StateBottomNavigationBar value)
+        stateBottomNavigationBar,
+  }) {
+    return stateBottomNavigationBar(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(LoadingHome value)? loadingHome,
+    TResult? Function(SuccessHome value)? successHome,
+    TResult? Function(ErrorHome value)? errorHome,
+    TResult? Function(Loadingsearch value)? loadingsearch,
+    TResult? Function(SuccessSearch value)? successSearch,
+    TResult? Function(ErrorSearch value)? errorSearch,
+    TResult? Function(Loadingoffers value)? loadingoffers,
+    TResult? Function(Successoffers value)? successoffers,
+    TResult? Function(Erroroffers value)? erroroffers,
+    TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
+  }) {
+    return stateBottomNavigationBar?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(LoadingHome value)? loadingHome,
+    TResult Function(SuccessHome value)? successHome,
+    TResult Function(ErrorHome value)? errorHome,
+    TResult Function(Loadingsearch value)? loadingsearch,
+    TResult Function(SuccessSearch value)? successSearch,
+    TResult Function(ErrorSearch value)? errorSearch,
+    TResult Function(Loadingoffers value)? loadingoffers,
+    TResult Function(Successoffers value)? successoffers,
+    TResult Function(Erroroffers value)? erroroffers,
+    TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
+    required TResult orElse(),
+  }) {
+    if (stateBottomNavigationBar != null) {
+      return stateBottomNavigationBar(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class StateBottomNavigationBar implements HomeState {
+  const factory StateBottomNavigationBar({required final int page}) =
+      _$StateBottomNavigationBarImpl;
+
+  int get page;
+  @JsonKey(ignore: true)
+  _$$StateBottomNavigationBarImplCopyWith<_$StateBottomNavigationBarImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

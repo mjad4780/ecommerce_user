@@ -1,5 +1,4 @@
 import 'package:bloc/bloc.dart';
-import 'package:flutter/material.dart';
 
 import '../../data/data_verfycode.dart';
 import 'verfy_code_state.dart';

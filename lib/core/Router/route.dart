@@ -1,11 +1,13 @@
 import 'package:ecommerce_user/future/auth/forgetpassword/check_email.dart';
 import 'package:ecommerce_user/future/home/home.dart';
 import 'package:go_router/go_router.dart';
+import '../../future/HomePage/home_screan.dart';
 import '../../future/auth/Login/login_screen.dart';
 import '../../future/auth/forgetpassword/ceck_code.dart';
 import '../../future/auth/forgetpassword/repassword.dart';
 import '../../future/auth/sign_up/SignUp.dart';
 import '../../future/auth/verfyCode/verfy_code.dart';
+import '../../future/cart/cart.dart';
 import '../../future/onbording/onbordingScreen.dart';
 import '../class/cache_helper.dart';
 import '../function/animation_page.dart';
@@ -44,10 +46,14 @@ final GoRouter router = GoRouter(routes: [
       path: "/Home",
       pageBuilder: (context, state) =>
           myCustomtransitionPage(const Home(), state)),
+  GoRoute(
+      path: "/Cart",
+      pageBuilder: (context, state) =>
+          myCustomtransitionPage(const Cart(), state)),
 ]);
 checkNavigate() {
   if (getIt<CacheHelper>().getData(key: 'email') != null) {
-    return const Home();
+    return const HomeScrean();
   } else if (getIt<CacheHelper>().getData(key: 'onbourding') == true) {
     return const LoginScreen();
   } else {

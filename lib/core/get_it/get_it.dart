@@ -19,7 +19,7 @@ import '../../future/adress/logic/cubit/adress_cubit.dart';
 import '../../future/archive/data/repo.dart';
 import '../../future/auth/Login/data/data_login.dart';
 import '../../future/auth/Login/logic/cubit/login_cubit.dart';
-import '../../future/auth/forgetpassword/data/ForgetPassword.dart';
+import '../../future/auth/forgetpassword/data/for_get_password.dart';
 import '../../future/auth/forgetpassword/logic/cubit/forget_password_cubit.dart';
 import '../../future/auth/sign_up/data/data_sigin_up.dart';
 import '../../future/auth/verfyCode/logic/cubit/verfy_code_cubit.dart';

@@ -39,7 +39,7 @@ class CheckCodeForgetPassword extends StatelessWidget {
                     verticalSpace(50),
                     OtpTextField(
                       disabledBorderColor: AppColor.primaryColor,
-                      enabled: false,
+                      enabled: true,
                       numberOfFields: 5,
 
                       borderColor: const Color(0xFF512DA8),
