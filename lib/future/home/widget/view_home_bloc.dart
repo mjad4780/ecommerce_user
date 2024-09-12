@@ -61,6 +61,11 @@ class SuccessHome extends StatelessWidget {
         CategorySelector(
           categories: products.categories!,
         ),
+        const SizedBox(height: 5),
+        Text(
+          "Top Products",
+          style: Theme.of(context).textTheme.headlineMedium,
+        ),
         ProductGridView(items: products.item1view!.data!),
       ],
     );

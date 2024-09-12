@@ -13,6 +13,7 @@ import 'home_state.dart';
 class HomeCubit extends Cubit<HomeState> {
   HomeCubit(this.homeRepo) : super(const HomeState.initial());
   TextEditingController search = TextEditingController();
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
 
   final HomeRepo homeRepo;
 //:bottomNavigationBar

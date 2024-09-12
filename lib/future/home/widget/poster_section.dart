@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/networking/api_constants.dart';
@@ -9,8 +10,9 @@ class PosterSection extends StatelessWidget {
   final List<Setting> posters;
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size.height;
     return SizedBox(
-        height: 170,
+        height: size * 0.2,
         child: ListView.builder(
           padding: const EdgeInsets.symmetric(vertical: 10),
           shrinkWrap: true,
@@ -61,27 +63,10 @@ class PosterSection extends StatelessWidget {
                       ),
                     ),
                     const Spacer(),
-                    Image.network(
-                      '${ApiConstants.imagePoster}/${posters[index].settingImage}',
-                      height: 125,
-                      fit: BoxFit.cover,
-                      loadingBuilder: (BuildContext context, Widget child,
-                          ImageChunkEvent? loadingProgress) {
-                        if (loadingProgress == null) return child;
-                        return Center(
-                          child: CircularProgressIndicator(
-                            value: loadingProgress.expectedTotalBytes != null
-                                ? loadingProgress.cumulativeBytesLoaded /
-                                    loadingProgress.expectedTotalBytes!
-                                : null, // Progress indicator.
-                          ),
-                        );
-                      },
-                      errorBuilder: (BuildContext context, Object exception,
-                          StackTrace? stackTrace) {
-                        return const Icon(Icons.error, color: Colors.red);
-                      },
-                    )
+                    CachedNetworkImage(
+                        width: MediaQuery.of(context).size.width / 3,
+                        imageUrl:
+                            '${ApiConstants.imagePoster}/${posters[index].settingImage}')
                   ],
                 ),
               ),

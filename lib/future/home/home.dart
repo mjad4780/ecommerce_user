@@ -1,6 +1,5 @@
 import 'package:ecommerce_user/future/home/logic/cubit/home_cubit.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 import 'widget/custom_app_bar.dart';
 
@@ -17,8 +16,8 @@ class _HomeState extends State<Home> {
   @override
   void initState() {
     // TODO: implement initState
-    super.initState();
-    context.read<HomeCubit>().emitHome();
+    // super.initState();
+    // context.read<HomeCubit>().emitHome();
   }
 
   @override
@@ -31,12 +30,13 @@ class _HomeState extends State<Home> {
         SafeArea(
       child: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.all(8),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              const CustomAppBar(),
               Text(
-                "Hello Sina",
+                "Hi ",
                 style: Theme.of(context).textTheme.displayLarge,
               ),
               Text(

@@ -6,7 +6,6 @@ import '../../core/theming/colors.dart';
 import '../../model/response_home/category.dart';
 
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 import 'view_item_categories_bloc.dart';
 

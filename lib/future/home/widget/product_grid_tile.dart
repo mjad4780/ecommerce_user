@@ -1,10 +1,9 @@
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:ecommerce_user/core/theming/colors.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/networking/api_constants.dart';
 import '../../../model/response_home/datum.dart';
-
-import '../../item_categories/widget/calculator_discount.dart';
-import '../../item_categories/widget/custom_network_image.dart';
 
 class ProductGridTile extends StatelessWidget {
   final Datum product;
@@ -20,8 +19,6 @@ class ProductGridTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double discountPercentage = calculateDiscountPercentage(
-        product.itemPrice ?? 0, product.itemDiscount ?? 0);
     return GridTile(
       header: Padding(
         padding: const EdgeInsets.all(10.0),
@@ -29,7 +26,6 @@ class ProductGridTile extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Visibility(
-              visible: discountPercentage != 0,
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
@@ -39,16 +35,18 @@ class ProductGridTile extends StatelessWidget {
                 height: 30,
                 alignment: Alignment.center,
                 child: Text(
-                  "OFF ${discountPercentage.toInt()} %",
+                  "OFF ${product.itemDiscount} %",
                   style: const TextStyle(fontWeight: FontWeight.w600),
                 ),
               ),
             ),
             IconButton(
-              icon: const Icon(
+              icon: Icon(
                 Icons.favorite,
                 //TODO: should complete make color dynamic
-                color: Color(0xFFA6A3A0),
+                color: product.favorite == 1
+                    ? AppColor.red
+                    : const Color(0xFFA6A3A0),
               ),
               onPressed: () {
                 //TODO: should complete make call updateToFavoriteList
@@ -84,21 +82,20 @@ class ProductGridTile extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 5),
               Row(
                 children: [
-                  Flexible(
-                    child: Text(
-                      product.itemDiscount != 0
-                          ? "\$${product.itemDiscount}"
-                          : "\$${product.itemPrice}",
-                      style: Theme.of(context).textTheme.headlineMedium,
-                      overflow: TextOverflow.ellipsis,
-                    ),
+                  Text(
+                    product.itemDiscount != 0
+                        ? "\$${product.itempriceDiscount}"
+                        : "\$${product.itemPrice}",
+                    style: const TextStyle(fontSize: 16),
+                    // style: Theme.of(context).textTheme.headlineMedium,
+                    overflow: TextOverflow.ellipsis,
                   ),
-                  const SizedBox(width: 3),
-                  if (product.itemDiscount != null &&
-                      product.itemDiscount != product.itemPrice)
+                  const SizedBox(
+                    width: 8,
+                  ),
+                  if (product.itemDiscount != 0)
                     Flexible(
                       child: Text(
                         "\$${product.itemPrice}",
@@ -117,15 +114,14 @@ class ProductGridTile extends StatelessWidget {
         ),
       ),
       child: Container(
+        height: MediaQuery.of(context).size.height * 0.5,
         padding: const EdgeInsets.all(15),
         decoration: BoxDecoration(
           color: const Color(0xFFE5E6E8),
           borderRadius: BorderRadius.circular(20),
         ),
-        child: CustomNetworkImage(
+        child: CachedNetworkImage(
           imageUrl: '${ApiConstants.imageItem}/${product.itemImage}',
-          fit: BoxFit.scaleDown,
-          scale: 3.0,
         ),
       ),
     );

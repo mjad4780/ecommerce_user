@@ -13,6 +13,8 @@ double calculateDiscountPercentage(num originalPrice, num? discountedPrice) {
   double discount =
       ((originalPrice - finalDiscountedPrice) / originalPrice) * 100;
 
+  // double discount = (originalPrice - (originalPrice * discountedPrice / 100));
+
   //? Return the discount percentage as an integer
   return discount;
 }

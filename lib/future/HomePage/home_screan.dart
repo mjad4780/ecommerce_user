@@ -16,12 +16,15 @@ class HomeScrean extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => getIt<HomeCubit>(),
+      create: (context) => getIt<HomeCubit>()..emitHome(),
       child: BlocConsumer<HomeCubit, HomeState>(
         listener: (context, state) {},
         builder: (context, state) {
           return MaterialApp(
               home: Scaffold(
+                  key: context.read<HomeCubit>().scaffoldKey,
+                  drawer: const Drawer(),
+                  extendBodyBehindAppBar: true,
                   bottomNavigationBar: const CustemAppbarNavigationBottom(),
                   floatingActionButtonLocation:
                       FloatingActionButtonLocation.centerDocked,

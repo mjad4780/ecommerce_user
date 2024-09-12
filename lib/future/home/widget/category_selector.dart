@@ -17,7 +17,7 @@ class CategorySelector extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 60,
+      height: MediaQuery.of(context).size.height * 0.07,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: categories.length,
@@ -33,10 +33,10 @@ class CategorySelector extends StatelessWidget {
                     height: 80,
                     margin: const EdgeInsets.symmetric(horizontal: 8),
                     padding: const EdgeInsets.symmetric(vertical: 10),
-                    decoration: BoxDecoration(
-                      color: const Color(0xFFf16b26),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
+                    // decoration: BoxDecoration(
+                    //   color: const Color(0xFFf16b26),
+                    //   borderRadius: BorderRadius.circular(10),
+                    // ),
                     alignment: Alignment.center,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -45,8 +45,8 @@ class CategorySelector extends StatelessWidget {
                           child: CachedNetworkImage(
                             imageUrl:
                                 '${ApiConstants.imageCat}/${category.categoriesImage}',
-                            width: 90,
-                            height: 90,
+                            width: 100,
+                            height: 100,
                             fit: BoxFit.contain,
                           ),
                         ),
