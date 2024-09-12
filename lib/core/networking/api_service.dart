@@ -12,8 +12,8 @@ import '../../model/favorite_response/favorite_response.dart';
 import '../../model/get_current_cart/get_current_cart.dart';
 import '../../model/order_response/order_response.dart';
 import '../../model/response_detilas/response_detilas.dart';
+import '../../model/response_home/item1view.dart';
 import '../../model/response_home/response_home.dart';
-import '../../model/response_items/response_items.dart';
 import '../../model/response_login/response_login.dart';
 import '../../model/response_status/response_status.dart';
 import 'api_constants.dart';
@@ -52,13 +52,13 @@ abstract class ApiService {
   Future<ResponseHome> home(@Body() dynamic body);
 
   @POST(ApiConstants.search)
-  Future<ResponseItems> search(@Body() dynamic body);
+  Future<Item1view> search(@Body() dynamic body);
 
   @POST(ApiConstants.categories)
-  Future<ResponseItems> itemCategories(@Body() dynamic body);
+  Future<Item1view> itemCategories(@Body() dynamic body);
 
   @GET(ApiConstants.offers)
-  Future<ResponseItems> offers();
+  Future<Item1view> offers();
   //// Address
   @POST(ApiConstants.adressAdd)
   Future<ResponseStatus> addAdress(@Body() dynamic body);

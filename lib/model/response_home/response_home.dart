@@ -3,7 +3,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 import 'category.dart';
 import 'item1view.dart';
-import 'offer.dart';
 import 'setting.dart';
 
 part 'response_home.g.dart';
@@ -11,17 +10,15 @@ part 'response_home.g.dart';
 @JsonSerializable()
 class ResponseHome {
   String? status;
-  List<Item1view>? item1view;
-  List<Offer>? offers;
-  List<List<Setting>>? setting;
-  List<List<Category>>? categories;
+  List<Setting>? setting;
+  List<Category>? categories;
+  Item1view? item1view;
 
   ResponseHome({
     this.status,
-    this.item1view,
-    this.offers,
     this.setting,
     this.categories,
+    this.item1view,
   });
 
   factory ResponseHome.fromJson(Map<String, dynamic> json) {
@@ -41,8 +38,7 @@ class ResponseHome {
   @override
   int get hashCode =>
       status.hashCode ^
-      item1view.hashCode ^
-      offers.hashCode ^
       setting.hashCode ^
-      categories.hashCode;
+      categories.hashCode ^
+      item1view.hashCode;
 }

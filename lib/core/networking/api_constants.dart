@@ -34,6 +34,8 @@ class ApiConstants {
 /////////////////image///////////////
   static const String imageCat = '$baseUrl/upload/categories';
   static const String imageItem = '$baseUrl/upload/item';
+  static const String imagePoster = '$baseUrl/upload/poster';
+
   //////////////////searchitem
   static const String search = '$baseUrl/items/search.php';
   ////////////////adress/////////////

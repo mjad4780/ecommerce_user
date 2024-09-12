@@ -1,200 +1,90 @@
 {
     "status": "success",
-   
-   
-    "item1view": [
-     
-        {
-            "item_id": 72,
-            "item_name": "Egypt",
-            "item_name_ar": "cairo",
-            "item_decs": "dturr",
-            "item_decs_ar": "ytfchtfuyf",
-            "item_image": "Screenshot_٢٠٢٣-٠٤-٠٣-٢١-٠٩-١١-٤٩_f9ee0578fe1cc94de7482bd41accb329.jpg",
-            "item_count": 212,
-            "item_active": 1,
-            "item_price": 33,
-            "item_discount": 123,
-            "item_data": "2024-08-09 14:56:40",
-            "item_categories": 12,
-            "favorite": 0,
-            "itemprice_discount": -7.590000000000003,
-            "images": [
-                "",
-                "",
-                
-                "Screenshot_٢٠٢٣-٠٤-٠٣-٢١-٠٩-١١-٤٩_f9ee0578fe1cc94de7482bd41accb329.jpg",
-                "Screenshot_٢٠٢٣-٠٤-٠٣-٢١-١١-٣٢-٥٩_f9ee0578fe1cc94de7482bd41accb329.jpg"
-            ],
-            "size": [
-                
-             
-                {
-                    "id": 312,
-                    "size": "ry",
-                    "quantity": 0,
-                    "color": "ry"
-                }
-            ]
-        }
-     
-    ],
-    "offers": [
-      
-        {
-            "item_id": 72,
-            "item_name": "Egypt",
-            "item_name_ar": "cairo",
-            "item_decs": "dturr",
-            "item_decs_ar": "ytfchtfuyf",
-            "item_image": "Screenshot_٢٠٢٣-٠٤-٠٣-٢١-٠٩-١١-٤٩_f9ee0578fe1cc94de7482bd41accb329.jpg",
-            "item_count": 212,
-            "item_active": 1,
-            "item_price": 33,
-            "item_discount": 123,
-            "item_data": "2024-08-09 14:56:40",
-            "item_categories": 12,
-            "categories_id": 12,
-            "categories_name": "camera",
-            "favorite": 0,
-            "itemprice_discount": -7.590000000000003,
-            "images": [
-                "",
-                "",
-                "",
-                "",
-                "Screenshot_٢٠٢٣-٠٤-٠٣-٢١-٠٩-١١-٤٩_f9ee0578fe1cc94de7482bd41accb329.jpg",
-                "Screenshot_٢٠٢٣-٠٤-٠٣-٢١-١١-٣٢-٥٩_f9ee0578fe1cc94de7482bd41accb329.jpg"
-            ],
-            "size": [
-                {
-                    "id": 307,
-                    "size": "",
-                    "quantity": 0,
-                    "color": "red"
-                },
-                {
-                    "id": 308,
-                    "size": "",
-                    "quantity": 0,
-                    "color": "orange"
-                },
-                {
-                    "id": 312,
-                    "size": "",
-                    "quantity": 0,
-                    "color": ""
-                }
-            ]
-        }
-      
-    ],
     "setting": [
-        [
-            {
-                "setting_id": 2,
-                "setting_title": "hello",
-                "setting_body": "20% discount",
-                "setting_datedelvery": 30,
-                "setting_image": "Screenshot 2024-03-04 105337.png"
-            },
-            {
-                "setting_id": 3,
-                "setting_title": "hello2",
-                "setting_body": "20% discount",
-                "setting_datedelvery": 30,
-                "setting_image": "Screenshot_٢٠٢٣-٠٤-٠٢-١٣-٥٢-٤٤-٣٨_f9ee0578fe1cc94de7482bd41accb329.jpg"
-            },
-            {
-                "setting_id": 4,
-                "setting_title": "hello",
-                "setting_body": "$20",
-                "setting_datedelvery": 30,
-                "setting_image": "Screenshot_٢٠٢٣-٠٤-٠٣-٢١-٠٩-١١-٤٩_f9ee0578fe1cc94de7482bd41accb329.jpg"
-            },
-            {
-                "setting_id": 5,
-                "setting_title": "sdafs",
-                "setting_body": "ffgszg",
-                "setting_datedelvery": 30,
-                "setting_image": "Screenshot_٢٠٢٣-٠٤-٠٣-٢١-١١-٣٢-٥٩_f9ee0578fe1cc94de7482bd41accb329.jpg"
-            },
-            {
-                "setting_id": 6,
-                "setting_title": "hi",
-                "setting_body": "30% discount",
-                "setting_datedelvery": 30,
-                "setting_image": "4317Screenshot (30).png"
-            }
-        ]
+       
+        {
+            "setting_id": 6,
+            "setting_title": "hi",
+            "setting_body": "30% discount",
+            "setting_datedelvery": 30,
+            "setting_image": "4317Screenshot (30).png"
+        }
     ],
     "categories": [
-        [
+      
+        {
+            "categories_id": 48,
+            "categories_name": "mohamed",
+            "categories_name_ar": "wszhgdrhyd",
+            "categories_Image": "Screenshot 2024-03-04 105337.png",
+            "categories_Data": "2024-05-15 19:11:41"
+        },
+        {
+            "categories_id": 52,
+            "categories_name": "hello",
+            "categories_name_ar": "docs2",
+            "categories_Image": "Screenshot_٢٠٢٣-٠٤-٠٣-٢١-٠٩-١١-٤٩_f9ee0578fe1cc94de7482bd41accb329.jpg",
+            "categories_Data": "2024-07-26 14:33:55"
+        }
+    ],
+    "item1view": {
+        "data": [
+           
             {
-                "categories_id": 11,
-                "categories_name": "choise",
-                "categories_name_ar": "حذاء",
-                "categories_Image": "1300sneakers.png",
-                "categories_Data": "2024-03-20 10:10:08"
-            },
-            {
-                "categories_id": 12,
-                "categories_name": "camera",
-                "categories_name_ar": "كاميرا",
-                "categories_Image": "3852camera.png",
-                "categories_Data": "2024-03-20 10:10:59"
-            },
-            {
-                "categories_id": 14,
-                "categories_name": "laptop",
-                "categories_name_ar": "لابتوب",
-                "categories_Image": "4638laptop.png",
-                "categories_Data": "2024-03-20 10:11:45"
-            },
-            {
+                "item_id": 71,
+                "item_name": "behara",
+                "item_name_ar": "szgdhd",
+                "item_decs": "hfdxhjfg",
+                "item_decs_ar": "jfxgzdsg",
+                "item_image": "Screenshot_٢٠٢٣-٠٤-٠٣-٢١-١١-٣٢-٥٩_f9ee0578fe1cc94de7482bd41accb329.jpg",
+                "item_count": 424324,
+                "item_active": 1,
+                "item_price": 324,
+                "item_discount": 32767,
+                "item_data": "2024-08-09 12:48:54",
+                "item_categories": 15,
+                "favorite": 0,
                 "categories_id": 15,
                 "categories_name": "mobile",
-                "categories_name_ar": "موبايل",
-                "categories_Image": "7874cell-phone.png",
-                "categories_Data": "2024-03-20 10:13:16"
-            },
-            {
-                "categories_id": 17,
-                "categories_name": "PC2",
-                "categories_name_ar": "كمبيوتر",
-                "categories_Image": "7152monitor.png",
-                "categories_Data": "2024-03-20 10:14:54"
-            },
-            {
-                "categories_id": 44,
-                "categories_name": "gggggggaff",
-                "categories_name_ar": "ggggggggg",
-                "categories_Image": "4317Screenshot (30).png",
-                "categories_Data": "2024-05-14 22:34:54"
-            },
-            {
-                "categories_id": 45,
-                "categories_name": "gg67r4e55dgd",
-                "categories_name_ar": "gggggggggsfa",
-                "categories_Image": "Screenshot_٢٠٢٣-٠٤-٠٢-١٣-٥٢-٤٤-٣٨_f9ee0578fe1cc94de7482bd41accb329.jpg",
-                "categories_Data": "2024-05-14 22:36:46"
-            },
-            {
-                "categories_id": 48,
-                "categories_name": "mohamed",
-                "categories_name_ar": "wszhgdrhyd",
-                "categories_Image": "Screenshot 2024-03-04 105337.png",
-                "categories_Data": "2024-05-15 19:11:41"
-            },
-            {
-                "categories_id": 52,
-                "categories_name": "hello",
-                "categories_name_ar": "docs2",
-                "categories_Image": "Screenshot_٢٠٢٣-٠٤-٠٣-٢١-٠٩-١١-٤٩_f9ee0578fe1cc94de7482bd41accb329.jpg",
-                "categories_Data": "2024-07-26 14:33:55"
+                "itemprice_discount": -105841.08,
+                "images": [
+                    "",
+                    "",
+                    "Screenshot 2024-03-04 105337.png",
+                    "Screenshot_٢٠٢٣-٠٤-٠٢-١٣-٥٢-٤٤-٣٨_f9ee0578fe1cc94de7482bd41accb329.jpg",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "size": [
+                    {
+                        "id": 303,
+                        "size": "",
+                        "quantity": 0,
+                        "color": "red"
+                    },
+                  
+                    {
+                        "id": 322,
+                        "size": "MM",
+                        "quantity": 0,
+                        "color": ""
+                    },
+                    {
+                        "id": 323,
+                        "size": "XXL",
+                        "quantity": 0,
+                        "color": ""
+                    }
+                ]
             }
+          
         ]
-    ]
-    
+    }
   
+        
+     
+    
 }

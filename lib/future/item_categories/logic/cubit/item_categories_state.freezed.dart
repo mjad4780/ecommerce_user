@@ -20,7 +20,7 @@ mixin _$ItemCategoriesState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(ResponseItems responseItems) success,
+    required TResult Function(Item1view responseItems) success,
     required TResult Function(String erorr) erorr,
   }) =>
       throw _privateConstructorUsedError;
@@ -28,7 +28,7 @@ mixin _$ItemCategoriesState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(ResponseItems responseItems)? success,
+    TResult? Function(Item1view responseItems)? success,
     TResult? Function(String erorr)? erorr,
   }) =>
       throw _privateConstructorUsedError;
@@ -36,7 +36,7 @@ mixin _$ItemCategoriesState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(ResponseItems responseItems)? success,
+    TResult Function(Item1view responseItems)? success,
     TResult Function(String erorr)? erorr,
     required TResult orElse(),
   }) =>
@@ -126,7 +126,7 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(ResponseItems responseItems) success,
+    required TResult Function(Item1view responseItems) success,
     required TResult Function(String erorr) erorr,
   }) {
     return initial();
@@ -137,7 +137,7 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(ResponseItems responseItems)? success,
+    TResult? Function(Item1view responseItems)? success,
     TResult? Function(String erorr)? erorr,
   }) {
     return initial?.call();
@@ -148,7 +148,7 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(ResponseItems responseItems)? success,
+    TResult Function(Item1view responseItems)? success,
     TResult Function(String erorr)? erorr,
     required TResult orElse(),
   }) {
@@ -240,7 +240,7 @@ class _$LoadingImpl implements Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(ResponseItems responseItems) success,
+    required TResult Function(Item1view responseItems) success,
     required TResult Function(String erorr) erorr,
   }) {
     return loading();
@@ -251,7 +251,7 @@ class _$LoadingImpl implements Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(ResponseItems responseItems)? success,
+    TResult? Function(Item1view responseItems)? success,
     TResult? Function(String erorr)? erorr,
   }) {
     return loading?.call();
@@ -262,7 +262,7 @@ class _$LoadingImpl implements Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(ResponseItems responseItems)? success,
+    TResult Function(Item1view responseItems)? success,
     TResult Function(String erorr)? erorr,
     required TResult orElse(),
   }) {
@@ -320,7 +320,7 @@ abstract class _$$SuccessImplCopyWith<$Res> {
           _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
       __$$SuccessImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({ResponseItems responseItems});
+  $Res call({Item1view responseItems});
 }
 
 /// @nodoc
@@ -340,7 +340,7 @@ class __$$SuccessImplCopyWithImpl<$Res>
       responseItems: null == responseItems
           ? _value.responseItems
           : responseItems // ignore: cast_nullable_to_non_nullable
-              as ResponseItems,
+              as Item1view,
     ));
   }
 }
@@ -351,7 +351,7 @@ class _$SuccessImpl implements Success {
   const _$SuccessImpl({required this.responseItems});
 
   @override
-  final ResponseItems responseItems;
+  final Item1view responseItems;
 
   @override
   String toString() {
@@ -381,7 +381,7 @@ class _$SuccessImpl implements Success {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(ResponseItems responseItems) success,
+    required TResult Function(Item1view responseItems) success,
     required TResult Function(String erorr) erorr,
   }) {
     return success(responseItems);
@@ -392,7 +392,7 @@ class _$SuccessImpl implements Success {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(ResponseItems responseItems)? success,
+    TResult? Function(Item1view responseItems)? success,
     TResult? Function(String erorr)? erorr,
   }) {
     return success?.call(responseItems);
@@ -403,7 +403,7 @@ class _$SuccessImpl implements Success {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(ResponseItems responseItems)? success,
+    TResult Function(Item1view responseItems)? success,
     TResult Function(String erorr)? erorr,
     required TResult orElse(),
   }) {
@@ -452,10 +452,10 @@ class _$SuccessImpl implements Success {
 }
 
 abstract class Success implements ItemCategoriesState {
-  const factory Success({required final ResponseItems responseItems}) =
+  const factory Success({required final Item1view responseItems}) =
       _$SuccessImpl;
 
-  ResponseItems get responseItems;
+  Item1view get responseItems;
   @JsonKey(ignore: true)
   _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -527,7 +527,7 @@ class _$ErorrImpl implements Erorr {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(ResponseItems responseItems) success,
+    required TResult Function(Item1view responseItems) success,
     required TResult Function(String erorr) erorr,
   }) {
     return erorr(this.erorr);
@@ -538,7 +538,7 @@ class _$ErorrImpl implements Erorr {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(ResponseItems responseItems)? success,
+    TResult? Function(Item1view responseItems)? success,
     TResult? Function(String erorr)? erorr,
   }) {
     return erorr?.call(this.erorr);
@@ -549,7 +549,7 @@ class _$ErorrImpl implements Erorr {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(ResponseItems responseItems)? success,
+    TResult Function(Item1view responseItems)? success,
     TResult Function(String erorr)? erorr,
     required TResult orElse(),
   }) {

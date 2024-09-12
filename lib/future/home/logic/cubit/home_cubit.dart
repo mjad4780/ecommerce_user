@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -30,9 +32,10 @@ class HomeCubit extends Cubit<HomeState> {
 
 //:home
   emitHome() async {
-    emit(const HomeState.loadingoffers());
+    emit(const HomeState.loadingHome());
     final response = await homeRepo.homeData();
     response.when(success: (responsehome) {
+      log(responsehome.categories!.length.toString());
       emit(HomeState.successHome(responseHome: responsehome));
     }, failure: (error) {
       emit(HomeState.errorHome(erorr: error.apiErrorModel.messege ?? ''));
@@ -47,17 +50,6 @@ class HomeCubit extends Cubit<HomeState> {
       emit(HomeState.successSearch(responseItems: loginResponse));
     }, failure: (error) {
       emit(HomeState.errorSearch(erorr: error.apiErrorModel.messege ?? ''));
-    });
-  }
-
-  ///:emitOffers
-  emitOffers() async {
-    emit(const HomeState.loadingoffers());
-    final response = await homeRepo.offers();
-    response.when(success: (loginResponse) {
-      emit(HomeState.successoffers(responseItems: loginResponse));
-    }, failure: (error) {
-      emit(HomeState.erroroffers(erorr: error.apiErrorModel.messege ?? ''));
     });
   }
 }

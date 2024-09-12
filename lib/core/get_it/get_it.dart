@@ -9,6 +9,7 @@ import 'package:ecommerce_user/future/favorite/logic/cubit/favorite_cubit.dart';
 import 'package:ecommerce_user/future/home/data/repo.dart';
 import 'package:ecommerce_user/future/home/logic/cubit/home_cubit.dart';
 import 'package:ecommerce_user/future/item_categories/data/repo.dart';
+import 'package:ecommerce_user/future/offers/logic/cubit/offers_cubit.dart';
 
 import 'package:get_it/get_it.dart';
 
@@ -26,6 +27,7 @@ import '../../future/auth/verfyCode/logic/cubit/verfy_code_cubit.dart';
 import '../../future/cart/data/repo.dart';
 import '../../future/favorite/data/repo.dart';
 import '../../future/item_categories/logic/cubit/item_categories_cubit.dart';
+import '../../future/offers/data/repo.dart';
 import '../../future/orders/data/repo.dart';
 import '../../future/orders/logic/cubit/orders_cubit.dart';
 import '../class/cache_helper.dart';
@@ -84,4 +86,8 @@ void setupServise() {
   // orders
   getIt.registerLazySingleton<OrdersRepo>(() => OrdersRepo(getIt()));
   getIt.registerFactory<OrdersCubit>(() => OrdersCubit(getIt()));
+
+  // Offers
+  getIt.registerLazySingleton<OffersRepo>(() => OffersRepo(getIt()));
+  getIt.registerFactory<OffersCubit>(() => OffersCubit(getIt()));
 }

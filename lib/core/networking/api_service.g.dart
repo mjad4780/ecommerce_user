@@ -229,12 +229,12 @@ class _ApiService implements ApiService {
   }
 
   @override
-  Future<ResponseItems> search(dynamic body) async {
+  Future<Item1view> search(dynamic body) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<ResponseItems>(Options(
+    final _result = await _dio.fetch(_setStreamType<Item1view>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -250,17 +250,17 @@ class _ApiService implements ApiService {
           _dio.options.baseUrl,
           baseUrl,
         ))));
-    final value = ResponseItems.fromJson(jsonDecode(_result.data!)!);
+    final value = Item1view.fromJson(jsonDecode(_result.data!)!);
     return value;
   }
 
   @override
-  Future<ResponseItems> itemCategories(dynamic body) async {
+  Future<Item1view> itemCategories(dynamic body) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<ResponseItems>(Options(
+    final _result = await _dio.fetch(_setStreamType<Item1view>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -276,17 +276,17 @@ class _ApiService implements ApiService {
           _dio.options.baseUrl,
           baseUrl,
         ))));
-    final value = ResponseItems.fromJson(jsonDecode(_result.data!)!);
+    final value = Item1view.fromJson(jsonDecode(_result.data!)!);
     return value;
   }
 
   @override
-  Future<ResponseItems> offers() async {
+  Future<Item1view> offers() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result = await _dio.fetch(_setStreamType<ResponseItems>(Options(
+    final _result = await _dio.fetch(_setStreamType<Item1view>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -302,7 +302,7 @@ class _ApiService implements ApiService {
           _dio.options.baseUrl,
           baseUrl,
         ))));
-    final value = ResponseItems.fromJson(jsonDecode(_result.data!)!);
+    final value = Item1view.fromJson(jsonDecode(_result.data!)!);
     return value;
   }
 

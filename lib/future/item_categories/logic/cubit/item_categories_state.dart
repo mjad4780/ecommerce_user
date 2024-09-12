@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../../model/response_items/response_items.dart';
+import '../../../../model/response_home/item1view.dart';
 
 part 'item_categories_state.freezed.dart';
 
@@ -10,6 +10,6 @@ class ItemCategoriesState with _$ItemCategoriesState {
 
   const factory ItemCategoriesState.loading() = Loading;
   const factory ItemCategoriesState.success(
-      {required ResponseItems responseItems}) = Success;
+      {required Item1view responseItems}) = Success;
   const factory ItemCategoriesState.erorr({required String erorr}) = Erorr;
 }

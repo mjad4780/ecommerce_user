@@ -9,7 +9,7 @@ class ItemCategoriesCubit extends Cubit<ItemCategoriesState> {
 
   final ItemCategoriesRepo itemCategoriesRepo;
 //:ItemCategories
-  emitHome(int categoriesId) async {
+  emitItemCategories(int categoriesId) async {
     emit(const ItemCategoriesState.loading());
     final response = await itemCategoriesRepo.itemCategories(categoriesId);
     response.when(success: (responsehome) {
