@@ -27,7 +27,9 @@ class CategorySelector extends StatelessWidget {
               margin: const EdgeInsets.symmetric(horizontal: 6, vertical: 1),
               child: OpenContainerWrapper(
                   nextScresan: ProductByCategoryScreen(
-                      selectedCategory: categories[index]),
+                    category: categories[index],
+                    listCategories: categories,
+                  ),
                   child: Container(
                     width: 80,
                     height: 80,

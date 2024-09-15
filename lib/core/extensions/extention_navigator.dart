@@ -1,10 +1,12 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 
 extension Navigation on BuildContext {
-  // Future<dynamic> pushNamed(String routeName, {Object? arguments}) {
-  //   return Navigator.of(this).pushNamed(routeName, arguments: arguments);
-  // }
+  Future<dynamic> pushNamed(Widget routeName, {Object? arguments}) {
+    return Navigator.of(this)
+        .pushReplacement(MaterialPageRoute(builder: (_) => routeName));
+  }
 
   // Future<dynamic> pushReplacementNamed(String routeName, {Object? arguments}) {
   //   return Navigator.of(this)

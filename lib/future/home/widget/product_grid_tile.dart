@@ -1,6 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:ecommerce_user/core/get_it/get_it.dart';
 import 'package:ecommerce_user/core/theming/colors.dart';
+import 'package:ecommerce_user/future/favorite/logic/cubit/favorite_cubit.dart';
+import 'package:ecommerce_user/future/favorite/logic/cubit/favorite_state.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../core/networking/api_constants.dart';
 import '../../../model/response_home/datum.dart';
@@ -8,13 +12,11 @@ import '../../../model/response_home/datum.dart';
 class ProductGridTile extends StatelessWidget {
   final Datum product;
   final int index;
-  final bool isPriceOff;
 
   const ProductGridTile({
     super.key,
     required this.product,
     required this.index,
-    required this.isPriceOff,
   });
 
   @override
@@ -40,17 +42,8 @@ class ProductGridTile extends StatelessWidget {
                 ),
               ),
             ),
-            IconButton(
-              icon: Icon(
-                Icons.favorite,
-                //TODO: should complete make color dynamic
-                color: product.favorite == 1
-                    ? AppColor.red
-                    : const Color(0xFFA6A3A0),
-              ),
-              onPressed: () {
-                //TODO: should complete make call updateToFavoriteList
-              },
+            IconFavorite(
+              product: product,
             )
           ],
         ),
@@ -125,5 +118,43 @@ class ProductGridTile extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class IconFavorite extends StatelessWidget {
+  const IconFavorite({super.key, required this.product});
+  final Datum product;
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (context) => getIt<FavoriteCubit>(),
+      child: BlocConsumer<FavoriteCubit, FavoriteState>(
+        listener: (context, state) {},
+        builder: (context, state) {
+          return IconButton(
+            icon: Icon(
+              Icons.favorite,
+              color: product.favorite == 1
+                  ? AppColor.red
+                  : const Color(0xFFA6A3A0),
+            ),
+            onPressed: () {
+              selectFsavorite(context);
+            },
+          );
+        },
+      ),
+    );
+  }
+
+  void selectFsavorite(BuildContext context) {
+    if (product.favorite == 1) {
+      context.read<FavoriteCubit>().emitdeleteFavorite(product.itemId!);
+      product.favorite = 0;
+    } else {
+      context.read<FavoriteCubit>().emitAddFavorite(product.itemId!);
+      product.favorite = 1;
+    }
   }
 }

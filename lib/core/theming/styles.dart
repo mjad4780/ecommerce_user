@@ -12,6 +12,9 @@ class TextStyles {
     color: Colors.black,
   );
 
+  static TextStyle textItemCategories = TextStyle(
+      fontSize: 24.sp, fontWeight: FontWeight.bold, color: AppColor.darkOrange);
+
   static TextStyle font32BlueBold = TextStyle(
     fontSize: 32.sp,
     fontWeight: FontWeightHelper.bold,

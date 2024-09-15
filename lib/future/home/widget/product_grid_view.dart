@@ -33,7 +33,6 @@ class ProductGridView extends StatelessWidget {
               child: ProductGridTile(
                 product: items[index],
                 index: index,
-                isPriceOff: items[index].itemDiscount != 0,
               ));
         },
       ),

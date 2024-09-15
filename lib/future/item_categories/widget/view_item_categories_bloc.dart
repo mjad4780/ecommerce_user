@@ -3,11 +3,16 @@ import 'package:ecommerce_user/future/item_categories/logic/cubit/item_categorie
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/theming/colors.dart';
-import '../home/widget/product_grid_view.dart';
+import '../../../../../core/theming/colors.dart';
+import '../../../model/response_home/category.dart';
+import 'custom_item_categories.dart';
 
 class ItemCategoriesBlocBuilder extends StatelessWidget {
-  const ItemCategoriesBlocBuilder({super.key});
+  const ItemCategoriesBlocBuilder(
+      {super.key, required this.listCategories, required this.category});
+  final Category category;
+
+  final List<Category> listCategories;
 
   @override
   Widget build(BuildContext context) {
@@ -24,12 +29,14 @@ class ItemCategoriesBlocBuilder extends StatelessWidget {
             );
           },
           success: (products) {
-            return ProductGridView(
-              items: products.data ?? [],
+            return CustomItemCategories(
+              listCategories: listCategories,
+              products: products,
+              category: category,
             );
           },
           erorr: (error) {
-            return Text(error);
+            return const Center(child: Text('Sorry......'));
           },
           orElse: () {
             return const SizedBox.shrink();
