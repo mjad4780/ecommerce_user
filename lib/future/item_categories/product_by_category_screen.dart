@@ -6,7 +6,7 @@ import '../../model/response_home/category.dart';
 
 import 'package:flutter/material.dart';
 
-import 'widget/view_item_categories_bloc.dart';
+import 'widget/custom_item_categories.dart';
 
 class ProductByCategoryScreen extends StatelessWidget {
   final List<Category> listCategories;
@@ -19,8 +19,9 @@ class ProductByCategoryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => getIt<ItemCategoriesCubit>()
-        ..emitItemCategories(category.categoriesId!, category),
-      child: ItemCategoriesBlocBuilder(
+        ..emitItemCategories(category.categoriesId!)
+        ..selectitemCategories(category),
+      child: CustomItemCategories(
           category: category, listCategories: listCategories),
     );
   }

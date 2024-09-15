@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import '../../../../model/response_home/category.dart';
 import '../../../../model/response_home/item1view.dart';
 
 part 'item_categories_state.freezed.dart';
@@ -12,4 +13,8 @@ class ItemCategoriesState with _$ItemCategoriesState {
   const factory ItemCategoriesState.success(
       {required Item1view responseItems}) = Success;
   const factory ItemCategoriesState.erorr({required String erorr}) = Erorr;
+
+  const factory ItemCategoriesState.selectCategories({
+    required Category categories,
+  }) = selectCategories;
 }

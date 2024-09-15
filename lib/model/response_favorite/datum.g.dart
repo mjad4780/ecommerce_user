@@ -7,9 +7,6 @@ part of 'datum.dart';
 // **************************************************************************
 
 Datum _$DatumFromJson(Map<String, dynamic> json) => Datum(
-      favoriteId: (json['favorite_id'] as num?)?.toInt(),
-      favoriteUserid: (json['favorite_userid'] as num?)?.toInt(),
-      favoriteItemsid: (json['favorite_itemsid'] as num?)?.toInt(),
       itemId: (json['item_id'] as num?)?.toInt(),
       itemName: json['item_name'] as String?,
       itemNameAr: json['item_name_ar'] as String?,
@@ -22,13 +19,13 @@ Datum _$DatumFromJson(Map<String, dynamic> json) => Datum(
       itemDiscount: (json['item_discount'] as num?)?.toInt(),
       itemData: json['item_data'] as String?,
       itemCategories: (json['item_categories'] as num?)?.toInt(),
-      userId: (json['user_id'] as num?)?.toInt(),
+      favorite: (json['favorite'] as num?)?.toInt(),
+      itempriceDiscount: (json['itemprice_discount'] as num?)?.toInt(),
+      images: json['images'] as List<dynamic>?,
+      size: json['size'] as List<dynamic>?,
     );
 
 Map<String, dynamic> _$DatumToJson(Datum instance) => <String, dynamic>{
-      'favorite_id': instance.favoriteId,
-      'favorite_userid': instance.favoriteUserid,
-      'favorite_itemsid': instance.favoriteItemsid,
       'item_id': instance.itemId,
       'item_name': instance.itemName,
       'item_name_ar': instance.itemNameAr,
@@ -41,5 +38,8 @@ Map<String, dynamic> _$DatumToJson(Datum instance) => <String, dynamic>{
       'item_discount': instance.itemDiscount,
       'item_data': instance.itemData,
       'item_categories': instance.itemCategories,
-      'user_id': instance.userId,
+      'favorite': instance.favorite,
+      'itemprice_discount': instance.itempriceDiscount,
+      'images': instance.images,
+      'size': instance.size,
     };

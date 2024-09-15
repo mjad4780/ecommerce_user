@@ -1,5 +1,6 @@
-import 'package:ecommerce_user/model/favorite_response/favorite_response.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+
+import '../../../../model/response_home/item1view.dart';
 
 part 'favorite_state.freezed.dart';
 
@@ -14,7 +15,7 @@ class FavoriteState with _$FavoriteState {
 
   ///:GetFavorite
   const factory FavoriteState.loadingGet() = LoadingGet;
-  const factory FavoriteState.successGet(FavoriteResponse favoriteResponse) =
+  const factory FavoriteState.successGet(Item1view favoriteResponse) =
       SuccessGet;
   const factory FavoriteState.erorrGet({required String erorr}) = ErorrGet;
 

@@ -5,12 +5,6 @@ part 'datum.g.dart';
 
 @JsonSerializable()
 class Datum {
-  @JsonKey(name: 'favorite_id')
-  int? favoriteId;
-  @JsonKey(name: 'favorite_userid')
-  int? favoriteUserid;
-  @JsonKey(name: 'favorite_itemsid')
-  int? favoriteItemsid;
   @JsonKey(name: 'item_id')
   int? itemId;
   @JsonKey(name: 'item_name')
@@ -35,13 +29,13 @@ class Datum {
   String? itemData;
   @JsonKey(name: 'item_categories')
   int? itemCategories;
-  @JsonKey(name: 'user_id')
-  int? userId;
+  int? favorite;
+  @JsonKey(name: 'itemprice_discount')
+  int? itempriceDiscount;
+  List<dynamic>? images;
+  List<dynamic>? size;
 
   Datum({
-    this.favoriteId,
-    this.favoriteUserid,
-    this.favoriteItemsid,
     this.itemId,
     this.itemName,
     this.itemNameAr,
@@ -54,7 +48,10 @@ class Datum {
     this.itemDiscount,
     this.itemData,
     this.itemCategories,
-    this.userId,
+    this.favorite,
+    this.itempriceDiscount,
+    this.images,
+    this.size,
   });
 
   factory Datum.fromJson(Map<String, dynamic> json) => _$DatumFromJson(json);
@@ -71,9 +68,6 @@ class Datum {
 
   @override
   int get hashCode =>
-      favoriteId.hashCode ^
-      favoriteUserid.hashCode ^
-      favoriteItemsid.hashCode ^
       itemId.hashCode ^
       itemName.hashCode ^
       itemNameAr.hashCode ^
@@ -86,5 +80,8 @@ class Datum {
       itemDiscount.hashCode ^
       itemData.hashCode ^
       itemCategories.hashCode ^
-      userId.hashCode;
+      favorite.hashCode ^
+      itempriceDiscount.hashCode ^
+      images.hashCode ^
+      size.hashCode;
 }

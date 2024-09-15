@@ -1,21 +1,17 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'favorite_response.dart';
+part of 'item1view.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-FavoriteResponse _$FavoriteResponseFromJson(Map<String, dynamic> json) =>
-    FavoriteResponse(
-      status: json['status'] as String?,
+Item1view _$Item1viewFromJson(Map<String, dynamic> json) => Item1view(
       data: (json['data'] as List<dynamic>?)
           ?.map((e) => Datum.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$FavoriteResponseToJson(FavoriteResponse instance) =>
-    <String, dynamic>{
-      'status': instance.status,
+Map<String, dynamic> _$Item1viewToJson(Item1view instance) => <String, dynamic>{
       'data': instance.data,
     };

@@ -22,6 +22,7 @@ mixin _$ItemCategoriesState {
     required TResult Function() loading,
     required TResult Function(Item1view responseItems) success,
     required TResult Function(String erorr) erorr,
+    required TResult Function(Category categories) selectCategories,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$ItemCategoriesState {
     TResult? Function()? loading,
     TResult? Function(Item1view responseItems)? success,
     TResult? Function(String erorr)? erorr,
+    TResult? Function(Category categories)? selectCategories,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,7 @@ mixin _$ItemCategoriesState {
     TResult Function()? loading,
     TResult Function(Item1view responseItems)? success,
     TResult Function(String erorr)? erorr,
+    TResult Function(Category categories)? selectCategories,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +50,7 @@ mixin _$ItemCategoriesState {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Erorr value) erorr,
+    required TResult Function(selectCategories value) selectCategories,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +59,7 @@ mixin _$ItemCategoriesState {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Erorr value)? erorr,
+    TResult? Function(selectCategories value)? selectCategories,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +68,7 @@ mixin _$ItemCategoriesState {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Erorr value)? erorr,
+    TResult Function(selectCategories value)? selectCategories,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -128,6 +134,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() loading,
     required TResult Function(Item1view responseItems) success,
     required TResult Function(String erorr) erorr,
+    required TResult Function(Category categories) selectCategories,
   }) {
     return initial();
   }
@@ -139,6 +146,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loading,
     TResult? Function(Item1view responseItems)? success,
     TResult? Function(String erorr)? erorr,
+    TResult? Function(Category categories)? selectCategories,
   }) {
     return initial?.call();
   }
@@ -150,6 +158,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loading,
     TResult Function(Item1view responseItems)? success,
     TResult Function(String erorr)? erorr,
+    TResult Function(Category categories)? selectCategories,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -165,6 +174,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Erorr value) erorr,
+    required TResult Function(selectCategories value) selectCategories,
   }) {
     return initial(this);
   }
@@ -176,6 +186,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Erorr value)? erorr,
+    TResult? Function(selectCategories value)? selectCategories,
   }) {
     return initial?.call(this);
   }
@@ -187,6 +198,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Erorr value)? erorr,
+    TResult Function(selectCategories value)? selectCategories,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -242,6 +254,7 @@ class _$LoadingImpl implements Loading {
     required TResult Function() loading,
     required TResult Function(Item1view responseItems) success,
     required TResult Function(String erorr) erorr,
+    required TResult Function(Category categories) selectCategories,
   }) {
     return loading();
   }
@@ -253,6 +266,7 @@ class _$LoadingImpl implements Loading {
     TResult? Function()? loading,
     TResult? Function(Item1view responseItems)? success,
     TResult? Function(String erorr)? erorr,
+    TResult? Function(Category categories)? selectCategories,
   }) {
     return loading?.call();
   }
@@ -264,6 +278,7 @@ class _$LoadingImpl implements Loading {
     TResult Function()? loading,
     TResult Function(Item1view responseItems)? success,
     TResult Function(String erorr)? erorr,
+    TResult Function(Category categories)? selectCategories,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -279,6 +294,7 @@ class _$LoadingImpl implements Loading {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Erorr value) erorr,
+    required TResult Function(selectCategories value) selectCategories,
   }) {
     return loading(this);
   }
@@ -290,6 +306,7 @@ class _$LoadingImpl implements Loading {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Erorr value)? erorr,
+    TResult? Function(selectCategories value)? selectCategories,
   }) {
     return loading?.call(this);
   }
@@ -301,6 +318,7 @@ class _$LoadingImpl implements Loading {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Erorr value)? erorr,
+    TResult Function(selectCategories value)? selectCategories,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -383,6 +401,7 @@ class _$SuccessImpl implements Success {
     required TResult Function() loading,
     required TResult Function(Item1view responseItems) success,
     required TResult Function(String erorr) erorr,
+    required TResult Function(Category categories) selectCategories,
   }) {
     return success(responseItems);
   }
@@ -394,6 +413,7 @@ class _$SuccessImpl implements Success {
     TResult? Function()? loading,
     TResult? Function(Item1view responseItems)? success,
     TResult? Function(String erorr)? erorr,
+    TResult? Function(Category categories)? selectCategories,
   }) {
     return success?.call(responseItems);
   }
@@ -405,6 +425,7 @@ class _$SuccessImpl implements Success {
     TResult Function()? loading,
     TResult Function(Item1view responseItems)? success,
     TResult Function(String erorr)? erorr,
+    TResult Function(Category categories)? selectCategories,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -420,6 +441,7 @@ class _$SuccessImpl implements Success {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Erorr value) erorr,
+    required TResult Function(selectCategories value) selectCategories,
   }) {
     return success(this);
   }
@@ -431,6 +453,7 @@ class _$SuccessImpl implements Success {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Erorr value)? erorr,
+    TResult? Function(selectCategories value)? selectCategories,
   }) {
     return success?.call(this);
   }
@@ -442,6 +465,7 @@ class _$SuccessImpl implements Success {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Erorr value)? erorr,
+    TResult Function(selectCategories value)? selectCategories,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -529,6 +553,7 @@ class _$ErorrImpl implements Erorr {
     required TResult Function() loading,
     required TResult Function(Item1view responseItems) success,
     required TResult Function(String erorr) erorr,
+    required TResult Function(Category categories) selectCategories,
   }) {
     return erorr(this.erorr);
   }
@@ -540,6 +565,7 @@ class _$ErorrImpl implements Erorr {
     TResult? Function()? loading,
     TResult? Function(Item1view responseItems)? success,
     TResult? Function(String erorr)? erorr,
+    TResult? Function(Category categories)? selectCategories,
   }) {
     return erorr?.call(this.erorr);
   }
@@ -551,6 +577,7 @@ class _$ErorrImpl implements Erorr {
     TResult Function()? loading,
     TResult Function(Item1view responseItems)? success,
     TResult Function(String erorr)? erorr,
+    TResult Function(Category categories)? selectCategories,
     required TResult orElse(),
   }) {
     if (erorr != null) {
@@ -566,6 +593,7 @@ class _$ErorrImpl implements Erorr {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Erorr value) erorr,
+    required TResult Function(selectCategories value) selectCategories,
   }) {
     return erorr(this);
   }
@@ -577,6 +605,7 @@ class _$ErorrImpl implements Erorr {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Erorr value)? erorr,
+    TResult? Function(selectCategories value)? selectCategories,
   }) {
     return erorr?.call(this);
   }
@@ -588,6 +617,7 @@ class _$ErorrImpl implements Erorr {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Erorr value)? erorr,
+    TResult Function(selectCategories value)? selectCategories,
     required TResult orElse(),
   }) {
     if (erorr != null) {
@@ -603,5 +633,159 @@ abstract class Erorr implements ItemCategoriesState {
   String get erorr;
   @JsonKey(ignore: true)
   _$$ErorrImplCopyWith<_$ErorrImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$selectCategoriesImplCopyWith<$Res> {
+  factory _$$selectCategoriesImplCopyWith(_$selectCategoriesImpl value,
+          $Res Function(_$selectCategoriesImpl) then) =
+      __$$selectCategoriesImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Category categories});
+}
+
+/// @nodoc
+class __$$selectCategoriesImplCopyWithImpl<$Res>
+    extends _$ItemCategoriesStateCopyWithImpl<$Res, _$selectCategoriesImpl>
+    implements _$$selectCategoriesImplCopyWith<$Res> {
+  __$$selectCategoriesImplCopyWithImpl(_$selectCategoriesImpl _value,
+      $Res Function(_$selectCategoriesImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? categories = null,
+  }) {
+    return _then(_$selectCategoriesImpl(
+      categories: null == categories
+          ? _value.categories
+          : categories // ignore: cast_nullable_to_non_nullable
+              as Category,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$selectCategoriesImpl implements selectCategories {
+  const _$selectCategoriesImpl({required this.categories});
+
+  @override
+  final Category categories;
+
+  @override
+  String toString() {
+    return 'ItemCategoriesState.selectCategories(categories: $categories)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$selectCategoriesImpl &&
+            (identical(other.categories, categories) ||
+                other.categories == categories));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, categories);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$selectCategoriesImplCopyWith<_$selectCategoriesImpl> get copyWith =>
+      __$$selectCategoriesImplCopyWithImpl<_$selectCategoriesImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(Item1view responseItems) success,
+    required TResult Function(String erorr) erorr,
+    required TResult Function(Category categories) selectCategories,
+  }) {
+    return selectCategories(categories);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(Item1view responseItems)? success,
+    TResult? Function(String erorr)? erorr,
+    TResult? Function(Category categories)? selectCategories,
+  }) {
+    return selectCategories?.call(categories);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(Item1view responseItems)? success,
+    TResult Function(String erorr)? erorr,
+    TResult Function(Category categories)? selectCategories,
+    required TResult orElse(),
+  }) {
+    if (selectCategories != null) {
+      return selectCategories(categories);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Erorr value) erorr,
+    required TResult Function(selectCategories value) selectCategories,
+  }) {
+    return selectCategories(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Erorr value)? erorr,
+    TResult? Function(selectCategories value)? selectCategories,
+  }) {
+    return selectCategories?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Erorr value)? erorr,
+    TResult Function(selectCategories value)? selectCategories,
+    required TResult orElse(),
+  }) {
+    if (selectCategories != null) {
+      return selectCategories(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class selectCategories implements ItemCategoriesState {
+  const factory selectCategories({required final Category categories}) =
+      _$selectCategoriesImpl;
+
+  Category get categories;
+  @JsonKey(ignore: true)
+  _$$selectCategoriesImplCopyWith<_$selectCategoriesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

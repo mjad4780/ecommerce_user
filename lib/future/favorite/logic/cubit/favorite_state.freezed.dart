@@ -23,7 +23,7 @@ mixin _$FavoriteState {
     required TResult Function() successAdd,
     required TResult Function(String erorr) erorrAdd,
     required TResult Function() loadingGet,
-    required TResult Function(FavoriteResponse favoriteResponse) successGet,
+    required TResult Function(Item1view favoriteResponse) successGet,
     required TResult Function(String erorr) erorrGet,
     required TResult Function() loadingDelete,
     required TResult Function() successDelete,
@@ -37,7 +37,7 @@ mixin _$FavoriteState {
     TResult? Function()? successAdd,
     TResult? Function(String erorr)? erorrAdd,
     TResult? Function()? loadingGet,
-    TResult? Function(FavoriteResponse favoriteResponse)? successGet,
+    TResult? Function(Item1view favoriteResponse)? successGet,
     TResult? Function(String erorr)? erorrGet,
     TResult? Function()? loadingDelete,
     TResult? Function()? successDelete,
@@ -51,7 +51,7 @@ mixin _$FavoriteState {
     TResult Function()? successAdd,
     TResult Function(String erorr)? erorrAdd,
     TResult Function()? loadingGet,
-    TResult Function(FavoriteResponse favoriteResponse)? successGet,
+    TResult Function(Item1view favoriteResponse)? successGet,
     TResult Function(String erorr)? erorrGet,
     TResult Function()? loadingDelete,
     TResult Function()? successDelete,
@@ -165,7 +165,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() successAdd,
     required TResult Function(String erorr) erorrAdd,
     required TResult Function() loadingGet,
-    required TResult Function(FavoriteResponse favoriteResponse) successGet,
+    required TResult Function(Item1view favoriteResponse) successGet,
     required TResult Function(String erorr) erorrGet,
     required TResult Function() loadingDelete,
     required TResult Function() successDelete,
@@ -182,7 +182,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? successAdd,
     TResult? Function(String erorr)? erorrAdd,
     TResult? Function()? loadingGet,
-    TResult? Function(FavoriteResponse favoriteResponse)? successGet,
+    TResult? Function(Item1view favoriteResponse)? successGet,
     TResult? Function(String erorr)? erorrGet,
     TResult? Function()? loadingDelete,
     TResult? Function()? successDelete,
@@ -199,7 +199,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? successAdd,
     TResult Function(String erorr)? erorrAdd,
     TResult Function()? loadingGet,
-    TResult Function(FavoriteResponse favoriteResponse)? successGet,
+    TResult Function(Item1view favoriteResponse)? successGet,
     TResult Function(String erorr)? erorrGet,
     TResult Function()? loadingDelete,
     TResult Function()? successDelete,
@@ -315,7 +315,7 @@ class _$LoadingAddImpl implements LoadingAdd {
     required TResult Function() successAdd,
     required TResult Function(String erorr) erorrAdd,
     required TResult Function() loadingGet,
-    required TResult Function(FavoriteResponse favoriteResponse) successGet,
+    required TResult Function(Item1view favoriteResponse) successGet,
     required TResult Function(String erorr) erorrGet,
     required TResult Function() loadingDelete,
     required TResult Function() successDelete,
@@ -332,7 +332,7 @@ class _$LoadingAddImpl implements LoadingAdd {
     TResult? Function()? successAdd,
     TResult? Function(String erorr)? erorrAdd,
     TResult? Function()? loadingGet,
-    TResult? Function(FavoriteResponse favoriteResponse)? successGet,
+    TResult? Function(Item1view favoriteResponse)? successGet,
     TResult? Function(String erorr)? erorrGet,
     TResult? Function()? loadingDelete,
     TResult? Function()? successDelete,
@@ -349,7 +349,7 @@ class _$LoadingAddImpl implements LoadingAdd {
     TResult Function()? successAdd,
     TResult Function(String erorr)? erorrAdd,
     TResult Function()? loadingGet,
-    TResult Function(FavoriteResponse favoriteResponse)? successGet,
+    TResult Function(Item1view favoriteResponse)? successGet,
     TResult Function(String erorr)? erorrGet,
     TResult Function()? loadingDelete,
     TResult Function()? successDelete,
@@ -465,7 +465,7 @@ class _$SuccessAddImpl implements SuccessAdd {
     required TResult Function() successAdd,
     required TResult Function(String erorr) erorrAdd,
     required TResult Function() loadingGet,
-    required TResult Function(FavoriteResponse favoriteResponse) successGet,
+    required TResult Function(Item1view favoriteResponse) successGet,
     required TResult Function(String erorr) erorrGet,
     required TResult Function() loadingDelete,
     required TResult Function() successDelete,
@@ -482,7 +482,7 @@ class _$SuccessAddImpl implements SuccessAdd {
     TResult? Function()? successAdd,
     TResult? Function(String erorr)? erorrAdd,
     TResult? Function()? loadingGet,
-    TResult? Function(FavoriteResponse favoriteResponse)? successGet,
+    TResult? Function(Item1view favoriteResponse)? successGet,
     TResult? Function(String erorr)? erorrGet,
     TResult? Function()? loadingDelete,
     TResult? Function()? successDelete,
@@ -499,7 +499,7 @@ class _$SuccessAddImpl implements SuccessAdd {
     TResult Function()? successAdd,
     TResult Function(String erorr)? erorrAdd,
     TResult Function()? loadingGet,
-    TResult Function(FavoriteResponse favoriteResponse)? successGet,
+    TResult Function(Item1view favoriteResponse)? successGet,
     TResult Function(String erorr)? erorrGet,
     TResult Function()? loadingDelete,
     TResult Function()? successDelete,
@@ -641,7 +641,7 @@ class _$ErorrAddImpl implements ErorrAdd {
     required TResult Function() successAdd,
     required TResult Function(String erorr) erorrAdd,
     required TResult Function() loadingGet,
-    required TResult Function(FavoriteResponse favoriteResponse) successGet,
+    required TResult Function(Item1view favoriteResponse) successGet,
     required TResult Function(String erorr) erorrGet,
     required TResult Function() loadingDelete,
     required TResult Function() successDelete,
@@ -658,7 +658,7 @@ class _$ErorrAddImpl implements ErorrAdd {
     TResult? Function()? successAdd,
     TResult? Function(String erorr)? erorrAdd,
     TResult? Function()? loadingGet,
-    TResult? Function(FavoriteResponse favoriteResponse)? successGet,
+    TResult? Function(Item1view favoriteResponse)? successGet,
     TResult? Function(String erorr)? erorrGet,
     TResult? Function()? loadingDelete,
     TResult? Function()? successDelete,
@@ -675,7 +675,7 @@ class _$ErorrAddImpl implements ErorrAdd {
     TResult Function()? successAdd,
     TResult Function(String erorr)? erorrAdd,
     TResult Function()? loadingGet,
-    TResult Function(FavoriteResponse favoriteResponse)? successGet,
+    TResult Function(Item1view favoriteResponse)? successGet,
     TResult Function(String erorr)? erorrGet,
     TResult Function()? loadingDelete,
     TResult Function()? successDelete,
@@ -796,7 +796,7 @@ class _$LoadingGetImpl implements LoadingGet {
     required TResult Function() successAdd,
     required TResult Function(String erorr) erorrAdd,
     required TResult Function() loadingGet,
-    required TResult Function(FavoriteResponse favoriteResponse) successGet,
+    required TResult Function(Item1view favoriteResponse) successGet,
     required TResult Function(String erorr) erorrGet,
     required TResult Function() loadingDelete,
     required TResult Function() successDelete,
@@ -813,7 +813,7 @@ class _$LoadingGetImpl implements LoadingGet {
     TResult? Function()? successAdd,
     TResult? Function(String erorr)? erorrAdd,
     TResult? Function()? loadingGet,
-    TResult? Function(FavoriteResponse favoriteResponse)? successGet,
+    TResult? Function(Item1view favoriteResponse)? successGet,
     TResult? Function(String erorr)? erorrGet,
     TResult? Function()? loadingDelete,
     TResult? Function()? successDelete,
@@ -830,7 +830,7 @@ class _$LoadingGetImpl implements LoadingGet {
     TResult Function()? successAdd,
     TResult Function(String erorr)? erorrAdd,
     TResult Function()? loadingGet,
-    TResult Function(FavoriteResponse favoriteResponse)? successGet,
+    TResult Function(Item1view favoriteResponse)? successGet,
     TResult Function(String erorr)? erorrGet,
     TResult Function()? loadingDelete,
     TResult Function()? successDelete,
@@ -909,7 +909,7 @@ abstract class _$$SuccessGetImplCopyWith<$Res> {
           _$SuccessGetImpl value, $Res Function(_$SuccessGetImpl) then) =
       __$$SuccessGetImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({FavoriteResponse favoriteResponse});
+  $Res call({Item1view favoriteResponse});
 }
 
 /// @nodoc
@@ -929,7 +929,7 @@ class __$$SuccessGetImplCopyWithImpl<$Res>
       null == favoriteResponse
           ? _value.favoriteResponse
           : favoriteResponse // ignore: cast_nullable_to_non_nullable
-              as FavoriteResponse,
+              as Item1view,
     ));
   }
 }
@@ -940,7 +940,7 @@ class _$SuccessGetImpl implements SuccessGet {
   const _$SuccessGetImpl(this.favoriteResponse);
 
   @override
-  final FavoriteResponse favoriteResponse;
+  final Item1view favoriteResponse;
 
   @override
   String toString() {
@@ -973,7 +973,7 @@ class _$SuccessGetImpl implements SuccessGet {
     required TResult Function() successAdd,
     required TResult Function(String erorr) erorrAdd,
     required TResult Function() loadingGet,
-    required TResult Function(FavoriteResponse favoriteResponse) successGet,
+    required TResult Function(Item1view favoriteResponse) successGet,
     required TResult Function(String erorr) erorrGet,
     required TResult Function() loadingDelete,
     required TResult Function() successDelete,
@@ -990,7 +990,7 @@ class _$SuccessGetImpl implements SuccessGet {
     TResult? Function()? successAdd,
     TResult? Function(String erorr)? erorrAdd,
     TResult? Function()? loadingGet,
-    TResult? Function(FavoriteResponse favoriteResponse)? successGet,
+    TResult? Function(Item1view favoriteResponse)? successGet,
     TResult? Function(String erorr)? erorrGet,
     TResult? Function()? loadingDelete,
     TResult? Function()? successDelete,
@@ -1007,7 +1007,7 @@ class _$SuccessGetImpl implements SuccessGet {
     TResult Function()? successAdd,
     TResult Function(String erorr)? erorrAdd,
     TResult Function()? loadingGet,
-    TResult Function(FavoriteResponse favoriteResponse)? successGet,
+    TResult Function(Item1view favoriteResponse)? successGet,
     TResult Function(String erorr)? erorrGet,
     TResult Function()? loadingDelete,
     TResult Function()? successDelete,
@@ -1077,10 +1077,9 @@ class _$SuccessGetImpl implements SuccessGet {
 }
 
 abstract class SuccessGet implements FavoriteState {
-  const factory SuccessGet(final FavoriteResponse favoriteResponse) =
-      _$SuccessGetImpl;
+  const factory SuccessGet(final Item1view favoriteResponse) = _$SuccessGetImpl;
 
-  FavoriteResponse get favoriteResponse;
+  Item1view get favoriteResponse;
   @JsonKey(ignore: true)
   _$$SuccessGetImplCopyWith<_$SuccessGetImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1155,7 +1154,7 @@ class _$ErorrGetImpl implements ErorrGet {
     required TResult Function() successAdd,
     required TResult Function(String erorr) erorrAdd,
     required TResult Function() loadingGet,
-    required TResult Function(FavoriteResponse favoriteResponse) successGet,
+    required TResult Function(Item1view favoriteResponse) successGet,
     required TResult Function(String erorr) erorrGet,
     required TResult Function() loadingDelete,
     required TResult Function() successDelete,
@@ -1172,7 +1171,7 @@ class _$ErorrGetImpl implements ErorrGet {
     TResult? Function()? successAdd,
     TResult? Function(String erorr)? erorrAdd,
     TResult? Function()? loadingGet,
-    TResult? Function(FavoriteResponse favoriteResponse)? successGet,
+    TResult? Function(Item1view favoriteResponse)? successGet,
     TResult? Function(String erorr)? erorrGet,
     TResult? Function()? loadingDelete,
     TResult? Function()? successDelete,
@@ -1189,7 +1188,7 @@ class _$ErorrGetImpl implements ErorrGet {
     TResult Function()? successAdd,
     TResult Function(String erorr)? erorrAdd,
     TResult Function()? loadingGet,
-    TResult Function(FavoriteResponse favoriteResponse)? successGet,
+    TResult Function(Item1view favoriteResponse)? successGet,
     TResult Function(String erorr)? erorrGet,
     TResult Function()? loadingDelete,
     TResult Function()? successDelete,
@@ -1310,7 +1309,7 @@ class _$LoadingDeleteImpl implements LoadingDelete {
     required TResult Function() successAdd,
     required TResult Function(String erorr) erorrAdd,
     required TResult Function() loadingGet,
-    required TResult Function(FavoriteResponse favoriteResponse) successGet,
+    required TResult Function(Item1view favoriteResponse) successGet,
     required TResult Function(String erorr) erorrGet,
     required TResult Function() loadingDelete,
     required TResult Function() successDelete,
@@ -1327,7 +1326,7 @@ class _$LoadingDeleteImpl implements LoadingDelete {
     TResult? Function()? successAdd,
     TResult? Function(String erorr)? erorrAdd,
     TResult? Function()? loadingGet,
-    TResult? Function(FavoriteResponse favoriteResponse)? successGet,
+    TResult? Function(Item1view favoriteResponse)? successGet,
     TResult? Function(String erorr)? erorrGet,
     TResult? Function()? loadingDelete,
     TResult? Function()? successDelete,
@@ -1344,7 +1343,7 @@ class _$LoadingDeleteImpl implements LoadingDelete {
     TResult Function()? successAdd,
     TResult Function(String erorr)? erorrAdd,
     TResult Function()? loadingGet,
-    TResult Function(FavoriteResponse favoriteResponse)? successGet,
+    TResult Function(Item1view favoriteResponse)? successGet,
     TResult Function(String erorr)? erorrGet,
     TResult Function()? loadingDelete,
     TResult Function()? successDelete,
@@ -1460,7 +1459,7 @@ class _$SuccessDeleteImpl implements SuccessDelete {
     required TResult Function() successAdd,
     required TResult Function(String erorr) erorrAdd,
     required TResult Function() loadingGet,
-    required TResult Function(FavoriteResponse favoriteResponse) successGet,
+    required TResult Function(Item1view favoriteResponse) successGet,
     required TResult Function(String erorr) erorrGet,
     required TResult Function() loadingDelete,
     required TResult Function() successDelete,
@@ -1477,7 +1476,7 @@ class _$SuccessDeleteImpl implements SuccessDelete {
     TResult? Function()? successAdd,
     TResult? Function(String erorr)? erorrAdd,
     TResult? Function()? loadingGet,
-    TResult? Function(FavoriteResponse favoriteResponse)? successGet,
+    TResult? Function(Item1view favoriteResponse)? successGet,
     TResult? Function(String erorr)? erorrGet,
     TResult? Function()? loadingDelete,
     TResult? Function()? successDelete,
@@ -1494,7 +1493,7 @@ class _$SuccessDeleteImpl implements SuccessDelete {
     TResult Function()? successAdd,
     TResult Function(String erorr)? erorrAdd,
     TResult Function()? loadingGet,
-    TResult Function(FavoriteResponse favoriteResponse)? successGet,
+    TResult Function(Item1view favoriteResponse)? successGet,
     TResult Function(String erorr)? erorrGet,
     TResult Function()? loadingDelete,
     TResult Function()? successDelete,
@@ -1636,7 +1635,7 @@ class _$ErorrDeleteImpl implements ErorrDelete {
     required TResult Function() successAdd,
     required TResult Function(String erorr) erorrAdd,
     required TResult Function() loadingGet,
-    required TResult Function(FavoriteResponse favoriteResponse) successGet,
+    required TResult Function(Item1view favoriteResponse) successGet,
     required TResult Function(String erorr) erorrGet,
     required TResult Function() loadingDelete,
     required TResult Function() successDelete,
@@ -1653,7 +1652,7 @@ class _$ErorrDeleteImpl implements ErorrDelete {
     TResult? Function()? successAdd,
     TResult? Function(String erorr)? erorrAdd,
     TResult? Function()? loadingGet,
-    TResult? Function(FavoriteResponse favoriteResponse)? successGet,
+    TResult? Function(Item1view favoriteResponse)? successGet,
     TResult? Function(String erorr)? erorrGet,
     TResult? Function()? loadingDelete,
     TResult? Function()? successDelete,
@@ -1670,7 +1669,7 @@ class _$ErorrDeleteImpl implements ErorrDelete {
     TResult Function()? successAdd,
     TResult Function(String erorr)? erorrAdd,
     TResult Function()? loadingGet,
-    TResult Function(FavoriteResponse favoriteResponse)? successGet,
+    TResult Function(Item1view favoriteResponse)? successGet,
     TResult Function(String erorr)? erorrGet,
     TResult Function()? loadingDelete,
     TResult Function()? successDelete,

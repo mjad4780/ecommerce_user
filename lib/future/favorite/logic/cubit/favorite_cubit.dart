@@ -1,7 +1,4 @@
-import 'dart:developer';
-
-import 'package:bloc/bloc.dart';
-
+import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../data/repo.dart';
 import 'favorite_state.dart';
 
@@ -9,6 +6,7 @@ class FavoriteCubit extends Cubit<FavoriteState> {
   FavoriteCubit(this._favoriteRepo) : super(const FavoriteState.initial());
   final FavoriteRepo _favoriteRepo;
   List itemid = [];
+
 //:AddFavorite
   emitAddFavorite(int id) async {
     emit(const FavoriteState.loadingAdd());
@@ -25,11 +23,7 @@ class FavoriteCubit extends Cubit<FavoriteState> {
     emit(const FavoriteState.loadingGet());
     final response = await _favoriteRepo.getFavorite();
     response.when(success: (responsehome) {
-      for (var item in responsehome.data ?? []) {
-        itemid.add(item.favoriteItemsid);
-      }
-      log(itemid.toString());
-      emit(FavoriteState.successGet(responsehome));
+      emit(FavoriteState.successGet(responsehome.item1view!));
     }, failure: (error) {
       emit(FavoriteState.erorrGet(erorr: error.apiErrorModel.messege ?? ''));
     });
@@ -38,21 +32,11 @@ class FavoriteCubit extends Cubit<FavoriteState> {
   emitdeleteFavorite(int id) async {
     emit(const FavoriteState.loadingDelete());
     final response = await _favoriteRepo.deleteFavorite(id);
-    response.when(success: (responsehome) {
+
+    response.when(success: (responsehome) async {
       emit(const FavoriteState.successDelete());
     }, failure: (error) {
       emit(FavoriteState.erorrDelete(erorr: error.apiErrorModel.messege ?? ''));
     });
-  }
-
-  favorite(int itemsId) {
-    if (itemid.contains(itemsId)) {
-      emitdeleteFavorite(itemsId);
-      itemid.removeWhere((element) => element == itemsId);
-      log('vcjfgjtfy');
-    } else {
-      log('message');
-      emitAddFavorite(itemsId);
-    }
   }
 }

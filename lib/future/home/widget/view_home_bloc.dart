@@ -51,7 +51,7 @@ class SuccessHome extends StatelessWidget {
     return Column(
       children: [
         PosterSection(
-          posters: products.setting!,
+          posters: products.setting ?? [],
         ),
         Text(
           "Top categories",

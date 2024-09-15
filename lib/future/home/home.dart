@@ -1,4 +1,3 @@
-import 'package:ecommerce_user/future/home/logic/cubit/home_cubit.dart';
 import 'package:flutter/material.dart';
 
 import 'widget/custom_app_bar.dart';
@@ -14,11 +13,9 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   @override
-  void initState() {
-    // TODO: implement initState
-    // super.initState();
-    // context.read<HomeCubit>().emitHome();
-  }
+  // TODO: implement initState
+  // super.initState();
+  // context.read<HomeCubit>().emitHome();
 
   @override
   Widget build(BuildContext context) {

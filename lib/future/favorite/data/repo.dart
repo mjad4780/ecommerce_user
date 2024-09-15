@@ -5,7 +5,7 @@ import '../../../../core/function/formDataPost.dart';
 import '../../../../core/networking/api_error_handler.dart';
 import '../../../../core/networking/api_result.dart';
 import '../../../../core/networking/api_service.dart';
-import '../../../model/favorite_response/favorite_response.dart';
+import '../../../model/response_home/response_home.dart';
 import '../../../model/response_status/response_status.dart';
 
 class FavoriteRepo {
@@ -15,7 +15,7 @@ class FavoriteRepo {
 
   /// :GetFavorite
 
-  Future<ApiResult<FavoriteResponse>> getFavorite() async {
+  Future<ApiResult<ResponseHome>> getFavorite() async {
     try {
       Map<String, dynamic> map = {
         "userid": getIt<CacheHelper>().getData(key: 'id')

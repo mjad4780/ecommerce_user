@@ -38,10 +38,13 @@ class Datum {
   String? categoriesName;
   @JsonKey(name: 'itemprice_discount')
   double? itempriceDiscount;
+  @JsonKey(name: 'Notfavorite')
+  int? notfavorite;
   List<String>? images;
   List<Size>? size;
 
   Datum({
+    this.notfavorite,
     this.itemId,
     this.itemName,
     this.itemNameAr,

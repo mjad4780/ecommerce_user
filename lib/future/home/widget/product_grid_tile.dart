@@ -1,5 +1,4 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:ecommerce_user/core/get_it/get_it.dart';
 import 'package:ecommerce_user/core/theming/colors.dart';
 import 'package:ecommerce_user/future/favorite/logic/cubit/favorite_cubit.dart';
 import 'package:ecommerce_user/future/favorite/logic/cubit/favorite_state.dart';
@@ -100,8 +99,9 @@ class ProductGridTile extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                       ),
                     ),
+                  // const RewmoveFavoriteBlocListener()
                 ],
-              )
+              ),
             ],
           ),
         ),
@@ -127,31 +127,32 @@ class IconFavorite extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => getIt<FavoriteCubit>(),
-      child: BlocConsumer<FavoriteCubit, FavoriteState>(
-        listener: (context, state) {},
-        builder: (context, state) {
-          return IconButton(
-            icon: Icon(
-              Icons.favorite,
-              color: product.favorite == 1
-                  ? AppColor.red
-                  : const Color(0xFFA6A3A0),
-            ),
-            onPressed: () {
-              selectFsavorite(context);
-            },
-          );
-        },
-      ),
+    return BlocConsumer<FavoriteCubit, FavoriteState>(
+      buildWhen: (previous, current) =>
+          current is SuccessDelete || current is SuccessAdd,
+      listener: (context, state) {},
+      builder: (context, state) {
+        return IconButton(
+          icon: Icon(
+            Icons.favorite,
+            color:
+                product.favorite == 1 ? AppColor.red : const Color(0xFFA6A3A0),
+          ),
+          onPressed: () {
+            selectFsavorite(context);
+          },
+        );
+      },
     );
   }
 
-  void selectFsavorite(BuildContext context) {
+  void selectFsavorite(BuildContext context) async {
     if (product.favorite == 1) {
-      context.read<FavoriteCubit>().emitdeleteFavorite(product.itemId!);
+      await context.read<FavoriteCubit>().emitdeleteFavorite(product.itemId!);
       product.favorite = 0;
+      if (product.notfavorite == 1) {
+        context.read<FavoriteCubit>().emitgetFavorite();
+      }
     } else {
       context.read<FavoriteCubit>().emitAddFavorite(product.itemId!);
       product.favorite = 1;

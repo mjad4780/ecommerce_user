@@ -8,7 +8,6 @@ import 'package:retrofit/retrofit.dart';
 import '../../model/adress_response/adress_response.dart';
 import '../../model/cart_response/cart_response.dart';
 import '../../model/coupon_response/coupon_response.dart';
-import '../../model/favorite_response/favorite_response.dart';
 import '../../model/get_current_cart/get_current_cart.dart';
 import '../../model/order_response/order_response.dart';
 import '../../model/response_detilas/response_detilas.dart';
@@ -94,7 +93,7 @@ abstract class ApiService {
   Future<ResponseStatus> deletefavorite(@Body() dynamic body);
 
   @POST(ApiConstants.getfavorite)
-  Future<FavoriteResponse> getFavorite(@Body() dynamic body);
+  Future<ResponseHome> getFavorite(@Body() dynamic body);
 
   /// rating
   @POST(ApiConstants.rating)
