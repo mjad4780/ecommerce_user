@@ -71,4 +71,22 @@ class CartCubit extends Cubit<CartState> {
       emit(CartState.erorrCoupon(erorr: error.apiErrorModel.messege ?? ''));
     });
   }
+
+  delete(int id) async {
+    if (countitems > 0) {
+      await emitdeleteCart(id);
+      countitems--;
+      emitGetCart();
+    } else {
+      countitems = 0;
+    }
+  }
+
+  add(int id, BuildContext context) async {
+    await emitAddCart(id, context);
+    countitems++;
+    emitGetCart();
+  }
+
+  int countitems = 0;
 }

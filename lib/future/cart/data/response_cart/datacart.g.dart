@@ -1,12 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'datum.dart';
+part of 'datacart.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-Datum _$DatumFromJson(Map<String, dynamic> json) => Datum(
+Datacart _$DatacartFromJson(Map<String, dynamic> json) => Datacart(
       itemsPrices: (json['items_prices'] as num?)?.toInt(),
       itempriceDiscount: (json['itemprice_discount'] as num?)?.toInt(),
       countitems: (json['countitems'] as num?)?.toInt(),
@@ -14,6 +14,8 @@ Datum _$DatumFromJson(Map<String, dynamic> json) => Datum(
       cartItemid: (json['cart_itemid'] as num?)?.toInt(),
       cartUserid: (json['cart_userid'] as num?)?.toInt(),
       cartOrders: (json['cart_orders'] as num?)?.toInt(),
+      cartSize: json['cart_size'] as String?,
+      cartColor: json['cart_color'] as String?,
       itemId: (json['item_id'] as num?)?.toInt(),
       itemName: json['item_name'] as String?,
       itemNameAr: json['item_name_ar'] as String?,
@@ -26,9 +28,10 @@ Datum _$DatumFromJson(Map<String, dynamic> json) => Datum(
       itemDiscount: (json['item_discount'] as num?)?.toInt(),
       itemData: json['item_data'] as String?,
       itemCategories: (json['item_categories'] as num?)?.toInt(),
+      size: (json['Size'] as num?)?.toInt(),
     );
 
-Map<String, dynamic> _$DatumToJson(Datum instance) => <String, dynamic>{
+Map<String, dynamic> _$DatacartToJson(Datacart instance) => <String, dynamic>{
       'items_prices': instance.itemsPrices,
       'itemprice_discount': instance.itempriceDiscount,
       'countitems': instance.countitems,
@@ -36,6 +39,8 @@ Map<String, dynamic> _$DatumToJson(Datum instance) => <String, dynamic>{
       'cart_itemid': instance.cartItemid,
       'cart_userid': instance.cartUserid,
       'cart_orders': instance.cartOrders,
+      'cart_size': instance.cartSize,
+      'cart_color': instance.cartColor,
       'item_id': instance.itemId,
       'item_name': instance.itemName,
       'item_name_ar': instance.itemNameAr,
@@ -48,4 +53,5 @@ Map<String, dynamic> _$DatumToJson(Datum instance) => <String, dynamic>{
       'item_discount': instance.itemDiscount,
       'item_data': instance.itemData,
       'item_categories': instance.itemCategories,
+      'Size': instance.size,
     };

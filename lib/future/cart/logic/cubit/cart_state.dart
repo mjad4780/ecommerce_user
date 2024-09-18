@@ -1,7 +1,7 @@
-import 'package:ecommerce_user/model/cart_response/cart_response.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../model/get_current_cart/get_current_cart.dart';
+import '../../data/response_cart/response_cart.dart';
 
 part 'cart_state.freezed.dart';
 
@@ -16,7 +16,7 @@ class CartState with _$CartState {
 
   ///:getCart
   const factory CartState.loadingGet() = LoadingGet;
-  const factory CartState.successGet(CartResponse cartResponse) = SuccessGet;
+  const factory CartState.successGet(ResponseCart cartResponse) = SuccessGet;
   const factory CartState.erorrGet({required String erorr}) = ErorrGet;
 
   ///:deleteCart

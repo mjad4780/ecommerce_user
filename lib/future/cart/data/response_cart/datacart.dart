@@ -1,10 +1,10 @@
 import 'package:collection/collection.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-part 'datum.g.dart';
+part 'datacart.g.dart';
 
 @JsonSerializable()
-class Datum {
+class Datacart {
   @JsonKey(name: 'items_prices')
   int? itemsPrices;
   @JsonKey(name: 'itemprice_discount')
@@ -18,6 +18,10 @@ class Datum {
   int? cartUserid;
   @JsonKey(name: 'cart_orders')
   int? cartOrders;
+  @JsonKey(name: 'cart_size')
+  String? cartSize;
+  @JsonKey(name: 'cart_color')
+  String? cartColor;
   @JsonKey(name: 'item_id')
   int? itemId;
   @JsonKey(name: 'item_name')
@@ -42,8 +46,10 @@ class Datum {
   String? itemData;
   @JsonKey(name: 'item_categories')
   int? itemCategories;
+  @JsonKey(name: 'Size')
+  int? size;
 
-  Datum({
+  Datacart({
     this.itemsPrices,
     this.itempriceDiscount,
     this.countitems,
@@ -51,6 +57,8 @@ class Datum {
     this.cartItemid,
     this.cartUserid,
     this.cartOrders,
+    this.cartSize,
+    this.cartColor,
     this.itemId,
     this.itemName,
     this.itemNameAr,
@@ -63,16 +71,19 @@ class Datum {
     this.itemDiscount,
     this.itemData,
     this.itemCategories,
+    this.size,
   });
 
-  factory Datum.fromJson(Map<String, dynamic> json) => _$DatumFromJson(json);
+  factory Datacart.fromJson(Map<String, dynamic> json) {
+    return _$DatacartFromJson(json);
+  }
 
-  Map<String, dynamic> toJson() => _$DatumToJson(this);
+  Map<String, dynamic> toJson() => _$DatacartToJson(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    if (other is! Datum) return false;
+    if (other is! Datacart) return false;
     final mapEquals = const DeepCollectionEquality().equals;
     return mapEquals(other.toJson(), toJson());
   }
@@ -86,6 +97,8 @@ class Datum {
       cartItemid.hashCode ^
       cartUserid.hashCode ^
       cartOrders.hashCode ^
+      cartSize.hashCode ^
+      cartColor.hashCode ^
       itemId.hashCode ^
       itemName.hashCode ^
       itemNameAr.hashCode ^
@@ -97,5 +110,6 @@ class Datum {
       itemPrice.hashCode ^
       itemDiscount.hashCode ^
       itemData.hashCode ^
-      itemCategories.hashCode;
+      itemCategories.hashCode ^
+      size.hashCode;
 }

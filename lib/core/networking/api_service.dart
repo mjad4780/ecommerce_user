@@ -5,8 +5,8 @@ import 'package:ecommerce_user/model/pending_response/pending_response.dart';
 
 import 'package:retrofit/retrofit.dart';
 
+import '../../future/cart/data/response_cart/response_cart.dart';
 import '../../model/adress_response/adress_response.dart';
-import '../../model/cart_response/cart_response.dart';
 import '../../model/coupon_response/coupon_response.dart';
 import '../../model/get_current_cart/get_current_cart.dart';
 import '../../model/order_response/order_response.dart';
@@ -79,7 +79,7 @@ abstract class ApiService {
   @POST(ApiConstants.getCurrentCart)
   Future<GetCurrentCart> getCurrentCart(@Body() dynamic body);
   @POST(ApiConstants.getcart)
-  Future<CartResponse> getCart(@Body() dynamic body);
+  Future<ResponseCart> getCart(@Body() dynamic body);
 
   ///Coupon
   @POST(ApiConstants.checkCoupon)

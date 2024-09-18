@@ -1,6 +1,5 @@
 import 'package:ecommerce_user/core/class/cache_helper.dart';
 import 'package:ecommerce_user/core/get_it/get_it.dart';
-import 'package:ecommerce_user/model/cart_response/cart_response.dart';
 
 import '../../../../core/function/formDataPost.dart';
 import '../../../../core/networking/api_error_handler.dart';
@@ -9,6 +8,7 @@ import '../../../../core/networking/api_service.dart';
 import '../../../model/coupon_response/coupon_response.dart';
 import '../../../model/get_current_cart/get_current_cart.dart';
 import '../../../model/response_status/response_status.dart';
+import 'response_cart/response_cart.dart';
 
 class CartRepo {
   final ApiService _apiService;
@@ -17,7 +17,7 @@ class CartRepo {
 
   /// :Getcart
 
-  Future<ApiResult<CartResponse>> getCart() async {
+  Future<ApiResult<ResponseCart>> getCart() async {
     try {
       Map<String, dynamic> map = {
         "userid": getIt<CacheHelper>().getData(key: 'id')
@@ -37,8 +37,8 @@ class CartRepo {
     Map<String, dynamic> map = {
       "color": color,
       "size": size,
-      "cart_itemid": itemid,
-      "cart_userid": getIt<CacheHelper>().getData(key: 'id'),
+      "itemid": itemid,
+      "userid": getIt<CacheHelper>().getData(key: 'id'),
     };
 
     try {
@@ -53,8 +53,8 @@ class CartRepo {
   Future<ApiResult<ResponseStatus>> deleteCart(int itemid) async {
     try {
       Map<String, dynamic> map = {
-        "cart_itemid": itemid,
-        "cart_userid": getIt<CacheHelper>().getData(key: 'id'),
+        "itemid": itemid,
+        "userid": getIt<CacheHelper>().getData(key: 'id'),
       };
       final response = await _apiService.deleteCart(formDataPost(map));
       return ApiResult.success(response);
