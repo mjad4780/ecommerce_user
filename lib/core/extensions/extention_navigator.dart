@@ -5,7 +5,7 @@ import 'package:go_router/go_router.dart';
 extension Navigation on BuildContext {
   Future<dynamic> pushNamed(Widget routeName, {Object? arguments}) {
     return Navigator.of(this)
-        .pushReplacement(MaterialPageRoute(builder: (_) => routeName));
+        .push(MaterialPageRoute(builder: (_) => routeName));
   }
 
   // Future<dynamic> pushReplacementNamed(String routeName, {Object? arguments}) {

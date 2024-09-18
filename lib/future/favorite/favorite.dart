@@ -1,5 +1,4 @@
 import 'package:ecommerce_user/future/favorite/logic/cubit/favorite_cubit.dart';
-import 'package:ecommerce_user/future/favorite/logic/cubit/favorite_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -23,23 +22,15 @@ class _FavoriteState extends State<Favorite> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<FavoriteCubit, FavoriteState>(
-      buildWhen: (previous, current) =>
-          current is SuccessDelete || current is SuccessAdd,
-      listener: (context, state) {},
-      builder: (context, state) {
-        return SingleChildScrollView(
-          child: Column(
-            children: [
-              AppBar(
-                  title:
-                      Text("Favorites", style: TextStyles.textItemCategories)),
-              const Padding(
-                  padding: EdgeInsets.all(20), child: GetFavoriteBlocBuilder())
-            ],
-          ),
-        );
-      },
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Center(
+              child: Text("Favorites", style: TextStyles.textItemCategories)),
+          const Padding(
+              padding: EdgeInsets.all(20), child: GetFavoriteBlocBuilder())
+        ],
+      ),
     );
   }
 }

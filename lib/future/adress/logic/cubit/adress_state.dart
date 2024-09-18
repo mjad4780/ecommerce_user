@@ -1,3 +1,4 @@
+import 'package:flutter_map/flutter_map.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../model/adress_response/adress_response.dart';
@@ -28,4 +29,16 @@ class AdressState with _$AdressState {
   const factory AdressState.loadingdelete() = Loadingdelete;
   const factory AdressState.successdelete() = Successdelete;
   const factory AdressState.errordelete({required String erorr}) = Errordelete;
+
+  ///
+
+  const factory AdressState.loadingMaps() = LoadingMaps;
+  const factory AdressState.successMaps() = SuccessMaps;
+  const factory AdressState.addMarker({required List<Marker> markers}) =
+      AddMarker;
+
+  const factory AdressState.pushEdit() = pushEdit;
+
+  ///:update latlng
+  const factory AdressState.updateLatlng() = UpdateLatlng;
 }

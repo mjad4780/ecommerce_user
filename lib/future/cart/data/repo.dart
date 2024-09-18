@@ -33,9 +33,10 @@ class CartRepo {
   /// :addCart
 
   Future<ApiResult<ResponseStatus>> addCart(
-    int itemid,
-  ) async {
+      int itemid, String color, String size) async {
     Map<String, dynamic> map = {
+      "color": color,
+      "size": size,
       "cart_itemid": itemid,
       "cart_userid": getIt<CacheHelper>().getData(key: 'id'),
     };

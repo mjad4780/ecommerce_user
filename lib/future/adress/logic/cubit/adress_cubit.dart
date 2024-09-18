@@ -1,6 +1,10 @@
-import 'package:bloc/bloc.dart';
 import 'package:ecommerce_user/future/adress/data/repo.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_map/flutter_map.dart';
+import 'package:geolocator/geolocator.dart';
+import 'package:latlong2/latlong.dart';
+
 import '../../../../model/adress_response/datum.dart';
 import 'adress_state.dart';
 
@@ -9,20 +13,26 @@ class AdressCubit extends Cubit<AdressState> {
   TextEditingController name = TextEditingController();
   TextEditingController city = TextEditingController();
   TextEditingController street = TextEditingController();
-  String lat = '';
-  String long = '';
+
+  GlobalKey<FormState> formkeyadress = GlobalKey<FormState>();
 
   final AdressRepo _adressRepo;
 //:AddAdress
   emitAddAdress() async {
-    emit(const AdressState.loadingAdd());
-    final response = await _adressRepo.addAdress(
-        name.text, city.text, street.text, lat, long);
-    response.when(success: (responsehome) {
-      emit(const AdressState.successAdd());
-    }, failure: (error) {
-      emit(AdressState.errorAdd(erorr: error.apiErrorModel.messege ?? ''));
-    });
+    if (formkeyadress.currentState!.validate()) {
+      emit(const AdressState.loadingAdd());
+      final response = await _adressRepo.addAdress(
+          name.text,
+          city.text,
+          street.text,
+          latLng!.latitude.toString(),
+          latLng!.longitude.toString());
+      response.when(success: (responsehome) {
+        emit(const AdressState.successAdd());
+      }, failure: (error) {
+        emit(AdressState.errorAdd(erorr: error.apiErrorModel.messege ?? ''));
+      });
+    }
   }
 
   ///:getAdress
@@ -39,8 +49,8 @@ class AdressCubit extends Cubit<AdressState> {
   ///:emit editAdress
   emiteditAdress(int id) async {
     emit(const AdressState.loadingedit());
-    final response = await _adressRepo.editAdress(
-        id, name.text, city.text, street.text, lat, long);
+    final response = await _adressRepo.editAdress(id, name.text, city.text,
+        street.text, latLng!.latitude.toString(), latLng!.longitude.toString());
     response.when(success: (loginResponse) {
       emit(const AdressState.successedit());
     }, failure: (error) {
@@ -52,7 +62,7 @@ class AdressCubit extends Cubit<AdressState> {
   emitdeleteAdress(int id) async {
     final response = await _adressRepo.deleteAdress(id);
     response.when(success: (loginResponse) {
-      //    getadrees.removeWhere((element) => element.addressId == id);
+      //  getadrees.removeWhere((element) => element.addressId == id);
 
       emit(const AdressState.successdelete());
     }, failure: (error) {
@@ -64,7 +74,35 @@ class AdressCubit extends Cubit<AdressState> {
     name.text = data.adressName ?? '';
     city.text = data.adressCity ?? '';
     street.text = data.adressStreet ?? '';
-    lat = data.adressLat ?? '';
-    long = data.adressLong ?? '';
+    latLng =
+        LatLng(double.parse(data.adressLat!), double.parse(data.adressLong!));
+    emit(const AdressState.pushEdit());
+  }
+
+  MapController mapController = MapController();
+  List<Marker> markers = [];
+
+  addmarker(LatLng point) {
+    markers.clear();
+    markers.add(Marker(point: point, child: const Icon(Icons.pin_drop)));
+    latLng = point;
+    emit(AdressState.addMarker(markers: markers));
+  }
+
+  getLating() async {
+    emit(const AdressState.loadingMaps());
+    Position position;
+    position = await Geolocator.getCurrentPosition();
+    latLng = LatLng(position.latitude, position.longitude);
+    markers
+        .add(Marker(point: latLng!, child: const Icon(Icons.pin_drop_rounded)));
+    emit(const AdressState.successMaps());
+  }
+
+  LatLng? latLng;
+
+  updateLating(LatLng lating) {
+    latLng = lating;
+    emit(const AdressState.updateLatlng());
   }
 }

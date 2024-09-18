@@ -43,8 +43,7 @@ class ForgetPasswordCubit extends Cubit<ForgetPasswordState> {
 
       final response =
           await forgetPassword.repassword(email.text, password.text);
-      print(
-          ',mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm${email.text}');
+
       response.when(success: (loginResponse) {
         emit(const ForgetPasswordState.successrepassword());
       }, failure: (error) {

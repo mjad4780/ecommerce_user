@@ -31,6 +31,11 @@ mixin _$AdressState {
     required TResult Function() loadingdelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) errordelete,
+    required TResult Function() loadingMaps,
+    required TResult Function() successMaps,
+    required TResult Function(List<Marker> markers) addMarker,
+    required TResult Function() pushEdit,
+    required TResult Function() updateLatlng,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -48,6 +53,11 @@ mixin _$AdressState {
     TResult? Function()? loadingdelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? errordelete,
+    TResult? Function()? loadingMaps,
+    TResult? Function()? successMaps,
+    TResult? Function(List<Marker> markers)? addMarker,
+    TResult? Function()? pushEdit,
+    TResult? Function()? updateLatlng,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -65,6 +75,11 @@ mixin _$AdressState {
     TResult Function()? loadingdelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? errordelete,
+    TResult Function()? loadingMaps,
+    TResult Function()? successMaps,
+    TResult Function(List<Marker> markers)? addMarker,
+    TResult Function()? pushEdit,
+    TResult Function()? updateLatlng,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -83,6 +98,11 @@ mixin _$AdressState {
     required TResult Function(Loadingdelete value) loadingdelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(Errordelete value) errordelete,
+    required TResult Function(LoadingMaps value) loadingMaps,
+    required TResult Function(SuccessMaps value) successMaps,
+    required TResult Function(AddMarker value) addMarker,
+    required TResult Function(pushEdit value) pushEdit,
+    required TResult Function(UpdateLatlng value) updateLatlng,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -100,6 +120,11 @@ mixin _$AdressState {
     TResult? Function(Loadingdelete value)? loadingdelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(Errordelete value)? errordelete,
+    TResult? Function(LoadingMaps value)? loadingMaps,
+    TResult? Function(SuccessMaps value)? successMaps,
+    TResult? Function(AddMarker value)? addMarker,
+    TResult? Function(pushEdit value)? pushEdit,
+    TResult? Function(UpdateLatlng value)? updateLatlng,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -117,6 +142,11 @@ mixin _$AdressState {
     TResult Function(Loadingdelete value)? loadingdelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(Errordelete value)? errordelete,
+    TResult Function(LoadingMaps value)? loadingMaps,
+    TResult Function(SuccessMaps value)? successMaps,
+    TResult Function(AddMarker value)? addMarker,
+    TResult Function(pushEdit value)? pushEdit,
+    TResult Function(UpdateLatlng value)? updateLatlng,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -191,6 +221,11 @@ class _$InitialImpl implements _Initial {
     required TResult Function() loadingdelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) errordelete,
+    required TResult Function() loadingMaps,
+    required TResult Function() successMaps,
+    required TResult Function(List<Marker> markers) addMarker,
+    required TResult Function() pushEdit,
+    required TResult Function() updateLatlng,
   }) {
     return initial();
   }
@@ -211,6 +246,11 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loadingdelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? errordelete,
+    TResult? Function()? loadingMaps,
+    TResult? Function()? successMaps,
+    TResult? Function(List<Marker> markers)? addMarker,
+    TResult? Function()? pushEdit,
+    TResult? Function()? updateLatlng,
   }) {
     return initial?.call();
   }
@@ -231,6 +271,11 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loadingdelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? errordelete,
+    TResult Function()? loadingMaps,
+    TResult Function()? successMaps,
+    TResult Function(List<Marker> markers)? addMarker,
+    TResult Function()? pushEdit,
+    TResult Function()? updateLatlng,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -255,6 +300,11 @@ class _$InitialImpl implements _Initial {
     required TResult Function(Loadingdelete value) loadingdelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(Errordelete value) errordelete,
+    required TResult Function(LoadingMaps value) loadingMaps,
+    required TResult Function(SuccessMaps value) successMaps,
+    required TResult Function(AddMarker value) addMarker,
+    required TResult Function(pushEdit value) pushEdit,
+    required TResult Function(UpdateLatlng value) updateLatlng,
   }) {
     return initial(this);
   }
@@ -275,6 +325,11 @@ class _$InitialImpl implements _Initial {
     TResult? Function(Loadingdelete value)? loadingdelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(Errordelete value)? errordelete,
+    TResult? Function(LoadingMaps value)? loadingMaps,
+    TResult? Function(SuccessMaps value)? successMaps,
+    TResult? Function(AddMarker value)? addMarker,
+    TResult? Function(pushEdit value)? pushEdit,
+    TResult? Function(UpdateLatlng value)? updateLatlng,
   }) {
     return initial?.call(this);
   }
@@ -295,6 +350,11 @@ class _$InitialImpl implements _Initial {
     TResult Function(Loadingdelete value)? loadingdelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(Errordelete value)? errordelete,
+    TResult Function(LoadingMaps value)? loadingMaps,
+    TResult Function(SuccessMaps value)? successMaps,
+    TResult Function(AddMarker value)? addMarker,
+    TResult Function(pushEdit value)? pushEdit,
+    TResult Function(UpdateLatlng value)? updateLatlng,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -359,6 +419,11 @@ class _$LoadingAddImpl implements LoadingAdd {
     required TResult Function() loadingdelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) errordelete,
+    required TResult Function() loadingMaps,
+    required TResult Function() successMaps,
+    required TResult Function(List<Marker> markers) addMarker,
+    required TResult Function() pushEdit,
+    required TResult Function() updateLatlng,
   }) {
     return loadingAdd();
   }
@@ -379,6 +444,11 @@ class _$LoadingAddImpl implements LoadingAdd {
     TResult? Function()? loadingdelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? errordelete,
+    TResult? Function()? loadingMaps,
+    TResult? Function()? successMaps,
+    TResult? Function(List<Marker> markers)? addMarker,
+    TResult? Function()? pushEdit,
+    TResult? Function()? updateLatlng,
   }) {
     return loadingAdd?.call();
   }
@@ -399,6 +469,11 @@ class _$LoadingAddImpl implements LoadingAdd {
     TResult Function()? loadingdelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? errordelete,
+    TResult Function()? loadingMaps,
+    TResult Function()? successMaps,
+    TResult Function(List<Marker> markers)? addMarker,
+    TResult Function()? pushEdit,
+    TResult Function()? updateLatlng,
     required TResult orElse(),
   }) {
     if (loadingAdd != null) {
@@ -423,6 +498,11 @@ class _$LoadingAddImpl implements LoadingAdd {
     required TResult Function(Loadingdelete value) loadingdelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(Errordelete value) errordelete,
+    required TResult Function(LoadingMaps value) loadingMaps,
+    required TResult Function(SuccessMaps value) successMaps,
+    required TResult Function(AddMarker value) addMarker,
+    required TResult Function(pushEdit value) pushEdit,
+    required TResult Function(UpdateLatlng value) updateLatlng,
   }) {
     return loadingAdd(this);
   }
@@ -443,6 +523,11 @@ class _$LoadingAddImpl implements LoadingAdd {
     TResult? Function(Loadingdelete value)? loadingdelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(Errordelete value)? errordelete,
+    TResult? Function(LoadingMaps value)? loadingMaps,
+    TResult? Function(SuccessMaps value)? successMaps,
+    TResult? Function(AddMarker value)? addMarker,
+    TResult? Function(pushEdit value)? pushEdit,
+    TResult? Function(UpdateLatlng value)? updateLatlng,
   }) {
     return loadingAdd?.call(this);
   }
@@ -463,6 +548,11 @@ class _$LoadingAddImpl implements LoadingAdd {
     TResult Function(Loadingdelete value)? loadingdelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(Errordelete value)? errordelete,
+    TResult Function(LoadingMaps value)? loadingMaps,
+    TResult Function(SuccessMaps value)? successMaps,
+    TResult Function(AddMarker value)? addMarker,
+    TResult Function(pushEdit value)? pushEdit,
+    TResult Function(UpdateLatlng value)? updateLatlng,
     required TResult orElse(),
   }) {
     if (loadingAdd != null) {
@@ -527,6 +617,11 @@ class _$SuccessAddImpl implements SuccessAdd {
     required TResult Function() loadingdelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) errordelete,
+    required TResult Function() loadingMaps,
+    required TResult Function() successMaps,
+    required TResult Function(List<Marker> markers) addMarker,
+    required TResult Function() pushEdit,
+    required TResult Function() updateLatlng,
   }) {
     return successAdd();
   }
@@ -547,6 +642,11 @@ class _$SuccessAddImpl implements SuccessAdd {
     TResult? Function()? loadingdelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? errordelete,
+    TResult? Function()? loadingMaps,
+    TResult? Function()? successMaps,
+    TResult? Function(List<Marker> markers)? addMarker,
+    TResult? Function()? pushEdit,
+    TResult? Function()? updateLatlng,
   }) {
     return successAdd?.call();
   }
@@ -567,6 +667,11 @@ class _$SuccessAddImpl implements SuccessAdd {
     TResult Function()? loadingdelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? errordelete,
+    TResult Function()? loadingMaps,
+    TResult Function()? successMaps,
+    TResult Function(List<Marker> markers)? addMarker,
+    TResult Function()? pushEdit,
+    TResult Function()? updateLatlng,
     required TResult orElse(),
   }) {
     if (successAdd != null) {
@@ -591,6 +696,11 @@ class _$SuccessAddImpl implements SuccessAdd {
     required TResult Function(Loadingdelete value) loadingdelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(Errordelete value) errordelete,
+    required TResult Function(LoadingMaps value) loadingMaps,
+    required TResult Function(SuccessMaps value) successMaps,
+    required TResult Function(AddMarker value) addMarker,
+    required TResult Function(pushEdit value) pushEdit,
+    required TResult Function(UpdateLatlng value) updateLatlng,
   }) {
     return successAdd(this);
   }
@@ -611,6 +721,11 @@ class _$SuccessAddImpl implements SuccessAdd {
     TResult? Function(Loadingdelete value)? loadingdelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(Errordelete value)? errordelete,
+    TResult? Function(LoadingMaps value)? loadingMaps,
+    TResult? Function(SuccessMaps value)? successMaps,
+    TResult? Function(AddMarker value)? addMarker,
+    TResult? Function(pushEdit value)? pushEdit,
+    TResult? Function(UpdateLatlng value)? updateLatlng,
   }) {
     return successAdd?.call(this);
   }
@@ -631,6 +746,11 @@ class _$SuccessAddImpl implements SuccessAdd {
     TResult Function(Loadingdelete value)? loadingdelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(Errordelete value)? errordelete,
+    TResult Function(LoadingMaps value)? loadingMaps,
+    TResult Function(SuccessMaps value)? successMaps,
+    TResult Function(AddMarker value)? addMarker,
+    TResult Function(pushEdit value)? pushEdit,
+    TResult Function(UpdateLatlng value)? updateLatlng,
     required TResult orElse(),
   }) {
     if (successAdd != null) {
@@ -721,6 +841,11 @@ class _$ErrorAddImpl implements ErrorAdd {
     required TResult Function() loadingdelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) errordelete,
+    required TResult Function() loadingMaps,
+    required TResult Function() successMaps,
+    required TResult Function(List<Marker> markers) addMarker,
+    required TResult Function() pushEdit,
+    required TResult Function() updateLatlng,
   }) {
     return errorAdd(erorr);
   }
@@ -741,6 +866,11 @@ class _$ErrorAddImpl implements ErrorAdd {
     TResult? Function()? loadingdelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? errordelete,
+    TResult? Function()? loadingMaps,
+    TResult? Function()? successMaps,
+    TResult? Function(List<Marker> markers)? addMarker,
+    TResult? Function()? pushEdit,
+    TResult? Function()? updateLatlng,
   }) {
     return errorAdd?.call(erorr);
   }
@@ -761,6 +891,11 @@ class _$ErrorAddImpl implements ErrorAdd {
     TResult Function()? loadingdelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? errordelete,
+    TResult Function()? loadingMaps,
+    TResult Function()? successMaps,
+    TResult Function(List<Marker> markers)? addMarker,
+    TResult Function()? pushEdit,
+    TResult Function()? updateLatlng,
     required TResult orElse(),
   }) {
     if (errorAdd != null) {
@@ -785,6 +920,11 @@ class _$ErrorAddImpl implements ErrorAdd {
     required TResult Function(Loadingdelete value) loadingdelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(Errordelete value) errordelete,
+    required TResult Function(LoadingMaps value) loadingMaps,
+    required TResult Function(SuccessMaps value) successMaps,
+    required TResult Function(AddMarker value) addMarker,
+    required TResult Function(pushEdit value) pushEdit,
+    required TResult Function(UpdateLatlng value) updateLatlng,
   }) {
     return errorAdd(this);
   }
@@ -805,6 +945,11 @@ class _$ErrorAddImpl implements ErrorAdd {
     TResult? Function(Loadingdelete value)? loadingdelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(Errordelete value)? errordelete,
+    TResult? Function(LoadingMaps value)? loadingMaps,
+    TResult? Function(SuccessMaps value)? successMaps,
+    TResult? Function(AddMarker value)? addMarker,
+    TResult? Function(pushEdit value)? pushEdit,
+    TResult? Function(UpdateLatlng value)? updateLatlng,
   }) {
     return errorAdd?.call(this);
   }
@@ -825,6 +970,11 @@ class _$ErrorAddImpl implements ErrorAdd {
     TResult Function(Loadingdelete value)? loadingdelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(Errordelete value)? errordelete,
+    TResult Function(LoadingMaps value)? loadingMaps,
+    TResult Function(SuccessMaps value)? successMaps,
+    TResult Function(AddMarker value)? addMarker,
+    TResult Function(pushEdit value)? pushEdit,
+    TResult Function(UpdateLatlng value)? updateLatlng,
     required TResult orElse(),
   }) {
     if (errorAdd != null) {
@@ -894,6 +1044,11 @@ class _$LoadingGetImpl implements LoadingGet {
     required TResult Function() loadingdelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) errordelete,
+    required TResult Function() loadingMaps,
+    required TResult Function() successMaps,
+    required TResult Function(List<Marker> markers) addMarker,
+    required TResult Function() pushEdit,
+    required TResult Function() updateLatlng,
   }) {
     return loadingGet();
   }
@@ -914,6 +1069,11 @@ class _$LoadingGetImpl implements LoadingGet {
     TResult? Function()? loadingdelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? errordelete,
+    TResult? Function()? loadingMaps,
+    TResult? Function()? successMaps,
+    TResult? Function(List<Marker> markers)? addMarker,
+    TResult? Function()? pushEdit,
+    TResult? Function()? updateLatlng,
   }) {
     return loadingGet?.call();
   }
@@ -934,6 +1094,11 @@ class _$LoadingGetImpl implements LoadingGet {
     TResult Function()? loadingdelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? errordelete,
+    TResult Function()? loadingMaps,
+    TResult Function()? successMaps,
+    TResult Function(List<Marker> markers)? addMarker,
+    TResult Function()? pushEdit,
+    TResult Function()? updateLatlng,
     required TResult orElse(),
   }) {
     if (loadingGet != null) {
@@ -958,6 +1123,11 @@ class _$LoadingGetImpl implements LoadingGet {
     required TResult Function(Loadingdelete value) loadingdelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(Errordelete value) errordelete,
+    required TResult Function(LoadingMaps value) loadingMaps,
+    required TResult Function(SuccessMaps value) successMaps,
+    required TResult Function(AddMarker value) addMarker,
+    required TResult Function(pushEdit value) pushEdit,
+    required TResult Function(UpdateLatlng value) updateLatlng,
   }) {
     return loadingGet(this);
   }
@@ -978,6 +1148,11 @@ class _$LoadingGetImpl implements LoadingGet {
     TResult? Function(Loadingdelete value)? loadingdelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(Errordelete value)? errordelete,
+    TResult? Function(LoadingMaps value)? loadingMaps,
+    TResult? Function(SuccessMaps value)? successMaps,
+    TResult? Function(AddMarker value)? addMarker,
+    TResult? Function(pushEdit value)? pushEdit,
+    TResult? Function(UpdateLatlng value)? updateLatlng,
   }) {
     return loadingGet?.call(this);
   }
@@ -998,6 +1173,11 @@ class _$LoadingGetImpl implements LoadingGet {
     TResult Function(Loadingdelete value)? loadingdelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(Errordelete value)? errordelete,
+    TResult Function(LoadingMaps value)? loadingMaps,
+    TResult Function(SuccessMaps value)? successMaps,
+    TResult Function(AddMarker value)? addMarker,
+    TResult Function(pushEdit value)? pushEdit,
+    TResult Function(UpdateLatlng value)? updateLatlng,
     required TResult orElse(),
   }) {
     if (loadingGet != null) {
@@ -1089,6 +1269,11 @@ class _$SuccessGetImpl implements SuccessGet {
     required TResult Function() loadingdelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) errordelete,
+    required TResult Function() loadingMaps,
+    required TResult Function() successMaps,
+    required TResult Function(List<Marker> markers) addMarker,
+    required TResult Function() pushEdit,
+    required TResult Function() updateLatlng,
   }) {
     return successGet(adressResponse);
   }
@@ -1109,6 +1294,11 @@ class _$SuccessGetImpl implements SuccessGet {
     TResult? Function()? loadingdelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? errordelete,
+    TResult? Function()? loadingMaps,
+    TResult? Function()? successMaps,
+    TResult? Function(List<Marker> markers)? addMarker,
+    TResult? Function()? pushEdit,
+    TResult? Function()? updateLatlng,
   }) {
     return successGet?.call(adressResponse);
   }
@@ -1129,6 +1319,11 @@ class _$SuccessGetImpl implements SuccessGet {
     TResult Function()? loadingdelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? errordelete,
+    TResult Function()? loadingMaps,
+    TResult Function()? successMaps,
+    TResult Function(List<Marker> markers)? addMarker,
+    TResult Function()? pushEdit,
+    TResult Function()? updateLatlng,
     required TResult orElse(),
   }) {
     if (successGet != null) {
@@ -1153,6 +1348,11 @@ class _$SuccessGetImpl implements SuccessGet {
     required TResult Function(Loadingdelete value) loadingdelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(Errordelete value) errordelete,
+    required TResult Function(LoadingMaps value) loadingMaps,
+    required TResult Function(SuccessMaps value) successMaps,
+    required TResult Function(AddMarker value) addMarker,
+    required TResult Function(pushEdit value) pushEdit,
+    required TResult Function(UpdateLatlng value) updateLatlng,
   }) {
     return successGet(this);
   }
@@ -1173,6 +1373,11 @@ class _$SuccessGetImpl implements SuccessGet {
     TResult? Function(Loadingdelete value)? loadingdelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(Errordelete value)? errordelete,
+    TResult? Function(LoadingMaps value)? loadingMaps,
+    TResult? Function(SuccessMaps value)? successMaps,
+    TResult? Function(AddMarker value)? addMarker,
+    TResult? Function(pushEdit value)? pushEdit,
+    TResult? Function(UpdateLatlng value)? updateLatlng,
   }) {
     return successGet?.call(this);
   }
@@ -1193,6 +1398,11 @@ class _$SuccessGetImpl implements SuccessGet {
     TResult Function(Loadingdelete value)? loadingdelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(Errordelete value)? errordelete,
+    TResult Function(LoadingMaps value)? loadingMaps,
+    TResult Function(SuccessMaps value)? successMaps,
+    TResult Function(AddMarker value)? addMarker,
+    TResult Function(pushEdit value)? pushEdit,
+    TResult Function(UpdateLatlng value)? updateLatlng,
     required TResult orElse(),
   }) {
     if (successGet != null) {
@@ -1289,6 +1499,11 @@ class _$ErrorGetImpl implements ErrorGet {
     required TResult Function() loadingdelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) errordelete,
+    required TResult Function() loadingMaps,
+    required TResult Function() successMaps,
+    required TResult Function(List<Marker> markers) addMarker,
+    required TResult Function() pushEdit,
+    required TResult Function() updateLatlng,
   }) {
     return errorget(erorr);
   }
@@ -1309,6 +1524,11 @@ class _$ErrorGetImpl implements ErrorGet {
     TResult? Function()? loadingdelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? errordelete,
+    TResult? Function()? loadingMaps,
+    TResult? Function()? successMaps,
+    TResult? Function(List<Marker> markers)? addMarker,
+    TResult? Function()? pushEdit,
+    TResult? Function()? updateLatlng,
   }) {
     return errorget?.call(erorr);
   }
@@ -1329,6 +1549,11 @@ class _$ErrorGetImpl implements ErrorGet {
     TResult Function()? loadingdelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? errordelete,
+    TResult Function()? loadingMaps,
+    TResult Function()? successMaps,
+    TResult Function(List<Marker> markers)? addMarker,
+    TResult Function()? pushEdit,
+    TResult Function()? updateLatlng,
     required TResult orElse(),
   }) {
     if (errorget != null) {
@@ -1353,6 +1578,11 @@ class _$ErrorGetImpl implements ErrorGet {
     required TResult Function(Loadingdelete value) loadingdelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(Errordelete value) errordelete,
+    required TResult Function(LoadingMaps value) loadingMaps,
+    required TResult Function(SuccessMaps value) successMaps,
+    required TResult Function(AddMarker value) addMarker,
+    required TResult Function(pushEdit value) pushEdit,
+    required TResult Function(UpdateLatlng value) updateLatlng,
   }) {
     return errorget(this);
   }
@@ -1373,6 +1603,11 @@ class _$ErrorGetImpl implements ErrorGet {
     TResult? Function(Loadingdelete value)? loadingdelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(Errordelete value)? errordelete,
+    TResult? Function(LoadingMaps value)? loadingMaps,
+    TResult? Function(SuccessMaps value)? successMaps,
+    TResult? Function(AddMarker value)? addMarker,
+    TResult? Function(pushEdit value)? pushEdit,
+    TResult? Function(UpdateLatlng value)? updateLatlng,
   }) {
     return errorget?.call(this);
   }
@@ -1393,6 +1628,11 @@ class _$ErrorGetImpl implements ErrorGet {
     TResult Function(Loadingdelete value)? loadingdelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(Errordelete value)? errordelete,
+    TResult Function(LoadingMaps value)? loadingMaps,
+    TResult Function(SuccessMaps value)? successMaps,
+    TResult Function(AddMarker value)? addMarker,
+    TResult Function(pushEdit value)? pushEdit,
+    TResult Function(UpdateLatlng value)? updateLatlng,
     required TResult orElse(),
   }) {
     if (errorget != null) {
@@ -1462,6 +1702,11 @@ class _$LoadingEditImpl implements LoadingEdit {
     required TResult Function() loadingdelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) errordelete,
+    required TResult Function() loadingMaps,
+    required TResult Function() successMaps,
+    required TResult Function(List<Marker> markers) addMarker,
+    required TResult Function() pushEdit,
+    required TResult Function() updateLatlng,
   }) {
     return loadingedit();
   }
@@ -1482,6 +1727,11 @@ class _$LoadingEditImpl implements LoadingEdit {
     TResult? Function()? loadingdelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? errordelete,
+    TResult? Function()? loadingMaps,
+    TResult? Function()? successMaps,
+    TResult? Function(List<Marker> markers)? addMarker,
+    TResult? Function()? pushEdit,
+    TResult? Function()? updateLatlng,
   }) {
     return loadingedit?.call();
   }
@@ -1502,6 +1752,11 @@ class _$LoadingEditImpl implements LoadingEdit {
     TResult Function()? loadingdelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? errordelete,
+    TResult Function()? loadingMaps,
+    TResult Function()? successMaps,
+    TResult Function(List<Marker> markers)? addMarker,
+    TResult Function()? pushEdit,
+    TResult Function()? updateLatlng,
     required TResult orElse(),
   }) {
     if (loadingedit != null) {
@@ -1526,6 +1781,11 @@ class _$LoadingEditImpl implements LoadingEdit {
     required TResult Function(Loadingdelete value) loadingdelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(Errordelete value) errordelete,
+    required TResult Function(LoadingMaps value) loadingMaps,
+    required TResult Function(SuccessMaps value) successMaps,
+    required TResult Function(AddMarker value) addMarker,
+    required TResult Function(pushEdit value) pushEdit,
+    required TResult Function(UpdateLatlng value) updateLatlng,
   }) {
     return loadingedit(this);
   }
@@ -1546,6 +1806,11 @@ class _$LoadingEditImpl implements LoadingEdit {
     TResult? Function(Loadingdelete value)? loadingdelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(Errordelete value)? errordelete,
+    TResult? Function(LoadingMaps value)? loadingMaps,
+    TResult? Function(SuccessMaps value)? successMaps,
+    TResult? Function(AddMarker value)? addMarker,
+    TResult? Function(pushEdit value)? pushEdit,
+    TResult? Function(UpdateLatlng value)? updateLatlng,
   }) {
     return loadingedit?.call(this);
   }
@@ -1566,6 +1831,11 @@ class _$LoadingEditImpl implements LoadingEdit {
     TResult Function(Loadingdelete value)? loadingdelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(Errordelete value)? errordelete,
+    TResult Function(LoadingMaps value)? loadingMaps,
+    TResult Function(SuccessMaps value)? successMaps,
+    TResult Function(AddMarker value)? addMarker,
+    TResult Function(pushEdit value)? pushEdit,
+    TResult Function(UpdateLatlng value)? updateLatlng,
     required TResult orElse(),
   }) {
     if (loadingedit != null) {
@@ -1630,6 +1900,11 @@ class _$SuccessEditImpl implements SuccessEdit {
     required TResult Function() loadingdelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) errordelete,
+    required TResult Function() loadingMaps,
+    required TResult Function() successMaps,
+    required TResult Function(List<Marker> markers) addMarker,
+    required TResult Function() pushEdit,
+    required TResult Function() updateLatlng,
   }) {
     return successedit();
   }
@@ -1650,6 +1925,11 @@ class _$SuccessEditImpl implements SuccessEdit {
     TResult? Function()? loadingdelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? errordelete,
+    TResult? Function()? loadingMaps,
+    TResult? Function()? successMaps,
+    TResult? Function(List<Marker> markers)? addMarker,
+    TResult? Function()? pushEdit,
+    TResult? Function()? updateLatlng,
   }) {
     return successedit?.call();
   }
@@ -1670,6 +1950,11 @@ class _$SuccessEditImpl implements SuccessEdit {
     TResult Function()? loadingdelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? errordelete,
+    TResult Function()? loadingMaps,
+    TResult Function()? successMaps,
+    TResult Function(List<Marker> markers)? addMarker,
+    TResult Function()? pushEdit,
+    TResult Function()? updateLatlng,
     required TResult orElse(),
   }) {
     if (successedit != null) {
@@ -1694,6 +1979,11 @@ class _$SuccessEditImpl implements SuccessEdit {
     required TResult Function(Loadingdelete value) loadingdelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(Errordelete value) errordelete,
+    required TResult Function(LoadingMaps value) loadingMaps,
+    required TResult Function(SuccessMaps value) successMaps,
+    required TResult Function(AddMarker value) addMarker,
+    required TResult Function(pushEdit value) pushEdit,
+    required TResult Function(UpdateLatlng value) updateLatlng,
   }) {
     return successedit(this);
   }
@@ -1714,6 +2004,11 @@ class _$SuccessEditImpl implements SuccessEdit {
     TResult? Function(Loadingdelete value)? loadingdelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(Errordelete value)? errordelete,
+    TResult? Function(LoadingMaps value)? loadingMaps,
+    TResult? Function(SuccessMaps value)? successMaps,
+    TResult? Function(AddMarker value)? addMarker,
+    TResult? Function(pushEdit value)? pushEdit,
+    TResult? Function(UpdateLatlng value)? updateLatlng,
   }) {
     return successedit?.call(this);
   }
@@ -1734,6 +2029,11 @@ class _$SuccessEditImpl implements SuccessEdit {
     TResult Function(Loadingdelete value)? loadingdelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(Errordelete value)? errordelete,
+    TResult Function(LoadingMaps value)? loadingMaps,
+    TResult Function(SuccessMaps value)? successMaps,
+    TResult Function(AddMarker value)? addMarker,
+    TResult Function(pushEdit value)? pushEdit,
+    TResult Function(UpdateLatlng value)? updateLatlng,
     required TResult orElse(),
   }) {
     if (successedit != null) {
@@ -1824,6 +2124,11 @@ class _$ErrorEditImpl implements ErrorEdit {
     required TResult Function() loadingdelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) errordelete,
+    required TResult Function() loadingMaps,
+    required TResult Function() successMaps,
+    required TResult Function(List<Marker> markers) addMarker,
+    required TResult Function() pushEdit,
+    required TResult Function() updateLatlng,
   }) {
     return erroredit(erorr);
   }
@@ -1844,6 +2149,11 @@ class _$ErrorEditImpl implements ErrorEdit {
     TResult? Function()? loadingdelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? errordelete,
+    TResult? Function()? loadingMaps,
+    TResult? Function()? successMaps,
+    TResult? Function(List<Marker> markers)? addMarker,
+    TResult? Function()? pushEdit,
+    TResult? Function()? updateLatlng,
   }) {
     return erroredit?.call(erorr);
   }
@@ -1864,6 +2174,11 @@ class _$ErrorEditImpl implements ErrorEdit {
     TResult Function()? loadingdelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? errordelete,
+    TResult Function()? loadingMaps,
+    TResult Function()? successMaps,
+    TResult Function(List<Marker> markers)? addMarker,
+    TResult Function()? pushEdit,
+    TResult Function()? updateLatlng,
     required TResult orElse(),
   }) {
     if (erroredit != null) {
@@ -1888,6 +2203,11 @@ class _$ErrorEditImpl implements ErrorEdit {
     required TResult Function(Loadingdelete value) loadingdelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(Errordelete value) errordelete,
+    required TResult Function(LoadingMaps value) loadingMaps,
+    required TResult Function(SuccessMaps value) successMaps,
+    required TResult Function(AddMarker value) addMarker,
+    required TResult Function(pushEdit value) pushEdit,
+    required TResult Function(UpdateLatlng value) updateLatlng,
   }) {
     return erroredit(this);
   }
@@ -1908,6 +2228,11 @@ class _$ErrorEditImpl implements ErrorEdit {
     TResult? Function(Loadingdelete value)? loadingdelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(Errordelete value)? errordelete,
+    TResult? Function(LoadingMaps value)? loadingMaps,
+    TResult? Function(SuccessMaps value)? successMaps,
+    TResult? Function(AddMarker value)? addMarker,
+    TResult? Function(pushEdit value)? pushEdit,
+    TResult? Function(UpdateLatlng value)? updateLatlng,
   }) {
     return erroredit?.call(this);
   }
@@ -1928,6 +2253,11 @@ class _$ErrorEditImpl implements ErrorEdit {
     TResult Function(Loadingdelete value)? loadingdelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(Errordelete value)? errordelete,
+    TResult Function(LoadingMaps value)? loadingMaps,
+    TResult Function(SuccessMaps value)? successMaps,
+    TResult Function(AddMarker value)? addMarker,
+    TResult Function(pushEdit value)? pushEdit,
+    TResult Function(UpdateLatlng value)? updateLatlng,
     required TResult orElse(),
   }) {
     if (erroredit != null) {
@@ -1997,6 +2327,11 @@ class _$LoadingdeleteImpl implements Loadingdelete {
     required TResult Function() loadingdelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) errordelete,
+    required TResult Function() loadingMaps,
+    required TResult Function() successMaps,
+    required TResult Function(List<Marker> markers) addMarker,
+    required TResult Function() pushEdit,
+    required TResult Function() updateLatlng,
   }) {
     return loadingdelete();
   }
@@ -2017,6 +2352,11 @@ class _$LoadingdeleteImpl implements Loadingdelete {
     TResult? Function()? loadingdelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? errordelete,
+    TResult? Function()? loadingMaps,
+    TResult? Function()? successMaps,
+    TResult? Function(List<Marker> markers)? addMarker,
+    TResult? Function()? pushEdit,
+    TResult? Function()? updateLatlng,
   }) {
     return loadingdelete?.call();
   }
@@ -2037,6 +2377,11 @@ class _$LoadingdeleteImpl implements Loadingdelete {
     TResult Function()? loadingdelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? errordelete,
+    TResult Function()? loadingMaps,
+    TResult Function()? successMaps,
+    TResult Function(List<Marker> markers)? addMarker,
+    TResult Function()? pushEdit,
+    TResult Function()? updateLatlng,
     required TResult orElse(),
   }) {
     if (loadingdelete != null) {
@@ -2061,6 +2406,11 @@ class _$LoadingdeleteImpl implements Loadingdelete {
     required TResult Function(Loadingdelete value) loadingdelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(Errordelete value) errordelete,
+    required TResult Function(LoadingMaps value) loadingMaps,
+    required TResult Function(SuccessMaps value) successMaps,
+    required TResult Function(AddMarker value) addMarker,
+    required TResult Function(pushEdit value) pushEdit,
+    required TResult Function(UpdateLatlng value) updateLatlng,
   }) {
     return loadingdelete(this);
   }
@@ -2081,6 +2431,11 @@ class _$LoadingdeleteImpl implements Loadingdelete {
     TResult? Function(Loadingdelete value)? loadingdelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(Errordelete value)? errordelete,
+    TResult? Function(LoadingMaps value)? loadingMaps,
+    TResult? Function(SuccessMaps value)? successMaps,
+    TResult? Function(AddMarker value)? addMarker,
+    TResult? Function(pushEdit value)? pushEdit,
+    TResult? Function(UpdateLatlng value)? updateLatlng,
   }) {
     return loadingdelete?.call(this);
   }
@@ -2101,6 +2456,11 @@ class _$LoadingdeleteImpl implements Loadingdelete {
     TResult Function(Loadingdelete value)? loadingdelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(Errordelete value)? errordelete,
+    TResult Function(LoadingMaps value)? loadingMaps,
+    TResult Function(SuccessMaps value)? successMaps,
+    TResult Function(AddMarker value)? addMarker,
+    TResult Function(pushEdit value)? pushEdit,
+    TResult Function(UpdateLatlng value)? updateLatlng,
     required TResult orElse(),
   }) {
     if (loadingdelete != null) {
@@ -2165,6 +2525,11 @@ class _$SuccessdeleteImpl implements Successdelete {
     required TResult Function() loadingdelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) errordelete,
+    required TResult Function() loadingMaps,
+    required TResult Function() successMaps,
+    required TResult Function(List<Marker> markers) addMarker,
+    required TResult Function() pushEdit,
+    required TResult Function() updateLatlng,
   }) {
     return successdelete();
   }
@@ -2185,6 +2550,11 @@ class _$SuccessdeleteImpl implements Successdelete {
     TResult? Function()? loadingdelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? errordelete,
+    TResult? Function()? loadingMaps,
+    TResult? Function()? successMaps,
+    TResult? Function(List<Marker> markers)? addMarker,
+    TResult? Function()? pushEdit,
+    TResult? Function()? updateLatlng,
   }) {
     return successdelete?.call();
   }
@@ -2205,6 +2575,11 @@ class _$SuccessdeleteImpl implements Successdelete {
     TResult Function()? loadingdelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? errordelete,
+    TResult Function()? loadingMaps,
+    TResult Function()? successMaps,
+    TResult Function(List<Marker> markers)? addMarker,
+    TResult Function()? pushEdit,
+    TResult Function()? updateLatlng,
     required TResult orElse(),
   }) {
     if (successdelete != null) {
@@ -2229,6 +2604,11 @@ class _$SuccessdeleteImpl implements Successdelete {
     required TResult Function(Loadingdelete value) loadingdelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(Errordelete value) errordelete,
+    required TResult Function(LoadingMaps value) loadingMaps,
+    required TResult Function(SuccessMaps value) successMaps,
+    required TResult Function(AddMarker value) addMarker,
+    required TResult Function(pushEdit value) pushEdit,
+    required TResult Function(UpdateLatlng value) updateLatlng,
   }) {
     return successdelete(this);
   }
@@ -2249,6 +2629,11 @@ class _$SuccessdeleteImpl implements Successdelete {
     TResult? Function(Loadingdelete value)? loadingdelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(Errordelete value)? errordelete,
+    TResult? Function(LoadingMaps value)? loadingMaps,
+    TResult? Function(SuccessMaps value)? successMaps,
+    TResult? Function(AddMarker value)? addMarker,
+    TResult? Function(pushEdit value)? pushEdit,
+    TResult? Function(UpdateLatlng value)? updateLatlng,
   }) {
     return successdelete?.call(this);
   }
@@ -2269,6 +2654,11 @@ class _$SuccessdeleteImpl implements Successdelete {
     TResult Function(Loadingdelete value)? loadingdelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(Errordelete value)? errordelete,
+    TResult Function(LoadingMaps value)? loadingMaps,
+    TResult Function(SuccessMaps value)? successMaps,
+    TResult Function(AddMarker value)? addMarker,
+    TResult Function(pushEdit value)? pushEdit,
+    TResult Function(UpdateLatlng value)? updateLatlng,
     required TResult orElse(),
   }) {
     if (successdelete != null) {
@@ -2359,6 +2749,11 @@ class _$ErrordeleteImpl implements Errordelete {
     required TResult Function() loadingdelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) errordelete,
+    required TResult Function() loadingMaps,
+    required TResult Function() successMaps,
+    required TResult Function(List<Marker> markers) addMarker,
+    required TResult Function() pushEdit,
+    required TResult Function() updateLatlng,
   }) {
     return errordelete(erorr);
   }
@@ -2379,6 +2774,11 @@ class _$ErrordeleteImpl implements Errordelete {
     TResult? Function()? loadingdelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? errordelete,
+    TResult? Function()? loadingMaps,
+    TResult? Function()? successMaps,
+    TResult? Function(List<Marker> markers)? addMarker,
+    TResult? Function()? pushEdit,
+    TResult? Function()? updateLatlng,
   }) {
     return errordelete?.call(erorr);
   }
@@ -2399,6 +2799,11 @@ class _$ErrordeleteImpl implements Errordelete {
     TResult Function()? loadingdelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? errordelete,
+    TResult Function()? loadingMaps,
+    TResult Function()? successMaps,
+    TResult Function(List<Marker> markers)? addMarker,
+    TResult Function()? pushEdit,
+    TResult Function()? updateLatlng,
     required TResult orElse(),
   }) {
     if (errordelete != null) {
@@ -2423,6 +2828,11 @@ class _$ErrordeleteImpl implements Errordelete {
     required TResult Function(Loadingdelete value) loadingdelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(Errordelete value) errordelete,
+    required TResult Function(LoadingMaps value) loadingMaps,
+    required TResult Function(SuccessMaps value) successMaps,
+    required TResult Function(AddMarker value) addMarker,
+    required TResult Function(pushEdit value) pushEdit,
+    required TResult Function(UpdateLatlng value) updateLatlng,
   }) {
     return errordelete(this);
   }
@@ -2443,6 +2853,11 @@ class _$ErrordeleteImpl implements Errordelete {
     TResult? Function(Loadingdelete value)? loadingdelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(Errordelete value)? errordelete,
+    TResult? Function(LoadingMaps value)? loadingMaps,
+    TResult? Function(SuccessMaps value)? successMaps,
+    TResult? Function(AddMarker value)? addMarker,
+    TResult? Function(pushEdit value)? pushEdit,
+    TResult? Function(UpdateLatlng value)? updateLatlng,
   }) {
     return errordelete?.call(this);
   }
@@ -2463,6 +2878,11 @@ class _$ErrordeleteImpl implements Errordelete {
     TResult Function(Loadingdelete value)? loadingdelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(Errordelete value)? errordelete,
+    TResult Function(LoadingMaps value)? loadingMaps,
+    TResult Function(SuccessMaps value)? successMaps,
+    TResult Function(AddMarker value)? addMarker,
+    TResult Function(pushEdit value)? pushEdit,
+    TResult Function(UpdateLatlng value)? updateLatlng,
     required TResult orElse(),
   }) {
     if (errordelete != null) {
@@ -2479,4 +2899,1033 @@ abstract class Errordelete implements AdressState {
   @JsonKey(ignore: true)
   _$$ErrordeleteImplCopyWith<_$ErrordeleteImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LoadingMapsImplCopyWith<$Res> {
+  factory _$$LoadingMapsImplCopyWith(
+          _$LoadingMapsImpl value, $Res Function(_$LoadingMapsImpl) then) =
+      __$$LoadingMapsImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$LoadingMapsImplCopyWithImpl<$Res>
+    extends _$AdressStateCopyWithImpl<$Res, _$LoadingMapsImpl>
+    implements _$$LoadingMapsImplCopyWith<$Res> {
+  __$$LoadingMapsImplCopyWithImpl(
+      _$LoadingMapsImpl _value, $Res Function(_$LoadingMapsImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$LoadingMapsImpl implements LoadingMaps {
+  const _$LoadingMapsImpl();
+
+  @override
+  String toString() {
+    return 'AdressState.loadingMaps()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$LoadingMapsImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingAdd,
+    required TResult Function() successAdd,
+    required TResult Function(String erorr) errorAdd,
+    required TResult Function() loadingGet,
+    required TResult Function(AdressResponse adressResponse) successGet,
+    required TResult Function(String erorr) errorget,
+    required TResult Function() loadingedit,
+    required TResult Function() successedit,
+    required TResult Function(String erorr) erroredit,
+    required TResult Function() loadingdelete,
+    required TResult Function() successdelete,
+    required TResult Function(String erorr) errordelete,
+    required TResult Function() loadingMaps,
+    required TResult Function() successMaps,
+    required TResult Function(List<Marker> markers) addMarker,
+    required TResult Function() pushEdit,
+    required TResult Function() updateLatlng,
+  }) {
+    return loadingMaps();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingAdd,
+    TResult? Function()? successAdd,
+    TResult? Function(String erorr)? errorAdd,
+    TResult? Function()? loadingGet,
+    TResult? Function(AdressResponse adressResponse)? successGet,
+    TResult? Function(String erorr)? errorget,
+    TResult? Function()? loadingedit,
+    TResult? Function()? successedit,
+    TResult? Function(String erorr)? erroredit,
+    TResult? Function()? loadingdelete,
+    TResult? Function()? successdelete,
+    TResult? Function(String erorr)? errordelete,
+    TResult? Function()? loadingMaps,
+    TResult? Function()? successMaps,
+    TResult? Function(List<Marker> markers)? addMarker,
+    TResult? Function()? pushEdit,
+    TResult? Function()? updateLatlng,
+  }) {
+    return loadingMaps?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingAdd,
+    TResult Function()? successAdd,
+    TResult Function(String erorr)? errorAdd,
+    TResult Function()? loadingGet,
+    TResult Function(AdressResponse adressResponse)? successGet,
+    TResult Function(String erorr)? errorget,
+    TResult Function()? loadingedit,
+    TResult Function()? successedit,
+    TResult Function(String erorr)? erroredit,
+    TResult Function()? loadingdelete,
+    TResult Function()? successdelete,
+    TResult Function(String erorr)? errordelete,
+    TResult Function()? loadingMaps,
+    TResult Function()? successMaps,
+    TResult Function(List<Marker> markers)? addMarker,
+    TResult Function()? pushEdit,
+    TResult Function()? updateLatlng,
+    required TResult orElse(),
+  }) {
+    if (loadingMaps != null) {
+      return loadingMaps();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(LoadingAdd value) loadingAdd,
+    required TResult Function(SuccessAdd value) successAdd,
+    required TResult Function(ErrorAdd value) errorAdd,
+    required TResult Function(LoadingGet value) loadingGet,
+    required TResult Function(SuccessGet value) successGet,
+    required TResult Function(ErrorGet value) errorget,
+    required TResult Function(LoadingEdit value) loadingedit,
+    required TResult Function(SuccessEdit value) successedit,
+    required TResult Function(ErrorEdit value) erroredit,
+    required TResult Function(Loadingdelete value) loadingdelete,
+    required TResult Function(Successdelete value) successdelete,
+    required TResult Function(Errordelete value) errordelete,
+    required TResult Function(LoadingMaps value) loadingMaps,
+    required TResult Function(SuccessMaps value) successMaps,
+    required TResult Function(AddMarker value) addMarker,
+    required TResult Function(pushEdit value) pushEdit,
+    required TResult Function(UpdateLatlng value) updateLatlng,
+  }) {
+    return loadingMaps(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(LoadingAdd value)? loadingAdd,
+    TResult? Function(SuccessAdd value)? successAdd,
+    TResult? Function(ErrorAdd value)? errorAdd,
+    TResult? Function(LoadingGet value)? loadingGet,
+    TResult? Function(SuccessGet value)? successGet,
+    TResult? Function(ErrorGet value)? errorget,
+    TResult? Function(LoadingEdit value)? loadingedit,
+    TResult? Function(SuccessEdit value)? successedit,
+    TResult? Function(ErrorEdit value)? erroredit,
+    TResult? Function(Loadingdelete value)? loadingdelete,
+    TResult? Function(Successdelete value)? successdelete,
+    TResult? Function(Errordelete value)? errordelete,
+    TResult? Function(LoadingMaps value)? loadingMaps,
+    TResult? Function(SuccessMaps value)? successMaps,
+    TResult? Function(AddMarker value)? addMarker,
+    TResult? Function(pushEdit value)? pushEdit,
+    TResult? Function(UpdateLatlng value)? updateLatlng,
+  }) {
+    return loadingMaps?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(LoadingAdd value)? loadingAdd,
+    TResult Function(SuccessAdd value)? successAdd,
+    TResult Function(ErrorAdd value)? errorAdd,
+    TResult Function(LoadingGet value)? loadingGet,
+    TResult Function(SuccessGet value)? successGet,
+    TResult Function(ErrorGet value)? errorget,
+    TResult Function(LoadingEdit value)? loadingedit,
+    TResult Function(SuccessEdit value)? successedit,
+    TResult Function(ErrorEdit value)? erroredit,
+    TResult Function(Loadingdelete value)? loadingdelete,
+    TResult Function(Successdelete value)? successdelete,
+    TResult Function(Errordelete value)? errordelete,
+    TResult Function(LoadingMaps value)? loadingMaps,
+    TResult Function(SuccessMaps value)? successMaps,
+    TResult Function(AddMarker value)? addMarker,
+    TResult Function(pushEdit value)? pushEdit,
+    TResult Function(UpdateLatlng value)? updateLatlng,
+    required TResult orElse(),
+  }) {
+    if (loadingMaps != null) {
+      return loadingMaps(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class LoadingMaps implements AdressState {
+  const factory LoadingMaps() = _$LoadingMapsImpl;
+}
+
+/// @nodoc
+abstract class _$$SuccessMapsImplCopyWith<$Res> {
+  factory _$$SuccessMapsImplCopyWith(
+          _$SuccessMapsImpl value, $Res Function(_$SuccessMapsImpl) then) =
+      __$$SuccessMapsImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SuccessMapsImplCopyWithImpl<$Res>
+    extends _$AdressStateCopyWithImpl<$Res, _$SuccessMapsImpl>
+    implements _$$SuccessMapsImplCopyWith<$Res> {
+  __$$SuccessMapsImplCopyWithImpl(
+      _$SuccessMapsImpl _value, $Res Function(_$SuccessMapsImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SuccessMapsImpl implements SuccessMaps {
+  const _$SuccessMapsImpl();
+
+  @override
+  String toString() {
+    return 'AdressState.successMaps()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$SuccessMapsImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingAdd,
+    required TResult Function() successAdd,
+    required TResult Function(String erorr) errorAdd,
+    required TResult Function() loadingGet,
+    required TResult Function(AdressResponse adressResponse) successGet,
+    required TResult Function(String erorr) errorget,
+    required TResult Function() loadingedit,
+    required TResult Function() successedit,
+    required TResult Function(String erorr) erroredit,
+    required TResult Function() loadingdelete,
+    required TResult Function() successdelete,
+    required TResult Function(String erorr) errordelete,
+    required TResult Function() loadingMaps,
+    required TResult Function() successMaps,
+    required TResult Function(List<Marker> markers) addMarker,
+    required TResult Function() pushEdit,
+    required TResult Function() updateLatlng,
+  }) {
+    return successMaps();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingAdd,
+    TResult? Function()? successAdd,
+    TResult? Function(String erorr)? errorAdd,
+    TResult? Function()? loadingGet,
+    TResult? Function(AdressResponse adressResponse)? successGet,
+    TResult? Function(String erorr)? errorget,
+    TResult? Function()? loadingedit,
+    TResult? Function()? successedit,
+    TResult? Function(String erorr)? erroredit,
+    TResult? Function()? loadingdelete,
+    TResult? Function()? successdelete,
+    TResult? Function(String erorr)? errordelete,
+    TResult? Function()? loadingMaps,
+    TResult? Function()? successMaps,
+    TResult? Function(List<Marker> markers)? addMarker,
+    TResult? Function()? pushEdit,
+    TResult? Function()? updateLatlng,
+  }) {
+    return successMaps?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingAdd,
+    TResult Function()? successAdd,
+    TResult Function(String erorr)? errorAdd,
+    TResult Function()? loadingGet,
+    TResult Function(AdressResponse adressResponse)? successGet,
+    TResult Function(String erorr)? errorget,
+    TResult Function()? loadingedit,
+    TResult Function()? successedit,
+    TResult Function(String erorr)? erroredit,
+    TResult Function()? loadingdelete,
+    TResult Function()? successdelete,
+    TResult Function(String erorr)? errordelete,
+    TResult Function()? loadingMaps,
+    TResult Function()? successMaps,
+    TResult Function(List<Marker> markers)? addMarker,
+    TResult Function()? pushEdit,
+    TResult Function()? updateLatlng,
+    required TResult orElse(),
+  }) {
+    if (successMaps != null) {
+      return successMaps();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(LoadingAdd value) loadingAdd,
+    required TResult Function(SuccessAdd value) successAdd,
+    required TResult Function(ErrorAdd value) errorAdd,
+    required TResult Function(LoadingGet value) loadingGet,
+    required TResult Function(SuccessGet value) successGet,
+    required TResult Function(ErrorGet value) errorget,
+    required TResult Function(LoadingEdit value) loadingedit,
+    required TResult Function(SuccessEdit value) successedit,
+    required TResult Function(ErrorEdit value) erroredit,
+    required TResult Function(Loadingdelete value) loadingdelete,
+    required TResult Function(Successdelete value) successdelete,
+    required TResult Function(Errordelete value) errordelete,
+    required TResult Function(LoadingMaps value) loadingMaps,
+    required TResult Function(SuccessMaps value) successMaps,
+    required TResult Function(AddMarker value) addMarker,
+    required TResult Function(pushEdit value) pushEdit,
+    required TResult Function(UpdateLatlng value) updateLatlng,
+  }) {
+    return successMaps(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(LoadingAdd value)? loadingAdd,
+    TResult? Function(SuccessAdd value)? successAdd,
+    TResult? Function(ErrorAdd value)? errorAdd,
+    TResult? Function(LoadingGet value)? loadingGet,
+    TResult? Function(SuccessGet value)? successGet,
+    TResult? Function(ErrorGet value)? errorget,
+    TResult? Function(LoadingEdit value)? loadingedit,
+    TResult? Function(SuccessEdit value)? successedit,
+    TResult? Function(ErrorEdit value)? erroredit,
+    TResult? Function(Loadingdelete value)? loadingdelete,
+    TResult? Function(Successdelete value)? successdelete,
+    TResult? Function(Errordelete value)? errordelete,
+    TResult? Function(LoadingMaps value)? loadingMaps,
+    TResult? Function(SuccessMaps value)? successMaps,
+    TResult? Function(AddMarker value)? addMarker,
+    TResult? Function(pushEdit value)? pushEdit,
+    TResult? Function(UpdateLatlng value)? updateLatlng,
+  }) {
+    return successMaps?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(LoadingAdd value)? loadingAdd,
+    TResult Function(SuccessAdd value)? successAdd,
+    TResult Function(ErrorAdd value)? errorAdd,
+    TResult Function(LoadingGet value)? loadingGet,
+    TResult Function(SuccessGet value)? successGet,
+    TResult Function(ErrorGet value)? errorget,
+    TResult Function(LoadingEdit value)? loadingedit,
+    TResult Function(SuccessEdit value)? successedit,
+    TResult Function(ErrorEdit value)? erroredit,
+    TResult Function(Loadingdelete value)? loadingdelete,
+    TResult Function(Successdelete value)? successdelete,
+    TResult Function(Errordelete value)? errordelete,
+    TResult Function(LoadingMaps value)? loadingMaps,
+    TResult Function(SuccessMaps value)? successMaps,
+    TResult Function(AddMarker value)? addMarker,
+    TResult Function(pushEdit value)? pushEdit,
+    TResult Function(UpdateLatlng value)? updateLatlng,
+    required TResult orElse(),
+  }) {
+    if (successMaps != null) {
+      return successMaps(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SuccessMaps implements AdressState {
+  const factory SuccessMaps() = _$SuccessMapsImpl;
+}
+
+/// @nodoc
+abstract class _$$AddMarkerImplCopyWith<$Res> {
+  factory _$$AddMarkerImplCopyWith(
+          _$AddMarkerImpl value, $Res Function(_$AddMarkerImpl) then) =
+      __$$AddMarkerImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<Marker> markers});
+}
+
+/// @nodoc
+class __$$AddMarkerImplCopyWithImpl<$Res>
+    extends _$AdressStateCopyWithImpl<$Res, _$AddMarkerImpl>
+    implements _$$AddMarkerImplCopyWith<$Res> {
+  __$$AddMarkerImplCopyWithImpl(
+      _$AddMarkerImpl _value, $Res Function(_$AddMarkerImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? markers = null,
+  }) {
+    return _then(_$AddMarkerImpl(
+      markers: null == markers
+          ? _value._markers
+          : markers // ignore: cast_nullable_to_non_nullable
+              as List<Marker>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AddMarkerImpl implements AddMarker {
+  const _$AddMarkerImpl({required final List<Marker> markers})
+      : _markers = markers;
+
+  final List<Marker> _markers;
+  @override
+  List<Marker> get markers {
+    if (_markers is EqualUnmodifiableListView) return _markers;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_markers);
+  }
+
+  @override
+  String toString() {
+    return 'AdressState.addMarker(markers: $markers)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddMarkerImpl &&
+            const DeepCollectionEquality().equals(other._markers, _markers));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_markers));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddMarkerImplCopyWith<_$AddMarkerImpl> get copyWith =>
+      __$$AddMarkerImplCopyWithImpl<_$AddMarkerImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingAdd,
+    required TResult Function() successAdd,
+    required TResult Function(String erorr) errorAdd,
+    required TResult Function() loadingGet,
+    required TResult Function(AdressResponse adressResponse) successGet,
+    required TResult Function(String erorr) errorget,
+    required TResult Function() loadingedit,
+    required TResult Function() successedit,
+    required TResult Function(String erorr) erroredit,
+    required TResult Function() loadingdelete,
+    required TResult Function() successdelete,
+    required TResult Function(String erorr) errordelete,
+    required TResult Function() loadingMaps,
+    required TResult Function() successMaps,
+    required TResult Function(List<Marker> markers) addMarker,
+    required TResult Function() pushEdit,
+    required TResult Function() updateLatlng,
+  }) {
+    return addMarker(markers);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingAdd,
+    TResult? Function()? successAdd,
+    TResult? Function(String erorr)? errorAdd,
+    TResult? Function()? loadingGet,
+    TResult? Function(AdressResponse adressResponse)? successGet,
+    TResult? Function(String erorr)? errorget,
+    TResult? Function()? loadingedit,
+    TResult? Function()? successedit,
+    TResult? Function(String erorr)? erroredit,
+    TResult? Function()? loadingdelete,
+    TResult? Function()? successdelete,
+    TResult? Function(String erorr)? errordelete,
+    TResult? Function()? loadingMaps,
+    TResult? Function()? successMaps,
+    TResult? Function(List<Marker> markers)? addMarker,
+    TResult? Function()? pushEdit,
+    TResult? Function()? updateLatlng,
+  }) {
+    return addMarker?.call(markers);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingAdd,
+    TResult Function()? successAdd,
+    TResult Function(String erorr)? errorAdd,
+    TResult Function()? loadingGet,
+    TResult Function(AdressResponse adressResponse)? successGet,
+    TResult Function(String erorr)? errorget,
+    TResult Function()? loadingedit,
+    TResult Function()? successedit,
+    TResult Function(String erorr)? erroredit,
+    TResult Function()? loadingdelete,
+    TResult Function()? successdelete,
+    TResult Function(String erorr)? errordelete,
+    TResult Function()? loadingMaps,
+    TResult Function()? successMaps,
+    TResult Function(List<Marker> markers)? addMarker,
+    TResult Function()? pushEdit,
+    TResult Function()? updateLatlng,
+    required TResult orElse(),
+  }) {
+    if (addMarker != null) {
+      return addMarker(markers);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(LoadingAdd value) loadingAdd,
+    required TResult Function(SuccessAdd value) successAdd,
+    required TResult Function(ErrorAdd value) errorAdd,
+    required TResult Function(LoadingGet value) loadingGet,
+    required TResult Function(SuccessGet value) successGet,
+    required TResult Function(ErrorGet value) errorget,
+    required TResult Function(LoadingEdit value) loadingedit,
+    required TResult Function(SuccessEdit value) successedit,
+    required TResult Function(ErrorEdit value) erroredit,
+    required TResult Function(Loadingdelete value) loadingdelete,
+    required TResult Function(Successdelete value) successdelete,
+    required TResult Function(Errordelete value) errordelete,
+    required TResult Function(LoadingMaps value) loadingMaps,
+    required TResult Function(SuccessMaps value) successMaps,
+    required TResult Function(AddMarker value) addMarker,
+    required TResult Function(pushEdit value) pushEdit,
+    required TResult Function(UpdateLatlng value) updateLatlng,
+  }) {
+    return addMarker(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(LoadingAdd value)? loadingAdd,
+    TResult? Function(SuccessAdd value)? successAdd,
+    TResult? Function(ErrorAdd value)? errorAdd,
+    TResult? Function(LoadingGet value)? loadingGet,
+    TResult? Function(SuccessGet value)? successGet,
+    TResult? Function(ErrorGet value)? errorget,
+    TResult? Function(LoadingEdit value)? loadingedit,
+    TResult? Function(SuccessEdit value)? successedit,
+    TResult? Function(ErrorEdit value)? erroredit,
+    TResult? Function(Loadingdelete value)? loadingdelete,
+    TResult? Function(Successdelete value)? successdelete,
+    TResult? Function(Errordelete value)? errordelete,
+    TResult? Function(LoadingMaps value)? loadingMaps,
+    TResult? Function(SuccessMaps value)? successMaps,
+    TResult? Function(AddMarker value)? addMarker,
+    TResult? Function(pushEdit value)? pushEdit,
+    TResult? Function(UpdateLatlng value)? updateLatlng,
+  }) {
+    return addMarker?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(LoadingAdd value)? loadingAdd,
+    TResult Function(SuccessAdd value)? successAdd,
+    TResult Function(ErrorAdd value)? errorAdd,
+    TResult Function(LoadingGet value)? loadingGet,
+    TResult Function(SuccessGet value)? successGet,
+    TResult Function(ErrorGet value)? errorget,
+    TResult Function(LoadingEdit value)? loadingedit,
+    TResult Function(SuccessEdit value)? successedit,
+    TResult Function(ErrorEdit value)? erroredit,
+    TResult Function(Loadingdelete value)? loadingdelete,
+    TResult Function(Successdelete value)? successdelete,
+    TResult Function(Errordelete value)? errordelete,
+    TResult Function(LoadingMaps value)? loadingMaps,
+    TResult Function(SuccessMaps value)? successMaps,
+    TResult Function(AddMarker value)? addMarker,
+    TResult Function(pushEdit value)? pushEdit,
+    TResult Function(UpdateLatlng value)? updateLatlng,
+    required TResult orElse(),
+  }) {
+    if (addMarker != null) {
+      return addMarker(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddMarker implements AdressState {
+  const factory AddMarker({required final List<Marker> markers}) =
+      _$AddMarkerImpl;
+
+  List<Marker> get markers;
+  @JsonKey(ignore: true)
+  _$$AddMarkerImplCopyWith<_$AddMarkerImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$pushEditImplCopyWith<$Res> {
+  factory _$$pushEditImplCopyWith(
+          _$pushEditImpl value, $Res Function(_$pushEditImpl) then) =
+      __$$pushEditImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$pushEditImplCopyWithImpl<$Res>
+    extends _$AdressStateCopyWithImpl<$Res, _$pushEditImpl>
+    implements _$$pushEditImplCopyWith<$Res> {
+  __$$pushEditImplCopyWithImpl(
+      _$pushEditImpl _value, $Res Function(_$pushEditImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$pushEditImpl implements pushEdit {
+  const _$pushEditImpl();
+
+  @override
+  String toString() {
+    return 'AdressState.pushEdit()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$pushEditImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingAdd,
+    required TResult Function() successAdd,
+    required TResult Function(String erorr) errorAdd,
+    required TResult Function() loadingGet,
+    required TResult Function(AdressResponse adressResponse) successGet,
+    required TResult Function(String erorr) errorget,
+    required TResult Function() loadingedit,
+    required TResult Function() successedit,
+    required TResult Function(String erorr) erroredit,
+    required TResult Function() loadingdelete,
+    required TResult Function() successdelete,
+    required TResult Function(String erorr) errordelete,
+    required TResult Function() loadingMaps,
+    required TResult Function() successMaps,
+    required TResult Function(List<Marker> markers) addMarker,
+    required TResult Function() pushEdit,
+    required TResult Function() updateLatlng,
+  }) {
+    return pushEdit();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingAdd,
+    TResult? Function()? successAdd,
+    TResult? Function(String erorr)? errorAdd,
+    TResult? Function()? loadingGet,
+    TResult? Function(AdressResponse adressResponse)? successGet,
+    TResult? Function(String erorr)? errorget,
+    TResult? Function()? loadingedit,
+    TResult? Function()? successedit,
+    TResult? Function(String erorr)? erroredit,
+    TResult? Function()? loadingdelete,
+    TResult? Function()? successdelete,
+    TResult? Function(String erorr)? errordelete,
+    TResult? Function()? loadingMaps,
+    TResult? Function()? successMaps,
+    TResult? Function(List<Marker> markers)? addMarker,
+    TResult? Function()? pushEdit,
+    TResult? Function()? updateLatlng,
+  }) {
+    return pushEdit?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingAdd,
+    TResult Function()? successAdd,
+    TResult Function(String erorr)? errorAdd,
+    TResult Function()? loadingGet,
+    TResult Function(AdressResponse adressResponse)? successGet,
+    TResult Function(String erorr)? errorget,
+    TResult Function()? loadingedit,
+    TResult Function()? successedit,
+    TResult Function(String erorr)? erroredit,
+    TResult Function()? loadingdelete,
+    TResult Function()? successdelete,
+    TResult Function(String erorr)? errordelete,
+    TResult Function()? loadingMaps,
+    TResult Function()? successMaps,
+    TResult Function(List<Marker> markers)? addMarker,
+    TResult Function()? pushEdit,
+    TResult Function()? updateLatlng,
+    required TResult orElse(),
+  }) {
+    if (pushEdit != null) {
+      return pushEdit();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(LoadingAdd value) loadingAdd,
+    required TResult Function(SuccessAdd value) successAdd,
+    required TResult Function(ErrorAdd value) errorAdd,
+    required TResult Function(LoadingGet value) loadingGet,
+    required TResult Function(SuccessGet value) successGet,
+    required TResult Function(ErrorGet value) errorget,
+    required TResult Function(LoadingEdit value) loadingedit,
+    required TResult Function(SuccessEdit value) successedit,
+    required TResult Function(ErrorEdit value) erroredit,
+    required TResult Function(Loadingdelete value) loadingdelete,
+    required TResult Function(Successdelete value) successdelete,
+    required TResult Function(Errordelete value) errordelete,
+    required TResult Function(LoadingMaps value) loadingMaps,
+    required TResult Function(SuccessMaps value) successMaps,
+    required TResult Function(AddMarker value) addMarker,
+    required TResult Function(pushEdit value) pushEdit,
+    required TResult Function(UpdateLatlng value) updateLatlng,
+  }) {
+    return pushEdit(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(LoadingAdd value)? loadingAdd,
+    TResult? Function(SuccessAdd value)? successAdd,
+    TResult? Function(ErrorAdd value)? errorAdd,
+    TResult? Function(LoadingGet value)? loadingGet,
+    TResult? Function(SuccessGet value)? successGet,
+    TResult? Function(ErrorGet value)? errorget,
+    TResult? Function(LoadingEdit value)? loadingedit,
+    TResult? Function(SuccessEdit value)? successedit,
+    TResult? Function(ErrorEdit value)? erroredit,
+    TResult? Function(Loadingdelete value)? loadingdelete,
+    TResult? Function(Successdelete value)? successdelete,
+    TResult? Function(Errordelete value)? errordelete,
+    TResult? Function(LoadingMaps value)? loadingMaps,
+    TResult? Function(SuccessMaps value)? successMaps,
+    TResult? Function(AddMarker value)? addMarker,
+    TResult? Function(pushEdit value)? pushEdit,
+    TResult? Function(UpdateLatlng value)? updateLatlng,
+  }) {
+    return pushEdit?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(LoadingAdd value)? loadingAdd,
+    TResult Function(SuccessAdd value)? successAdd,
+    TResult Function(ErrorAdd value)? errorAdd,
+    TResult Function(LoadingGet value)? loadingGet,
+    TResult Function(SuccessGet value)? successGet,
+    TResult Function(ErrorGet value)? errorget,
+    TResult Function(LoadingEdit value)? loadingedit,
+    TResult Function(SuccessEdit value)? successedit,
+    TResult Function(ErrorEdit value)? erroredit,
+    TResult Function(Loadingdelete value)? loadingdelete,
+    TResult Function(Successdelete value)? successdelete,
+    TResult Function(Errordelete value)? errordelete,
+    TResult Function(LoadingMaps value)? loadingMaps,
+    TResult Function(SuccessMaps value)? successMaps,
+    TResult Function(AddMarker value)? addMarker,
+    TResult Function(pushEdit value)? pushEdit,
+    TResult Function(UpdateLatlng value)? updateLatlng,
+    required TResult orElse(),
+  }) {
+    if (pushEdit != null) {
+      return pushEdit(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class pushEdit implements AdressState {
+  const factory pushEdit() = _$pushEditImpl;
+}
+
+/// @nodoc
+abstract class _$$UpdateLatlngImplCopyWith<$Res> {
+  factory _$$UpdateLatlngImplCopyWith(
+          _$UpdateLatlngImpl value, $Res Function(_$UpdateLatlngImpl) then) =
+      __$$UpdateLatlngImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UpdateLatlngImplCopyWithImpl<$Res>
+    extends _$AdressStateCopyWithImpl<$Res, _$UpdateLatlngImpl>
+    implements _$$UpdateLatlngImplCopyWith<$Res> {
+  __$$UpdateLatlngImplCopyWithImpl(
+      _$UpdateLatlngImpl _value, $Res Function(_$UpdateLatlngImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UpdateLatlngImpl implements UpdateLatlng {
+  const _$UpdateLatlngImpl();
+
+  @override
+  String toString() {
+    return 'AdressState.updateLatlng()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UpdateLatlngImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingAdd,
+    required TResult Function() successAdd,
+    required TResult Function(String erorr) errorAdd,
+    required TResult Function() loadingGet,
+    required TResult Function(AdressResponse adressResponse) successGet,
+    required TResult Function(String erorr) errorget,
+    required TResult Function() loadingedit,
+    required TResult Function() successedit,
+    required TResult Function(String erorr) erroredit,
+    required TResult Function() loadingdelete,
+    required TResult Function() successdelete,
+    required TResult Function(String erorr) errordelete,
+    required TResult Function() loadingMaps,
+    required TResult Function() successMaps,
+    required TResult Function(List<Marker> markers) addMarker,
+    required TResult Function() pushEdit,
+    required TResult Function() updateLatlng,
+  }) {
+    return updateLatlng();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingAdd,
+    TResult? Function()? successAdd,
+    TResult? Function(String erorr)? errorAdd,
+    TResult? Function()? loadingGet,
+    TResult? Function(AdressResponse adressResponse)? successGet,
+    TResult? Function(String erorr)? errorget,
+    TResult? Function()? loadingedit,
+    TResult? Function()? successedit,
+    TResult? Function(String erorr)? erroredit,
+    TResult? Function()? loadingdelete,
+    TResult? Function()? successdelete,
+    TResult? Function(String erorr)? errordelete,
+    TResult? Function()? loadingMaps,
+    TResult? Function()? successMaps,
+    TResult? Function(List<Marker> markers)? addMarker,
+    TResult? Function()? pushEdit,
+    TResult? Function()? updateLatlng,
+  }) {
+    return updateLatlng?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingAdd,
+    TResult Function()? successAdd,
+    TResult Function(String erorr)? errorAdd,
+    TResult Function()? loadingGet,
+    TResult Function(AdressResponse adressResponse)? successGet,
+    TResult Function(String erorr)? errorget,
+    TResult Function()? loadingedit,
+    TResult Function()? successedit,
+    TResult Function(String erorr)? erroredit,
+    TResult Function()? loadingdelete,
+    TResult Function()? successdelete,
+    TResult Function(String erorr)? errordelete,
+    TResult Function()? loadingMaps,
+    TResult Function()? successMaps,
+    TResult Function(List<Marker> markers)? addMarker,
+    TResult Function()? pushEdit,
+    TResult Function()? updateLatlng,
+    required TResult orElse(),
+  }) {
+    if (updateLatlng != null) {
+      return updateLatlng();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(LoadingAdd value) loadingAdd,
+    required TResult Function(SuccessAdd value) successAdd,
+    required TResult Function(ErrorAdd value) errorAdd,
+    required TResult Function(LoadingGet value) loadingGet,
+    required TResult Function(SuccessGet value) successGet,
+    required TResult Function(ErrorGet value) errorget,
+    required TResult Function(LoadingEdit value) loadingedit,
+    required TResult Function(SuccessEdit value) successedit,
+    required TResult Function(ErrorEdit value) erroredit,
+    required TResult Function(Loadingdelete value) loadingdelete,
+    required TResult Function(Successdelete value) successdelete,
+    required TResult Function(Errordelete value) errordelete,
+    required TResult Function(LoadingMaps value) loadingMaps,
+    required TResult Function(SuccessMaps value) successMaps,
+    required TResult Function(AddMarker value) addMarker,
+    required TResult Function(pushEdit value) pushEdit,
+    required TResult Function(UpdateLatlng value) updateLatlng,
+  }) {
+    return updateLatlng(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(LoadingAdd value)? loadingAdd,
+    TResult? Function(SuccessAdd value)? successAdd,
+    TResult? Function(ErrorAdd value)? errorAdd,
+    TResult? Function(LoadingGet value)? loadingGet,
+    TResult? Function(SuccessGet value)? successGet,
+    TResult? Function(ErrorGet value)? errorget,
+    TResult? Function(LoadingEdit value)? loadingedit,
+    TResult? Function(SuccessEdit value)? successedit,
+    TResult? Function(ErrorEdit value)? erroredit,
+    TResult? Function(Loadingdelete value)? loadingdelete,
+    TResult? Function(Successdelete value)? successdelete,
+    TResult? Function(Errordelete value)? errordelete,
+    TResult? Function(LoadingMaps value)? loadingMaps,
+    TResult? Function(SuccessMaps value)? successMaps,
+    TResult? Function(AddMarker value)? addMarker,
+    TResult? Function(pushEdit value)? pushEdit,
+    TResult? Function(UpdateLatlng value)? updateLatlng,
+  }) {
+    return updateLatlng?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(LoadingAdd value)? loadingAdd,
+    TResult Function(SuccessAdd value)? successAdd,
+    TResult Function(ErrorAdd value)? errorAdd,
+    TResult Function(LoadingGet value)? loadingGet,
+    TResult Function(SuccessGet value)? successGet,
+    TResult Function(ErrorGet value)? errorget,
+    TResult Function(LoadingEdit value)? loadingedit,
+    TResult Function(SuccessEdit value)? successedit,
+    TResult Function(ErrorEdit value)? erroredit,
+    TResult Function(Loadingdelete value)? loadingdelete,
+    TResult Function(Successdelete value)? successdelete,
+    TResult Function(Errordelete value)? errordelete,
+    TResult Function(LoadingMaps value)? loadingMaps,
+    TResult Function(SuccessMaps value)? successMaps,
+    TResult Function(AddMarker value)? addMarker,
+    TResult Function(pushEdit value)? pushEdit,
+    TResult Function(UpdateLatlng value)? updateLatlng,
+    required TResult orElse(),
+  }) {
+    if (updateLatlng != null) {
+      return updateLatlng(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateLatlng implements AdressState {
+  const factory UpdateLatlng() = _$UpdateLatlngImpl;
 }

@@ -4,9 +4,11 @@ import 'package:animations/animations.dart';
 class OpenContainerWrapper extends StatelessWidget {
   const OpenContainerWrapper({
     super.key,
-    required this.child,
     required this.nextScresan,
+    required this.child,
+    this.onTap,
   });
+  final Function()? onTap;
 
   final Widget child;
   final Widget nextScresan;

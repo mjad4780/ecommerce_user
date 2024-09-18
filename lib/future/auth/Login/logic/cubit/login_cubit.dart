@@ -30,6 +30,8 @@ class LoginCubit extends Cubit<LoginState> {
           getIt<CacheHelper>()
               .saveData(key: 'id', value: loginResponse.data!.userId);
           getIt<CacheHelper>()
+              .saveData(key: 'name', value: loginResponse.data!.userName);
+          getIt<CacheHelper>()
               .saveData(key: 'email', value: loginResponse.data!.userEmail);
 
           emit(const LoginState.success());

@@ -17,18 +17,28 @@ List<String> replacListIsEnpty(List<String> data) {
 }
 
 replacMapsColorIsEnpty(List<Size> data) {
-  List<Size> datas = [];
+  List<String> datas = [];
   if (data.isNullOrEmpty()) {
     return datas;
   } else {
-    return datas = data.where((item) => item.color!.isNotEmpty).toList();
+    for (var item in data) {
+      datas.add(item.color!);
+      datas.removeWhere((item) => item == '');
+    }
+    return datas;
   }
 }
 
 replacMapsSizeIsEnpty(List<Size> data) {
+  List<String> datas = [];
+
   if (data.isNullOrEmpty()) {
-    return [];
+    return datas;
   } else {
-    return data.where((item) => item.size!.isNotEmpty).toList();
+    for (var item in data) {
+      datas.add(item.size!);
+      datas.removeWhere((item) => item == '');
+    }
+    return datas;
   }
 }

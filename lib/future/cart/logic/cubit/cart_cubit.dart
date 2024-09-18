@@ -2,6 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:ecommerce_user/future/cart/data/repo.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../core/function/AlertDialog.dart';
 import 'cart_state.dart';
 
 class CartCubit extends Cubit<CartState> {
@@ -9,10 +10,15 @@ class CartCubit extends Cubit<CartState> {
   final CartRepo _cartRepo;
   TextEditingController couponName = TextEditingController();
   //:AddCart
+  String? selectColor;
+  String? selectSize;
 
-  emitAddCart(int itemid) async {
+  emitAddCart(int itemid, BuildContext context) async {
+    if (selectColor == null && selectSize == null) {
+      return showMyDialog(context, "erorr", "please choose Size and Color");
+    }
     emit(const CartState.loadingAdd());
-    final response = await _cartRepo.addCart(itemid);
+    final response = await _cartRepo.addCart(itemid, selectColor!, selectSize!);
     response.when(success: (responsehome) {
       emit(const CartState.successAdd());
     }, failure: (error) {
