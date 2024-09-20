@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/theming/colors.dart';
+import '../../../core/helpers/spacing.dart';
 import 'custom_data_adress.dart';
 
 class GetAdressBlocBuilder extends StatelessWidget {
@@ -26,10 +27,23 @@ class GetAdressBlocBuilder extends StatelessWidget {
             );
           },
           successGet: (products) {
-            return products.data != []
+            return products.data != null
                 ? CustomDataAdress(data: products.data ?? [])
-                : const Center(
-                    child: Text('There Is Not Logation......'),
+                : Column(
+                    children: [
+                      verticalSpace(39),
+                      const Text(
+                        "My Address",
+                        style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            color: AppColor.darkOrange),
+                      ),
+                      verticalSpace(350),
+                      const Center(
+                        child: Text('There Is Not Logation......'),
+                      ),
+                    ],
                   );
           },
           errorget: (error) {

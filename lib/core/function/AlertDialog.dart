@@ -30,7 +30,7 @@ void showSuccessDialog(BuildContext context, String title) {
   );
 }
 
-Future<bool> showMyDialog(
+Future<bool> showmydialog(
     BuildContext context, String title, String body) async {
   showDialog(
     context: context,

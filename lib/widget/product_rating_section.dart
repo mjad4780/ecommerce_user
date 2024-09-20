@@ -22,9 +22,7 @@ class ProductRatingSection extends StatelessWidget {
         ),
         Text(
           "(4500 Reviews)",
-          style: Theme.of(context).textTheme.displaySmall?.copyWith(
-                fontWeight: FontWeight.w300,
-              ),
+          style: Theme.of(context).textTheme.displaySmall?.copyWith(),
         )
       ],
     );

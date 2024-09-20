@@ -1,25 +1,29 @@
-import 'package:bloc/bloc.dart';
 import 'package:ecommerce_user/future/cart/data/repo.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/function/AlertDialog.dart';
 import 'cart_state.dart';
 
 class CartCubit extends Cubit<CartState> {
-  CartCubit(this._cartRepo) : super(const CartState.initial());
+  CartCubit(
+    this._cartRepo,
+  ) : super(const CartState.initial());
   final CartRepo _cartRepo;
-  TextEditingController couponName = TextEditingController();
+
   //:AddCart
   String? selectColor;
   String? selectSize;
 
   emitAddCart(int itemid, BuildContext context) async {
     if (selectColor == null && selectSize == null) {
-      return showMyDialog(context, "erorr", "please choose Size and Color");
+      return showmydialog(context, "erorr", "please choose Size and Color");
     }
     emit(const CartState.loadingAdd());
     final response = await _cartRepo.addCart(itemid, selectColor!, selectSize!);
-    response.when(success: (responsehome) {
+    response.when(success: (responsehome) async {
+      await emitGetCart();
+
       emit(const CartState.successAdd());
     }, failure: (error) {
       emit(CartState.errorAdd(erorr: error.apiErrorModel.messege ?? ''));
@@ -41,52 +45,22 @@ class CartCubit extends Cubit<CartState> {
   emitdeleteCart(int itemid) async {
     emit(const CartState.loadingDelete());
     final response = await _cartRepo.deleteCart(itemid);
-    response.when(success: (responsehome) {
+    response.when(success: (responsehome) async {
       //    getadrees.removeWhere((element) => element.addressId == id);
-
+      await emitGetCart();
       emit(const CartState.successdelete());
     }, failure: (error) {
       emit(CartState.erorrDelete(erorr: error.apiErrorModel.messege ?? ''));
     });
   }
 
-  //:getCountCart
-  emitArchive(int itemid) async {
-    emit(const CartState.loadingCount());
-    final response = await _cartRepo.getCountCart(itemid);
-    response.when(success: (responsehome) {
-      emit(CartState.successCount(responsehome));
-    }, failure: (error) {
-      emit(CartState.erorrCount(erorr: error.apiErrorModel.messege ?? ''));
-    });
+  selectcolor(String color) {
+    selectColor = color;
+    emit(const CartState.selectColor());
   }
 
-  //:checkCoupon
-  emitcheckCoupon() async {
-    emit(const CartState.loadingCoupon());
-    final response = await _cartRepo.checkCoupon(couponName.text);
-    response.when(success: (responsehome) {
-      emit(const CartState.successCoupon());
-    }, failure: (error) {
-      emit(CartState.erorrCoupon(erorr: error.apiErrorModel.messege ?? ''));
-    });
+  selectsize(String size) {
+    selectSize = size;
+    emit(const CartState.selectsize());
   }
-
-  delete(int id) async {
-    if (countitems > 0) {
-      await emitdeleteCart(id);
-      countitems--;
-      emitGetCart();
-    } else {
-      countitems = 0;
-    }
-  }
-
-  add(int id, BuildContext context) async {
-    await emitAddCart(id, context);
-    countitems++;
-    emitGetCart();
-  }
-
-  int countitems = 0;
 }

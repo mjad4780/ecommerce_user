@@ -26,9 +26,6 @@ class HomeScrean extends StatelessWidget {
         BlocProvider(
           create: (context) => getIt<FavoriteCubit>(),
         ),
-        // BlocProvider(
-        //   create: (context) => getIt<AdressCubit>(),
-        // ),
       ],
       child: BlocConsumer<HomeCubit, HomeState>(
         listener: (context, state) {},
@@ -54,7 +51,7 @@ class HomeScrean extends StatelessWidget {
                   body: PopScope(
                       canPop: false,
                       onPopInvoked: (didPop) {
-                        showMyDialog(
+                        showmydialog(
                             context, 'warning', "Do you went to exit the app");
                       },
                       child: PageTransitionSwitcher(

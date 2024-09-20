@@ -1,5 +1,7 @@
-import 'package:bloc/bloc.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../core/function/AlertDialog.dart';
 import '../../data/repo.dart';
 import 'check_cart_state.dart';
 
@@ -7,22 +9,91 @@ class CheckCartCubit extends Cubit<CheckCartState> {
   CheckCartCubit(this._checkCartOrder) : super(const CheckCartState.initial());
 
   final CheckCartOrder _checkCartOrder;
+  TextEditingController couponName = TextEditingController();
+
+  int? selectadressId;
+  int couponId = 0;
+  int? orderType;
+  int? selectedPaymentOption;
+  String? selectadressIdS;
+
+  String? orderTypeS;
+  String? selectedPaymentOptionS;
+
 //:CheckCart
   emitCheckCart(
-      int adressid,
-      int ordertype,
-      int pricedelivery,
-      double orderprice,
-      int couponid,
-      int paymentmethod,
-      int coupondiscount) async {
+    BuildContext context,
+    int orderprice,
+  ) async {
+    if (selectedPaymentOption == null &&
+        selectadressId == null &&
+        orderType == null) {
+      return showmydialog(context, "erorr",
+          "please choose Adress  and Orders Type and order Payment ");
+    }
+
     emit(const CheckCartState.loading());
-    final response = await _checkCartOrder.checkCartOrder(adressid, ordertype,
-        pricedelivery, orderprice, couponid, paymentmethod, coupondiscount);
+    final response = await _checkCartOrder.checkCartOrder(selectadressId!,
+        orderType!, orderprice, couponId, selectedPaymentOption!);
     response.when(success: (responsehome) {
       emit(const CheckCartState.success());
     }, failure: (error) {
       emit(CheckCartState.erorr(erorr: error.apiErrorModel.messege ?? ''));
     });
   }
+
+  selectAdress(int selectAdressId, String selectAdressIdS) {
+    selectadressId = selectAdressId;
+    selectadressIdS = selectAdressIdS;
+
+    emit(const CheckCartState.selectAdress());
+  }
+
+  selectPyment(String selectPyments) {
+    if (selectPyments == 'payment card') {
+      selectedPaymentOption = 1;
+    } else {
+      selectedPaymentOption = 0;
+    }
+
+    selectedPaymentOptionS = selectPyments;
+
+    emit(const CheckCartState.selectPayment());
+  }
+
+  selectType(String selectTypeS) {
+    if (selectTypeS == 'recive') {
+      orderType = 1;
+    } else {
+      orderType = 0;
+    }
+    orderTypeS = selectTypeS;
+    emit(const CheckCartState.selectType());
+  }
+
+  int? grandTotalPrice;
+  String? message;
+  //:checkCoupon
+  emitcheckCoupon(int orderprice) async {
+    emit(const CheckCartState.loadingCoupon());
+    final response =
+        await _checkCartOrder.checkCoupon(couponName.text, orderprice);
+    response.when(success: (couponData) {
+      // message =couponData
+      grandTotalPrice = couponData.totalprice;
+      couponId = couponData.data?.couponId ?? 0;
+      emit(CheckCartState.successCoupon(couponData));
+    }, failure: (error) {
+      emit(
+          CheckCartState.erorrCoupon(erorr: error.apiErrorModel.messege ?? ''));
+    });
+  }
 }
+
+
+
+
+
+//  if (selectColor == null && selectSize == null) {
+//       return showMyDialog(context, "erorr", "please choose Size and Color");
+//     }

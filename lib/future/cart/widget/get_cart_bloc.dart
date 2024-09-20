@@ -27,10 +27,7 @@ class GetCartBlocBuilder extends StatelessWidget {
             );
           },
           successGet: (products) {
-            return
-                // ? const EmptyCart()
-                // :
-                CustomBodyCart(responseCart: products);
+            return CustomBodyCart(responseCart: products);
           },
           erorrGet: (error) {
             return const Center(child: Text('Sorry! no Items......'));

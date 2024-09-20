@@ -1,6 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../../model/get_current_cart/get_current_cart.dart';
 import '../../data/response_cart/response_cart.dart';
 
 part 'cart_state.freezed.dart';
@@ -24,14 +23,7 @@ class CartState with _$CartState {
   const factory CartState.successdelete() = Successdelete;
   const factory CartState.erorrDelete({required String erorr}) = ErorrDelete;
 
-  ///:getCountCart
-  const factory CartState.loadingCount() = LoadingCount;
-  const factory CartState.successCount(GetCurrentCart getCurrentCart) =
-      SuccessCount;
-  const factory CartState.erorrCount({required String erorr}) = ErorrCount;
-
-  ///:checkCoupon
-  const factory CartState.loadingCoupon() = LoadingCoupon;
-  const factory CartState.successCoupon() = SuccessCoupon;
-  const factory CartState.erorrCoupon({required String erorr}) = ErorrCoupon;
+  ///:select
+  const factory CartState.selectColor() = LoadingCoupon;
+  const factory CartState.selectsize() = SuccessCoupon;
 }

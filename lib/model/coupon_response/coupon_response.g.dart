@@ -8,7 +8,7 @@ part of 'coupon_response.dart';
 
 CouponResponse _$CouponResponseFromJson(Map<String, dynamic> json) =>
     CouponResponse(
-      status: json['status'] as String?,
+      totalprice: (json['TotalPrice'] as num?)?.toInt(),
       data: json['data'] == null
           ? null
           : Data.fromJson(json['data'] as Map<String, dynamic>),
@@ -16,6 +16,6 @@ CouponResponse _$CouponResponseFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$CouponResponseToJson(CouponResponse instance) =>
     <String, dynamic>{
-      'status': instance.status,
+      'totalprice': instance.totalprice,
       'data': instance.data,
     };

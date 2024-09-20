@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
@@ -37,7 +35,6 @@ class HomeCubit extends Cubit<HomeState> {
     emit(const HomeState.loadingHome());
     final response = await homeRepo.homeData();
     response.when(success: (responsehome) {
-      log(responsehome.categories!.length.toString());
       emit(HomeState.successHome(responseHome: responsehome));
     }, failure: (error) {
       emit(HomeState.errorHome(erorr: error.apiErrorModel.messege ?? ''));

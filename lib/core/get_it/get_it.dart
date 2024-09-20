@@ -3,8 +3,7 @@ import 'package:ecommerce_user/future/archive/logic/cubit/archive_cubit.dart';
 import 'package:ecommerce_user/future/auth/sign_up/logic/cubit/sign_up_cubit.dart';
 import 'package:ecommerce_user/future/auth/verfyCode/data/data_verfycode.dart';
 import 'package:ecommerce_user/future/cart/logic/cubit/cart_cubit.dart';
-import 'package:ecommerce_user/future/check_cart_order/data/repo.dart';
-import 'package:ecommerce_user/future/check_cart_order/logic/cubit/check_cart_cubit.dart';
+
 import 'package:ecommerce_user/future/favorite/logic/cubit/favorite_cubit.dart';
 import 'package:ecommerce_user/future/home/data/repo.dart';
 import 'package:ecommerce_user/future/home/logic/cubit/home_cubit.dart';
@@ -25,6 +24,8 @@ import '../../future/auth/forgetpassword/logic/cubit/forget_password_cubit.dart'
 import '../../future/auth/sign_up/data/data_sigin_up.dart';
 import '../../future/auth/verfyCode/logic/cubit/verfy_code_cubit.dart';
 import '../../future/cart/data/repo.dart';
+import '../../future/check_cart_order/data/repo.dart';
+import '../../future/check_cart_order/logic/cubit/check_cart_cubit.dart';
 import '../../future/favorite/data/repo.dart';
 import '../../future/item_categories/logic/cubit/item_categories_cubit.dart';
 import '../../future/offers/data/repo.dart';
@@ -64,8 +65,11 @@ void setupServise() {
   getIt.registerFactory<ArchiveCubit>(() => ArchiveCubit(getIt()));
 
   // Cart
+
   getIt.registerLazySingleton<CartRepo>(() => CartRepo(getIt()));
-  getIt.registerFactory<CartCubit>(() => CartCubit(getIt()));
+  getIt.registerFactory<CartCubit>(() => CartCubit(
+        getIt(),
+      ));
 
   // CheckCartOrder
   getIt.registerLazySingleton<CheckCartOrder>(() => CheckCartOrder(getIt()));

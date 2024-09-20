@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../core/animation/open_container_wrapper.dart';
 import '../../core/class/cache_helper.dart';
+
 import '../../core/get_it/get_it.dart';
 import '../../core/theming/colors.dart';
 import '../../core/widgets/navigation_tile.dart';
@@ -67,7 +68,7 @@ class Setting extends StatelessWidget {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30)),
             ),
-            onPressed: () {
+            onPressed: () async {
               // context.userProvider.logOutUser();
               // Get.offAll(const LoginScreen());
             },

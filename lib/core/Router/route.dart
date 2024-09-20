@@ -45,6 +45,10 @@ final GoRouter router = GoRouter(routes: [
       pageBuilder: (context, state) =>
           myCustomtransitionPage(const CheckCodeForgetPassword(), state)),
   GoRoute(
+      path: "/HomeScrean",
+      pageBuilder: (context, state) =>
+          myCustomtransitionPage(const HomeScrean(), state)),
+  GoRoute(
       path: "/Home",
       pageBuilder: (context, state) =>
           myCustomtransitionPage(const Home(), state)),

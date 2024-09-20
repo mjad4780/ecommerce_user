@@ -5,7 +5,6 @@ import '../../../../core/function/formDataPost.dart';
 import '../../../../core/networking/api_error_handler.dart';
 import '../../../../core/networking/api_result.dart';
 import '../../../../core/networking/api_service.dart';
-import '../../../model/coupon_response/coupon_response.dart';
 import '../../../model/get_current_cart/get_current_cart.dart';
 import '../../../model/response_status/response_status.dart';
 import 'response_cart/response_cart.dart';
@@ -82,19 +81,4 @@ class CartRepo {
   }
 
   /// :checkCoupon
-
-  Future<ApiResult<CouponResponse>> checkCoupon(
-    String couponName,
-  ) async {
-    try {
-      Map<String, dynamic> map = {
-        "coupon": couponName,
-      };
-
-      final response = await _apiService.checkCoupon(formDataPost(map));
-      return ApiResult.success(response);
-    } catch (e) {
-      return ApiResult.failure(ErrorHandler.handle(e));
-    }
-  }
 }

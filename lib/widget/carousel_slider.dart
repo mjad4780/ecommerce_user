@@ -4,7 +4,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../core/networking/api_constants.dart';
 import '../core/theming/colors.dart';
-import '../future/item_categories/widget/custom_network_image.dart';
+import 'custom_network_image.dart';
 
 class CarouselSlider extends StatefulWidget {
   const CarouselSlider({

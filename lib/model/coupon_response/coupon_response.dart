@@ -7,10 +7,10 @@ part 'coupon_response.g.dart';
 
 @JsonSerializable()
 class CouponResponse {
-  String? status;
+  int? totalprice;
   Data? data;
 
-  CouponResponse({this.status, this.data});
+  CouponResponse({this.totalprice, this.data});
 
   factory CouponResponse.fromJson(Map<String, dynamic> json) {
     return _$CouponResponseFromJson(json);
@@ -27,5 +27,5 @@ class CouponResponse {
   }
 
   @override
-  int get hashCode => status.hashCode ^ data.hashCode;
+  int get hashCode => totalprice.hashCode ^ data.hashCode;
 }

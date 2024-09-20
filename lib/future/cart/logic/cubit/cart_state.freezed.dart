@@ -28,9 +28,9 @@ mixin _$CartState {
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrDelete,
-    required TResult Function() loadingCount,
-    required TResult Function(GetCurrentCart getCurrentCart) successCount,
-    required TResult Function(String erorr) erorrCount,
+    required TResult Function() loadingCheckCart,
+    required TResult Function() successCheckCart,
+    required TResult Function(String erorr) erorrCheckCart,
     required TResult Function() loadingCoupon,
     required TResult Function() successCoupon,
     required TResult Function(String erorr) erorrCoupon,
@@ -48,9 +48,9 @@ mixin _$CartState {
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? loadingCount,
-    TResult? Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult? Function(String erorr)? erorrCount,
+    TResult? Function()? loadingCheckCart,
+    TResult? Function()? successCheckCart,
+    TResult? Function(String erorr)? erorrCheckCart,
     TResult? Function()? loadingCoupon,
     TResult? Function()? successCoupon,
     TResult? Function(String erorr)? erorrCoupon,
@@ -68,9 +68,9 @@ mixin _$CartState {
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrDelete,
-    TResult Function()? loadingCount,
-    TResult Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult Function(String erorr)? erorrCount,
+    TResult Function()? loadingCheckCart,
+    TResult Function()? successCheckCart,
+    TResult Function(String erorr)? erorrCheckCart,
     TResult Function()? loadingCoupon,
     TResult Function()? successCoupon,
     TResult Function(String erorr)? erorrCoupon,
@@ -89,9 +89,9 @@ mixin _$CartState {
     required TResult Function(LoadingDelete value) loadingDelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCount value) loadingCount,
-    required TResult Function(SuccessCount value) successCount,
-    required TResult Function(ErorrCount value) erorrCount,
+    required TResult Function(LoadingCheckCart value) loadingCheckCart,
+    required TResult Function(SuccessCheckCart value) successCheckCart,
+    required TResult Function(ErorrCheckCart value) erorrCheckCart,
     required TResult Function(LoadingCoupon value) loadingCoupon,
     required TResult Function(SuccessCoupon value) successCoupon,
     required TResult Function(ErorrCoupon value) erorrCoupon,
@@ -109,9 +109,9 @@ mixin _$CartState {
     TResult? Function(LoadingDelete value)? loadingDelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCount value)? loadingCount,
-    TResult? Function(SuccessCount value)? successCount,
-    TResult? Function(ErorrCount value)? erorrCount,
+    TResult? Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult? Function(SuccessCheckCart value)? successCheckCart,
+    TResult? Function(ErorrCheckCart value)? erorrCheckCart,
     TResult? Function(LoadingCoupon value)? loadingCoupon,
     TResult? Function(SuccessCoupon value)? successCoupon,
     TResult? Function(ErorrCoupon value)? erorrCoupon,
@@ -129,9 +129,9 @@ mixin _$CartState {
     TResult Function(LoadingDelete value)? loadingDelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCount value)? loadingCount,
-    TResult Function(SuccessCount value)? successCount,
-    TResult Function(ErorrCount value)? erorrCount,
+    TResult Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult Function(SuccessCheckCart value)? successCheckCart,
+    TResult Function(ErorrCheckCart value)? erorrCheckCart,
     TResult Function(LoadingCoupon value)? loadingCoupon,
     TResult Function(SuccessCoupon value)? successCoupon,
     TResult Function(ErorrCoupon value)? erorrCoupon,
@@ -205,9 +205,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrDelete,
-    required TResult Function() loadingCount,
-    required TResult Function(GetCurrentCart getCurrentCart) successCount,
-    required TResult Function(String erorr) erorrCount,
+    required TResult Function() loadingCheckCart,
+    required TResult Function() successCheckCart,
+    required TResult Function(String erorr) erorrCheckCart,
     required TResult Function() loadingCoupon,
     required TResult Function() successCoupon,
     required TResult Function(String erorr) erorrCoupon,
@@ -228,9 +228,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? loadingCount,
-    TResult? Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult? Function(String erorr)? erorrCount,
+    TResult? Function()? loadingCheckCart,
+    TResult? Function()? successCheckCart,
+    TResult? Function(String erorr)? erorrCheckCart,
     TResult? Function()? loadingCoupon,
     TResult? Function()? successCoupon,
     TResult? Function(String erorr)? erorrCoupon,
@@ -251,9 +251,9 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrDelete,
-    TResult Function()? loadingCount,
-    TResult Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult Function(String erorr)? erorrCount,
+    TResult Function()? loadingCheckCart,
+    TResult Function()? successCheckCart,
+    TResult Function(String erorr)? erorrCheckCart,
     TResult Function()? loadingCoupon,
     TResult Function()? successCoupon,
     TResult Function(String erorr)? erorrCoupon,
@@ -278,9 +278,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function(LoadingDelete value) loadingDelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCount value) loadingCount,
-    required TResult Function(SuccessCount value) successCount,
-    required TResult Function(ErorrCount value) erorrCount,
+    required TResult Function(LoadingCheckCart value) loadingCheckCart,
+    required TResult Function(SuccessCheckCart value) successCheckCart,
+    required TResult Function(ErorrCheckCart value) erorrCheckCart,
     required TResult Function(LoadingCoupon value) loadingCoupon,
     required TResult Function(SuccessCoupon value) successCoupon,
     required TResult Function(ErorrCoupon value) erorrCoupon,
@@ -301,9 +301,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(LoadingDelete value)? loadingDelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCount value)? loadingCount,
-    TResult? Function(SuccessCount value)? successCount,
-    TResult? Function(ErorrCount value)? erorrCount,
+    TResult? Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult? Function(SuccessCheckCart value)? successCheckCart,
+    TResult? Function(ErorrCheckCart value)? erorrCheckCart,
     TResult? Function(LoadingCoupon value)? loadingCoupon,
     TResult? Function(SuccessCoupon value)? successCoupon,
     TResult? Function(ErorrCoupon value)? erorrCoupon,
@@ -324,9 +324,9 @@ class _$InitialImpl implements _Initial {
     TResult Function(LoadingDelete value)? loadingDelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCount value)? loadingCount,
-    TResult Function(SuccessCount value)? successCount,
-    TResult Function(ErorrCount value)? erorrCount,
+    TResult Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult Function(SuccessCheckCart value)? successCheckCart,
+    TResult Function(ErorrCheckCart value)? erorrCheckCart,
     TResult Function(LoadingCoupon value)? loadingCoupon,
     TResult Function(SuccessCoupon value)? successCoupon,
     TResult Function(ErorrCoupon value)? erorrCoupon,
@@ -391,9 +391,9 @@ class _$LoadingAddImpl implements LoadingAdd {
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrDelete,
-    required TResult Function() loadingCount,
-    required TResult Function(GetCurrentCart getCurrentCart) successCount,
-    required TResult Function(String erorr) erorrCount,
+    required TResult Function() loadingCheckCart,
+    required TResult Function() successCheckCart,
+    required TResult Function(String erorr) erorrCheckCart,
     required TResult Function() loadingCoupon,
     required TResult Function() successCoupon,
     required TResult Function(String erorr) erorrCoupon,
@@ -414,9 +414,9 @@ class _$LoadingAddImpl implements LoadingAdd {
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? loadingCount,
-    TResult? Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult? Function(String erorr)? erorrCount,
+    TResult? Function()? loadingCheckCart,
+    TResult? Function()? successCheckCart,
+    TResult? Function(String erorr)? erorrCheckCart,
     TResult? Function()? loadingCoupon,
     TResult? Function()? successCoupon,
     TResult? Function(String erorr)? erorrCoupon,
@@ -437,9 +437,9 @@ class _$LoadingAddImpl implements LoadingAdd {
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrDelete,
-    TResult Function()? loadingCount,
-    TResult Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult Function(String erorr)? erorrCount,
+    TResult Function()? loadingCheckCart,
+    TResult Function()? successCheckCart,
+    TResult Function(String erorr)? erorrCheckCart,
     TResult Function()? loadingCoupon,
     TResult Function()? successCoupon,
     TResult Function(String erorr)? erorrCoupon,
@@ -464,9 +464,9 @@ class _$LoadingAddImpl implements LoadingAdd {
     required TResult Function(LoadingDelete value) loadingDelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCount value) loadingCount,
-    required TResult Function(SuccessCount value) successCount,
-    required TResult Function(ErorrCount value) erorrCount,
+    required TResult Function(LoadingCheckCart value) loadingCheckCart,
+    required TResult Function(SuccessCheckCart value) successCheckCart,
+    required TResult Function(ErorrCheckCart value) erorrCheckCart,
     required TResult Function(LoadingCoupon value) loadingCoupon,
     required TResult Function(SuccessCoupon value) successCoupon,
     required TResult Function(ErorrCoupon value) erorrCoupon,
@@ -487,9 +487,9 @@ class _$LoadingAddImpl implements LoadingAdd {
     TResult? Function(LoadingDelete value)? loadingDelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCount value)? loadingCount,
-    TResult? Function(SuccessCount value)? successCount,
-    TResult? Function(ErorrCount value)? erorrCount,
+    TResult? Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult? Function(SuccessCheckCart value)? successCheckCart,
+    TResult? Function(ErorrCheckCart value)? erorrCheckCart,
     TResult? Function(LoadingCoupon value)? loadingCoupon,
     TResult? Function(SuccessCoupon value)? successCoupon,
     TResult? Function(ErorrCoupon value)? erorrCoupon,
@@ -510,9 +510,9 @@ class _$LoadingAddImpl implements LoadingAdd {
     TResult Function(LoadingDelete value)? loadingDelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCount value)? loadingCount,
-    TResult Function(SuccessCount value)? successCount,
-    TResult Function(ErorrCount value)? erorrCount,
+    TResult Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult Function(SuccessCheckCart value)? successCheckCart,
+    TResult Function(ErorrCheckCart value)? erorrCheckCart,
     TResult Function(LoadingCoupon value)? loadingCoupon,
     TResult Function(SuccessCoupon value)? successCoupon,
     TResult Function(ErorrCoupon value)? erorrCoupon,
@@ -577,9 +577,9 @@ class _$SuccessAddImpl implements SuccessAdd {
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrDelete,
-    required TResult Function() loadingCount,
-    required TResult Function(GetCurrentCart getCurrentCart) successCount,
-    required TResult Function(String erorr) erorrCount,
+    required TResult Function() loadingCheckCart,
+    required TResult Function() successCheckCart,
+    required TResult Function(String erorr) erorrCheckCart,
     required TResult Function() loadingCoupon,
     required TResult Function() successCoupon,
     required TResult Function(String erorr) erorrCoupon,
@@ -600,9 +600,9 @@ class _$SuccessAddImpl implements SuccessAdd {
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? loadingCount,
-    TResult? Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult? Function(String erorr)? erorrCount,
+    TResult? Function()? loadingCheckCart,
+    TResult? Function()? successCheckCart,
+    TResult? Function(String erorr)? erorrCheckCart,
     TResult? Function()? loadingCoupon,
     TResult? Function()? successCoupon,
     TResult? Function(String erorr)? erorrCoupon,
@@ -623,9 +623,9 @@ class _$SuccessAddImpl implements SuccessAdd {
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrDelete,
-    TResult Function()? loadingCount,
-    TResult Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult Function(String erorr)? erorrCount,
+    TResult Function()? loadingCheckCart,
+    TResult Function()? successCheckCart,
+    TResult Function(String erorr)? erorrCheckCart,
     TResult Function()? loadingCoupon,
     TResult Function()? successCoupon,
     TResult Function(String erorr)? erorrCoupon,
@@ -650,9 +650,9 @@ class _$SuccessAddImpl implements SuccessAdd {
     required TResult Function(LoadingDelete value) loadingDelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCount value) loadingCount,
-    required TResult Function(SuccessCount value) successCount,
-    required TResult Function(ErorrCount value) erorrCount,
+    required TResult Function(LoadingCheckCart value) loadingCheckCart,
+    required TResult Function(SuccessCheckCart value) successCheckCart,
+    required TResult Function(ErorrCheckCart value) erorrCheckCart,
     required TResult Function(LoadingCoupon value) loadingCoupon,
     required TResult Function(SuccessCoupon value) successCoupon,
     required TResult Function(ErorrCoupon value) erorrCoupon,
@@ -673,9 +673,9 @@ class _$SuccessAddImpl implements SuccessAdd {
     TResult? Function(LoadingDelete value)? loadingDelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCount value)? loadingCount,
-    TResult? Function(SuccessCount value)? successCount,
-    TResult? Function(ErorrCount value)? erorrCount,
+    TResult? Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult? Function(SuccessCheckCart value)? successCheckCart,
+    TResult? Function(ErorrCheckCart value)? erorrCheckCart,
     TResult? Function(LoadingCoupon value)? loadingCoupon,
     TResult? Function(SuccessCoupon value)? successCoupon,
     TResult? Function(ErorrCoupon value)? erorrCoupon,
@@ -696,9 +696,9 @@ class _$SuccessAddImpl implements SuccessAdd {
     TResult Function(LoadingDelete value)? loadingDelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCount value)? loadingCount,
-    TResult Function(SuccessCount value)? successCount,
-    TResult Function(ErorrCount value)? erorrCount,
+    TResult Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult Function(SuccessCheckCart value)? successCheckCart,
+    TResult Function(ErorrCheckCart value)? erorrCheckCart,
     TResult Function(LoadingCoupon value)? loadingCoupon,
     TResult Function(SuccessCoupon value)? successCoupon,
     TResult Function(ErorrCoupon value)? erorrCoupon,
@@ -789,9 +789,9 @@ class _$ErrorAddImpl implements ErrorAdd {
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrDelete,
-    required TResult Function() loadingCount,
-    required TResult Function(GetCurrentCart getCurrentCart) successCount,
-    required TResult Function(String erorr) erorrCount,
+    required TResult Function() loadingCheckCart,
+    required TResult Function() successCheckCart,
+    required TResult Function(String erorr) erorrCheckCart,
     required TResult Function() loadingCoupon,
     required TResult Function() successCoupon,
     required TResult Function(String erorr) erorrCoupon,
@@ -812,9 +812,9 @@ class _$ErrorAddImpl implements ErrorAdd {
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? loadingCount,
-    TResult? Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult? Function(String erorr)? erorrCount,
+    TResult? Function()? loadingCheckCart,
+    TResult? Function()? successCheckCart,
+    TResult? Function(String erorr)? erorrCheckCart,
     TResult? Function()? loadingCoupon,
     TResult? Function()? successCoupon,
     TResult? Function(String erorr)? erorrCoupon,
@@ -835,9 +835,9 @@ class _$ErrorAddImpl implements ErrorAdd {
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrDelete,
-    TResult Function()? loadingCount,
-    TResult Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult Function(String erorr)? erorrCount,
+    TResult Function()? loadingCheckCart,
+    TResult Function()? successCheckCart,
+    TResult Function(String erorr)? erorrCheckCart,
     TResult Function()? loadingCoupon,
     TResult Function()? successCoupon,
     TResult Function(String erorr)? erorrCoupon,
@@ -862,9 +862,9 @@ class _$ErrorAddImpl implements ErrorAdd {
     required TResult Function(LoadingDelete value) loadingDelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCount value) loadingCount,
-    required TResult Function(SuccessCount value) successCount,
-    required TResult Function(ErorrCount value) erorrCount,
+    required TResult Function(LoadingCheckCart value) loadingCheckCart,
+    required TResult Function(SuccessCheckCart value) successCheckCart,
+    required TResult Function(ErorrCheckCart value) erorrCheckCart,
     required TResult Function(LoadingCoupon value) loadingCoupon,
     required TResult Function(SuccessCoupon value) successCoupon,
     required TResult Function(ErorrCoupon value) erorrCoupon,
@@ -885,9 +885,9 @@ class _$ErrorAddImpl implements ErrorAdd {
     TResult? Function(LoadingDelete value)? loadingDelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCount value)? loadingCount,
-    TResult? Function(SuccessCount value)? successCount,
-    TResult? Function(ErorrCount value)? erorrCount,
+    TResult? Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult? Function(SuccessCheckCart value)? successCheckCart,
+    TResult? Function(ErorrCheckCart value)? erorrCheckCart,
     TResult? Function(LoadingCoupon value)? loadingCoupon,
     TResult? Function(SuccessCoupon value)? successCoupon,
     TResult? Function(ErorrCoupon value)? erorrCoupon,
@@ -908,9 +908,9 @@ class _$ErrorAddImpl implements ErrorAdd {
     TResult Function(LoadingDelete value)? loadingDelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCount value)? loadingCount,
-    TResult Function(SuccessCount value)? successCount,
-    TResult Function(ErorrCount value)? erorrCount,
+    TResult Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult Function(SuccessCheckCart value)? successCheckCart,
+    TResult Function(ErorrCheckCart value)? erorrCheckCart,
     TResult Function(LoadingCoupon value)? loadingCoupon,
     TResult Function(SuccessCoupon value)? successCoupon,
     TResult Function(ErorrCoupon value)? erorrCoupon,
@@ -980,9 +980,9 @@ class _$LoadingGetImpl implements LoadingGet {
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrDelete,
-    required TResult Function() loadingCount,
-    required TResult Function(GetCurrentCart getCurrentCart) successCount,
-    required TResult Function(String erorr) erorrCount,
+    required TResult Function() loadingCheckCart,
+    required TResult Function() successCheckCart,
+    required TResult Function(String erorr) erorrCheckCart,
     required TResult Function() loadingCoupon,
     required TResult Function() successCoupon,
     required TResult Function(String erorr) erorrCoupon,
@@ -1003,9 +1003,9 @@ class _$LoadingGetImpl implements LoadingGet {
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? loadingCount,
-    TResult? Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult? Function(String erorr)? erorrCount,
+    TResult? Function()? loadingCheckCart,
+    TResult? Function()? successCheckCart,
+    TResult? Function(String erorr)? erorrCheckCart,
     TResult? Function()? loadingCoupon,
     TResult? Function()? successCoupon,
     TResult? Function(String erorr)? erorrCoupon,
@@ -1026,9 +1026,9 @@ class _$LoadingGetImpl implements LoadingGet {
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrDelete,
-    TResult Function()? loadingCount,
-    TResult Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult Function(String erorr)? erorrCount,
+    TResult Function()? loadingCheckCart,
+    TResult Function()? successCheckCart,
+    TResult Function(String erorr)? erorrCheckCart,
     TResult Function()? loadingCoupon,
     TResult Function()? successCoupon,
     TResult Function(String erorr)? erorrCoupon,
@@ -1053,9 +1053,9 @@ class _$LoadingGetImpl implements LoadingGet {
     required TResult Function(LoadingDelete value) loadingDelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCount value) loadingCount,
-    required TResult Function(SuccessCount value) successCount,
-    required TResult Function(ErorrCount value) erorrCount,
+    required TResult Function(LoadingCheckCart value) loadingCheckCart,
+    required TResult Function(SuccessCheckCart value) successCheckCart,
+    required TResult Function(ErorrCheckCart value) erorrCheckCart,
     required TResult Function(LoadingCoupon value) loadingCoupon,
     required TResult Function(SuccessCoupon value) successCoupon,
     required TResult Function(ErorrCoupon value) erorrCoupon,
@@ -1076,9 +1076,9 @@ class _$LoadingGetImpl implements LoadingGet {
     TResult? Function(LoadingDelete value)? loadingDelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCount value)? loadingCount,
-    TResult? Function(SuccessCount value)? successCount,
-    TResult? Function(ErorrCount value)? erorrCount,
+    TResult? Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult? Function(SuccessCheckCart value)? successCheckCart,
+    TResult? Function(ErorrCheckCart value)? erorrCheckCart,
     TResult? Function(LoadingCoupon value)? loadingCoupon,
     TResult? Function(SuccessCoupon value)? successCoupon,
     TResult? Function(ErorrCoupon value)? erorrCoupon,
@@ -1099,9 +1099,9 @@ class _$LoadingGetImpl implements LoadingGet {
     TResult Function(LoadingDelete value)? loadingDelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCount value)? loadingCount,
-    TResult Function(SuccessCount value)? successCount,
-    TResult Function(ErorrCount value)? erorrCount,
+    TResult Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult Function(SuccessCheckCart value)? successCheckCart,
+    TResult Function(ErorrCheckCart value)? erorrCheckCart,
     TResult Function(LoadingCoupon value)? loadingCoupon,
     TResult Function(SuccessCoupon value)? successCoupon,
     TResult Function(ErorrCoupon value)? erorrCoupon,
@@ -1193,9 +1193,9 @@ class _$SuccessGetImpl implements SuccessGet {
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrDelete,
-    required TResult Function() loadingCount,
-    required TResult Function(GetCurrentCart getCurrentCart) successCount,
-    required TResult Function(String erorr) erorrCount,
+    required TResult Function() loadingCheckCart,
+    required TResult Function() successCheckCart,
+    required TResult Function(String erorr) erorrCheckCart,
     required TResult Function() loadingCoupon,
     required TResult Function() successCoupon,
     required TResult Function(String erorr) erorrCoupon,
@@ -1216,9 +1216,9 @@ class _$SuccessGetImpl implements SuccessGet {
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? loadingCount,
-    TResult? Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult? Function(String erorr)? erorrCount,
+    TResult? Function()? loadingCheckCart,
+    TResult? Function()? successCheckCart,
+    TResult? Function(String erorr)? erorrCheckCart,
     TResult? Function()? loadingCoupon,
     TResult? Function()? successCoupon,
     TResult? Function(String erorr)? erorrCoupon,
@@ -1239,9 +1239,9 @@ class _$SuccessGetImpl implements SuccessGet {
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrDelete,
-    TResult Function()? loadingCount,
-    TResult Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult Function(String erorr)? erorrCount,
+    TResult Function()? loadingCheckCart,
+    TResult Function()? successCheckCart,
+    TResult Function(String erorr)? erorrCheckCart,
     TResult Function()? loadingCoupon,
     TResult Function()? successCoupon,
     TResult Function(String erorr)? erorrCoupon,
@@ -1266,9 +1266,9 @@ class _$SuccessGetImpl implements SuccessGet {
     required TResult Function(LoadingDelete value) loadingDelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCount value) loadingCount,
-    required TResult Function(SuccessCount value) successCount,
-    required TResult Function(ErorrCount value) erorrCount,
+    required TResult Function(LoadingCheckCart value) loadingCheckCart,
+    required TResult Function(SuccessCheckCart value) successCheckCart,
+    required TResult Function(ErorrCheckCart value) erorrCheckCart,
     required TResult Function(LoadingCoupon value) loadingCoupon,
     required TResult Function(SuccessCoupon value) successCoupon,
     required TResult Function(ErorrCoupon value) erorrCoupon,
@@ -1289,9 +1289,9 @@ class _$SuccessGetImpl implements SuccessGet {
     TResult? Function(LoadingDelete value)? loadingDelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCount value)? loadingCount,
-    TResult? Function(SuccessCount value)? successCount,
-    TResult? Function(ErorrCount value)? erorrCount,
+    TResult? Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult? Function(SuccessCheckCart value)? successCheckCart,
+    TResult? Function(ErorrCheckCart value)? erorrCheckCart,
     TResult? Function(LoadingCoupon value)? loadingCoupon,
     TResult? Function(SuccessCoupon value)? successCoupon,
     TResult? Function(ErorrCoupon value)? erorrCoupon,
@@ -1312,9 +1312,9 @@ class _$SuccessGetImpl implements SuccessGet {
     TResult Function(LoadingDelete value)? loadingDelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCount value)? loadingCount,
-    TResult Function(SuccessCount value)? successCount,
-    TResult Function(ErorrCount value)? erorrCount,
+    TResult Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult Function(SuccessCheckCart value)? successCheckCart,
+    TResult Function(ErorrCheckCart value)? erorrCheckCart,
     TResult Function(LoadingCoupon value)? loadingCoupon,
     TResult Function(SuccessCoupon value)? successCoupon,
     TResult Function(ErorrCoupon value)? erorrCoupon,
@@ -1410,9 +1410,9 @@ class _$ErorrGetImpl implements ErorrGet {
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrDelete,
-    required TResult Function() loadingCount,
-    required TResult Function(GetCurrentCart getCurrentCart) successCount,
-    required TResult Function(String erorr) erorrCount,
+    required TResult Function() loadingCheckCart,
+    required TResult Function() successCheckCart,
+    required TResult Function(String erorr) erorrCheckCart,
     required TResult Function() loadingCoupon,
     required TResult Function() successCoupon,
     required TResult Function(String erorr) erorrCoupon,
@@ -1433,9 +1433,9 @@ class _$ErorrGetImpl implements ErorrGet {
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? loadingCount,
-    TResult? Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult? Function(String erorr)? erorrCount,
+    TResult? Function()? loadingCheckCart,
+    TResult? Function()? successCheckCart,
+    TResult? Function(String erorr)? erorrCheckCart,
     TResult? Function()? loadingCoupon,
     TResult? Function()? successCoupon,
     TResult? Function(String erorr)? erorrCoupon,
@@ -1456,9 +1456,9 @@ class _$ErorrGetImpl implements ErorrGet {
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrDelete,
-    TResult Function()? loadingCount,
-    TResult Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult Function(String erorr)? erorrCount,
+    TResult Function()? loadingCheckCart,
+    TResult Function()? successCheckCart,
+    TResult Function(String erorr)? erorrCheckCart,
     TResult Function()? loadingCoupon,
     TResult Function()? successCoupon,
     TResult Function(String erorr)? erorrCoupon,
@@ -1483,9 +1483,9 @@ class _$ErorrGetImpl implements ErorrGet {
     required TResult Function(LoadingDelete value) loadingDelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCount value) loadingCount,
-    required TResult Function(SuccessCount value) successCount,
-    required TResult Function(ErorrCount value) erorrCount,
+    required TResult Function(LoadingCheckCart value) loadingCheckCart,
+    required TResult Function(SuccessCheckCart value) successCheckCart,
+    required TResult Function(ErorrCheckCart value) erorrCheckCart,
     required TResult Function(LoadingCoupon value) loadingCoupon,
     required TResult Function(SuccessCoupon value) successCoupon,
     required TResult Function(ErorrCoupon value) erorrCoupon,
@@ -1506,9 +1506,9 @@ class _$ErorrGetImpl implements ErorrGet {
     TResult? Function(LoadingDelete value)? loadingDelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCount value)? loadingCount,
-    TResult? Function(SuccessCount value)? successCount,
-    TResult? Function(ErorrCount value)? erorrCount,
+    TResult? Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult? Function(SuccessCheckCart value)? successCheckCart,
+    TResult? Function(ErorrCheckCart value)? erorrCheckCart,
     TResult? Function(LoadingCoupon value)? loadingCoupon,
     TResult? Function(SuccessCoupon value)? successCoupon,
     TResult? Function(ErorrCoupon value)? erorrCoupon,
@@ -1529,9 +1529,9 @@ class _$ErorrGetImpl implements ErorrGet {
     TResult Function(LoadingDelete value)? loadingDelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCount value)? loadingCount,
-    TResult Function(SuccessCount value)? successCount,
-    TResult Function(ErorrCount value)? erorrCount,
+    TResult Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult Function(SuccessCheckCart value)? successCheckCart,
+    TResult Function(ErorrCheckCart value)? erorrCheckCart,
     TResult Function(LoadingCoupon value)? loadingCoupon,
     TResult Function(SuccessCoupon value)? successCoupon,
     TResult Function(ErorrCoupon value)? erorrCoupon,
@@ -1601,9 +1601,9 @@ class _$LoadingDeleteImpl implements LoadingDelete {
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrDelete,
-    required TResult Function() loadingCount,
-    required TResult Function(GetCurrentCart getCurrentCart) successCount,
-    required TResult Function(String erorr) erorrCount,
+    required TResult Function() loadingCheckCart,
+    required TResult Function() successCheckCart,
+    required TResult Function(String erorr) erorrCheckCart,
     required TResult Function() loadingCoupon,
     required TResult Function() successCoupon,
     required TResult Function(String erorr) erorrCoupon,
@@ -1624,9 +1624,9 @@ class _$LoadingDeleteImpl implements LoadingDelete {
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? loadingCount,
-    TResult? Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult? Function(String erorr)? erorrCount,
+    TResult? Function()? loadingCheckCart,
+    TResult? Function()? successCheckCart,
+    TResult? Function(String erorr)? erorrCheckCart,
     TResult? Function()? loadingCoupon,
     TResult? Function()? successCoupon,
     TResult? Function(String erorr)? erorrCoupon,
@@ -1647,9 +1647,9 @@ class _$LoadingDeleteImpl implements LoadingDelete {
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrDelete,
-    TResult Function()? loadingCount,
-    TResult Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult Function(String erorr)? erorrCount,
+    TResult Function()? loadingCheckCart,
+    TResult Function()? successCheckCart,
+    TResult Function(String erorr)? erorrCheckCart,
     TResult Function()? loadingCoupon,
     TResult Function()? successCoupon,
     TResult Function(String erorr)? erorrCoupon,
@@ -1674,9 +1674,9 @@ class _$LoadingDeleteImpl implements LoadingDelete {
     required TResult Function(LoadingDelete value) loadingDelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCount value) loadingCount,
-    required TResult Function(SuccessCount value) successCount,
-    required TResult Function(ErorrCount value) erorrCount,
+    required TResult Function(LoadingCheckCart value) loadingCheckCart,
+    required TResult Function(SuccessCheckCart value) successCheckCart,
+    required TResult Function(ErorrCheckCart value) erorrCheckCart,
     required TResult Function(LoadingCoupon value) loadingCoupon,
     required TResult Function(SuccessCoupon value) successCoupon,
     required TResult Function(ErorrCoupon value) erorrCoupon,
@@ -1697,9 +1697,9 @@ class _$LoadingDeleteImpl implements LoadingDelete {
     TResult? Function(LoadingDelete value)? loadingDelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCount value)? loadingCount,
-    TResult? Function(SuccessCount value)? successCount,
-    TResult? Function(ErorrCount value)? erorrCount,
+    TResult? Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult? Function(SuccessCheckCart value)? successCheckCart,
+    TResult? Function(ErorrCheckCart value)? erorrCheckCart,
     TResult? Function(LoadingCoupon value)? loadingCoupon,
     TResult? Function(SuccessCoupon value)? successCoupon,
     TResult? Function(ErorrCoupon value)? erorrCoupon,
@@ -1720,9 +1720,9 @@ class _$LoadingDeleteImpl implements LoadingDelete {
     TResult Function(LoadingDelete value)? loadingDelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCount value)? loadingCount,
-    TResult Function(SuccessCount value)? successCount,
-    TResult Function(ErorrCount value)? erorrCount,
+    TResult Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult Function(SuccessCheckCart value)? successCheckCart,
+    TResult Function(ErorrCheckCart value)? erorrCheckCart,
     TResult Function(LoadingCoupon value)? loadingCoupon,
     TResult Function(SuccessCoupon value)? successCoupon,
     TResult Function(ErorrCoupon value)? erorrCoupon,
@@ -1787,9 +1787,9 @@ class _$SuccessdeleteImpl implements Successdelete {
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrDelete,
-    required TResult Function() loadingCount,
-    required TResult Function(GetCurrentCart getCurrentCart) successCount,
-    required TResult Function(String erorr) erorrCount,
+    required TResult Function() loadingCheckCart,
+    required TResult Function() successCheckCart,
+    required TResult Function(String erorr) erorrCheckCart,
     required TResult Function() loadingCoupon,
     required TResult Function() successCoupon,
     required TResult Function(String erorr) erorrCoupon,
@@ -1810,9 +1810,9 @@ class _$SuccessdeleteImpl implements Successdelete {
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? loadingCount,
-    TResult? Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult? Function(String erorr)? erorrCount,
+    TResult? Function()? loadingCheckCart,
+    TResult? Function()? successCheckCart,
+    TResult? Function(String erorr)? erorrCheckCart,
     TResult? Function()? loadingCoupon,
     TResult? Function()? successCoupon,
     TResult? Function(String erorr)? erorrCoupon,
@@ -1833,9 +1833,9 @@ class _$SuccessdeleteImpl implements Successdelete {
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrDelete,
-    TResult Function()? loadingCount,
-    TResult Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult Function(String erorr)? erorrCount,
+    TResult Function()? loadingCheckCart,
+    TResult Function()? successCheckCart,
+    TResult Function(String erorr)? erorrCheckCart,
     TResult Function()? loadingCoupon,
     TResult Function()? successCoupon,
     TResult Function(String erorr)? erorrCoupon,
@@ -1860,9 +1860,9 @@ class _$SuccessdeleteImpl implements Successdelete {
     required TResult Function(LoadingDelete value) loadingDelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCount value) loadingCount,
-    required TResult Function(SuccessCount value) successCount,
-    required TResult Function(ErorrCount value) erorrCount,
+    required TResult Function(LoadingCheckCart value) loadingCheckCart,
+    required TResult Function(SuccessCheckCart value) successCheckCart,
+    required TResult Function(ErorrCheckCart value) erorrCheckCart,
     required TResult Function(LoadingCoupon value) loadingCoupon,
     required TResult Function(SuccessCoupon value) successCoupon,
     required TResult Function(ErorrCoupon value) erorrCoupon,
@@ -1883,9 +1883,9 @@ class _$SuccessdeleteImpl implements Successdelete {
     TResult? Function(LoadingDelete value)? loadingDelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCount value)? loadingCount,
-    TResult? Function(SuccessCount value)? successCount,
-    TResult? Function(ErorrCount value)? erorrCount,
+    TResult? Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult? Function(SuccessCheckCart value)? successCheckCart,
+    TResult? Function(ErorrCheckCart value)? erorrCheckCart,
     TResult? Function(LoadingCoupon value)? loadingCoupon,
     TResult? Function(SuccessCoupon value)? successCoupon,
     TResult? Function(ErorrCoupon value)? erorrCoupon,
@@ -1906,9 +1906,9 @@ class _$SuccessdeleteImpl implements Successdelete {
     TResult Function(LoadingDelete value)? loadingDelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCount value)? loadingCount,
-    TResult Function(SuccessCount value)? successCount,
-    TResult Function(ErorrCount value)? erorrCount,
+    TResult Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult Function(SuccessCheckCart value)? successCheckCart,
+    TResult Function(ErorrCheckCart value)? erorrCheckCart,
     TResult Function(LoadingCoupon value)? loadingCoupon,
     TResult Function(SuccessCoupon value)? successCoupon,
     TResult Function(ErorrCoupon value)? erorrCoupon,
@@ -1999,9 +1999,9 @@ class _$ErorrDeleteImpl implements ErorrDelete {
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrDelete,
-    required TResult Function() loadingCount,
-    required TResult Function(GetCurrentCart getCurrentCart) successCount,
-    required TResult Function(String erorr) erorrCount,
+    required TResult Function() loadingCheckCart,
+    required TResult Function() successCheckCart,
+    required TResult Function(String erorr) erorrCheckCart,
     required TResult Function() loadingCoupon,
     required TResult Function() successCoupon,
     required TResult Function(String erorr) erorrCoupon,
@@ -2022,9 +2022,9 @@ class _$ErorrDeleteImpl implements ErorrDelete {
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? loadingCount,
-    TResult? Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult? Function(String erorr)? erorrCount,
+    TResult? Function()? loadingCheckCart,
+    TResult? Function()? successCheckCart,
+    TResult? Function(String erorr)? erorrCheckCart,
     TResult? Function()? loadingCoupon,
     TResult? Function()? successCoupon,
     TResult? Function(String erorr)? erorrCoupon,
@@ -2045,9 +2045,9 @@ class _$ErorrDeleteImpl implements ErorrDelete {
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrDelete,
-    TResult Function()? loadingCount,
-    TResult Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult Function(String erorr)? erorrCount,
+    TResult Function()? loadingCheckCart,
+    TResult Function()? successCheckCart,
+    TResult Function(String erorr)? erorrCheckCart,
     TResult Function()? loadingCoupon,
     TResult Function()? successCoupon,
     TResult Function(String erorr)? erorrCoupon,
@@ -2072,9 +2072,9 @@ class _$ErorrDeleteImpl implements ErorrDelete {
     required TResult Function(LoadingDelete value) loadingDelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCount value) loadingCount,
-    required TResult Function(SuccessCount value) successCount,
-    required TResult Function(ErorrCount value) erorrCount,
+    required TResult Function(LoadingCheckCart value) loadingCheckCart,
+    required TResult Function(SuccessCheckCart value) successCheckCart,
+    required TResult Function(ErorrCheckCart value) erorrCheckCart,
     required TResult Function(LoadingCoupon value) loadingCoupon,
     required TResult Function(SuccessCoupon value) successCoupon,
     required TResult Function(ErorrCoupon value) erorrCoupon,
@@ -2095,9 +2095,9 @@ class _$ErorrDeleteImpl implements ErorrDelete {
     TResult? Function(LoadingDelete value)? loadingDelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCount value)? loadingCount,
-    TResult? Function(SuccessCount value)? successCount,
-    TResult? Function(ErorrCount value)? erorrCount,
+    TResult? Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult? Function(SuccessCheckCart value)? successCheckCart,
+    TResult? Function(ErorrCheckCart value)? erorrCheckCart,
     TResult? Function(LoadingCoupon value)? loadingCoupon,
     TResult? Function(SuccessCoupon value)? successCoupon,
     TResult? Function(ErorrCoupon value)? erorrCoupon,
@@ -2118,9 +2118,9 @@ class _$ErorrDeleteImpl implements ErorrDelete {
     TResult Function(LoadingDelete value)? loadingDelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCount value)? loadingCount,
-    TResult Function(SuccessCount value)? successCount,
-    TResult Function(ErorrCount value)? erorrCount,
+    TResult Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult Function(SuccessCheckCart value)? successCheckCart,
+    TResult Function(ErorrCheckCart value)? erorrCheckCart,
     TResult Function(LoadingCoupon value)? loadingCoupon,
     TResult Function(SuccessCoupon value)? successCoupon,
     TResult Function(ErorrCoupon value)? erorrCoupon,
@@ -2143,35 +2143,35 @@ abstract class ErorrDelete implements CartState {
 }
 
 /// @nodoc
-abstract class _$$LoadingCountImplCopyWith<$Res> {
-  factory _$$LoadingCountImplCopyWith(
-          _$LoadingCountImpl value, $Res Function(_$LoadingCountImpl) then) =
-      __$$LoadingCountImplCopyWithImpl<$Res>;
+abstract class _$$LoadingCheckCartImplCopyWith<$Res> {
+  factory _$$LoadingCheckCartImplCopyWith(_$LoadingCheckCartImpl value,
+          $Res Function(_$LoadingCheckCartImpl) then) =
+      __$$LoadingCheckCartImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadingCountImplCopyWithImpl<$Res>
-    extends _$CartStateCopyWithImpl<$Res, _$LoadingCountImpl>
-    implements _$$LoadingCountImplCopyWith<$Res> {
-  __$$LoadingCountImplCopyWithImpl(
-      _$LoadingCountImpl _value, $Res Function(_$LoadingCountImpl) _then)
+class __$$LoadingCheckCartImplCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res, _$LoadingCheckCartImpl>
+    implements _$$LoadingCheckCartImplCopyWith<$Res> {
+  __$$LoadingCheckCartImplCopyWithImpl(_$LoadingCheckCartImpl _value,
+      $Res Function(_$LoadingCheckCartImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$LoadingCountImpl implements LoadingCount {
-  const _$LoadingCountImpl();
+class _$LoadingCheckCartImpl implements LoadingCheckCart {
+  const _$LoadingCheckCartImpl();
 
   @override
   String toString() {
-    return 'CartState.loadingCount()';
+    return 'CartState.loadingCheckCart()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingCountImpl);
+        (other.runtimeType == runtimeType && other is _$LoadingCheckCartImpl);
   }
 
   @override
@@ -2190,14 +2190,14 @@ class _$LoadingCountImpl implements LoadingCount {
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrDelete,
-    required TResult Function() loadingCount,
-    required TResult Function(GetCurrentCart getCurrentCart) successCount,
-    required TResult Function(String erorr) erorrCount,
+    required TResult Function() loadingCheckCart,
+    required TResult Function() successCheckCart,
+    required TResult Function(String erorr) erorrCheckCart,
     required TResult Function() loadingCoupon,
     required TResult Function() successCoupon,
     required TResult Function(String erorr) erorrCoupon,
   }) {
-    return loadingCount();
+    return loadingCheckCart();
   }
 
   @override
@@ -2213,14 +2213,14 @@ class _$LoadingCountImpl implements LoadingCount {
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? loadingCount,
-    TResult? Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult? Function(String erorr)? erorrCount,
+    TResult? Function()? loadingCheckCart,
+    TResult? Function()? successCheckCart,
+    TResult? Function(String erorr)? erorrCheckCart,
     TResult? Function()? loadingCoupon,
     TResult? Function()? successCoupon,
     TResult? Function(String erorr)? erorrCoupon,
   }) {
-    return loadingCount?.call();
+    return loadingCheckCart?.call();
   }
 
   @override
@@ -2236,16 +2236,16 @@ class _$LoadingCountImpl implements LoadingCount {
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrDelete,
-    TResult Function()? loadingCount,
-    TResult Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult Function(String erorr)? erorrCount,
+    TResult Function()? loadingCheckCart,
+    TResult Function()? successCheckCart,
+    TResult Function(String erorr)? erorrCheckCart,
     TResult Function()? loadingCoupon,
     TResult Function()? successCoupon,
     TResult Function(String erorr)? erorrCoupon,
     required TResult orElse(),
   }) {
-    if (loadingCount != null) {
-      return loadingCount();
+    if (loadingCheckCart != null) {
+      return loadingCheckCart();
     }
     return orElse();
   }
@@ -2263,14 +2263,14 @@ class _$LoadingCountImpl implements LoadingCount {
     required TResult Function(LoadingDelete value) loadingDelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCount value) loadingCount,
-    required TResult Function(SuccessCount value) successCount,
-    required TResult Function(ErorrCount value) erorrCount,
+    required TResult Function(LoadingCheckCart value) loadingCheckCart,
+    required TResult Function(SuccessCheckCart value) successCheckCart,
+    required TResult Function(ErorrCheckCart value) erorrCheckCart,
     required TResult Function(LoadingCoupon value) loadingCoupon,
     required TResult Function(SuccessCoupon value) successCoupon,
     required TResult Function(ErorrCoupon value) erorrCoupon,
   }) {
-    return loadingCount(this);
+    return loadingCheckCart(this);
   }
 
   @override
@@ -2286,14 +2286,14 @@ class _$LoadingCountImpl implements LoadingCount {
     TResult? Function(LoadingDelete value)? loadingDelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCount value)? loadingCount,
-    TResult? Function(SuccessCount value)? successCount,
-    TResult? Function(ErorrCount value)? erorrCount,
+    TResult? Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult? Function(SuccessCheckCart value)? successCheckCart,
+    TResult? Function(ErorrCheckCart value)? erorrCheckCart,
     TResult? Function(LoadingCoupon value)? loadingCoupon,
     TResult? Function(SuccessCoupon value)? successCoupon,
     TResult? Function(ErorrCoupon value)? erorrCoupon,
   }) {
-    return loadingCount?.call(this);
+    return loadingCheckCart?.call(this);
   }
 
   @override
@@ -2309,86 +2309,59 @@ class _$LoadingCountImpl implements LoadingCount {
     TResult Function(LoadingDelete value)? loadingDelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCount value)? loadingCount,
-    TResult Function(SuccessCount value)? successCount,
-    TResult Function(ErorrCount value)? erorrCount,
+    TResult Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult Function(SuccessCheckCart value)? successCheckCart,
+    TResult Function(ErorrCheckCart value)? erorrCheckCart,
     TResult Function(LoadingCoupon value)? loadingCoupon,
     TResult Function(SuccessCoupon value)? successCoupon,
     TResult Function(ErorrCoupon value)? erorrCoupon,
     required TResult orElse(),
   }) {
-    if (loadingCount != null) {
-      return loadingCount(this);
+    if (loadingCheckCart != null) {
+      return loadingCheckCart(this);
     }
     return orElse();
   }
 }
 
-abstract class LoadingCount implements CartState {
-  const factory LoadingCount() = _$LoadingCountImpl;
+abstract class LoadingCheckCart implements CartState {
+  const factory LoadingCheckCart() = _$LoadingCheckCartImpl;
 }
 
 /// @nodoc
-abstract class _$$SuccessCountImplCopyWith<$Res> {
-  factory _$$SuccessCountImplCopyWith(
-          _$SuccessCountImpl value, $Res Function(_$SuccessCountImpl) then) =
-      __$$SuccessCountImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({GetCurrentCart getCurrentCart});
+abstract class _$$SuccessCheckCartImplCopyWith<$Res> {
+  factory _$$SuccessCheckCartImplCopyWith(_$SuccessCheckCartImpl value,
+          $Res Function(_$SuccessCheckCartImpl) then) =
+      __$$SuccessCheckCartImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$SuccessCountImplCopyWithImpl<$Res>
-    extends _$CartStateCopyWithImpl<$Res, _$SuccessCountImpl>
-    implements _$$SuccessCountImplCopyWith<$Res> {
-  __$$SuccessCountImplCopyWithImpl(
-      _$SuccessCountImpl _value, $Res Function(_$SuccessCountImpl) _then)
+class __$$SuccessCheckCartImplCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res, _$SuccessCheckCartImpl>
+    implements _$$SuccessCheckCartImplCopyWith<$Res> {
+  __$$SuccessCheckCartImplCopyWithImpl(_$SuccessCheckCartImpl _value,
+      $Res Function(_$SuccessCheckCartImpl) _then)
       : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? getCurrentCart = null,
-  }) {
-    return _then(_$SuccessCountImpl(
-      null == getCurrentCart
-          ? _value.getCurrentCart
-          : getCurrentCart // ignore: cast_nullable_to_non_nullable
-              as GetCurrentCart,
-    ));
-  }
 }
 
 /// @nodoc
 
-class _$SuccessCountImpl implements SuccessCount {
-  const _$SuccessCountImpl(this.getCurrentCart);
-
-  @override
-  final GetCurrentCart getCurrentCart;
+class _$SuccessCheckCartImpl implements SuccessCheckCart {
+  const _$SuccessCheckCartImpl();
 
   @override
   String toString() {
-    return 'CartState.successCount(getCurrentCart: $getCurrentCart)';
+    return 'CartState.successCheckCart()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$SuccessCountImpl &&
-            (identical(other.getCurrentCart, getCurrentCart) ||
-                other.getCurrentCart == getCurrentCart));
+        (other.runtimeType == runtimeType && other is _$SuccessCheckCartImpl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, getCurrentCart);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SuccessCountImplCopyWith<_$SuccessCountImpl> get copyWith =>
-      __$$SuccessCountImplCopyWithImpl<_$SuccessCountImpl>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
@@ -2403,14 +2376,14 @@ class _$SuccessCountImpl implements SuccessCount {
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrDelete,
-    required TResult Function() loadingCount,
-    required TResult Function(GetCurrentCart getCurrentCart) successCount,
-    required TResult Function(String erorr) erorrCount,
+    required TResult Function() loadingCheckCart,
+    required TResult Function() successCheckCart,
+    required TResult Function(String erorr) erorrCheckCart,
     required TResult Function() loadingCoupon,
     required TResult Function() successCoupon,
     required TResult Function(String erorr) erorrCoupon,
   }) {
-    return successCount(getCurrentCart);
+    return successCheckCart();
   }
 
   @override
@@ -2426,14 +2399,14 @@ class _$SuccessCountImpl implements SuccessCount {
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? loadingCount,
-    TResult? Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult? Function(String erorr)? erorrCount,
+    TResult? Function()? loadingCheckCart,
+    TResult? Function()? successCheckCart,
+    TResult? Function(String erorr)? erorrCheckCart,
     TResult? Function()? loadingCoupon,
     TResult? Function()? successCoupon,
     TResult? Function(String erorr)? erorrCoupon,
   }) {
-    return successCount?.call(getCurrentCart);
+    return successCheckCart?.call();
   }
 
   @override
@@ -2449,16 +2422,16 @@ class _$SuccessCountImpl implements SuccessCount {
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrDelete,
-    TResult Function()? loadingCount,
-    TResult Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult Function(String erorr)? erorrCount,
+    TResult Function()? loadingCheckCart,
+    TResult Function()? successCheckCart,
+    TResult Function(String erorr)? erorrCheckCart,
     TResult Function()? loadingCoupon,
     TResult Function()? successCoupon,
     TResult Function(String erorr)? erorrCoupon,
     required TResult orElse(),
   }) {
-    if (successCount != null) {
-      return successCount(getCurrentCart);
+    if (successCheckCart != null) {
+      return successCheckCart();
     }
     return orElse();
   }
@@ -2476,14 +2449,14 @@ class _$SuccessCountImpl implements SuccessCount {
     required TResult Function(LoadingDelete value) loadingDelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCount value) loadingCount,
-    required TResult Function(SuccessCount value) successCount,
-    required TResult Function(ErorrCount value) erorrCount,
+    required TResult Function(LoadingCheckCart value) loadingCheckCart,
+    required TResult Function(SuccessCheckCart value) successCheckCart,
+    required TResult Function(ErorrCheckCart value) erorrCheckCart,
     required TResult Function(LoadingCoupon value) loadingCoupon,
     required TResult Function(SuccessCoupon value) successCoupon,
     required TResult Function(ErorrCoupon value) erorrCoupon,
   }) {
-    return successCount(this);
+    return successCheckCart(this);
   }
 
   @override
@@ -2499,14 +2472,14 @@ class _$SuccessCountImpl implements SuccessCount {
     TResult? Function(LoadingDelete value)? loadingDelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCount value)? loadingCount,
-    TResult? Function(SuccessCount value)? successCount,
-    TResult? Function(ErorrCount value)? erorrCount,
+    TResult? Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult? Function(SuccessCheckCart value)? successCheckCart,
+    TResult? Function(ErorrCheckCart value)? erorrCheckCart,
     TResult? Function(LoadingCoupon value)? loadingCoupon,
     TResult? Function(SuccessCoupon value)? successCoupon,
     TResult? Function(ErorrCoupon value)? erorrCoupon,
   }) {
-    return successCount?.call(this);
+    return successCheckCart?.call(this);
   }
 
   @override
@@ -2522,46 +2495,40 @@ class _$SuccessCountImpl implements SuccessCount {
     TResult Function(LoadingDelete value)? loadingDelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCount value)? loadingCount,
-    TResult Function(SuccessCount value)? successCount,
-    TResult Function(ErorrCount value)? erorrCount,
+    TResult Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult Function(SuccessCheckCart value)? successCheckCart,
+    TResult Function(ErorrCheckCart value)? erorrCheckCart,
     TResult Function(LoadingCoupon value)? loadingCoupon,
     TResult Function(SuccessCoupon value)? successCoupon,
     TResult Function(ErorrCoupon value)? erorrCoupon,
     required TResult orElse(),
   }) {
-    if (successCount != null) {
-      return successCount(this);
+    if (successCheckCart != null) {
+      return successCheckCart(this);
     }
     return orElse();
   }
 }
 
-abstract class SuccessCount implements CartState {
-  const factory SuccessCount(final GetCurrentCart getCurrentCart) =
-      _$SuccessCountImpl;
-
-  GetCurrentCart get getCurrentCart;
-  @JsonKey(ignore: true)
-  _$$SuccessCountImplCopyWith<_$SuccessCountImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+abstract class SuccessCheckCart implements CartState {
+  const factory SuccessCheckCart() = _$SuccessCheckCartImpl;
 }
 
 /// @nodoc
-abstract class _$$ErorrCountImplCopyWith<$Res> {
-  factory _$$ErorrCountImplCopyWith(
-          _$ErorrCountImpl value, $Res Function(_$ErorrCountImpl) then) =
-      __$$ErorrCountImplCopyWithImpl<$Res>;
+abstract class _$$ErorrCheckCartImplCopyWith<$Res> {
+  factory _$$ErorrCheckCartImplCopyWith(_$ErorrCheckCartImpl value,
+          $Res Function(_$ErorrCheckCartImpl) then) =
+      __$$ErorrCheckCartImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String erorr});
 }
 
 /// @nodoc
-class __$$ErorrCountImplCopyWithImpl<$Res>
-    extends _$CartStateCopyWithImpl<$Res, _$ErorrCountImpl>
-    implements _$$ErorrCountImplCopyWith<$Res> {
-  __$$ErorrCountImplCopyWithImpl(
-      _$ErorrCountImpl _value, $Res Function(_$ErorrCountImpl) _then)
+class __$$ErorrCheckCartImplCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res, _$ErorrCheckCartImpl>
+    implements _$$ErorrCheckCartImplCopyWith<$Res> {
+  __$$ErorrCheckCartImplCopyWithImpl(
+      _$ErorrCheckCartImpl _value, $Res Function(_$ErorrCheckCartImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2569,7 +2536,7 @@ class __$$ErorrCountImplCopyWithImpl<$Res>
   $Res call({
     Object? erorr = null,
   }) {
-    return _then(_$ErorrCountImpl(
+    return _then(_$ErorrCheckCartImpl(
       erorr: null == erorr
           ? _value.erorr
           : erorr // ignore: cast_nullable_to_non_nullable
@@ -2580,22 +2547,22 @@ class __$$ErorrCountImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErorrCountImpl implements ErorrCount {
-  const _$ErorrCountImpl({required this.erorr});
+class _$ErorrCheckCartImpl implements ErorrCheckCart {
+  const _$ErorrCheckCartImpl({required this.erorr});
 
   @override
   final String erorr;
 
   @override
   String toString() {
-    return 'CartState.erorrCount(erorr: $erorr)';
+    return 'CartState.erorrCheckCart(erorr: $erorr)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ErorrCountImpl &&
+            other is _$ErorrCheckCartImpl &&
             (identical(other.erorr, erorr) || other.erorr == erorr));
   }
 
@@ -2605,8 +2572,9 @@ class _$ErorrCountImpl implements ErorrCount {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ErorrCountImplCopyWith<_$ErorrCountImpl> get copyWith =>
-      __$$ErorrCountImplCopyWithImpl<_$ErorrCountImpl>(this, _$identity);
+  _$$ErorrCheckCartImplCopyWith<_$ErorrCheckCartImpl> get copyWith =>
+      __$$ErorrCheckCartImplCopyWithImpl<_$ErorrCheckCartImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2621,14 +2589,14 @@ class _$ErorrCountImpl implements ErorrCount {
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrDelete,
-    required TResult Function() loadingCount,
-    required TResult Function(GetCurrentCart getCurrentCart) successCount,
-    required TResult Function(String erorr) erorrCount,
+    required TResult Function() loadingCheckCart,
+    required TResult Function() successCheckCart,
+    required TResult Function(String erorr) erorrCheckCart,
     required TResult Function() loadingCoupon,
     required TResult Function() successCoupon,
     required TResult Function(String erorr) erorrCoupon,
   }) {
-    return erorrCount(erorr);
+    return erorrCheckCart(erorr);
   }
 
   @override
@@ -2644,14 +2612,14 @@ class _$ErorrCountImpl implements ErorrCount {
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? loadingCount,
-    TResult? Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult? Function(String erorr)? erorrCount,
+    TResult? Function()? loadingCheckCart,
+    TResult? Function()? successCheckCart,
+    TResult? Function(String erorr)? erorrCheckCart,
     TResult? Function()? loadingCoupon,
     TResult? Function()? successCoupon,
     TResult? Function(String erorr)? erorrCoupon,
   }) {
-    return erorrCount?.call(erorr);
+    return erorrCheckCart?.call(erorr);
   }
 
   @override
@@ -2667,16 +2635,16 @@ class _$ErorrCountImpl implements ErorrCount {
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrDelete,
-    TResult Function()? loadingCount,
-    TResult Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult Function(String erorr)? erorrCount,
+    TResult Function()? loadingCheckCart,
+    TResult Function()? successCheckCart,
+    TResult Function(String erorr)? erorrCheckCart,
     TResult Function()? loadingCoupon,
     TResult Function()? successCoupon,
     TResult Function(String erorr)? erorrCoupon,
     required TResult orElse(),
   }) {
-    if (erorrCount != null) {
-      return erorrCount(erorr);
+    if (erorrCheckCart != null) {
+      return erorrCheckCart(erorr);
     }
     return orElse();
   }
@@ -2694,14 +2662,14 @@ class _$ErorrCountImpl implements ErorrCount {
     required TResult Function(LoadingDelete value) loadingDelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCount value) loadingCount,
-    required TResult Function(SuccessCount value) successCount,
-    required TResult Function(ErorrCount value) erorrCount,
+    required TResult Function(LoadingCheckCart value) loadingCheckCart,
+    required TResult Function(SuccessCheckCart value) successCheckCart,
+    required TResult Function(ErorrCheckCart value) erorrCheckCart,
     required TResult Function(LoadingCoupon value) loadingCoupon,
     required TResult Function(SuccessCoupon value) successCoupon,
     required TResult Function(ErorrCoupon value) erorrCoupon,
   }) {
-    return erorrCount(this);
+    return erorrCheckCart(this);
   }
 
   @override
@@ -2717,14 +2685,14 @@ class _$ErorrCountImpl implements ErorrCount {
     TResult? Function(LoadingDelete value)? loadingDelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCount value)? loadingCount,
-    TResult? Function(SuccessCount value)? successCount,
-    TResult? Function(ErorrCount value)? erorrCount,
+    TResult? Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult? Function(SuccessCheckCart value)? successCheckCart,
+    TResult? Function(ErorrCheckCart value)? erorrCheckCart,
     TResult? Function(LoadingCoupon value)? loadingCoupon,
     TResult? Function(SuccessCoupon value)? successCoupon,
     TResult? Function(ErorrCoupon value)? erorrCoupon,
   }) {
-    return erorrCount?.call(this);
+    return erorrCheckCart?.call(this);
   }
 
   @override
@@ -2740,27 +2708,28 @@ class _$ErorrCountImpl implements ErorrCount {
     TResult Function(LoadingDelete value)? loadingDelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCount value)? loadingCount,
-    TResult Function(SuccessCount value)? successCount,
-    TResult Function(ErorrCount value)? erorrCount,
+    TResult Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult Function(SuccessCheckCart value)? successCheckCart,
+    TResult Function(ErorrCheckCart value)? erorrCheckCart,
     TResult Function(LoadingCoupon value)? loadingCoupon,
     TResult Function(SuccessCoupon value)? successCoupon,
     TResult Function(ErorrCoupon value)? erorrCoupon,
     required TResult orElse(),
   }) {
-    if (erorrCount != null) {
-      return erorrCount(this);
+    if (erorrCheckCart != null) {
+      return erorrCheckCart(this);
     }
     return orElse();
   }
 }
 
-abstract class ErorrCount implements CartState {
-  const factory ErorrCount({required final String erorr}) = _$ErorrCountImpl;
+abstract class ErorrCheckCart implements CartState {
+  const factory ErorrCheckCart({required final String erorr}) =
+      _$ErorrCheckCartImpl;
 
   String get erorr;
   @JsonKey(ignore: true)
-  _$$ErorrCountImplCopyWith<_$ErorrCountImpl> get copyWith =>
+  _$$ErorrCheckCartImplCopyWith<_$ErorrCheckCartImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2812,9 +2781,9 @@ class _$LoadingCouponImpl implements LoadingCoupon {
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrDelete,
-    required TResult Function() loadingCount,
-    required TResult Function(GetCurrentCart getCurrentCart) successCount,
-    required TResult Function(String erorr) erorrCount,
+    required TResult Function() loadingCheckCart,
+    required TResult Function() successCheckCart,
+    required TResult Function(String erorr) erorrCheckCart,
     required TResult Function() loadingCoupon,
     required TResult Function() successCoupon,
     required TResult Function(String erorr) erorrCoupon,
@@ -2835,9 +2804,9 @@ class _$LoadingCouponImpl implements LoadingCoupon {
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? loadingCount,
-    TResult? Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult? Function(String erorr)? erorrCount,
+    TResult? Function()? loadingCheckCart,
+    TResult? Function()? successCheckCart,
+    TResult? Function(String erorr)? erorrCheckCart,
     TResult? Function()? loadingCoupon,
     TResult? Function()? successCoupon,
     TResult? Function(String erorr)? erorrCoupon,
@@ -2858,9 +2827,9 @@ class _$LoadingCouponImpl implements LoadingCoupon {
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrDelete,
-    TResult Function()? loadingCount,
-    TResult Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult Function(String erorr)? erorrCount,
+    TResult Function()? loadingCheckCart,
+    TResult Function()? successCheckCart,
+    TResult Function(String erorr)? erorrCheckCart,
     TResult Function()? loadingCoupon,
     TResult Function()? successCoupon,
     TResult Function(String erorr)? erorrCoupon,
@@ -2885,9 +2854,9 @@ class _$LoadingCouponImpl implements LoadingCoupon {
     required TResult Function(LoadingDelete value) loadingDelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCount value) loadingCount,
-    required TResult Function(SuccessCount value) successCount,
-    required TResult Function(ErorrCount value) erorrCount,
+    required TResult Function(LoadingCheckCart value) loadingCheckCart,
+    required TResult Function(SuccessCheckCart value) successCheckCart,
+    required TResult Function(ErorrCheckCart value) erorrCheckCart,
     required TResult Function(LoadingCoupon value) loadingCoupon,
     required TResult Function(SuccessCoupon value) successCoupon,
     required TResult Function(ErorrCoupon value) erorrCoupon,
@@ -2908,9 +2877,9 @@ class _$LoadingCouponImpl implements LoadingCoupon {
     TResult? Function(LoadingDelete value)? loadingDelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCount value)? loadingCount,
-    TResult? Function(SuccessCount value)? successCount,
-    TResult? Function(ErorrCount value)? erorrCount,
+    TResult? Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult? Function(SuccessCheckCart value)? successCheckCart,
+    TResult? Function(ErorrCheckCart value)? erorrCheckCart,
     TResult? Function(LoadingCoupon value)? loadingCoupon,
     TResult? Function(SuccessCoupon value)? successCoupon,
     TResult? Function(ErorrCoupon value)? erorrCoupon,
@@ -2931,9 +2900,9 @@ class _$LoadingCouponImpl implements LoadingCoupon {
     TResult Function(LoadingDelete value)? loadingDelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCount value)? loadingCount,
-    TResult Function(SuccessCount value)? successCount,
-    TResult Function(ErorrCount value)? erorrCount,
+    TResult Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult Function(SuccessCheckCart value)? successCheckCart,
+    TResult Function(ErorrCheckCart value)? erorrCheckCart,
     TResult Function(LoadingCoupon value)? loadingCoupon,
     TResult Function(SuccessCoupon value)? successCoupon,
     TResult Function(ErorrCoupon value)? erorrCoupon,
@@ -2998,9 +2967,9 @@ class _$SuccessCouponImpl implements SuccessCoupon {
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrDelete,
-    required TResult Function() loadingCount,
-    required TResult Function(GetCurrentCart getCurrentCart) successCount,
-    required TResult Function(String erorr) erorrCount,
+    required TResult Function() loadingCheckCart,
+    required TResult Function() successCheckCart,
+    required TResult Function(String erorr) erorrCheckCart,
     required TResult Function() loadingCoupon,
     required TResult Function() successCoupon,
     required TResult Function(String erorr) erorrCoupon,
@@ -3021,9 +2990,9 @@ class _$SuccessCouponImpl implements SuccessCoupon {
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? loadingCount,
-    TResult? Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult? Function(String erorr)? erorrCount,
+    TResult? Function()? loadingCheckCart,
+    TResult? Function()? successCheckCart,
+    TResult? Function(String erorr)? erorrCheckCart,
     TResult? Function()? loadingCoupon,
     TResult? Function()? successCoupon,
     TResult? Function(String erorr)? erorrCoupon,
@@ -3044,9 +3013,9 @@ class _$SuccessCouponImpl implements SuccessCoupon {
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrDelete,
-    TResult Function()? loadingCount,
-    TResult Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult Function(String erorr)? erorrCount,
+    TResult Function()? loadingCheckCart,
+    TResult Function()? successCheckCart,
+    TResult Function(String erorr)? erorrCheckCart,
     TResult Function()? loadingCoupon,
     TResult Function()? successCoupon,
     TResult Function(String erorr)? erorrCoupon,
@@ -3071,9 +3040,9 @@ class _$SuccessCouponImpl implements SuccessCoupon {
     required TResult Function(LoadingDelete value) loadingDelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCount value) loadingCount,
-    required TResult Function(SuccessCount value) successCount,
-    required TResult Function(ErorrCount value) erorrCount,
+    required TResult Function(LoadingCheckCart value) loadingCheckCart,
+    required TResult Function(SuccessCheckCart value) successCheckCart,
+    required TResult Function(ErorrCheckCart value) erorrCheckCart,
     required TResult Function(LoadingCoupon value) loadingCoupon,
     required TResult Function(SuccessCoupon value) successCoupon,
     required TResult Function(ErorrCoupon value) erorrCoupon,
@@ -3094,9 +3063,9 @@ class _$SuccessCouponImpl implements SuccessCoupon {
     TResult? Function(LoadingDelete value)? loadingDelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCount value)? loadingCount,
-    TResult? Function(SuccessCount value)? successCount,
-    TResult? Function(ErorrCount value)? erorrCount,
+    TResult? Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult? Function(SuccessCheckCart value)? successCheckCart,
+    TResult? Function(ErorrCheckCart value)? erorrCheckCart,
     TResult? Function(LoadingCoupon value)? loadingCoupon,
     TResult? Function(SuccessCoupon value)? successCoupon,
     TResult? Function(ErorrCoupon value)? erorrCoupon,
@@ -3117,9 +3086,9 @@ class _$SuccessCouponImpl implements SuccessCoupon {
     TResult Function(LoadingDelete value)? loadingDelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCount value)? loadingCount,
-    TResult Function(SuccessCount value)? successCount,
-    TResult Function(ErorrCount value)? erorrCount,
+    TResult Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult Function(SuccessCheckCart value)? successCheckCart,
+    TResult Function(ErorrCheckCart value)? erorrCheckCart,
     TResult Function(LoadingCoupon value)? loadingCoupon,
     TResult Function(SuccessCoupon value)? successCoupon,
     TResult Function(ErorrCoupon value)? erorrCoupon,
@@ -3210,9 +3179,9 @@ class _$ErorrCouponImpl implements ErorrCoupon {
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrDelete,
-    required TResult Function() loadingCount,
-    required TResult Function(GetCurrentCart getCurrentCart) successCount,
-    required TResult Function(String erorr) erorrCount,
+    required TResult Function() loadingCheckCart,
+    required TResult Function() successCheckCart,
+    required TResult Function(String erorr) erorrCheckCart,
     required TResult Function() loadingCoupon,
     required TResult Function() successCoupon,
     required TResult Function(String erorr) erorrCoupon,
@@ -3233,9 +3202,9 @@ class _$ErorrCouponImpl implements ErorrCoupon {
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? loadingCount,
-    TResult? Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult? Function(String erorr)? erorrCount,
+    TResult? Function()? loadingCheckCart,
+    TResult? Function()? successCheckCart,
+    TResult? Function(String erorr)? erorrCheckCart,
     TResult? Function()? loadingCoupon,
     TResult? Function()? successCoupon,
     TResult? Function(String erorr)? erorrCoupon,
@@ -3256,9 +3225,9 @@ class _$ErorrCouponImpl implements ErorrCoupon {
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrDelete,
-    TResult Function()? loadingCount,
-    TResult Function(GetCurrentCart getCurrentCart)? successCount,
-    TResult Function(String erorr)? erorrCount,
+    TResult Function()? loadingCheckCart,
+    TResult Function()? successCheckCart,
+    TResult Function(String erorr)? erorrCheckCart,
     TResult Function()? loadingCoupon,
     TResult Function()? successCoupon,
     TResult Function(String erorr)? erorrCoupon,
@@ -3283,9 +3252,9 @@ class _$ErorrCouponImpl implements ErorrCoupon {
     required TResult Function(LoadingDelete value) loadingDelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCount value) loadingCount,
-    required TResult Function(SuccessCount value) successCount,
-    required TResult Function(ErorrCount value) erorrCount,
+    required TResult Function(LoadingCheckCart value) loadingCheckCart,
+    required TResult Function(SuccessCheckCart value) successCheckCart,
+    required TResult Function(ErorrCheckCart value) erorrCheckCart,
     required TResult Function(LoadingCoupon value) loadingCoupon,
     required TResult Function(SuccessCoupon value) successCoupon,
     required TResult Function(ErorrCoupon value) erorrCoupon,
@@ -3306,9 +3275,9 @@ class _$ErorrCouponImpl implements ErorrCoupon {
     TResult? Function(LoadingDelete value)? loadingDelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCount value)? loadingCount,
-    TResult? Function(SuccessCount value)? successCount,
-    TResult? Function(ErorrCount value)? erorrCount,
+    TResult? Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult? Function(SuccessCheckCart value)? successCheckCart,
+    TResult? Function(ErorrCheckCart value)? erorrCheckCart,
     TResult? Function(LoadingCoupon value)? loadingCoupon,
     TResult? Function(SuccessCoupon value)? successCoupon,
     TResult? Function(ErorrCoupon value)? erorrCoupon,
@@ -3329,9 +3298,9 @@ class _$ErorrCouponImpl implements ErorrCoupon {
     TResult Function(LoadingDelete value)? loadingDelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCount value)? loadingCount,
-    TResult Function(SuccessCount value)? successCount,
-    TResult Function(ErorrCount value)? erorrCount,
+    TResult Function(LoadingCheckCart value)? loadingCheckCart,
+    TResult Function(SuccessCheckCart value)? successCheckCart,
+    TResult Function(ErorrCheckCart value)? erorrCheckCart,
     TResult Function(LoadingCoupon value)? loadingCoupon,
     TResult Function(SuccessCoupon value)? successCoupon,
     TResult Function(ErorrCoupon value)? erorrCoupon,

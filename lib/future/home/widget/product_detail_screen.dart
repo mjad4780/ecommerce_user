@@ -1,3 +1,4 @@
+import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
 import 'package:ecommerce_user/core/get_it/get_it.dart';
 import 'package:ecommerce_user/future/cart/logic/cubit/cart_cubit.dart';
 import 'package:ecommerce_user/future/cart/logic/cubit/cart_state.dart';
@@ -75,15 +76,18 @@ class ProductDetailScreen extends StatelessWidget {
                               product.itemDiscount != null
                                   ? "\$${product.itemDiscount}"
                                   : "\$${product.itemPrice}",
-                              style: Theme.of(context).textTheme.displayLarge,
+                              style: const TextStyle(
+                                  color: AppColor.primaryColor, fontSize: 30),
+                              // style: Theme.of(context).textTheme.displayLarge,
                             ),
-                            const SizedBox(width: 3),
+                            const SizedBox(width: 6),
                             Visibility(
                               visible:
                                   product.itemDiscount != product.itemPrice,
                               child: Text(
                                 "\$${product.itemPrice}",
                                 style: const TextStyle(
+                                  fontSize: 30,
                                   decoration: TextDecoration.lineThrough,
                                   color: Colors.grey,
                                   fontWeight: FontWeight.w500,
@@ -109,6 +113,9 @@ class ProductDetailScreen extends StatelessWidget {
                         //       )
                         //     : const SizedBox(),
                         BlocConsumer<CartCubit, CartState>(
+                          buildWhen: (previous, current) =>
+                              current is LoadingCoupon ||
+                              current is SuccessCoupon,
                           listener: (context, state) {},
                           builder: (context, state) {
                             return Column(
@@ -120,7 +127,9 @@ class ProductDetailScreen extends StatelessWidget {
                                   selected:
                                       context.read<CartCubit>().selectSize,
                                   onSelect: (val) {
-                                    context.read<CartCubit>().selectSize = val;
+                                    context
+                                        .read<CartCubit>()
+                                        .selectsize(val ?? '');
                                   },
                                 ),
                                 HorizontalList(
@@ -130,7 +139,9 @@ class ProductDetailScreen extends StatelessWidget {
                                   selected:
                                       context.read<CartCubit>().selectColor,
                                   onSelect: (val) {
-                                    context.read<CartCubit>().selectColor = val;
+                                    context
+                                        .read<CartCubit>()
+                                        .selectcolor(val ?? '');
                                   },
                                 ),
                               ],
@@ -146,24 +157,28 @@ class ProductDetailScreen extends StatelessWidget {
                         Text("${product.itemDecs}"),
                         const SizedBox(height: 40),
                         //? add to cart button
-                        SizedBox(
-                          width: double.infinity,
-                          child: ElevatedButton(
-                            onPressed: product.itemCount != 0
-                                ? () {
-                                    context
-                                        .read<CartCubit>()
-                                        .emitAddCart(product.itemId!, context);
-                                    //TODO: should complete call addToCart
-                                  }
-                                : null,
-                            child: Text("Add to cart",
-                                style: TextStyle(
-                                    color: product.itemCount != 0
-                                        ? AppColor.primaryColor
-                                        : Colors.white)),
-                          ),
-                        )
+                        Builder(builder: (context) {
+                          return SizedBox(
+                            width: double.infinity,
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                padding: const EdgeInsets.all(20),
+                                backgroundColor: AppColor.primaryColor,
+                              ),
+                              onPressed: product.itemCount != 0
+                                  ? () async {
+                                      await context
+                                          .read<CartCubit>()
+                                          .emitAddCart(
+                                              product.itemId!, context);
+                                      context.push('/Cart');
+                                    }
+                                  : null,
+                              child: const Text("Add to cart",
+                                  style: TextStyle(color: Colors.white)),
+                            ),
+                          );
+                        })
                       ],
                     ),
                   )
