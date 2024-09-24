@@ -1,4 +1,4 @@
-import 'package:ecommerce_user/model/response_home/datum.dart';
+import 'package:ecommerce_user/future/home/data/models/response_home/datum.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/animation/open_container_wrapper.dart';

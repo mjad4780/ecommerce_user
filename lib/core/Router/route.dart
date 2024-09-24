@@ -10,7 +10,9 @@ import '../../future/auth/forgetpassword/repassword.dart';
 import '../../future/auth/sign_up/SignUp.dart';
 import '../../future/auth/verfyCode/verfy_code.dart';
 import '../../future/cart/cart.dart';
+import '../../future/home/widget/view_notification.dart';
 import '../../future/onbording/onbordingScreen.dart';
+import '../../future/orders/widget/track_orders.dart';
 import '../class/cache_helper.dart';
 import '../function/animation_page.dart';
 import '../get_it/get_it.dart';
@@ -60,6 +62,14 @@ final GoRouter router = GoRouter(routes: [
       path: "/MyAddressPage",
       pageBuilder: (context, state) =>
           myCustomtransitionPage(const MyAddressPage(), state)),
+  GoRoute(
+      path: "/ViewNotification",
+      pageBuilder: (context, state) =>
+          myCustomtransitionPage(const ViewNotification(), state)),
+  GoRoute(
+      path: "/TrackOrders",
+      pageBuilder: (context, state) =>
+          myCustomtransitionPage(const TrackOrders(), state)),
 ]);
 checkNavigate() {
   if (getIt<CacheHelper>().getData(key: 'email') != null) {

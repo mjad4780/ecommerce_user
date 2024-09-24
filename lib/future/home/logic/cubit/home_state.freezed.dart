@@ -26,6 +26,10 @@ mixin _$HomeState {
     required TResult Function(Item1view responseItems) successSearch,
     required TResult Function(String erorr) errorSearch,
     required TResult Function(int page) stateBottomNavigationBar,
+    required TResult Function() loadinggetNotification,
+    required TResult Function(ResponseNotification responseItems)
+        successgetNotification,
+    required TResult Function(String erorr) errorgetNotification,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +42,10 @@ mixin _$HomeState {
     TResult? Function(Item1view responseItems)? successSearch,
     TResult? Function(String erorr)? errorSearch,
     TResult? Function(int page)? stateBottomNavigationBar,
+    TResult? Function()? loadinggetNotification,
+    TResult? Function(ResponseNotification responseItems)?
+        successgetNotification,
+    TResult? Function(String erorr)? errorgetNotification,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +58,10 @@ mixin _$HomeState {
     TResult Function(Item1view responseItems)? successSearch,
     TResult Function(String erorr)? errorSearch,
     TResult Function(int page)? stateBottomNavigationBar,
+    TResult Function()? loadinggetNotification,
+    TResult Function(ResponseNotification responseItems)?
+        successgetNotification,
+    TResult Function(String erorr)? errorgetNotification,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -64,6 +76,11 @@ mixin _$HomeState {
     required TResult Function(ErrorSearch value) errorSearch,
     required TResult Function(StateBottomNavigationBar value)
         stateBottomNavigationBar,
+    required TResult Function(LoadinggetNotification value)
+        loadinggetNotification,
+    required TResult Function(SuccessgetNotification value)
+        successgetNotification,
+    required TResult Function(ErrorgetNotification value) errorgetNotification,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -76,6 +93,9 @@ mixin _$HomeState {
     TResult? Function(SuccessSearch value)? successSearch,
     TResult? Function(ErrorSearch value)? errorSearch,
     TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
+    TResult? Function(LoadinggetNotification value)? loadinggetNotification,
+    TResult? Function(SuccessgetNotification value)? successgetNotification,
+    TResult? Function(ErrorgetNotification value)? errorgetNotification,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -88,6 +108,9 @@ mixin _$HomeState {
     TResult Function(SuccessSearch value)? successSearch,
     TResult Function(ErrorSearch value)? errorSearch,
     TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
+    TResult Function(LoadinggetNotification value)? loadinggetNotification,
+    TResult Function(SuccessgetNotification value)? successgetNotification,
+    TResult Function(ErrorgetNotification value)? errorgetNotification,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -156,6 +179,10 @@ class _$InitialImpl implements _Initial {
     required TResult Function(Item1view responseItems) successSearch,
     required TResult Function(String erorr) errorSearch,
     required TResult Function(int page) stateBottomNavigationBar,
+    required TResult Function() loadinggetNotification,
+    required TResult Function(ResponseNotification responseItems)
+        successgetNotification,
+    required TResult Function(String erorr) errorgetNotification,
   }) {
     return initial();
   }
@@ -171,6 +198,10 @@ class _$InitialImpl implements _Initial {
     TResult? Function(Item1view responseItems)? successSearch,
     TResult? Function(String erorr)? errorSearch,
     TResult? Function(int page)? stateBottomNavigationBar,
+    TResult? Function()? loadinggetNotification,
+    TResult? Function(ResponseNotification responseItems)?
+        successgetNotification,
+    TResult? Function(String erorr)? errorgetNotification,
   }) {
     return initial?.call();
   }
@@ -186,6 +217,10 @@ class _$InitialImpl implements _Initial {
     TResult Function(Item1view responseItems)? successSearch,
     TResult Function(String erorr)? errorSearch,
     TResult Function(int page)? stateBottomNavigationBar,
+    TResult Function()? loadinggetNotification,
+    TResult Function(ResponseNotification responseItems)?
+        successgetNotification,
+    TResult Function(String erorr)? errorgetNotification,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -206,6 +241,11 @@ class _$InitialImpl implements _Initial {
     required TResult Function(ErrorSearch value) errorSearch,
     required TResult Function(StateBottomNavigationBar value)
         stateBottomNavigationBar,
+    required TResult Function(LoadinggetNotification value)
+        loadinggetNotification,
+    required TResult Function(SuccessgetNotification value)
+        successgetNotification,
+    required TResult Function(ErrorgetNotification value) errorgetNotification,
   }) {
     return initial(this);
   }
@@ -221,6 +261,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(SuccessSearch value)? successSearch,
     TResult? Function(ErrorSearch value)? errorSearch,
     TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
+    TResult? Function(LoadinggetNotification value)? loadinggetNotification,
+    TResult? Function(SuccessgetNotification value)? successgetNotification,
+    TResult? Function(ErrorgetNotification value)? errorgetNotification,
   }) {
     return initial?.call(this);
   }
@@ -236,6 +279,9 @@ class _$InitialImpl implements _Initial {
     TResult Function(SuccessSearch value)? successSearch,
     TResult Function(ErrorSearch value)? errorSearch,
     TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
+    TResult Function(LoadinggetNotification value)? loadinggetNotification,
+    TResult Function(SuccessgetNotification value)? successgetNotification,
+    TResult Function(ErrorgetNotification value)? errorgetNotification,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -295,6 +341,10 @@ class _$LoadingHomeImpl implements LoadingHome {
     required TResult Function(Item1view responseItems) successSearch,
     required TResult Function(String erorr) errorSearch,
     required TResult Function(int page) stateBottomNavigationBar,
+    required TResult Function() loadinggetNotification,
+    required TResult Function(ResponseNotification responseItems)
+        successgetNotification,
+    required TResult Function(String erorr) errorgetNotification,
   }) {
     return loadingHome();
   }
@@ -310,6 +360,10 @@ class _$LoadingHomeImpl implements LoadingHome {
     TResult? Function(Item1view responseItems)? successSearch,
     TResult? Function(String erorr)? errorSearch,
     TResult? Function(int page)? stateBottomNavigationBar,
+    TResult? Function()? loadinggetNotification,
+    TResult? Function(ResponseNotification responseItems)?
+        successgetNotification,
+    TResult? Function(String erorr)? errorgetNotification,
   }) {
     return loadingHome?.call();
   }
@@ -325,6 +379,10 @@ class _$LoadingHomeImpl implements LoadingHome {
     TResult Function(Item1view responseItems)? successSearch,
     TResult Function(String erorr)? errorSearch,
     TResult Function(int page)? stateBottomNavigationBar,
+    TResult Function()? loadinggetNotification,
+    TResult Function(ResponseNotification responseItems)?
+        successgetNotification,
+    TResult Function(String erorr)? errorgetNotification,
     required TResult orElse(),
   }) {
     if (loadingHome != null) {
@@ -345,6 +403,11 @@ class _$LoadingHomeImpl implements LoadingHome {
     required TResult Function(ErrorSearch value) errorSearch,
     required TResult Function(StateBottomNavigationBar value)
         stateBottomNavigationBar,
+    required TResult Function(LoadinggetNotification value)
+        loadinggetNotification,
+    required TResult Function(SuccessgetNotification value)
+        successgetNotification,
+    required TResult Function(ErrorgetNotification value) errorgetNotification,
   }) {
     return loadingHome(this);
   }
@@ -360,6 +423,9 @@ class _$LoadingHomeImpl implements LoadingHome {
     TResult? Function(SuccessSearch value)? successSearch,
     TResult? Function(ErrorSearch value)? errorSearch,
     TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
+    TResult? Function(LoadinggetNotification value)? loadinggetNotification,
+    TResult? Function(SuccessgetNotification value)? successgetNotification,
+    TResult? Function(ErrorgetNotification value)? errorgetNotification,
   }) {
     return loadingHome?.call(this);
   }
@@ -375,6 +441,9 @@ class _$LoadingHomeImpl implements LoadingHome {
     TResult Function(SuccessSearch value)? successSearch,
     TResult Function(ErrorSearch value)? errorSearch,
     TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
+    TResult Function(LoadinggetNotification value)? loadinggetNotification,
+    TResult Function(SuccessgetNotification value)? successgetNotification,
+    TResult Function(ErrorgetNotification value)? errorgetNotification,
     required TResult orElse(),
   }) {
     if (loadingHome != null) {
@@ -461,6 +530,10 @@ class _$SuccessHomeImpl implements SuccessHome {
     required TResult Function(Item1view responseItems) successSearch,
     required TResult Function(String erorr) errorSearch,
     required TResult Function(int page) stateBottomNavigationBar,
+    required TResult Function() loadinggetNotification,
+    required TResult Function(ResponseNotification responseItems)
+        successgetNotification,
+    required TResult Function(String erorr) errorgetNotification,
   }) {
     return successHome(responseHome);
   }
@@ -476,6 +549,10 @@ class _$SuccessHomeImpl implements SuccessHome {
     TResult? Function(Item1view responseItems)? successSearch,
     TResult? Function(String erorr)? errorSearch,
     TResult? Function(int page)? stateBottomNavigationBar,
+    TResult? Function()? loadinggetNotification,
+    TResult? Function(ResponseNotification responseItems)?
+        successgetNotification,
+    TResult? Function(String erorr)? errorgetNotification,
   }) {
     return successHome?.call(responseHome);
   }
@@ -491,6 +568,10 @@ class _$SuccessHomeImpl implements SuccessHome {
     TResult Function(Item1view responseItems)? successSearch,
     TResult Function(String erorr)? errorSearch,
     TResult Function(int page)? stateBottomNavigationBar,
+    TResult Function()? loadinggetNotification,
+    TResult Function(ResponseNotification responseItems)?
+        successgetNotification,
+    TResult Function(String erorr)? errorgetNotification,
     required TResult orElse(),
   }) {
     if (successHome != null) {
@@ -511,6 +592,11 @@ class _$SuccessHomeImpl implements SuccessHome {
     required TResult Function(ErrorSearch value) errorSearch,
     required TResult Function(StateBottomNavigationBar value)
         stateBottomNavigationBar,
+    required TResult Function(LoadinggetNotification value)
+        loadinggetNotification,
+    required TResult Function(SuccessgetNotification value)
+        successgetNotification,
+    required TResult Function(ErrorgetNotification value) errorgetNotification,
   }) {
     return successHome(this);
   }
@@ -526,6 +612,9 @@ class _$SuccessHomeImpl implements SuccessHome {
     TResult? Function(SuccessSearch value)? successSearch,
     TResult? Function(ErrorSearch value)? errorSearch,
     TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
+    TResult? Function(LoadinggetNotification value)? loadinggetNotification,
+    TResult? Function(SuccessgetNotification value)? successgetNotification,
+    TResult? Function(ErrorgetNotification value)? errorgetNotification,
   }) {
     return successHome?.call(this);
   }
@@ -541,6 +630,9 @@ class _$SuccessHomeImpl implements SuccessHome {
     TResult Function(SuccessSearch value)? successSearch,
     TResult Function(ErrorSearch value)? errorSearch,
     TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
+    TResult Function(LoadinggetNotification value)? loadinggetNotification,
+    TResult Function(SuccessgetNotification value)? successgetNotification,
+    TResult Function(ErrorgetNotification value)? errorgetNotification,
     required TResult orElse(),
   }) {
     if (successHome != null) {
@@ -632,6 +724,10 @@ class _$ErrorHomeImpl implements ErrorHome {
     required TResult Function(Item1view responseItems) successSearch,
     required TResult Function(String erorr) errorSearch,
     required TResult Function(int page) stateBottomNavigationBar,
+    required TResult Function() loadinggetNotification,
+    required TResult Function(ResponseNotification responseItems)
+        successgetNotification,
+    required TResult Function(String erorr) errorgetNotification,
   }) {
     return errorHome(erorr);
   }
@@ -647,6 +743,10 @@ class _$ErrorHomeImpl implements ErrorHome {
     TResult? Function(Item1view responseItems)? successSearch,
     TResult? Function(String erorr)? errorSearch,
     TResult? Function(int page)? stateBottomNavigationBar,
+    TResult? Function()? loadinggetNotification,
+    TResult? Function(ResponseNotification responseItems)?
+        successgetNotification,
+    TResult? Function(String erorr)? errorgetNotification,
   }) {
     return errorHome?.call(erorr);
   }
@@ -662,6 +762,10 @@ class _$ErrorHomeImpl implements ErrorHome {
     TResult Function(Item1view responseItems)? successSearch,
     TResult Function(String erorr)? errorSearch,
     TResult Function(int page)? stateBottomNavigationBar,
+    TResult Function()? loadinggetNotification,
+    TResult Function(ResponseNotification responseItems)?
+        successgetNotification,
+    TResult Function(String erorr)? errorgetNotification,
     required TResult orElse(),
   }) {
     if (errorHome != null) {
@@ -682,6 +786,11 @@ class _$ErrorHomeImpl implements ErrorHome {
     required TResult Function(ErrorSearch value) errorSearch,
     required TResult Function(StateBottomNavigationBar value)
         stateBottomNavigationBar,
+    required TResult Function(LoadinggetNotification value)
+        loadinggetNotification,
+    required TResult Function(SuccessgetNotification value)
+        successgetNotification,
+    required TResult Function(ErrorgetNotification value) errorgetNotification,
   }) {
     return errorHome(this);
   }
@@ -697,6 +806,9 @@ class _$ErrorHomeImpl implements ErrorHome {
     TResult? Function(SuccessSearch value)? successSearch,
     TResult? Function(ErrorSearch value)? errorSearch,
     TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
+    TResult? Function(LoadinggetNotification value)? loadinggetNotification,
+    TResult? Function(SuccessgetNotification value)? successgetNotification,
+    TResult? Function(ErrorgetNotification value)? errorgetNotification,
   }) {
     return errorHome?.call(this);
   }
@@ -712,6 +824,9 @@ class _$ErrorHomeImpl implements ErrorHome {
     TResult Function(SuccessSearch value)? successSearch,
     TResult Function(ErrorSearch value)? errorSearch,
     TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
+    TResult Function(LoadinggetNotification value)? loadinggetNotification,
+    TResult Function(SuccessgetNotification value)? successgetNotification,
+    TResult Function(ErrorgetNotification value)? errorgetNotification,
     required TResult orElse(),
   }) {
     if (errorHome != null) {
@@ -776,6 +891,10 @@ class _$LoadingsearchImpl implements Loadingsearch {
     required TResult Function(Item1view responseItems) successSearch,
     required TResult Function(String erorr) errorSearch,
     required TResult Function(int page) stateBottomNavigationBar,
+    required TResult Function() loadinggetNotification,
+    required TResult Function(ResponseNotification responseItems)
+        successgetNotification,
+    required TResult Function(String erorr) errorgetNotification,
   }) {
     return loadingsearch();
   }
@@ -791,6 +910,10 @@ class _$LoadingsearchImpl implements Loadingsearch {
     TResult? Function(Item1view responseItems)? successSearch,
     TResult? Function(String erorr)? errorSearch,
     TResult? Function(int page)? stateBottomNavigationBar,
+    TResult? Function()? loadinggetNotification,
+    TResult? Function(ResponseNotification responseItems)?
+        successgetNotification,
+    TResult? Function(String erorr)? errorgetNotification,
   }) {
     return loadingsearch?.call();
   }
@@ -806,6 +929,10 @@ class _$LoadingsearchImpl implements Loadingsearch {
     TResult Function(Item1view responseItems)? successSearch,
     TResult Function(String erorr)? errorSearch,
     TResult Function(int page)? stateBottomNavigationBar,
+    TResult Function()? loadinggetNotification,
+    TResult Function(ResponseNotification responseItems)?
+        successgetNotification,
+    TResult Function(String erorr)? errorgetNotification,
     required TResult orElse(),
   }) {
     if (loadingsearch != null) {
@@ -826,6 +953,11 @@ class _$LoadingsearchImpl implements Loadingsearch {
     required TResult Function(ErrorSearch value) errorSearch,
     required TResult Function(StateBottomNavigationBar value)
         stateBottomNavigationBar,
+    required TResult Function(LoadinggetNotification value)
+        loadinggetNotification,
+    required TResult Function(SuccessgetNotification value)
+        successgetNotification,
+    required TResult Function(ErrorgetNotification value) errorgetNotification,
   }) {
     return loadingsearch(this);
   }
@@ -841,6 +973,9 @@ class _$LoadingsearchImpl implements Loadingsearch {
     TResult? Function(SuccessSearch value)? successSearch,
     TResult? Function(ErrorSearch value)? errorSearch,
     TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
+    TResult? Function(LoadinggetNotification value)? loadinggetNotification,
+    TResult? Function(SuccessgetNotification value)? successgetNotification,
+    TResult? Function(ErrorgetNotification value)? errorgetNotification,
   }) {
     return loadingsearch?.call(this);
   }
@@ -856,6 +991,9 @@ class _$LoadingsearchImpl implements Loadingsearch {
     TResult Function(SuccessSearch value)? successSearch,
     TResult Function(ErrorSearch value)? errorSearch,
     TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
+    TResult Function(LoadinggetNotification value)? loadinggetNotification,
+    TResult Function(SuccessgetNotification value)? successgetNotification,
+    TResult Function(ErrorgetNotification value)? errorgetNotification,
     required TResult orElse(),
   }) {
     if (loadingsearch != null) {
@@ -942,6 +1080,10 @@ class _$SuccessSearchImpl implements SuccessSearch {
     required TResult Function(Item1view responseItems) successSearch,
     required TResult Function(String erorr) errorSearch,
     required TResult Function(int page) stateBottomNavigationBar,
+    required TResult Function() loadinggetNotification,
+    required TResult Function(ResponseNotification responseItems)
+        successgetNotification,
+    required TResult Function(String erorr) errorgetNotification,
   }) {
     return successSearch(responseItems);
   }
@@ -957,6 +1099,10 @@ class _$SuccessSearchImpl implements SuccessSearch {
     TResult? Function(Item1view responseItems)? successSearch,
     TResult? Function(String erorr)? errorSearch,
     TResult? Function(int page)? stateBottomNavigationBar,
+    TResult? Function()? loadinggetNotification,
+    TResult? Function(ResponseNotification responseItems)?
+        successgetNotification,
+    TResult? Function(String erorr)? errorgetNotification,
   }) {
     return successSearch?.call(responseItems);
   }
@@ -972,6 +1118,10 @@ class _$SuccessSearchImpl implements SuccessSearch {
     TResult Function(Item1view responseItems)? successSearch,
     TResult Function(String erorr)? errorSearch,
     TResult Function(int page)? stateBottomNavigationBar,
+    TResult Function()? loadinggetNotification,
+    TResult Function(ResponseNotification responseItems)?
+        successgetNotification,
+    TResult Function(String erorr)? errorgetNotification,
     required TResult orElse(),
   }) {
     if (successSearch != null) {
@@ -992,6 +1142,11 @@ class _$SuccessSearchImpl implements SuccessSearch {
     required TResult Function(ErrorSearch value) errorSearch,
     required TResult Function(StateBottomNavigationBar value)
         stateBottomNavigationBar,
+    required TResult Function(LoadinggetNotification value)
+        loadinggetNotification,
+    required TResult Function(SuccessgetNotification value)
+        successgetNotification,
+    required TResult Function(ErrorgetNotification value) errorgetNotification,
   }) {
     return successSearch(this);
   }
@@ -1007,6 +1162,9 @@ class _$SuccessSearchImpl implements SuccessSearch {
     TResult? Function(SuccessSearch value)? successSearch,
     TResult? Function(ErrorSearch value)? errorSearch,
     TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
+    TResult? Function(LoadinggetNotification value)? loadinggetNotification,
+    TResult? Function(SuccessgetNotification value)? successgetNotification,
+    TResult? Function(ErrorgetNotification value)? errorgetNotification,
   }) {
     return successSearch?.call(this);
   }
@@ -1022,6 +1180,9 @@ class _$SuccessSearchImpl implements SuccessSearch {
     TResult Function(SuccessSearch value)? successSearch,
     TResult Function(ErrorSearch value)? errorSearch,
     TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
+    TResult Function(LoadinggetNotification value)? loadinggetNotification,
+    TResult Function(SuccessgetNotification value)? successgetNotification,
+    TResult Function(ErrorgetNotification value)? errorgetNotification,
     required TResult orElse(),
   }) {
     if (successSearch != null) {
@@ -1113,6 +1274,10 @@ class _$ErrorSearchImpl implements ErrorSearch {
     required TResult Function(Item1view responseItems) successSearch,
     required TResult Function(String erorr) errorSearch,
     required TResult Function(int page) stateBottomNavigationBar,
+    required TResult Function() loadinggetNotification,
+    required TResult Function(ResponseNotification responseItems)
+        successgetNotification,
+    required TResult Function(String erorr) errorgetNotification,
   }) {
     return errorSearch(erorr);
   }
@@ -1128,6 +1293,10 @@ class _$ErrorSearchImpl implements ErrorSearch {
     TResult? Function(Item1view responseItems)? successSearch,
     TResult? Function(String erorr)? errorSearch,
     TResult? Function(int page)? stateBottomNavigationBar,
+    TResult? Function()? loadinggetNotification,
+    TResult? Function(ResponseNotification responseItems)?
+        successgetNotification,
+    TResult? Function(String erorr)? errorgetNotification,
   }) {
     return errorSearch?.call(erorr);
   }
@@ -1143,6 +1312,10 @@ class _$ErrorSearchImpl implements ErrorSearch {
     TResult Function(Item1view responseItems)? successSearch,
     TResult Function(String erorr)? errorSearch,
     TResult Function(int page)? stateBottomNavigationBar,
+    TResult Function()? loadinggetNotification,
+    TResult Function(ResponseNotification responseItems)?
+        successgetNotification,
+    TResult Function(String erorr)? errorgetNotification,
     required TResult orElse(),
   }) {
     if (errorSearch != null) {
@@ -1163,6 +1336,11 @@ class _$ErrorSearchImpl implements ErrorSearch {
     required TResult Function(ErrorSearch value) errorSearch,
     required TResult Function(StateBottomNavigationBar value)
         stateBottomNavigationBar,
+    required TResult Function(LoadinggetNotification value)
+        loadinggetNotification,
+    required TResult Function(SuccessgetNotification value)
+        successgetNotification,
+    required TResult Function(ErrorgetNotification value) errorgetNotification,
   }) {
     return errorSearch(this);
   }
@@ -1178,6 +1356,9 @@ class _$ErrorSearchImpl implements ErrorSearch {
     TResult? Function(SuccessSearch value)? successSearch,
     TResult? Function(ErrorSearch value)? errorSearch,
     TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
+    TResult? Function(LoadinggetNotification value)? loadinggetNotification,
+    TResult? Function(SuccessgetNotification value)? successgetNotification,
+    TResult? Function(ErrorgetNotification value)? errorgetNotification,
   }) {
     return errorSearch?.call(this);
   }
@@ -1193,6 +1374,9 @@ class _$ErrorSearchImpl implements ErrorSearch {
     TResult Function(SuccessSearch value)? successSearch,
     TResult Function(ErrorSearch value)? errorSearch,
     TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
+    TResult Function(LoadinggetNotification value)? loadinggetNotification,
+    TResult Function(SuccessgetNotification value)? successgetNotification,
+    TResult Function(ErrorgetNotification value)? errorgetNotification,
     required TResult orElse(),
   }) {
     if (errorSearch != null) {
@@ -1286,6 +1470,10 @@ class _$StateBottomNavigationBarImpl implements StateBottomNavigationBar {
     required TResult Function(Item1view responseItems) successSearch,
     required TResult Function(String erorr) errorSearch,
     required TResult Function(int page) stateBottomNavigationBar,
+    required TResult Function() loadinggetNotification,
+    required TResult Function(ResponseNotification responseItems)
+        successgetNotification,
+    required TResult Function(String erorr) errorgetNotification,
   }) {
     return stateBottomNavigationBar(page);
   }
@@ -1301,6 +1489,10 @@ class _$StateBottomNavigationBarImpl implements StateBottomNavigationBar {
     TResult? Function(Item1view responseItems)? successSearch,
     TResult? Function(String erorr)? errorSearch,
     TResult? Function(int page)? stateBottomNavigationBar,
+    TResult? Function()? loadinggetNotification,
+    TResult? Function(ResponseNotification responseItems)?
+        successgetNotification,
+    TResult? Function(String erorr)? errorgetNotification,
   }) {
     return stateBottomNavigationBar?.call(page);
   }
@@ -1316,6 +1508,10 @@ class _$StateBottomNavigationBarImpl implements StateBottomNavigationBar {
     TResult Function(Item1view responseItems)? successSearch,
     TResult Function(String erorr)? errorSearch,
     TResult Function(int page)? stateBottomNavigationBar,
+    TResult Function()? loadinggetNotification,
+    TResult Function(ResponseNotification responseItems)?
+        successgetNotification,
+    TResult Function(String erorr)? errorgetNotification,
     required TResult orElse(),
   }) {
     if (stateBottomNavigationBar != null) {
@@ -1336,6 +1532,11 @@ class _$StateBottomNavigationBarImpl implements StateBottomNavigationBar {
     required TResult Function(ErrorSearch value) errorSearch,
     required TResult Function(StateBottomNavigationBar value)
         stateBottomNavigationBar,
+    required TResult Function(LoadinggetNotification value)
+        loadinggetNotification,
+    required TResult Function(SuccessgetNotification value)
+        successgetNotification,
+    required TResult Function(ErrorgetNotification value) errorgetNotification,
   }) {
     return stateBottomNavigationBar(this);
   }
@@ -1351,6 +1552,9 @@ class _$StateBottomNavigationBarImpl implements StateBottomNavigationBar {
     TResult? Function(SuccessSearch value)? successSearch,
     TResult? Function(ErrorSearch value)? errorSearch,
     TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
+    TResult? Function(LoadinggetNotification value)? loadinggetNotification,
+    TResult? Function(SuccessgetNotification value)? successgetNotification,
+    TResult? Function(ErrorgetNotification value)? errorgetNotification,
   }) {
     return stateBottomNavigationBar?.call(this);
   }
@@ -1366,6 +1570,9 @@ class _$StateBottomNavigationBarImpl implements StateBottomNavigationBar {
     TResult Function(SuccessSearch value)? successSearch,
     TResult Function(ErrorSearch value)? errorSearch,
     TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
+    TResult Function(LoadinggetNotification value)? loadinggetNotification,
+    TResult Function(SuccessgetNotification value)? successgetNotification,
+    TResult Function(ErrorgetNotification value)? errorgetNotification,
     required TResult orElse(),
   }) {
     if (stateBottomNavigationBar != null) {
@@ -1382,5 +1589,565 @@ abstract class StateBottomNavigationBar implements HomeState {
   int get page;
   @JsonKey(ignore: true)
   _$$StateBottomNavigationBarImplCopyWith<_$StateBottomNavigationBarImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LoadinggetNotificationImplCopyWith<$Res> {
+  factory _$$LoadinggetNotificationImplCopyWith(
+          _$LoadinggetNotificationImpl value,
+          $Res Function(_$LoadinggetNotificationImpl) then) =
+      __$$LoadinggetNotificationImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$LoadinggetNotificationImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$LoadinggetNotificationImpl>
+    implements _$$LoadinggetNotificationImplCopyWith<$Res> {
+  __$$LoadinggetNotificationImplCopyWithImpl(
+      _$LoadinggetNotificationImpl _value,
+      $Res Function(_$LoadinggetNotificationImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$LoadinggetNotificationImpl implements LoadinggetNotification {
+  const _$LoadinggetNotificationImpl();
+
+  @override
+  String toString() {
+    return 'HomeState.loadinggetNotification()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LoadinggetNotificationImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingHome,
+    required TResult Function(ResponseHome responseHome) successHome,
+    required TResult Function(String erorr) errorHome,
+    required TResult Function() loadingsearch,
+    required TResult Function(Item1view responseItems) successSearch,
+    required TResult Function(String erorr) errorSearch,
+    required TResult Function(int page) stateBottomNavigationBar,
+    required TResult Function() loadinggetNotification,
+    required TResult Function(ResponseNotification responseItems)
+        successgetNotification,
+    required TResult Function(String erorr) errorgetNotification,
+  }) {
+    return loadinggetNotification();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingHome,
+    TResult? Function(ResponseHome responseHome)? successHome,
+    TResult? Function(String erorr)? errorHome,
+    TResult? Function()? loadingsearch,
+    TResult? Function(Item1view responseItems)? successSearch,
+    TResult? Function(String erorr)? errorSearch,
+    TResult? Function(int page)? stateBottomNavigationBar,
+    TResult? Function()? loadinggetNotification,
+    TResult? Function(ResponseNotification responseItems)?
+        successgetNotification,
+    TResult? Function(String erorr)? errorgetNotification,
+  }) {
+    return loadinggetNotification?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingHome,
+    TResult Function(ResponseHome responseHome)? successHome,
+    TResult Function(String erorr)? errorHome,
+    TResult Function()? loadingsearch,
+    TResult Function(Item1view responseItems)? successSearch,
+    TResult Function(String erorr)? errorSearch,
+    TResult Function(int page)? stateBottomNavigationBar,
+    TResult Function()? loadinggetNotification,
+    TResult Function(ResponseNotification responseItems)?
+        successgetNotification,
+    TResult Function(String erorr)? errorgetNotification,
+    required TResult orElse(),
+  }) {
+    if (loadinggetNotification != null) {
+      return loadinggetNotification();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(LoadingHome value) loadingHome,
+    required TResult Function(SuccessHome value) successHome,
+    required TResult Function(ErrorHome value) errorHome,
+    required TResult Function(Loadingsearch value) loadingsearch,
+    required TResult Function(SuccessSearch value) successSearch,
+    required TResult Function(ErrorSearch value) errorSearch,
+    required TResult Function(StateBottomNavigationBar value)
+        stateBottomNavigationBar,
+    required TResult Function(LoadinggetNotification value)
+        loadinggetNotification,
+    required TResult Function(SuccessgetNotification value)
+        successgetNotification,
+    required TResult Function(ErrorgetNotification value) errorgetNotification,
+  }) {
+    return loadinggetNotification(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(LoadingHome value)? loadingHome,
+    TResult? Function(SuccessHome value)? successHome,
+    TResult? Function(ErrorHome value)? errorHome,
+    TResult? Function(Loadingsearch value)? loadingsearch,
+    TResult? Function(SuccessSearch value)? successSearch,
+    TResult? Function(ErrorSearch value)? errorSearch,
+    TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
+    TResult? Function(LoadinggetNotification value)? loadinggetNotification,
+    TResult? Function(SuccessgetNotification value)? successgetNotification,
+    TResult? Function(ErrorgetNotification value)? errorgetNotification,
+  }) {
+    return loadinggetNotification?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(LoadingHome value)? loadingHome,
+    TResult Function(SuccessHome value)? successHome,
+    TResult Function(ErrorHome value)? errorHome,
+    TResult Function(Loadingsearch value)? loadingsearch,
+    TResult Function(SuccessSearch value)? successSearch,
+    TResult Function(ErrorSearch value)? errorSearch,
+    TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
+    TResult Function(LoadinggetNotification value)? loadinggetNotification,
+    TResult Function(SuccessgetNotification value)? successgetNotification,
+    TResult Function(ErrorgetNotification value)? errorgetNotification,
+    required TResult orElse(),
+  }) {
+    if (loadinggetNotification != null) {
+      return loadinggetNotification(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class LoadinggetNotification implements HomeState {
+  const factory LoadinggetNotification() = _$LoadinggetNotificationImpl;
+}
+
+/// @nodoc
+abstract class _$$SuccessgetNotificationImplCopyWith<$Res> {
+  factory _$$SuccessgetNotificationImplCopyWith(
+          _$SuccessgetNotificationImpl value,
+          $Res Function(_$SuccessgetNotificationImpl) then) =
+      __$$SuccessgetNotificationImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({ResponseNotification responseItems});
+}
+
+/// @nodoc
+class __$$SuccessgetNotificationImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$SuccessgetNotificationImpl>
+    implements _$$SuccessgetNotificationImplCopyWith<$Res> {
+  __$$SuccessgetNotificationImplCopyWithImpl(
+      _$SuccessgetNotificationImpl _value,
+      $Res Function(_$SuccessgetNotificationImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? responseItems = null,
+  }) {
+    return _then(_$SuccessgetNotificationImpl(
+      responseItems: null == responseItems
+          ? _value.responseItems
+          : responseItems // ignore: cast_nullable_to_non_nullable
+              as ResponseNotification,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SuccessgetNotificationImpl implements SuccessgetNotification {
+  const _$SuccessgetNotificationImpl({required this.responseItems});
+
+  @override
+  final ResponseNotification responseItems;
+
+  @override
+  String toString() {
+    return 'HomeState.successgetNotification(responseItems: $responseItems)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SuccessgetNotificationImpl &&
+            (identical(other.responseItems, responseItems) ||
+                other.responseItems == responseItems));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, responseItems);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SuccessgetNotificationImplCopyWith<_$SuccessgetNotificationImpl>
+      get copyWith => __$$SuccessgetNotificationImplCopyWithImpl<
+          _$SuccessgetNotificationImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingHome,
+    required TResult Function(ResponseHome responseHome) successHome,
+    required TResult Function(String erorr) errorHome,
+    required TResult Function() loadingsearch,
+    required TResult Function(Item1view responseItems) successSearch,
+    required TResult Function(String erorr) errorSearch,
+    required TResult Function(int page) stateBottomNavigationBar,
+    required TResult Function() loadinggetNotification,
+    required TResult Function(ResponseNotification responseItems)
+        successgetNotification,
+    required TResult Function(String erorr) errorgetNotification,
+  }) {
+    return successgetNotification(responseItems);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingHome,
+    TResult? Function(ResponseHome responseHome)? successHome,
+    TResult? Function(String erorr)? errorHome,
+    TResult? Function()? loadingsearch,
+    TResult? Function(Item1view responseItems)? successSearch,
+    TResult? Function(String erorr)? errorSearch,
+    TResult? Function(int page)? stateBottomNavigationBar,
+    TResult? Function()? loadinggetNotification,
+    TResult? Function(ResponseNotification responseItems)?
+        successgetNotification,
+    TResult? Function(String erorr)? errorgetNotification,
+  }) {
+    return successgetNotification?.call(responseItems);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingHome,
+    TResult Function(ResponseHome responseHome)? successHome,
+    TResult Function(String erorr)? errorHome,
+    TResult Function()? loadingsearch,
+    TResult Function(Item1view responseItems)? successSearch,
+    TResult Function(String erorr)? errorSearch,
+    TResult Function(int page)? stateBottomNavigationBar,
+    TResult Function()? loadinggetNotification,
+    TResult Function(ResponseNotification responseItems)?
+        successgetNotification,
+    TResult Function(String erorr)? errorgetNotification,
+    required TResult orElse(),
+  }) {
+    if (successgetNotification != null) {
+      return successgetNotification(responseItems);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(LoadingHome value) loadingHome,
+    required TResult Function(SuccessHome value) successHome,
+    required TResult Function(ErrorHome value) errorHome,
+    required TResult Function(Loadingsearch value) loadingsearch,
+    required TResult Function(SuccessSearch value) successSearch,
+    required TResult Function(ErrorSearch value) errorSearch,
+    required TResult Function(StateBottomNavigationBar value)
+        stateBottomNavigationBar,
+    required TResult Function(LoadinggetNotification value)
+        loadinggetNotification,
+    required TResult Function(SuccessgetNotification value)
+        successgetNotification,
+    required TResult Function(ErrorgetNotification value) errorgetNotification,
+  }) {
+    return successgetNotification(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(LoadingHome value)? loadingHome,
+    TResult? Function(SuccessHome value)? successHome,
+    TResult? Function(ErrorHome value)? errorHome,
+    TResult? Function(Loadingsearch value)? loadingsearch,
+    TResult? Function(SuccessSearch value)? successSearch,
+    TResult? Function(ErrorSearch value)? errorSearch,
+    TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
+    TResult? Function(LoadinggetNotification value)? loadinggetNotification,
+    TResult? Function(SuccessgetNotification value)? successgetNotification,
+    TResult? Function(ErrorgetNotification value)? errorgetNotification,
+  }) {
+    return successgetNotification?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(LoadingHome value)? loadingHome,
+    TResult Function(SuccessHome value)? successHome,
+    TResult Function(ErrorHome value)? errorHome,
+    TResult Function(Loadingsearch value)? loadingsearch,
+    TResult Function(SuccessSearch value)? successSearch,
+    TResult Function(ErrorSearch value)? errorSearch,
+    TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
+    TResult Function(LoadinggetNotification value)? loadinggetNotification,
+    TResult Function(SuccessgetNotification value)? successgetNotification,
+    TResult Function(ErrorgetNotification value)? errorgetNotification,
+    required TResult orElse(),
+  }) {
+    if (successgetNotification != null) {
+      return successgetNotification(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SuccessgetNotification implements HomeState {
+  const factory SuccessgetNotification(
+          {required final ResponseNotification responseItems}) =
+      _$SuccessgetNotificationImpl;
+
+  ResponseNotification get responseItems;
+  @JsonKey(ignore: true)
+  _$$SuccessgetNotificationImplCopyWith<_$SuccessgetNotificationImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ErrorgetNotificationImplCopyWith<$Res> {
+  factory _$$ErrorgetNotificationImplCopyWith(_$ErrorgetNotificationImpl value,
+          $Res Function(_$ErrorgetNotificationImpl) then) =
+      __$$ErrorgetNotificationImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String erorr});
+}
+
+/// @nodoc
+class __$$ErrorgetNotificationImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$ErrorgetNotificationImpl>
+    implements _$$ErrorgetNotificationImplCopyWith<$Res> {
+  __$$ErrorgetNotificationImplCopyWithImpl(_$ErrorgetNotificationImpl _value,
+      $Res Function(_$ErrorgetNotificationImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? erorr = null,
+  }) {
+    return _then(_$ErrorgetNotificationImpl(
+      erorr: null == erorr
+          ? _value.erorr
+          : erorr // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ErrorgetNotificationImpl implements ErrorgetNotification {
+  const _$ErrorgetNotificationImpl({required this.erorr});
+
+  @override
+  final String erorr;
+
+  @override
+  String toString() {
+    return 'HomeState.errorgetNotification(erorr: $erorr)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ErrorgetNotificationImpl &&
+            (identical(other.erorr, erorr) || other.erorr == erorr));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, erorr);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ErrorgetNotificationImplCopyWith<_$ErrorgetNotificationImpl>
+      get copyWith =>
+          __$$ErrorgetNotificationImplCopyWithImpl<_$ErrorgetNotificationImpl>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingHome,
+    required TResult Function(ResponseHome responseHome) successHome,
+    required TResult Function(String erorr) errorHome,
+    required TResult Function() loadingsearch,
+    required TResult Function(Item1view responseItems) successSearch,
+    required TResult Function(String erorr) errorSearch,
+    required TResult Function(int page) stateBottomNavigationBar,
+    required TResult Function() loadinggetNotification,
+    required TResult Function(ResponseNotification responseItems)
+        successgetNotification,
+    required TResult Function(String erorr) errorgetNotification,
+  }) {
+    return errorgetNotification(erorr);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingHome,
+    TResult? Function(ResponseHome responseHome)? successHome,
+    TResult? Function(String erorr)? errorHome,
+    TResult? Function()? loadingsearch,
+    TResult? Function(Item1view responseItems)? successSearch,
+    TResult? Function(String erorr)? errorSearch,
+    TResult? Function(int page)? stateBottomNavigationBar,
+    TResult? Function()? loadinggetNotification,
+    TResult? Function(ResponseNotification responseItems)?
+        successgetNotification,
+    TResult? Function(String erorr)? errorgetNotification,
+  }) {
+    return errorgetNotification?.call(erorr);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingHome,
+    TResult Function(ResponseHome responseHome)? successHome,
+    TResult Function(String erorr)? errorHome,
+    TResult Function()? loadingsearch,
+    TResult Function(Item1view responseItems)? successSearch,
+    TResult Function(String erorr)? errorSearch,
+    TResult Function(int page)? stateBottomNavigationBar,
+    TResult Function()? loadinggetNotification,
+    TResult Function(ResponseNotification responseItems)?
+        successgetNotification,
+    TResult Function(String erorr)? errorgetNotification,
+    required TResult orElse(),
+  }) {
+    if (errorgetNotification != null) {
+      return errorgetNotification(erorr);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(LoadingHome value) loadingHome,
+    required TResult Function(SuccessHome value) successHome,
+    required TResult Function(ErrorHome value) errorHome,
+    required TResult Function(Loadingsearch value) loadingsearch,
+    required TResult Function(SuccessSearch value) successSearch,
+    required TResult Function(ErrorSearch value) errorSearch,
+    required TResult Function(StateBottomNavigationBar value)
+        stateBottomNavigationBar,
+    required TResult Function(LoadinggetNotification value)
+        loadinggetNotification,
+    required TResult Function(SuccessgetNotification value)
+        successgetNotification,
+    required TResult Function(ErrorgetNotification value) errorgetNotification,
+  }) {
+    return errorgetNotification(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(LoadingHome value)? loadingHome,
+    TResult? Function(SuccessHome value)? successHome,
+    TResult? Function(ErrorHome value)? errorHome,
+    TResult? Function(Loadingsearch value)? loadingsearch,
+    TResult? Function(SuccessSearch value)? successSearch,
+    TResult? Function(ErrorSearch value)? errorSearch,
+    TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
+    TResult? Function(LoadinggetNotification value)? loadinggetNotification,
+    TResult? Function(SuccessgetNotification value)? successgetNotification,
+    TResult? Function(ErrorgetNotification value)? errorgetNotification,
+  }) {
+    return errorgetNotification?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(LoadingHome value)? loadingHome,
+    TResult Function(SuccessHome value)? successHome,
+    TResult Function(ErrorHome value)? errorHome,
+    TResult Function(Loadingsearch value)? loadingsearch,
+    TResult Function(SuccessSearch value)? successSearch,
+    TResult Function(ErrorSearch value)? errorSearch,
+    TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
+    TResult Function(LoadinggetNotification value)? loadinggetNotification,
+    TResult Function(SuccessgetNotification value)? successgetNotification,
+    TResult Function(ErrorgetNotification value)? errorgetNotification,
+    required TResult orElse(),
+  }) {
+    if (errorgetNotification != null) {
+      return errorgetNotification(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ErrorgetNotification implements HomeState {
+  const factory ErrorgetNotification({required final String erorr}) =
+      _$ErrorgetNotificationImpl;
+
+  String get erorr;
+  @JsonKey(ignore: true)
+  _$$ErrorgetNotificationImplCopyWith<_$ErrorgetNotificationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

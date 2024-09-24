@@ -15,13 +15,8 @@ class CheckCartOrder {
 
   /// :CheckCartOrder
 
-  Future<ApiResult<ResponseStatus>> checkCartOrder(
-    int adressid,
-    int ordertype,
-    int orderprice,
-    int couponid,
-    int paymentmethod,
-  ) async {
+  Future<ApiResult<ResponseStatus>> checkCartOrder(int adressid, int ordertype,
+      int orderprice, int couponid, int paymentmethod, String playerId) async {
     try {
       Map<String, dynamic> map = {
         "userid": getIt<CacheHelper>().getData(key: 'id'),
@@ -31,6 +26,7 @@ class CheckCartOrder {
         "orderprice": orderprice,
         "couponid": couponid,
         "paymentmethod": paymentmethod,
+        "playerId": playerId
       };
 
       final response = await _apiService.checkout(formDataPost(map));

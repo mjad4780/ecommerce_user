@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../core/theming/styles.dart';
-import '../../../model/response_home/category.dart';
+import '../../home/data/models/response_home/category.dart';
 import '../../../widget/horizondal_list.dart';
 import '../logic/cubit/item_categories_cubit.dart';
 import 'view_item_categories_bloc.dart';

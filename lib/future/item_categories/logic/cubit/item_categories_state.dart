@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../../model/response_home/category.dart';
-import '../../../../model/response_home/item1view.dart';
+import '../../../home/data/models/response_home/category.dart';
+import '../../../home/data/models/response_home/item1view.dart';
 
 part 'item_categories_state.freezed.dart';
 

@@ -21,10 +21,7 @@ class CheckCartCubit extends Cubit<CheckCartState> {
   String? selectedPaymentOptionS;
 
 //:CheckCart
-  emitCheckCart(
-    BuildContext context,
-    int orderprice,
-  ) async {
+  emitCheckCart(BuildContext context, int orderprice, String playerId) async {
     if (selectedPaymentOption == null &&
         selectadressId == null &&
         orderType == null) {
@@ -34,7 +31,7 @@ class CheckCartCubit extends Cubit<CheckCartState> {
 
     emit(const CheckCartState.loading());
     final response = await _checkCartOrder.checkCartOrder(selectadressId!,
-        orderType!, orderprice, couponId, selectedPaymentOption!);
+        orderType!, orderprice, couponId, selectedPaymentOption!, playerId);
     response.when(success: (responsehome) {
       emit(const CheckCartState.success());
     }, failure: (error) {
@@ -89,10 +86,6 @@ class CheckCartCubit extends Cubit<CheckCartState> {
     });
   }
 }
-
-
-
-
 
 //  if (selectColor == null && selectSize == null) {
 //       return showMyDialog(context, "erorr", "please choose Size and Color");

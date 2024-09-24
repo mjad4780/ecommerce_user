@@ -20,7 +20,7 @@ mixin _$OrdersState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGet,
-    required TResult Function(OrderResponse orderResponse) successGet,
+    required TResult Function(ResponseOrders orderResponse) successGet,
     required TResult Function(String erorr) erorrGet,
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
@@ -31,13 +31,16 @@ mixin _$OrdersState {
     required TResult Function() loadingPeinding,
     required TResult Function(PendingResponse pendingResponse) successPeinding,
     required TResult Function(String erorr) erorrPeinding,
+    required TResult Function() updateStatus,
+    required TResult Function() updatePayment,
+    required TResult Function() updateType,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGet,
-    TResult? Function(OrderResponse orderResponse)? successGet,
+    TResult? Function(ResponseOrders orderResponse)? successGet,
     TResult? Function(String erorr)? erorrGet,
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
@@ -48,13 +51,16 @@ mixin _$OrdersState {
     TResult? Function()? loadingPeinding,
     TResult? Function(PendingResponse pendingResponse)? successPeinding,
     TResult? Function(String erorr)? erorrPeinding,
+    TResult? Function()? updateStatus,
+    TResult? Function()? updatePayment,
+    TResult? Function()? updateType,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGet,
-    TResult Function(OrderResponse orderResponse)? successGet,
+    TResult Function(ResponseOrders orderResponse)? successGet,
     TResult Function(String erorr)? erorrGet,
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
@@ -65,6 +71,9 @@ mixin _$OrdersState {
     TResult Function()? loadingPeinding,
     TResult Function(PendingResponse pendingResponse)? successPeinding,
     TResult Function(String erorr)? erorrPeinding,
+    TResult Function()? updateStatus,
+    TResult Function()? updatePayment,
+    TResult Function()? updateType,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -83,6 +92,9 @@ mixin _$OrdersState {
     required TResult Function(LoadingPeinding value) loadingPeinding,
     required TResult Function(SuccessPeinding value) successPeinding,
     required TResult Function(ErorrPeinding value) erorrPeinding,
+    required TResult Function(UpdateStatus value) updateStatus,
+    required TResult Function(UpdatePayment value) updatePayment,
+    required TResult Function(UpdateType value) updateType,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -100,6 +112,9 @@ mixin _$OrdersState {
     TResult? Function(LoadingPeinding value)? loadingPeinding,
     TResult? Function(SuccessPeinding value)? successPeinding,
     TResult? Function(ErorrPeinding value)? erorrPeinding,
+    TResult? Function(UpdateStatus value)? updateStatus,
+    TResult? Function(UpdatePayment value)? updatePayment,
+    TResult? Function(UpdateType value)? updateType,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -117,6 +132,9 @@ mixin _$OrdersState {
     TResult Function(LoadingPeinding value)? loadingPeinding,
     TResult Function(SuccessPeinding value)? successPeinding,
     TResult Function(ErorrPeinding value)? erorrPeinding,
+    TResult Function(UpdateStatus value)? updateStatus,
+    TResult Function(UpdatePayment value)? updatePayment,
+    TResult Function(UpdateType value)? updateType,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -180,7 +198,7 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGet,
-    required TResult Function(OrderResponse orderResponse) successGet,
+    required TResult Function(ResponseOrders orderResponse) successGet,
     required TResult Function(String erorr) erorrGet,
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
@@ -191,6 +209,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function() loadingPeinding,
     required TResult Function(PendingResponse pendingResponse) successPeinding,
     required TResult Function(String erorr) erorrPeinding,
+    required TResult Function() updateStatus,
+    required TResult Function() updatePayment,
+    required TResult Function() updateType,
   }) {
     return initial();
   }
@@ -200,7 +221,7 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGet,
-    TResult? Function(OrderResponse orderResponse)? successGet,
+    TResult? Function(ResponseOrders orderResponse)? successGet,
     TResult? Function(String erorr)? erorrGet,
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
@@ -211,6 +232,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loadingPeinding,
     TResult? Function(PendingResponse pendingResponse)? successPeinding,
     TResult? Function(String erorr)? erorrPeinding,
+    TResult? Function()? updateStatus,
+    TResult? Function()? updatePayment,
+    TResult? Function()? updateType,
   }) {
     return initial?.call();
   }
@@ -220,7 +244,7 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGet,
-    TResult Function(OrderResponse orderResponse)? successGet,
+    TResult Function(ResponseOrders orderResponse)? successGet,
     TResult Function(String erorr)? erorrGet,
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
@@ -231,6 +255,9 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loadingPeinding,
     TResult Function(PendingResponse pendingResponse)? successPeinding,
     TResult Function(String erorr)? erorrPeinding,
+    TResult Function()? updateStatus,
+    TResult Function()? updatePayment,
+    TResult Function()? updateType,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -255,6 +282,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function(LoadingPeinding value) loadingPeinding,
     required TResult Function(SuccessPeinding value) successPeinding,
     required TResult Function(ErorrPeinding value) erorrPeinding,
+    required TResult Function(UpdateStatus value) updateStatus,
+    required TResult Function(UpdatePayment value) updatePayment,
+    required TResult Function(UpdateType value) updateType,
   }) {
     return initial(this);
   }
@@ -275,6 +305,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(LoadingPeinding value)? loadingPeinding,
     TResult? Function(SuccessPeinding value)? successPeinding,
     TResult? Function(ErorrPeinding value)? erorrPeinding,
+    TResult? Function(UpdateStatus value)? updateStatus,
+    TResult? Function(UpdatePayment value)? updatePayment,
+    TResult? Function(UpdateType value)? updateType,
   }) {
     return initial?.call(this);
   }
@@ -295,6 +328,9 @@ class _$InitialImpl implements _Initial {
     TResult Function(LoadingPeinding value)? loadingPeinding,
     TResult Function(SuccessPeinding value)? successPeinding,
     TResult Function(ErorrPeinding value)? erorrPeinding,
+    TResult Function(UpdateStatus value)? updateStatus,
+    TResult Function(UpdatePayment value)? updatePayment,
+    TResult Function(UpdateType value)? updateType,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -348,7 +384,7 @@ class _$LoadingGetImpl implements LoadingGet {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGet,
-    required TResult Function(OrderResponse orderResponse) successGet,
+    required TResult Function(ResponseOrders orderResponse) successGet,
     required TResult Function(String erorr) erorrGet,
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
@@ -359,6 +395,9 @@ class _$LoadingGetImpl implements LoadingGet {
     required TResult Function() loadingPeinding,
     required TResult Function(PendingResponse pendingResponse) successPeinding,
     required TResult Function(String erorr) erorrPeinding,
+    required TResult Function() updateStatus,
+    required TResult Function() updatePayment,
+    required TResult Function() updateType,
   }) {
     return loadingGet();
   }
@@ -368,7 +407,7 @@ class _$LoadingGetImpl implements LoadingGet {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGet,
-    TResult? Function(OrderResponse orderResponse)? successGet,
+    TResult? Function(ResponseOrders orderResponse)? successGet,
     TResult? Function(String erorr)? erorrGet,
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
@@ -379,6 +418,9 @@ class _$LoadingGetImpl implements LoadingGet {
     TResult? Function()? loadingPeinding,
     TResult? Function(PendingResponse pendingResponse)? successPeinding,
     TResult? Function(String erorr)? erorrPeinding,
+    TResult? Function()? updateStatus,
+    TResult? Function()? updatePayment,
+    TResult? Function()? updateType,
   }) {
     return loadingGet?.call();
   }
@@ -388,7 +430,7 @@ class _$LoadingGetImpl implements LoadingGet {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGet,
-    TResult Function(OrderResponse orderResponse)? successGet,
+    TResult Function(ResponseOrders orderResponse)? successGet,
     TResult Function(String erorr)? erorrGet,
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
@@ -399,6 +441,9 @@ class _$LoadingGetImpl implements LoadingGet {
     TResult Function()? loadingPeinding,
     TResult Function(PendingResponse pendingResponse)? successPeinding,
     TResult Function(String erorr)? erorrPeinding,
+    TResult Function()? updateStatus,
+    TResult Function()? updatePayment,
+    TResult Function()? updateType,
     required TResult orElse(),
   }) {
     if (loadingGet != null) {
@@ -423,6 +468,9 @@ class _$LoadingGetImpl implements LoadingGet {
     required TResult Function(LoadingPeinding value) loadingPeinding,
     required TResult Function(SuccessPeinding value) successPeinding,
     required TResult Function(ErorrPeinding value) erorrPeinding,
+    required TResult Function(UpdateStatus value) updateStatus,
+    required TResult Function(UpdatePayment value) updatePayment,
+    required TResult Function(UpdateType value) updateType,
   }) {
     return loadingGet(this);
   }
@@ -443,6 +491,9 @@ class _$LoadingGetImpl implements LoadingGet {
     TResult? Function(LoadingPeinding value)? loadingPeinding,
     TResult? Function(SuccessPeinding value)? successPeinding,
     TResult? Function(ErorrPeinding value)? erorrPeinding,
+    TResult? Function(UpdateStatus value)? updateStatus,
+    TResult? Function(UpdatePayment value)? updatePayment,
+    TResult? Function(UpdateType value)? updateType,
   }) {
     return loadingGet?.call(this);
   }
@@ -463,6 +514,9 @@ class _$LoadingGetImpl implements LoadingGet {
     TResult Function(LoadingPeinding value)? loadingPeinding,
     TResult Function(SuccessPeinding value)? successPeinding,
     TResult Function(ErorrPeinding value)? erorrPeinding,
+    TResult Function(UpdateStatus value)? updateStatus,
+    TResult Function(UpdatePayment value)? updatePayment,
+    TResult Function(UpdateType value)? updateType,
     required TResult orElse(),
   }) {
     if (loadingGet != null) {
@@ -482,7 +536,7 @@ abstract class _$$SuccessGetImplCopyWith<$Res> {
           _$SuccessGetImpl value, $Res Function(_$SuccessGetImpl) then) =
       __$$SuccessGetImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({OrderResponse orderResponse});
+  $Res call({ResponseOrders orderResponse});
 }
 
 /// @nodoc
@@ -502,7 +556,7 @@ class __$$SuccessGetImplCopyWithImpl<$Res>
       null == orderResponse
           ? _value.orderResponse
           : orderResponse // ignore: cast_nullable_to_non_nullable
-              as OrderResponse,
+              as ResponseOrders,
     ));
   }
 }
@@ -513,7 +567,7 @@ class _$SuccessGetImpl implements SuccessGet {
   const _$SuccessGetImpl(this.orderResponse);
 
   @override
-  final OrderResponse orderResponse;
+  final ResponseOrders orderResponse;
 
   @override
   String toString() {
@@ -543,7 +597,7 @@ class _$SuccessGetImpl implements SuccessGet {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGet,
-    required TResult Function(OrderResponse orderResponse) successGet,
+    required TResult Function(ResponseOrders orderResponse) successGet,
     required TResult Function(String erorr) erorrGet,
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
@@ -554,6 +608,9 @@ class _$SuccessGetImpl implements SuccessGet {
     required TResult Function() loadingPeinding,
     required TResult Function(PendingResponse pendingResponse) successPeinding,
     required TResult Function(String erorr) erorrPeinding,
+    required TResult Function() updateStatus,
+    required TResult Function() updatePayment,
+    required TResult Function() updateType,
   }) {
     return successGet(orderResponse);
   }
@@ -563,7 +620,7 @@ class _$SuccessGetImpl implements SuccessGet {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGet,
-    TResult? Function(OrderResponse orderResponse)? successGet,
+    TResult? Function(ResponseOrders orderResponse)? successGet,
     TResult? Function(String erorr)? erorrGet,
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
@@ -574,6 +631,9 @@ class _$SuccessGetImpl implements SuccessGet {
     TResult? Function()? loadingPeinding,
     TResult? Function(PendingResponse pendingResponse)? successPeinding,
     TResult? Function(String erorr)? erorrPeinding,
+    TResult? Function()? updateStatus,
+    TResult? Function()? updatePayment,
+    TResult? Function()? updateType,
   }) {
     return successGet?.call(orderResponse);
   }
@@ -583,7 +643,7 @@ class _$SuccessGetImpl implements SuccessGet {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGet,
-    TResult Function(OrderResponse orderResponse)? successGet,
+    TResult Function(ResponseOrders orderResponse)? successGet,
     TResult Function(String erorr)? erorrGet,
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
@@ -594,6 +654,9 @@ class _$SuccessGetImpl implements SuccessGet {
     TResult Function()? loadingPeinding,
     TResult Function(PendingResponse pendingResponse)? successPeinding,
     TResult Function(String erorr)? erorrPeinding,
+    TResult Function()? updateStatus,
+    TResult Function()? updatePayment,
+    TResult Function()? updateType,
     required TResult orElse(),
   }) {
     if (successGet != null) {
@@ -618,6 +681,9 @@ class _$SuccessGetImpl implements SuccessGet {
     required TResult Function(LoadingPeinding value) loadingPeinding,
     required TResult Function(SuccessPeinding value) successPeinding,
     required TResult Function(ErorrPeinding value) erorrPeinding,
+    required TResult Function(UpdateStatus value) updateStatus,
+    required TResult Function(UpdatePayment value) updatePayment,
+    required TResult Function(UpdateType value) updateType,
   }) {
     return successGet(this);
   }
@@ -638,6 +704,9 @@ class _$SuccessGetImpl implements SuccessGet {
     TResult? Function(LoadingPeinding value)? loadingPeinding,
     TResult? Function(SuccessPeinding value)? successPeinding,
     TResult? Function(ErorrPeinding value)? erorrPeinding,
+    TResult? Function(UpdateStatus value)? updateStatus,
+    TResult? Function(UpdatePayment value)? updatePayment,
+    TResult? Function(UpdateType value)? updateType,
   }) {
     return successGet?.call(this);
   }
@@ -658,6 +727,9 @@ class _$SuccessGetImpl implements SuccessGet {
     TResult Function(LoadingPeinding value)? loadingPeinding,
     TResult Function(SuccessPeinding value)? successPeinding,
     TResult Function(ErorrPeinding value)? erorrPeinding,
+    TResult Function(UpdateStatus value)? updateStatus,
+    TResult Function(UpdatePayment value)? updatePayment,
+    TResult Function(UpdateType value)? updateType,
     required TResult orElse(),
   }) {
     if (successGet != null) {
@@ -668,10 +740,10 @@ class _$SuccessGetImpl implements SuccessGet {
 }
 
 abstract class SuccessGet implements OrdersState {
-  const factory SuccessGet(final OrderResponse orderResponse) =
+  const factory SuccessGet(final ResponseOrders orderResponse) =
       _$SuccessGetImpl;
 
-  OrderResponse get orderResponse;
+  ResponseOrders get orderResponse;
   @JsonKey(ignore: true)
   _$$SuccessGetImplCopyWith<_$SuccessGetImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -743,7 +815,7 @@ class _$ErorrGetImpl implements ErorrGet {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGet,
-    required TResult Function(OrderResponse orderResponse) successGet,
+    required TResult Function(ResponseOrders orderResponse) successGet,
     required TResult Function(String erorr) erorrGet,
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
@@ -754,6 +826,9 @@ class _$ErorrGetImpl implements ErorrGet {
     required TResult Function() loadingPeinding,
     required TResult Function(PendingResponse pendingResponse) successPeinding,
     required TResult Function(String erorr) erorrPeinding,
+    required TResult Function() updateStatus,
+    required TResult Function() updatePayment,
+    required TResult Function() updateType,
   }) {
     return erorrGet(erorr);
   }
@@ -763,7 +838,7 @@ class _$ErorrGetImpl implements ErorrGet {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGet,
-    TResult? Function(OrderResponse orderResponse)? successGet,
+    TResult? Function(ResponseOrders orderResponse)? successGet,
     TResult? Function(String erorr)? erorrGet,
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
@@ -774,6 +849,9 @@ class _$ErorrGetImpl implements ErorrGet {
     TResult? Function()? loadingPeinding,
     TResult? Function(PendingResponse pendingResponse)? successPeinding,
     TResult? Function(String erorr)? erorrPeinding,
+    TResult? Function()? updateStatus,
+    TResult? Function()? updatePayment,
+    TResult? Function()? updateType,
   }) {
     return erorrGet?.call(erorr);
   }
@@ -783,7 +861,7 @@ class _$ErorrGetImpl implements ErorrGet {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGet,
-    TResult Function(OrderResponse orderResponse)? successGet,
+    TResult Function(ResponseOrders orderResponse)? successGet,
     TResult Function(String erorr)? erorrGet,
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
@@ -794,6 +872,9 @@ class _$ErorrGetImpl implements ErorrGet {
     TResult Function()? loadingPeinding,
     TResult Function(PendingResponse pendingResponse)? successPeinding,
     TResult Function(String erorr)? erorrPeinding,
+    TResult Function()? updateStatus,
+    TResult Function()? updatePayment,
+    TResult Function()? updateType,
     required TResult orElse(),
   }) {
     if (erorrGet != null) {
@@ -818,6 +899,9 @@ class _$ErorrGetImpl implements ErorrGet {
     required TResult Function(LoadingPeinding value) loadingPeinding,
     required TResult Function(SuccessPeinding value) successPeinding,
     required TResult Function(ErorrPeinding value) erorrPeinding,
+    required TResult Function(UpdateStatus value) updateStatus,
+    required TResult Function(UpdatePayment value) updatePayment,
+    required TResult Function(UpdateType value) updateType,
   }) {
     return erorrGet(this);
   }
@@ -838,6 +922,9 @@ class _$ErorrGetImpl implements ErorrGet {
     TResult? Function(LoadingPeinding value)? loadingPeinding,
     TResult? Function(SuccessPeinding value)? successPeinding,
     TResult? Function(ErorrPeinding value)? erorrPeinding,
+    TResult? Function(UpdateStatus value)? updateStatus,
+    TResult? Function(UpdatePayment value)? updatePayment,
+    TResult? Function(UpdateType value)? updateType,
   }) {
     return erorrGet?.call(this);
   }
@@ -858,6 +945,9 @@ class _$ErorrGetImpl implements ErorrGet {
     TResult Function(LoadingPeinding value)? loadingPeinding,
     TResult Function(SuccessPeinding value)? successPeinding,
     TResult Function(ErorrPeinding value)? erorrPeinding,
+    TResult Function(UpdateStatus value)? updateStatus,
+    TResult Function(UpdatePayment value)? updatePayment,
+    TResult Function(UpdateType value)? updateType,
     required TResult orElse(),
   }) {
     if (erorrGet != null) {
@@ -916,7 +1006,7 @@ class _$LoadingDeleteImpl implements LoadingDelete {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGet,
-    required TResult Function(OrderResponse orderResponse) successGet,
+    required TResult Function(ResponseOrders orderResponse) successGet,
     required TResult Function(String erorr) erorrGet,
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
@@ -927,6 +1017,9 @@ class _$LoadingDeleteImpl implements LoadingDelete {
     required TResult Function() loadingPeinding,
     required TResult Function(PendingResponse pendingResponse) successPeinding,
     required TResult Function(String erorr) erorrPeinding,
+    required TResult Function() updateStatus,
+    required TResult Function() updatePayment,
+    required TResult Function() updateType,
   }) {
     return loadingDelete();
   }
@@ -936,7 +1029,7 @@ class _$LoadingDeleteImpl implements LoadingDelete {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGet,
-    TResult? Function(OrderResponse orderResponse)? successGet,
+    TResult? Function(ResponseOrders orderResponse)? successGet,
     TResult? Function(String erorr)? erorrGet,
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
@@ -947,6 +1040,9 @@ class _$LoadingDeleteImpl implements LoadingDelete {
     TResult? Function()? loadingPeinding,
     TResult? Function(PendingResponse pendingResponse)? successPeinding,
     TResult? Function(String erorr)? erorrPeinding,
+    TResult? Function()? updateStatus,
+    TResult? Function()? updatePayment,
+    TResult? Function()? updateType,
   }) {
     return loadingDelete?.call();
   }
@@ -956,7 +1052,7 @@ class _$LoadingDeleteImpl implements LoadingDelete {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGet,
-    TResult Function(OrderResponse orderResponse)? successGet,
+    TResult Function(ResponseOrders orderResponse)? successGet,
     TResult Function(String erorr)? erorrGet,
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
@@ -967,6 +1063,9 @@ class _$LoadingDeleteImpl implements LoadingDelete {
     TResult Function()? loadingPeinding,
     TResult Function(PendingResponse pendingResponse)? successPeinding,
     TResult Function(String erorr)? erorrPeinding,
+    TResult Function()? updateStatus,
+    TResult Function()? updatePayment,
+    TResult Function()? updateType,
     required TResult orElse(),
   }) {
     if (loadingDelete != null) {
@@ -991,6 +1090,9 @@ class _$LoadingDeleteImpl implements LoadingDelete {
     required TResult Function(LoadingPeinding value) loadingPeinding,
     required TResult Function(SuccessPeinding value) successPeinding,
     required TResult Function(ErorrPeinding value) erorrPeinding,
+    required TResult Function(UpdateStatus value) updateStatus,
+    required TResult Function(UpdatePayment value) updatePayment,
+    required TResult Function(UpdateType value) updateType,
   }) {
     return loadingDelete(this);
   }
@@ -1011,6 +1113,9 @@ class _$LoadingDeleteImpl implements LoadingDelete {
     TResult? Function(LoadingPeinding value)? loadingPeinding,
     TResult? Function(SuccessPeinding value)? successPeinding,
     TResult? Function(ErorrPeinding value)? erorrPeinding,
+    TResult? Function(UpdateStatus value)? updateStatus,
+    TResult? Function(UpdatePayment value)? updatePayment,
+    TResult? Function(UpdateType value)? updateType,
   }) {
     return loadingDelete?.call(this);
   }
@@ -1031,6 +1136,9 @@ class _$LoadingDeleteImpl implements LoadingDelete {
     TResult Function(LoadingPeinding value)? loadingPeinding,
     TResult Function(SuccessPeinding value)? successPeinding,
     TResult Function(ErorrPeinding value)? erorrPeinding,
+    TResult Function(UpdateStatus value)? updateStatus,
+    TResult Function(UpdatePayment value)? updatePayment,
+    TResult Function(UpdateType value)? updateType,
     required TResult orElse(),
   }) {
     if (loadingDelete != null) {
@@ -1084,7 +1192,7 @@ class _$SuccessdeleteImpl implements Successdelete {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGet,
-    required TResult Function(OrderResponse orderResponse) successGet,
+    required TResult Function(ResponseOrders orderResponse) successGet,
     required TResult Function(String erorr) erorrGet,
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
@@ -1095,6 +1203,9 @@ class _$SuccessdeleteImpl implements Successdelete {
     required TResult Function() loadingPeinding,
     required TResult Function(PendingResponse pendingResponse) successPeinding,
     required TResult Function(String erorr) erorrPeinding,
+    required TResult Function() updateStatus,
+    required TResult Function() updatePayment,
+    required TResult Function() updateType,
   }) {
     return successdelete();
   }
@@ -1104,7 +1215,7 @@ class _$SuccessdeleteImpl implements Successdelete {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGet,
-    TResult? Function(OrderResponse orderResponse)? successGet,
+    TResult? Function(ResponseOrders orderResponse)? successGet,
     TResult? Function(String erorr)? erorrGet,
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
@@ -1115,6 +1226,9 @@ class _$SuccessdeleteImpl implements Successdelete {
     TResult? Function()? loadingPeinding,
     TResult? Function(PendingResponse pendingResponse)? successPeinding,
     TResult? Function(String erorr)? erorrPeinding,
+    TResult? Function()? updateStatus,
+    TResult? Function()? updatePayment,
+    TResult? Function()? updateType,
   }) {
     return successdelete?.call();
   }
@@ -1124,7 +1238,7 @@ class _$SuccessdeleteImpl implements Successdelete {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGet,
-    TResult Function(OrderResponse orderResponse)? successGet,
+    TResult Function(ResponseOrders orderResponse)? successGet,
     TResult Function(String erorr)? erorrGet,
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
@@ -1135,6 +1249,9 @@ class _$SuccessdeleteImpl implements Successdelete {
     TResult Function()? loadingPeinding,
     TResult Function(PendingResponse pendingResponse)? successPeinding,
     TResult Function(String erorr)? erorrPeinding,
+    TResult Function()? updateStatus,
+    TResult Function()? updatePayment,
+    TResult Function()? updateType,
     required TResult orElse(),
   }) {
     if (successdelete != null) {
@@ -1159,6 +1276,9 @@ class _$SuccessdeleteImpl implements Successdelete {
     required TResult Function(LoadingPeinding value) loadingPeinding,
     required TResult Function(SuccessPeinding value) successPeinding,
     required TResult Function(ErorrPeinding value) erorrPeinding,
+    required TResult Function(UpdateStatus value) updateStatus,
+    required TResult Function(UpdatePayment value) updatePayment,
+    required TResult Function(UpdateType value) updateType,
   }) {
     return successdelete(this);
   }
@@ -1179,6 +1299,9 @@ class _$SuccessdeleteImpl implements Successdelete {
     TResult? Function(LoadingPeinding value)? loadingPeinding,
     TResult? Function(SuccessPeinding value)? successPeinding,
     TResult? Function(ErorrPeinding value)? erorrPeinding,
+    TResult? Function(UpdateStatus value)? updateStatus,
+    TResult? Function(UpdatePayment value)? updatePayment,
+    TResult? Function(UpdateType value)? updateType,
   }) {
     return successdelete?.call(this);
   }
@@ -1199,6 +1322,9 @@ class _$SuccessdeleteImpl implements Successdelete {
     TResult Function(LoadingPeinding value)? loadingPeinding,
     TResult Function(SuccessPeinding value)? successPeinding,
     TResult Function(ErorrPeinding value)? erorrPeinding,
+    TResult Function(UpdateStatus value)? updateStatus,
+    TResult Function(UpdatePayment value)? updatePayment,
+    TResult Function(UpdateType value)? updateType,
     required TResult orElse(),
   }) {
     if (successdelete != null) {
@@ -1278,7 +1404,7 @@ class _$ErorrdeleteImpl implements Erorrdelete {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGet,
-    required TResult Function(OrderResponse orderResponse) successGet,
+    required TResult Function(ResponseOrders orderResponse) successGet,
     required TResult Function(String erorr) erorrGet,
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
@@ -1289,6 +1415,9 @@ class _$ErorrdeleteImpl implements Erorrdelete {
     required TResult Function() loadingPeinding,
     required TResult Function(PendingResponse pendingResponse) successPeinding,
     required TResult Function(String erorr) erorrPeinding,
+    required TResult Function() updateStatus,
+    required TResult Function() updatePayment,
+    required TResult Function() updateType,
   }) {
     return erorrdelete(erorr);
   }
@@ -1298,7 +1427,7 @@ class _$ErorrdeleteImpl implements Erorrdelete {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGet,
-    TResult? Function(OrderResponse orderResponse)? successGet,
+    TResult? Function(ResponseOrders orderResponse)? successGet,
     TResult? Function(String erorr)? erorrGet,
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
@@ -1309,6 +1438,9 @@ class _$ErorrdeleteImpl implements Erorrdelete {
     TResult? Function()? loadingPeinding,
     TResult? Function(PendingResponse pendingResponse)? successPeinding,
     TResult? Function(String erorr)? erorrPeinding,
+    TResult? Function()? updateStatus,
+    TResult? Function()? updatePayment,
+    TResult? Function()? updateType,
   }) {
     return erorrdelete?.call(erorr);
   }
@@ -1318,7 +1450,7 @@ class _$ErorrdeleteImpl implements Erorrdelete {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGet,
-    TResult Function(OrderResponse orderResponse)? successGet,
+    TResult Function(ResponseOrders orderResponse)? successGet,
     TResult Function(String erorr)? erorrGet,
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
@@ -1329,6 +1461,9 @@ class _$ErorrdeleteImpl implements Erorrdelete {
     TResult Function()? loadingPeinding,
     TResult Function(PendingResponse pendingResponse)? successPeinding,
     TResult Function(String erorr)? erorrPeinding,
+    TResult Function()? updateStatus,
+    TResult Function()? updatePayment,
+    TResult Function()? updateType,
     required TResult orElse(),
   }) {
     if (erorrdelete != null) {
@@ -1353,6 +1488,9 @@ class _$ErorrdeleteImpl implements Erorrdelete {
     required TResult Function(LoadingPeinding value) loadingPeinding,
     required TResult Function(SuccessPeinding value) successPeinding,
     required TResult Function(ErorrPeinding value) erorrPeinding,
+    required TResult Function(UpdateStatus value) updateStatus,
+    required TResult Function(UpdatePayment value) updatePayment,
+    required TResult Function(UpdateType value) updateType,
   }) {
     return erorrdelete(this);
   }
@@ -1373,6 +1511,9 @@ class _$ErorrdeleteImpl implements Erorrdelete {
     TResult? Function(LoadingPeinding value)? loadingPeinding,
     TResult? Function(SuccessPeinding value)? successPeinding,
     TResult? Function(ErorrPeinding value)? erorrPeinding,
+    TResult? Function(UpdateStatus value)? updateStatus,
+    TResult? Function(UpdatePayment value)? updatePayment,
+    TResult? Function(UpdateType value)? updateType,
   }) {
     return erorrdelete?.call(this);
   }
@@ -1393,6 +1534,9 @@ class _$ErorrdeleteImpl implements Erorrdelete {
     TResult Function(LoadingPeinding value)? loadingPeinding,
     TResult Function(SuccessPeinding value)? successPeinding,
     TResult Function(ErorrPeinding value)? erorrPeinding,
+    TResult Function(UpdateStatus value)? updateStatus,
+    TResult Function(UpdatePayment value)? updatePayment,
+    TResult Function(UpdateType value)? updateType,
     required TResult orElse(),
   }) {
     if (erorrdelete != null) {
@@ -1451,7 +1595,7 @@ class _$LoadingDetailsImpl implements LoadingDetails {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGet,
-    required TResult Function(OrderResponse orderResponse) successGet,
+    required TResult Function(ResponseOrders orderResponse) successGet,
     required TResult Function(String erorr) erorrGet,
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
@@ -1462,6 +1606,9 @@ class _$LoadingDetailsImpl implements LoadingDetails {
     required TResult Function() loadingPeinding,
     required TResult Function(PendingResponse pendingResponse) successPeinding,
     required TResult Function(String erorr) erorrPeinding,
+    required TResult Function() updateStatus,
+    required TResult Function() updatePayment,
+    required TResult Function() updateType,
   }) {
     return loadingDetails();
   }
@@ -1471,7 +1618,7 @@ class _$LoadingDetailsImpl implements LoadingDetails {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGet,
-    TResult? Function(OrderResponse orderResponse)? successGet,
+    TResult? Function(ResponseOrders orderResponse)? successGet,
     TResult? Function(String erorr)? erorrGet,
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
@@ -1482,6 +1629,9 @@ class _$LoadingDetailsImpl implements LoadingDetails {
     TResult? Function()? loadingPeinding,
     TResult? Function(PendingResponse pendingResponse)? successPeinding,
     TResult? Function(String erorr)? erorrPeinding,
+    TResult? Function()? updateStatus,
+    TResult? Function()? updatePayment,
+    TResult? Function()? updateType,
   }) {
     return loadingDetails?.call();
   }
@@ -1491,7 +1641,7 @@ class _$LoadingDetailsImpl implements LoadingDetails {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGet,
-    TResult Function(OrderResponse orderResponse)? successGet,
+    TResult Function(ResponseOrders orderResponse)? successGet,
     TResult Function(String erorr)? erorrGet,
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
@@ -1502,6 +1652,9 @@ class _$LoadingDetailsImpl implements LoadingDetails {
     TResult Function()? loadingPeinding,
     TResult Function(PendingResponse pendingResponse)? successPeinding,
     TResult Function(String erorr)? erorrPeinding,
+    TResult Function()? updateStatus,
+    TResult Function()? updatePayment,
+    TResult Function()? updateType,
     required TResult orElse(),
   }) {
     if (loadingDetails != null) {
@@ -1526,6 +1679,9 @@ class _$LoadingDetailsImpl implements LoadingDetails {
     required TResult Function(LoadingPeinding value) loadingPeinding,
     required TResult Function(SuccessPeinding value) successPeinding,
     required TResult Function(ErorrPeinding value) erorrPeinding,
+    required TResult Function(UpdateStatus value) updateStatus,
+    required TResult Function(UpdatePayment value) updatePayment,
+    required TResult Function(UpdateType value) updateType,
   }) {
     return loadingDetails(this);
   }
@@ -1546,6 +1702,9 @@ class _$LoadingDetailsImpl implements LoadingDetails {
     TResult? Function(LoadingPeinding value)? loadingPeinding,
     TResult? Function(SuccessPeinding value)? successPeinding,
     TResult? Function(ErorrPeinding value)? erorrPeinding,
+    TResult? Function(UpdateStatus value)? updateStatus,
+    TResult? Function(UpdatePayment value)? updatePayment,
+    TResult? Function(UpdateType value)? updateType,
   }) {
     return loadingDetails?.call(this);
   }
@@ -1566,6 +1725,9 @@ class _$LoadingDetailsImpl implements LoadingDetails {
     TResult Function(LoadingPeinding value)? loadingPeinding,
     TResult Function(SuccessPeinding value)? successPeinding,
     TResult Function(ErorrPeinding value)? erorrPeinding,
+    TResult Function(UpdateStatus value)? updateStatus,
+    TResult Function(UpdatePayment value)? updatePayment,
+    TResult Function(UpdateType value)? updateType,
     required TResult orElse(),
   }) {
     if (loadingDetails != null) {
@@ -1647,7 +1809,7 @@ class _$SuccessDetailsImpl implements SuccessDetails {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGet,
-    required TResult Function(OrderResponse orderResponse) successGet,
+    required TResult Function(ResponseOrders orderResponse) successGet,
     required TResult Function(String erorr) erorrGet,
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
@@ -1658,6 +1820,9 @@ class _$SuccessDetailsImpl implements SuccessDetails {
     required TResult Function() loadingPeinding,
     required TResult Function(PendingResponse pendingResponse) successPeinding,
     required TResult Function(String erorr) erorrPeinding,
+    required TResult Function() updateStatus,
+    required TResult Function() updatePayment,
+    required TResult Function() updateType,
   }) {
     return successDetails(responseDetails);
   }
@@ -1667,7 +1832,7 @@ class _$SuccessDetailsImpl implements SuccessDetails {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGet,
-    TResult? Function(OrderResponse orderResponse)? successGet,
+    TResult? Function(ResponseOrders orderResponse)? successGet,
     TResult? Function(String erorr)? erorrGet,
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
@@ -1678,6 +1843,9 @@ class _$SuccessDetailsImpl implements SuccessDetails {
     TResult? Function()? loadingPeinding,
     TResult? Function(PendingResponse pendingResponse)? successPeinding,
     TResult? Function(String erorr)? erorrPeinding,
+    TResult? Function()? updateStatus,
+    TResult? Function()? updatePayment,
+    TResult? Function()? updateType,
   }) {
     return successDetails?.call(responseDetails);
   }
@@ -1687,7 +1855,7 @@ class _$SuccessDetailsImpl implements SuccessDetails {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGet,
-    TResult Function(OrderResponse orderResponse)? successGet,
+    TResult Function(ResponseOrders orderResponse)? successGet,
     TResult Function(String erorr)? erorrGet,
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
@@ -1698,6 +1866,9 @@ class _$SuccessDetailsImpl implements SuccessDetails {
     TResult Function()? loadingPeinding,
     TResult Function(PendingResponse pendingResponse)? successPeinding,
     TResult Function(String erorr)? erorrPeinding,
+    TResult Function()? updateStatus,
+    TResult Function()? updatePayment,
+    TResult Function()? updateType,
     required TResult orElse(),
   }) {
     if (successDetails != null) {
@@ -1722,6 +1893,9 @@ class _$SuccessDetailsImpl implements SuccessDetails {
     required TResult Function(LoadingPeinding value) loadingPeinding,
     required TResult Function(SuccessPeinding value) successPeinding,
     required TResult Function(ErorrPeinding value) erorrPeinding,
+    required TResult Function(UpdateStatus value) updateStatus,
+    required TResult Function(UpdatePayment value) updatePayment,
+    required TResult Function(UpdateType value) updateType,
   }) {
     return successDetails(this);
   }
@@ -1742,6 +1916,9 @@ class _$SuccessDetailsImpl implements SuccessDetails {
     TResult? Function(LoadingPeinding value)? loadingPeinding,
     TResult? Function(SuccessPeinding value)? successPeinding,
     TResult? Function(ErorrPeinding value)? erorrPeinding,
+    TResult? Function(UpdateStatus value)? updateStatus,
+    TResult? Function(UpdatePayment value)? updatePayment,
+    TResult? Function(UpdateType value)? updateType,
   }) {
     return successDetails?.call(this);
   }
@@ -1762,6 +1939,9 @@ class _$SuccessDetailsImpl implements SuccessDetails {
     TResult Function(LoadingPeinding value)? loadingPeinding,
     TResult Function(SuccessPeinding value)? successPeinding,
     TResult Function(ErorrPeinding value)? erorrPeinding,
+    TResult Function(UpdateStatus value)? updateStatus,
+    TResult Function(UpdatePayment value)? updatePayment,
+    TResult Function(UpdateType value)? updateType,
     required TResult orElse(),
   }) {
     if (successDetails != null) {
@@ -1847,7 +2027,7 @@ class _$ErorrDetailsImpl implements ErorrDetails {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGet,
-    required TResult Function(OrderResponse orderResponse) successGet,
+    required TResult Function(ResponseOrders orderResponse) successGet,
     required TResult Function(String erorr) erorrGet,
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
@@ -1858,6 +2038,9 @@ class _$ErorrDetailsImpl implements ErorrDetails {
     required TResult Function() loadingPeinding,
     required TResult Function(PendingResponse pendingResponse) successPeinding,
     required TResult Function(String erorr) erorrPeinding,
+    required TResult Function() updateStatus,
+    required TResult Function() updatePayment,
+    required TResult Function() updateType,
   }) {
     return erorrDetails(erorr);
   }
@@ -1867,7 +2050,7 @@ class _$ErorrDetailsImpl implements ErorrDetails {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGet,
-    TResult? Function(OrderResponse orderResponse)? successGet,
+    TResult? Function(ResponseOrders orderResponse)? successGet,
     TResult? Function(String erorr)? erorrGet,
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
@@ -1878,6 +2061,9 @@ class _$ErorrDetailsImpl implements ErorrDetails {
     TResult? Function()? loadingPeinding,
     TResult? Function(PendingResponse pendingResponse)? successPeinding,
     TResult? Function(String erorr)? erorrPeinding,
+    TResult? Function()? updateStatus,
+    TResult? Function()? updatePayment,
+    TResult? Function()? updateType,
   }) {
     return erorrDetails?.call(erorr);
   }
@@ -1887,7 +2073,7 @@ class _$ErorrDetailsImpl implements ErorrDetails {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGet,
-    TResult Function(OrderResponse orderResponse)? successGet,
+    TResult Function(ResponseOrders orderResponse)? successGet,
     TResult Function(String erorr)? erorrGet,
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
@@ -1898,6 +2084,9 @@ class _$ErorrDetailsImpl implements ErorrDetails {
     TResult Function()? loadingPeinding,
     TResult Function(PendingResponse pendingResponse)? successPeinding,
     TResult Function(String erorr)? erorrPeinding,
+    TResult Function()? updateStatus,
+    TResult Function()? updatePayment,
+    TResult Function()? updateType,
     required TResult orElse(),
   }) {
     if (erorrDetails != null) {
@@ -1922,6 +2111,9 @@ class _$ErorrDetailsImpl implements ErorrDetails {
     required TResult Function(LoadingPeinding value) loadingPeinding,
     required TResult Function(SuccessPeinding value) successPeinding,
     required TResult Function(ErorrPeinding value) erorrPeinding,
+    required TResult Function(UpdateStatus value) updateStatus,
+    required TResult Function(UpdatePayment value) updatePayment,
+    required TResult Function(UpdateType value) updateType,
   }) {
     return erorrDetails(this);
   }
@@ -1942,6 +2134,9 @@ class _$ErorrDetailsImpl implements ErorrDetails {
     TResult? Function(LoadingPeinding value)? loadingPeinding,
     TResult? Function(SuccessPeinding value)? successPeinding,
     TResult? Function(ErorrPeinding value)? erorrPeinding,
+    TResult? Function(UpdateStatus value)? updateStatus,
+    TResult? Function(UpdatePayment value)? updatePayment,
+    TResult? Function(UpdateType value)? updateType,
   }) {
     return erorrDetails?.call(this);
   }
@@ -1962,6 +2157,9 @@ class _$ErorrDetailsImpl implements ErorrDetails {
     TResult Function(LoadingPeinding value)? loadingPeinding,
     TResult Function(SuccessPeinding value)? successPeinding,
     TResult Function(ErorrPeinding value)? erorrPeinding,
+    TResult Function(UpdateStatus value)? updateStatus,
+    TResult Function(UpdatePayment value)? updatePayment,
+    TResult Function(UpdateType value)? updateType,
     required TResult orElse(),
   }) {
     if (erorrDetails != null) {
@@ -2021,7 +2219,7 @@ class _$LoadingPeindingImpl implements LoadingPeinding {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGet,
-    required TResult Function(OrderResponse orderResponse) successGet,
+    required TResult Function(ResponseOrders orderResponse) successGet,
     required TResult Function(String erorr) erorrGet,
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
@@ -2032,6 +2230,9 @@ class _$LoadingPeindingImpl implements LoadingPeinding {
     required TResult Function() loadingPeinding,
     required TResult Function(PendingResponse pendingResponse) successPeinding,
     required TResult Function(String erorr) erorrPeinding,
+    required TResult Function() updateStatus,
+    required TResult Function() updatePayment,
+    required TResult Function() updateType,
   }) {
     return loadingPeinding();
   }
@@ -2041,7 +2242,7 @@ class _$LoadingPeindingImpl implements LoadingPeinding {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGet,
-    TResult? Function(OrderResponse orderResponse)? successGet,
+    TResult? Function(ResponseOrders orderResponse)? successGet,
     TResult? Function(String erorr)? erorrGet,
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
@@ -2052,6 +2253,9 @@ class _$LoadingPeindingImpl implements LoadingPeinding {
     TResult? Function()? loadingPeinding,
     TResult? Function(PendingResponse pendingResponse)? successPeinding,
     TResult? Function(String erorr)? erorrPeinding,
+    TResult? Function()? updateStatus,
+    TResult? Function()? updatePayment,
+    TResult? Function()? updateType,
   }) {
     return loadingPeinding?.call();
   }
@@ -2061,7 +2265,7 @@ class _$LoadingPeindingImpl implements LoadingPeinding {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGet,
-    TResult Function(OrderResponse orderResponse)? successGet,
+    TResult Function(ResponseOrders orderResponse)? successGet,
     TResult Function(String erorr)? erorrGet,
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
@@ -2072,6 +2276,9 @@ class _$LoadingPeindingImpl implements LoadingPeinding {
     TResult Function()? loadingPeinding,
     TResult Function(PendingResponse pendingResponse)? successPeinding,
     TResult Function(String erorr)? erorrPeinding,
+    TResult Function()? updateStatus,
+    TResult Function()? updatePayment,
+    TResult Function()? updateType,
     required TResult orElse(),
   }) {
     if (loadingPeinding != null) {
@@ -2096,6 +2303,9 @@ class _$LoadingPeindingImpl implements LoadingPeinding {
     required TResult Function(LoadingPeinding value) loadingPeinding,
     required TResult Function(SuccessPeinding value) successPeinding,
     required TResult Function(ErorrPeinding value) erorrPeinding,
+    required TResult Function(UpdateStatus value) updateStatus,
+    required TResult Function(UpdatePayment value) updatePayment,
+    required TResult Function(UpdateType value) updateType,
   }) {
     return loadingPeinding(this);
   }
@@ -2116,6 +2326,9 @@ class _$LoadingPeindingImpl implements LoadingPeinding {
     TResult? Function(LoadingPeinding value)? loadingPeinding,
     TResult? Function(SuccessPeinding value)? successPeinding,
     TResult? Function(ErorrPeinding value)? erorrPeinding,
+    TResult? Function(UpdateStatus value)? updateStatus,
+    TResult? Function(UpdatePayment value)? updatePayment,
+    TResult? Function(UpdateType value)? updateType,
   }) {
     return loadingPeinding?.call(this);
   }
@@ -2136,6 +2349,9 @@ class _$LoadingPeindingImpl implements LoadingPeinding {
     TResult Function(LoadingPeinding value)? loadingPeinding,
     TResult Function(SuccessPeinding value)? successPeinding,
     TResult Function(ErorrPeinding value)? erorrPeinding,
+    TResult Function(UpdateStatus value)? updateStatus,
+    TResult Function(UpdatePayment value)? updatePayment,
+    TResult Function(UpdateType value)? updateType,
     required TResult orElse(),
   }) {
     if (loadingPeinding != null) {
@@ -2217,7 +2433,7 @@ class _$SuccessPeindingImpl implements SuccessPeinding {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGet,
-    required TResult Function(OrderResponse orderResponse) successGet,
+    required TResult Function(ResponseOrders orderResponse) successGet,
     required TResult Function(String erorr) erorrGet,
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
@@ -2228,6 +2444,9 @@ class _$SuccessPeindingImpl implements SuccessPeinding {
     required TResult Function() loadingPeinding,
     required TResult Function(PendingResponse pendingResponse) successPeinding,
     required TResult Function(String erorr) erorrPeinding,
+    required TResult Function() updateStatus,
+    required TResult Function() updatePayment,
+    required TResult Function() updateType,
   }) {
     return successPeinding(pendingResponse);
   }
@@ -2237,7 +2456,7 @@ class _$SuccessPeindingImpl implements SuccessPeinding {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGet,
-    TResult? Function(OrderResponse orderResponse)? successGet,
+    TResult? Function(ResponseOrders orderResponse)? successGet,
     TResult? Function(String erorr)? erorrGet,
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
@@ -2248,6 +2467,9 @@ class _$SuccessPeindingImpl implements SuccessPeinding {
     TResult? Function()? loadingPeinding,
     TResult? Function(PendingResponse pendingResponse)? successPeinding,
     TResult? Function(String erorr)? erorrPeinding,
+    TResult? Function()? updateStatus,
+    TResult? Function()? updatePayment,
+    TResult? Function()? updateType,
   }) {
     return successPeinding?.call(pendingResponse);
   }
@@ -2257,7 +2479,7 @@ class _$SuccessPeindingImpl implements SuccessPeinding {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGet,
-    TResult Function(OrderResponse orderResponse)? successGet,
+    TResult Function(ResponseOrders orderResponse)? successGet,
     TResult Function(String erorr)? erorrGet,
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
@@ -2268,6 +2490,9 @@ class _$SuccessPeindingImpl implements SuccessPeinding {
     TResult Function()? loadingPeinding,
     TResult Function(PendingResponse pendingResponse)? successPeinding,
     TResult Function(String erorr)? erorrPeinding,
+    TResult Function()? updateStatus,
+    TResult Function()? updatePayment,
+    TResult Function()? updateType,
     required TResult orElse(),
   }) {
     if (successPeinding != null) {
@@ -2292,6 +2517,9 @@ class _$SuccessPeindingImpl implements SuccessPeinding {
     required TResult Function(LoadingPeinding value) loadingPeinding,
     required TResult Function(SuccessPeinding value) successPeinding,
     required TResult Function(ErorrPeinding value) erorrPeinding,
+    required TResult Function(UpdateStatus value) updateStatus,
+    required TResult Function(UpdatePayment value) updatePayment,
+    required TResult Function(UpdateType value) updateType,
   }) {
     return successPeinding(this);
   }
@@ -2312,6 +2540,9 @@ class _$SuccessPeindingImpl implements SuccessPeinding {
     TResult? Function(LoadingPeinding value)? loadingPeinding,
     TResult? Function(SuccessPeinding value)? successPeinding,
     TResult? Function(ErorrPeinding value)? erorrPeinding,
+    TResult? Function(UpdateStatus value)? updateStatus,
+    TResult? Function(UpdatePayment value)? updatePayment,
+    TResult? Function(UpdateType value)? updateType,
   }) {
     return successPeinding?.call(this);
   }
@@ -2332,6 +2563,9 @@ class _$SuccessPeindingImpl implements SuccessPeinding {
     TResult Function(LoadingPeinding value)? loadingPeinding,
     TResult Function(SuccessPeinding value)? successPeinding,
     TResult Function(ErorrPeinding value)? erorrPeinding,
+    TResult Function(UpdateStatus value)? updateStatus,
+    TResult Function(UpdatePayment value)? updatePayment,
+    TResult Function(UpdateType value)? updateType,
     required TResult orElse(),
   }) {
     if (successPeinding != null) {
@@ -2417,7 +2651,7 @@ class _$ErorrPeindingImpl implements ErorrPeinding {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadingGet,
-    required TResult Function(OrderResponse orderResponse) successGet,
+    required TResult Function(ResponseOrders orderResponse) successGet,
     required TResult Function(String erorr) erorrGet,
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
@@ -2428,6 +2662,9 @@ class _$ErorrPeindingImpl implements ErorrPeinding {
     required TResult Function() loadingPeinding,
     required TResult Function(PendingResponse pendingResponse) successPeinding,
     required TResult Function(String erorr) erorrPeinding,
+    required TResult Function() updateStatus,
+    required TResult Function() updatePayment,
+    required TResult Function() updateType,
   }) {
     return erorrPeinding(erorr);
   }
@@ -2437,7 +2674,7 @@ class _$ErorrPeindingImpl implements ErorrPeinding {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadingGet,
-    TResult? Function(OrderResponse orderResponse)? successGet,
+    TResult? Function(ResponseOrders orderResponse)? successGet,
     TResult? Function(String erorr)? erorrGet,
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
@@ -2448,6 +2685,9 @@ class _$ErorrPeindingImpl implements ErorrPeinding {
     TResult? Function()? loadingPeinding,
     TResult? Function(PendingResponse pendingResponse)? successPeinding,
     TResult? Function(String erorr)? erorrPeinding,
+    TResult? Function()? updateStatus,
+    TResult? Function()? updatePayment,
+    TResult? Function()? updateType,
   }) {
     return erorrPeinding?.call(erorr);
   }
@@ -2457,7 +2697,7 @@ class _$ErorrPeindingImpl implements ErorrPeinding {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadingGet,
-    TResult Function(OrderResponse orderResponse)? successGet,
+    TResult Function(ResponseOrders orderResponse)? successGet,
     TResult Function(String erorr)? erorrGet,
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
@@ -2468,6 +2708,9 @@ class _$ErorrPeindingImpl implements ErorrPeinding {
     TResult Function()? loadingPeinding,
     TResult Function(PendingResponse pendingResponse)? successPeinding,
     TResult Function(String erorr)? erorrPeinding,
+    TResult Function()? updateStatus,
+    TResult Function()? updatePayment,
+    TResult Function()? updateType,
     required TResult orElse(),
   }) {
     if (erorrPeinding != null) {
@@ -2492,6 +2735,9 @@ class _$ErorrPeindingImpl implements ErorrPeinding {
     required TResult Function(LoadingPeinding value) loadingPeinding,
     required TResult Function(SuccessPeinding value) successPeinding,
     required TResult Function(ErorrPeinding value) erorrPeinding,
+    required TResult Function(UpdateStatus value) updateStatus,
+    required TResult Function(UpdatePayment value) updatePayment,
+    required TResult Function(UpdateType value) updateType,
   }) {
     return erorrPeinding(this);
   }
@@ -2512,6 +2758,9 @@ class _$ErorrPeindingImpl implements ErorrPeinding {
     TResult? Function(LoadingPeinding value)? loadingPeinding,
     TResult? Function(SuccessPeinding value)? successPeinding,
     TResult? Function(ErorrPeinding value)? erorrPeinding,
+    TResult? Function(UpdateStatus value)? updateStatus,
+    TResult? Function(UpdatePayment value)? updatePayment,
+    TResult? Function(UpdateType value)? updateType,
   }) {
     return erorrPeinding?.call(this);
   }
@@ -2532,6 +2781,9 @@ class _$ErorrPeindingImpl implements ErorrPeinding {
     TResult Function(LoadingPeinding value)? loadingPeinding,
     TResult Function(SuccessPeinding value)? successPeinding,
     TResult Function(ErorrPeinding value)? erorrPeinding,
+    TResult Function(UpdateStatus value)? updateStatus,
+    TResult Function(UpdatePayment value)? updatePayment,
+    TResult Function(UpdateType value)? updateType,
     required TResult orElse(),
   }) {
     if (erorrPeinding != null) {
@@ -2549,4 +2801,562 @@ abstract class ErorrPeinding implements OrdersState {
   @JsonKey(ignore: true)
   _$$ErorrPeindingImplCopyWith<_$ErorrPeindingImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UpdateStatusImplCopyWith<$Res> {
+  factory _$$UpdateStatusImplCopyWith(
+          _$UpdateStatusImpl value, $Res Function(_$UpdateStatusImpl) then) =
+      __$$UpdateStatusImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UpdateStatusImplCopyWithImpl<$Res>
+    extends _$OrdersStateCopyWithImpl<$Res, _$UpdateStatusImpl>
+    implements _$$UpdateStatusImplCopyWith<$Res> {
+  __$$UpdateStatusImplCopyWithImpl(
+      _$UpdateStatusImpl _value, $Res Function(_$UpdateStatusImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UpdateStatusImpl implements UpdateStatus {
+  const _$UpdateStatusImpl();
+
+  @override
+  String toString() {
+    return 'OrdersState.updateStatus()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UpdateStatusImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingGet,
+    required TResult Function(ResponseOrders orderResponse) successGet,
+    required TResult Function(String erorr) erorrGet,
+    required TResult Function() loadingDelete,
+    required TResult Function() successdelete,
+    required TResult Function(String erorr) erorrdelete,
+    required TResult Function() loadingDetails,
+    required TResult Function(ResponseDetails responseDetails) successDetails,
+    required TResult Function(String erorr) erorrDetails,
+    required TResult Function() loadingPeinding,
+    required TResult Function(PendingResponse pendingResponse) successPeinding,
+    required TResult Function(String erorr) erorrPeinding,
+    required TResult Function() updateStatus,
+    required TResult Function() updatePayment,
+    required TResult Function() updateType,
+  }) {
+    return updateStatus();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingGet,
+    TResult? Function(ResponseOrders orderResponse)? successGet,
+    TResult? Function(String erorr)? erorrGet,
+    TResult? Function()? loadingDelete,
+    TResult? Function()? successdelete,
+    TResult? Function(String erorr)? erorrdelete,
+    TResult? Function()? loadingDetails,
+    TResult? Function(ResponseDetails responseDetails)? successDetails,
+    TResult? Function(String erorr)? erorrDetails,
+    TResult? Function()? loadingPeinding,
+    TResult? Function(PendingResponse pendingResponse)? successPeinding,
+    TResult? Function(String erorr)? erorrPeinding,
+    TResult? Function()? updateStatus,
+    TResult? Function()? updatePayment,
+    TResult? Function()? updateType,
+  }) {
+    return updateStatus?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingGet,
+    TResult Function(ResponseOrders orderResponse)? successGet,
+    TResult Function(String erorr)? erorrGet,
+    TResult Function()? loadingDelete,
+    TResult Function()? successdelete,
+    TResult Function(String erorr)? erorrdelete,
+    TResult Function()? loadingDetails,
+    TResult Function(ResponseDetails responseDetails)? successDetails,
+    TResult Function(String erorr)? erorrDetails,
+    TResult Function()? loadingPeinding,
+    TResult Function(PendingResponse pendingResponse)? successPeinding,
+    TResult Function(String erorr)? erorrPeinding,
+    TResult Function()? updateStatus,
+    TResult Function()? updatePayment,
+    TResult Function()? updateType,
+    required TResult orElse(),
+  }) {
+    if (updateStatus != null) {
+      return updateStatus();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(LoadingGet value) loadingGet,
+    required TResult Function(SuccessGet value) successGet,
+    required TResult Function(ErorrGet value) erorrGet,
+    required TResult Function(LoadingDelete value) loadingDelete,
+    required TResult Function(Successdelete value) successdelete,
+    required TResult Function(Erorrdelete value) erorrdelete,
+    required TResult Function(LoadingDetails value) loadingDetails,
+    required TResult Function(SuccessDetails value) successDetails,
+    required TResult Function(ErorrDetails value) erorrDetails,
+    required TResult Function(LoadingPeinding value) loadingPeinding,
+    required TResult Function(SuccessPeinding value) successPeinding,
+    required TResult Function(ErorrPeinding value) erorrPeinding,
+    required TResult Function(UpdateStatus value) updateStatus,
+    required TResult Function(UpdatePayment value) updatePayment,
+    required TResult Function(UpdateType value) updateType,
+  }) {
+    return updateStatus(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(LoadingGet value)? loadingGet,
+    TResult? Function(SuccessGet value)? successGet,
+    TResult? Function(ErorrGet value)? erorrGet,
+    TResult? Function(LoadingDelete value)? loadingDelete,
+    TResult? Function(Successdelete value)? successdelete,
+    TResult? Function(Erorrdelete value)? erorrdelete,
+    TResult? Function(LoadingDetails value)? loadingDetails,
+    TResult? Function(SuccessDetails value)? successDetails,
+    TResult? Function(ErorrDetails value)? erorrDetails,
+    TResult? Function(LoadingPeinding value)? loadingPeinding,
+    TResult? Function(SuccessPeinding value)? successPeinding,
+    TResult? Function(ErorrPeinding value)? erorrPeinding,
+    TResult? Function(UpdateStatus value)? updateStatus,
+    TResult? Function(UpdatePayment value)? updatePayment,
+    TResult? Function(UpdateType value)? updateType,
+  }) {
+    return updateStatus?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(LoadingGet value)? loadingGet,
+    TResult Function(SuccessGet value)? successGet,
+    TResult Function(ErorrGet value)? erorrGet,
+    TResult Function(LoadingDelete value)? loadingDelete,
+    TResult Function(Successdelete value)? successdelete,
+    TResult Function(Erorrdelete value)? erorrdelete,
+    TResult Function(LoadingDetails value)? loadingDetails,
+    TResult Function(SuccessDetails value)? successDetails,
+    TResult Function(ErorrDetails value)? erorrDetails,
+    TResult Function(LoadingPeinding value)? loadingPeinding,
+    TResult Function(SuccessPeinding value)? successPeinding,
+    TResult Function(ErorrPeinding value)? erorrPeinding,
+    TResult Function(UpdateStatus value)? updateStatus,
+    TResult Function(UpdatePayment value)? updatePayment,
+    TResult Function(UpdateType value)? updateType,
+    required TResult orElse(),
+  }) {
+    if (updateStatus != null) {
+      return updateStatus(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateStatus implements OrdersState {
+  const factory UpdateStatus() = _$UpdateStatusImpl;
+}
+
+/// @nodoc
+abstract class _$$UpdatePaymentImplCopyWith<$Res> {
+  factory _$$UpdatePaymentImplCopyWith(
+          _$UpdatePaymentImpl value, $Res Function(_$UpdatePaymentImpl) then) =
+      __$$UpdatePaymentImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UpdatePaymentImplCopyWithImpl<$Res>
+    extends _$OrdersStateCopyWithImpl<$Res, _$UpdatePaymentImpl>
+    implements _$$UpdatePaymentImplCopyWith<$Res> {
+  __$$UpdatePaymentImplCopyWithImpl(
+      _$UpdatePaymentImpl _value, $Res Function(_$UpdatePaymentImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UpdatePaymentImpl implements UpdatePayment {
+  const _$UpdatePaymentImpl();
+
+  @override
+  String toString() {
+    return 'OrdersState.updatePayment()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UpdatePaymentImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingGet,
+    required TResult Function(ResponseOrders orderResponse) successGet,
+    required TResult Function(String erorr) erorrGet,
+    required TResult Function() loadingDelete,
+    required TResult Function() successdelete,
+    required TResult Function(String erorr) erorrdelete,
+    required TResult Function() loadingDetails,
+    required TResult Function(ResponseDetails responseDetails) successDetails,
+    required TResult Function(String erorr) erorrDetails,
+    required TResult Function() loadingPeinding,
+    required TResult Function(PendingResponse pendingResponse) successPeinding,
+    required TResult Function(String erorr) erorrPeinding,
+    required TResult Function() updateStatus,
+    required TResult Function() updatePayment,
+    required TResult Function() updateType,
+  }) {
+    return updatePayment();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingGet,
+    TResult? Function(ResponseOrders orderResponse)? successGet,
+    TResult? Function(String erorr)? erorrGet,
+    TResult? Function()? loadingDelete,
+    TResult? Function()? successdelete,
+    TResult? Function(String erorr)? erorrdelete,
+    TResult? Function()? loadingDetails,
+    TResult? Function(ResponseDetails responseDetails)? successDetails,
+    TResult? Function(String erorr)? erorrDetails,
+    TResult? Function()? loadingPeinding,
+    TResult? Function(PendingResponse pendingResponse)? successPeinding,
+    TResult? Function(String erorr)? erorrPeinding,
+    TResult? Function()? updateStatus,
+    TResult? Function()? updatePayment,
+    TResult? Function()? updateType,
+  }) {
+    return updatePayment?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingGet,
+    TResult Function(ResponseOrders orderResponse)? successGet,
+    TResult Function(String erorr)? erorrGet,
+    TResult Function()? loadingDelete,
+    TResult Function()? successdelete,
+    TResult Function(String erorr)? erorrdelete,
+    TResult Function()? loadingDetails,
+    TResult Function(ResponseDetails responseDetails)? successDetails,
+    TResult Function(String erorr)? erorrDetails,
+    TResult Function()? loadingPeinding,
+    TResult Function(PendingResponse pendingResponse)? successPeinding,
+    TResult Function(String erorr)? erorrPeinding,
+    TResult Function()? updateStatus,
+    TResult Function()? updatePayment,
+    TResult Function()? updateType,
+    required TResult orElse(),
+  }) {
+    if (updatePayment != null) {
+      return updatePayment();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(LoadingGet value) loadingGet,
+    required TResult Function(SuccessGet value) successGet,
+    required TResult Function(ErorrGet value) erorrGet,
+    required TResult Function(LoadingDelete value) loadingDelete,
+    required TResult Function(Successdelete value) successdelete,
+    required TResult Function(Erorrdelete value) erorrdelete,
+    required TResult Function(LoadingDetails value) loadingDetails,
+    required TResult Function(SuccessDetails value) successDetails,
+    required TResult Function(ErorrDetails value) erorrDetails,
+    required TResult Function(LoadingPeinding value) loadingPeinding,
+    required TResult Function(SuccessPeinding value) successPeinding,
+    required TResult Function(ErorrPeinding value) erorrPeinding,
+    required TResult Function(UpdateStatus value) updateStatus,
+    required TResult Function(UpdatePayment value) updatePayment,
+    required TResult Function(UpdateType value) updateType,
+  }) {
+    return updatePayment(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(LoadingGet value)? loadingGet,
+    TResult? Function(SuccessGet value)? successGet,
+    TResult? Function(ErorrGet value)? erorrGet,
+    TResult? Function(LoadingDelete value)? loadingDelete,
+    TResult? Function(Successdelete value)? successdelete,
+    TResult? Function(Erorrdelete value)? erorrdelete,
+    TResult? Function(LoadingDetails value)? loadingDetails,
+    TResult? Function(SuccessDetails value)? successDetails,
+    TResult? Function(ErorrDetails value)? erorrDetails,
+    TResult? Function(LoadingPeinding value)? loadingPeinding,
+    TResult? Function(SuccessPeinding value)? successPeinding,
+    TResult? Function(ErorrPeinding value)? erorrPeinding,
+    TResult? Function(UpdateStatus value)? updateStatus,
+    TResult? Function(UpdatePayment value)? updatePayment,
+    TResult? Function(UpdateType value)? updateType,
+  }) {
+    return updatePayment?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(LoadingGet value)? loadingGet,
+    TResult Function(SuccessGet value)? successGet,
+    TResult Function(ErorrGet value)? erorrGet,
+    TResult Function(LoadingDelete value)? loadingDelete,
+    TResult Function(Successdelete value)? successdelete,
+    TResult Function(Erorrdelete value)? erorrdelete,
+    TResult Function(LoadingDetails value)? loadingDetails,
+    TResult Function(SuccessDetails value)? successDetails,
+    TResult Function(ErorrDetails value)? erorrDetails,
+    TResult Function(LoadingPeinding value)? loadingPeinding,
+    TResult Function(SuccessPeinding value)? successPeinding,
+    TResult Function(ErorrPeinding value)? erorrPeinding,
+    TResult Function(UpdateStatus value)? updateStatus,
+    TResult Function(UpdatePayment value)? updatePayment,
+    TResult Function(UpdateType value)? updateType,
+    required TResult orElse(),
+  }) {
+    if (updatePayment != null) {
+      return updatePayment(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdatePayment implements OrdersState {
+  const factory UpdatePayment() = _$UpdatePaymentImpl;
+}
+
+/// @nodoc
+abstract class _$$UpdateTypeImplCopyWith<$Res> {
+  factory _$$UpdateTypeImplCopyWith(
+          _$UpdateTypeImpl value, $Res Function(_$UpdateTypeImpl) then) =
+      __$$UpdateTypeImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UpdateTypeImplCopyWithImpl<$Res>
+    extends _$OrdersStateCopyWithImpl<$Res, _$UpdateTypeImpl>
+    implements _$$UpdateTypeImplCopyWith<$Res> {
+  __$$UpdateTypeImplCopyWithImpl(
+      _$UpdateTypeImpl _value, $Res Function(_$UpdateTypeImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UpdateTypeImpl implements UpdateType {
+  const _$UpdateTypeImpl();
+
+  @override
+  String toString() {
+    return 'OrdersState.updateType()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UpdateTypeImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingGet,
+    required TResult Function(ResponseOrders orderResponse) successGet,
+    required TResult Function(String erorr) erorrGet,
+    required TResult Function() loadingDelete,
+    required TResult Function() successdelete,
+    required TResult Function(String erorr) erorrdelete,
+    required TResult Function() loadingDetails,
+    required TResult Function(ResponseDetails responseDetails) successDetails,
+    required TResult Function(String erorr) erorrDetails,
+    required TResult Function() loadingPeinding,
+    required TResult Function(PendingResponse pendingResponse) successPeinding,
+    required TResult Function(String erorr) erorrPeinding,
+    required TResult Function() updateStatus,
+    required TResult Function() updatePayment,
+    required TResult Function() updateType,
+  }) {
+    return updateType();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingGet,
+    TResult? Function(ResponseOrders orderResponse)? successGet,
+    TResult? Function(String erorr)? erorrGet,
+    TResult? Function()? loadingDelete,
+    TResult? Function()? successdelete,
+    TResult? Function(String erorr)? erorrdelete,
+    TResult? Function()? loadingDetails,
+    TResult? Function(ResponseDetails responseDetails)? successDetails,
+    TResult? Function(String erorr)? erorrDetails,
+    TResult? Function()? loadingPeinding,
+    TResult? Function(PendingResponse pendingResponse)? successPeinding,
+    TResult? Function(String erorr)? erorrPeinding,
+    TResult? Function()? updateStatus,
+    TResult? Function()? updatePayment,
+    TResult? Function()? updateType,
+  }) {
+    return updateType?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingGet,
+    TResult Function(ResponseOrders orderResponse)? successGet,
+    TResult Function(String erorr)? erorrGet,
+    TResult Function()? loadingDelete,
+    TResult Function()? successdelete,
+    TResult Function(String erorr)? erorrdelete,
+    TResult Function()? loadingDetails,
+    TResult Function(ResponseDetails responseDetails)? successDetails,
+    TResult Function(String erorr)? erorrDetails,
+    TResult Function()? loadingPeinding,
+    TResult Function(PendingResponse pendingResponse)? successPeinding,
+    TResult Function(String erorr)? erorrPeinding,
+    TResult Function()? updateStatus,
+    TResult Function()? updatePayment,
+    TResult Function()? updateType,
+    required TResult orElse(),
+  }) {
+    if (updateType != null) {
+      return updateType();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(LoadingGet value) loadingGet,
+    required TResult Function(SuccessGet value) successGet,
+    required TResult Function(ErorrGet value) erorrGet,
+    required TResult Function(LoadingDelete value) loadingDelete,
+    required TResult Function(Successdelete value) successdelete,
+    required TResult Function(Erorrdelete value) erorrdelete,
+    required TResult Function(LoadingDetails value) loadingDetails,
+    required TResult Function(SuccessDetails value) successDetails,
+    required TResult Function(ErorrDetails value) erorrDetails,
+    required TResult Function(LoadingPeinding value) loadingPeinding,
+    required TResult Function(SuccessPeinding value) successPeinding,
+    required TResult Function(ErorrPeinding value) erorrPeinding,
+    required TResult Function(UpdateStatus value) updateStatus,
+    required TResult Function(UpdatePayment value) updatePayment,
+    required TResult Function(UpdateType value) updateType,
+  }) {
+    return updateType(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(LoadingGet value)? loadingGet,
+    TResult? Function(SuccessGet value)? successGet,
+    TResult? Function(ErorrGet value)? erorrGet,
+    TResult? Function(LoadingDelete value)? loadingDelete,
+    TResult? Function(Successdelete value)? successdelete,
+    TResult? Function(Erorrdelete value)? erorrdelete,
+    TResult? Function(LoadingDetails value)? loadingDetails,
+    TResult? Function(SuccessDetails value)? successDetails,
+    TResult? Function(ErorrDetails value)? erorrDetails,
+    TResult? Function(LoadingPeinding value)? loadingPeinding,
+    TResult? Function(SuccessPeinding value)? successPeinding,
+    TResult? Function(ErorrPeinding value)? erorrPeinding,
+    TResult? Function(UpdateStatus value)? updateStatus,
+    TResult? Function(UpdatePayment value)? updatePayment,
+    TResult? Function(UpdateType value)? updateType,
+  }) {
+    return updateType?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(LoadingGet value)? loadingGet,
+    TResult Function(SuccessGet value)? successGet,
+    TResult Function(ErorrGet value)? erorrGet,
+    TResult Function(LoadingDelete value)? loadingDelete,
+    TResult Function(Successdelete value)? successdelete,
+    TResult Function(Erorrdelete value)? erorrdelete,
+    TResult Function(LoadingDetails value)? loadingDetails,
+    TResult Function(SuccessDetails value)? successDetails,
+    TResult Function(ErorrDetails value)? erorrDetails,
+    TResult Function(LoadingPeinding value)? loadingPeinding,
+    TResult Function(SuccessPeinding value)? successPeinding,
+    TResult Function(ErorrPeinding value)? erorrPeinding,
+    TResult Function(UpdateStatus value)? updateStatus,
+    TResult Function(UpdatePayment value)? updatePayment,
+    TResult Function(UpdateType value)? updateType,
+    required TResult orElse(),
+  }) {
+    if (updateType != null) {
+      return updateType(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateType implements OrdersState {
+  const factory UpdateType() = _$UpdateTypeImpl;
 }

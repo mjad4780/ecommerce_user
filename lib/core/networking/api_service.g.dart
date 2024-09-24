@@ -749,12 +749,12 @@ class _ApiService implements ApiService {
   }
 
   @override
-  Future<OrderResponse> getorder(dynamic body) async {
+  Future<ResponseOrders> getorder(dynamic body) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _result = await _dio.fetch(_setStreamType<OrderResponse>(Options(
+    final _result = await _dio.fetch(_setStreamType<ResponseOrders>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -770,7 +770,7 @@ class _ApiService implements ApiService {
           _dio.options.baseUrl,
           baseUrl,
         ))));
-    final value = OrderResponse.fromJson(jsonDecode(_result.data!));
+    final value = ResponseOrders.fromJson(jsonDecode(_result.data!));
     return value;
   }
 
@@ -797,6 +797,33 @@ class _ApiService implements ApiService {
           baseUrl,
         ))));
     final value = PendingResponse.fromJson(jsonDecode(_result.data!));
+    return value;
+  }
+
+  @override
+  Future<ResponseNotification> getNotification(dynamic body) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = body;
+    final _result =
+        await _dio.fetch(_setStreamType<ResponseNotification>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              'http://10.0.2.2/e-ecommerse/get_notification.php',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = ResponseNotification.fromJson(jsonDecode(_result.data!));
     return value;
   }
 

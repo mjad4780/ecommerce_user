@@ -1,6 +1,6 @@
 import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
 
-import '../../../model/response_home/size.dart';
+import '../../../future/home/data/models/response_home/size.dart';
 
 sendListApi(String input) {
   return input.replaceAll('[', '').replaceAll(']', '');

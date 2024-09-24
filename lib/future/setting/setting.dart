@@ -1,4 +1,4 @@
-import 'package:ecommerce_user/future/orders/ui/orders.dart';
+import 'package:ecommerce_user/future/orders/ui/my_order_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/animation/open_container_wrapper.dart';
@@ -44,7 +44,7 @@ class Setting extends StatelessWidget {
         ),
         const SizedBox(height: 40),
         const OpenContainerWrapper(
-          nextScresan: Orders(),
+          nextScresan: MyOrderScreen(),
           child: NavigationTile(
             icon: Icons.list,
             title: 'My Orders',

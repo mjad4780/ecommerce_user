@@ -1,0 +1,25 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "notification_id": 113,
+            "notification_title": "dfhgfdh",
+            "notification_body": "rhgfgh",
+            "notification_userid": 0,
+            "notification_datetime": "2024-09-01 19:40:19",
+            "notification_image": "",
+            "notification_all": 1,
+            "notification_id_signal": "1aa4fe44-2a13-468e-b403-4866984f5144"
+        },
+        {
+            "notification_id": 118,
+            "notification_title": "jkkl;jn",
+            "notification_body": "klnkljnl",
+            "notification_userid": 11,
+            "notification_datetime": "2024-09-01 20:44:52",
+            "notification_image": "",
+            "notification_all": 1,
+            "notification_id_signal": "de4a3712-259d-4c7d-93a8-99df8050beac"
+        }
+    ]
+}

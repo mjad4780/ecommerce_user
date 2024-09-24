@@ -1,8 +1,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../../model/order_response/order_response.dart';
 import '../../../../model/pending_response/pending_response.dart';
 import '../../../../model/response_detilas/response_detilas.dart';
+import '../../data/response_orders/response_orders.dart';
 part 'orders_state.freezed.dart';
 
 @freezed
@@ -11,7 +11,7 @@ class OrdersState with _$OrdersState {
 
   ///:getOrders
   const factory OrdersState.loadingGet() = LoadingGet;
-  const factory OrdersState.successGet(OrderResponse orderResponse) =
+  const factory OrdersState.successGet(ResponseOrders orderResponse) =
       SuccessGet;
   const factory OrdersState.erorrGet({required String erorr}) = ErorrGet;
 
@@ -33,4 +33,9 @@ class OrdersState with _$OrdersState {
       SuccessPeinding;
   const factory OrdersState.erorrPeinding({required String erorr}) =
       ErorrPeinding;
+
+  ///:Update
+  const factory OrdersState.updateStatus() = UpdateStatus;
+  const factory OrdersState.updatePayment() = UpdatePayment;
+  const factory OrdersState.updateType() = UpdateType;
 }

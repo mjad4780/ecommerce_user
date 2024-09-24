@@ -55,8 +55,7 @@ class ApiConstants {
   static const String rating = '$baseUrl/orders/Rating.php';
 
   ////////////////admin////////////
-  static String getnotification =
-      '$baseUrl/admin/notification/get_notification.php';
+  static const String getnotification = '$baseUrl/get_notification.php';
 }
 
 class ApiErrors {
@@ -76,3 +75,19 @@ class ApiErrors {
   static const String retryAgainMessage = "retry_again_message";
   static const String ok = "Ok";
 }
+
+const List<String> itemStep = [
+  'pending',
+  'been approved',
+  'prepare',
+  'shipped',
+  'done',
+];
+
+const List<String> contentOrders = [
+  'there is a order awaiting approval',
+  'the order Has been Approved',
+  'this order is under preparation',
+  'Your order  is on the way',
+  'the order has been delivery to the custemrs',
+];

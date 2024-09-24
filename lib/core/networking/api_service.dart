@@ -6,13 +6,14 @@ import 'package:ecommerce_user/model/pending_response/pending_response.dart';
 import 'package:retrofit/retrofit.dart';
 
 import '../../future/cart/data/response_cart/response_cart.dart';
+import '../../future/home/data/models/response_notification/response_notification.dart';
+import '../../future/orders/data/response_orders/response_orders.dart';
 import '../../model/adress_response/adress_response.dart';
 import '../../model/coupon_response/coupon_response.dart';
 import '../../model/get_current_cart/get_current_cart.dart';
-import '../../model/order_response/order_response.dart';
 import '../../model/response_detilas/response_detilas.dart';
-import '../../model/response_home/item1view.dart';
-import '../../model/response_home/response_home.dart';
+import '../../future/home/data/models/response_home/item1view.dart';
+import '../../future/home/data/models/response_home/response_home.dart';
 import '../../model/response_login/response_login.dart';
 import '../../model/response_status/response_status.dart';
 import 'api_constants.dart';
@@ -113,8 +114,12 @@ abstract class ApiService {
   Future<ResponseDetails> detailsOrders(@Body() dynamic body);
 
   @POST(ApiConstants.getorder)
-  Future<OrderResponse> getorder(@Body() dynamic body);
+  Future<ResponseOrders> getorder(@Body() dynamic body);
 
   @POST(ApiConstants.pending)
   Future<PendingResponse> pending(@Body() dynamic body);
+
+  ///:GetNotification
+  @POST(ApiConstants.getnotification)
+  Future<ResponseNotification> getNotification(@Body() dynamic body);
 }

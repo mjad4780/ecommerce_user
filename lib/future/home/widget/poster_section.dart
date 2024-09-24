@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/networking/api_constants.dart';
-import '../../../model/response_home/setting.dart';
+import '../data/models/response_home/setting.dart';
 import '../../../utility/app_data.dart';
 
 class PosterSection extends StatelessWidget {

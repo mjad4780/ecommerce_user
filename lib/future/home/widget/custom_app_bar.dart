@@ -1,12 +1,11 @@
+import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
 import 'package:flutter/material.dart';
 
 import '../../item_categories/widget/app_bar_action_button.dart';
 import 'custom_search_bar.dart';
 
-class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
+class CustomAppBar extends StatelessWidget {
   @override
-  Size get preferredSize => const Size.fromHeight(100);
-
   const CustomAppBar({super.key});
 
   @override
@@ -17,12 +16,12 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            AppBarActionButton(
-              icon: Icons.menu,
-              onPressed: () {
-                Scaffold.of(context).openDrawer();
-              },
-            ),
+            // AppBarActionButton(
+            //   icon: Icons.menu,
+            //   onPressed: () {
+            //     Scaffold.of(context).openDrawer();
+            //   },
+            // ),
             Expanded(
               child: CustomSearchBar(
                 controller: TextEditingController(),
@@ -30,6 +29,12 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   //TODO: should complete call filterProducts
                 },
               ),
+            ),
+            AppBarActionButton(
+              icon: Icons.notifications,
+              onPressed: () {
+                context.push('/ViewNotification');
+              },
             ),
           ],
         ),

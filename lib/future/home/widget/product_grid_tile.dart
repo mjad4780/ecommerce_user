@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../core/networking/api_constants.dart';
-import '../../../model/response_home/datum.dart';
+import '../data/models/response_home/datum.dart';
 
 class ProductGridTile extends StatelessWidget {
   final Datum product;
@@ -151,6 +151,7 @@ class IconFavorite extends StatelessWidget {
       await context.read<FavoriteCubit>().emitdeleteFavorite(product.itemId!);
       product.favorite = 0;
       if (product.notfavorite == 1) {
+        // ignore: use_build_context_synchronously
         context.read<FavoriteCubit>().emitgetFavorite();
       }
     } else {

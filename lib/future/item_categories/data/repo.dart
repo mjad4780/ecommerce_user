@@ -5,7 +5,7 @@ import '../../../../core/function/formDataPost.dart';
 import '../../../../core/networking/api_error_handler.dart';
 import '../../../../core/networking/api_result.dart';
 import '../../../../core/networking/api_service.dart';
-import '../../../model/response_home/item1view.dart';
+import '../../home/data/models/response_home/item1view.dart';
 
 class ItemCategoriesRepo {
   final ApiService _apiService;

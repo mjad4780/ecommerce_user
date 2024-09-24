@@ -12,6 +12,33 @@ class TextStyles {
     color: Colors.black,
   );
 
+  static TextStyle adress(context) {
+    return const TextStyle(
+      color: Colors.blueAccent, fontWeight: FontWeight.bold,
+      // color: const Color(0xFF064060),
+      // fontSize: getResponsiveFontSize(context, fontSize: 18),
+      // fontFamily: 'Montserrat',
+    );
+  }
+
+  static TextStyle stylesection(context) {
+    return const TextStyle(
+      color: AppColor.primaryColor,
+      fontWeight: FontWeight.bold,
+      fontSize: 16,
+      fontFamily: 'Montserrat',
+    );
+  }
+
+  static TextStyle stylesectionreqler(context) {
+    return const TextStyle(
+      fontWeight: FontWeight.bold,
+      // color: const Color(0xFF064060),
+      // fontSize: getResponsiveFontSize(context, fontSize: 16),
+      // fontFamily: 'Montserrat',
+    );
+  }
+
   static TextStyle textItemCategories = TextStyle(
       fontSize: 20.sp, fontWeight: FontWeight.bold, color: AppColor.darkOrange);
 

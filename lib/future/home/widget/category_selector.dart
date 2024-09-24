@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../../core/animation/open_container_wrapper.dart';
 import '../../../core/networking/api_constants.dart';
-import '../../../model/response_home/category.dart';
+import '../data/models/response_home/category.dart';
 import '../../item_categories/product_by_category_screen.dart';
 
 class CategorySelector extends StatelessWidget {

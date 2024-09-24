@@ -7,7 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../core/function/function_api/ssend_list_api.dart';
 import '../../../core/theming/colors.dart';
-import '../../../model/response_home/datum.dart';
+import '../data/models/response_home/datum.dart';
 import '../../../widget/carousel_slider.dart';
 import '../../../widget/horizondal_list.dart';
 import '../../../widget/product_rating_section.dart';

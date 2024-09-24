@@ -1,4 +1,6 @@
-import 'package:bloc/bloc.dart';
+import 'dart:developer';
+
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../data/repo.dart';
 import 'orders_state.dart';
@@ -8,8 +10,12 @@ class OrdersCubit extends Cubit<OrdersState> {
   OrdersCubit(this._checkCartOrder) : super(const OrdersState.initial());
 
   final OrdersRepo _checkCartOrder;
+
+  // String? updateStatus;
+
 //:GetOrders
-  emitGetOrders(int id) async {
+  emitGetOrders() async {
+    log('message');
     emit(const OrdersState.loadingGet());
     final response = await _checkCartOrder.getOrders();
     response.when(success: (responsehome) {
@@ -33,7 +39,8 @@ class OrdersCubit extends Cubit<OrdersState> {
   emitdeleteOrders(int id) async {
     emit(const OrdersState.loadingDelete());
     final response = await _checkCartOrder.deleteOrders(id);
-    response.when(success: (responsehome) {
+    response.when(success: (responsehome) async {
+      await emitGetOrders();
       emit(const OrdersState.successdelete());
     }, failure: (error) {
       emit(OrdersState.erorrdelete(erorr: error.apiErrorModel.messege ?? ''));

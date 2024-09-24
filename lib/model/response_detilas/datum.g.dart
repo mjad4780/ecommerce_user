@@ -7,6 +7,7 @@ part of 'datum.dart';
 // **************************************************************************
 
 DataDetails _$DataDetailsFromJson(Map<String, dynamic> json) => DataDetails(
+      playerId: json['player_id'] as String?,
       itemId: (json['item_id'] as num?)?.toInt(),
       itemName: json['item_name'] as String?,
       itemNameAr: json['item_name_ar'] as String?,
@@ -26,6 +27,8 @@ DataDetails _$DataDetailsFromJson(Map<String, dynamic> json) => DataDetails(
       cartItemid: (json['cart_itemid'] as num?)?.toInt(),
       cartUserid: (json['cart_userid'] as num?)?.toInt(),
       cartOrders: (json['cart_orders'] as num?)?.toInt(),
+      cartColor: json['cart_color'] as String?,
+      cartSize: json['cart_size'] as String?,
       images:
           (json['images'] as List<dynamic>?)?.map((e) => e as String).toList(),
       size: (json['size'] as List<dynamic>?)
@@ -54,6 +57,9 @@ Map<String, dynamic> _$DataDetailsToJson(DataDetails instance) =>
       'cart_itemid': instance.cartItemid,
       'cart_userid': instance.cartUserid,
       'cart_orders': instance.cartOrders,
+      'cart_size': instance.cartSize,
+      'cart_color': instance.cartColor,
+      'player_id': instance.playerId,
       'images': instance.images,
       'size': instance.size,
     };

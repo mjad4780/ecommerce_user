@@ -1,7 +1,8 @@
+import 'package:ecommerce_user/future/home/data/models/response_notification/response_notification.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../../model/response_home/item1view.dart';
-import '../../../../model/response_home/response_home.dart';
+import '../../data/models/response_home/item1view.dart';
+import '../../data/models/response_home/response_home.dart';
 
 part 'home_state.freezed.dart';
 
@@ -21,4 +22,11 @@ class HomeState with _$HomeState {
   //:StateBottomNavigationBar
   const factory HomeState.stateBottomNavigationBar({required int page}) =
       StateBottomNavigationBar;
+
+  //:getNotification
+  const factory HomeState.loadinggetNotification() = LoadinggetNotification;
+  const factory HomeState.successgetNotification(
+      {required ResponseNotification responseItems}) = SuccessgetNotification;
+  const factory HomeState.errorgetNotification({required String erorr}) =
+      ErrorgetNotification;
 }

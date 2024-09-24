@@ -1,4 +1,3 @@
-import 'package:collection/collection.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'size.dart';
@@ -44,10 +43,17 @@ class DataDetails {
   int? cartUserid;
   @JsonKey(name: 'cart_orders')
   int? cartOrders;
+  @JsonKey(name: 'cart_size')
+  String? cartSize;
+  @JsonKey(name: 'cart_color')
+  String? cartColor;
+  @JsonKey(name: 'player_id')
+  String? playerId;
   List<String>? images;
   List<ItemSize>? size;
 
   DataDetails({
+    this.playerId,
     this.itemId,
     this.itemName,
     this.itemNameAr,
@@ -67,6 +73,8 @@ class DataDetails {
     this.cartItemid,
     this.cartUserid,
     this.cartOrders,
+    this.cartColor,
+    this.cartSize,
     this.images,
     this.size,
   });
@@ -75,36 +83,4 @@ class DataDetails {
       _$DataDetailsFromJson(json);
 
   Map<String, dynamic> toJson() => _$DataDetailsToJson(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    if (other is! DataDetails) return false;
-    final mapEquals = const DeepCollectionEquality().equals;
-    return mapEquals(other.toJson(), toJson());
-  }
-
-  @override
-  int get hashCode =>
-      itemId.hashCode ^
-      itemName.hashCode ^
-      itemNameAr.hashCode ^
-      itemDecs.hashCode ^
-      itemDecsAr.hashCode ^
-      itemImage.hashCode ^
-      itemCount.hashCode ^
-      itemActive.hashCode ^
-      itemPrice.hashCode ^
-      itemDiscount.hashCode ^
-      itemData.hashCode ^
-      itemCategories.hashCode ^
-      itemsPrices.hashCode ^
-      itempriceDiscount.hashCode ^
-      countitems.hashCode ^
-      cartId.hashCode ^
-      cartItemid.hashCode ^
-      cartUserid.hashCode ^
-      cartOrders.hashCode ^
-      images.hashCode ^
-      size.hashCode;
 }

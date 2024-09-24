@@ -5,10 +5,10 @@ import '../../../../core/function/formDataPost.dart';
 import '../../../../core/networking/api_error_handler.dart';
 import '../../../../core/networking/api_result.dart';
 import '../../../../core/networking/api_service.dart';
-import '../../../model/order_response/order_response.dart';
 import '../../../model/pending_response/pending_response.dart';
 import '../../../model/response_detilas/response_detilas.dart';
 import '../../../model/response_status/response_status.dart';
+import 'response_orders/response_orders.dart';
 
 class OrdersRepo {
   final ApiService _apiService;
@@ -17,10 +17,10 @@ class OrdersRepo {
 
   /// :GetOrders
 
-  Future<ApiResult<OrderResponse>> getOrders() async {
+  Future<ApiResult<ResponseOrders>> getOrders() async {
     try {
       Map<String, dynamic> map = {
-        "userid": getIt<CacheHelper>().getData(key: 'id')
+        "id": getIt<CacheHelper>().getData(key: 'id')
       };
 
       final response = await _apiService.getorder(formDataPost(map));
@@ -50,7 +50,10 @@ class OrdersRepo {
   /// :deleteOrders
   Future<ApiResult<ResponseStatus>> deleteOrders(int orderid) async {
     try {
-      Map<String, dynamic> map = {"id": orderid};
+      Map<String, dynamic> map = {
+        "id": orderid,
+        "userid": getIt<CacheHelper>().getData(key: 'id')
+      };
 
       final response = await _apiService.deleteOrders(formDataPost(map));
       return ApiResult.success(response);

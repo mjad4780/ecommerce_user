@@ -41,6 +41,18 @@ class HomeCubit extends Cubit<HomeState> {
     });
   }
 
+//:home
+  getNotification() async {
+    emit(const HomeState.loadinggetNotification());
+    final response = await homeRepo.getNotification();
+    response.when(success: (responsehome) {
+      emit(HomeState.successgetNotification(responseItems: responsehome));
+    }, failure: (error) {
+      emit(HomeState.errorgetNotification(
+          erorr: error.apiErrorModel.messege ?? ''));
+    });
+  }
+
   ///:search
   emitSearch() async {
     emit(const HomeState.loadingsearch());
