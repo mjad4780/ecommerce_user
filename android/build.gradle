@@ -1,3 +1,15 @@
+buildscript {
+    ext.kotlin_version = '1.8.22'
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
 // buildscript {
 //    ext.kotlin_version = '1.9.10' //latest version
 //    repositories {
@@ -22,7 +34,8 @@ allprojects {
 }
 
 rootProject.buildDir = '../build'
-subprojects {
+subprojects 
+ {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
 }
 subprojects {

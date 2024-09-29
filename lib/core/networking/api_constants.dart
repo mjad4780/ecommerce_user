@@ -56,6 +56,17 @@ class ApiConstants {
 
   ////////////////admin////////////
   static const String getnotification = '$baseUrl/get_notification.php';
+
+  ////////////////payment////////////
+
+  static const String payment = '$baseUrl/orders/payment.php';
+  static const String ephemeral = 'https://api.stripe.com/v1/ephemeral_keys';
+  static const String apikey =
+      'sk_test_51Q2cV4G8beASrMkOyt8GSpHEqEPhr1XZ4sFEXe57s7hforlmPC0RBDEHqJ1dB6nh2y9EZvVzgKfbibO2FvsoCIRL00AMz03oYa';
+
+  static const String publishableKey =
+      "pk_test_51Q2cV4G8beASrMkO1U5uzkGEgA0qP5aWutnhGS67wMltOctabQGc6CKWipGmNQJB0mNEia6YpH4UfIPBoA9aHFwe00b9F6QOS8";
+  static const String customerId = 'cus_QvoptUGfAxxcMt';
 }
 
 class ApiErrors {

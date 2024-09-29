@@ -25,6 +25,7 @@ import '../../future/auth/sign_up/data/data_sigin_up.dart';
 import '../../future/auth/verfyCode/logic/cubit/verfy_code_cubit.dart';
 import '../../future/cart/data/repo.dart';
 import '../../future/check_cart_order/data/repo.dart';
+import '../../future/check_cart_order/data/repo_payment.dart';
 import '../../future/check_cart_order/logic/cubit/check_cart_cubit.dart';
 import '../../future/favorite/data/repo.dart';
 import '../../future/item_categories/logic/cubit/item_categories_cubit.dart';
@@ -73,7 +74,9 @@ void setupServise() {
 
   // CheckCartOrder
   getIt.registerLazySingleton<CheckCartOrder>(() => CheckCartOrder(getIt()));
-  getIt.registerFactory<CheckCartCubit>(() => CheckCartCubit(getIt()));
+  getIt.registerLazySingleton<RepoPayment>(() => RepoPayment(getIt()));
+
+  getIt.registerFactory<CheckCartCubit>(() => CheckCartCubit(getIt(), getIt()));
 
   // Favorite
   getIt.registerLazySingleton<FavoriteRepo>(() => FavoriteRepo(getIt()));

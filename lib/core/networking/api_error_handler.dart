@@ -129,7 +129,7 @@ class ErrorHandler implements Exception {
       apiErrorModel = _handleError(error);
     } else {
       // default error
-      apiErrorModel = DataSource.DEFAULT.getFailure();
+      apiErrorModel = ApiErrorModel(messege: error.toString());
     }
   }
 }

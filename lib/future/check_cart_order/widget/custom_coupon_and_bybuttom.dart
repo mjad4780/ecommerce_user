@@ -1,8 +1,11 @@
+import 'package:ecommerce_user/core/networking/api_constants.dart';
+import 'package:ecommerce_user/future/check_cart_order/widget/payment_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../widget/compleate_order_button.dart';
 import '../../../widget/custom_text_field.dart';
+import '../data/model/payment_body_tojson.dart';
 import '../logic/cubit/check_cart_cubit.dart';
 import '../logic/cubit/check_cart_state.dart';
 import 'applay_coupon_btn.dart';
@@ -52,16 +55,30 @@ class CustomCouponAndPyBottom extends StatelessWidget {
             CompleteOrderButton(
                 labelText:
                     'Complete Order  \$${context.read<CheckCartCubit>().grandTotalPrice ?? offers}',
-                onPressed: () {
-                  ///TODO: should
-                  ///TODO:  final id = OneSignal.User.pushSubscription.id;
+                onPressed: () async {
+                  // ///TODO:  final id = OneSignal.User.pushSubscription.id;
 
-                  context.read<CheckCartCubit>().emitCheckCart(
-                      context,
-                      context.read<CheckCartCubit>().grandTotalPrice ?? offers,
-                      'id');
+                  var amount =
+                      context.read<CheckCartCubit>().grandTotalPrice ?? offers;
+                  PaymentBodyTojson body = PaymentBodyTojson(
+                      amount: amount,
+                      currency: 'USD',
+                      customer: ApiConstants.customerId);
+                  if (context.read<CheckCartCubit>().selectedPaymentOption ==
+                      1) {
+                    await context.read<CheckCartCubit>().greatePayment(body);
+                    await context
+                        .read<CheckCartCubit>()
+                        .emitCheckCart(context, amount, 'id');
+                  } else {
+                    context
+                        .read<CheckCartCubit>()
+                        .emitCheckCart(context, amount, 'id');
+                  }
                 }),
-            const CheckCartBlocListener()
+            const CheckCartBlocListener(),
+            // if (context.read<CheckCartCubit>().selectedPaymentOption == 1)
+            const PaymentBlocListener()
           ],
         );
       },

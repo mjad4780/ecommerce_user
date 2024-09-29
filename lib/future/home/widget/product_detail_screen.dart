@@ -171,7 +171,16 @@ class ProductDetailScreen extends StatelessWidget {
                                           .read<CartCubit>()
                                           .emitAddCart(
                                               product.itemId!, context);
-                                      context.push('/Cart');
+                                      if (context
+                                                  .read<CartCubit>()
+                                                  .selectColor !=
+                                              null &&
+                                          context
+                                                  .read<CartCubit>()
+                                                  .selectSize !=
+                                              null) {
+                                        context.push('/Cart');
+                                      }
                                     }
                                   : null,
                               child: const Text("Add to cart",

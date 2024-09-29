@@ -28,6 +28,9 @@ mixin _$CheckCartState {
     required TResult Function() selectAdress,
     required TResult Function() selectType,
     required TResult Function() selectPayment,
+    required TResult Function() loadingPayment,
+    required TResult Function() uccessPayment,
+    required TResult Function(String erorr) erorrpayment,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -42,6 +45,9 @@ mixin _$CheckCartState {
     TResult? Function()? selectAdress,
     TResult? Function()? selectType,
     TResult? Function()? selectPayment,
+    TResult? Function()? loadingPayment,
+    TResult? Function()? uccessPayment,
+    TResult? Function(String erorr)? erorrpayment,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -56,6 +62,9 @@ mixin _$CheckCartState {
     TResult Function()? selectAdress,
     TResult Function()? selectType,
     TResult Function()? selectPayment,
+    TResult Function()? loadingPayment,
+    TResult Function()? uccessPayment,
+    TResult Function(String erorr)? erorrpayment,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -71,6 +80,9 @@ mixin _$CheckCartState {
     required TResult Function(SelectAdress value) selectAdress,
     required TResult Function(SelectType value) selectType,
     required TResult Function(SelectPayment value) selectPayment,
+    required TResult Function(LoadingPayment value) loadingPayment,
+    required TResult Function(SuccessPayment value) uccessPayment,
+    required TResult Function(Erorrpayment value) erorrpayment,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -85,6 +97,9 @@ mixin _$CheckCartState {
     TResult? Function(SelectAdress value)? selectAdress,
     TResult? Function(SelectType value)? selectType,
     TResult? Function(SelectPayment value)? selectPayment,
+    TResult? Function(LoadingPayment value)? loadingPayment,
+    TResult? Function(SuccessPayment value)? uccessPayment,
+    TResult? Function(Erorrpayment value)? erorrpayment,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -99,6 +114,9 @@ mixin _$CheckCartState {
     TResult Function(SelectAdress value)? selectAdress,
     TResult Function(SelectType value)? selectType,
     TResult Function(SelectPayment value)? selectPayment,
+    TResult Function(LoadingPayment value)? loadingPayment,
+    TResult Function(SuccessPayment value)? uccessPayment,
+    TResult Function(Erorrpayment value)? erorrpayment,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -170,6 +188,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function() selectAdress,
     required TResult Function() selectType,
     required TResult Function() selectPayment,
+    required TResult Function() loadingPayment,
+    required TResult Function() uccessPayment,
+    required TResult Function(String erorr) erorrpayment,
   }) {
     return initial();
   }
@@ -187,6 +208,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? selectAdress,
     TResult? Function()? selectType,
     TResult? Function()? selectPayment,
+    TResult? Function()? loadingPayment,
+    TResult? Function()? uccessPayment,
+    TResult? Function(String erorr)? erorrpayment,
   }) {
     return initial?.call();
   }
@@ -204,6 +228,9 @@ class _$InitialImpl implements _Initial {
     TResult Function()? selectAdress,
     TResult Function()? selectType,
     TResult Function()? selectPayment,
+    TResult Function()? loadingPayment,
+    TResult Function()? uccessPayment,
+    TResult Function(String erorr)? erorrpayment,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -225,6 +252,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function(SelectAdress value) selectAdress,
     required TResult Function(SelectType value) selectType,
     required TResult Function(SelectPayment value) selectPayment,
+    required TResult Function(LoadingPayment value) loadingPayment,
+    required TResult Function(SuccessPayment value) uccessPayment,
+    required TResult Function(Erorrpayment value) erorrpayment,
   }) {
     return initial(this);
   }
@@ -242,6 +272,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(SelectAdress value)? selectAdress,
     TResult? Function(SelectType value)? selectType,
     TResult? Function(SelectPayment value)? selectPayment,
+    TResult? Function(LoadingPayment value)? loadingPayment,
+    TResult? Function(SuccessPayment value)? uccessPayment,
+    TResult? Function(Erorrpayment value)? erorrpayment,
   }) {
     return initial?.call(this);
   }
@@ -259,6 +292,9 @@ class _$InitialImpl implements _Initial {
     TResult Function(SelectAdress value)? selectAdress,
     TResult Function(SelectType value)? selectType,
     TResult Function(SelectPayment value)? selectPayment,
+    TResult Function(LoadingPayment value)? loadingPayment,
+    TResult Function(SuccessPayment value)? uccessPayment,
+    TResult Function(Erorrpayment value)? erorrpayment,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -320,6 +356,9 @@ class _$LoadingImpl implements Loading {
     required TResult Function() selectAdress,
     required TResult Function() selectType,
     required TResult Function() selectPayment,
+    required TResult Function() loadingPayment,
+    required TResult Function() uccessPayment,
+    required TResult Function(String erorr) erorrpayment,
   }) {
     return loading();
   }
@@ -337,6 +376,9 @@ class _$LoadingImpl implements Loading {
     TResult? Function()? selectAdress,
     TResult? Function()? selectType,
     TResult? Function()? selectPayment,
+    TResult? Function()? loadingPayment,
+    TResult? Function()? uccessPayment,
+    TResult? Function(String erorr)? erorrpayment,
   }) {
     return loading?.call();
   }
@@ -354,6 +396,9 @@ class _$LoadingImpl implements Loading {
     TResult Function()? selectAdress,
     TResult Function()? selectType,
     TResult Function()? selectPayment,
+    TResult Function()? loadingPayment,
+    TResult Function()? uccessPayment,
+    TResult Function(String erorr)? erorrpayment,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -375,6 +420,9 @@ class _$LoadingImpl implements Loading {
     required TResult Function(SelectAdress value) selectAdress,
     required TResult Function(SelectType value) selectType,
     required TResult Function(SelectPayment value) selectPayment,
+    required TResult Function(LoadingPayment value) loadingPayment,
+    required TResult Function(SuccessPayment value) uccessPayment,
+    required TResult Function(Erorrpayment value) erorrpayment,
   }) {
     return loading(this);
   }
@@ -392,6 +440,9 @@ class _$LoadingImpl implements Loading {
     TResult? Function(SelectAdress value)? selectAdress,
     TResult? Function(SelectType value)? selectType,
     TResult? Function(SelectPayment value)? selectPayment,
+    TResult? Function(LoadingPayment value)? loadingPayment,
+    TResult? Function(SuccessPayment value)? uccessPayment,
+    TResult? Function(Erorrpayment value)? erorrpayment,
   }) {
     return loading?.call(this);
   }
@@ -409,6 +460,9 @@ class _$LoadingImpl implements Loading {
     TResult Function(SelectAdress value)? selectAdress,
     TResult Function(SelectType value)? selectType,
     TResult Function(SelectPayment value)? selectPayment,
+    TResult Function(LoadingPayment value)? loadingPayment,
+    TResult Function(SuccessPayment value)? uccessPayment,
+    TResult Function(Erorrpayment value)? erorrpayment,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -470,6 +524,9 @@ class _$SuccessImpl implements Success {
     required TResult Function() selectAdress,
     required TResult Function() selectType,
     required TResult Function() selectPayment,
+    required TResult Function() loadingPayment,
+    required TResult Function() uccessPayment,
+    required TResult Function(String erorr) erorrpayment,
   }) {
     return success();
   }
@@ -487,6 +544,9 @@ class _$SuccessImpl implements Success {
     TResult? Function()? selectAdress,
     TResult? Function()? selectType,
     TResult? Function()? selectPayment,
+    TResult? Function()? loadingPayment,
+    TResult? Function()? uccessPayment,
+    TResult? Function(String erorr)? erorrpayment,
   }) {
     return success?.call();
   }
@@ -504,6 +564,9 @@ class _$SuccessImpl implements Success {
     TResult Function()? selectAdress,
     TResult Function()? selectType,
     TResult Function()? selectPayment,
+    TResult Function()? loadingPayment,
+    TResult Function()? uccessPayment,
+    TResult Function(String erorr)? erorrpayment,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -525,6 +588,9 @@ class _$SuccessImpl implements Success {
     required TResult Function(SelectAdress value) selectAdress,
     required TResult Function(SelectType value) selectType,
     required TResult Function(SelectPayment value) selectPayment,
+    required TResult Function(LoadingPayment value) loadingPayment,
+    required TResult Function(SuccessPayment value) uccessPayment,
+    required TResult Function(Erorrpayment value) erorrpayment,
   }) {
     return success(this);
   }
@@ -542,6 +608,9 @@ class _$SuccessImpl implements Success {
     TResult? Function(SelectAdress value)? selectAdress,
     TResult? Function(SelectType value)? selectType,
     TResult? Function(SelectPayment value)? selectPayment,
+    TResult? Function(LoadingPayment value)? loadingPayment,
+    TResult? Function(SuccessPayment value)? uccessPayment,
+    TResult? Function(Erorrpayment value)? erorrpayment,
   }) {
     return success?.call(this);
   }
@@ -559,6 +628,9 @@ class _$SuccessImpl implements Success {
     TResult Function(SelectAdress value)? selectAdress,
     TResult Function(SelectType value)? selectType,
     TResult Function(SelectPayment value)? selectPayment,
+    TResult Function(LoadingPayment value)? loadingPayment,
+    TResult Function(SuccessPayment value)? uccessPayment,
+    TResult Function(Erorrpayment value)? erorrpayment,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -646,6 +718,9 @@ class _$ErorrImpl implements Erorr {
     required TResult Function() selectAdress,
     required TResult Function() selectType,
     required TResult Function() selectPayment,
+    required TResult Function() loadingPayment,
+    required TResult Function() uccessPayment,
+    required TResult Function(String erorr) erorrpayment,
   }) {
     return erorr(this.erorr);
   }
@@ -663,6 +738,9 @@ class _$ErorrImpl implements Erorr {
     TResult? Function()? selectAdress,
     TResult? Function()? selectType,
     TResult? Function()? selectPayment,
+    TResult? Function()? loadingPayment,
+    TResult? Function()? uccessPayment,
+    TResult? Function(String erorr)? erorrpayment,
   }) {
     return erorr?.call(this.erorr);
   }
@@ -680,6 +758,9 @@ class _$ErorrImpl implements Erorr {
     TResult Function()? selectAdress,
     TResult Function()? selectType,
     TResult Function()? selectPayment,
+    TResult Function()? loadingPayment,
+    TResult Function()? uccessPayment,
+    TResult Function(String erorr)? erorrpayment,
     required TResult orElse(),
   }) {
     if (erorr != null) {
@@ -701,6 +782,9 @@ class _$ErorrImpl implements Erorr {
     required TResult Function(SelectAdress value) selectAdress,
     required TResult Function(SelectType value) selectType,
     required TResult Function(SelectPayment value) selectPayment,
+    required TResult Function(LoadingPayment value) loadingPayment,
+    required TResult Function(SuccessPayment value) uccessPayment,
+    required TResult Function(Erorrpayment value) erorrpayment,
   }) {
     return erorr(this);
   }
@@ -718,6 +802,9 @@ class _$ErorrImpl implements Erorr {
     TResult? Function(SelectAdress value)? selectAdress,
     TResult? Function(SelectType value)? selectType,
     TResult? Function(SelectPayment value)? selectPayment,
+    TResult? Function(LoadingPayment value)? loadingPayment,
+    TResult? Function(SuccessPayment value)? uccessPayment,
+    TResult? Function(Erorrpayment value)? erorrpayment,
   }) {
     return erorr?.call(this);
   }
@@ -735,6 +822,9 @@ class _$ErorrImpl implements Erorr {
     TResult Function(SelectAdress value)? selectAdress,
     TResult Function(SelectType value)? selectType,
     TResult Function(SelectPayment value)? selectPayment,
+    TResult Function(LoadingPayment value)? loadingPayment,
+    TResult Function(SuccessPayment value)? uccessPayment,
+    TResult Function(Erorrpayment value)? erorrpayment,
     required TResult orElse(),
   }) {
     if (erorr != null) {
@@ -801,6 +891,9 @@ class _$LoadingCouponImpl implements LoadingCoupon {
     required TResult Function() selectAdress,
     required TResult Function() selectType,
     required TResult Function() selectPayment,
+    required TResult Function() loadingPayment,
+    required TResult Function() uccessPayment,
+    required TResult Function(String erorr) erorrpayment,
   }) {
     return loadingCoupon();
   }
@@ -818,6 +911,9 @@ class _$LoadingCouponImpl implements LoadingCoupon {
     TResult? Function()? selectAdress,
     TResult? Function()? selectType,
     TResult? Function()? selectPayment,
+    TResult? Function()? loadingPayment,
+    TResult? Function()? uccessPayment,
+    TResult? Function(String erorr)? erorrpayment,
   }) {
     return loadingCoupon?.call();
   }
@@ -835,6 +931,9 @@ class _$LoadingCouponImpl implements LoadingCoupon {
     TResult Function()? selectAdress,
     TResult Function()? selectType,
     TResult Function()? selectPayment,
+    TResult Function()? loadingPayment,
+    TResult Function()? uccessPayment,
+    TResult Function(String erorr)? erorrpayment,
     required TResult orElse(),
   }) {
     if (loadingCoupon != null) {
@@ -856,6 +955,9 @@ class _$LoadingCouponImpl implements LoadingCoupon {
     required TResult Function(SelectAdress value) selectAdress,
     required TResult Function(SelectType value) selectType,
     required TResult Function(SelectPayment value) selectPayment,
+    required TResult Function(LoadingPayment value) loadingPayment,
+    required TResult Function(SuccessPayment value) uccessPayment,
+    required TResult Function(Erorrpayment value) erorrpayment,
   }) {
     return loadingCoupon(this);
   }
@@ -873,6 +975,9 @@ class _$LoadingCouponImpl implements LoadingCoupon {
     TResult? Function(SelectAdress value)? selectAdress,
     TResult? Function(SelectType value)? selectType,
     TResult? Function(SelectPayment value)? selectPayment,
+    TResult? Function(LoadingPayment value)? loadingPayment,
+    TResult? Function(SuccessPayment value)? uccessPayment,
+    TResult? Function(Erorrpayment value)? erorrpayment,
   }) {
     return loadingCoupon?.call(this);
   }
@@ -890,6 +995,9 @@ class _$LoadingCouponImpl implements LoadingCoupon {
     TResult Function(SelectAdress value)? selectAdress,
     TResult Function(SelectType value)? selectType,
     TResult Function(SelectPayment value)? selectPayment,
+    TResult Function(LoadingPayment value)? loadingPayment,
+    TResult Function(SuccessPayment value)? uccessPayment,
+    TResult Function(Erorrpayment value)? erorrpayment,
     required TResult orElse(),
   }) {
     if (loadingCoupon != null) {
@@ -977,6 +1085,9 @@ class _$SuccessCouponImpl implements SuccessCoupon {
     required TResult Function() selectAdress,
     required TResult Function() selectType,
     required TResult Function() selectPayment,
+    required TResult Function() loadingPayment,
+    required TResult Function() uccessPayment,
+    required TResult Function(String erorr) erorrpayment,
   }) {
     return successCoupon(coupon);
   }
@@ -994,6 +1105,9 @@ class _$SuccessCouponImpl implements SuccessCoupon {
     TResult? Function()? selectAdress,
     TResult? Function()? selectType,
     TResult? Function()? selectPayment,
+    TResult? Function()? loadingPayment,
+    TResult? Function()? uccessPayment,
+    TResult? Function(String erorr)? erorrpayment,
   }) {
     return successCoupon?.call(coupon);
   }
@@ -1011,6 +1125,9 @@ class _$SuccessCouponImpl implements SuccessCoupon {
     TResult Function()? selectAdress,
     TResult Function()? selectType,
     TResult Function()? selectPayment,
+    TResult Function()? loadingPayment,
+    TResult Function()? uccessPayment,
+    TResult Function(String erorr)? erorrpayment,
     required TResult orElse(),
   }) {
     if (successCoupon != null) {
@@ -1032,6 +1149,9 @@ class _$SuccessCouponImpl implements SuccessCoupon {
     required TResult Function(SelectAdress value) selectAdress,
     required TResult Function(SelectType value) selectType,
     required TResult Function(SelectPayment value) selectPayment,
+    required TResult Function(LoadingPayment value) loadingPayment,
+    required TResult Function(SuccessPayment value) uccessPayment,
+    required TResult Function(Erorrpayment value) erorrpayment,
   }) {
     return successCoupon(this);
   }
@@ -1049,6 +1169,9 @@ class _$SuccessCouponImpl implements SuccessCoupon {
     TResult? Function(SelectAdress value)? selectAdress,
     TResult? Function(SelectType value)? selectType,
     TResult? Function(SelectPayment value)? selectPayment,
+    TResult? Function(LoadingPayment value)? loadingPayment,
+    TResult? Function(SuccessPayment value)? uccessPayment,
+    TResult? Function(Erorrpayment value)? erorrpayment,
   }) {
     return successCoupon?.call(this);
   }
@@ -1066,6 +1189,9 @@ class _$SuccessCouponImpl implements SuccessCoupon {
     TResult Function(SelectAdress value)? selectAdress,
     TResult Function(SelectType value)? selectType,
     TResult Function(SelectPayment value)? selectPayment,
+    TResult Function(LoadingPayment value)? loadingPayment,
+    TResult Function(SuccessPayment value)? uccessPayment,
+    TResult Function(Erorrpayment value)? erorrpayment,
     required TResult orElse(),
   }) {
     if (successCoupon != null) {
@@ -1159,6 +1285,9 @@ class _$ErorrCouponImpl implements ErorrCoupon {
     required TResult Function() selectAdress,
     required TResult Function() selectType,
     required TResult Function() selectPayment,
+    required TResult Function() loadingPayment,
+    required TResult Function() uccessPayment,
+    required TResult Function(String erorr) erorrpayment,
   }) {
     return erorrCoupon(this.erorr);
   }
@@ -1176,6 +1305,9 @@ class _$ErorrCouponImpl implements ErorrCoupon {
     TResult? Function()? selectAdress,
     TResult? Function()? selectType,
     TResult? Function()? selectPayment,
+    TResult? Function()? loadingPayment,
+    TResult? Function()? uccessPayment,
+    TResult? Function(String erorr)? erorrpayment,
   }) {
     return erorrCoupon?.call(this.erorr);
   }
@@ -1193,6 +1325,9 @@ class _$ErorrCouponImpl implements ErorrCoupon {
     TResult Function()? selectAdress,
     TResult Function()? selectType,
     TResult Function()? selectPayment,
+    TResult Function()? loadingPayment,
+    TResult Function()? uccessPayment,
+    TResult Function(String erorr)? erorrpayment,
     required TResult orElse(),
   }) {
     if (erorrCoupon != null) {
@@ -1214,6 +1349,9 @@ class _$ErorrCouponImpl implements ErorrCoupon {
     required TResult Function(SelectAdress value) selectAdress,
     required TResult Function(SelectType value) selectType,
     required TResult Function(SelectPayment value) selectPayment,
+    required TResult Function(LoadingPayment value) loadingPayment,
+    required TResult Function(SuccessPayment value) uccessPayment,
+    required TResult Function(Erorrpayment value) erorrpayment,
   }) {
     return erorrCoupon(this);
   }
@@ -1231,6 +1369,9 @@ class _$ErorrCouponImpl implements ErorrCoupon {
     TResult? Function(SelectAdress value)? selectAdress,
     TResult? Function(SelectType value)? selectType,
     TResult? Function(SelectPayment value)? selectPayment,
+    TResult? Function(LoadingPayment value)? loadingPayment,
+    TResult? Function(SuccessPayment value)? uccessPayment,
+    TResult? Function(Erorrpayment value)? erorrpayment,
   }) {
     return erorrCoupon?.call(this);
   }
@@ -1248,6 +1389,9 @@ class _$ErorrCouponImpl implements ErorrCoupon {
     TResult Function(SelectAdress value)? selectAdress,
     TResult Function(SelectType value)? selectType,
     TResult Function(SelectPayment value)? selectPayment,
+    TResult Function(LoadingPayment value)? loadingPayment,
+    TResult Function(SuccessPayment value)? uccessPayment,
+    TResult Function(Erorrpayment value)? erorrpayment,
     required TResult orElse(),
   }) {
     if (erorrCoupon != null) {
@@ -1314,6 +1458,9 @@ class _$SelectAdressImpl implements SelectAdress {
     required TResult Function() selectAdress,
     required TResult Function() selectType,
     required TResult Function() selectPayment,
+    required TResult Function() loadingPayment,
+    required TResult Function() uccessPayment,
+    required TResult Function(String erorr) erorrpayment,
   }) {
     return selectAdress();
   }
@@ -1331,6 +1478,9 @@ class _$SelectAdressImpl implements SelectAdress {
     TResult? Function()? selectAdress,
     TResult? Function()? selectType,
     TResult? Function()? selectPayment,
+    TResult? Function()? loadingPayment,
+    TResult? Function()? uccessPayment,
+    TResult? Function(String erorr)? erorrpayment,
   }) {
     return selectAdress?.call();
   }
@@ -1348,6 +1498,9 @@ class _$SelectAdressImpl implements SelectAdress {
     TResult Function()? selectAdress,
     TResult Function()? selectType,
     TResult Function()? selectPayment,
+    TResult Function()? loadingPayment,
+    TResult Function()? uccessPayment,
+    TResult Function(String erorr)? erorrpayment,
     required TResult orElse(),
   }) {
     if (selectAdress != null) {
@@ -1369,6 +1522,9 @@ class _$SelectAdressImpl implements SelectAdress {
     required TResult Function(SelectAdress value) selectAdress,
     required TResult Function(SelectType value) selectType,
     required TResult Function(SelectPayment value) selectPayment,
+    required TResult Function(LoadingPayment value) loadingPayment,
+    required TResult Function(SuccessPayment value) uccessPayment,
+    required TResult Function(Erorrpayment value) erorrpayment,
   }) {
     return selectAdress(this);
   }
@@ -1386,6 +1542,9 @@ class _$SelectAdressImpl implements SelectAdress {
     TResult? Function(SelectAdress value)? selectAdress,
     TResult? Function(SelectType value)? selectType,
     TResult? Function(SelectPayment value)? selectPayment,
+    TResult? Function(LoadingPayment value)? loadingPayment,
+    TResult? Function(SuccessPayment value)? uccessPayment,
+    TResult? Function(Erorrpayment value)? erorrpayment,
   }) {
     return selectAdress?.call(this);
   }
@@ -1403,6 +1562,9 @@ class _$SelectAdressImpl implements SelectAdress {
     TResult Function(SelectAdress value)? selectAdress,
     TResult Function(SelectType value)? selectType,
     TResult Function(SelectPayment value)? selectPayment,
+    TResult Function(LoadingPayment value)? loadingPayment,
+    TResult Function(SuccessPayment value)? uccessPayment,
+    TResult Function(Erorrpayment value)? erorrpayment,
     required TResult orElse(),
   }) {
     if (selectAdress != null) {
@@ -1464,6 +1626,9 @@ class _$SelectTypeImpl implements SelectType {
     required TResult Function() selectAdress,
     required TResult Function() selectType,
     required TResult Function() selectPayment,
+    required TResult Function() loadingPayment,
+    required TResult Function() uccessPayment,
+    required TResult Function(String erorr) erorrpayment,
   }) {
     return selectType();
   }
@@ -1481,6 +1646,9 @@ class _$SelectTypeImpl implements SelectType {
     TResult? Function()? selectAdress,
     TResult? Function()? selectType,
     TResult? Function()? selectPayment,
+    TResult? Function()? loadingPayment,
+    TResult? Function()? uccessPayment,
+    TResult? Function(String erorr)? erorrpayment,
   }) {
     return selectType?.call();
   }
@@ -1498,6 +1666,9 @@ class _$SelectTypeImpl implements SelectType {
     TResult Function()? selectAdress,
     TResult Function()? selectType,
     TResult Function()? selectPayment,
+    TResult Function()? loadingPayment,
+    TResult Function()? uccessPayment,
+    TResult Function(String erorr)? erorrpayment,
     required TResult orElse(),
   }) {
     if (selectType != null) {
@@ -1519,6 +1690,9 @@ class _$SelectTypeImpl implements SelectType {
     required TResult Function(SelectAdress value) selectAdress,
     required TResult Function(SelectType value) selectType,
     required TResult Function(SelectPayment value) selectPayment,
+    required TResult Function(LoadingPayment value) loadingPayment,
+    required TResult Function(SuccessPayment value) uccessPayment,
+    required TResult Function(Erorrpayment value) erorrpayment,
   }) {
     return selectType(this);
   }
@@ -1536,6 +1710,9 @@ class _$SelectTypeImpl implements SelectType {
     TResult? Function(SelectAdress value)? selectAdress,
     TResult? Function(SelectType value)? selectType,
     TResult? Function(SelectPayment value)? selectPayment,
+    TResult? Function(LoadingPayment value)? loadingPayment,
+    TResult? Function(SuccessPayment value)? uccessPayment,
+    TResult? Function(Erorrpayment value)? erorrpayment,
   }) {
     return selectType?.call(this);
   }
@@ -1553,6 +1730,9 @@ class _$SelectTypeImpl implements SelectType {
     TResult Function(SelectAdress value)? selectAdress,
     TResult Function(SelectType value)? selectType,
     TResult Function(SelectPayment value)? selectPayment,
+    TResult Function(LoadingPayment value)? loadingPayment,
+    TResult Function(SuccessPayment value)? uccessPayment,
+    TResult Function(Erorrpayment value)? erorrpayment,
     required TResult orElse(),
   }) {
     if (selectType != null) {
@@ -1614,6 +1794,9 @@ class _$SelectPaymentImpl implements SelectPayment {
     required TResult Function() selectAdress,
     required TResult Function() selectType,
     required TResult Function() selectPayment,
+    required TResult Function() loadingPayment,
+    required TResult Function() uccessPayment,
+    required TResult Function(String erorr) erorrpayment,
   }) {
     return selectPayment();
   }
@@ -1631,6 +1814,9 @@ class _$SelectPaymentImpl implements SelectPayment {
     TResult? Function()? selectAdress,
     TResult? Function()? selectType,
     TResult? Function()? selectPayment,
+    TResult? Function()? loadingPayment,
+    TResult? Function()? uccessPayment,
+    TResult? Function(String erorr)? erorrpayment,
   }) {
     return selectPayment?.call();
   }
@@ -1648,6 +1834,9 @@ class _$SelectPaymentImpl implements SelectPayment {
     TResult Function()? selectAdress,
     TResult Function()? selectType,
     TResult Function()? selectPayment,
+    TResult Function()? loadingPayment,
+    TResult Function()? uccessPayment,
+    TResult Function(String erorr)? erorrpayment,
     required TResult orElse(),
   }) {
     if (selectPayment != null) {
@@ -1669,6 +1858,9 @@ class _$SelectPaymentImpl implements SelectPayment {
     required TResult Function(SelectAdress value) selectAdress,
     required TResult Function(SelectType value) selectType,
     required TResult Function(SelectPayment value) selectPayment,
+    required TResult Function(LoadingPayment value) loadingPayment,
+    required TResult Function(SuccessPayment value) uccessPayment,
+    required TResult Function(Erorrpayment value) erorrpayment,
   }) {
     return selectPayment(this);
   }
@@ -1686,6 +1878,9 @@ class _$SelectPaymentImpl implements SelectPayment {
     TResult? Function(SelectAdress value)? selectAdress,
     TResult? Function(SelectType value)? selectType,
     TResult? Function(SelectPayment value)? selectPayment,
+    TResult? Function(LoadingPayment value)? loadingPayment,
+    TResult? Function(SuccessPayment value)? uccessPayment,
+    TResult? Function(Erorrpayment value)? erorrpayment,
   }) {
     return selectPayment?.call(this);
   }
@@ -1703,6 +1898,9 @@ class _$SelectPaymentImpl implements SelectPayment {
     TResult Function(SelectAdress value)? selectAdress,
     TResult Function(SelectType value)? selectType,
     TResult Function(SelectPayment value)? selectPayment,
+    TResult Function(LoadingPayment value)? loadingPayment,
+    TResult Function(SuccessPayment value)? uccessPayment,
+    TResult Function(Erorrpayment value)? erorrpayment,
     required TResult orElse(),
   }) {
     if (selectPayment != null) {
@@ -1714,4 +1912,540 @@ class _$SelectPaymentImpl implements SelectPayment {
 
 abstract class SelectPayment implements CheckCartState {
   const factory SelectPayment() = _$SelectPaymentImpl;
+}
+
+/// @nodoc
+abstract class _$$LoadingPaymentImplCopyWith<$Res> {
+  factory _$$LoadingPaymentImplCopyWith(_$LoadingPaymentImpl value,
+          $Res Function(_$LoadingPaymentImpl) then) =
+      __$$LoadingPaymentImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$LoadingPaymentImplCopyWithImpl<$Res>
+    extends _$CheckCartStateCopyWithImpl<$Res, _$LoadingPaymentImpl>
+    implements _$$LoadingPaymentImplCopyWith<$Res> {
+  __$$LoadingPaymentImplCopyWithImpl(
+      _$LoadingPaymentImpl _value, $Res Function(_$LoadingPaymentImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$LoadingPaymentImpl implements LoadingPayment {
+  const _$LoadingPaymentImpl();
+
+  @override
+  String toString() {
+    return 'CheckCartState.loadingPayment()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$LoadingPaymentImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(String erorr) erorr,
+    required TResult Function() loadingCoupon,
+    required TResult Function(CouponResponse coupon) successCoupon,
+    required TResult Function(String erorr) erorrCoupon,
+    required TResult Function() selectAdress,
+    required TResult Function() selectType,
+    required TResult Function() selectPayment,
+    required TResult Function() loadingPayment,
+    required TResult Function() uccessPayment,
+    required TResult Function(String erorr) erorrpayment,
+  }) {
+    return loadingPayment();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function(String erorr)? erorr,
+    TResult? Function()? loadingCoupon,
+    TResult? Function(CouponResponse coupon)? successCoupon,
+    TResult? Function(String erorr)? erorrCoupon,
+    TResult? Function()? selectAdress,
+    TResult? Function()? selectType,
+    TResult? Function()? selectPayment,
+    TResult? Function()? loadingPayment,
+    TResult? Function()? uccessPayment,
+    TResult? Function(String erorr)? erorrpayment,
+  }) {
+    return loadingPayment?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(String erorr)? erorr,
+    TResult Function()? loadingCoupon,
+    TResult Function(CouponResponse coupon)? successCoupon,
+    TResult Function(String erorr)? erorrCoupon,
+    TResult Function()? selectAdress,
+    TResult Function()? selectType,
+    TResult Function()? selectPayment,
+    TResult Function()? loadingPayment,
+    TResult Function()? uccessPayment,
+    TResult Function(String erorr)? erorrpayment,
+    required TResult orElse(),
+  }) {
+    if (loadingPayment != null) {
+      return loadingPayment();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Erorr value) erorr,
+    required TResult Function(LoadingCoupon value) loadingCoupon,
+    required TResult Function(SuccessCoupon value) successCoupon,
+    required TResult Function(ErorrCoupon value) erorrCoupon,
+    required TResult Function(SelectAdress value) selectAdress,
+    required TResult Function(SelectType value) selectType,
+    required TResult Function(SelectPayment value) selectPayment,
+    required TResult Function(LoadingPayment value) loadingPayment,
+    required TResult Function(SuccessPayment value) uccessPayment,
+    required TResult Function(Erorrpayment value) erorrpayment,
+  }) {
+    return loadingPayment(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Erorr value)? erorr,
+    TResult? Function(LoadingCoupon value)? loadingCoupon,
+    TResult? Function(SuccessCoupon value)? successCoupon,
+    TResult? Function(ErorrCoupon value)? erorrCoupon,
+    TResult? Function(SelectAdress value)? selectAdress,
+    TResult? Function(SelectType value)? selectType,
+    TResult? Function(SelectPayment value)? selectPayment,
+    TResult? Function(LoadingPayment value)? loadingPayment,
+    TResult? Function(SuccessPayment value)? uccessPayment,
+    TResult? Function(Erorrpayment value)? erorrpayment,
+  }) {
+    return loadingPayment?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Erorr value)? erorr,
+    TResult Function(LoadingCoupon value)? loadingCoupon,
+    TResult Function(SuccessCoupon value)? successCoupon,
+    TResult Function(ErorrCoupon value)? erorrCoupon,
+    TResult Function(SelectAdress value)? selectAdress,
+    TResult Function(SelectType value)? selectType,
+    TResult Function(SelectPayment value)? selectPayment,
+    TResult Function(LoadingPayment value)? loadingPayment,
+    TResult Function(SuccessPayment value)? uccessPayment,
+    TResult Function(Erorrpayment value)? erorrpayment,
+    required TResult orElse(),
+  }) {
+    if (loadingPayment != null) {
+      return loadingPayment(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class LoadingPayment implements CheckCartState {
+  const factory LoadingPayment() = _$LoadingPaymentImpl;
+}
+
+/// @nodoc
+abstract class _$$SuccessPaymentImplCopyWith<$Res> {
+  factory _$$SuccessPaymentImplCopyWith(_$SuccessPaymentImpl value,
+          $Res Function(_$SuccessPaymentImpl) then) =
+      __$$SuccessPaymentImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SuccessPaymentImplCopyWithImpl<$Res>
+    extends _$CheckCartStateCopyWithImpl<$Res, _$SuccessPaymentImpl>
+    implements _$$SuccessPaymentImplCopyWith<$Res> {
+  __$$SuccessPaymentImplCopyWithImpl(
+      _$SuccessPaymentImpl _value, $Res Function(_$SuccessPaymentImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SuccessPaymentImpl implements SuccessPayment {
+  const _$SuccessPaymentImpl();
+
+  @override
+  String toString() {
+    return 'CheckCartState.uccessPayment()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$SuccessPaymentImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(String erorr) erorr,
+    required TResult Function() loadingCoupon,
+    required TResult Function(CouponResponse coupon) successCoupon,
+    required TResult Function(String erorr) erorrCoupon,
+    required TResult Function() selectAdress,
+    required TResult Function() selectType,
+    required TResult Function() selectPayment,
+    required TResult Function() loadingPayment,
+    required TResult Function() uccessPayment,
+    required TResult Function(String erorr) erorrpayment,
+  }) {
+    return uccessPayment();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function(String erorr)? erorr,
+    TResult? Function()? loadingCoupon,
+    TResult? Function(CouponResponse coupon)? successCoupon,
+    TResult? Function(String erorr)? erorrCoupon,
+    TResult? Function()? selectAdress,
+    TResult? Function()? selectType,
+    TResult? Function()? selectPayment,
+    TResult? Function()? loadingPayment,
+    TResult? Function()? uccessPayment,
+    TResult? Function(String erorr)? erorrpayment,
+  }) {
+    return uccessPayment?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(String erorr)? erorr,
+    TResult Function()? loadingCoupon,
+    TResult Function(CouponResponse coupon)? successCoupon,
+    TResult Function(String erorr)? erorrCoupon,
+    TResult Function()? selectAdress,
+    TResult Function()? selectType,
+    TResult Function()? selectPayment,
+    TResult Function()? loadingPayment,
+    TResult Function()? uccessPayment,
+    TResult Function(String erorr)? erorrpayment,
+    required TResult orElse(),
+  }) {
+    if (uccessPayment != null) {
+      return uccessPayment();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Erorr value) erorr,
+    required TResult Function(LoadingCoupon value) loadingCoupon,
+    required TResult Function(SuccessCoupon value) successCoupon,
+    required TResult Function(ErorrCoupon value) erorrCoupon,
+    required TResult Function(SelectAdress value) selectAdress,
+    required TResult Function(SelectType value) selectType,
+    required TResult Function(SelectPayment value) selectPayment,
+    required TResult Function(LoadingPayment value) loadingPayment,
+    required TResult Function(SuccessPayment value) uccessPayment,
+    required TResult Function(Erorrpayment value) erorrpayment,
+  }) {
+    return uccessPayment(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Erorr value)? erorr,
+    TResult? Function(LoadingCoupon value)? loadingCoupon,
+    TResult? Function(SuccessCoupon value)? successCoupon,
+    TResult? Function(ErorrCoupon value)? erorrCoupon,
+    TResult? Function(SelectAdress value)? selectAdress,
+    TResult? Function(SelectType value)? selectType,
+    TResult? Function(SelectPayment value)? selectPayment,
+    TResult? Function(LoadingPayment value)? loadingPayment,
+    TResult? Function(SuccessPayment value)? uccessPayment,
+    TResult? Function(Erorrpayment value)? erorrpayment,
+  }) {
+    return uccessPayment?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Erorr value)? erorr,
+    TResult Function(LoadingCoupon value)? loadingCoupon,
+    TResult Function(SuccessCoupon value)? successCoupon,
+    TResult Function(ErorrCoupon value)? erorrCoupon,
+    TResult Function(SelectAdress value)? selectAdress,
+    TResult Function(SelectType value)? selectType,
+    TResult Function(SelectPayment value)? selectPayment,
+    TResult Function(LoadingPayment value)? loadingPayment,
+    TResult Function(SuccessPayment value)? uccessPayment,
+    TResult Function(Erorrpayment value)? erorrpayment,
+    required TResult orElse(),
+  }) {
+    if (uccessPayment != null) {
+      return uccessPayment(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SuccessPayment implements CheckCartState {
+  const factory SuccessPayment() = _$SuccessPaymentImpl;
+}
+
+/// @nodoc
+abstract class _$$ErorrpaymentImplCopyWith<$Res> {
+  factory _$$ErorrpaymentImplCopyWith(
+          _$ErorrpaymentImpl value, $Res Function(_$ErorrpaymentImpl) then) =
+      __$$ErorrpaymentImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String erorr});
+}
+
+/// @nodoc
+class __$$ErorrpaymentImplCopyWithImpl<$Res>
+    extends _$CheckCartStateCopyWithImpl<$Res, _$ErorrpaymentImpl>
+    implements _$$ErorrpaymentImplCopyWith<$Res> {
+  __$$ErorrpaymentImplCopyWithImpl(
+      _$ErorrpaymentImpl _value, $Res Function(_$ErorrpaymentImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? erorr = null,
+  }) {
+    return _then(_$ErorrpaymentImpl(
+      erorr: null == erorr
+          ? _value.erorr
+          : erorr // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ErorrpaymentImpl implements Erorrpayment {
+  const _$ErorrpaymentImpl({required this.erorr});
+
+  @override
+  final String erorr;
+
+  @override
+  String toString() {
+    return 'CheckCartState.erorrpayment(erorr: $erorr)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ErorrpaymentImpl &&
+            (identical(other.erorr, erorr) || other.erorr == erorr));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, erorr);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ErorrpaymentImplCopyWith<_$ErorrpaymentImpl> get copyWith =>
+      __$$ErorrpaymentImplCopyWithImpl<_$ErorrpaymentImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(String erorr) erorr,
+    required TResult Function() loadingCoupon,
+    required TResult Function(CouponResponse coupon) successCoupon,
+    required TResult Function(String erorr) erorrCoupon,
+    required TResult Function() selectAdress,
+    required TResult Function() selectType,
+    required TResult Function() selectPayment,
+    required TResult Function() loadingPayment,
+    required TResult Function() uccessPayment,
+    required TResult Function(String erorr) erorrpayment,
+  }) {
+    return erorrpayment(this.erorr);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function(String erorr)? erorr,
+    TResult? Function()? loadingCoupon,
+    TResult? Function(CouponResponse coupon)? successCoupon,
+    TResult? Function(String erorr)? erorrCoupon,
+    TResult? Function()? selectAdress,
+    TResult? Function()? selectType,
+    TResult? Function()? selectPayment,
+    TResult? Function()? loadingPayment,
+    TResult? Function()? uccessPayment,
+    TResult? Function(String erorr)? erorrpayment,
+  }) {
+    return erorrpayment?.call(this.erorr);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(String erorr)? erorr,
+    TResult Function()? loadingCoupon,
+    TResult Function(CouponResponse coupon)? successCoupon,
+    TResult Function(String erorr)? erorrCoupon,
+    TResult Function()? selectAdress,
+    TResult Function()? selectType,
+    TResult Function()? selectPayment,
+    TResult Function()? loadingPayment,
+    TResult Function()? uccessPayment,
+    TResult Function(String erorr)? erorrpayment,
+    required TResult orElse(),
+  }) {
+    if (erorrpayment != null) {
+      return erorrpayment(this.erorr);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Erorr value) erorr,
+    required TResult Function(LoadingCoupon value) loadingCoupon,
+    required TResult Function(SuccessCoupon value) successCoupon,
+    required TResult Function(ErorrCoupon value) erorrCoupon,
+    required TResult Function(SelectAdress value) selectAdress,
+    required TResult Function(SelectType value) selectType,
+    required TResult Function(SelectPayment value) selectPayment,
+    required TResult Function(LoadingPayment value) loadingPayment,
+    required TResult Function(SuccessPayment value) uccessPayment,
+    required TResult Function(Erorrpayment value) erorrpayment,
+  }) {
+    return erorrpayment(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Erorr value)? erorr,
+    TResult? Function(LoadingCoupon value)? loadingCoupon,
+    TResult? Function(SuccessCoupon value)? successCoupon,
+    TResult? Function(ErorrCoupon value)? erorrCoupon,
+    TResult? Function(SelectAdress value)? selectAdress,
+    TResult? Function(SelectType value)? selectType,
+    TResult? Function(SelectPayment value)? selectPayment,
+    TResult? Function(LoadingPayment value)? loadingPayment,
+    TResult? Function(SuccessPayment value)? uccessPayment,
+    TResult? Function(Erorrpayment value)? erorrpayment,
+  }) {
+    return erorrpayment?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Erorr value)? erorr,
+    TResult Function(LoadingCoupon value)? loadingCoupon,
+    TResult Function(SuccessCoupon value)? successCoupon,
+    TResult Function(ErorrCoupon value)? erorrCoupon,
+    TResult Function(SelectAdress value)? selectAdress,
+    TResult Function(SelectType value)? selectType,
+    TResult Function(SelectPayment value)? selectPayment,
+    TResult Function(LoadingPayment value)? loadingPayment,
+    TResult Function(SuccessPayment value)? uccessPayment,
+    TResult Function(Erorrpayment value)? erorrpayment,
+    required TResult orElse(),
+  }) {
+    if (erorrpayment != null) {
+      return erorrpayment(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Erorrpayment implements CheckCartState {
+  const factory Erorrpayment({required final String erorr}) =
+      _$ErorrpaymentImpl;
+
+  String get erorr;
+  @JsonKey(ignore: true)
+  _$$ErorrpaymentImplCopyWith<_$ErorrpaymentImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

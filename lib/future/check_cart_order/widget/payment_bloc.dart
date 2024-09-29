@@ -4,34 +4,41 @@ import 'package:ecommerce_user/future/check_cart_order/logic/cubit/check_cart_cu
 import 'package:ecommerce_user/future/check_cart_order/logic/cubit/check_cart_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_stripe/flutter_stripe.dart';
 
 import '../../../../core/theming/styles.dart';
 
-class CheckCartBlocListener extends StatelessWidget {
-  const CheckCartBlocListener({super.key});
+class PaymentBlocListener extends StatelessWidget {
+  const PaymentBlocListener({super.key});
 
   @override
   Widget build(BuildContext context) {
     return BlocListener<CheckCartCubit, CheckCartState>(
       listenWhen: (previous, current) =>
-          current is Loading || current is Success || current is Erorr,
+          current is LoadingPayment ||
+          current is SuccessPayment ||
+          current is Erorrpayment,
       listener: (context, state) {
         state.whenOrNull(
-          loading: () {
-            // showDialog(
-            //   context: context,
-            //   builder: (context) => const Center(
-            //     child: CircularProgressIndicator(
-            //       color: AppColor.mainBlue,
-            //     ),
-            //   ),
-            // );
-          },
-          success: () {
+          loadingPayment: () {
             // context.pop();
-            context.pushpushReplacement('/HomeScrean');
+            showDialog(
+              context: context,
+              builder: (context) => const Center(
+                child: CircularProgressIndicator(
+                  color: AppColor.mainBlue,
+                ),
+              ),
+            );
           },
-          erorr: (error) {
+          uccessPayment: () async {
+            context.pop();
+
+            // context.pushpushReplacement('/HomeScrean');
+          },
+          erorrpayment: (error) {
+            context.pop();
+
             setupErrorState(context, error);
           },
         );

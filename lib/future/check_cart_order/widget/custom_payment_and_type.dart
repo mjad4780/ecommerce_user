@@ -30,7 +30,7 @@ class CustomTypeAndPyment extends StatelessWidget {
                   context.read<CheckCartCubit>().selectPyment(val!);
                 },
                 displayItem: (val) => val),
-            const Text('Enter Payment'),
+            const Text('Enter Type'),
 
             // // Payment Options
 

@@ -21,4 +21,9 @@ class CheckCartState with _$CheckCartState {
   const factory CheckCartState.selectAdress() = SelectAdress;
   const factory CheckCartState.selectType() = SelectType;
   const factory CheckCartState.selectPayment() = SelectPayment;
+
+  const factory CheckCartState.loadingPayment() = LoadingPayment;
+  const factory CheckCartState.uccessPayment() = SuccessPayment;
+  const factory CheckCartState.erorrpayment({required String erorr}) =
+      Erorrpayment;
 }

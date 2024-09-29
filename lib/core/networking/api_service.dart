@@ -1,11 +1,14 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
+import 'package:ecommerce_user/future/check_cart_order/data/model/payment/payment.dart';
 import 'package:ecommerce_user/model/pending_response/pending_response.dart';
 
 import 'package:retrofit/retrofit.dart';
 
 import '../../future/cart/data/response_cart/response_cart.dart';
+import '../../future/check_cart_order/data/model/elphon/elphon.dart';
+import '../../future/check_cart_order/data/model/payment_body_tojson.dart';
 import '../../future/home/data/models/response_notification/response_notification.dart';
 import '../../future/orders/data/response_orders/response_orders.dart';
 import '../../model/adress_response/adress_response.dart';
@@ -122,4 +125,12 @@ abstract class ApiService {
   ///:GetNotification
   @POST(ApiConstants.getnotification)
   Future<ResponseNotification> getNotification(@Body() dynamic body);
+
+  ///:add payment
+  @POST(ApiConstants.payment)
+  Future<Payment> greatePayment(@Body() PaymentBodyTojson body);
+
+  ///:add ephemeral
+  @POST(ApiConstants.ephemeral)
+  Future<Elphon> ephemeral(@Body() Map<String, dynamic> body);
 }

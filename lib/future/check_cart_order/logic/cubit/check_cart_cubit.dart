@@ -2,12 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/function/AlertDialog.dart';
+import '../../data/model/payment_body_tojson.dart';
 import '../../data/repo.dart';
+import '../../data/repo_payment.dart';
 import 'check_cart_state.dart';
 
 class CheckCartCubit extends Cubit<CheckCartState> {
-  CheckCartCubit(this._checkCartOrder) : super(const CheckCartState.initial());
-
+  CheckCartCubit(this._checkCartOrder, this.repoPayment)
+      : super(const CheckCartState.initial());
+  final RepoPayment repoPayment;
   final CheckCartOrder _checkCartOrder;
   TextEditingController couponName = TextEditingController();
 
@@ -85,8 +88,16 @@ class CheckCartCubit extends Cubit<CheckCartState> {
           CheckCartState.erorrCoupon(erorr: error.apiErrorModel.messege ?? ''));
     });
   }
-}
 
-//  if (selectColor == null && selectSize == null) {
-//       return showMyDialog(context, "erorr", "please choose Size and Color");
-//     }
+  //:greatePayment
+  greatePayment(PaymentBodyTojson data) async {
+    emit(const CheckCartState.loadingPayment());
+    final response = await repoPayment.greatePayment(data);
+    response.when(success: (couponData) {
+      emit(const CheckCartState.uccessPayment());
+    }, failure: (error) {
+      emit(CheckCartState.erorrpayment(
+          erorr: error.apiErrorModel.messege ?? ''));
+    });
+  }
+}
