@@ -1,5 +1,7 @@
 import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
+import 'package:ecommerce_user/future/home/logic/cubit/home_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../../item_categories/widget/app_bar_action_button.dart';
 import 'custom_search_bar.dart';
@@ -24,9 +26,9 @@ class CustomAppBar extends StatelessWidget {
             // ),
             Expanded(
               child: CustomSearchBar(
-                controller: TextEditingController(),
+                controller: context.read<HomeCubit>().search,
                 onChanged: (val) {
-                  //TODO: should complete call filterProducts
+                  context.read<HomeCubit>().emitSearch();
                 },
               ),
             ),

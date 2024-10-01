@@ -5,6 +5,7 @@ import 'package:geolocator/geolocator.dart';
 import '../../../Book/ui/book.dart';
 import '../../../favorite/favorite.dart';
 import '../../../setting/setting.dart';
+import '../../data/models/response_home/response_home.dart';
 import '../../data/repo.dart';
 import '../../home.dart';
 import 'home_state.dart';
@@ -13,6 +14,7 @@ class HomeCubit extends Cubit<HomeState> {
   HomeCubit(this.homeRepo) : super(const HomeState.initial());
   TextEditingController search = TextEditingController();
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
+  ResponseHome? responseHome;
 
   final HomeRepo homeRepo;
 //:bottomNavigationBar
@@ -35,13 +37,15 @@ class HomeCubit extends Cubit<HomeState> {
     emit(const HomeState.loadingHome());
     final response = await homeRepo.homeData();
     response.when(success: (responsehome) {
+      responseHome = responsehome;
+
       emit(HomeState.successHome(responseHome: responsehome));
     }, failure: (error) {
       emit(HomeState.errorHome(erorr: error.apiErrorModel.messege ?? ''));
     });
   }
 
-//:home
+//:getNotification
   getNotification() async {
     emit(const HomeState.loadinggetNotification());
     final response = await homeRepo.getNotification();

@@ -1,7 +1,4 @@
-import '../../../../core/constants.dart';
-import '../../../../core/function/save_books.dart';
 import '../../entities/book_entity.dart';
-import '../local/home_local_data_source.dart';
 import '../models/book_model/book_model.dart';
 
 import '../../../../core/networking/api_error_handler.dart';
@@ -17,14 +14,8 @@ class GetBookRepo {
 
   Future<ApiResult<List<BookEntity>>> getBook(int pageNumber) async {
     try {
-      // List<BookEntity> books;
-      // books = homeLocalDataSource.fetchFeaturedBooks();
-      // if (books.isNotEmpty) {
-      //   return ApiResult.success(books);
-      // }
       final response = await _apiService.getBook(pageNumber);
-      // books = getBooksList(response);
-      // saveBooksData(books, kFeaturedBox);
+
       return ApiResult.success(getBooksList(response));
     } catch (e) {
       return ApiResult.failure(ErrorHandler.handle(e));
