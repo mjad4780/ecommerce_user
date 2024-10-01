@@ -17,8 +17,8 @@ List<BottomNavigation> bottomNavigation = [
     title: 'Favorite',
   ),
   BottomNavigation(
-    iconData: Icons.local_offer_sharp,
-    title: 'offers',
+    iconData: Icons.book,
+    title: 'Book',
   ),
   BottomNavigation(
     iconData: Icons.settings,

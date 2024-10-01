@@ -5,13 +5,16 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
+import 'package:hive_flutter/adapters.dart';
 
 // import 'package:onesignal_flutter/onesignal_flutter.dart';
 import 'core/class/cache_helper.dart';
 import 'core/class/observer.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'core/constants.dart';
 import 'core/get_it/get_it.dart';
 import 'app/e-ecommerce.dart';
+import 'future/Book/entities/book_entity.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,7 +24,9 @@ void main() async {
   );
   Bloc.observer = MyBlocObserver();
   Stripe.publishableKey = ApiConstants.publishableKey;
-
+  // await Hive.initFlutter();
+  // Hive.registerAdapter(BookEntityAdapter());
+  // await Hive.openBox<BookEntity>(kFeaturedBox);
   // OneSignal.Debug.setLogLevel(OSLogLevel.verbose);
   // OneSignal.initialize("9c37a804-6bb8-4055-96f4-a56308ae8b63");
   // OneSignal.Notifications.requestPermission(true);
@@ -39,4 +44,4 @@ void main() async {
   runApp(const Ecommerce());
 }
 
-//4242424242424242
+// 

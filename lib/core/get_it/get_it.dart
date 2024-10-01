@@ -1,4 +1,6 @@
 import 'package:dio/dio.dart';
+import 'package:ecommerce_user/future/book/data/repo/repo.dart';
+import 'package:ecommerce_user/future/book/logic/cubit/get_book_cubit.dart';
 import 'package:ecommerce_user/future/archive/logic/cubit/archive_cubit.dart';
 import 'package:ecommerce_user/future/auth/sign_up/logic/cubit/sign_up_cubit.dart';
 import 'package:ecommerce_user/future/auth/verfyCode/data/data_verfycode.dart';
@@ -97,4 +99,7 @@ void setupServise() {
   // Offers
   getIt.registerLazySingleton<OffersRepo>(() => OffersRepo(getIt()));
   getIt.registerFactory<OffersCubit>(() => OffersCubit(getIt()));
+  // Book
+  getIt.registerLazySingleton<GetBookRepo>(() => GetBookRepo(getIt()));
+  getIt.registerFactory<GetBooKCubit>(() => GetBooKCubit(getIt()));
 }

@@ -130,6 +130,12 @@ abstract class ApiService {
   @POST(ApiConstants.payment)
   Future<Payment> greatePayment(@Body() PaymentBodyTojson body);
 
+  ///:getBook
+
+  @GET(
+      'https://www.googleapis.com/books/v1/volumes?Filtering=free-ebooks&q=programming&startIndex={pageNumber}')
+  Future<Map<String, dynamic>> getBook(@Path('pageNumber') int pageNumber);
+
   ///:add ephemeral
   @POST(ApiConstants.ephemeral)
   Future<Elphon> ephemeral(@Body() Map<String, dynamic> body);

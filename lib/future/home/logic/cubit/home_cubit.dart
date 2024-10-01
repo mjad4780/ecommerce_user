@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
 
+import '../../../Book/ui/book.dart';
 import '../../../favorite/favorite.dart';
-import '../../../offers/offers.dart';
 import '../../../setting/setting.dart';
 import '../../data/repo.dart';
 import '../../home.dart';
@@ -20,7 +20,7 @@ class HomeCubit extends Cubit<HomeState> {
   List<Widget> buttompage = [
     const Home(),
     const Favorite(),
-    const Offers(),
+    const Book(),
     const Setting(),
   ];
 

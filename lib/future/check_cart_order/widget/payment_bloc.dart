@@ -4,7 +4,6 @@ import 'package:ecommerce_user/future/check_cart_order/logic/cubit/check_cart_cu
 import 'package:ecommerce_user/future/check_cart_order/logic/cubit/check_cart_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_stripe/flutter_stripe.dart';
 
 import '../../../../core/theming/styles.dart';
 

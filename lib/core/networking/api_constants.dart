@@ -53,6 +53,9 @@ class ApiConstants {
   static const String archive = '$baseUrl/orders/archive.php';
   static const String delete = '$baseUrl/orders/delete.php';
   static const String rating = '$baseUrl/orders/Rating.php';
+  ///////////////////pagination Book///////////////
+  static String getBook =
+      'https://www.googleapis.com/books/v1/volumes?Filtering=free-ebooks&q=programming&startIndex={pageNumber * 10}';
 
   ////////////////admin////////////
   static const String getnotification = '$baseUrl/get_notification.php';

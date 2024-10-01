@@ -1,5 +1,4 @@
 import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
-import 'package:ecommerce_user/core/theming/colors.dart';
 import 'package:ecommerce_user/future/check_cart_order/logic/cubit/check_cart_cubit.dart';
 import 'package:ecommerce_user/future/check_cart_order/logic/cubit/check_cart_state.dart';
 import 'package:flutter/material.dart';
