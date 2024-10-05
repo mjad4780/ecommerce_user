@@ -70,6 +70,11 @@ class ApiConstants {
   static const String publishableKey =
       "pk_test_51Q2cV4G8beASrMkO1U5uzkGEgA0qP5aWutnhGS67wMltOctabQGc6CKWipGmNQJB0mNEia6YpH4UfIPBoA9aHFwe00b9F6QOS8";
   static const String customerId = 'cus_QvoptUGfAxxcMt';
+  static const int appId = 522511485;
+
+  static const String signId =
+      'be9810d404ebfab5e0d4cc172effff720a09b7cb5275281aa405721b3ef42e24';
+  static const String chatId = 'chatId';
 }
 
 class ApiErrors {

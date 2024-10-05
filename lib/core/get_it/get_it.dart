@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:ecommerce_user/app/app_cubit/app_cubit.dart';
 import 'package:ecommerce_user/future/book/data/repo/repo.dart';
 import 'package:ecommerce_user/future/book/logic/cubit/get_book_cubit.dart';
 import 'package:ecommerce_user/future/archive/logic/cubit/archive_cubit.dart';
@@ -102,4 +103,6 @@ void setupServise() {
   // Book
   getIt.registerLazySingleton<GetBookRepo>(() => GetBookRepo(getIt()));
   getIt.registerFactory<GetBooKCubit>(() => GetBooKCubit(getIt()));
+  //App
+  getIt.registerFactory<AppCubit>(() => AppCubit());
 }

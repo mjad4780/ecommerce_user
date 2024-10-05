@@ -4,7 +4,7 @@ import '../../../core/theming/colors.dart';
 
 class AppBarActionButton extends StatelessWidget {
   final IconData icon;
-  final VoidCallback onPressed;
+  final void Function()? onPressed;
 
   const AppBarActionButton({
     super.key,

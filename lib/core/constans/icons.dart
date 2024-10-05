@@ -1,6 +1,8 @@
 class Assets {
   Assets._();
+  static const String under = "assets/images/page_under_build.jpg";
 
+  static const String noNetwork = "assets/images/no_network.jpg";
   static const String onbording1 = "assets/lottie/onbording1.json";
 
   static const String onbording2 = "assets/lottie/onbording2.json";

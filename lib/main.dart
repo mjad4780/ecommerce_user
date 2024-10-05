@@ -5,12 +5,14 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
+
+import 'package:zego_zimkit/zego_zimkit.dart';
 // import 'package:onesignal_flutter/onesignal_flutter.dart';
 import 'core/class/cache_helper.dart';
 import 'core/class/observer.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'core/get_it/get_it.dart';
-import 'app/e-ecommerce.dart';
+import 'app/ecommerce.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,6 +20,11 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  // await ZIMKit().init(
+  //   appID: ApiConstants.appId, // your appid
+  //   appSign: ApiConstants.signId, // your appSign
+  // );
+
   Bloc.observer = MyBlocObserver();
   Stripe.publishableKey = ApiConstants.publishableKey;
 
@@ -31,7 +38,17 @@ void main() async {
   await getIt<CacheHelper>().init();
   await ScreenUtil.ensureScreenSize();
 
-  runApp(const Ecommerce());
+  runApp(const name());
 }
 
+class name extends StatelessWidget {
+  const name({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: Scaffold(),
+    );
+  }
+}
 // 

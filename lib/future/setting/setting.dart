@@ -1,6 +1,8 @@
 import 'package:ecommerce_user/future/orders/ui/my_order_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../app/app_cubit/app_cubit.dart';
 import '../../core/animation/open_container_wrapper.dart';
 import '../../core/class/cache_helper.dart';
 
@@ -8,6 +10,8 @@ import '../../core/get_it/get_it.dart';
 import '../../core/theming/colors.dart';
 import '../../core/widgets/navigation_tile.dart';
 import '../adress/adress.dart';
+import '../item_categories/widget/app_bar_action_button.dart';
+import 'widget/dark_mode_change.dart';
 
 class Setting extends StatelessWidget {
   const Setting({super.key});
@@ -25,6 +29,16 @@ class Setting extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 color: AppColor.darkOrange),
           ),
+        ),
+        const DarkModeChange(),
+        AppBarActionButton(
+          icon: context.read<AppCubit>().isDark
+              ? Icons.dark_mode
+              : Icons.light_mode,
+          onPressed: () {
+            context.read<AppCubit>().changeAppThemeMode(
+                sharedMode: context.read<AppCubit>().isDark ? false : true);
+          },
         ),
         const SizedBox(
           height: 200,
