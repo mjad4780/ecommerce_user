@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
 
-import 'package:zego_zimkit/zego_zimkit.dart';
 // import 'package:onesignal_flutter/onesignal_flutter.dart';
 import 'core/class/cache_helper.dart';
 import 'core/class/observer.dart';
@@ -20,10 +19,6 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  // await ZIMKit().init(
-  //   appID: ApiConstants.appId, // your appid
-  //   appSign: ApiConstants.signId, // your appSign
-  // );
 
   Bloc.observer = MyBlocObserver();
   Stripe.publishableKey = ApiConstants.publishableKey;
@@ -38,7 +33,7 @@ void main() async {
   await getIt<CacheHelper>().init();
   await ScreenUtil.ensureScreenSize();
 
-  runApp(const name());
+  runApp(const Ecommerce());
 }
 
 class name extends StatelessWidget {

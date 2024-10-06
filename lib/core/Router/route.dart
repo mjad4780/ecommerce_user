@@ -10,8 +10,8 @@ import '../../future/auth/forgetpassword/repassword.dart';
 import '../../future/auth/sign_up/SignUp.dart';
 import '../../future/auth/verfyCode/verfy_code.dart';
 import '../../future/cart/cart.dart';
-import '../../future/chat/ui/home.dart';
-import '../../future/chat/ui/login_page.dart';
+
+import '../../future/chat/ui/pages/home_page.dart';
 import '../../future/home/widget/view_notification.dart';
 import '../../future/onbording/onbordingScreen.dart';
 import '../../future/orders/widget/track_orders.dart';
@@ -73,13 +73,9 @@ final GoRouter router = GoRouter(routes: [
       pageBuilder: (context, state) =>
           myCustomtransitionPage(const TrackOrders(), state)),
   GoRoute(
-      path: "/HomePageChat",
+      path: "/HomePage",
       pageBuilder: (context, state) =>
-          myCustomtransitionPage(const HomePageChat(), state)),
-  GoRoute(
-      path: "/LoginChat",
-      pageBuilder: (context, state) =>
-          myCustomtransitionPage(const LoginChat(), state)),
+          myCustomtransitionPage(const HomePage(), state)),
 ]);
 
 checkNavigate() {

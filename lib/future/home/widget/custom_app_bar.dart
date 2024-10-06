@@ -1,7 +1,5 @@
-import 'package:ecommerce_user/core/class/cache_helper.dart';
 import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
-import 'package:ecommerce_user/core/get_it/get_it.dart';
-import 'package:ecommerce_user/core/networking/api_constants.dart';
+
 import 'package:ecommerce_user/future/home/logic/cubit/home_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -38,9 +36,7 @@ class CustomAppBar extends StatelessWidget {
             AppBarActionButton(
               icon: Icons.chat,
               onPressed: () {
-                getIt<CacheHelper>().getData(key: ApiConstants.chatId) == null
-                    ? context.push('/LoginChat')
-                    : context.push('/HomePageChat');
+                context.push('/HomePage');
               },
             ),
 
