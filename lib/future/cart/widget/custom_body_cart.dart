@@ -1,3 +1,4 @@
+import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
 import 'package:ecommerce_user/core/theming/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -17,17 +18,27 @@ class CustomBodyCart extends StatelessWidget {
         ? const EmptyCart()
         : Column(
             children: [
-              verticalSpace(38),
-              const Center(
-                child: Text(
-                  "My Cart",
-                  style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: AppColor.darkOrange),
-                ),
+              verticalSpace(25),
+              Row(
+                children: [
+                  IconButton(
+                      onPressed: () => context.pop(),
+                      icon: const Icon(Icons.arrow_back)),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width / 3,
+                  ),
+                  const Center(
+                    child: Text(
+                      "My Cart",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: AppColor.darkOrange),
+                    ),
+                  ),
+                ],
               ),
-              //? total price section
+              // ? total price section
               CartListSection(cartProducts: responseCart),
 
               Container(

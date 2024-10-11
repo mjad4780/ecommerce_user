@@ -28,12 +28,19 @@ class ProductGridView extends StatelessWidget {
           crossAxisSpacing: 10,
         ),
         itemBuilder: (context, index) {
-          return OpenContainerWrapper(
-              nextScresan: ProductDetailScreen(items[index]),
-              child: ProductGridTile(
-                product: items[index],
-                index: index,
-              ));
+          return
+              // OpenContainerWrapper(
+              //     nextScresan: ProductDetailScreen(items[index]),
+              //     child:
+
+              GestureDetector(
+            onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => ProductDetailScreen(items[index]))),
+            child: ProductGridTile(
+              product: items[index],
+              index: index,
+            ),
+          );
         },
       ),
     );

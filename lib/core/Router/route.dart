@@ -11,8 +11,8 @@ import '../../future/auth/sign_up/SignUp.dart';
 import '../../future/auth/verfyCode/verfy_code.dart';
 import '../../future/cart/cart.dart';
 
+import '../../future/chat/data/services/chats/chat_services.dart';
 import '../../future/chat/ui/pages/home_page.dart';
-import '../../future/home/widget/view_notification.dart';
 import '../../future/onbording/onbordingScreen.dart';
 import '../../future/orders/widget/track_orders.dart';
 import '../class/cache_helper.dart';
@@ -21,6 +21,11 @@ import '../get_it/get_it.dart';
 
 final GoRouter router = GoRouter(routes: [
   GoRoute(path: "/", builder: (context, state) => checkNavigate()),
+  GoRoute(
+      path: "/OnbordingScreen",
+      pageBuilder: (context, state) {
+        return myCustomtransitionPage(const OnbordingScreen(), state);
+      }),
   GoRoute(
       path: "/Login",
       pageBuilder: (context, state) {
@@ -64,10 +69,10 @@ final GoRouter router = GoRouter(routes: [
       path: "/MyAddressPage",
       pageBuilder: (context, state) =>
           myCustomtransitionPage(const MyAddressPage(), state)),
-  GoRoute(
-      path: "/ViewNotification",
-      pageBuilder: (context, state) =>
-          myCustomtransitionPage(const ViewNotification(), state)),
+  // GoRoute(
+  //     path: "/ViewNotification",
+  //     pageBuilder: (context, state) =>
+  //         myCustomtransitionPage(const ViewNotification(), state)),
   GoRoute(
       path: "/TrackOrders",
       pageBuilder: (context, state) =>
@@ -75,7 +80,7 @@ final GoRouter router = GoRouter(routes: [
   GoRoute(
       path: "/HomePage",
       pageBuilder: (context, state) =>
-          myCustomtransitionPage(const HomePage(), state)),
+          myCustomtransitionPage(const HomePageChat(), state)),
 ]);
 
 checkNavigate() {

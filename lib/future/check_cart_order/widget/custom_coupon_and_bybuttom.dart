@@ -2,6 +2,7 @@ import 'package:ecommerce_user/core/networking/api_constants.dart';
 import 'package:ecommerce_user/future/check_cart_order/widget/payment_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:onesignal_flutter/onesignal_flutter.dart';
 
 import '../../../widget/compleate_order_button.dart';
 import '../../../widget/custom_text_field.dart';
@@ -56,25 +57,7 @@ class CustomCouponAndPyBottom extends StatelessWidget {
                 labelText:
                     'Complete Order  \$${context.read<CheckCartCubit>().grandTotalPrice ?? offers}',
                 onPressed: () async {
-                  // ///TODO:  final id = OneSignal.User.pushSubscription.id;
-
-                  var amount =
-                      context.read<CheckCartCubit>().grandTotalPrice ?? offers;
-                  PaymentBodyTojson body = PaymentBodyTojson(
-                      amount: amount,
-                      currency: 'USD',
-                      customer: ApiConstants.customerId);
-                  if (context.read<CheckCartCubit>().selectedPaymentOption ==
-                      1) {
-                    await context.read<CheckCartCubit>().greatePayment(body);
-                    await context
-                        .read<CheckCartCubit>()
-                        .emitCheckCart(context, amount, 'id');
-                  } else {
-                    context
-                        .read<CheckCartCubit>()
-                        .emitCheckCart(context, amount, 'id');
-                  }
+                  newMethod(context);
                 }),
             const CheckCartBlocListener(),
             // if (context.read<CheckCartCubit>().selectedPaymentOption == 1)
@@ -83,5 +66,18 @@ class CustomCouponAndPyBottom extends StatelessWidget {
         );
       },
     );
+  }
+
+  void newMethod(BuildContext context) {
+    final id = OneSignal.User.pushSubscription.id;
+
+    var amount = context.read<CheckCartCubit>().grandTotalPrice ?? offers;
+    if (context.read<CheckCartCubit>().selectedPaymentOption == 1) {
+      context.read<CheckCartCubit>().greatePayment(PaymentBodyTojson(
+          amount: amount, currency: 'USD', customer: ApiConstants.customerId));
+      context.read<CheckCartCubit>().emitCheckCart(context, amount, id!);
+    } else {
+      context.read<CheckCartCubit>().emitCheckCart(context, amount, id!);
+    }
   }
 }

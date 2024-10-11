@@ -9,12 +9,14 @@ class NoNetWorkScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-      body: Container(
-        constraints: const BoxConstraints.expand(),
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(Assets.noNetwork),
-            fit: BoxFit.fill,
+      body: SafeArea(
+        child: Container(
+          constraints: const BoxConstraints.expand(),
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(Assets.noNetwork),
+              fit: BoxFit.fill,
+            ),
           ),
         ),
       ),

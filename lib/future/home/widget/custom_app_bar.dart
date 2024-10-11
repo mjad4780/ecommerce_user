@@ -2,10 +2,13 @@ import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
 
 import 'package:ecommerce_user/future/home/logic/cubit/home_cubit.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../core/animation/open_container_wrapper.dart';
+import '../../../core/theming/colors.dart';
 import '../../item_categories/widget/app_bar_action_button.dart';
 import 'custom_search_bar.dart';
+import 'view_notification.dart';
 
 class CustomAppBar extends StatelessWidget {
   @override
@@ -19,12 +22,6 @@ class CustomAppBar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            // AppBarActionButton(
-            //   icon: Icons.menu,
-            //   onPressed: () {
-            //     Scaffold.of(context).openDrawer();
-            //   },
-            // ),
             Expanded(
               child: CustomSearchBar(
                 controller: context.read<HomeCubit>().search,
@@ -39,13 +36,21 @@ class CustomAppBar extends StatelessWidget {
                 context.push('/HomePage');
               },
             ),
-
-            AppBarActionButton(
-              icon: Icons.notifications,
-              onPressed: () {
-                context.push('/ViewNotification');
-              },
-            ),
+            OpenContainerWrapper(
+                nextScresan: ViewNotification(
+                  contexter: context,
+                ),
+                child: Container(
+                  margin: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(11),
+                    color: AppColor.lightGrey,
+                  ),
+                  child: const Icon(
+                    Icons.notifications,
+                    color: Colors.black,
+                  ),
+                ))
           ],
         ),
       ),

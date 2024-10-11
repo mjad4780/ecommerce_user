@@ -4,27 +4,12 @@ import 'widget/custom_app_bar.dart';
 
 import 'widget/view_home_bloc.dart';
 
-class Home extends StatefulWidget {
+class Home extends StatelessWidget {
   const Home({super.key});
 
   @override
-  State<Home> createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
-  @override
-  // TODO: implement initState
-  // super.initState();
-  // context.read<HomeCubit>().emitHome();
-
-  @override
   Widget build(BuildContext context) {
-    return
-        // Scaffold(
-        // extendBodyBehindAppBar: true,
-        // appBar: const CustomAppBar(),
-        // body:
-        SafeArea(
+    return SafeArea(
       child: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(8),
@@ -45,7 +30,6 @@ class _HomeState extends State<Home> {
           ),
         ),
       ),
-      // ),
     );
   }
 }

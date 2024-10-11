@@ -36,14 +36,5 @@ void main() async {
   runApp(const Ecommerce());
 }
 
-class name extends StatelessWidget {
-  const name({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(),
-    );
-  }
-}
 // 

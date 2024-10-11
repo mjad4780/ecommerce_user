@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
 
+import '../../../../json/home.dart';
 import '../../../Book/ui/book.dart';
 import '../../../favorite/favorite.dart';
 import '../../../setting/setting.dart';
@@ -34,6 +35,7 @@ class HomeCubit extends Cubit<HomeState> {
 
 //:home
   emitHome() async {
+    responseHome = ResponseHome.fromJson(responseLoading);
     emit(const HomeState.loadingHome());
     final response = await homeRepo.homeData();
     response.when(success: (responsehome) {

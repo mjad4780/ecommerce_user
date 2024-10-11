@@ -1,16 +1,15 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:ecommerce_user/core/class/cache_helper.dart';
-import 'package:ecommerce_user/core/get_it/get_it.dart';
 
-import '../../model/message.dart';
+import '../../message.dart';
 
-class ChatServiceCustomer {
+class ChatService {
   //instance
   final FirebaseFirestore firestore;
+  //  = FirebaseFirestore.instance;
   // String sendemail = 'mjad3777@gmail.com';
-  String email = getIt<CacheHelper>().getData(key: 'email');
+  String email = 'mjad3777@gmail.com';
 
-  ChatServiceCustomer({required this.firestore});
+  ChatService(this.firestore);
 
   //get user
   // addUser() async {
@@ -64,9 +63,9 @@ class ChatServiceCustomer {
         .collection("chat_room")
         .doc('mjad000@gmail.com')
         .collection("messages")
-        .where('senderemail', whereIn: [sendemail, email])
-        .where('email', whereIn: [email, sendemail])
-        .orderBy("timestamp", descending: false)
+        .where('senderemail', whereIn: [sendemail, email]).where('email',
+            whereIn: [email, sendemail])
+        // .orderBy("timestamp", descending: false)
         .snapshots();
   }
 }

@@ -5,7 +5,7 @@ import 'package:ecommerce_user/future/auth/forgetpassword/logic/cubit/forget_pas
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/function/AlertDialog.dart';
+import '../../../../core/function/alert_dialog.dart';
 import '../../../../core/theming/styles.dart';
 
 class CheckCodeBlocListener extends StatelessWidget {

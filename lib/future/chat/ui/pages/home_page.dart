@@ -1,21 +1,26 @@
+import 'package:ecommerce_user/core/get_it/get_it.dart';
 import 'package:flutter/material.dart';
 
 import '../../data/services/chats/chat_services.dart';
-import '../components/user_tile.dart';
-import 'chat_page.dart';
+import '../components/build_user_list_item_chat.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class HomePageChat extends StatefulWidget {
+  const HomePageChat({
+    super.key,
+  });
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomePageChat> createState() => _HomePageChatState();
 }
 
-class _HomePageState extends State<HomePage> {
-  //chat_services & auth instances
-  final ChatService _chatService = ChatService();
+class _HomePageChatState extends State<HomePageChat> {
+  ChatServiceCustomer? chatService;
+  @override
+  void initState() {
+    super.initState();
+    chatService = getIt<ChatServiceCustomer>();
+  }
 
-  // final AuthService _authService = AuthService();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,50 +33,21 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      body: _buildUserList(),
-      // drawer: const MyDrawer(),
+      body: StreamBuilder(
+          stream: chatService!.getUserStream(),
+          builder: (context, snapshot) {
+            if (snapshot.hasError) {
+              return const Text('Error');
+            }
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const Text('Loading...');
+            }
+            return ListView(
+                children: snapshot.data!
+                    .map<Widget>((userData) => BuildUserListItemHomeChat(
+                        userData: userData, chatService: chatService!))
+                    .toList());
+          }),
     );
-  }
-
-  //build user list except the logged in user
-  Widget _buildUserList() {
-    return StreamBuilder(
-        stream: _chatService.getUserStream(),
-        builder: (context, snapshot) {
-          //error
-          if (snapshot.hasError) {
-            return const Text('Error');
-          }
-          //loading
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Text('Loading...');
-          }
-          //user
-          return ListView(
-              children: snapshot.data!
-                  .map<Widget>(
-                      (userData) => _buildUserListItem(userData, context))
-                  .toList());
-        });
-  }
-
-  //build induvidual item
-  Widget _buildUserListItem(
-      Map<String, dynamic> userData, BuildContext context) {
-    if (userData["email"] != _chatService.email) {
-      return UserTile(
-          onTap: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => ChatPage(
-                    sendemil: userData["email"],
-                  ),
-                ));
-          },
-          text: userData["email"]);
-    } else {
-      return const SizedBox.shrink();
-    }
   }
 }

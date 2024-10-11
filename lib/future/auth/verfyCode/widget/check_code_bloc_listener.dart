@@ -5,7 +5,7 @@ import 'package:ecommerce_user/future/auth/verfyCode/logic/cubit/verfy_code_stat
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/function/AlertDialog.dart';
+import '../../../../core/function/alert_dialog.dart';
 import '../../../../core/theming/styles.dart';
 
 class CheckCodeBlocListener extends StatelessWidget {

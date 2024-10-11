@@ -27,6 +27,12 @@ extension Navigation on BuildContext {
     return GoRouter.of(this).pushReplacement(path);
   }
 
+  Future<dynamic> pushReplacementNamed(
+    String path,
+  ) {
+    return GoRouter.of(this).pushReplacementNamed(path);
+  }
+
   Future<dynamic> push(String path, {Object? arguments}) {
     return GoRouter.of(this).push(path, extra: arguments);
   }

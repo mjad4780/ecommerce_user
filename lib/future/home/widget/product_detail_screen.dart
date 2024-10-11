@@ -1,4 +1,3 @@
-import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
 import 'package:ecommerce_user/core/get_it/get_it.dart';
 import 'package:ecommerce_user/future/cart/logic/cubit/cart_cubit.dart';
 import 'package:ecommerce_user/future/cart/logic/cubit/cart_state.dart';
@@ -20,8 +19,6 @@ class ProductDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height;
-    double width = MediaQuery.of(context).size.width;
     return SafeArea(
       child: BlocProvider(
         create: (context) => getIt<CartCubit>(),
@@ -42,8 +39,8 @@ class ProductDetailScreen extends StatelessWidget {
                 children: [
                   //? product image section
                   Container(
-                    height: height * 0.42,
-                    width: width,
+                    height: MediaQuery.of(context).size.height * 0.42,
+                    width: MediaQuery.of(context).size.width,
                     decoration: const BoxDecoration(
                       color: Color(0xFFE5E6E8),
                       borderRadius: BorderRadius.only(
@@ -171,16 +168,6 @@ class ProductDetailScreen extends StatelessWidget {
                                           .read<CartCubit>()
                                           .emitAddCart(
                                               product.itemId!, context);
-                                      if (context
-                                                  .read<CartCubit>()
-                                                  .selectColor !=
-                                              null &&
-                                          context
-                                                  .read<CartCubit>()
-                                                  .selectSize !=
-                                              null) {
-                                        context.push('/Cart');
-                                      }
                                     }
                                   : null,
                               child: const Text("Add to cart",

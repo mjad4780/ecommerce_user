@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/function/AlertDialog.dart';
+import '../../../../core/function/alert_dialog.dart';
 import '../../data/model/payment_body_tojson.dart';
 import '../../data/repo.dart';
 import '../../data/repo_payment.dart';
@@ -28,7 +28,7 @@ class CheckCartCubit extends Cubit<CheckCartState> {
     if (selectedPaymentOption == null &&
         selectadressId == null &&
         orderType == null) {
-      return showmydialog(context, "erorr",
+      return testAlert(context, "erorr",
           "please choose Adress  and Orders Type and order Payment ");
     }
 
