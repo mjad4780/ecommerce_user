@@ -20,12 +20,12 @@ class HomeScrean extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => getIt<FavoriteCubit>(),
-        ),
-        BlocProvider(
           create: (BuildContext context) => getIt<HomeCubit>()
             ..emitHome()
             ..determinePosition(),
+        ),
+        BlocProvider(
+          create: (context) => getIt<FavoriteCubit>(),
         ),
       ],
       child: BlocConsumer<HomeCubit, HomeState>(

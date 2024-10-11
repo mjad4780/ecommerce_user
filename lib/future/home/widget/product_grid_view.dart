@@ -1,7 +1,6 @@
 import 'package:ecommerce_user/future/home/data/models/response_home/datum.dart';
 import 'package:flutter/material.dart';
 
-import '../../../core/animation/open_container_wrapper.dart';
 import 'product_detail_screen.dart';
 import 'product_grid_tile.dart';
 
@@ -27,20 +26,14 @@ class ProductGridView extends StatelessWidget {
           mainAxisSpacing: 10,
           crossAxisSpacing: 10,
         ),
-        itemBuilder: (context, index) {
-          return
-              // OpenContainerWrapper(
-              //     nextScresan: ProductDetailScreen(items[index]),
-              //     child:
-
-              GestureDetector(
-            onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => ProductDetailScreen(items[index]))),
-            child: ProductGridTile(
-              product: items[index],
-              index: index,
-            ),
-          );
+        itemBuilder: (__, index) {
+          return GestureDetector(
+              onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => ProductDetailScreen(items[index]))),
+              child: ProductGridTile(
+                product: items[index],
+                index: index,
+              ));
         },
       ),
     );

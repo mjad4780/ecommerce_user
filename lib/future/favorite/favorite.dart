@@ -15,7 +15,6 @@ class Favorite extends StatefulWidget {
 
 class _FavoriteState extends State<Favorite> {
   @override
-  @override
   void initState() {
     super.initState();
     context.read<FavoriteCubit>().emitgetFavorite();

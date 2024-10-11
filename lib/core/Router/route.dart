@@ -11,7 +11,6 @@ import '../../future/auth/sign_up/SignUp.dart';
 import '../../future/auth/verfyCode/verfy_code.dart';
 import '../../future/cart/cart.dart';
 
-import '../../future/chat/data/services/chats/chat_services.dart';
 import '../../future/chat/ui/pages/home_page.dart';
 import '../../future/onbording/onbordingScreen.dart';
 import '../../future/orders/widget/track_orders.dart';

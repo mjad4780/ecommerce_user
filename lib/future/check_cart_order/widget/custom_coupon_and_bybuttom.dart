@@ -60,7 +60,6 @@ class CustomCouponAndPyBottom extends StatelessWidget {
                   newMethod(context);
                 }),
             const CheckCartBlocListener(),
-            // if (context.read<CheckCartCubit>().selectedPaymentOption == 1)
             const PaymentBlocListener()
           ],
         );
@@ -75,9 +74,9 @@ class CustomCouponAndPyBottom extends StatelessWidget {
     if (context.read<CheckCartCubit>().selectedPaymentOption == 1) {
       context.read<CheckCartCubit>().greatePayment(PaymentBodyTojson(
           amount: amount, currency: 'USD', customer: ApiConstants.customerId));
-      context.read<CheckCartCubit>().emitCheckCart(context, amount, id!);
+      context.read<CheckCartCubit>().emitCheckCart(context, amount, id ?? 'id');
     } else {
-      context.read<CheckCartCubit>().emitCheckCart(context, amount, id!);
+      context.read<CheckCartCubit>().emitCheckCart(context, amount, id ?? 'id');
     }
   }
 }

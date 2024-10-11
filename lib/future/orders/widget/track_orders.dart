@@ -12,6 +12,18 @@ class TrackOrders extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        title: const Center(
+          child: Text(
+            "My Detalias  ",
+            style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: AppColor.darkOrange),
+          ),
+        ),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: CustomScrollView(shrinkWrap: true, slivers: [
