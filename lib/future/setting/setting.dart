@@ -1,6 +1,6 @@
+import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
 import 'package:ecommerce_user/future/orders/ui/my_order_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 import '../../core/animation/open_container_wrapper.dart';
 import '../../core/class/cache_helper.dart';
@@ -76,7 +76,7 @@ class Setting extends StatelessWidget {
             ),
             onPressed: () async {
               getIt<CacheHelper>().clearData();
-              context.pushReplacementNamed('/OnbordingScreen');
+              context.pushpushReplacement('/OnbordingScreen');
             },
             child: const Text('Logout', style: TextStyle(fontSize: 18)),
           ),

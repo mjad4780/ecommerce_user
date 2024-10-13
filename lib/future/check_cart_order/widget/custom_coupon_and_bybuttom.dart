@@ -1,3 +1,4 @@
+import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
 import 'package:ecommerce_user/core/networking/api_constants.dart';
 import 'package:ecommerce_user/future/check_cart_order/widget/payment_bloc.dart';
 import 'package:flutter/material.dart';
@@ -59,22 +60,25 @@ class CustomCouponAndPyBottom extends StatelessWidget {
                 onPressed: () async {
                   newMethod(context);
                 }),
+            const PaymentBlocListener(),
             const CheckCartBlocListener(),
-            const PaymentBlocListener()
           ],
         );
       },
     );
   }
 
-  void newMethod(BuildContext context) {
+  void newMethod(BuildContext context) async {
     final id = OneSignal.User.pushSubscription.id;
 
     var amount = context.read<CheckCartCubit>().grandTotalPrice ?? offers;
     if (context.read<CheckCartCubit>().selectedPaymentOption == 1) {
-      context.read<CheckCartCubit>().greatePayment(PaymentBodyTojson(
+      await context.read<CheckCartCubit>().greatePayment(PaymentBodyTojson(
           amount: amount, currency: 'USD', customer: ApiConstants.customerId));
-      context.read<CheckCartCubit>().emitCheckCart(context, amount, id ?? 'id');
+      await context
+          .read<CheckCartCubit>()
+          .emitCheckCart(context, amount, id ?? 'id');
+      context.pop();
     } else {
       context.read<CheckCartCubit>().emitCheckCart(context, amount, id ?? 'id');
     }

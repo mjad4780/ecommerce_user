@@ -9,12 +9,12 @@ class DataNotification extends StatelessWidget {
     return SizedBox(
       height: double.infinity * 0.60,
       child: ListView.builder(
-        itemCount: response.data?.length,
+        itemCount: response.data?.length ?? 0,
         itemBuilder: (context, index) => Padding(
           padding: const EdgeInsets.all(8.0),
           child: ListTile(
             title: Text(response.data?[index].notificationTitle ?? ''),
-            subtitle: Text(response.data?[index].notificationTitle ?? ''),
+            subtitle: Text(response.data?[index].notificationBody ?? ''),
             trailing: IconButton(
               icon: const Icon(Icons.notification_important),
               onPressed: () {},

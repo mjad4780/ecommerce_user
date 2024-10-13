@@ -18,7 +18,7 @@ class CostemBottomNavigation extends StatelessWidget {
     return MaterialButton(
       onPressed: onPressed,
       child: Column(
-        mainAxisSize: MainAxisSize.min,
+        // mainAxisSize: MainAxisSize.min,
         children: [
           Icon(
             iconData,

@@ -45,7 +45,7 @@ class SelectAdressCart extends StatelessWidget {
                             displayItem: (val) => val.adressName ?? '');
                       },
                     )
-                  : Row(
+                  : Wrap(
                       children: [
                         const Text(
                           'your have not Adress please add adress',

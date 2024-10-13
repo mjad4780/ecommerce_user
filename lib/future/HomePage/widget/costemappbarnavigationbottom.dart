@@ -12,9 +12,10 @@ class CustemAppbarNavigationBottom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
+      padding: const EdgeInsets.all(3.5),
       height: 70,
       shape: const CircularNotchedRectangle(),
-      notchMargin: 11,
+      notchMargin: 5,
       surfaceTintColor: Colors.red,
       child: Row(
         children: [

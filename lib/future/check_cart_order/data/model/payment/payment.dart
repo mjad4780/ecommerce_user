@@ -1,7 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
 import 'automatic_payment_methods.dart';
-import 'metadata.dart';
 import 'payment_method_options.dart';
 
 part 'payment.g.dart';
@@ -41,7 +40,6 @@ class Payment {
   @JsonKey(name: 'latest_charge')
   dynamic latestCharge;
   bool? livemode;
-  Metadata? metadata;
   @JsonKey(name: 'next_action')
   dynamic nextAction;
   @JsonKey(name: 'on_behalf_of')
@@ -94,7 +92,6 @@ class Payment {
     this.lastPaymentError,
     this.latestCharge,
     this.livemode,
-    this.metadata,
     this.nextAction,
     this.onBehalfOf,
     this.paymentMethod,

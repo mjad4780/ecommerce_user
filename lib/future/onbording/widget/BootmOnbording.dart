@@ -21,15 +21,13 @@ class BootmOnbording extends StatelessWidget {
                 onPressed: onPressed,
                 style: ElevatedButton.styleFrom(
                     shape: const StadiumBorder(), elevation: 0),
-                child: Row(
+                child: const Row(
                   children: [
                     Text(
                       'Next',
-                      style: TextStyle(
-                        fontSize: MediaQuery.sizeOf(context).width * 0.05,
-                      ),
+                      style: TextStyle(),
                     ),
-                    const Icon(Icons.keyboard_arrow_right)
+                    Icon(Icons.keyboard_arrow_right)
                   ],
                 )),
           ),

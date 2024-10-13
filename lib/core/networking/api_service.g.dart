@@ -860,23 +860,22 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<Map<String, dynamic>>(_setStreamType(Options(
+    final _result = await _dio.fetch(_setStreamType(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              'https://www.googleapis.com/books/v1/volumes?Filtering=free-ebooks&q=programming&startIndex=${pageNumber * 10}',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
+        .compose(
+          _dio.options,
+          'https://www.googleapis.com/books/v1/volumes?Filtering=free-ebooks&q=programming&startIndex=${pageNumber * 10}',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        ))));
     var value = _result.data!;
     return value;
   }

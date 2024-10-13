@@ -53,7 +53,7 @@ class _ChatPageState extends State<ChatPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          widget.sendemil,
+          "Admin",
           style: TextStyle(
             color: Theme.of(context).colorScheme.primary,
           ),

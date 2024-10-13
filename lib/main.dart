@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
 
-// import 'package:onesignal_flutter/onesignal_flutter.dart';
+import 'package:onesignal_flutter/onesignal_flutter.dart';
 import 'core/class/cache_helper.dart';
 import 'core/class/observer.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -23,9 +23,9 @@ void main() async {
   Bloc.observer = MyBlocObserver();
   Stripe.publishableKey = ApiConstants.publishableKey;
 
-  // OneSignal.Debug.setLogLevel(OSLogLevel.verbose);
-  // OneSignal.initialize("9c37a804-6bb8-4055-96f4-a56308ae8b63");
-  // OneSignal.Notifications.requestPermission(true);
+  OneSignal.Debug.setLogLevel(OSLogLevel.verbose);
+  OneSignal.initialize("9c37a804-6bb8-4055-96f4-a56308ae8b63");
+  OneSignal.Notifications.requestPermission(true);
 
   // ]);
 

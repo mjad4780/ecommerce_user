@@ -70,27 +70,27 @@ class ProductDetailScreen extends StatelessWidget {
                         Row(
                           children: [
                             Text(
-                              product.itemDiscount != null
-                                  ? "\$${product.itemDiscount}"
+                              product.itemDiscount != 0
+                                  ? "\$${product.itempriceDiscount}"
                                   : "\$${product.itemPrice}",
                               style: const TextStyle(
-                                  color: AppColor.primaryColor, fontSize: 30),
-                              // style: Theme.of(context).textTheme.displayLarge,
+                                  color: AppColor.primaryColor, fontSize: 25),
                             ),
                             const SizedBox(width: 6),
-                            Visibility(
-                              visible:
-                                  product.itemDiscount != product.itemPrice,
-                              child: Text(
-                                "\$${product.itemPrice}",
-                                style: const TextStyle(
-                                  fontSize: 30,
-                                  decoration: TextDecoration.lineThrough,
-                                  color: Colors.grey,
-                                  fontWeight: FontWeight.w500,
+                            if (product.itemDiscount != 0)
+                              Visibility(
+                                visible:
+                                    product.itemDiscount != product.itemPrice,
+                                child: Text(
+                                  "\$${product.itemPrice}",
+                                  style: const TextStyle(
+                                    fontSize: 25,
+                                    decoration: TextDecoration.lineThrough,
+                                    color: Colors.grey,
+                                    fontWeight: FontWeight.w500,
+                                  ),
                                 ),
                               ),
-                            ),
                             const Spacer(),
                             Text(
                               product.itemCount != 0
@@ -102,13 +102,7 @@ class ProductDetailScreen extends StatelessWidget {
                           ],
                         ),
                         const SizedBox(height: 30),
-                        // product.proVariantId!.isNotEmpty
-                        //     ? Text(
-                        //         'Available ${product.proVariantTypeId?.type}',
-                        //         style: const TextStyle(
-                        //             color: Colors.red, fontSize: 16),
-                        //       )
-                        //     : const SizedBox(),
+
                         BlocConsumer<CartCubit, CartState>(
                           buildWhen: (previous, current) =>
                               current is LoadingCoupon ||
