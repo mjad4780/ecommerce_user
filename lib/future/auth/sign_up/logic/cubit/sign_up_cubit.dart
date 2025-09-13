@@ -1,7 +1,11 @@
+import 'dart:developer';
+
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import '../../../../../core/class/cache_helper.dart';
+import '../../../../../core/get_it/get_it.dart';
 import '../../data/data_sigin_up.dart';
 
 part 'sign_up_state.dart';
@@ -27,6 +31,10 @@ class SignUpCubit extends Cubit<SignUpState> {
         username.text,
       );
       response.when(success: (responseStatus) {
+        getIt<CacheHelper>().saveData(key: 'email', value: emailSignUp.text);
+        getIt<CacheHelper>()
+            .saveData(key: 'password', value: passwordSignUp.text);
+        log(emailSignUp.text);
         emit(const SignUpState.success());
       }, failure: (error) {
         emit(SignUpState.error(error: error.apiErrorModel.messege ?? ''));

@@ -83,7 +83,7 @@ final GoRouter router = GoRouter(routes: [
 ]);
 
 checkNavigate() {
-  if (getIt<CacheHelper>().getData(key: 'email') != null) {
+  if (getIt<CacheHelper>().getData(key: 'id') != null) {
     return const HomeScrean();
   } else if (getIt<CacheHelper>().getData(key: 'onbourding') == true) {
     return const LoginScreen();

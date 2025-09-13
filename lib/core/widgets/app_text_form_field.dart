@@ -7,6 +7,7 @@ import '../theming/styles.dart';
 
 class AppTextFormField extends StatelessWidget {
   final EdgeInsetsGeometry? contentPadding;
+  final Iterable<String>? autofillHints;
   final InputBorder? focusedBorder;
   final InputBorder? enabledBorder;
   final TextStyle? inputTextStyle;
@@ -32,11 +33,13 @@ class AppTextFormField extends StatelessWidget {
     this.controller,
     required this.validator,
     this.keyboardType,
+    this.autofillHints,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      autofillHints: autofillHints,
       keyboardType: keyboardType,
       controller: controller,
       decoration: InputDecoration(

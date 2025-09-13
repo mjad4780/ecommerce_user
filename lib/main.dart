@@ -21,11 +21,11 @@ void main() async {
   );
 
   Bloc.observer = MyBlocObserver();
-  Stripe.publishableKey = ApiConstants.publishableKey;
+  // Stripe.publishableKey = ApiConstants.publishableKey;
 
-  OneSignal.Debug.setLogLevel(OSLogLevel.verbose);
-  OneSignal.initialize("9c37a804-6bb8-4055-96f4-a56308ae8b63");
-  OneSignal.Notifications.requestPermission(true);
+  // OneSignal.Debug.setLogLevel(OSLogLevel.verbose);
+  // OneSignal.initialize("9c37a804-6bb8-4055-96f4-a56308ae8b63");
+  // OneSignal.Notifications.requestPermission(true);
 
   // ]);
 

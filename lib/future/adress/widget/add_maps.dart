@@ -14,11 +14,12 @@ class FlutterMaps extends StatelessWidget {
     required this.contextt,
   });
   final BuildContext contextt;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: BlocProvider.value(
-          value: contextt.read<AdressCubit>(),
+          value: contextt.read<AdressCubit>()..getLating(),
           child: Builder(builder: (context) {
             return Stack(
               alignment: Alignment.center,

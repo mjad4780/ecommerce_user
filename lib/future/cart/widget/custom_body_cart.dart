@@ -19,7 +19,7 @@ class CustomBodyCart extends StatelessWidget {
         : SingleChildScrollView(
             child: Column(
               children: [
-                verticalSpace(25),
+                verticalSpace(30),
                 Row(
                   children: [
                     IconButton(

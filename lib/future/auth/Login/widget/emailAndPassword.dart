@@ -1,7 +1,9 @@
+import 'package:ecommerce_user/core/get_it/get_it.dart';
 import 'package:ecommerce_user/future/auth/Login/logic/cubit/login_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../../../../core/class/cache_helper.dart';
 import '../../../../core/helpers/app_regex.dart';
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/widgets/app_text_form_field.dart';
@@ -31,6 +33,9 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
     super.initState();
     passwordController = context.read<LoginCubit>().passwordController;
     emailController = context.read<LoginCubit>().emailController;
+    passwordController.text =
+        getIt<CacheHelper>().getData(key: 'password') ?? '';
+    emailController.text = getIt<CacheHelper>().getData(key: 'email') ?? '';
 
     setupPasswordControllerListener();
   }
@@ -55,6 +60,9 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
       child: Column(
         children: [
           AppTextFormField(
+            // autofillHints: const [
+            //   AutofillHints.email,
+            // ],
             hintText: 'Email',
             validator: (value) {
               if (value == null ||
@@ -67,6 +75,9 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
           ),
           verticalSpace(18),
           AppTextFormField(
+            // autofillHints: const [
+            //   AutofillHints.password,
+            // ],
             controller: passwordController,
             hintText: 'Password',
             isObscureText: isObscureText,

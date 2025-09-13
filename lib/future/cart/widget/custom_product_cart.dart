@@ -15,7 +15,7 @@ class CustomProductCart extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         width: double.infinity,
-        margin: const EdgeInsets.all(15),
+        margin: const EdgeInsets.all(7),
         padding: const EdgeInsets.all(15),
         decoration: BoxDecoration(
           color: Colors.grey[200]?.withOpacity(0.6),
@@ -51,11 +51,10 @@ class CustomProductCart extends StatelessWidget {
               children: [
                 Text(
                   cartItem.itemName ?? '',
-                  maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
                     fontWeight: FontWeight.w600,
-                    fontSize: 15,
+                    fontSize: 14,
                   ),
                 ),
                 const SizedBox(height: 5),
