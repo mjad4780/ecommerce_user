@@ -16,5 +16,5 @@ class ItemCategoriesState with _$ItemCategoriesState {
 
   const factory ItemCategoriesState.selectCategories({
     required Category categories,
-  }) = selectCategories;
+  }) = SelectCategories;
 }

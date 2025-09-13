@@ -14,7 +14,7 @@ class CheckEmailBlocListener extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocListener<ForgetPasswordCubit, ForgetPasswordState>(
       listenWhen: (previous, current) =>
-          current is loadingCheck ||
+          current is LoadingCheck ||
           current is SuccessCheck ||
           current is ErrorCheck,
       listener: (context, state) {

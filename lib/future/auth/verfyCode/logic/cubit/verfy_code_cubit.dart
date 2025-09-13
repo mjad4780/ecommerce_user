@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:ecommerce_user/core/networking/api_result.dart';
 
 import '../../data/data_verfycode.dart';
 import 'verfy_code_state.dart';
@@ -15,8 +16,7 @@ class VerfyCodeCubit extends Cubit<VerfyCodeState> {
     response.when(success: (responseStatus) {
       emit(const VerfyCodeState.successVerfyCode());
     }, failure: (error) {
-      emit(VerfyCodeState.erorrVerfycode(
-          erorr: error.apiErrorModel.messege ?? ''));
+      emit(VerfyCodeState.erorrVerfycode(erorr: error.messege ?? ''));
     });
   }
 
@@ -29,7 +29,7 @@ class VerfyCodeCubit extends Cubit<VerfyCodeState> {
     response.when(success: (responseStatus) {
       emit(const VerfyCodeState.successSend());
     }, failure: (error) {
-      emit(VerfyCodeState.erorrSend(erorr: error.apiErrorModel.messege ?? ''));
+      emit(VerfyCodeState.erorrSend(erorr: error.messege ?? ''));
     });
   }
 }

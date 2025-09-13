@@ -1,3 +1,4 @@
+import 'package:ecommerce_user/core/networking/api_result.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -38,7 +39,7 @@ class CheckCartCubit extends Cubit<CheckCartState> {
     response.when(success: (responsehome) {
       emit(const CheckCartState.success());
     }, failure: (error) {
-      emit(CheckCartState.erorr(erorr: error.apiErrorModel.messege ?? ''));
+      emit(CheckCartState.erorr(erorr: error.messege ?? ''));
     });
   }
 
@@ -84,8 +85,7 @@ class CheckCartCubit extends Cubit<CheckCartState> {
       couponId = couponData.data?.couponId ?? 0;
       emit(CheckCartState.successCoupon(couponData));
     }, failure: (error) {
-      emit(
-          CheckCartState.erorrCoupon(erorr: error.apiErrorModel.messege ?? ''));
+      emit(CheckCartState.erorrCoupon(erorr: error.messege ?? ''));
     });
   }
 
@@ -96,8 +96,7 @@ class CheckCartCubit extends Cubit<CheckCartState> {
     response.when(success: (couponData) {
       emit(const CheckCartState.uccessPayment());
     }, failure: (error) {
-      emit(CheckCartState.erorrpayment(
-          erorr: error.apiErrorModel.messege ?? ''));
+      emit(CheckCartState.erorrpayment(erorr: error.messege ?? ''));
     });
   }
 }

@@ -25,7 +25,7 @@ class CustomDataAdress extends StatelessWidget {
       itemBuilder: (context, index) => Padding(
         padding: const EdgeInsets.all(8.0),
         child: BlocConsumer<AdressCubit, AdressState>(
-          buildWhen: (previous, current) => current is pushEdit,
+          buildWhen: (previous, current) => current is PushEdit,
           listener: (context, state) {},
           builder: (context, state) {
             return Stack(

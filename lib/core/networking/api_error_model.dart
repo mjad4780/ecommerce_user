@@ -3,7 +3,7 @@ part 'api_error_model.g.dart';
 
 @JsonSerializable()
 class ApiErrorModel {
-  final int? status;
+  final String? status;
   final String? messege;
 
   ApiErrorModel({

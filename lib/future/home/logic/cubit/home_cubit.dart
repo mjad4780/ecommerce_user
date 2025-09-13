@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:ecommerce_user/core/networking/api_result.dart';
 
-import '../../../../json/home.dart';
 import '../../../Book/ui/book.dart';
 import '../../../favorite/favorite.dart';
 import '../../../setting/setting.dart';
@@ -35,7 +35,6 @@ class HomeCubit extends Cubit<HomeState> {
 
 //:home
   emitHome() async {
-    responseHome = ResponseHome.fromJson(responseLoading);
     emit(const HomeState.loadingHome());
     final response = await homeRepo.homeData();
     response.when(success: (responsehome) {
@@ -43,7 +42,7 @@ class HomeCubit extends Cubit<HomeState> {
 
       emit(HomeState.successHome(responseHome: responsehome));
     }, failure: (error) {
-      emit(HomeState.errorHome(erorr: error.apiErrorModel.messege ?? ''));
+      emit(HomeState.errorHome(erorr: error.messege ?? ''));
     });
   }
 
@@ -54,8 +53,7 @@ class HomeCubit extends Cubit<HomeState> {
     response.when(success: (responsehome) {
       emit(HomeState.successgetNotification(responseItems: responsehome));
     }, failure: (error) {
-      emit(HomeState.errorgetNotification(
-          erorr: error.apiErrorModel.messege ?? ''));
+      emit(HomeState.errorgetNotification(erorr: error.messege ?? ''));
     });
   }
 
@@ -66,7 +64,7 @@ class HomeCubit extends Cubit<HomeState> {
     response.when(success: (loginResponse) {
       emit(HomeState.successSearch(responseItems: loginResponse));
     }, failure: (error) {
-      emit(HomeState.errorSearch(erorr: error.apiErrorModel.messege ?? ''));
+      emit(HomeState.errorSearch(erorr: error.messege ?? ''));
     });
   }
 

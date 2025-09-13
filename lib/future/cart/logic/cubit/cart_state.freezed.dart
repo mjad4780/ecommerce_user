@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,94 +9,45 @@ part of 'cart_state.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$CartState {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingAdd,
-    required TResult Function() successAdd,
-    required TResult Function(String erorr) errorAdd,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseCart cartResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrDelete,
-    required TResult Function() selectColor,
-    required TResult Function() selectsize,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingAdd,
-    TResult? Function()? successAdd,
-    TResult? Function(String erorr)? errorAdd,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseCart cartResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? selectColor,
-    TResult? Function()? selectsize,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingAdd,
-    TResult Function()? successAdd,
-    TResult Function(String erorr)? errorAdd,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseCart cartResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrDelete,
-    TResult Function()? selectColor,
-    TResult Function()? selectsize,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingAdd value) loadingAdd,
-    required TResult Function(SuccessAdd value) successAdd,
-    required TResult Function(ErrorAdd value) errorAdd,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCoupon value) selectColor,
-    required TResult Function(SuccessCoupon value) selectsize,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingAdd value)? loadingAdd,
-    TResult? Function(SuccessAdd value)? successAdd,
-    TResult? Function(ErrorAdd value)? errorAdd,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCoupon value)? selectColor,
-    TResult? Function(SuccessCoupon value)? selectsize,
-  }) =>
-      throw _privateConstructorUsedError;
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is CartState);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'CartState()';
+  }
+}
+
+/// @nodoc
+class $CartStateCopyWith<$Res> {
+  $CartStateCopyWith(CartState _, $Res Function(CartState) __);
+}
+
+/// Adds pattern-matching-related methods to [CartState].
+extension CartStatePatterns on CartState {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
@@ -112,538 +63,448 @@ mixin _$CartState {
     TResult Function(LoadingCoupon value)? selectColor,
     TResult Function(SuccessCoupon value)? selectsize,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial(_that);
+      case LoadingAdd() when loadingAdd != null:
+        return loadingAdd(_that);
+      case SuccessAdd() when successAdd != null:
+        return successAdd(_that);
+      case ErrorAdd() when errorAdd != null:
+        return errorAdd(_that);
+      case LoadingGet() when loadingGet != null:
+        return loadingGet(_that);
+      case SuccessGet() when successGet != null:
+        return successGet(_that);
+      case ErorrGet() when erorrGet != null:
+        return erorrGet(_that);
+      case LoadingDelete() when loadingDelete != null:
+        return loadingDelete(_that);
+      case Successdelete() when successdelete != null:
+        return successdelete(_that);
+      case ErorrDelete() when erorrDelete != null:
+        return erorrDelete(_that);
+      case LoadingCoupon() when selectColor != null:
+        return selectColor(_that);
+      case SuccessCoupon() when selectsize != null:
+        return selectsize(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(LoadingAdd value) loadingAdd,
+    required TResult Function(SuccessAdd value) successAdd,
+    required TResult Function(ErrorAdd value) errorAdd,
+    required TResult Function(LoadingGet value) loadingGet,
+    required TResult Function(SuccessGet value) successGet,
+    required TResult Function(ErorrGet value) erorrGet,
+    required TResult Function(LoadingDelete value) loadingDelete,
+    required TResult Function(Successdelete value) successdelete,
+    required TResult Function(ErorrDelete value) erorrDelete,
+    required TResult Function(LoadingCoupon value) selectColor,
+    required TResult Function(SuccessCoupon value) selectsize,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial():
+        return initial(_that);
+      case LoadingAdd():
+        return loadingAdd(_that);
+      case SuccessAdd():
+        return successAdd(_that);
+      case ErrorAdd():
+        return errorAdd(_that);
+      case LoadingGet():
+        return loadingGet(_that);
+      case SuccessGet():
+        return successGet(_that);
+      case ErorrGet():
+        return erorrGet(_that);
+      case LoadingDelete():
+        return loadingDelete(_that);
+      case Successdelete():
+        return successdelete(_that);
+      case ErorrDelete():
+        return erorrDelete(_that);
+      case LoadingCoupon():
+        return selectColor(_that);
+      case SuccessCoupon():
+        return selectsize(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(LoadingAdd value)? loadingAdd,
+    TResult? Function(SuccessAdd value)? successAdd,
+    TResult? Function(ErrorAdd value)? errorAdd,
+    TResult? Function(LoadingGet value)? loadingGet,
+    TResult? Function(SuccessGet value)? successGet,
+    TResult? Function(ErorrGet value)? erorrGet,
+    TResult? Function(LoadingDelete value)? loadingDelete,
+    TResult? Function(Successdelete value)? successdelete,
+    TResult? Function(ErorrDelete value)? erorrDelete,
+    TResult? Function(LoadingCoupon value)? selectColor,
+    TResult? Function(SuccessCoupon value)? selectsize,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial(_that);
+      case LoadingAdd() when loadingAdd != null:
+        return loadingAdd(_that);
+      case SuccessAdd() when successAdd != null:
+        return successAdd(_that);
+      case ErrorAdd() when errorAdd != null:
+        return errorAdd(_that);
+      case LoadingGet() when loadingGet != null:
+        return loadingGet(_that);
+      case SuccessGet() when successGet != null:
+        return successGet(_that);
+      case ErorrGet() when erorrGet != null:
+        return erorrGet(_that);
+      case LoadingDelete() when loadingDelete != null:
+        return loadingDelete(_that);
+      case Successdelete() when successdelete != null:
+        return successdelete(_that);
+      case ErorrDelete() when erorrDelete != null:
+        return erorrDelete(_that);
+      case LoadingCoupon() when selectColor != null:
+        return selectColor(_that);
+      case SuccessCoupon() when selectsize != null:
+        return selectsize(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingAdd,
+    TResult Function()? successAdd,
+    TResult Function(String erorr)? errorAdd,
+    TResult Function()? loadingGet,
+    TResult Function(ResponseCart cartResponse)? successGet,
+    TResult Function(String erorr)? erorrGet,
+    TResult Function()? loadingDelete,
+    TResult Function()? successdelete,
+    TResult Function(String erorr)? erorrDelete,
+    TResult Function()? selectColor,
+    TResult Function()? selectsize,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial();
+      case LoadingAdd() when loadingAdd != null:
+        return loadingAdd();
+      case SuccessAdd() when successAdd != null:
+        return successAdd();
+      case ErrorAdd() when errorAdd != null:
+        return errorAdd(_that.erorr);
+      case LoadingGet() when loadingGet != null:
+        return loadingGet();
+      case SuccessGet() when successGet != null:
+        return successGet(_that.cartResponse);
+      case ErorrGet() when erorrGet != null:
+        return erorrGet(_that.erorr);
+      case LoadingDelete() when loadingDelete != null:
+        return loadingDelete();
+      case Successdelete() when successdelete != null:
+        return successdelete();
+      case ErorrDelete() when erorrDelete != null:
+        return erorrDelete(_that.erorr);
+      case LoadingCoupon() when selectColor != null:
+        return selectColor();
+      case SuccessCoupon() when selectsize != null:
+        return selectsize();
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingAdd,
+    required TResult Function() successAdd,
+    required TResult Function(String erorr) errorAdd,
+    required TResult Function() loadingGet,
+    required TResult Function(ResponseCart cartResponse) successGet,
+    required TResult Function(String erorr) erorrGet,
+    required TResult Function() loadingDelete,
+    required TResult Function() successdelete,
+    required TResult Function(String erorr) erorrDelete,
+    required TResult Function() selectColor,
+    required TResult Function() selectsize,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial():
+        return initial();
+      case LoadingAdd():
+        return loadingAdd();
+      case SuccessAdd():
+        return successAdd();
+      case ErrorAdd():
+        return errorAdd(_that.erorr);
+      case LoadingGet():
+        return loadingGet();
+      case SuccessGet():
+        return successGet(_that.cartResponse);
+      case ErorrGet():
+        return erorrGet(_that.erorr);
+      case LoadingDelete():
+        return loadingDelete();
+      case Successdelete():
+        return successdelete();
+      case ErorrDelete():
+        return erorrDelete(_that.erorr);
+      case LoadingCoupon():
+        return selectColor();
+      case SuccessCoupon():
+        return selectsize();
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingAdd,
+    TResult? Function()? successAdd,
+    TResult? Function(String erorr)? errorAdd,
+    TResult? Function()? loadingGet,
+    TResult? Function(ResponseCart cartResponse)? successGet,
+    TResult? Function(String erorr)? erorrGet,
+    TResult? Function()? loadingDelete,
+    TResult? Function()? successdelete,
+    TResult? Function(String erorr)? erorrDelete,
+    TResult? Function()? selectColor,
+    TResult? Function()? selectsize,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial();
+      case LoadingAdd() when loadingAdd != null:
+        return loadingAdd();
+      case SuccessAdd() when successAdd != null:
+        return successAdd();
+      case ErrorAdd() when errorAdd != null:
+        return errorAdd(_that.erorr);
+      case LoadingGet() when loadingGet != null:
+        return loadingGet();
+      case SuccessGet() when successGet != null:
+        return successGet(_that.cartResponse);
+      case ErorrGet() when erorrGet != null:
+        return erorrGet(_that.erorr);
+      case LoadingDelete() when loadingDelete != null:
+        return loadingDelete();
+      case Successdelete() when successdelete != null:
+        return successdelete();
+      case ErorrDelete() when erorrDelete != null:
+        return erorrDelete(_that.erorr);
+      case LoadingCoupon() when selectColor != null:
+        return selectColor();
+      case SuccessCoupon() when selectsize != null:
+        return selectsize();
+      case _:
+        return null;
+    }
+  }
 }
 
 /// @nodoc
-abstract class $CartStateCopyWith<$Res> {
-  factory $CartStateCopyWith(CartState value, $Res Function(CartState) then) =
-      _$CartStateCopyWithImpl<$Res, CartState>;
-}
 
-/// @nodoc
-class _$CartStateCopyWithImpl<$Res, $Val extends CartState>
-    implements $CartStateCopyWith<$Res> {
-  _$CartStateCopyWithImpl(this._value, this._then);
+class _Initial implements CartState {
+  const _Initial();
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-}
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _Initial);
+  }
 
-/// @nodoc
-abstract class _$$InitialImplCopyWith<$Res> {
-  factory _$$InitialImplCopyWith(
-          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
-      __$$InitialImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$InitialImplCopyWithImpl<$Res>
-    extends _$CartStateCopyWithImpl<$Res, _$InitialImpl>
-    implements _$$InitialImplCopyWith<$Res> {
-  __$$InitialImplCopyWithImpl(
-      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$InitialImpl implements _Initial {
-  const _$InitialImpl();
+  @override
+  int get hashCode => runtimeType.hashCode;
 
   @override
   String toString() {
     return 'CartState.initial()';
   }
+}
+
+/// @nodoc
+
+class LoadingAdd implements CartState {
+  const LoadingAdd();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InitialImpl);
+        (other.runtimeType == runtimeType && other is LoadingAdd);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingAdd,
-    required TResult Function() successAdd,
-    required TResult Function(String erorr) errorAdd,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseCart cartResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrDelete,
-    required TResult Function() selectColor,
-    required TResult Function() selectsize,
-  }) {
-    return initial();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingAdd,
-    TResult? Function()? successAdd,
-    TResult? Function(String erorr)? errorAdd,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseCart cartResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? selectColor,
-    TResult? Function()? selectsize,
-  }) {
-    return initial?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingAdd,
-    TResult Function()? successAdd,
-    TResult Function(String erorr)? errorAdd,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseCart cartResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrDelete,
-    TResult Function()? selectColor,
-    TResult Function()? selectsize,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingAdd value) loadingAdd,
-    required TResult Function(SuccessAdd value) successAdd,
-    required TResult Function(ErrorAdd value) errorAdd,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCoupon value) selectColor,
-    required TResult Function(SuccessCoupon value) selectsize,
-  }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingAdd value)? loadingAdd,
-    TResult? Function(SuccessAdd value)? successAdd,
-    TResult? Function(ErrorAdd value)? errorAdd,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCoupon value)? selectColor,
-    TResult? Function(SuccessCoupon value)? selectsize,
-  }) {
-    return initial?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingAdd value)? loadingAdd,
-    TResult Function(SuccessAdd value)? successAdd,
-    TResult Function(ErrorAdd value)? errorAdd,
-    TResult Function(LoadingGet value)? loadingGet,
-    TResult Function(SuccessGet value)? successGet,
-    TResult Function(ErorrGet value)? erorrGet,
-    TResult Function(LoadingDelete value)? loadingDelete,
-    TResult Function(Successdelete value)? successdelete,
-    TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCoupon value)? selectColor,
-    TResult Function(SuccessCoupon value)? selectsize,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Initial implements CartState {
-  const factory _Initial() = _$InitialImpl;
-}
-
-/// @nodoc
-abstract class _$$LoadingAddImplCopyWith<$Res> {
-  factory _$$LoadingAddImplCopyWith(
-          _$LoadingAddImpl value, $Res Function(_$LoadingAddImpl) then) =
-      __$$LoadingAddImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$LoadingAddImplCopyWithImpl<$Res>
-    extends _$CartStateCopyWithImpl<$Res, _$LoadingAddImpl>
-    implements _$$LoadingAddImplCopyWith<$Res> {
-  __$$LoadingAddImplCopyWithImpl(
-      _$LoadingAddImpl _value, $Res Function(_$LoadingAddImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$LoadingAddImpl implements LoadingAdd {
-  const _$LoadingAddImpl();
 
   @override
   String toString() {
     return 'CartState.loadingAdd()';
   }
+}
+
+/// @nodoc
+
+class SuccessAdd implements CartState {
+  const SuccessAdd();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingAddImpl);
+        (other.runtimeType == runtimeType && other is SuccessAdd);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingAdd,
-    required TResult Function() successAdd,
-    required TResult Function(String erorr) errorAdd,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseCart cartResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrDelete,
-    required TResult Function() selectColor,
-    required TResult Function() selectsize,
-  }) {
-    return loadingAdd();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingAdd,
-    TResult? Function()? successAdd,
-    TResult? Function(String erorr)? errorAdd,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseCart cartResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? selectColor,
-    TResult? Function()? selectsize,
-  }) {
-    return loadingAdd?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingAdd,
-    TResult Function()? successAdd,
-    TResult Function(String erorr)? errorAdd,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseCart cartResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrDelete,
-    TResult Function()? selectColor,
-    TResult Function()? selectsize,
-    required TResult orElse(),
-  }) {
-    if (loadingAdd != null) {
-      return loadingAdd();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingAdd value) loadingAdd,
-    required TResult Function(SuccessAdd value) successAdd,
-    required TResult Function(ErrorAdd value) errorAdd,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCoupon value) selectColor,
-    required TResult Function(SuccessCoupon value) selectsize,
-  }) {
-    return loadingAdd(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingAdd value)? loadingAdd,
-    TResult? Function(SuccessAdd value)? successAdd,
-    TResult? Function(ErrorAdd value)? errorAdd,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCoupon value)? selectColor,
-    TResult? Function(SuccessCoupon value)? selectsize,
-  }) {
-    return loadingAdd?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingAdd value)? loadingAdd,
-    TResult Function(SuccessAdd value)? successAdd,
-    TResult Function(ErrorAdd value)? errorAdd,
-    TResult Function(LoadingGet value)? loadingGet,
-    TResult Function(SuccessGet value)? successGet,
-    TResult Function(ErorrGet value)? erorrGet,
-    TResult Function(LoadingDelete value)? loadingDelete,
-    TResult Function(Successdelete value)? successdelete,
-    TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCoupon value)? selectColor,
-    TResult Function(SuccessCoupon value)? selectsize,
-    required TResult orElse(),
-  }) {
-    if (loadingAdd != null) {
-      return loadingAdd(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class LoadingAdd implements CartState {
-  const factory LoadingAdd() = _$LoadingAddImpl;
-}
-
-/// @nodoc
-abstract class _$$SuccessAddImplCopyWith<$Res> {
-  factory _$$SuccessAddImplCopyWith(
-          _$SuccessAddImpl value, $Res Function(_$SuccessAddImpl) then) =
-      __$$SuccessAddImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$SuccessAddImplCopyWithImpl<$Res>
-    extends _$CartStateCopyWithImpl<$Res, _$SuccessAddImpl>
-    implements _$$SuccessAddImplCopyWith<$Res> {
-  __$$SuccessAddImplCopyWithImpl(
-      _$SuccessAddImpl _value, $Res Function(_$SuccessAddImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$SuccessAddImpl implements SuccessAdd {
-  const _$SuccessAddImpl();
 
   @override
   String toString() {
     return 'CartState.successAdd()';
   }
+}
+
+/// @nodoc
+
+class ErrorAdd implements CartState {
+  const ErrorAdd({required this.erorr});
+
+  final String erorr;
+
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ErrorAddCopyWith<ErrorAdd> get copyWith =>
+      _$ErrorAddCopyWithImpl<ErrorAdd>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SuccessAddImpl);
+        (other.runtimeType == runtimeType &&
+            other is ErrorAdd &&
+            (identical(other.erorr, erorr) || other.erorr == erorr));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, erorr);
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingAdd,
-    required TResult Function() successAdd,
-    required TResult Function(String erorr) errorAdd,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseCart cartResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrDelete,
-    required TResult Function() selectColor,
-    required TResult Function() selectsize,
-  }) {
-    return successAdd();
+  String toString() {
+    return 'CartState.errorAdd(erorr: $erorr)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingAdd,
-    TResult? Function()? successAdd,
-    TResult? Function(String erorr)? errorAdd,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseCart cartResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? selectColor,
-    TResult? Function()? selectsize,
-  }) {
-    return successAdd?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingAdd,
-    TResult Function()? successAdd,
-    TResult Function(String erorr)? errorAdd,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseCart cartResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrDelete,
-    TResult Function()? selectColor,
-    TResult Function()? selectsize,
-    required TResult orElse(),
-  }) {
-    if (successAdd != null) {
-      return successAdd();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingAdd value) loadingAdd,
-    required TResult Function(SuccessAdd value) successAdd,
-    required TResult Function(ErrorAdd value) errorAdd,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCoupon value) selectColor,
-    required TResult Function(SuccessCoupon value) selectsize,
-  }) {
-    return successAdd(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingAdd value)? loadingAdd,
-    TResult? Function(SuccessAdd value)? successAdd,
-    TResult? Function(ErrorAdd value)? errorAdd,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCoupon value)? selectColor,
-    TResult? Function(SuccessCoupon value)? selectsize,
-  }) {
-    return successAdd?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingAdd value)? loadingAdd,
-    TResult Function(SuccessAdd value)? successAdd,
-    TResult Function(ErrorAdd value)? errorAdd,
-    TResult Function(LoadingGet value)? loadingGet,
-    TResult Function(SuccessGet value)? successGet,
-    TResult Function(ErorrGet value)? erorrGet,
-    TResult Function(LoadingDelete value)? loadingDelete,
-    TResult Function(Successdelete value)? successdelete,
-    TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCoupon value)? selectColor,
-    TResult Function(SuccessCoupon value)? selectsize,
-    required TResult orElse(),
-  }) {
-    if (successAdd != null) {
-      return successAdd(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class SuccessAdd implements CartState {
-  const factory SuccessAdd() = _$SuccessAddImpl;
 }
 
 /// @nodoc
-abstract class _$$ErrorAddImplCopyWith<$Res> {
-  factory _$$ErrorAddImplCopyWith(
-          _$ErrorAddImpl value, $Res Function(_$ErrorAddImpl) then) =
-      __$$ErrorAddImplCopyWithImpl<$Res>;
+abstract mixin class $ErrorAddCopyWith<$Res>
+    implements $CartStateCopyWith<$Res> {
+  factory $ErrorAddCopyWith(ErrorAdd value, $Res Function(ErrorAdd) _then) =
+      _$ErrorAddCopyWithImpl;
   @useResult
   $Res call({String erorr});
 }
 
 /// @nodoc
-class __$$ErrorAddImplCopyWithImpl<$Res>
-    extends _$CartStateCopyWithImpl<$Res, _$ErrorAddImpl>
-    implements _$$ErrorAddImplCopyWith<$Res> {
-  __$$ErrorAddImplCopyWithImpl(
-      _$ErrorAddImpl _value, $Res Function(_$ErrorAddImpl) _then)
-      : super(_value, _then);
+class _$ErrorAddCopyWithImpl<$Res> implements $ErrorAddCopyWith<$Res> {
+  _$ErrorAddCopyWithImpl(this._self, this._then);
 
+  final ErrorAdd _self;
+  final $Res Function(ErrorAdd) _then;
+
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? erorr = null,
   }) {
-    return _then(_$ErrorAddImpl(
+    return _then(ErrorAdd(
       erorr: null == erorr
-          ? _value.erorr
+          ? _self.erorr
           : erorr // ignore: cast_nullable_to_non_nullable
               as String,
     ));
@@ -652,353 +513,82 @@ class __$$ErrorAddImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErrorAddImpl implements ErrorAdd {
-  const _$ErrorAddImpl({required this.erorr});
-
-  @override
-  final String erorr;
-
-  @override
-  String toString() {
-    return 'CartState.errorAdd(erorr: $erorr)';
-  }
+class LoadingGet implements CartState {
+  const LoadingGet();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ErrorAddImpl &&
-            (identical(other.erorr, erorr) || other.erorr == erorr));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, erorr);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ErrorAddImplCopyWith<_$ErrorAddImpl> get copyWith =>
-      __$$ErrorAddImplCopyWithImpl<_$ErrorAddImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingAdd,
-    required TResult Function() successAdd,
-    required TResult Function(String erorr) errorAdd,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseCart cartResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrDelete,
-    required TResult Function() selectColor,
-    required TResult Function() selectsize,
-  }) {
-    return errorAdd(erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingAdd,
-    TResult? Function()? successAdd,
-    TResult? Function(String erorr)? errorAdd,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseCart cartResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? selectColor,
-    TResult? Function()? selectsize,
-  }) {
-    return errorAdd?.call(erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingAdd,
-    TResult Function()? successAdd,
-    TResult Function(String erorr)? errorAdd,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseCart cartResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrDelete,
-    TResult Function()? selectColor,
-    TResult Function()? selectsize,
-    required TResult orElse(),
-  }) {
-    if (errorAdd != null) {
-      return errorAdd(erorr);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingAdd value) loadingAdd,
-    required TResult Function(SuccessAdd value) successAdd,
-    required TResult Function(ErrorAdd value) errorAdd,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCoupon value) selectColor,
-    required TResult Function(SuccessCoupon value) selectsize,
-  }) {
-    return errorAdd(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingAdd value)? loadingAdd,
-    TResult? Function(SuccessAdd value)? successAdd,
-    TResult? Function(ErrorAdd value)? errorAdd,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCoupon value)? selectColor,
-    TResult? Function(SuccessCoupon value)? selectsize,
-  }) {
-    return errorAdd?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingAdd value)? loadingAdd,
-    TResult Function(SuccessAdd value)? successAdd,
-    TResult Function(ErrorAdd value)? errorAdd,
-    TResult Function(LoadingGet value)? loadingGet,
-    TResult Function(SuccessGet value)? successGet,
-    TResult Function(ErorrGet value)? erorrGet,
-    TResult Function(LoadingDelete value)? loadingDelete,
-    TResult Function(Successdelete value)? successdelete,
-    TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCoupon value)? selectColor,
-    TResult Function(SuccessCoupon value)? selectsize,
-    required TResult orElse(),
-  }) {
-    if (errorAdd != null) {
-      return errorAdd(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class ErrorAdd implements CartState {
-  const factory ErrorAdd({required final String erorr}) = _$ErrorAddImpl;
-
-  String get erorr;
-  @JsonKey(ignore: true)
-  _$$ErrorAddImplCopyWith<_$ErrorAddImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$LoadingGetImplCopyWith<$Res> {
-  factory _$$LoadingGetImplCopyWith(
-          _$LoadingGetImpl value, $Res Function(_$LoadingGetImpl) then) =
-      __$$LoadingGetImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$LoadingGetImplCopyWithImpl<$Res>
-    extends _$CartStateCopyWithImpl<$Res, _$LoadingGetImpl>
-    implements _$$LoadingGetImplCopyWith<$Res> {
-  __$$LoadingGetImplCopyWithImpl(
-      _$LoadingGetImpl _value, $Res Function(_$LoadingGetImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$LoadingGetImpl implements LoadingGet {
-  const _$LoadingGetImpl();
-
-  @override
-  String toString() {
-    return 'CartState.loadingGet()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingGetImpl);
+        (other.runtimeType == runtimeType && other is LoadingGet);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingAdd,
-    required TResult Function() successAdd,
-    required TResult Function(String erorr) errorAdd,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseCart cartResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrDelete,
-    required TResult Function() selectColor,
-    required TResult Function() selectsize,
-  }) {
-    return loadingGet();
+  String toString() {
+    return 'CartState.loadingGet()';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingAdd,
-    TResult? Function()? successAdd,
-    TResult? Function(String erorr)? errorAdd,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseCart cartResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? selectColor,
-    TResult? Function()? selectsize,
-  }) {
-    return loadingGet?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingAdd,
-    TResult Function()? successAdd,
-    TResult Function(String erorr)? errorAdd,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseCart cartResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrDelete,
-    TResult Function()? selectColor,
-    TResult Function()? selectsize,
-    required TResult orElse(),
-  }) {
-    if (loadingGet != null) {
-      return loadingGet();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingAdd value) loadingAdd,
-    required TResult Function(SuccessAdd value) successAdd,
-    required TResult Function(ErrorAdd value) errorAdd,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCoupon value) selectColor,
-    required TResult Function(SuccessCoupon value) selectsize,
-  }) {
-    return loadingGet(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingAdd value)? loadingAdd,
-    TResult? Function(SuccessAdd value)? successAdd,
-    TResult? Function(ErrorAdd value)? errorAdd,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCoupon value)? selectColor,
-    TResult? Function(SuccessCoupon value)? selectsize,
-  }) {
-    return loadingGet?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingAdd value)? loadingAdd,
-    TResult Function(SuccessAdd value)? successAdd,
-    TResult Function(ErrorAdd value)? errorAdd,
-    TResult Function(LoadingGet value)? loadingGet,
-    TResult Function(SuccessGet value)? successGet,
-    TResult Function(ErorrGet value)? erorrGet,
-    TResult Function(LoadingDelete value)? loadingDelete,
-    TResult Function(Successdelete value)? successdelete,
-    TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCoupon value)? selectColor,
-    TResult Function(SuccessCoupon value)? selectsize,
-    required TResult orElse(),
-  }) {
-    if (loadingGet != null) {
-      return loadingGet(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class LoadingGet implements CartState {
-  const factory LoadingGet() = _$LoadingGetImpl;
 }
 
 /// @nodoc
-abstract class _$$SuccessGetImplCopyWith<$Res> {
-  factory _$$SuccessGetImplCopyWith(
-          _$SuccessGetImpl value, $Res Function(_$SuccessGetImpl) then) =
-      __$$SuccessGetImplCopyWithImpl<$Res>;
+
+class SuccessGet implements CartState {
+  const SuccessGet(this.cartResponse);
+
+  final ResponseCart cartResponse;
+
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SuccessGetCopyWith<SuccessGet> get copyWith =>
+      _$SuccessGetCopyWithImpl<SuccessGet>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is SuccessGet &&
+            (identical(other.cartResponse, cartResponse) ||
+                other.cartResponse == cartResponse));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, cartResponse);
+
+  @override
+  String toString() {
+    return 'CartState.successGet(cartResponse: $cartResponse)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $SuccessGetCopyWith<$Res>
+    implements $CartStateCopyWith<$Res> {
+  factory $SuccessGetCopyWith(
+          SuccessGet value, $Res Function(SuccessGet) _then) =
+      _$SuccessGetCopyWithImpl;
   @useResult
   $Res call({ResponseCart cartResponse});
 }
 
 /// @nodoc
-class __$$SuccessGetImplCopyWithImpl<$Res>
-    extends _$CartStateCopyWithImpl<$Res, _$SuccessGetImpl>
-    implements _$$SuccessGetImplCopyWith<$Res> {
-  __$$SuccessGetImplCopyWithImpl(
-      _$SuccessGetImpl _value, $Res Function(_$SuccessGetImpl) _then)
-      : super(_value, _then);
+class _$SuccessGetCopyWithImpl<$Res> implements $SuccessGetCopyWith<$Res> {
+  _$SuccessGetCopyWithImpl(this._self, this._then);
 
+  final SuccessGet _self;
+  final $Res Function(SuccessGet) _then;
+
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? cartResponse = null,
   }) {
-    return _then(_$SuccessGetImpl(
+    return _then(SuccessGet(
       null == cartResponse
-          ? _value.cartResponse
+          ? _self.cartResponse
           : cartResponse // ignore: cast_nullable_to_non_nullable
               as ResponseCart,
     ));
@@ -1007,709 +597,60 @@ class __$$SuccessGetImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SuccessGetImpl implements SuccessGet {
-  const _$SuccessGetImpl(this.cartResponse);
+class ErorrGet implements CartState {
+  const ErorrGet({required this.erorr});
 
-  @override
-  final ResponseCart cartResponse;
+  final String erorr;
 
-  @override
-  String toString() {
-    return 'CartState.successGet(cartResponse: $cartResponse)';
-  }
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ErorrGetCopyWith<ErorrGet> get copyWith =>
+      _$ErorrGetCopyWithImpl<ErorrGet>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SuccessGetImpl &&
-            (identical(other.cartResponse, cartResponse) ||
-                other.cartResponse == cartResponse));
+            other is ErorrGet &&
+            (identical(other.erorr, erorr) || other.erorr == erorr));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, cartResponse);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SuccessGetImplCopyWith<_$SuccessGetImpl> get copyWith =>
-      __$$SuccessGetImplCopyWithImpl<_$SuccessGetImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingAdd,
-    required TResult Function() successAdd,
-    required TResult Function(String erorr) errorAdd,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseCart cartResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrDelete,
-    required TResult Function() selectColor,
-    required TResult Function() selectsize,
-  }) {
-    return successGet(cartResponse);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingAdd,
-    TResult? Function()? successAdd,
-    TResult? Function(String erorr)? errorAdd,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseCart cartResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? selectColor,
-    TResult? Function()? selectsize,
-  }) {
-    return successGet?.call(cartResponse);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingAdd,
-    TResult Function()? successAdd,
-    TResult Function(String erorr)? errorAdd,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseCart cartResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrDelete,
-    TResult Function()? selectColor,
-    TResult Function()? selectsize,
-    required TResult orElse(),
-  }) {
-    if (successGet != null) {
-      return successGet(cartResponse);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingAdd value) loadingAdd,
-    required TResult Function(SuccessAdd value) successAdd,
-    required TResult Function(ErrorAdd value) errorAdd,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCoupon value) selectColor,
-    required TResult Function(SuccessCoupon value) selectsize,
-  }) {
-    return successGet(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingAdd value)? loadingAdd,
-    TResult? Function(SuccessAdd value)? successAdd,
-    TResult? Function(ErrorAdd value)? errorAdd,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCoupon value)? selectColor,
-    TResult? Function(SuccessCoupon value)? selectsize,
-  }) {
-    return successGet?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingAdd value)? loadingAdd,
-    TResult Function(SuccessAdd value)? successAdd,
-    TResult Function(ErrorAdd value)? errorAdd,
-    TResult Function(LoadingGet value)? loadingGet,
-    TResult Function(SuccessGet value)? successGet,
-    TResult Function(ErorrGet value)? erorrGet,
-    TResult Function(LoadingDelete value)? loadingDelete,
-    TResult Function(Successdelete value)? successdelete,
-    TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCoupon value)? selectColor,
-    TResult Function(SuccessCoupon value)? selectsize,
-    required TResult orElse(),
-  }) {
-    if (successGet != null) {
-      return successGet(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class SuccessGet implements CartState {
-  const factory SuccessGet(final ResponseCart cartResponse) = _$SuccessGetImpl;
-
-  ResponseCart get cartResponse;
-  @JsonKey(ignore: true)
-  _$$SuccessGetImplCopyWith<_$SuccessGetImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$ErorrGetImplCopyWith<$Res> {
-  factory _$$ErorrGetImplCopyWith(
-          _$ErorrGetImpl value, $Res Function(_$ErorrGetImpl) then) =
-      __$$ErorrGetImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String erorr});
-}
-
-/// @nodoc
-class __$$ErorrGetImplCopyWithImpl<$Res>
-    extends _$CartStateCopyWithImpl<$Res, _$ErorrGetImpl>
-    implements _$$ErorrGetImplCopyWith<$Res> {
-  __$$ErorrGetImplCopyWithImpl(
-      _$ErorrGetImpl _value, $Res Function(_$ErorrGetImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? erorr = null,
-  }) {
-    return _then(_$ErorrGetImpl(
-      erorr: null == erorr
-          ? _value.erorr
-          : erorr // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$ErorrGetImpl implements ErorrGet {
-  const _$ErorrGetImpl({required this.erorr});
-
-  @override
-  final String erorr;
+  int get hashCode => Object.hash(runtimeType, erorr);
 
   @override
   String toString() {
     return 'CartState.erorrGet(erorr: $erorr)';
   }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ErorrGetImpl &&
-            (identical(other.erorr, erorr) || other.erorr == erorr));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, erorr);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ErorrGetImplCopyWith<_$ErorrGetImpl> get copyWith =>
-      __$$ErorrGetImplCopyWithImpl<_$ErorrGetImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingAdd,
-    required TResult Function() successAdd,
-    required TResult Function(String erorr) errorAdd,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseCart cartResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrDelete,
-    required TResult Function() selectColor,
-    required TResult Function() selectsize,
-  }) {
-    return erorrGet(erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingAdd,
-    TResult? Function()? successAdd,
-    TResult? Function(String erorr)? errorAdd,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseCart cartResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? selectColor,
-    TResult? Function()? selectsize,
-  }) {
-    return erorrGet?.call(erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingAdd,
-    TResult Function()? successAdd,
-    TResult Function(String erorr)? errorAdd,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseCart cartResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrDelete,
-    TResult Function()? selectColor,
-    TResult Function()? selectsize,
-    required TResult orElse(),
-  }) {
-    if (erorrGet != null) {
-      return erorrGet(erorr);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingAdd value) loadingAdd,
-    required TResult Function(SuccessAdd value) successAdd,
-    required TResult Function(ErrorAdd value) errorAdd,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCoupon value) selectColor,
-    required TResult Function(SuccessCoupon value) selectsize,
-  }) {
-    return erorrGet(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingAdd value)? loadingAdd,
-    TResult? Function(SuccessAdd value)? successAdd,
-    TResult? Function(ErrorAdd value)? errorAdd,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCoupon value)? selectColor,
-    TResult? Function(SuccessCoupon value)? selectsize,
-  }) {
-    return erorrGet?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingAdd value)? loadingAdd,
-    TResult Function(SuccessAdd value)? successAdd,
-    TResult Function(ErrorAdd value)? errorAdd,
-    TResult Function(LoadingGet value)? loadingGet,
-    TResult Function(SuccessGet value)? successGet,
-    TResult Function(ErorrGet value)? erorrGet,
-    TResult Function(LoadingDelete value)? loadingDelete,
-    TResult Function(Successdelete value)? successdelete,
-    TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCoupon value)? selectColor,
-    TResult Function(SuccessCoupon value)? selectsize,
-    required TResult orElse(),
-  }) {
-    if (erorrGet != null) {
-      return erorrGet(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class ErorrGet implements CartState {
-  const factory ErorrGet({required final String erorr}) = _$ErorrGetImpl;
-
-  String get erorr;
-  @JsonKey(ignore: true)
-  _$$ErorrGetImplCopyWith<_$ErorrGetImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$LoadingDeleteImplCopyWith<$Res> {
-  factory _$$LoadingDeleteImplCopyWith(
-          _$LoadingDeleteImpl value, $Res Function(_$LoadingDeleteImpl) then) =
-      __$$LoadingDeleteImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$LoadingDeleteImplCopyWithImpl<$Res>
-    extends _$CartStateCopyWithImpl<$Res, _$LoadingDeleteImpl>
-    implements _$$LoadingDeleteImplCopyWith<$Res> {
-  __$$LoadingDeleteImplCopyWithImpl(
-      _$LoadingDeleteImpl _value, $Res Function(_$LoadingDeleteImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$LoadingDeleteImpl implements LoadingDelete {
-  const _$LoadingDeleteImpl();
-
-  @override
-  String toString() {
-    return 'CartState.loadingDelete()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingDeleteImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingAdd,
-    required TResult Function() successAdd,
-    required TResult Function(String erorr) errorAdd,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseCart cartResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrDelete,
-    required TResult Function() selectColor,
-    required TResult Function() selectsize,
-  }) {
-    return loadingDelete();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingAdd,
-    TResult? Function()? successAdd,
-    TResult? Function(String erorr)? errorAdd,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseCart cartResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? selectColor,
-    TResult? Function()? selectsize,
-  }) {
-    return loadingDelete?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingAdd,
-    TResult Function()? successAdd,
-    TResult Function(String erorr)? errorAdd,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseCart cartResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrDelete,
-    TResult Function()? selectColor,
-    TResult Function()? selectsize,
-    required TResult orElse(),
-  }) {
-    if (loadingDelete != null) {
-      return loadingDelete();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingAdd value) loadingAdd,
-    required TResult Function(SuccessAdd value) successAdd,
-    required TResult Function(ErrorAdd value) errorAdd,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCoupon value) selectColor,
-    required TResult Function(SuccessCoupon value) selectsize,
-  }) {
-    return loadingDelete(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingAdd value)? loadingAdd,
-    TResult? Function(SuccessAdd value)? successAdd,
-    TResult? Function(ErrorAdd value)? errorAdd,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCoupon value)? selectColor,
-    TResult? Function(SuccessCoupon value)? selectsize,
-  }) {
-    return loadingDelete?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingAdd value)? loadingAdd,
-    TResult Function(SuccessAdd value)? successAdd,
-    TResult Function(ErrorAdd value)? errorAdd,
-    TResult Function(LoadingGet value)? loadingGet,
-    TResult Function(SuccessGet value)? successGet,
-    TResult Function(ErorrGet value)? erorrGet,
-    TResult Function(LoadingDelete value)? loadingDelete,
-    TResult Function(Successdelete value)? successdelete,
-    TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCoupon value)? selectColor,
-    TResult Function(SuccessCoupon value)? selectsize,
-    required TResult orElse(),
-  }) {
-    if (loadingDelete != null) {
-      return loadingDelete(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class LoadingDelete implements CartState {
-  const factory LoadingDelete() = _$LoadingDeleteImpl;
-}
-
-/// @nodoc
-abstract class _$$SuccessdeleteImplCopyWith<$Res> {
-  factory _$$SuccessdeleteImplCopyWith(
-          _$SuccessdeleteImpl value, $Res Function(_$SuccessdeleteImpl) then) =
-      __$$SuccessdeleteImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$SuccessdeleteImplCopyWithImpl<$Res>
-    extends _$CartStateCopyWithImpl<$Res, _$SuccessdeleteImpl>
-    implements _$$SuccessdeleteImplCopyWith<$Res> {
-  __$$SuccessdeleteImplCopyWithImpl(
-      _$SuccessdeleteImpl _value, $Res Function(_$SuccessdeleteImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$SuccessdeleteImpl implements Successdelete {
-  const _$SuccessdeleteImpl();
-
-  @override
-  String toString() {
-    return 'CartState.successdelete()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SuccessdeleteImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingAdd,
-    required TResult Function() successAdd,
-    required TResult Function(String erorr) errorAdd,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseCart cartResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrDelete,
-    required TResult Function() selectColor,
-    required TResult Function() selectsize,
-  }) {
-    return successdelete();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingAdd,
-    TResult? Function()? successAdd,
-    TResult? Function(String erorr)? errorAdd,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseCart cartResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? selectColor,
-    TResult? Function()? selectsize,
-  }) {
-    return successdelete?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingAdd,
-    TResult Function()? successAdd,
-    TResult Function(String erorr)? errorAdd,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseCart cartResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrDelete,
-    TResult Function()? selectColor,
-    TResult Function()? selectsize,
-    required TResult orElse(),
-  }) {
-    if (successdelete != null) {
-      return successdelete();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingAdd value) loadingAdd,
-    required TResult Function(SuccessAdd value) successAdd,
-    required TResult Function(ErrorAdd value) errorAdd,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCoupon value) selectColor,
-    required TResult Function(SuccessCoupon value) selectsize,
-  }) {
-    return successdelete(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingAdd value)? loadingAdd,
-    TResult? Function(SuccessAdd value)? successAdd,
-    TResult? Function(ErrorAdd value)? errorAdd,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCoupon value)? selectColor,
-    TResult? Function(SuccessCoupon value)? selectsize,
-  }) {
-    return successdelete?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingAdd value)? loadingAdd,
-    TResult Function(SuccessAdd value)? successAdd,
-    TResult Function(ErrorAdd value)? errorAdd,
-    TResult Function(LoadingGet value)? loadingGet,
-    TResult Function(SuccessGet value)? successGet,
-    TResult Function(ErorrGet value)? erorrGet,
-    TResult Function(LoadingDelete value)? loadingDelete,
-    TResult Function(Successdelete value)? successdelete,
-    TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCoupon value)? selectColor,
-    TResult Function(SuccessCoupon value)? selectsize,
-    required TResult orElse(),
-  }) {
-    if (successdelete != null) {
-      return successdelete(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class Successdelete implements CartState {
-  const factory Successdelete() = _$SuccessdeleteImpl;
-}
-
-/// @nodoc
-abstract class _$$ErorrDeleteImplCopyWith<$Res> {
-  factory _$$ErorrDeleteImplCopyWith(
-          _$ErorrDeleteImpl value, $Res Function(_$ErorrDeleteImpl) then) =
-      __$$ErorrDeleteImplCopyWithImpl<$Res>;
+abstract mixin class $ErorrGetCopyWith<$Res>
+    implements $CartStateCopyWith<$Res> {
+  factory $ErorrGetCopyWith(ErorrGet value, $Res Function(ErorrGet) _then) =
+      _$ErorrGetCopyWithImpl;
   @useResult
   $Res call({String erorr});
 }
 
 /// @nodoc
-class __$$ErorrDeleteImplCopyWithImpl<$Res>
-    extends _$CartStateCopyWithImpl<$Res, _$ErorrDeleteImpl>
-    implements _$$ErorrDeleteImplCopyWith<$Res> {
-  __$$ErorrDeleteImplCopyWithImpl(
-      _$ErorrDeleteImpl _value, $Res Function(_$ErorrDeleteImpl) _then)
-      : super(_value, _then);
+class _$ErorrGetCopyWithImpl<$Res> implements $ErorrGetCopyWith<$Res> {
+  _$ErorrGetCopyWithImpl(this._self, this._then);
 
+  final ErorrGet _self;
+  final $Res Function(ErorrGet) _then;
+
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? erorr = null,
   }) {
-    return _then(_$ErorrDeleteImpl(
+    return _then(ErorrGet(
       erorr: null == erorr
-          ? _value.erorr
+          ? _self.erorr
           : erorr // ignore: cast_nullable_to_non_nullable
               as String,
     ));
@@ -1718,486 +659,145 @@ class __$$ErorrDeleteImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErorrDeleteImpl implements ErorrDelete {
-  const _$ErorrDeleteImpl({required this.erorr});
+class LoadingDelete implements CartState {
+  const LoadingDelete();
 
   @override
-  final String erorr;
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is LoadingDelete);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
 
   @override
   String toString() {
-    return 'CartState.erorrDelete(erorr: $erorr)';
+    return 'CartState.loadingDelete()';
   }
+}
+
+/// @nodoc
+
+class Successdelete implements CartState {
+  const Successdelete();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is Successdelete);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'CartState.successdelete()';
+  }
+}
+
+/// @nodoc
+
+class ErorrDelete implements CartState {
+  const ErorrDelete({required this.erorr});
+
+  final String erorr;
+
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ErorrDeleteCopyWith<ErorrDelete> get copyWith =>
+      _$ErorrDeleteCopyWithImpl<ErorrDelete>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ErorrDeleteImpl &&
+            other is ErorrDelete &&
             (identical(other.erorr, erorr) || other.erorr == erorr));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, erorr);
 
-  @JsonKey(ignore: true)
   @override
+  String toString() {
+    return 'CartState.erorrDelete(erorr: $erorr)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $ErorrDeleteCopyWith<$Res>
+    implements $CartStateCopyWith<$Res> {
+  factory $ErorrDeleteCopyWith(
+          ErorrDelete value, $Res Function(ErorrDelete) _then) =
+      _$ErorrDeleteCopyWithImpl;
+  @useResult
+  $Res call({String erorr});
+}
+
+/// @nodoc
+class _$ErorrDeleteCopyWithImpl<$Res> implements $ErorrDeleteCopyWith<$Res> {
+  _$ErorrDeleteCopyWithImpl(this._self, this._then);
+
+  final ErorrDelete _self;
+  final $Res Function(ErorrDelete) _then;
+
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  _$$ErorrDeleteImplCopyWith<_$ErorrDeleteImpl> get copyWith =>
-      __$$ErorrDeleteImplCopyWithImpl<_$ErorrDeleteImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingAdd,
-    required TResult Function() successAdd,
-    required TResult Function(String erorr) errorAdd,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseCart cartResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrDelete,
-    required TResult Function() selectColor,
-    required TResult Function() selectsize,
+  $Res call({
+    Object? erorr = null,
   }) {
-    return erorrDelete(erorr);
+    return _then(ErorrDelete(
+      erorr: null == erorr
+          ? _self.erorr
+          : erorr // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingAdd,
-    TResult? Function()? successAdd,
-    TResult? Function(String erorr)? errorAdd,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseCart cartResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? selectColor,
-    TResult? Function()? selectsize,
-  }) {
-    return erorrDelete?.call(erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingAdd,
-    TResult Function()? successAdd,
-    TResult Function(String erorr)? errorAdd,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseCart cartResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrDelete,
-    TResult Function()? selectColor,
-    TResult Function()? selectsize,
-    required TResult orElse(),
-  }) {
-    if (erorrDelete != null) {
-      return erorrDelete(erorr);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingAdd value) loadingAdd,
-    required TResult Function(SuccessAdd value) successAdd,
-    required TResult Function(ErrorAdd value) errorAdd,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCoupon value) selectColor,
-    required TResult Function(SuccessCoupon value) selectsize,
-  }) {
-    return erorrDelete(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingAdd value)? loadingAdd,
-    TResult? Function(SuccessAdd value)? successAdd,
-    TResult? Function(ErrorAdd value)? errorAdd,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCoupon value)? selectColor,
-    TResult? Function(SuccessCoupon value)? selectsize,
-  }) {
-    return erorrDelete?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingAdd value)? loadingAdd,
-    TResult Function(SuccessAdd value)? successAdd,
-    TResult Function(ErrorAdd value)? errorAdd,
-    TResult Function(LoadingGet value)? loadingGet,
-    TResult Function(SuccessGet value)? successGet,
-    TResult Function(ErorrGet value)? erorrGet,
-    TResult Function(LoadingDelete value)? loadingDelete,
-    TResult Function(Successdelete value)? successdelete,
-    TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCoupon value)? selectColor,
-    TResult Function(SuccessCoupon value)? selectsize,
-    required TResult orElse(),
-  }) {
-    if (erorrDelete != null) {
-      return erorrDelete(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class ErorrDelete implements CartState {
-  const factory ErorrDelete({required final String erorr}) = _$ErorrDeleteImpl;
-
-  String get erorr;
-  @JsonKey(ignore: true)
-  _$$ErorrDeleteImplCopyWith<_$ErorrDeleteImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$LoadingCouponImplCopyWith<$Res> {
-  factory _$$LoadingCouponImplCopyWith(
-          _$LoadingCouponImpl value, $Res Function(_$LoadingCouponImpl) then) =
-      __$$LoadingCouponImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$LoadingCouponImplCopyWithImpl<$Res>
-    extends _$CartStateCopyWithImpl<$Res, _$LoadingCouponImpl>
-    implements _$$LoadingCouponImplCopyWith<$Res> {
-  __$$LoadingCouponImplCopyWithImpl(
-      _$LoadingCouponImpl _value, $Res Function(_$LoadingCouponImpl) _then)
-      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$LoadingCouponImpl implements LoadingCoupon {
-  const _$LoadingCouponImpl();
+class LoadingCoupon implements CartState {
+  const LoadingCoupon();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is LoadingCoupon);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
 
   @override
   String toString() {
     return 'CartState.selectColor()';
   }
+}
+
+/// @nodoc
+
+class SuccessCoupon implements CartState {
+  const SuccessCoupon();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingCouponImpl);
+        (other.runtimeType == runtimeType && other is SuccessCoupon);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingAdd,
-    required TResult Function() successAdd,
-    required TResult Function(String erorr) errorAdd,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseCart cartResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrDelete,
-    required TResult Function() selectColor,
-    required TResult Function() selectsize,
-  }) {
-    return selectColor();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingAdd,
-    TResult? Function()? successAdd,
-    TResult? Function(String erorr)? errorAdd,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseCart cartResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? selectColor,
-    TResult? Function()? selectsize,
-  }) {
-    return selectColor?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingAdd,
-    TResult Function()? successAdd,
-    TResult Function(String erorr)? errorAdd,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseCart cartResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrDelete,
-    TResult Function()? selectColor,
-    TResult Function()? selectsize,
-    required TResult orElse(),
-  }) {
-    if (selectColor != null) {
-      return selectColor();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingAdd value) loadingAdd,
-    required TResult Function(SuccessAdd value) successAdd,
-    required TResult Function(ErrorAdd value) errorAdd,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCoupon value) selectColor,
-    required TResult Function(SuccessCoupon value) selectsize,
-  }) {
-    return selectColor(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingAdd value)? loadingAdd,
-    TResult? Function(SuccessAdd value)? successAdd,
-    TResult? Function(ErrorAdd value)? errorAdd,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCoupon value)? selectColor,
-    TResult? Function(SuccessCoupon value)? selectsize,
-  }) {
-    return selectColor?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingAdd value)? loadingAdd,
-    TResult Function(SuccessAdd value)? successAdd,
-    TResult Function(ErrorAdd value)? errorAdd,
-    TResult Function(LoadingGet value)? loadingGet,
-    TResult Function(SuccessGet value)? successGet,
-    TResult Function(ErorrGet value)? erorrGet,
-    TResult Function(LoadingDelete value)? loadingDelete,
-    TResult Function(Successdelete value)? successdelete,
-    TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCoupon value)? selectColor,
-    TResult Function(SuccessCoupon value)? selectsize,
-    required TResult orElse(),
-  }) {
-    if (selectColor != null) {
-      return selectColor(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class LoadingCoupon implements CartState {
-  const factory LoadingCoupon() = _$LoadingCouponImpl;
-}
-
-/// @nodoc
-abstract class _$$SuccessCouponImplCopyWith<$Res> {
-  factory _$$SuccessCouponImplCopyWith(
-          _$SuccessCouponImpl value, $Res Function(_$SuccessCouponImpl) then) =
-      __$$SuccessCouponImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$SuccessCouponImplCopyWithImpl<$Res>
-    extends _$CartStateCopyWithImpl<$Res, _$SuccessCouponImpl>
-    implements _$$SuccessCouponImplCopyWith<$Res> {
-  __$$SuccessCouponImplCopyWithImpl(
-      _$SuccessCouponImpl _value, $Res Function(_$SuccessCouponImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$SuccessCouponImpl implements SuccessCoupon {
-  const _$SuccessCouponImpl();
 
   @override
   String toString() {
     return 'CartState.selectsize()';
   }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SuccessCouponImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingAdd,
-    required TResult Function() successAdd,
-    required TResult Function(String erorr) errorAdd,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseCart cartResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrDelete,
-    required TResult Function() selectColor,
-    required TResult Function() selectsize,
-  }) {
-    return selectsize();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingAdd,
-    TResult? Function()? successAdd,
-    TResult? Function(String erorr)? errorAdd,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseCart cartResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? selectColor,
-    TResult? Function()? selectsize,
-  }) {
-    return selectsize?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingAdd,
-    TResult Function()? successAdd,
-    TResult Function(String erorr)? errorAdd,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseCart cartResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrDelete,
-    TResult Function()? selectColor,
-    TResult Function()? selectsize,
-    required TResult orElse(),
-  }) {
-    if (selectsize != null) {
-      return selectsize();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingAdd value) loadingAdd,
-    required TResult Function(SuccessAdd value) successAdd,
-    required TResult Function(ErrorAdd value) errorAdd,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCoupon value) selectColor,
-    required TResult Function(SuccessCoupon value) selectsize,
-  }) {
-    return selectsize(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingAdd value)? loadingAdd,
-    TResult? Function(SuccessAdd value)? successAdd,
-    TResult? Function(ErrorAdd value)? errorAdd,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCoupon value)? selectColor,
-    TResult? Function(SuccessCoupon value)? selectsize,
-  }) {
-    return selectsize?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingAdd value)? loadingAdd,
-    TResult Function(SuccessAdd value)? successAdd,
-    TResult Function(ErrorAdd value)? errorAdd,
-    TResult Function(LoadingGet value)? loadingGet,
-    TResult Function(SuccessGet value)? successGet,
-    TResult Function(ErorrGet value)? erorrGet,
-    TResult Function(LoadingDelete value)? loadingDelete,
-    TResult Function(Successdelete value)? successdelete,
-    TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCoupon value)? selectColor,
-    TResult Function(SuccessCoupon value)? selectsize,
-    required TResult orElse(),
-  }) {
-    if (selectsize != null) {
-      return selectsize(this);
-    }
-    return orElse();
-  }
 }
 
-abstract class SuccessCoupon implements CartState {
-  const factory SuccessCoupon() = _$SuccessCouponImpl;
-}
+// dart format on

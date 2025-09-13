@@ -24,7 +24,8 @@ class PageBuilder extends StatelessWidget {
         itemBuilder: (context, index) {
           return Container(
               padding: const EdgeInsets.only(left: 10, right: 10),
-              child: Column(children: [
+              child: Column(spacing: 15, children: [
+                const Spacer(),
                 Center(
                   child: FadeInDown(
                     child: Lottie.asset(
@@ -34,6 +35,7 @@ class PageBuilder extends StatelessWidget {
                     ),
                   ),
                 ),
+                const Spacer(),
                 FadeInDown(
                     delay: const Duration(milliseconds: 500),
                     child: Text(onbordingData[index].title,

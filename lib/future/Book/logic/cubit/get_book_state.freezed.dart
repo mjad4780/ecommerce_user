@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,354 +9,362 @@ part of 'get_book_state.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$GetBooKState {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(List<BookEntity> book) ucces,
-    required TResult Function(String erorr) erorr,
-    required TResult Function() fath,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(List<BookEntity> book)? ucces,
-    TResult? Function(String erorr)? erorr,
-    TResult? Function()? fath,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(List<BookEntity> book)? ucces,
-    TResult Function(String erorr)? erorr,
-    TResult Function()? fath,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Succes value) ucces,
-    required TResult Function(Erorr value) erorr,
-    required TResult Function(fath value) fath,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Succes value)? ucces,
-    TResult? Function(Erorr value)? erorr,
-    TResult? Function(fath value)? fath,
-  }) =>
-      throw _privateConstructorUsedError;
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is GetBooKState);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'GetBooKState()';
+  }
+}
+
+/// @nodoc
+class $GetBooKStateCopyWith<$Res> {
+  $GetBooKStateCopyWith(GetBooKState _, $Res Function(GetBooKState) __);
+}
+
+/// Adds pattern-matching-related methods to [GetBooKState].
+extension GetBooKStatePatterns on GetBooKState {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(Loading value)? loading,
     TResult Function(Succes value)? ucces,
     TResult Function(Erorr value)? erorr,
-    TResult Function(fath value)? fath,
+    TResult Function(fath value)? fathloading,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial(_that);
+      case Loading() when loading != null:
+        return loading(_that);
+      case Succes() when ucces != null:
+        return ucces(_that);
+      case Erorr() when erorr != null:
+        return erorr(_that);
+      case fath() when fathloading != null:
+        return fathloading(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Succes value) ucces,
+    required TResult Function(Erorr value) erorr,
+    required TResult Function(fath value) fathloading,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial():
+        return initial(_that);
+      case Loading():
+        return loading(_that);
+      case Succes():
+        return ucces(_that);
+      case Erorr():
+        return erorr(_that);
+      case fath():
+        return fathloading(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Succes value)? ucces,
+    TResult? Function(Erorr value)? erorr,
+    TResult? Function(fath value)? fathloading,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial(_that);
+      case Loading() when loading != null:
+        return loading(_that);
+      case Succes() when ucces != null:
+        return ucces(_that);
+      case Erorr() when erorr != null:
+        return erorr(_that);
+      case fath() when fathloading != null:
+        return fathloading(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<BookEntity> book)? ucces,
+    TResult Function(String erorr)? erorr,
+    TResult Function()? fathloading,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial();
+      case Loading() when loading != null:
+        return loading();
+      case Succes() when ucces != null:
+        return ucces(_that.book);
+      case Erorr() when erorr != null:
+        return erorr(_that.erorr);
+      case fath() when fathloading != null:
+        return fathloading();
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<BookEntity> book) ucces,
+    required TResult Function(String erorr) erorr,
+    required TResult Function() fathloading,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial():
+        return initial();
+      case Loading():
+        return loading();
+      case Succes():
+        return ucces(_that.book);
+      case Erorr():
+        return erorr(_that.erorr);
+      case fath():
+        return fathloading();
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<BookEntity> book)? ucces,
+    TResult? Function(String erorr)? erorr,
+    TResult? Function()? fathloading,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial();
+      case Loading() when loading != null:
+        return loading();
+      case Succes() when ucces != null:
+        return ucces(_that.book);
+      case Erorr() when erorr != null:
+        return erorr(_that.erorr);
+      case fath() when fathloading != null:
+        return fathloading();
+      case _:
+        return null;
+    }
+  }
 }
 
 /// @nodoc
-abstract class $GetBooKStateCopyWith<$Res> {
-  factory $GetBooKStateCopyWith(
-          GetBooKState value, $Res Function(GetBooKState) then) =
-      _$GetBooKStateCopyWithImpl<$Res, GetBooKState>;
-}
 
-/// @nodoc
-class _$GetBooKStateCopyWithImpl<$Res, $Val extends GetBooKState>
-    implements $GetBooKStateCopyWith<$Res> {
-  _$GetBooKStateCopyWithImpl(this._value, this._then);
+class _Initial implements GetBooKState {
+  const _Initial();
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-}
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _Initial);
+  }
 
-/// @nodoc
-abstract class _$$InitialImplCopyWith<$Res> {
-  factory _$$InitialImplCopyWith(
-          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
-      __$$InitialImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$InitialImplCopyWithImpl<$Res>
-    extends _$GetBooKStateCopyWithImpl<$Res, _$InitialImpl>
-    implements _$$InitialImplCopyWith<$Res> {
-  __$$InitialImplCopyWithImpl(
-      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$InitialImpl implements _Initial {
-  const _$InitialImpl();
+  @override
+  int get hashCode => runtimeType.hashCode;
 
   @override
   String toString() {
     return 'GetBooKState.initial()';
   }
+}
+
+/// @nodoc
+
+class Loading implements GetBooKState {
+  const Loading();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InitialImpl);
+        (other.runtimeType == runtimeType && other is Loading);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(List<BookEntity> book) ucces,
-    required TResult Function(String erorr) erorr,
-    required TResult Function() fath,
-  }) {
-    return initial();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(List<BookEntity> book)? ucces,
-    TResult? Function(String erorr)? erorr,
-    TResult? Function()? fath,
-  }) {
-    return initial?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(List<BookEntity> book)? ucces,
-    TResult Function(String erorr)? erorr,
-    TResult Function()? fath,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Succes value) ucces,
-    required TResult Function(Erorr value) erorr,
-    required TResult Function(fath value) fath,
-  }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Succes value)? ucces,
-    TResult? Function(Erorr value)? erorr,
-    TResult? Function(fath value)? fath,
-  }) {
-    return initial?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loading value)? loading,
-    TResult Function(Succes value)? ucces,
-    TResult Function(Erorr value)? erorr,
-    TResult Function(fath value)? fath,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Initial implements GetBooKState {
-  const factory _Initial() = _$InitialImpl;
-}
-
-/// @nodoc
-abstract class _$$LoadingImplCopyWith<$Res> {
-  factory _$$LoadingImplCopyWith(
-          _$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
-      __$$LoadingImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$LoadingImplCopyWithImpl<$Res>
-    extends _$GetBooKStateCopyWithImpl<$Res, _$LoadingImpl>
-    implements _$$LoadingImplCopyWith<$Res> {
-  __$$LoadingImplCopyWithImpl(
-      _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$LoadingImpl implements Loading {
-  const _$LoadingImpl();
 
   @override
   String toString() {
     return 'GetBooKState.loading()';
   }
+}
+
+/// @nodoc
+
+class Succes implements GetBooKState {
+  const Succes({required final List<BookEntity> book}) : _book = book;
+
+  final List<BookEntity> _book;
+  List<BookEntity> get book {
+    if (_book is EqualUnmodifiableListView) return _book;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_book);
+  }
+
+  /// Create a copy of GetBooKState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SuccesCopyWith<Succes> get copyWith =>
+      _$SuccesCopyWithImpl<Succes>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingImpl);
+        (other.runtimeType == runtimeType &&
+            other is Succes &&
+            const DeepCollectionEquality().equals(other._book, _book));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_book));
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(List<BookEntity> book) ucces,
-    required TResult Function(String erorr) erorr,
-    required TResult Function() fath,
-  }) {
-    return loading();
+  String toString() {
+    return 'GetBooKState.ucces(book: $book)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(List<BookEntity> book)? ucces,
-    TResult? Function(String erorr)? erorr,
-    TResult? Function()? fath,
-  }) {
-    return loading?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(List<BookEntity> book)? ucces,
-    TResult Function(String erorr)? erorr,
-    TResult Function()? fath,
-    required TResult orElse(),
-  }) {
-    if (loading != null) {
-      return loading();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Succes value) ucces,
-    required TResult Function(Erorr value) erorr,
-    required TResult Function(fath value) fath,
-  }) {
-    return loading(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Succes value)? ucces,
-    TResult? Function(Erorr value)? erorr,
-    TResult? Function(fath value)? fath,
-  }) {
-    return loading?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loading value)? loading,
-    TResult Function(Succes value)? ucces,
-    TResult Function(Erorr value)? erorr,
-    TResult Function(fath value)? fath,
-    required TResult orElse(),
-  }) {
-    if (loading != null) {
-      return loading(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class Loading implements GetBooKState {
-  const factory Loading() = _$LoadingImpl;
 }
 
 /// @nodoc
-abstract class _$$SuccesImplCopyWith<$Res> {
-  factory _$$SuccesImplCopyWith(
-          _$SuccesImpl value, $Res Function(_$SuccesImpl) then) =
-      __$$SuccesImplCopyWithImpl<$Res>;
+abstract mixin class $SuccesCopyWith<$Res>
+    implements $GetBooKStateCopyWith<$Res> {
+  factory $SuccesCopyWith(Succes value, $Res Function(Succes) _then) =
+      _$SuccesCopyWithImpl;
   @useResult
   $Res call({List<BookEntity> book});
 }
 
 /// @nodoc
-class __$$SuccesImplCopyWithImpl<$Res>
-    extends _$GetBooKStateCopyWithImpl<$Res, _$SuccesImpl>
-    implements _$$SuccesImplCopyWith<$Res> {
-  __$$SuccesImplCopyWithImpl(
-      _$SuccesImpl _value, $Res Function(_$SuccesImpl) _then)
-      : super(_value, _then);
+class _$SuccesCopyWithImpl<$Res> implements $SuccesCopyWith<$Res> {
+  _$SuccesCopyWithImpl(this._self, this._then);
 
+  final Succes _self;
+  final $Res Function(Succes) _then;
+
+  /// Create a copy of GetBooKState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? book = null,
   }) {
-    return _then(_$SuccesImpl(
+    return _then(Succes(
       book: null == book
-          ? _value._book
+          ? _self._book
           : book // ignore: cast_nullable_to_non_nullable
               as List<BookEntity>,
     ));
@@ -365,155 +373,60 @@ class __$$SuccesImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SuccesImpl implements Succes {
-  const _$SuccesImpl({required final List<BookEntity> book}) : _book = book;
+class Erorr implements GetBooKState {
+  const Erorr({required this.erorr});
 
-  final List<BookEntity> _book;
-  @override
-  List<BookEntity> get book {
-    if (_book is EqualUnmodifiableListView) return _book;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_book);
-  }
+  final String erorr;
 
-  @override
-  String toString() {
-    return 'GetBooKState.ucces(book: $book)';
-  }
+  /// Create a copy of GetBooKState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ErorrCopyWith<Erorr> get copyWith =>
+      _$ErorrCopyWithImpl<Erorr>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SuccesImpl &&
-            const DeepCollectionEquality().equals(other._book, _book));
+            other is Erorr &&
+            (identical(other.erorr, erorr) || other.erorr == erorr));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_book));
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SuccesImplCopyWith<_$SuccesImpl> get copyWith =>
-      __$$SuccesImplCopyWithImpl<_$SuccesImpl>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, erorr);
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(List<BookEntity> book) ucces,
-    required TResult Function(String erorr) erorr,
-    required TResult Function() fath,
-  }) {
-    return ucces(book);
+  String toString() {
+    return 'GetBooKState.erorr(erorr: $erorr)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(List<BookEntity> book)? ucces,
-    TResult? Function(String erorr)? erorr,
-    TResult? Function()? fath,
-  }) {
-    return ucces?.call(book);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(List<BookEntity> book)? ucces,
-    TResult Function(String erorr)? erorr,
-    TResult Function()? fath,
-    required TResult orElse(),
-  }) {
-    if (ucces != null) {
-      return ucces(book);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Succes value) ucces,
-    required TResult Function(Erorr value) erorr,
-    required TResult Function(fath value) fath,
-  }) {
-    return ucces(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Succes value)? ucces,
-    TResult? Function(Erorr value)? erorr,
-    TResult? Function(fath value)? fath,
-  }) {
-    return ucces?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loading value)? loading,
-    TResult Function(Succes value)? ucces,
-    TResult Function(Erorr value)? erorr,
-    TResult Function(fath value)? fath,
-    required TResult orElse(),
-  }) {
-    if (ucces != null) {
-      return ucces(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class Succes implements GetBooKState {
-  const factory Succes({required final List<BookEntity> book}) = _$SuccesImpl;
-
-  List<BookEntity> get book;
-  @JsonKey(ignore: true)
-  _$$SuccesImplCopyWith<_$SuccesImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$ErorrImplCopyWith<$Res> {
-  factory _$$ErorrImplCopyWith(
-          _$ErorrImpl value, $Res Function(_$ErorrImpl) then) =
-      __$$ErorrImplCopyWithImpl<$Res>;
+abstract mixin class $ErorrCopyWith<$Res>
+    implements $GetBooKStateCopyWith<$Res> {
+  factory $ErorrCopyWith(Erorr value, $Res Function(Erorr) _then) =
+      _$ErorrCopyWithImpl;
   @useResult
   $Res call({String erorr});
 }
 
 /// @nodoc
-class __$$ErorrImplCopyWithImpl<$Res>
-    extends _$GetBooKStateCopyWithImpl<$Res, _$ErorrImpl>
-    implements _$$ErorrImplCopyWith<$Res> {
-  __$$ErorrImplCopyWithImpl(
-      _$ErorrImpl _value, $Res Function(_$ErorrImpl) _then)
-      : super(_value, _then);
+class _$ErorrCopyWithImpl<$Res> implements $ErorrCopyWith<$Res> {
+  _$ErorrCopyWithImpl(this._self, this._then);
 
+  final Erorr _self;
+  final $Res Function(Erorr) _then;
+
+  /// Create a copy of GetBooKState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? erorr = null,
   }) {
-    return _then(_$ErorrImpl(
+    return _then(Erorr(
       erorr: null == erorr
-          ? _value.erorr
+          ? _self.erorr
           : erorr // ignore: cast_nullable_to_non_nullable
               as String,
     ));
@@ -522,239 +435,22 @@ class __$$ErorrImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErorrImpl implements Erorr {
-  const _$ErorrImpl({required this.erorr});
-
-  @override
-  final String erorr;
-
-  @override
-  String toString() {
-    return 'GetBooKState.erorr(erorr: $erorr)';
-  }
+class fath implements GetBooKState {
+  const fath();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ErorrImpl &&
-            (identical(other.erorr, erorr) || other.erorr == erorr));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, erorr);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ErorrImplCopyWith<_$ErorrImpl> get copyWith =>
-      __$$ErorrImplCopyWithImpl<_$ErorrImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(List<BookEntity> book) ucces,
-    required TResult Function(String erorr) erorr,
-    required TResult Function() fath,
-  }) {
-    return erorr(this.erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(List<BookEntity> book)? ucces,
-    TResult? Function(String erorr)? erorr,
-    TResult? Function()? fath,
-  }) {
-    return erorr?.call(this.erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(List<BookEntity> book)? ucces,
-    TResult Function(String erorr)? erorr,
-    TResult Function()? fath,
-    required TResult orElse(),
-  }) {
-    if (erorr != null) {
-      return erorr(this.erorr);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Succes value) ucces,
-    required TResult Function(Erorr value) erorr,
-    required TResult Function(fath value) fath,
-  }) {
-    return erorr(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Succes value)? ucces,
-    TResult? Function(Erorr value)? erorr,
-    TResult? Function(fath value)? fath,
-  }) {
-    return erorr?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loading value)? loading,
-    TResult Function(Succes value)? ucces,
-    TResult Function(Erorr value)? erorr,
-    TResult Function(fath value)? fath,
-    required TResult orElse(),
-  }) {
-    if (erorr != null) {
-      return erorr(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class Erorr implements GetBooKState {
-  const factory Erorr({required final String erorr}) = _$ErorrImpl;
-
-  String get erorr;
-  @JsonKey(ignore: true)
-  _$$ErorrImplCopyWith<_$ErorrImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$fathImplCopyWith<$Res> {
-  factory _$$fathImplCopyWith(
-          _$fathImpl value, $Res Function(_$fathImpl) then) =
-      __$$fathImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$fathImplCopyWithImpl<$Res>
-    extends _$GetBooKStateCopyWithImpl<$Res, _$fathImpl>
-    implements _$$fathImplCopyWith<$Res> {
-  __$$fathImplCopyWithImpl(_$fathImpl _value, $Res Function(_$fathImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$fathImpl implements fath {
-  const _$fathImpl();
-
-  @override
-  String toString() {
-    return 'GetBooKState.fath()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$fathImpl);
+        (other.runtimeType == runtimeType && other is fath);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(List<BookEntity> book) ucces,
-    required TResult Function(String erorr) erorr,
-    required TResult Function() fath,
-  }) {
-    return fath();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(List<BookEntity> book)? ucces,
-    TResult? Function(String erorr)? erorr,
-    TResult? Function()? fath,
-  }) {
-    return fath?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(List<BookEntity> book)? ucces,
-    TResult Function(String erorr)? erorr,
-    TResult Function()? fath,
-    required TResult orElse(),
-  }) {
-    if (fath != null) {
-      return fath();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Succes value) ucces,
-    required TResult Function(Erorr value) erorr,
-    required TResult Function(fath value) fath,
-  }) {
-    return fath(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Succes value)? ucces,
-    TResult? Function(Erorr value)? erorr,
-    TResult? Function(fath value)? fath,
-  }) {
-    return fath?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loading value)? loading,
-    TResult Function(Succes value)? ucces,
-    TResult Function(Erorr value)? erorr,
-    TResult Function(fath value)? fath,
-    required TResult orElse(),
-  }) {
-    if (fath != null) {
-      return fath(this);
-    }
-    return orElse();
+  String toString() {
+    return 'GetBooKState.fathloading()';
   }
 }
 
-abstract class fath implements GetBooKState {
-  const factory fath() = _$fathImpl;
-}
+// dart format on

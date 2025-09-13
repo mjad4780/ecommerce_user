@@ -1,5 +1,6 @@
 import '../../../../core/function/formDataPost.dart';
 import '../../../../core/networking/api_error_handler.dart';
+import '../../../../core/networking/api_error_model.dart';
 import '../../../../core/networking/api_result.dart';
 import '../../../../core/networking/api_service.dart';
 import '../../../../model/response_status/response_status.dart';
@@ -18,9 +19,14 @@ class VerfyCodeDate {
     };
     try {
       final response = await _api.verfCode(formDataPost(map));
+      if (response.status == "fail") {
+        return ApiResult.failure(
+            ApiErrorModel(status: response.status, messege: response.messege));
+      }
       return ApiResult.success(response);
     } catch (e) {
-      return ApiResult.failure(ErrorHandler.handle(e));
+      var error = ErrorHandler.handle(e);
+      return ApiResult.failure(error);
     }
   }
 
@@ -33,6 +39,10 @@ class VerfyCodeDate {
     };
     try {
       final response = await _api.sendVerfCode(formDataPost(map));
+      if (response.status == "fail") {
+        return ApiResult.failure(
+            ApiErrorModel(status: response.status, messege: response.messege));
+      }
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ErrorHandler.handle(e));

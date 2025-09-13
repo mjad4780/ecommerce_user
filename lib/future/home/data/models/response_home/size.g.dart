@@ -7,12 +7,11 @@ part of 'size.dart';
 // **************************************************************************
 
 Size _$SizeFromJson(Map<String, dynamic> json) => Size(
-      id: (json['id'] as num?)?.toInt(),
+      id: json['id']?.toString(),
       size: json['size'] as String?,
-      quantity: (json['quantity'] as num?)?.toInt(),
+      quantity: json['quantity']?.toString(),
       color: json['color'] as String?,
     );
-
 Map<String, dynamic> _$SizeToJson(Size instance) => <String, dynamic>{
       'id': instance.id,
       'size': instance.size,

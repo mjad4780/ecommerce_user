@@ -6,13 +6,13 @@ part 'setting.g.dart';
 @JsonSerializable()
 class Setting {
   @JsonKey(name: 'setting_id')
-  int? settingId;
+  String? settingId;
   @JsonKey(name: 'setting_title')
   String? settingTitle;
   @JsonKey(name: 'setting_body')
   String? settingBody;
   @JsonKey(name: 'setting_datedelvery')
-  int? settingDatedelvery;
+  String? settingDatedelvery;
   @JsonKey(name: 'setting_image')
   String? settingImage;
 

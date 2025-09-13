@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,99 +9,45 @@ part of 'check_cart_state.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$CheckCartState {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function() success,
-    required TResult Function(String erorr) erorr,
-    required TResult Function() loadingCoupon,
-    required TResult Function(CouponResponse coupon) successCoupon,
-    required TResult Function(String erorr) erorrCoupon,
-    required TResult Function() selectAdress,
-    required TResult Function() selectType,
-    required TResult Function() selectPayment,
-    required TResult Function() loadingPayment,
-    required TResult Function() uccessPayment,
-    required TResult Function(String erorr) erorrpayment,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function()? success,
-    TResult? Function(String erorr)? erorr,
-    TResult? Function()? loadingCoupon,
-    TResult? Function(CouponResponse coupon)? successCoupon,
-    TResult? Function(String erorr)? erorrCoupon,
-    TResult? Function()? selectAdress,
-    TResult? Function()? selectType,
-    TResult? Function()? selectPayment,
-    TResult? Function()? loadingPayment,
-    TResult? Function()? uccessPayment,
-    TResult? Function(String erorr)? erorrpayment,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function()? success,
-    TResult Function(String erorr)? erorr,
-    TResult Function()? loadingCoupon,
-    TResult Function(CouponResponse coupon)? successCoupon,
-    TResult Function(String erorr)? erorrCoupon,
-    TResult Function()? selectAdress,
-    TResult Function()? selectType,
-    TResult Function()? selectPayment,
-    TResult Function()? loadingPayment,
-    TResult Function()? uccessPayment,
-    TResult Function(String erorr)? erorrpayment,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Success value) success,
-    required TResult Function(Erorr value) erorr,
-    required TResult Function(LoadingCoupon value) loadingCoupon,
-    required TResult Function(SuccessCoupon value) successCoupon,
-    required TResult Function(ErorrCoupon value) erorrCoupon,
-    required TResult Function(SelectAdress value) selectAdress,
-    required TResult Function(SelectType value) selectType,
-    required TResult Function(SelectPayment value) selectPayment,
-    required TResult Function(LoadingPayment value) loadingPayment,
-    required TResult Function(SuccessPayment value) uccessPayment,
-    required TResult Function(Erorrpayment value) erorrpayment,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Success value)? success,
-    TResult? Function(Erorr value)? erorr,
-    TResult? Function(LoadingCoupon value)? loadingCoupon,
-    TResult? Function(SuccessCoupon value)? successCoupon,
-    TResult? Function(ErorrCoupon value)? erorrCoupon,
-    TResult? Function(SelectAdress value)? selectAdress,
-    TResult? Function(SelectType value)? selectType,
-    TResult? Function(SelectPayment value)? selectPayment,
-    TResult? Function(LoadingPayment value)? loadingPayment,
-    TResult? Function(SuccessPayment value)? uccessPayment,
-    TResult? Function(Erorrpayment value)? erorrpayment,
-  }) =>
-      throw _privateConstructorUsedError;
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is CheckCartState);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'CheckCartState()';
+  }
+}
+
+/// @nodoc
+class $CheckCartStateCopyWith<$Res> {
+  $CheckCartStateCopyWith(CheckCartState _, $Res Function(CheckCartState) __);
+}
+
+/// Adds pattern-matching-related methods to [CheckCartState].
+extension CheckCartStatePatterns on CheckCartState {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
@@ -118,557 +64,465 @@ mixin _$CheckCartState {
     TResult Function(SuccessPayment value)? uccessPayment,
     TResult Function(Erorrpayment value)? erorrpayment,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial(_that);
+      case Loading() when loading != null:
+        return loading(_that);
+      case Success() when success != null:
+        return success(_that);
+      case Erorr() when erorr != null:
+        return erorr(_that);
+      case LoadingCoupon() when loadingCoupon != null:
+        return loadingCoupon(_that);
+      case SuccessCoupon() when successCoupon != null:
+        return successCoupon(_that);
+      case ErorrCoupon() when erorrCoupon != null:
+        return erorrCoupon(_that);
+      case SelectAdress() when selectAdress != null:
+        return selectAdress(_that);
+      case SelectType() when selectType != null:
+        return selectType(_that);
+      case SelectPayment() when selectPayment != null:
+        return selectPayment(_that);
+      case LoadingPayment() when loadingPayment != null:
+        return loadingPayment(_that);
+      case SuccessPayment() when uccessPayment != null:
+        return uccessPayment(_that);
+      case Erorrpayment() when erorrpayment != null:
+        return erorrpayment(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Erorr value) erorr,
+    required TResult Function(LoadingCoupon value) loadingCoupon,
+    required TResult Function(SuccessCoupon value) successCoupon,
+    required TResult Function(ErorrCoupon value) erorrCoupon,
+    required TResult Function(SelectAdress value) selectAdress,
+    required TResult Function(SelectType value) selectType,
+    required TResult Function(SelectPayment value) selectPayment,
+    required TResult Function(LoadingPayment value) loadingPayment,
+    required TResult Function(SuccessPayment value) uccessPayment,
+    required TResult Function(Erorrpayment value) erorrpayment,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial():
+        return initial(_that);
+      case Loading():
+        return loading(_that);
+      case Success():
+        return success(_that);
+      case Erorr():
+        return erorr(_that);
+      case LoadingCoupon():
+        return loadingCoupon(_that);
+      case SuccessCoupon():
+        return successCoupon(_that);
+      case ErorrCoupon():
+        return erorrCoupon(_that);
+      case SelectAdress():
+        return selectAdress(_that);
+      case SelectType():
+        return selectType(_that);
+      case SelectPayment():
+        return selectPayment(_that);
+      case LoadingPayment():
+        return loadingPayment(_that);
+      case SuccessPayment():
+        return uccessPayment(_that);
+      case Erorrpayment():
+        return erorrpayment(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Erorr value)? erorr,
+    TResult? Function(LoadingCoupon value)? loadingCoupon,
+    TResult? Function(SuccessCoupon value)? successCoupon,
+    TResult? Function(ErorrCoupon value)? erorrCoupon,
+    TResult? Function(SelectAdress value)? selectAdress,
+    TResult? Function(SelectType value)? selectType,
+    TResult? Function(SelectPayment value)? selectPayment,
+    TResult? Function(LoadingPayment value)? loadingPayment,
+    TResult? Function(SuccessPayment value)? uccessPayment,
+    TResult? Function(Erorrpayment value)? erorrpayment,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial(_that);
+      case Loading() when loading != null:
+        return loading(_that);
+      case Success() when success != null:
+        return success(_that);
+      case Erorr() when erorr != null:
+        return erorr(_that);
+      case LoadingCoupon() when loadingCoupon != null:
+        return loadingCoupon(_that);
+      case SuccessCoupon() when successCoupon != null:
+        return successCoupon(_that);
+      case ErorrCoupon() when erorrCoupon != null:
+        return erorrCoupon(_that);
+      case SelectAdress() when selectAdress != null:
+        return selectAdress(_that);
+      case SelectType() when selectType != null:
+        return selectType(_that);
+      case SelectPayment() when selectPayment != null:
+        return selectPayment(_that);
+      case LoadingPayment() when loadingPayment != null:
+        return loadingPayment(_that);
+      case SuccessPayment() when uccessPayment != null:
+        return uccessPayment(_that);
+      case Erorrpayment() when erorrpayment != null:
+        return erorrpayment(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(String erorr)? erorr,
+    TResult Function()? loadingCoupon,
+    TResult Function(CouponResponse coupon)? successCoupon,
+    TResult Function(String erorr)? erorrCoupon,
+    TResult Function()? selectAdress,
+    TResult Function()? selectType,
+    TResult Function()? selectPayment,
+    TResult Function()? loadingPayment,
+    TResult Function()? uccessPayment,
+    TResult Function(String erorr)? erorrpayment,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial();
+      case Loading() when loading != null:
+        return loading();
+      case Success() when success != null:
+        return success();
+      case Erorr() when erorr != null:
+        return erorr(_that.erorr);
+      case LoadingCoupon() when loadingCoupon != null:
+        return loadingCoupon();
+      case SuccessCoupon() when successCoupon != null:
+        return successCoupon(_that.coupon);
+      case ErorrCoupon() when erorrCoupon != null:
+        return erorrCoupon(_that.erorr);
+      case SelectAdress() when selectAdress != null:
+        return selectAdress();
+      case SelectType() when selectType != null:
+        return selectType();
+      case SelectPayment() when selectPayment != null:
+        return selectPayment();
+      case LoadingPayment() when loadingPayment != null:
+        return loadingPayment();
+      case SuccessPayment() when uccessPayment != null:
+        return uccessPayment();
+      case Erorrpayment() when erorrpayment != null:
+        return erorrpayment(_that.erorr);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(String erorr) erorr,
+    required TResult Function() loadingCoupon,
+    required TResult Function(CouponResponse coupon) successCoupon,
+    required TResult Function(String erorr) erorrCoupon,
+    required TResult Function() selectAdress,
+    required TResult Function() selectType,
+    required TResult Function() selectPayment,
+    required TResult Function() loadingPayment,
+    required TResult Function() uccessPayment,
+    required TResult Function(String erorr) erorrpayment,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial():
+        return initial();
+      case Loading():
+        return loading();
+      case Success():
+        return success();
+      case Erorr():
+        return erorr(_that.erorr);
+      case LoadingCoupon():
+        return loadingCoupon();
+      case SuccessCoupon():
+        return successCoupon(_that.coupon);
+      case ErorrCoupon():
+        return erorrCoupon(_that.erorr);
+      case SelectAdress():
+        return selectAdress();
+      case SelectType():
+        return selectType();
+      case SelectPayment():
+        return selectPayment();
+      case LoadingPayment():
+        return loadingPayment();
+      case SuccessPayment():
+        return uccessPayment();
+      case Erorrpayment():
+        return erorrpayment(_that.erorr);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function(String erorr)? erorr,
+    TResult? Function()? loadingCoupon,
+    TResult? Function(CouponResponse coupon)? successCoupon,
+    TResult? Function(String erorr)? erorrCoupon,
+    TResult? Function()? selectAdress,
+    TResult? Function()? selectType,
+    TResult? Function()? selectPayment,
+    TResult? Function()? loadingPayment,
+    TResult? Function()? uccessPayment,
+    TResult? Function(String erorr)? erorrpayment,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial();
+      case Loading() when loading != null:
+        return loading();
+      case Success() when success != null:
+        return success();
+      case Erorr() when erorr != null:
+        return erorr(_that.erorr);
+      case LoadingCoupon() when loadingCoupon != null:
+        return loadingCoupon();
+      case SuccessCoupon() when successCoupon != null:
+        return successCoupon(_that.coupon);
+      case ErorrCoupon() when erorrCoupon != null:
+        return erorrCoupon(_that.erorr);
+      case SelectAdress() when selectAdress != null:
+        return selectAdress();
+      case SelectType() when selectType != null:
+        return selectType();
+      case SelectPayment() when selectPayment != null:
+        return selectPayment();
+      case LoadingPayment() when loadingPayment != null:
+        return loadingPayment();
+      case SuccessPayment() when uccessPayment != null:
+        return uccessPayment();
+      case Erorrpayment() when erorrpayment != null:
+        return erorrpayment(_that.erorr);
+      case _:
+        return null;
+    }
+  }
 }
 
 /// @nodoc
-abstract class $CheckCartStateCopyWith<$Res> {
-  factory $CheckCartStateCopyWith(
-          CheckCartState value, $Res Function(CheckCartState) then) =
-      _$CheckCartStateCopyWithImpl<$Res, CheckCartState>;
-}
 
-/// @nodoc
-class _$CheckCartStateCopyWithImpl<$Res, $Val extends CheckCartState>
-    implements $CheckCartStateCopyWith<$Res> {
-  _$CheckCartStateCopyWithImpl(this._value, this._then);
+class _Initial implements CheckCartState {
+  const _Initial();
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-}
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _Initial);
+  }
 
-/// @nodoc
-abstract class _$$InitialImplCopyWith<$Res> {
-  factory _$$InitialImplCopyWith(
-          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
-      __$$InitialImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$InitialImplCopyWithImpl<$Res>
-    extends _$CheckCartStateCopyWithImpl<$Res, _$InitialImpl>
-    implements _$$InitialImplCopyWith<$Res> {
-  __$$InitialImplCopyWithImpl(
-      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$InitialImpl implements _Initial {
-  const _$InitialImpl();
+  @override
+  int get hashCode => runtimeType.hashCode;
 
   @override
   String toString() {
     return 'CheckCartState.initial()';
   }
+}
+
+/// @nodoc
+
+class Loading implements CheckCartState {
+  const Loading();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InitialImpl);
+        (other.runtimeType == runtimeType && other is Loading);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function() success,
-    required TResult Function(String erorr) erorr,
-    required TResult Function() loadingCoupon,
-    required TResult Function(CouponResponse coupon) successCoupon,
-    required TResult Function(String erorr) erorrCoupon,
-    required TResult Function() selectAdress,
-    required TResult Function() selectType,
-    required TResult Function() selectPayment,
-    required TResult Function() loadingPayment,
-    required TResult Function() uccessPayment,
-    required TResult Function(String erorr) erorrpayment,
-  }) {
-    return initial();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function()? success,
-    TResult? Function(String erorr)? erorr,
-    TResult? Function()? loadingCoupon,
-    TResult? Function(CouponResponse coupon)? successCoupon,
-    TResult? Function(String erorr)? erorrCoupon,
-    TResult? Function()? selectAdress,
-    TResult? Function()? selectType,
-    TResult? Function()? selectPayment,
-    TResult? Function()? loadingPayment,
-    TResult? Function()? uccessPayment,
-    TResult? Function(String erorr)? erorrpayment,
-  }) {
-    return initial?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function()? success,
-    TResult Function(String erorr)? erorr,
-    TResult Function()? loadingCoupon,
-    TResult Function(CouponResponse coupon)? successCoupon,
-    TResult Function(String erorr)? erorrCoupon,
-    TResult Function()? selectAdress,
-    TResult Function()? selectType,
-    TResult Function()? selectPayment,
-    TResult Function()? loadingPayment,
-    TResult Function()? uccessPayment,
-    TResult Function(String erorr)? erorrpayment,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Success value) success,
-    required TResult Function(Erorr value) erorr,
-    required TResult Function(LoadingCoupon value) loadingCoupon,
-    required TResult Function(SuccessCoupon value) successCoupon,
-    required TResult Function(ErorrCoupon value) erorrCoupon,
-    required TResult Function(SelectAdress value) selectAdress,
-    required TResult Function(SelectType value) selectType,
-    required TResult Function(SelectPayment value) selectPayment,
-    required TResult Function(LoadingPayment value) loadingPayment,
-    required TResult Function(SuccessPayment value) uccessPayment,
-    required TResult Function(Erorrpayment value) erorrpayment,
-  }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Success value)? success,
-    TResult? Function(Erorr value)? erorr,
-    TResult? Function(LoadingCoupon value)? loadingCoupon,
-    TResult? Function(SuccessCoupon value)? successCoupon,
-    TResult? Function(ErorrCoupon value)? erorrCoupon,
-    TResult? Function(SelectAdress value)? selectAdress,
-    TResult? Function(SelectType value)? selectType,
-    TResult? Function(SelectPayment value)? selectPayment,
-    TResult? Function(LoadingPayment value)? loadingPayment,
-    TResult? Function(SuccessPayment value)? uccessPayment,
-    TResult? Function(Erorrpayment value)? erorrpayment,
-  }) {
-    return initial?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loading value)? loading,
-    TResult Function(Success value)? success,
-    TResult Function(Erorr value)? erorr,
-    TResult Function(LoadingCoupon value)? loadingCoupon,
-    TResult Function(SuccessCoupon value)? successCoupon,
-    TResult Function(ErorrCoupon value)? erorrCoupon,
-    TResult Function(SelectAdress value)? selectAdress,
-    TResult Function(SelectType value)? selectType,
-    TResult Function(SelectPayment value)? selectPayment,
-    TResult Function(LoadingPayment value)? loadingPayment,
-    TResult Function(SuccessPayment value)? uccessPayment,
-    TResult Function(Erorrpayment value)? erorrpayment,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Initial implements CheckCartState {
-  const factory _Initial() = _$InitialImpl;
-}
-
-/// @nodoc
-abstract class _$$LoadingImplCopyWith<$Res> {
-  factory _$$LoadingImplCopyWith(
-          _$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
-      __$$LoadingImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$LoadingImplCopyWithImpl<$Res>
-    extends _$CheckCartStateCopyWithImpl<$Res, _$LoadingImpl>
-    implements _$$LoadingImplCopyWith<$Res> {
-  __$$LoadingImplCopyWithImpl(
-      _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$LoadingImpl implements Loading {
-  const _$LoadingImpl();
 
   @override
   String toString() {
     return 'CheckCartState.loading()';
   }
+}
+
+/// @nodoc
+
+class Success implements CheckCartState {
+  const Success();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingImpl);
+        (other.runtimeType == runtimeType && other is Success);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function() success,
-    required TResult Function(String erorr) erorr,
-    required TResult Function() loadingCoupon,
-    required TResult Function(CouponResponse coupon) successCoupon,
-    required TResult Function(String erorr) erorrCoupon,
-    required TResult Function() selectAdress,
-    required TResult Function() selectType,
-    required TResult Function() selectPayment,
-    required TResult Function() loadingPayment,
-    required TResult Function() uccessPayment,
-    required TResult Function(String erorr) erorrpayment,
-  }) {
-    return loading();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function()? success,
-    TResult? Function(String erorr)? erorr,
-    TResult? Function()? loadingCoupon,
-    TResult? Function(CouponResponse coupon)? successCoupon,
-    TResult? Function(String erorr)? erorrCoupon,
-    TResult? Function()? selectAdress,
-    TResult? Function()? selectType,
-    TResult? Function()? selectPayment,
-    TResult? Function()? loadingPayment,
-    TResult? Function()? uccessPayment,
-    TResult? Function(String erorr)? erorrpayment,
-  }) {
-    return loading?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function()? success,
-    TResult Function(String erorr)? erorr,
-    TResult Function()? loadingCoupon,
-    TResult Function(CouponResponse coupon)? successCoupon,
-    TResult Function(String erorr)? erorrCoupon,
-    TResult Function()? selectAdress,
-    TResult Function()? selectType,
-    TResult Function()? selectPayment,
-    TResult Function()? loadingPayment,
-    TResult Function()? uccessPayment,
-    TResult Function(String erorr)? erorrpayment,
-    required TResult orElse(),
-  }) {
-    if (loading != null) {
-      return loading();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Success value) success,
-    required TResult Function(Erorr value) erorr,
-    required TResult Function(LoadingCoupon value) loadingCoupon,
-    required TResult Function(SuccessCoupon value) successCoupon,
-    required TResult Function(ErorrCoupon value) erorrCoupon,
-    required TResult Function(SelectAdress value) selectAdress,
-    required TResult Function(SelectType value) selectType,
-    required TResult Function(SelectPayment value) selectPayment,
-    required TResult Function(LoadingPayment value) loadingPayment,
-    required TResult Function(SuccessPayment value) uccessPayment,
-    required TResult Function(Erorrpayment value) erorrpayment,
-  }) {
-    return loading(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Success value)? success,
-    TResult? Function(Erorr value)? erorr,
-    TResult? Function(LoadingCoupon value)? loadingCoupon,
-    TResult? Function(SuccessCoupon value)? successCoupon,
-    TResult? Function(ErorrCoupon value)? erorrCoupon,
-    TResult? Function(SelectAdress value)? selectAdress,
-    TResult? Function(SelectType value)? selectType,
-    TResult? Function(SelectPayment value)? selectPayment,
-    TResult? Function(LoadingPayment value)? loadingPayment,
-    TResult? Function(SuccessPayment value)? uccessPayment,
-    TResult? Function(Erorrpayment value)? erorrpayment,
-  }) {
-    return loading?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loading value)? loading,
-    TResult Function(Success value)? success,
-    TResult Function(Erorr value)? erorr,
-    TResult Function(LoadingCoupon value)? loadingCoupon,
-    TResult Function(SuccessCoupon value)? successCoupon,
-    TResult Function(ErorrCoupon value)? erorrCoupon,
-    TResult Function(SelectAdress value)? selectAdress,
-    TResult Function(SelectType value)? selectType,
-    TResult Function(SelectPayment value)? selectPayment,
-    TResult Function(LoadingPayment value)? loadingPayment,
-    TResult Function(SuccessPayment value)? uccessPayment,
-    TResult Function(Erorrpayment value)? erorrpayment,
-    required TResult orElse(),
-  }) {
-    if (loading != null) {
-      return loading(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class Loading implements CheckCartState {
-  const factory Loading() = _$LoadingImpl;
-}
-
-/// @nodoc
-abstract class _$$SuccessImplCopyWith<$Res> {
-  factory _$$SuccessImplCopyWith(
-          _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
-      __$$SuccessImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$SuccessImplCopyWithImpl<$Res>
-    extends _$CheckCartStateCopyWithImpl<$Res, _$SuccessImpl>
-    implements _$$SuccessImplCopyWith<$Res> {
-  __$$SuccessImplCopyWithImpl(
-      _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$SuccessImpl implements Success {
-  const _$SuccessImpl();
 
   @override
   String toString() {
     return 'CheckCartState.success()';
   }
+}
+
+/// @nodoc
+
+class Erorr implements CheckCartState {
+  const Erorr({required this.erorr});
+
+  final String erorr;
+
+  /// Create a copy of CheckCartState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ErorrCopyWith<Erorr> get copyWith =>
+      _$ErorrCopyWithImpl<Erorr>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SuccessImpl);
+        (other.runtimeType == runtimeType &&
+            other is Erorr &&
+            (identical(other.erorr, erorr) || other.erorr == erorr));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, erorr);
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function() success,
-    required TResult Function(String erorr) erorr,
-    required TResult Function() loadingCoupon,
-    required TResult Function(CouponResponse coupon) successCoupon,
-    required TResult Function(String erorr) erorrCoupon,
-    required TResult Function() selectAdress,
-    required TResult Function() selectType,
-    required TResult Function() selectPayment,
-    required TResult Function() loadingPayment,
-    required TResult Function() uccessPayment,
-    required TResult Function(String erorr) erorrpayment,
-  }) {
-    return success();
+  String toString() {
+    return 'CheckCartState.erorr(erorr: $erorr)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function()? success,
-    TResult? Function(String erorr)? erorr,
-    TResult? Function()? loadingCoupon,
-    TResult? Function(CouponResponse coupon)? successCoupon,
-    TResult? Function(String erorr)? erorrCoupon,
-    TResult? Function()? selectAdress,
-    TResult? Function()? selectType,
-    TResult? Function()? selectPayment,
-    TResult? Function()? loadingPayment,
-    TResult? Function()? uccessPayment,
-    TResult? Function(String erorr)? erorrpayment,
-  }) {
-    return success?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function()? success,
-    TResult Function(String erorr)? erorr,
-    TResult Function()? loadingCoupon,
-    TResult Function(CouponResponse coupon)? successCoupon,
-    TResult Function(String erorr)? erorrCoupon,
-    TResult Function()? selectAdress,
-    TResult Function()? selectType,
-    TResult Function()? selectPayment,
-    TResult Function()? loadingPayment,
-    TResult Function()? uccessPayment,
-    TResult Function(String erorr)? erorrpayment,
-    required TResult orElse(),
-  }) {
-    if (success != null) {
-      return success();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Success value) success,
-    required TResult Function(Erorr value) erorr,
-    required TResult Function(LoadingCoupon value) loadingCoupon,
-    required TResult Function(SuccessCoupon value) successCoupon,
-    required TResult Function(ErorrCoupon value) erorrCoupon,
-    required TResult Function(SelectAdress value) selectAdress,
-    required TResult Function(SelectType value) selectType,
-    required TResult Function(SelectPayment value) selectPayment,
-    required TResult Function(LoadingPayment value) loadingPayment,
-    required TResult Function(SuccessPayment value) uccessPayment,
-    required TResult Function(Erorrpayment value) erorrpayment,
-  }) {
-    return success(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Success value)? success,
-    TResult? Function(Erorr value)? erorr,
-    TResult? Function(LoadingCoupon value)? loadingCoupon,
-    TResult? Function(SuccessCoupon value)? successCoupon,
-    TResult? Function(ErorrCoupon value)? erorrCoupon,
-    TResult? Function(SelectAdress value)? selectAdress,
-    TResult? Function(SelectType value)? selectType,
-    TResult? Function(SelectPayment value)? selectPayment,
-    TResult? Function(LoadingPayment value)? loadingPayment,
-    TResult? Function(SuccessPayment value)? uccessPayment,
-    TResult? Function(Erorrpayment value)? erorrpayment,
-  }) {
-    return success?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loading value)? loading,
-    TResult Function(Success value)? success,
-    TResult Function(Erorr value)? erorr,
-    TResult Function(LoadingCoupon value)? loadingCoupon,
-    TResult Function(SuccessCoupon value)? successCoupon,
-    TResult Function(ErorrCoupon value)? erorrCoupon,
-    TResult Function(SelectAdress value)? selectAdress,
-    TResult Function(SelectType value)? selectType,
-    TResult Function(SelectPayment value)? selectPayment,
-    TResult Function(LoadingPayment value)? loadingPayment,
-    TResult Function(SuccessPayment value)? uccessPayment,
-    TResult Function(Erorrpayment value)? erorrpayment,
-    required TResult orElse(),
-  }) {
-    if (success != null) {
-      return success(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class Success implements CheckCartState {
-  const factory Success() = _$SuccessImpl;
 }
 
 /// @nodoc
-abstract class _$$ErorrImplCopyWith<$Res> {
-  factory _$$ErorrImplCopyWith(
-          _$ErorrImpl value, $Res Function(_$ErorrImpl) then) =
-      __$$ErorrImplCopyWithImpl<$Res>;
+abstract mixin class $ErorrCopyWith<$Res>
+    implements $CheckCartStateCopyWith<$Res> {
+  factory $ErorrCopyWith(Erorr value, $Res Function(Erorr) _then) =
+      _$ErorrCopyWithImpl;
   @useResult
   $Res call({String erorr});
 }
 
 /// @nodoc
-class __$$ErorrImplCopyWithImpl<$Res>
-    extends _$CheckCartStateCopyWithImpl<$Res, _$ErorrImpl>
-    implements _$$ErorrImplCopyWith<$Res> {
-  __$$ErorrImplCopyWithImpl(
-      _$ErorrImpl _value, $Res Function(_$ErorrImpl) _then)
-      : super(_value, _then);
+class _$ErorrCopyWithImpl<$Res> implements $ErorrCopyWith<$Res> {
+  _$ErorrCopyWithImpl(this._self, this._then);
 
+  final Erorr _self;
+  final $Res Function(Erorr) _then;
+
+  /// Create a copy of CheckCartState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? erorr = null,
   }) {
-    return _then(_$ErorrImpl(
+    return _then(Erorr(
       erorr: null == erorr
-          ? _value.erorr
+          ? _self.erorr
           : erorr // ignore: cast_nullable_to_non_nullable
               as String,
     ));
@@ -677,365 +531,82 @@ class __$$ErorrImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErorrImpl implements Erorr {
-  const _$ErorrImpl({required this.erorr});
-
-  @override
-  final String erorr;
-
-  @override
-  String toString() {
-    return 'CheckCartState.erorr(erorr: $erorr)';
-  }
+class LoadingCoupon implements CheckCartState {
+  const LoadingCoupon();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ErorrImpl &&
-            (identical(other.erorr, erorr) || other.erorr == erorr));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, erorr);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ErorrImplCopyWith<_$ErorrImpl> get copyWith =>
-      __$$ErorrImplCopyWithImpl<_$ErorrImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function() success,
-    required TResult Function(String erorr) erorr,
-    required TResult Function() loadingCoupon,
-    required TResult Function(CouponResponse coupon) successCoupon,
-    required TResult Function(String erorr) erorrCoupon,
-    required TResult Function() selectAdress,
-    required TResult Function() selectType,
-    required TResult Function() selectPayment,
-    required TResult Function() loadingPayment,
-    required TResult Function() uccessPayment,
-    required TResult Function(String erorr) erorrpayment,
-  }) {
-    return erorr(this.erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function()? success,
-    TResult? Function(String erorr)? erorr,
-    TResult? Function()? loadingCoupon,
-    TResult? Function(CouponResponse coupon)? successCoupon,
-    TResult? Function(String erorr)? erorrCoupon,
-    TResult? Function()? selectAdress,
-    TResult? Function()? selectType,
-    TResult? Function()? selectPayment,
-    TResult? Function()? loadingPayment,
-    TResult? Function()? uccessPayment,
-    TResult? Function(String erorr)? erorrpayment,
-  }) {
-    return erorr?.call(this.erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function()? success,
-    TResult Function(String erorr)? erorr,
-    TResult Function()? loadingCoupon,
-    TResult Function(CouponResponse coupon)? successCoupon,
-    TResult Function(String erorr)? erorrCoupon,
-    TResult Function()? selectAdress,
-    TResult Function()? selectType,
-    TResult Function()? selectPayment,
-    TResult Function()? loadingPayment,
-    TResult Function()? uccessPayment,
-    TResult Function(String erorr)? erorrpayment,
-    required TResult orElse(),
-  }) {
-    if (erorr != null) {
-      return erorr(this.erorr);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Success value) success,
-    required TResult Function(Erorr value) erorr,
-    required TResult Function(LoadingCoupon value) loadingCoupon,
-    required TResult Function(SuccessCoupon value) successCoupon,
-    required TResult Function(ErorrCoupon value) erorrCoupon,
-    required TResult Function(SelectAdress value) selectAdress,
-    required TResult Function(SelectType value) selectType,
-    required TResult Function(SelectPayment value) selectPayment,
-    required TResult Function(LoadingPayment value) loadingPayment,
-    required TResult Function(SuccessPayment value) uccessPayment,
-    required TResult Function(Erorrpayment value) erorrpayment,
-  }) {
-    return erorr(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Success value)? success,
-    TResult? Function(Erorr value)? erorr,
-    TResult? Function(LoadingCoupon value)? loadingCoupon,
-    TResult? Function(SuccessCoupon value)? successCoupon,
-    TResult? Function(ErorrCoupon value)? erorrCoupon,
-    TResult? Function(SelectAdress value)? selectAdress,
-    TResult? Function(SelectType value)? selectType,
-    TResult? Function(SelectPayment value)? selectPayment,
-    TResult? Function(LoadingPayment value)? loadingPayment,
-    TResult? Function(SuccessPayment value)? uccessPayment,
-    TResult? Function(Erorrpayment value)? erorrpayment,
-  }) {
-    return erorr?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loading value)? loading,
-    TResult Function(Success value)? success,
-    TResult Function(Erorr value)? erorr,
-    TResult Function(LoadingCoupon value)? loadingCoupon,
-    TResult Function(SuccessCoupon value)? successCoupon,
-    TResult Function(ErorrCoupon value)? erorrCoupon,
-    TResult Function(SelectAdress value)? selectAdress,
-    TResult Function(SelectType value)? selectType,
-    TResult Function(SelectPayment value)? selectPayment,
-    TResult Function(LoadingPayment value)? loadingPayment,
-    TResult Function(SuccessPayment value)? uccessPayment,
-    TResult Function(Erorrpayment value)? erorrpayment,
-    required TResult orElse(),
-  }) {
-    if (erorr != null) {
-      return erorr(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class Erorr implements CheckCartState {
-  const factory Erorr({required final String erorr}) = _$ErorrImpl;
-
-  String get erorr;
-  @JsonKey(ignore: true)
-  _$$ErorrImplCopyWith<_$ErorrImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$LoadingCouponImplCopyWith<$Res> {
-  factory _$$LoadingCouponImplCopyWith(
-          _$LoadingCouponImpl value, $Res Function(_$LoadingCouponImpl) then) =
-      __$$LoadingCouponImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$LoadingCouponImplCopyWithImpl<$Res>
-    extends _$CheckCartStateCopyWithImpl<$Res, _$LoadingCouponImpl>
-    implements _$$LoadingCouponImplCopyWith<$Res> {
-  __$$LoadingCouponImplCopyWithImpl(
-      _$LoadingCouponImpl _value, $Res Function(_$LoadingCouponImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$LoadingCouponImpl implements LoadingCoupon {
-  const _$LoadingCouponImpl();
-
-  @override
-  String toString() {
-    return 'CheckCartState.loadingCoupon()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingCouponImpl);
+        (other.runtimeType == runtimeType && other is LoadingCoupon);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function() success,
-    required TResult Function(String erorr) erorr,
-    required TResult Function() loadingCoupon,
-    required TResult Function(CouponResponse coupon) successCoupon,
-    required TResult Function(String erorr) erorrCoupon,
-    required TResult Function() selectAdress,
-    required TResult Function() selectType,
-    required TResult Function() selectPayment,
-    required TResult Function() loadingPayment,
-    required TResult Function() uccessPayment,
-    required TResult Function(String erorr) erorrpayment,
-  }) {
-    return loadingCoupon();
+  String toString() {
+    return 'CheckCartState.loadingCoupon()';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function()? success,
-    TResult? Function(String erorr)? erorr,
-    TResult? Function()? loadingCoupon,
-    TResult? Function(CouponResponse coupon)? successCoupon,
-    TResult? Function(String erorr)? erorrCoupon,
-    TResult? Function()? selectAdress,
-    TResult? Function()? selectType,
-    TResult? Function()? selectPayment,
-    TResult? Function()? loadingPayment,
-    TResult? Function()? uccessPayment,
-    TResult? Function(String erorr)? erorrpayment,
-  }) {
-    return loadingCoupon?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function()? success,
-    TResult Function(String erorr)? erorr,
-    TResult Function()? loadingCoupon,
-    TResult Function(CouponResponse coupon)? successCoupon,
-    TResult Function(String erorr)? erorrCoupon,
-    TResult Function()? selectAdress,
-    TResult Function()? selectType,
-    TResult Function()? selectPayment,
-    TResult Function()? loadingPayment,
-    TResult Function()? uccessPayment,
-    TResult Function(String erorr)? erorrpayment,
-    required TResult orElse(),
-  }) {
-    if (loadingCoupon != null) {
-      return loadingCoupon();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Success value) success,
-    required TResult Function(Erorr value) erorr,
-    required TResult Function(LoadingCoupon value) loadingCoupon,
-    required TResult Function(SuccessCoupon value) successCoupon,
-    required TResult Function(ErorrCoupon value) erorrCoupon,
-    required TResult Function(SelectAdress value) selectAdress,
-    required TResult Function(SelectType value) selectType,
-    required TResult Function(SelectPayment value) selectPayment,
-    required TResult Function(LoadingPayment value) loadingPayment,
-    required TResult Function(SuccessPayment value) uccessPayment,
-    required TResult Function(Erorrpayment value) erorrpayment,
-  }) {
-    return loadingCoupon(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Success value)? success,
-    TResult? Function(Erorr value)? erorr,
-    TResult? Function(LoadingCoupon value)? loadingCoupon,
-    TResult? Function(SuccessCoupon value)? successCoupon,
-    TResult? Function(ErorrCoupon value)? erorrCoupon,
-    TResult? Function(SelectAdress value)? selectAdress,
-    TResult? Function(SelectType value)? selectType,
-    TResult? Function(SelectPayment value)? selectPayment,
-    TResult? Function(LoadingPayment value)? loadingPayment,
-    TResult? Function(SuccessPayment value)? uccessPayment,
-    TResult? Function(Erorrpayment value)? erorrpayment,
-  }) {
-    return loadingCoupon?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loading value)? loading,
-    TResult Function(Success value)? success,
-    TResult Function(Erorr value)? erorr,
-    TResult Function(LoadingCoupon value)? loadingCoupon,
-    TResult Function(SuccessCoupon value)? successCoupon,
-    TResult Function(ErorrCoupon value)? erorrCoupon,
-    TResult Function(SelectAdress value)? selectAdress,
-    TResult Function(SelectType value)? selectType,
-    TResult Function(SelectPayment value)? selectPayment,
-    TResult Function(LoadingPayment value)? loadingPayment,
-    TResult Function(SuccessPayment value)? uccessPayment,
-    TResult Function(Erorrpayment value)? erorrpayment,
-    required TResult orElse(),
-  }) {
-    if (loadingCoupon != null) {
-      return loadingCoupon(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class LoadingCoupon implements CheckCartState {
-  const factory LoadingCoupon() = _$LoadingCouponImpl;
 }
 
 /// @nodoc
-abstract class _$$SuccessCouponImplCopyWith<$Res> {
-  factory _$$SuccessCouponImplCopyWith(
-          _$SuccessCouponImpl value, $Res Function(_$SuccessCouponImpl) then) =
-      __$$SuccessCouponImplCopyWithImpl<$Res>;
+
+class SuccessCoupon implements CheckCartState {
+  const SuccessCoupon(this.coupon);
+
+  final CouponResponse coupon;
+
+  /// Create a copy of CheckCartState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SuccessCouponCopyWith<SuccessCoupon> get copyWith =>
+      _$SuccessCouponCopyWithImpl<SuccessCoupon>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is SuccessCoupon &&
+            (identical(other.coupon, coupon) || other.coupon == coupon));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, coupon);
+
+  @override
+  String toString() {
+    return 'CheckCartState.successCoupon(coupon: $coupon)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $SuccessCouponCopyWith<$Res>
+    implements $CheckCartStateCopyWith<$Res> {
+  factory $SuccessCouponCopyWith(
+          SuccessCoupon value, $Res Function(SuccessCoupon) _then) =
+      _$SuccessCouponCopyWithImpl;
   @useResult
   $Res call({CouponResponse coupon});
 }
 
 /// @nodoc
-class __$$SuccessCouponImplCopyWithImpl<$Res>
-    extends _$CheckCartStateCopyWithImpl<$Res, _$SuccessCouponImpl>
-    implements _$$SuccessCouponImplCopyWith<$Res> {
-  __$$SuccessCouponImplCopyWithImpl(
-      _$SuccessCouponImpl _value, $Res Function(_$SuccessCouponImpl) _then)
-      : super(_value, _then);
+class _$SuccessCouponCopyWithImpl<$Res>
+    implements $SuccessCouponCopyWith<$Res> {
+  _$SuccessCouponCopyWithImpl(this._self, this._then);
 
+  final SuccessCoupon _self;
+  final $Res Function(SuccessCoupon) _then;
+
+  /// Create a copy of CheckCartState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? coupon = null,
   }) {
-    return _then(_$SuccessCouponImpl(
+    return _then(SuccessCoupon(
       null == coupon
-          ? _value.coupon
+          ? _self.coupon
           : coupon // ignore: cast_nullable_to_non_nullable
               as CouponResponse,
     ));
@@ -1044,1237 +615,61 @@ class __$$SuccessCouponImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SuccessCouponImpl implements SuccessCoupon {
-  const _$SuccessCouponImpl(this.coupon);
+class ErorrCoupon implements CheckCartState {
+  const ErorrCoupon({required this.erorr});
 
-  @override
-  final CouponResponse coupon;
+  final String erorr;
 
-  @override
-  String toString() {
-    return 'CheckCartState.successCoupon(coupon: $coupon)';
-  }
+  /// Create a copy of CheckCartState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ErorrCouponCopyWith<ErorrCoupon> get copyWith =>
+      _$ErorrCouponCopyWithImpl<ErorrCoupon>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SuccessCouponImpl &&
-            (identical(other.coupon, coupon) || other.coupon == coupon));
+            other is ErorrCoupon &&
+            (identical(other.erorr, erorr) || other.erorr == erorr));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, coupon);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SuccessCouponImplCopyWith<_$SuccessCouponImpl> get copyWith =>
-      __$$SuccessCouponImplCopyWithImpl<_$SuccessCouponImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function() success,
-    required TResult Function(String erorr) erorr,
-    required TResult Function() loadingCoupon,
-    required TResult Function(CouponResponse coupon) successCoupon,
-    required TResult Function(String erorr) erorrCoupon,
-    required TResult Function() selectAdress,
-    required TResult Function() selectType,
-    required TResult Function() selectPayment,
-    required TResult Function() loadingPayment,
-    required TResult Function() uccessPayment,
-    required TResult Function(String erorr) erorrpayment,
-  }) {
-    return successCoupon(coupon);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function()? success,
-    TResult? Function(String erorr)? erorr,
-    TResult? Function()? loadingCoupon,
-    TResult? Function(CouponResponse coupon)? successCoupon,
-    TResult? Function(String erorr)? erorrCoupon,
-    TResult? Function()? selectAdress,
-    TResult? Function()? selectType,
-    TResult? Function()? selectPayment,
-    TResult? Function()? loadingPayment,
-    TResult? Function()? uccessPayment,
-    TResult? Function(String erorr)? erorrpayment,
-  }) {
-    return successCoupon?.call(coupon);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function()? success,
-    TResult Function(String erorr)? erorr,
-    TResult Function()? loadingCoupon,
-    TResult Function(CouponResponse coupon)? successCoupon,
-    TResult Function(String erorr)? erorrCoupon,
-    TResult Function()? selectAdress,
-    TResult Function()? selectType,
-    TResult Function()? selectPayment,
-    TResult Function()? loadingPayment,
-    TResult Function()? uccessPayment,
-    TResult Function(String erorr)? erorrpayment,
-    required TResult orElse(),
-  }) {
-    if (successCoupon != null) {
-      return successCoupon(coupon);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Success value) success,
-    required TResult Function(Erorr value) erorr,
-    required TResult Function(LoadingCoupon value) loadingCoupon,
-    required TResult Function(SuccessCoupon value) successCoupon,
-    required TResult Function(ErorrCoupon value) erorrCoupon,
-    required TResult Function(SelectAdress value) selectAdress,
-    required TResult Function(SelectType value) selectType,
-    required TResult Function(SelectPayment value) selectPayment,
-    required TResult Function(LoadingPayment value) loadingPayment,
-    required TResult Function(SuccessPayment value) uccessPayment,
-    required TResult Function(Erorrpayment value) erorrpayment,
-  }) {
-    return successCoupon(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Success value)? success,
-    TResult? Function(Erorr value)? erorr,
-    TResult? Function(LoadingCoupon value)? loadingCoupon,
-    TResult? Function(SuccessCoupon value)? successCoupon,
-    TResult? Function(ErorrCoupon value)? erorrCoupon,
-    TResult? Function(SelectAdress value)? selectAdress,
-    TResult? Function(SelectType value)? selectType,
-    TResult? Function(SelectPayment value)? selectPayment,
-    TResult? Function(LoadingPayment value)? loadingPayment,
-    TResult? Function(SuccessPayment value)? uccessPayment,
-    TResult? Function(Erorrpayment value)? erorrpayment,
-  }) {
-    return successCoupon?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loading value)? loading,
-    TResult Function(Success value)? success,
-    TResult Function(Erorr value)? erorr,
-    TResult Function(LoadingCoupon value)? loadingCoupon,
-    TResult Function(SuccessCoupon value)? successCoupon,
-    TResult Function(ErorrCoupon value)? erorrCoupon,
-    TResult Function(SelectAdress value)? selectAdress,
-    TResult Function(SelectType value)? selectType,
-    TResult Function(SelectPayment value)? selectPayment,
-    TResult Function(LoadingPayment value)? loadingPayment,
-    TResult Function(SuccessPayment value)? uccessPayment,
-    TResult Function(Erorrpayment value)? erorrpayment,
-    required TResult orElse(),
-  }) {
-    if (successCoupon != null) {
-      return successCoupon(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class SuccessCoupon implements CheckCartState {
-  const factory SuccessCoupon(final CouponResponse coupon) =
-      _$SuccessCouponImpl;
-
-  CouponResponse get coupon;
-  @JsonKey(ignore: true)
-  _$$SuccessCouponImplCopyWith<_$SuccessCouponImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$ErorrCouponImplCopyWith<$Res> {
-  factory _$$ErorrCouponImplCopyWith(
-          _$ErorrCouponImpl value, $Res Function(_$ErorrCouponImpl) then) =
-      __$$ErorrCouponImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String erorr});
-}
-
-/// @nodoc
-class __$$ErorrCouponImplCopyWithImpl<$Res>
-    extends _$CheckCartStateCopyWithImpl<$Res, _$ErorrCouponImpl>
-    implements _$$ErorrCouponImplCopyWith<$Res> {
-  __$$ErorrCouponImplCopyWithImpl(
-      _$ErorrCouponImpl _value, $Res Function(_$ErorrCouponImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? erorr = null,
-  }) {
-    return _then(_$ErorrCouponImpl(
-      erorr: null == erorr
-          ? _value.erorr
-          : erorr // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$ErorrCouponImpl implements ErorrCoupon {
-  const _$ErorrCouponImpl({required this.erorr});
-
-  @override
-  final String erorr;
+  int get hashCode => Object.hash(runtimeType, erorr);
 
   @override
   String toString() {
     return 'CheckCartState.erorrCoupon(erorr: $erorr)';
   }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ErorrCouponImpl &&
-            (identical(other.erorr, erorr) || other.erorr == erorr));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, erorr);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ErorrCouponImplCopyWith<_$ErorrCouponImpl> get copyWith =>
-      __$$ErorrCouponImplCopyWithImpl<_$ErorrCouponImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function() success,
-    required TResult Function(String erorr) erorr,
-    required TResult Function() loadingCoupon,
-    required TResult Function(CouponResponse coupon) successCoupon,
-    required TResult Function(String erorr) erorrCoupon,
-    required TResult Function() selectAdress,
-    required TResult Function() selectType,
-    required TResult Function() selectPayment,
-    required TResult Function() loadingPayment,
-    required TResult Function() uccessPayment,
-    required TResult Function(String erorr) erorrpayment,
-  }) {
-    return erorrCoupon(this.erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function()? success,
-    TResult? Function(String erorr)? erorr,
-    TResult? Function()? loadingCoupon,
-    TResult? Function(CouponResponse coupon)? successCoupon,
-    TResult? Function(String erorr)? erorrCoupon,
-    TResult? Function()? selectAdress,
-    TResult? Function()? selectType,
-    TResult? Function()? selectPayment,
-    TResult? Function()? loadingPayment,
-    TResult? Function()? uccessPayment,
-    TResult? Function(String erorr)? erorrpayment,
-  }) {
-    return erorrCoupon?.call(this.erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function()? success,
-    TResult Function(String erorr)? erorr,
-    TResult Function()? loadingCoupon,
-    TResult Function(CouponResponse coupon)? successCoupon,
-    TResult Function(String erorr)? erorrCoupon,
-    TResult Function()? selectAdress,
-    TResult Function()? selectType,
-    TResult Function()? selectPayment,
-    TResult Function()? loadingPayment,
-    TResult Function()? uccessPayment,
-    TResult Function(String erorr)? erorrpayment,
-    required TResult orElse(),
-  }) {
-    if (erorrCoupon != null) {
-      return erorrCoupon(this.erorr);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Success value) success,
-    required TResult Function(Erorr value) erorr,
-    required TResult Function(LoadingCoupon value) loadingCoupon,
-    required TResult Function(SuccessCoupon value) successCoupon,
-    required TResult Function(ErorrCoupon value) erorrCoupon,
-    required TResult Function(SelectAdress value) selectAdress,
-    required TResult Function(SelectType value) selectType,
-    required TResult Function(SelectPayment value) selectPayment,
-    required TResult Function(LoadingPayment value) loadingPayment,
-    required TResult Function(SuccessPayment value) uccessPayment,
-    required TResult Function(Erorrpayment value) erorrpayment,
-  }) {
-    return erorrCoupon(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Success value)? success,
-    TResult? Function(Erorr value)? erorr,
-    TResult? Function(LoadingCoupon value)? loadingCoupon,
-    TResult? Function(SuccessCoupon value)? successCoupon,
-    TResult? Function(ErorrCoupon value)? erorrCoupon,
-    TResult? Function(SelectAdress value)? selectAdress,
-    TResult? Function(SelectType value)? selectType,
-    TResult? Function(SelectPayment value)? selectPayment,
-    TResult? Function(LoadingPayment value)? loadingPayment,
-    TResult? Function(SuccessPayment value)? uccessPayment,
-    TResult? Function(Erorrpayment value)? erorrpayment,
-  }) {
-    return erorrCoupon?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loading value)? loading,
-    TResult Function(Success value)? success,
-    TResult Function(Erorr value)? erorr,
-    TResult Function(LoadingCoupon value)? loadingCoupon,
-    TResult Function(SuccessCoupon value)? successCoupon,
-    TResult Function(ErorrCoupon value)? erorrCoupon,
-    TResult Function(SelectAdress value)? selectAdress,
-    TResult Function(SelectType value)? selectType,
-    TResult Function(SelectPayment value)? selectPayment,
-    TResult Function(LoadingPayment value)? loadingPayment,
-    TResult Function(SuccessPayment value)? uccessPayment,
-    TResult Function(Erorrpayment value)? erorrpayment,
-    required TResult orElse(),
-  }) {
-    if (erorrCoupon != null) {
-      return erorrCoupon(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class ErorrCoupon implements CheckCartState {
-  const factory ErorrCoupon({required final String erorr}) = _$ErorrCouponImpl;
-
-  String get erorr;
-  @JsonKey(ignore: true)
-  _$$ErorrCouponImplCopyWith<_$ErorrCouponImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$SelectAdressImplCopyWith<$Res> {
-  factory _$$SelectAdressImplCopyWith(
-          _$SelectAdressImpl value, $Res Function(_$SelectAdressImpl) then) =
-      __$$SelectAdressImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$SelectAdressImplCopyWithImpl<$Res>
-    extends _$CheckCartStateCopyWithImpl<$Res, _$SelectAdressImpl>
-    implements _$$SelectAdressImplCopyWith<$Res> {
-  __$$SelectAdressImplCopyWithImpl(
-      _$SelectAdressImpl _value, $Res Function(_$SelectAdressImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$SelectAdressImpl implements SelectAdress {
-  const _$SelectAdressImpl();
-
-  @override
-  String toString() {
-    return 'CheckCartState.selectAdress()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SelectAdressImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function() success,
-    required TResult Function(String erorr) erorr,
-    required TResult Function() loadingCoupon,
-    required TResult Function(CouponResponse coupon) successCoupon,
-    required TResult Function(String erorr) erorrCoupon,
-    required TResult Function() selectAdress,
-    required TResult Function() selectType,
-    required TResult Function() selectPayment,
-    required TResult Function() loadingPayment,
-    required TResult Function() uccessPayment,
-    required TResult Function(String erorr) erorrpayment,
-  }) {
-    return selectAdress();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function()? success,
-    TResult? Function(String erorr)? erorr,
-    TResult? Function()? loadingCoupon,
-    TResult? Function(CouponResponse coupon)? successCoupon,
-    TResult? Function(String erorr)? erorrCoupon,
-    TResult? Function()? selectAdress,
-    TResult? Function()? selectType,
-    TResult? Function()? selectPayment,
-    TResult? Function()? loadingPayment,
-    TResult? Function()? uccessPayment,
-    TResult? Function(String erorr)? erorrpayment,
-  }) {
-    return selectAdress?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function()? success,
-    TResult Function(String erorr)? erorr,
-    TResult Function()? loadingCoupon,
-    TResult Function(CouponResponse coupon)? successCoupon,
-    TResult Function(String erorr)? erorrCoupon,
-    TResult Function()? selectAdress,
-    TResult Function()? selectType,
-    TResult Function()? selectPayment,
-    TResult Function()? loadingPayment,
-    TResult Function()? uccessPayment,
-    TResult Function(String erorr)? erorrpayment,
-    required TResult orElse(),
-  }) {
-    if (selectAdress != null) {
-      return selectAdress();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Success value) success,
-    required TResult Function(Erorr value) erorr,
-    required TResult Function(LoadingCoupon value) loadingCoupon,
-    required TResult Function(SuccessCoupon value) successCoupon,
-    required TResult Function(ErorrCoupon value) erorrCoupon,
-    required TResult Function(SelectAdress value) selectAdress,
-    required TResult Function(SelectType value) selectType,
-    required TResult Function(SelectPayment value) selectPayment,
-    required TResult Function(LoadingPayment value) loadingPayment,
-    required TResult Function(SuccessPayment value) uccessPayment,
-    required TResult Function(Erorrpayment value) erorrpayment,
-  }) {
-    return selectAdress(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Success value)? success,
-    TResult? Function(Erorr value)? erorr,
-    TResult? Function(LoadingCoupon value)? loadingCoupon,
-    TResult? Function(SuccessCoupon value)? successCoupon,
-    TResult? Function(ErorrCoupon value)? erorrCoupon,
-    TResult? Function(SelectAdress value)? selectAdress,
-    TResult? Function(SelectType value)? selectType,
-    TResult? Function(SelectPayment value)? selectPayment,
-    TResult? Function(LoadingPayment value)? loadingPayment,
-    TResult? Function(SuccessPayment value)? uccessPayment,
-    TResult? Function(Erorrpayment value)? erorrpayment,
-  }) {
-    return selectAdress?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loading value)? loading,
-    TResult Function(Success value)? success,
-    TResult Function(Erorr value)? erorr,
-    TResult Function(LoadingCoupon value)? loadingCoupon,
-    TResult Function(SuccessCoupon value)? successCoupon,
-    TResult Function(ErorrCoupon value)? erorrCoupon,
-    TResult Function(SelectAdress value)? selectAdress,
-    TResult Function(SelectType value)? selectType,
-    TResult Function(SelectPayment value)? selectPayment,
-    TResult Function(LoadingPayment value)? loadingPayment,
-    TResult Function(SuccessPayment value)? uccessPayment,
-    TResult Function(Erorrpayment value)? erorrpayment,
-    required TResult orElse(),
-  }) {
-    if (selectAdress != null) {
-      return selectAdress(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class SelectAdress implements CheckCartState {
-  const factory SelectAdress() = _$SelectAdressImpl;
-}
-
-/// @nodoc
-abstract class _$$SelectTypeImplCopyWith<$Res> {
-  factory _$$SelectTypeImplCopyWith(
-          _$SelectTypeImpl value, $Res Function(_$SelectTypeImpl) then) =
-      __$$SelectTypeImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$SelectTypeImplCopyWithImpl<$Res>
-    extends _$CheckCartStateCopyWithImpl<$Res, _$SelectTypeImpl>
-    implements _$$SelectTypeImplCopyWith<$Res> {
-  __$$SelectTypeImplCopyWithImpl(
-      _$SelectTypeImpl _value, $Res Function(_$SelectTypeImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$SelectTypeImpl implements SelectType {
-  const _$SelectTypeImpl();
-
-  @override
-  String toString() {
-    return 'CheckCartState.selectType()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SelectTypeImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function() success,
-    required TResult Function(String erorr) erorr,
-    required TResult Function() loadingCoupon,
-    required TResult Function(CouponResponse coupon) successCoupon,
-    required TResult Function(String erorr) erorrCoupon,
-    required TResult Function() selectAdress,
-    required TResult Function() selectType,
-    required TResult Function() selectPayment,
-    required TResult Function() loadingPayment,
-    required TResult Function() uccessPayment,
-    required TResult Function(String erorr) erorrpayment,
-  }) {
-    return selectType();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function()? success,
-    TResult? Function(String erorr)? erorr,
-    TResult? Function()? loadingCoupon,
-    TResult? Function(CouponResponse coupon)? successCoupon,
-    TResult? Function(String erorr)? erorrCoupon,
-    TResult? Function()? selectAdress,
-    TResult? Function()? selectType,
-    TResult? Function()? selectPayment,
-    TResult? Function()? loadingPayment,
-    TResult? Function()? uccessPayment,
-    TResult? Function(String erorr)? erorrpayment,
-  }) {
-    return selectType?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function()? success,
-    TResult Function(String erorr)? erorr,
-    TResult Function()? loadingCoupon,
-    TResult Function(CouponResponse coupon)? successCoupon,
-    TResult Function(String erorr)? erorrCoupon,
-    TResult Function()? selectAdress,
-    TResult Function()? selectType,
-    TResult Function()? selectPayment,
-    TResult Function()? loadingPayment,
-    TResult Function()? uccessPayment,
-    TResult Function(String erorr)? erorrpayment,
-    required TResult orElse(),
-  }) {
-    if (selectType != null) {
-      return selectType();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Success value) success,
-    required TResult Function(Erorr value) erorr,
-    required TResult Function(LoadingCoupon value) loadingCoupon,
-    required TResult Function(SuccessCoupon value) successCoupon,
-    required TResult Function(ErorrCoupon value) erorrCoupon,
-    required TResult Function(SelectAdress value) selectAdress,
-    required TResult Function(SelectType value) selectType,
-    required TResult Function(SelectPayment value) selectPayment,
-    required TResult Function(LoadingPayment value) loadingPayment,
-    required TResult Function(SuccessPayment value) uccessPayment,
-    required TResult Function(Erorrpayment value) erorrpayment,
-  }) {
-    return selectType(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Success value)? success,
-    TResult? Function(Erorr value)? erorr,
-    TResult? Function(LoadingCoupon value)? loadingCoupon,
-    TResult? Function(SuccessCoupon value)? successCoupon,
-    TResult? Function(ErorrCoupon value)? erorrCoupon,
-    TResult? Function(SelectAdress value)? selectAdress,
-    TResult? Function(SelectType value)? selectType,
-    TResult? Function(SelectPayment value)? selectPayment,
-    TResult? Function(LoadingPayment value)? loadingPayment,
-    TResult? Function(SuccessPayment value)? uccessPayment,
-    TResult? Function(Erorrpayment value)? erorrpayment,
-  }) {
-    return selectType?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loading value)? loading,
-    TResult Function(Success value)? success,
-    TResult Function(Erorr value)? erorr,
-    TResult Function(LoadingCoupon value)? loadingCoupon,
-    TResult Function(SuccessCoupon value)? successCoupon,
-    TResult Function(ErorrCoupon value)? erorrCoupon,
-    TResult Function(SelectAdress value)? selectAdress,
-    TResult Function(SelectType value)? selectType,
-    TResult Function(SelectPayment value)? selectPayment,
-    TResult Function(LoadingPayment value)? loadingPayment,
-    TResult Function(SuccessPayment value)? uccessPayment,
-    TResult Function(Erorrpayment value)? erorrpayment,
-    required TResult orElse(),
-  }) {
-    if (selectType != null) {
-      return selectType(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class SelectType implements CheckCartState {
-  const factory SelectType() = _$SelectTypeImpl;
-}
-
-/// @nodoc
-abstract class _$$SelectPaymentImplCopyWith<$Res> {
-  factory _$$SelectPaymentImplCopyWith(
-          _$SelectPaymentImpl value, $Res Function(_$SelectPaymentImpl) then) =
-      __$$SelectPaymentImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$SelectPaymentImplCopyWithImpl<$Res>
-    extends _$CheckCartStateCopyWithImpl<$Res, _$SelectPaymentImpl>
-    implements _$$SelectPaymentImplCopyWith<$Res> {
-  __$$SelectPaymentImplCopyWithImpl(
-      _$SelectPaymentImpl _value, $Res Function(_$SelectPaymentImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$SelectPaymentImpl implements SelectPayment {
-  const _$SelectPaymentImpl();
-
-  @override
-  String toString() {
-    return 'CheckCartState.selectPayment()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SelectPaymentImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function() success,
-    required TResult Function(String erorr) erorr,
-    required TResult Function() loadingCoupon,
-    required TResult Function(CouponResponse coupon) successCoupon,
-    required TResult Function(String erorr) erorrCoupon,
-    required TResult Function() selectAdress,
-    required TResult Function() selectType,
-    required TResult Function() selectPayment,
-    required TResult Function() loadingPayment,
-    required TResult Function() uccessPayment,
-    required TResult Function(String erorr) erorrpayment,
-  }) {
-    return selectPayment();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function()? success,
-    TResult? Function(String erorr)? erorr,
-    TResult? Function()? loadingCoupon,
-    TResult? Function(CouponResponse coupon)? successCoupon,
-    TResult? Function(String erorr)? erorrCoupon,
-    TResult? Function()? selectAdress,
-    TResult? Function()? selectType,
-    TResult? Function()? selectPayment,
-    TResult? Function()? loadingPayment,
-    TResult? Function()? uccessPayment,
-    TResult? Function(String erorr)? erorrpayment,
-  }) {
-    return selectPayment?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function()? success,
-    TResult Function(String erorr)? erorr,
-    TResult Function()? loadingCoupon,
-    TResult Function(CouponResponse coupon)? successCoupon,
-    TResult Function(String erorr)? erorrCoupon,
-    TResult Function()? selectAdress,
-    TResult Function()? selectType,
-    TResult Function()? selectPayment,
-    TResult Function()? loadingPayment,
-    TResult Function()? uccessPayment,
-    TResult Function(String erorr)? erorrpayment,
-    required TResult orElse(),
-  }) {
-    if (selectPayment != null) {
-      return selectPayment();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Success value) success,
-    required TResult Function(Erorr value) erorr,
-    required TResult Function(LoadingCoupon value) loadingCoupon,
-    required TResult Function(SuccessCoupon value) successCoupon,
-    required TResult Function(ErorrCoupon value) erorrCoupon,
-    required TResult Function(SelectAdress value) selectAdress,
-    required TResult Function(SelectType value) selectType,
-    required TResult Function(SelectPayment value) selectPayment,
-    required TResult Function(LoadingPayment value) loadingPayment,
-    required TResult Function(SuccessPayment value) uccessPayment,
-    required TResult Function(Erorrpayment value) erorrpayment,
-  }) {
-    return selectPayment(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Success value)? success,
-    TResult? Function(Erorr value)? erorr,
-    TResult? Function(LoadingCoupon value)? loadingCoupon,
-    TResult? Function(SuccessCoupon value)? successCoupon,
-    TResult? Function(ErorrCoupon value)? erorrCoupon,
-    TResult? Function(SelectAdress value)? selectAdress,
-    TResult? Function(SelectType value)? selectType,
-    TResult? Function(SelectPayment value)? selectPayment,
-    TResult? Function(LoadingPayment value)? loadingPayment,
-    TResult? Function(SuccessPayment value)? uccessPayment,
-    TResult? Function(Erorrpayment value)? erorrpayment,
-  }) {
-    return selectPayment?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loading value)? loading,
-    TResult Function(Success value)? success,
-    TResult Function(Erorr value)? erorr,
-    TResult Function(LoadingCoupon value)? loadingCoupon,
-    TResult Function(SuccessCoupon value)? successCoupon,
-    TResult Function(ErorrCoupon value)? erorrCoupon,
-    TResult Function(SelectAdress value)? selectAdress,
-    TResult Function(SelectType value)? selectType,
-    TResult Function(SelectPayment value)? selectPayment,
-    TResult Function(LoadingPayment value)? loadingPayment,
-    TResult Function(SuccessPayment value)? uccessPayment,
-    TResult Function(Erorrpayment value)? erorrpayment,
-    required TResult orElse(),
-  }) {
-    if (selectPayment != null) {
-      return selectPayment(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class SelectPayment implements CheckCartState {
-  const factory SelectPayment() = _$SelectPaymentImpl;
-}
-
-/// @nodoc
-abstract class _$$LoadingPaymentImplCopyWith<$Res> {
-  factory _$$LoadingPaymentImplCopyWith(_$LoadingPaymentImpl value,
-          $Res Function(_$LoadingPaymentImpl) then) =
-      __$$LoadingPaymentImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$LoadingPaymentImplCopyWithImpl<$Res>
-    extends _$CheckCartStateCopyWithImpl<$Res, _$LoadingPaymentImpl>
-    implements _$$LoadingPaymentImplCopyWith<$Res> {
-  __$$LoadingPaymentImplCopyWithImpl(
-      _$LoadingPaymentImpl _value, $Res Function(_$LoadingPaymentImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$LoadingPaymentImpl implements LoadingPayment {
-  const _$LoadingPaymentImpl();
-
-  @override
-  String toString() {
-    return 'CheckCartState.loadingPayment()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingPaymentImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function() success,
-    required TResult Function(String erorr) erorr,
-    required TResult Function() loadingCoupon,
-    required TResult Function(CouponResponse coupon) successCoupon,
-    required TResult Function(String erorr) erorrCoupon,
-    required TResult Function() selectAdress,
-    required TResult Function() selectType,
-    required TResult Function() selectPayment,
-    required TResult Function() loadingPayment,
-    required TResult Function() uccessPayment,
-    required TResult Function(String erorr) erorrpayment,
-  }) {
-    return loadingPayment();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function()? success,
-    TResult? Function(String erorr)? erorr,
-    TResult? Function()? loadingCoupon,
-    TResult? Function(CouponResponse coupon)? successCoupon,
-    TResult? Function(String erorr)? erorrCoupon,
-    TResult? Function()? selectAdress,
-    TResult? Function()? selectType,
-    TResult? Function()? selectPayment,
-    TResult? Function()? loadingPayment,
-    TResult? Function()? uccessPayment,
-    TResult? Function(String erorr)? erorrpayment,
-  }) {
-    return loadingPayment?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function()? success,
-    TResult Function(String erorr)? erorr,
-    TResult Function()? loadingCoupon,
-    TResult Function(CouponResponse coupon)? successCoupon,
-    TResult Function(String erorr)? erorrCoupon,
-    TResult Function()? selectAdress,
-    TResult Function()? selectType,
-    TResult Function()? selectPayment,
-    TResult Function()? loadingPayment,
-    TResult Function()? uccessPayment,
-    TResult Function(String erorr)? erorrpayment,
-    required TResult orElse(),
-  }) {
-    if (loadingPayment != null) {
-      return loadingPayment();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Success value) success,
-    required TResult Function(Erorr value) erorr,
-    required TResult Function(LoadingCoupon value) loadingCoupon,
-    required TResult Function(SuccessCoupon value) successCoupon,
-    required TResult Function(ErorrCoupon value) erorrCoupon,
-    required TResult Function(SelectAdress value) selectAdress,
-    required TResult Function(SelectType value) selectType,
-    required TResult Function(SelectPayment value) selectPayment,
-    required TResult Function(LoadingPayment value) loadingPayment,
-    required TResult Function(SuccessPayment value) uccessPayment,
-    required TResult Function(Erorrpayment value) erorrpayment,
-  }) {
-    return loadingPayment(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Success value)? success,
-    TResult? Function(Erorr value)? erorr,
-    TResult? Function(LoadingCoupon value)? loadingCoupon,
-    TResult? Function(SuccessCoupon value)? successCoupon,
-    TResult? Function(ErorrCoupon value)? erorrCoupon,
-    TResult? Function(SelectAdress value)? selectAdress,
-    TResult? Function(SelectType value)? selectType,
-    TResult? Function(SelectPayment value)? selectPayment,
-    TResult? Function(LoadingPayment value)? loadingPayment,
-    TResult? Function(SuccessPayment value)? uccessPayment,
-    TResult? Function(Erorrpayment value)? erorrpayment,
-  }) {
-    return loadingPayment?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loading value)? loading,
-    TResult Function(Success value)? success,
-    TResult Function(Erorr value)? erorr,
-    TResult Function(LoadingCoupon value)? loadingCoupon,
-    TResult Function(SuccessCoupon value)? successCoupon,
-    TResult Function(ErorrCoupon value)? erorrCoupon,
-    TResult Function(SelectAdress value)? selectAdress,
-    TResult Function(SelectType value)? selectType,
-    TResult Function(SelectPayment value)? selectPayment,
-    TResult Function(LoadingPayment value)? loadingPayment,
-    TResult Function(SuccessPayment value)? uccessPayment,
-    TResult Function(Erorrpayment value)? erorrpayment,
-    required TResult orElse(),
-  }) {
-    if (loadingPayment != null) {
-      return loadingPayment(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class LoadingPayment implements CheckCartState {
-  const factory LoadingPayment() = _$LoadingPaymentImpl;
-}
-
-/// @nodoc
-abstract class _$$SuccessPaymentImplCopyWith<$Res> {
-  factory _$$SuccessPaymentImplCopyWith(_$SuccessPaymentImpl value,
-          $Res Function(_$SuccessPaymentImpl) then) =
-      __$$SuccessPaymentImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$SuccessPaymentImplCopyWithImpl<$Res>
-    extends _$CheckCartStateCopyWithImpl<$Res, _$SuccessPaymentImpl>
-    implements _$$SuccessPaymentImplCopyWith<$Res> {
-  __$$SuccessPaymentImplCopyWithImpl(
-      _$SuccessPaymentImpl _value, $Res Function(_$SuccessPaymentImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$SuccessPaymentImpl implements SuccessPayment {
-  const _$SuccessPaymentImpl();
-
-  @override
-  String toString() {
-    return 'CheckCartState.uccessPayment()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SuccessPaymentImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function() success,
-    required TResult Function(String erorr) erorr,
-    required TResult Function() loadingCoupon,
-    required TResult Function(CouponResponse coupon) successCoupon,
-    required TResult Function(String erorr) erorrCoupon,
-    required TResult Function() selectAdress,
-    required TResult Function() selectType,
-    required TResult Function() selectPayment,
-    required TResult Function() loadingPayment,
-    required TResult Function() uccessPayment,
-    required TResult Function(String erorr) erorrpayment,
-  }) {
-    return uccessPayment();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function()? success,
-    TResult? Function(String erorr)? erorr,
-    TResult? Function()? loadingCoupon,
-    TResult? Function(CouponResponse coupon)? successCoupon,
-    TResult? Function(String erorr)? erorrCoupon,
-    TResult? Function()? selectAdress,
-    TResult? Function()? selectType,
-    TResult? Function()? selectPayment,
-    TResult? Function()? loadingPayment,
-    TResult? Function()? uccessPayment,
-    TResult? Function(String erorr)? erorrpayment,
-  }) {
-    return uccessPayment?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function()? success,
-    TResult Function(String erorr)? erorr,
-    TResult Function()? loadingCoupon,
-    TResult Function(CouponResponse coupon)? successCoupon,
-    TResult Function(String erorr)? erorrCoupon,
-    TResult Function()? selectAdress,
-    TResult Function()? selectType,
-    TResult Function()? selectPayment,
-    TResult Function()? loadingPayment,
-    TResult Function()? uccessPayment,
-    TResult Function(String erorr)? erorrpayment,
-    required TResult orElse(),
-  }) {
-    if (uccessPayment != null) {
-      return uccessPayment();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Success value) success,
-    required TResult Function(Erorr value) erorr,
-    required TResult Function(LoadingCoupon value) loadingCoupon,
-    required TResult Function(SuccessCoupon value) successCoupon,
-    required TResult Function(ErorrCoupon value) erorrCoupon,
-    required TResult Function(SelectAdress value) selectAdress,
-    required TResult Function(SelectType value) selectType,
-    required TResult Function(SelectPayment value) selectPayment,
-    required TResult Function(LoadingPayment value) loadingPayment,
-    required TResult Function(SuccessPayment value) uccessPayment,
-    required TResult Function(Erorrpayment value) erorrpayment,
-  }) {
-    return uccessPayment(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Success value)? success,
-    TResult? Function(Erorr value)? erorr,
-    TResult? Function(LoadingCoupon value)? loadingCoupon,
-    TResult? Function(SuccessCoupon value)? successCoupon,
-    TResult? Function(ErorrCoupon value)? erorrCoupon,
-    TResult? Function(SelectAdress value)? selectAdress,
-    TResult? Function(SelectType value)? selectType,
-    TResult? Function(SelectPayment value)? selectPayment,
-    TResult? Function(LoadingPayment value)? loadingPayment,
-    TResult? Function(SuccessPayment value)? uccessPayment,
-    TResult? Function(Erorrpayment value)? erorrpayment,
-  }) {
-    return uccessPayment?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loading value)? loading,
-    TResult Function(Success value)? success,
-    TResult Function(Erorr value)? erorr,
-    TResult Function(LoadingCoupon value)? loadingCoupon,
-    TResult Function(SuccessCoupon value)? successCoupon,
-    TResult Function(ErorrCoupon value)? erorrCoupon,
-    TResult Function(SelectAdress value)? selectAdress,
-    TResult Function(SelectType value)? selectType,
-    TResult Function(SelectPayment value)? selectPayment,
-    TResult Function(LoadingPayment value)? loadingPayment,
-    TResult Function(SuccessPayment value)? uccessPayment,
-    TResult Function(Erorrpayment value)? erorrpayment,
-    required TResult orElse(),
-  }) {
-    if (uccessPayment != null) {
-      return uccessPayment(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class SuccessPayment implements CheckCartState {
-  const factory SuccessPayment() = _$SuccessPaymentImpl;
-}
-
-/// @nodoc
-abstract class _$$ErorrpaymentImplCopyWith<$Res> {
-  factory _$$ErorrpaymentImplCopyWith(
-          _$ErorrpaymentImpl value, $Res Function(_$ErorrpaymentImpl) then) =
-      __$$ErorrpaymentImplCopyWithImpl<$Res>;
+abstract mixin class $ErorrCouponCopyWith<$Res>
+    implements $CheckCartStateCopyWith<$Res> {
+  factory $ErorrCouponCopyWith(
+          ErorrCoupon value, $Res Function(ErorrCoupon) _then) =
+      _$ErorrCouponCopyWithImpl;
   @useResult
   $Res call({String erorr});
 }
 
 /// @nodoc
-class __$$ErorrpaymentImplCopyWithImpl<$Res>
-    extends _$CheckCartStateCopyWithImpl<$Res, _$ErorrpaymentImpl>
-    implements _$$ErorrpaymentImplCopyWith<$Res> {
-  __$$ErorrpaymentImplCopyWithImpl(
-      _$ErorrpaymentImpl _value, $Res Function(_$ErorrpaymentImpl) _then)
-      : super(_value, _then);
+class _$ErorrCouponCopyWithImpl<$Res> implements $ErorrCouponCopyWith<$Res> {
+  _$ErorrCouponCopyWithImpl(this._self, this._then);
 
+  final ErorrCoupon _self;
+  final $Res Function(ErorrCoupon) _then;
+
+  /// Create a copy of CheckCartState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? erorr = null,
   }) {
-    return _then(_$ErorrpaymentImpl(
+    return _then(ErorrCoupon(
       erorr: null == erorr
-          ? _value.erorr
+          ? _self.erorr
           : erorr // ignore: cast_nullable_to_non_nullable
               as String,
     ));
@@ -2283,169 +678,165 @@ class __$$ErorrpaymentImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErorrpaymentImpl implements Erorrpayment {
-  const _$ErorrpaymentImpl({required this.erorr});
+class SelectAdress implements CheckCartState {
+  const SelectAdress();
 
   @override
-  final String erorr;
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is SelectAdress);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
 
   @override
   String toString() {
-    return 'CheckCartState.erorrpayment(erorr: $erorr)';
+    return 'CheckCartState.selectAdress()';
   }
+}
+
+/// @nodoc
+
+class SelectType implements CheckCartState {
+  const SelectType();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is SelectType);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'CheckCartState.selectType()';
+  }
+}
+
+/// @nodoc
+
+class SelectPayment implements CheckCartState {
+  const SelectPayment();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is SelectPayment);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'CheckCartState.selectPayment()';
+  }
+}
+
+/// @nodoc
+
+class LoadingPayment implements CheckCartState {
+  const LoadingPayment();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is LoadingPayment);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'CheckCartState.loadingPayment()';
+  }
+}
+
+/// @nodoc
+
+class SuccessPayment implements CheckCartState {
+  const SuccessPayment();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is SuccessPayment);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'CheckCartState.uccessPayment()';
+  }
+}
+
+/// @nodoc
+
+class Erorrpayment implements CheckCartState {
+  const Erorrpayment({required this.erorr});
+
+  final String erorr;
+
+  /// Create a copy of CheckCartState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ErorrpaymentCopyWith<Erorrpayment> get copyWith =>
+      _$ErorrpaymentCopyWithImpl<Erorrpayment>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ErorrpaymentImpl &&
+            other is Erorrpayment &&
             (identical(other.erorr, erorr) || other.erorr == erorr));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, erorr);
 
-  @JsonKey(ignore: true)
   @override
+  String toString() {
+    return 'CheckCartState.erorrpayment(erorr: $erorr)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $ErorrpaymentCopyWith<$Res>
+    implements $CheckCartStateCopyWith<$Res> {
+  factory $ErorrpaymentCopyWith(
+          Erorrpayment value, $Res Function(Erorrpayment) _then) =
+      _$ErorrpaymentCopyWithImpl;
+  @useResult
+  $Res call({String erorr});
+}
+
+/// @nodoc
+class _$ErorrpaymentCopyWithImpl<$Res> implements $ErorrpaymentCopyWith<$Res> {
+  _$ErorrpaymentCopyWithImpl(this._self, this._then);
+
+  final Erorrpayment _self;
+  final $Res Function(Erorrpayment) _then;
+
+  /// Create a copy of CheckCartState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  _$$ErorrpaymentImplCopyWith<_$ErorrpaymentImpl> get copyWith =>
-      __$$ErorrpaymentImplCopyWithImpl<_$ErorrpaymentImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function() success,
-    required TResult Function(String erorr) erorr,
-    required TResult Function() loadingCoupon,
-    required TResult Function(CouponResponse coupon) successCoupon,
-    required TResult Function(String erorr) erorrCoupon,
-    required TResult Function() selectAdress,
-    required TResult Function() selectType,
-    required TResult Function() selectPayment,
-    required TResult Function() loadingPayment,
-    required TResult Function() uccessPayment,
-    required TResult Function(String erorr) erorrpayment,
+  $Res call({
+    Object? erorr = null,
   }) {
-    return erorrpayment(this.erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function()? success,
-    TResult? Function(String erorr)? erorr,
-    TResult? Function()? loadingCoupon,
-    TResult? Function(CouponResponse coupon)? successCoupon,
-    TResult? Function(String erorr)? erorrCoupon,
-    TResult? Function()? selectAdress,
-    TResult? Function()? selectType,
-    TResult? Function()? selectPayment,
-    TResult? Function()? loadingPayment,
-    TResult? Function()? uccessPayment,
-    TResult? Function(String erorr)? erorrpayment,
-  }) {
-    return erorrpayment?.call(this.erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function()? success,
-    TResult Function(String erorr)? erorr,
-    TResult Function()? loadingCoupon,
-    TResult Function(CouponResponse coupon)? successCoupon,
-    TResult Function(String erorr)? erorrCoupon,
-    TResult Function()? selectAdress,
-    TResult Function()? selectType,
-    TResult Function()? selectPayment,
-    TResult Function()? loadingPayment,
-    TResult Function()? uccessPayment,
-    TResult Function(String erorr)? erorrpayment,
-    required TResult orElse(),
-  }) {
-    if (erorrpayment != null) {
-      return erorrpayment(this.erorr);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Success value) success,
-    required TResult Function(Erorr value) erorr,
-    required TResult Function(LoadingCoupon value) loadingCoupon,
-    required TResult Function(SuccessCoupon value) successCoupon,
-    required TResult Function(ErorrCoupon value) erorrCoupon,
-    required TResult Function(SelectAdress value) selectAdress,
-    required TResult Function(SelectType value) selectType,
-    required TResult Function(SelectPayment value) selectPayment,
-    required TResult Function(LoadingPayment value) loadingPayment,
-    required TResult Function(SuccessPayment value) uccessPayment,
-    required TResult Function(Erorrpayment value) erorrpayment,
-  }) {
-    return erorrpayment(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Success value)? success,
-    TResult? Function(Erorr value)? erorr,
-    TResult? Function(LoadingCoupon value)? loadingCoupon,
-    TResult? Function(SuccessCoupon value)? successCoupon,
-    TResult? Function(ErorrCoupon value)? erorrCoupon,
-    TResult? Function(SelectAdress value)? selectAdress,
-    TResult? Function(SelectType value)? selectType,
-    TResult? Function(SelectPayment value)? selectPayment,
-    TResult? Function(LoadingPayment value)? loadingPayment,
-    TResult? Function(SuccessPayment value)? uccessPayment,
-    TResult? Function(Erorrpayment value)? erorrpayment,
-  }) {
-    return erorrpayment?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loading value)? loading,
-    TResult Function(Success value)? success,
-    TResult Function(Erorr value)? erorr,
-    TResult Function(LoadingCoupon value)? loadingCoupon,
-    TResult Function(SuccessCoupon value)? successCoupon,
-    TResult Function(ErorrCoupon value)? erorrCoupon,
-    TResult Function(SelectAdress value)? selectAdress,
-    TResult Function(SelectType value)? selectType,
-    TResult Function(SelectPayment value)? selectPayment,
-    TResult Function(LoadingPayment value)? loadingPayment,
-    TResult Function(SuccessPayment value)? uccessPayment,
-    TResult Function(Erorrpayment value)? erorrpayment,
-    required TResult orElse(),
-  }) {
-    if (erorrpayment != null) {
-      return erorrpayment(this);
-    }
-    return orElse();
+    return _then(Erorrpayment(
+      erorr: null == erorr
+          ? _self.erorr
+          : erorr // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
   }
 }
 
-abstract class Erorrpayment implements CheckCartState {
-  const factory Erorrpayment({required final String erorr}) =
-      _$ErorrpaymentImpl;
-
-  String get erorr;
-  @JsonKey(ignore: true)
-  _$$ErorrpaymentImplCopyWith<_$ErorrpaymentImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+// dart format on

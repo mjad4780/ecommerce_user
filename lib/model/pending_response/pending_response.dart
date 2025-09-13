@@ -8,9 +8,10 @@ part 'pending_response.g.dart';
 @JsonSerializable()
 class PendingResponse {
   final String? status;
+  final String? messege;
   final List<Datum>? data;
 
-  const PendingResponse({this.status, this.data});
+  const PendingResponse({this.status, this.data, this.messege});
 
   factory PendingResponse.fromJson(Map<String, dynamic> json) {
     return _$PendingResponseFromJson(json);

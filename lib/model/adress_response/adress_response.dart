@@ -8,9 +8,11 @@ part 'adress_response.g.dart';
 @JsonSerializable()
 class AdressResponse {
   final String? status;
+  final String? messege;
+
   final List<AdressData>? data;
 
-  const AdressResponse({this.status, this.data});
+  const AdressResponse({this.status, this.messege, this.data});
 
   factory AdressResponse.fromJson(Map<String, dynamic> json) {
     return _$AdressResponseFromJson(json);

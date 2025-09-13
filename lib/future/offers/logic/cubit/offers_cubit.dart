@@ -2,6 +2,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../data/repo.dart';
 import 'offers_state.dart';
+import 'package:ecommerce_user/core/networking/api_result.dart';
 
 class OffersCubit extends Cubit<OffersState> {
   OffersCubit(this._offersRepo) : super(const OffersState.initial());
@@ -15,7 +16,7 @@ class OffersCubit extends Cubit<OffersState> {
     response.when(success: (loginResponse) {
       emit(OffersState.successoffers(responseItems: loginResponse));
     }, failure: (error) {
-      emit(OffersState.erroroffers(erorr: error.apiErrorModel.messege ?? ''));
+      emit(OffersState.erroroffers(erorr: error.messege ?? ''));
     });
   }
 }

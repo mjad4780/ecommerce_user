@@ -8,9 +8,10 @@ part 'response_detilas.g.dart';
 @JsonSerializable()
 class ResponseDetails {
   String? status;
+  String? messege;
   List<DataDetails>? data;
 
-  ResponseDetails({this.status, this.data});
+  ResponseDetails({this.status, this.data, this.messege});
 
   factory ResponseDetails.fromJson(Map<String, dynamic> json) {
     return _$ResponseDetailsFromJson(json);

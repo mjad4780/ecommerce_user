@@ -21,6 +21,7 @@ class ItemCategoriesRepo {
         'userid': getIt<CacheHelper>().getData(key: 'id')
       };
       final response = await _apiService.itemCategories(formDataPost(map));
+
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ErrorHandler.handle(e));

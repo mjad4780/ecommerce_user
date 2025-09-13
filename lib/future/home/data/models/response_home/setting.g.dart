@@ -7,10 +7,10 @@ part of 'setting.dart';
 // **************************************************************************
 
 Setting _$SettingFromJson(Map<String, dynamic> json) => Setting(
-      settingId: (json['setting_id'] as num?)?.toInt(),
+      settingId: json['setting_id'] as String?,
       settingTitle: json['setting_title'] as String?,
       settingBody: json['setting_body'] as String?,
-      settingDatedelvery: (json['setting_datedelvery'] as num?)?.toInt(),
+      settingDatedelvery: json['setting_datedelvery'] as String?,
       settingImage: json['setting_image'] as String?,
     );
 

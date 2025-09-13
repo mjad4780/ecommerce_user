@@ -1,5 +1,6 @@
 import 'package:ecommerce_user/future/home/data/models/response_home/category.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:ecommerce_user/core/networking/api_result.dart';
 
 import '../../data/repo.dart';
 import 'item_categories_state.dart';
@@ -20,7 +21,7 @@ class ItemCategoriesCubit extends Cubit<ItemCategoriesState> {
     response.when(success: (responsehome) {
       emit(ItemCategoriesState.success(responseItems: responsehome));
     }, failure: (error) {
-      emit(ItemCategoriesState.erorr(erorr: error.apiErrorModel.messege ?? ''));
+      emit(ItemCategoriesState.erorr(erorr: error.messege ?? ''));
     });
   }
 

@@ -23,6 +23,7 @@ class CartRepo {
       };
 
       final response = await _apiService.getCart(formDataPost(map));
+
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ErrorHandler.handle(e));
@@ -56,6 +57,7 @@ class CartRepo {
         "userid": getIt<CacheHelper>().getData(key: 'id'),
       };
       final response = await _apiService.deleteCart(formDataPost(map));
+
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ErrorHandler.handle(e));
@@ -74,6 +76,7 @@ class CartRepo {
       };
 
       final response = await _apiService.getCurrentCart(formDataPost(map));
+
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ErrorHandler.handle(e));

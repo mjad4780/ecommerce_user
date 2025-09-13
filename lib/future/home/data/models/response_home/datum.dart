@@ -8,7 +8,7 @@ part 'datum.g.dart';
 @JsonSerializable()
 class Datum {
   @JsonKey(name: 'item_id')
-  int? itemId;
+  String? itemId;
   @JsonKey(name: 'item_name')
   String? itemName;
   @JsonKey(name: 'item_name_ar')
@@ -20,26 +20,26 @@ class Datum {
   @JsonKey(name: 'item_image')
   String? itemImage;
   @JsonKey(name: 'item_count')
-  int? itemCount;
+  String? itemCount;
   @JsonKey(name: 'item_active')
-  int? itemActive;
+  String? itemActive;
   @JsonKey(name: 'item_price')
-  int? itemPrice;
+  String? itemPrice;
   @JsonKey(name: 'item_discount')
-  int? itemDiscount;
+  String? itemDiscount;
   @JsonKey(name: 'item_data')
   String? itemData;
   @JsonKey(name: 'item_categories')
-  int? itemCategories;
-  int? favorite;
+  String? itemCategories;
+  String? favorite;
   @JsonKey(name: 'categories_id')
-  int? categoriesId;
+  String? categoriesId;
   @JsonKey(name: 'categories_name')
   String? categoriesName;
   @JsonKey(name: 'itemprice_discount')
-  double? itempriceDiscount;
+  String? itempriceDiscount;
   @JsonKey(name: 'Notfavorite')
-  int? notfavorite;
+  String? notfavorite;
   List<String>? images;
   List<Size>? size;
 

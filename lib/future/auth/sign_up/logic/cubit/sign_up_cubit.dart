@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
+import 'package:ecommerce_user/core/networking/api_result.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -37,7 +38,7 @@ class SignUpCubit extends Cubit<SignUpState> {
         log(emailSignUp.text);
         emit(const SignUpState.success());
       }, failure: (error) {
-        emit(SignUpState.error(error: error.apiErrorModel.messege ?? ''));
+        emit(SignUpState.error(error: error.messege ?? ''));
       });
     } else {
       autovalidateMode = AutovalidateMode.always;

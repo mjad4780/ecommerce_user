@@ -6,7 +6,7 @@ part 'forget_password_state.freezed.dart';
 class ForgetPasswordState with _$ForgetPasswordState {
   const factory ForgetPasswordState.initial() = _Initial;
   //:checkEmail
-  const factory ForgetPasswordState.loadingCheck() = loadingCheck;
+  const factory ForgetPasswordState.loadingCheck() = LoadingCheck;
   const factory ForgetPasswordState.successCheck() = SuccessCheck;
   const factory ForgetPasswordState.errorCheck({required String erorr}) =
       ErrorCheck;

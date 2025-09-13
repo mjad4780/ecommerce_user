@@ -5,27 +5,26 @@ part of 'datum.dart';
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
-
 Datum _$DatumFromJson(Map<String, dynamic> json) => Datum(
-      notfavorite: (json['Notfavorite'] as num?)?.toInt(),
-      itemId: (json['item_id'] as num?)?.toInt(),
+      notfavorite: json['Notfavorite']?.toString(),
+      itemId: json['item_id']?.toString(),
       itemName: json['item_name'] as String?,
       itemNameAr: json['item_name_ar'] as String?,
       itemDecs: json['item_decs'] as String?,
       itemDecsAr: json['item_decs_ar'] as String?,
       itemImage: json['item_image'] as String?,
-      itemCount: (json['item_count'] as num?)?.toInt(),
-      itemActive: (json['item_active'] as num?)?.toInt(),
-      itemPrice: (json['item_price'] as num?)?.toInt(),
-      itemDiscount: (json['item_discount'] as num?)?.toInt(),
+      itemCount: json['item_count']?.toString(),
+      itemActive: json['item_active']?.toString(),
+      itemPrice: json['item_price']?.toString(),
+      itemDiscount: json['item_discount']?.toString(),
       itemData: json['item_data'] as String?,
-      itemCategories: (json['item_categories'] as num?)?.toInt(),
-      favorite: (json['favorite'] as num?)?.toInt(),
-      categoriesId: (json['categories_id'] as num?)?.toInt(),
+      itemCategories: json['item_categories']?.toString(),
+      favorite: json['favorite']?.toString(),
+      categoriesId: json['categories_id']?.toString(),
       categoriesName: json['categories_name'] as String?,
-      itempriceDiscount: (json['itemprice_discount'] as num?)?.toDouble(),
+      itempriceDiscount: json['itemprice_discount']?.toString(),
       images:
-          (json['images'] as List<dynamic>?)?.map((e) => e as String).toList(),
+          (json['images'] as List<dynamic>?)?.map((e) => e.toString()).toList(),
       size: (json['size'] as List<dynamic>?)
           ?.map((e) => Size.fromJson(e as Map<String, dynamic>))
           .toList(),

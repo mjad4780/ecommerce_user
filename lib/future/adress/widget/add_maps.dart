@@ -28,7 +28,7 @@ class FlutterMaps extends StatelessWidget {
                 if (context.read<AdressCubit>().latLng != null)
                   BlocConsumer<AdressCubit, AdressState>(
                     buildWhen: (previous, current) =>
-                        current is pushEdit || current is AddMarker,
+                        current is PushEdit || current is AddMarker,
                     listener: (context, state) {},
                     builder: (context, state) {
                       return FlutterMap(

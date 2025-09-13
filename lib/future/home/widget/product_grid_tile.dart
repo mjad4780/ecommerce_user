@@ -147,16 +147,18 @@ class IconFavorite extends StatelessWidget {
   }
 
   void selectFsavorite(BuildContext context) async {
-    if (product.favorite == 1) {
-      await context.read<FavoriteCubit>().emitdeleteFavorite(product.itemId!);
-      product.favorite = 0;
-      if (product.notfavorite == 1) {
+    if (int.parse(product.favorite!) == 1) {
+      await context
+          .read<FavoriteCubit>()
+          .emitdeleteFavorite(int.parse(product.itemId!));
+      product.favorite = '0';
+      if (int.parse(product.favorite!) == 1) {
         // ignore: use_build_context_synchronously
         context.read<FavoriteCubit>().emitgetFavorite();
       }
     } else {
-      context.read<FavoriteCubit>().emitAddFavorite(product.itemId!);
-      product.favorite = 1;
+      context.read<FavoriteCubit>().emitAddFavorite(int.parse(product.itemId!));
+      product.favorite = '1';
     }
   }
 }

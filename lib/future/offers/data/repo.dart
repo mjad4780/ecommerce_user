@@ -13,6 +13,7 @@ class OffersRepo {
   Future<ApiResult<Item1view>> offers() async {
     try {
       final response = await _apiService.offers();
+
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ErrorHandler.handle(e));

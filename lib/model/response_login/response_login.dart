@@ -7,9 +7,11 @@ part 'response_login.g.dart';
 @JsonSerializable()
 class ResponseLogin {
   final String? status;
+  final String? messege;
+
   final Data? data;
 
-  const ResponseLogin({this.status, this.data});
+  const ResponseLogin({this.status, this.messege, this.data});
 
   factory ResponseLogin.fromJson(Map<String, dynamic> json) {
     return _$ResponseLoginFromJson(json);

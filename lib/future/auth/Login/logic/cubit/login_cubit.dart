@@ -1,4 +1,5 @@
 import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
+import 'package:ecommerce_user/core/networking/api_result.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -23,7 +24,7 @@ class LoginCubit extends Cubit<LoginState> {
       final response =
           await _loginRepo.login(emailController.text, passwordController.text);
       response.when(success: (loginResponse) {
-        if (loginResponse.data!.userImprove != 1) {
+        if (int.parse(loginResponse.data!.userImprove) == 0) {
           context.push('/VerfyCodeScrean',
               arguments: {'email': loginResponse.data!.userEmail});
         } else {
@@ -35,7 +36,7 @@ class LoginCubit extends Cubit<LoginState> {
           emit(const LoginState.success());
         }
       }, failure: (error) {
-        emit(LoginState.error(error: error.apiErrorModel.messege ?? ''));
+        emit(LoginState.error(error: error.messege ?? ''));
       });
     }
   }
