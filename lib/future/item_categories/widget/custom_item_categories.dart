@@ -50,7 +50,7 @@ class CustomItemCategories extends StatelessWidget {
                           context
                               .read<ItemCategoriesCubit>()
                               .emitItemCategories(
-                                val.categoriesId!,
+                                int.parse(val.categoriesId!),
                               );
                         },
                       ),

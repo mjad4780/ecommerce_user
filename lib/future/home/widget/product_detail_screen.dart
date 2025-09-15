@@ -161,7 +161,8 @@ class ProductDetailScreen extends StatelessWidget {
                                       await context
                                           .read<CartCubit>()
                                           .emitAddCart(
-                                              product.itemId!, context);
+                                              int.parse(product.itemId!),
+                                              context);
                                     }
                                   : null,
                               child: const Text("Add to cart",
