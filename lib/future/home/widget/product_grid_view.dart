@@ -1,4 +1,4 @@
-import 'package:ecommerce_user/future/home/data/models/response_home/datum.dart';
+import 'package:ecommerce_user/future/home/data/models/response_home/response_home.dart';
 import 'package:flutter/material.dart';
 
 import 'product_detail_screen.dart';
@@ -10,31 +10,36 @@ class ProductGridView extends StatelessWidget {
     required this.items,
   });
 
-  final List<Datum> items;
+  final List<Item> items;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 20),
-      child: GridView.builder(
-        itemCount: items.length,
-        shrinkWrap: true,
-        physics: const ScrollPhysics(),
+    return SliverPadding(
+      padding: const EdgeInsets.all(10),
+      sliver: SliverGrid(
+        delegate: SliverChildBuilderDelegate(
+          (context, index) {
+            final product = items[index];
+            return GestureDetector(
+              onTap: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => ProductDetailScreen(product),
+                ),
+              ),
+              child: ProductGridTile(
+                product: product,
+                index: index,
+              ),
+            );
+          },
+          childCount: items.length,
+        ),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           childAspectRatio: 10 / 16,
           crossAxisCount: 2,
           mainAxisSpacing: 10,
           crossAxisSpacing: 10,
         ),
-        itemBuilder: (__, index) {
-          return GestureDetector(
-              onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => ProductDetailScreen(items[index]))),
-              child: ProductGridTile(
-                product: items[index],
-                index: index,
-              ));
-        },
       ),
     );
   }

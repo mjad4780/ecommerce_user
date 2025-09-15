@@ -1,7 +1,7 @@
 import 'package:ecommerce_user/future/auth/forgetpassword/check_email.dart';
 import 'package:ecommerce_user/future/home/home.dart';
 import 'package:go_router/go_router.dart';
-import '../../future/HomePage/home_screan.dart';
+import '../../future/main/home_screan.dart';
 import '../../future/adress/adress.dart';
 
 import '../../future/auth/Login/login_screen.dart';

@@ -1,10 +1,10 @@
 class Data {
-  final String userId;
+  final int userId;
   final String userName;
   final String userEmail;
-  final String userPhone;
-  final String userVeryMyCode;
-  final String userImprove;
+  final int userPhone;
+  final int userVeryMyCode;
+  final int userImprove;
   final String userCreate;
   final String password;
 

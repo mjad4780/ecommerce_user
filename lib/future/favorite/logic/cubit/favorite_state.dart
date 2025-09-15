@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../home/data/models/response_home/item1view.dart';
+import '../../../home/data/models/response_home/response_home.dart';
 
 part 'favorite_state.freezed.dart';
 

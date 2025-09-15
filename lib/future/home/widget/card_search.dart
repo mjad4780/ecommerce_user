@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 
 import '../../../core/animation/open_container_wrapper.dart';
 import '../../../core/networking/api_constants.dart';
-import '../data/models/response_home/datum.dart';
+import '../data/models/response_home/response_home.dart';
 import 'product_detail_screen.dart';
 
 class ListItemsSearch extends StatelessWidget {
-  final List<Datum> listdatamodel;
+  final List<Item> listdatamodel;
   const ListItemsSearch({super.key, required this.listdatamodel});
 
   @override
@@ -33,9 +33,9 @@ class ListItemsSearch extends StatelessWidget {
                       Expanded(
                           flex: 2,
                           child: ListTile(
-                            title: Text(listdatamodel[index].itemName!),
+                            title: Text(listdatamodel[index].itemName ?? ''),
                             subtitle:
-                                Text(listdatamodel[index].categoriesName!),
+                                Text(listdatamodel[index].categoriesName ?? ''),
                           )),
                     ],
                   ),

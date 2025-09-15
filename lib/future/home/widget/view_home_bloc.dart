@@ -1,11 +1,11 @@
+import 'package:ecommerce_user/core/errors/failer_widget.dart';
+import 'package:ecommerce_user/core/widgets/loading.dart';
 import 'package:ecommerce_user/future/home/logic/cubit/home_cubit.dart';
 import 'package:ecommerce_user/future/home/logic/cubit/home_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:skeletonizer/skeletonizer.dart';
-
-import 'card_search.dart';
+import '../data/models/response_home/response_home.dart';
 import 'success_data_api.dart';
 
 class HomeBlocBuilder extends StatelessWidget {
@@ -14,28 +14,25 @@ class HomeBlocBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<HomeCubit, HomeState>(
+      buildWhen: (previous, current) =>
+          current is LoadingHome ||
+          current is ErrorHome ||
+          current is SuccessHome,
       builder: (context, state) {
-        final homeCubit = context.read<HomeCubit>();
-        final isSearchEmpty = homeCubit.search.text.isEmpty;
-
         if (state is LoadingHome) {
-          return _buildSkeleton(homeCubit, state: state);
+          return _buildSkeleton();
+        } else if (state is ErrorHome) {
+          return FailerWidget(
+              messege: state.erorr,
+              onPressed: () {
+                context.read<HomeCubit>().emitHome();
+              });
+        } else if (state is SuccessHome) {
+          return SuccessDataApi(
+            responseHome: state.responseHome,
+          );
         }
-        if (state is ErrorHome) {
-          return _buildError(state.erorr);
-        }
-        if (state is SuccessSearch && !isSearchEmpty) {
-          return _buildSearchResults(state);
-        }
-        if (state is SuccessHome && isSearchEmpty) {
-          return _buildHomeSuccess(state);
-        }
-        if (isSearchEmpty) {
-          return _buildSkeleton(homeCubit);
-        }
-        if (state is ErrorSearch) {
-          return _buildNoItems();
-        }
+
         return const SizedBox.shrink();
       },
     );
@@ -43,32 +40,20 @@ class HomeBlocBuilder extends StatelessWidget {
 
   // Helper methods for cleaner widget building
 
-  Widget _buildSkeleton(HomeCubit homeCubit, {HomeState? state}) {
-    return Skeletonizer(
-      enabled: state is LoadingHome ? true : false,
-      child: SuccessDataApi(responseHome: homeCubit.responseHome!),
-    );
-  }
-
-  Widget _buildError(String error) {
-    return Text(error);
-  }
-
-  Widget _buildSearchResults(SuccessSearch state) {
-    return ListItemsSearch(
-      listdatamodel: state.responseItems.data ?? [],
-    );
-  }
-
-  Widget _buildHomeSuccess(SuccessHome state) {
-    return SuccessDataApi(
-      responseHome: state.responseHome,
-    );
-  }
-
-  Widget _buildNoItems() {
+  Widget _buildSkeleton() {
     return const Center(
-      child: Text('No Items.......................'),
-    );
+      child: CircularProgressIndicator(),
+    ); //  LoadingWidget(
+    //   child: SuccessDataApi(
+    //       responseHome: ResponseHome(
+    //           item1view: Item1view(data: [Item(), Item(), Item(), Item()]),
+    //           setting: SettingResponse(data: [
+    //             Setting(),
+    //             Setting(),
+    //             Setting(),
+    //           ]),
+    //           categories: CategoriesResponse(
+    //               data: [Category(), Category(), Category()]))),
+    // );
   }
 }

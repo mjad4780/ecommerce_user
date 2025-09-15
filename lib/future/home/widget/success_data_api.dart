@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../data/models/response_home/response_home.dart';
 import 'category_selector.dart';
+import 'custom_app_bar.dart';
 import 'poster_section.dart';
 import 'product_grid_view.dart';
 
@@ -10,29 +11,68 @@ class SuccessDataApi extends StatelessWidget {
     super.key,
     required this.responseHome,
   });
+
   final ResponseHome responseHome;
+
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
+    return Scaffold(
+      body: CustomScrollView(slivers: [
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Hi",
+                  style: Theme.of(context).textTheme.displayLarge,
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  "Let’s get something?",
+                  style: Theme.of(context).textTheme.headlineSmall,
+                ),
+              ],
+            ),
+          ),
+        ),
+
+        const SliverToBoxAdapter(child: CustomAppBar()),
+        // Poster Section
         PosterSection(
-          posters: responseHome.setting ?? [],
+          posters: responseHome.setting?.data ?? [],
         ),
-        Text(
-          "Top categories",
-          style: Theme.of(context).textTheme.headlineMedium,
+
+        // Top Categories
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Text(
+              "Top Categories",
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+          ),
         ),
-        const SizedBox(height: 5),
         CategorySelector(
-          categories: responseHome.categories!,
+          categories: responseHome.categories?.data ?? [],
         ),
-        const SizedBox(height: 5),
-        Text(
-          "Top Products",
-          style: Theme.of(context).textTheme.headlineMedium,
+
+        // Top Products
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Text(
+              "Top Products",
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+          ),
         ),
-        ProductGridView(items: responseHome.item1view!.data!),
-      ],
+
+        ProductGridView(
+          items: responseHome.item1view?.data ?? [],
+        ),
+      ]),
     );
   }
 }

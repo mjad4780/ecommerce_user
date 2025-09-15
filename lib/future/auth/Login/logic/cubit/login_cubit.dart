@@ -24,7 +24,7 @@ class LoginCubit extends Cubit<LoginState> {
       final response =
           await _loginRepo.login(emailController.text, passwordController.text);
       response.when(success: (loginResponse) {
-        if (int.parse(loginResponse.data!.userImprove) == 0) {
+        if (loginResponse.data!.userImprove == 0) {
           context.push('/VerfyCodeScrean',
               arguments: {'email': loginResponse.data!.userEmail});
         } else {

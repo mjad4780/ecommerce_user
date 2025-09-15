@@ -9,14 +9,15 @@ part of 'response_detilas.dart';
 ResponseDetails _$ResponseDetailsFromJson(Map<String, dynamic> json) =>
     ResponseDetails(
       status: json['status'] as String?,
-      messege: json['messege'] as String?,
       data: (json['data'] as List<dynamic>?)
           ?.map((e) => DataDetails.fromJson(e as Map<String, dynamic>))
           .toList(),
+      messege: json['messege'] as String?,
     );
 
 Map<String, dynamic> _$ResponseDetailsToJson(ResponseDetails instance) =>
     <String, dynamic>{
       'status': instance.status,
+      'messege': instance.messege,
       'data': instance.data,
     };

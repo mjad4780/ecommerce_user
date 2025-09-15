@@ -1,4 +1,4 @@
-import 'package:ecommerce_user/future/home/data/models/response_home/item1view.dart';
+import 'package:ecommerce_user/future/home/data/models/response_home/response_home.dart';
 
 import '../../../../core/networking/api_error_handler.dart';
 import '../../../../core/networking/api_result.dart';

@@ -22,16 +22,14 @@ class _FavoriteState extends State<Favorite> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          verticalSpace(39),
-          Center(
-              child: Text("Favorites", style: TextStyles.textItemCategories)),
-          const Padding(
-              padding: EdgeInsets.all(11), child: GetFavoriteBlocBuilder())
-        ],
-      ),
-    );
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text(
+            "Favorites",
+          ),
+        ),
+        body: const CustomScrollView(
+          slivers: [GetFavoriteBlocBuilder()],
+        ));
   }
 }

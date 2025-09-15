@@ -3,10 +3,10 @@ import 'package:ecommerce_user/future/item_categories/logic/cubit/item_categorie
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../favorite/logic/cubit/favorite_cubit.dart';
-import '../home/data/models/response_home/category.dart';
 
 import 'package:flutter/material.dart';
 
+import '../home/data/models/response_home/response_home.dart';
 import 'widget/custom_item_categories.dart';
 
 class ProductByCategoryScreen extends StatelessWidget {
@@ -22,7 +22,7 @@ class ProductByCategoryScreen extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) => getIt<ItemCategoriesCubit>()
-            ..emitItemCategories(int.parse(category.categoriesId!))
+            ..emitItemCategories(category.categoriesId!)
             ..selectitemCategories(category),
         ),
         BlocProvider(

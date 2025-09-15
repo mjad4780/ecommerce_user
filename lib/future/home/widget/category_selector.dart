@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../../core/animation/open_container_wrapper.dart';
 import '../../../core/networking/api_constants.dart';
-import '../data/models/response_home/category.dart';
+import '../data/models/response_home/response_home.dart';
 import '../../item_categories/product_by_category_screen.dart';
 
 class CategorySelector extends StatelessWidget {
@@ -16,55 +16,73 @@ class CategorySelector extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.07,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: categories.length,
-        itemBuilder: (context, index) {
-          final category = categories[index];
-          return Container(
-              margin: const EdgeInsets.symmetric(horizontal: 6, vertical: 1),
+    return SliverToBoxAdapter(
+      child: SizedBox(
+        height: MediaQuery.of(context).size.height * 0.12,
+        child: ListView.builder(
+          scrollDirection: Axis.horizontal,
+          itemCount: categories.length,
+          itemBuilder: (context, index) {
+            final category = categories[index];
+
+            return AnimatedContainer(
+              duration: const Duration(milliseconds: 400),
+              curve: Curves.easeOut,
+              margin: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
               child: OpenContainerWrapper(
-                  nextScresan: ProductByCategoryScreen(
-                    category: categories[index],
-                    listCategories: categories,
+                nextScresan: ProductByCategoryScreen(
+                  category: category,
+                  listCategories: categories,
+                ),
+                child: Container(
+                  width: 80,
+                  margin: const EdgeInsets.symmetric(horizontal: 8),
+                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(14),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.2),
+                        blurRadius: 6,
+                        offset: const Offset(2, 4),
+                      ),
+                    ],
                   ),
-                  child: Container(
-                    width: 80,
-                    height: 80,
-                    margin: const EdgeInsets.symmetric(horizontal: 8),
-                    padding: const EdgeInsets.symmetric(vertical: 10),
-                    // decoration: BoxDecoration(
-                    //   color: const Color(0xFFf16b26),
-                    //   borderRadius: BorderRadius.circular(10),
-                    // ),
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
+                  alignment: Alignment.center,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      if (category.categoriesImage != null)
                         Expanded(
-                          child: CachedNetworkImage(
-                            imageUrl:
-                                '${ApiConstants.imageCat}/${category.categoriesImage}',
-                            width: 100,
-                            height: 100,
-                            fit: BoxFit.contain,
+                          child: Hero(
+                            tag: "cat_${category.categoriesId}",
+                            child: CachedNetworkImage(
+                              imageUrl:
+                                  '${ApiConstants.imageCat}/${category.categoriesImage}',
+                              width: 60,
+                              height: 60,
+                              fit: BoxFit.contain,
+                            ),
                           ),
                         ),
-                        const SizedBox(height: 4),
-                        Text(
-                          category.categoriesName ?? '',
-                          style: const TextStyle(
-                            color: Colors.black,
-                            fontSize: 12,
-                          ),
-                          overflow: TextOverflow.ellipsis,
+                      const SizedBox(height: 4),
+                      Text(
+                        category.categoriesName ?? '',
+                        style: const TextStyle(
+                          color: Colors.black87,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
                         ),
-                      ],
-                    ),
-                  )));
-        },
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            );
+          },
+        ),
       ),
     );
   }

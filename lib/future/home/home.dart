@@ -13,28 +13,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return RefreshIndicator(
       onRefresh: () => context.read<HomeCubit>().emitHome(),
-      child: SafeArea(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(8),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const CustomAppBar(),
-                Text(
-                  "Hi ",
-                  style: Theme.of(context).textTheme.displayLarge,
-                ),
-                Text(
-                  "Lets gets somethings?",
-                  style: Theme.of(context).textTheme.headlineSmall,
-                ),
-                const HomeBlocBuilder()
-              ],
-            ),
-          ),
-        ),
-      ),
+      child: const Scaffold(body: SafeArea(child: HomeBlocBuilder())),
     );
   }
 }

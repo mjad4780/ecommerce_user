@@ -18,5 +18,6 @@ ResponseLogin _$ResponseLoginFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$ResponseLoginToJson(ResponseLogin instance) =>
     <String, dynamic>{
       'status': instance.status,
+      'messege': instance.messege,
       'data': instance.data,
     };

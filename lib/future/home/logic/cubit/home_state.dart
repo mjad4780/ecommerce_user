@@ -1,7 +1,6 @@
 import 'package:ecommerce_user/future/home/data/models/response_notification/response_notification.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../data/models/response_home/item1view.dart';
 import '../../data/models/response_home/response_home.dart';
 
 part 'home_state.freezed.dart';

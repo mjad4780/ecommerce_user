@@ -6,14 +6,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../core/function/function_api/ssend_list_api.dart';
 import '../../../core/theming/colors.dart';
-import '../data/models/response_home/datum.dart';
+import '../data/models/response_home/response_home.dart';
 import '../../../widget/carousel_slider.dart';
 import '../../../widget/horizondal_list.dart';
 import '../../../widget/product_rating_section.dart';
 import '../../item_categories/widget/page_wrapper.dart';
 
 class ProductDetailScreen extends StatelessWidget {
-  final Datum product;
+  final Item product;
 
   const ProductDetailScreen(this.product, {super.key});
 
@@ -161,8 +161,7 @@ class ProductDetailScreen extends StatelessWidget {
                                       await context
                                           .read<CartCubit>()
                                           .emitAddCart(
-                                              int.parse(product.itemId!),
-                                              context);
+                                              product.itemId!, context);
                                     }
                                   : null,
                               child: const Text("Add to cart",

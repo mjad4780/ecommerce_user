@@ -2,29 +2,37 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/networking/api_constants.dart';
-import '../data/models/response_home/setting.dart';
+import '../data/models/response_home/response_home.dart';
 import '../../../utility/app_data.dart';
 
 class PosterSection extends StatelessWidget {
   const PosterSection({super.key, required this.posters});
   final List<Setting> posters;
+
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size.height;
-    return SizedBox(
-        height: size * 0.2,
+    final height = MediaQuery.of(context).size.height;
+
+    return SliverToBoxAdapter(
+      child: SizedBox(
+        height: height * 0.22,
         child: ListView.builder(
           padding: const EdgeInsets.symmetric(vertical: 10),
           shrinkWrap: true,
           scrollDirection: Axis.horizontal,
           itemCount: posters.length,
           itemBuilder: (_, index) {
-            return Padding(
-              padding: const EdgeInsets.only(right: 20),
+            final poster = posters[index];
+
+            return AnimatedContainer(
+              duration: const Duration(milliseconds: 500),
+              curve: Curves.easeOut,
+              margin: const EdgeInsets.only(right: 20),
               child: Container(
                 width: 300,
                 decoration: BoxDecoration(
-                  color: AppData.randomPosterBgColors[index],
+                  color: AppData.randomPosterBgColors[index %
+                      AppData.randomPosterBgColors.length], // avoid crash
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: Row(
@@ -36,7 +44,7 @@ class PosterSection extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            '${posters[index].settingTitle}',
+                            poster.settingTitle ?? '',
                             style: Theme.of(context)
                                 .textTheme
                                 .displaySmall
@@ -48,8 +56,10 @@ class PosterSection extends StatelessWidget {
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.white,
                               elevation: 0,
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 18),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 18,
+                                vertical: 8,
+                              ),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(18),
                               ),
@@ -63,15 +73,23 @@ class PosterSection extends StatelessWidget {
                       ),
                     ),
                     const Spacer(),
-                    CachedNetworkImage(
-                        width: MediaQuery.of(context).size.width / 3,
-                        imageUrl:
-                            '${ApiConstants.imagePoster}/${posters[index].settingImage}')
+                    if (poster.settingImage != null)
+                      Hero(
+                        tag: "poster_${poster.settingId}",
+                        child: CachedNetworkImage(
+                          width: MediaQuery.of(context).size.width / 3,
+                          imageUrl:
+                              '${ApiConstants.imagePoster}/${poster.settingImage}',
+                          fit: BoxFit.contain,
+                        ),
+                      ),
                   ],
                 ),
               ),
             );
           },
-        ));
+        ),
+      ),
+    );
   }
 }

@@ -1,4 +1,4 @@
-import 'package:ecommerce_user/future/home/data/models/response_home/category.dart';
+import 'package:ecommerce_user/future/home/data/models/response_home/response_home.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ecommerce_user/core/networking/api_result.dart';
 

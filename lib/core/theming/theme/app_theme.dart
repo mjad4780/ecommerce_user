@@ -1,4 +1,6 @@
+import 'package:ecommerce_user/core/theming/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../colors_dark.dart';
 import '../colors_light.dart';
@@ -22,6 +24,17 @@ ThemeData themeDark() {
 
 ThemeData themeLight() {
   return ThemeData(
+    appBarTheme: AppBarTheme(
+      backgroundColor: ColorsLight.mainColor,
+      iconTheme: const IconThemeData(color: ColorsLight.black),
+      elevation: 0,
+      centerTitle: true,
+      titleTextStyle: TextStyle(
+        color: AppColor.darkOrange,
+        fontSize: 22.sp,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
     scaffoldBackgroundColor: ColorsLight.mainColor,
     extensions: const <ThemeExtension<dynamic>>[
       MyColors.light,

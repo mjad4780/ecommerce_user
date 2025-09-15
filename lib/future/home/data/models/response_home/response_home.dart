@@ -1,18 +1,8 @@
-import 'package:collection/collection.dart';
-import 'package:json_annotation/json_annotation.dart';
-
-import 'category.dart';
-import 'item1view.dart';
-import 'setting.dart';
-
-part 'response_home.g.dart';
-
-@JsonSerializable()
 class ResponseHome {
-  String? status;
-  List<Setting>? setting;
-  List<Category>? categories;
-  Item1view? item1view;
+  final String? status;
+  final SettingResponse? setting;
+  final CategoriesResponse? categories;
+  final Item1view? item1view;
 
   ResponseHome({
     this.status,
@@ -22,23 +12,219 @@ class ResponseHome {
   });
 
   factory ResponseHome.fromJson(Map<String, dynamic> json) {
-    return _$ResponseHomeFromJson(json);
+    return ResponseHome(
+      status: json['status'],
+      setting: json['setting'] != null
+          ? SettingResponse.fromJson(json['setting'])
+          : null,
+      categories: json['categories'] != null
+          ? CategoriesResponse.fromJson(json['categories'])
+          : null,
+      item1view: json['item1view'] != null
+          ? Item1view.fromJson(json['item1view'])
+          : null,
+    );
   }
+}
 
-  Map<String, dynamic> toJson() => _$ResponseHomeToJson(this);
+class SettingResponse {
+  final String? status;
+  final String? messege;
+  final List<Setting>? data;
 
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    if (other is! ResponseHome) return false;
-    final mapEquals = const DeepCollectionEquality().equals;
-    return mapEquals(other.toJson(), toJson());
+  SettingResponse({this.status, this.messege, this.data});
+
+  factory SettingResponse.fromJson(Map<String, dynamic> json) {
+    return SettingResponse(
+      status: json['status'],
+      messege: json['messege'],
+      data: json['data'] != null
+          ? (json['data'] as List<dynamic>)
+              .map((e) => Setting.fromJson(e))
+              .toList()
+          : null,
+    );
   }
+}
 
-  @override
-  int get hashCode =>
-      status.hashCode ^
-      setting.hashCode ^
-      categories.hashCode ^
-      item1view.hashCode;
+class Setting {
+  final int? settingId;
+  final String? settingTitle;
+  final String? settingBody;
+  final int? settingDatedelvery;
+  final String? settingImage;
+
+  Setting({
+    this.settingId,
+    this.settingTitle,
+    this.settingBody,
+    this.settingDatedelvery,
+    this.settingImage,
+  });
+
+  factory Setting.fromJson(Map<String, dynamic> json) {
+    return Setting(
+      settingId: json['setting_id'],
+      settingTitle: json['setting_title'],
+      settingBody: json['setting_body'],
+      settingDatedelvery: json['setting_datedelvery'],
+      settingImage: json['setting_image'],
+    );
+  }
+}
+
+class CategoriesResponse {
+  final String? status;
+  final String? messege;
+  final List<Category>? data;
+
+  CategoriesResponse({this.status, this.messege, this.data});
+
+  factory CategoriesResponse.fromJson(Map<String, dynamic> json) {
+    return CategoriesResponse(
+      status: json['status'],
+      messege: json['messege'],
+      data: json['data'] != null
+          ? (json['data'] as List<dynamic>)
+              .map((e) => Category.fromJson(e))
+              .toList()
+          : null,
+    );
+  }
+}
+
+class Category {
+  final int? categoriesId;
+  final String? categoriesName;
+  final String? categoriesNameAr;
+  final String? categoriesImage;
+  final String? categoriesData;
+
+  Category({
+    this.categoriesId,
+    this.categoriesName,
+    this.categoriesNameAr,
+    this.categoriesImage,
+    this.categoriesData,
+  });
+
+  factory Category.fromJson(Map<String, dynamic> json) {
+    return Category(
+      categoriesId: json['categories_id'],
+      categoriesName: json['categories_name'],
+      categoriesNameAr: json['categories_name_ar'],
+      categoriesImage: json['categories_Image'],
+      categoriesData: json['categories_Data'],
+    );
+  }
+}
+
+class Item1view {
+  final List<Item>? data;
+
+  Item1view({this.data});
+
+  factory Item1view.fromJson(Map<String, dynamic> json) {
+    return Item1view(
+      data: json['data'] != null
+          ? (json['data'] as List<dynamic>)
+              .map((e) => Item.fromJson(e))
+              .toList()
+          : null,
+    );
+  }
+}
+
+class Item {
+  final int? itemId;
+  final String? itemName;
+  final String? itemNameAr;
+  final String? itemDecs;
+  final String? itemDecsAr;
+  final String? itemImage;
+  final int? itemCount;
+  final int? itemActive;
+  final int? itemPrice;
+  final int? itemDiscount;
+  final String? itemData;
+  final int? itemCategories;
+  final int? favorite;
+  final int? categoriesId;
+  final String? categoriesName;
+  final int? itempriceDiscount;
+  final List<String>? images;
+  final List<Size>? size;
+
+  Item({
+    this.itemId,
+    this.itemName,
+    this.itemNameAr,
+    this.itemDecs,
+    this.itemDecsAr,
+    this.itemImage,
+    this.itemCount,
+    this.itemActive,
+    this.itemPrice,
+    this.itemDiscount,
+    this.itemData,
+    this.itemCategories,
+    this.favorite,
+    this.categoriesId,
+    this.categoriesName,
+    this.itempriceDiscount,
+    this.images,
+    this.size,
+  });
+
+  factory Item.fromJson(Map<String, dynamic> json) {
+    return Item(
+      itemId: json['item_id'],
+      itemName: json['item_name'],
+      itemNameAr: json['item_name_ar'],
+      itemDecs: json['item_decs'],
+      itemDecsAr: json['item_decs_ar'],
+      itemImage: json['item_image'],
+      itemCount: json['item_count'],
+      itemActive: json['item_active'],
+      itemPrice: json['item_price'],
+      itemDiscount: json['item_discount'],
+      itemData: json['item_data'],
+      itemCategories: json['item_categories'],
+      favorite: json['favorite'],
+      categoriesId: json['categories_id'],
+      categoriesName: json['categories_name'],
+      itempriceDiscount: json['itemprice_discount'],
+      images: json['images'] != null
+          ? (json['images'] as List<dynamic>).map((e) => e.toString()).toList()
+          : null,
+      size: json['size'] != null
+          ? (json['size'] as List<dynamic>)
+              .map((e) => Size.fromJson(e))
+              .toList()
+          : null,
+    );
+  }
+}
+
+class Size {
+  final int? id;
+  final String? size;
+  final int? quantity;
+  final String? color;
+
+  Size({
+    this.id,
+    this.size,
+    this.quantity,
+    this.color,
+  });
+
+  factory Size.fromJson(Map<String, dynamic> json) {
+    return Size(
+      id: json['id'],
+      size: json['size'],
+      quantity: json['quantity'],
+      color: json['color'],
+    );
+  }
 }

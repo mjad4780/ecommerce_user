@@ -16,7 +16,7 @@ class CustemAppbarNavigationBottom extends StatelessWidget {
       height: 70,
       shape: const CircularNotchedRectangle(),
       notchMargin: 5,
-      surfaceTintColor: Colors.red,
+      surfaceTintColor: Colors.black,
       child: Row(
         children: [
           ...List.generate(context.read<HomeCubit>().buttompage.length + 1,

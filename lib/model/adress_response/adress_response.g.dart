@@ -18,5 +18,6 @@ AdressResponse _$AdressResponseFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$AdressResponseToJson(AdressResponse instance) =>
     <String, dynamic>{
       'status': instance.status,
+      'messege': instance.messege,
       'data': instance.data,
     };

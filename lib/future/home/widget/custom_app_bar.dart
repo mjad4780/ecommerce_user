@@ -16,43 +16,41 @@ class CustomAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Expanded(
-              child: CustomSearchBar(
-                controller: context.read<HomeCubit>().search,
-                onChanged: (val) {
-                  context.read<HomeCubit>().emitSearch();
-                },
-              ),
-            ),
-            AppBarActionButton(
-              icon: Icons.chat,
-              onPressed: () {
-                context.push('/HomePage');
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Expanded(
+            child: CustomSearchBar(
+              controller: context.read<HomeCubit>().search,
+              onChanged: (val) {
+                context.read<HomeCubit>().emitSearch();
               },
             ),
-            OpenContainerWrapper(
-                nextScresan: ViewNotification(
-                  contexter: context,
+          ),
+          AppBarActionButton(
+            icon: Icons.chat,
+            onPressed: () {
+              context.push('/HomePage');
+            },
+          ),
+          OpenContainerWrapper(
+              nextScresan: ViewNotification(
+                contexter: context,
+              ),
+              child: Container(
+                margin: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(11),
+                  color: AppColor.lightGrey,
                 ),
-                child: Container(
-                  margin: const EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(11),
-                    color: AppColor.lightGrey,
-                  ),
-                  child: const Icon(
-                    Icons.notifications,
-                    color: Colors.black,
-                  ),
-                ))
-          ],
-        ),
+                child: const Icon(
+                  Icons.notifications,
+                  color: Colors.black,
+                ),
+              ))
+        ],
       ),
     );
   }

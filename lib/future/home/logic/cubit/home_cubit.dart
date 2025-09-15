@@ -6,7 +6,6 @@ import 'package:ecommerce_user/core/networking/api_result.dart';
 import '../../../Book/ui/book.dart';
 import '../../../favorite/favorite.dart';
 import '../../../setting/setting.dart';
-import '../../data/models/response_home/response_home.dart';
 import '../../data/repo.dart';
 import '../../home.dart';
 import 'home_state.dart';
@@ -15,7 +14,7 @@ class HomeCubit extends Cubit<HomeState> {
   HomeCubit(this.homeRepo) : super(const HomeState.initial());
   TextEditingController search = TextEditingController();
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
-  ResponseHome? responseHome;
+  // ResponseHome? responseHome;
 
   final HomeRepo homeRepo;
 //:bottomNavigationBar
@@ -36,10 +35,9 @@ class HomeCubit extends Cubit<HomeState> {
 //:home
   emitHome() async {
     emit(const HomeState.loadingHome());
+    await Future.delayed(const Duration(seconds: 3));
     final response = await homeRepo.homeData();
     response.when(success: (responsehome) {
-      responseHome = responsehome;
-
       emit(HomeState.successHome(responseHome: responsehome));
     }, failure: (error) {
       emit(HomeState.errorHome(erorr: error.messege ?? ''));

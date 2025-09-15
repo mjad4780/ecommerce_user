@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../core/theming/styles.dart';
-import '../../home/data/models/response_home/category.dart';
 import '../../../widget/horizondal_list.dart';
+import '../../home/data/models/response_home/response_home.dart';
 import '../logic/cubit/item_categories_cubit.dart';
 import 'view_item_categories_bloc.dart';
 
@@ -50,7 +50,7 @@ class CustomItemCategories extends StatelessWidget {
                           context
                               .read<ItemCategoriesCubit>()
                               .emitItemCategories(
-                                int.parse(val.categoriesId!),
+                                val.categoriesId!,
                               );
                         },
                       ),
