@@ -8,9 +8,10 @@ part 'response_orders.g.dart';
 @JsonSerializable()
 class ResponseOrders {
   final String? status;
+  final String? messege;
   final List<Datum>? data;
 
-  const ResponseOrders({this.status, this.data});
+  const ResponseOrders({this.status, this.data, this.messege});
 
   factory ResponseOrders.fromJson(Map<String, dynamic> json) {
     return _$ResponseOrdersFromJson(json);

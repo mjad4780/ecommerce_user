@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,62 +9,102 @@ part of 'home_state.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$HomeState {
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is HomeState);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'HomeState()';
+  }
+}
+
+/// @nodoc
+class $HomeStateCopyWith<$Res> {
+  $HomeStateCopyWith(HomeState _, $Res Function(HomeState) __);
+}
+
+/// Adds pattern-matching-related methods to [HomeState].
+extension HomeStatePatterns on HomeState {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingHome,
-    required TResult Function(ResponseHome responseHome) successHome,
-    required TResult Function(String erorr) errorHome,
-    required TResult Function() loadingsearch,
-    required TResult Function(Item1view responseItems) successSearch,
-    required TResult Function(String erorr) errorSearch,
-    required TResult Function(int page) stateBottomNavigationBar,
-    required TResult Function() loadinggetNotification,
-    required TResult Function(ResponseNotification responseItems)
-        successgetNotification,
-    required TResult Function(String erorr) errorgetNotification,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingHome,
-    TResult? Function(ResponseHome responseHome)? successHome,
-    TResult? Function(String erorr)? errorHome,
-    TResult? Function()? loadingsearch,
-    TResult? Function(Item1view responseItems)? successSearch,
-    TResult? Function(String erorr)? errorSearch,
-    TResult? Function(int page)? stateBottomNavigationBar,
-    TResult? Function()? loadinggetNotification,
-    TResult? Function(ResponseNotification responseItems)?
-        successgetNotification,
-    TResult? Function(String erorr)? errorgetNotification,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingHome,
-    TResult Function(ResponseHome responseHome)? successHome,
-    TResult Function(String erorr)? errorHome,
-    TResult Function()? loadingsearch,
-    TResult Function(Item1view responseItems)? successSearch,
-    TResult Function(String erorr)? errorSearch,
-    TResult Function(int page)? stateBottomNavigationBar,
-    TResult Function()? loadinggetNotification,
-    TResult Function(ResponseNotification responseItems)?
-        successgetNotification,
-    TResult Function(String erorr)? errorgetNotification,
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(LoadingHome value)? loadingHome,
+    TResult Function(SuccessHome value)? successHome,
+    TResult Function(ErrorHome value)? errorHome,
+    TResult Function(Loadingsearch value)? loadingsearch,
+    TResult Function(SuccessSearch value)? successSearch,
+    TResult Function(ErrorSearch value)? errorSearch,
+    TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
+    TResult Function(LoadinggetNotification value)? loadinggetNotification,
+    TResult Function(SuccessgetNotification value)? successgetNotification,
+    TResult Function(ErrorgetNotification value)? errorgetNotification,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial(_that);
+      case LoadingHome() when loadingHome != null:
+        return loadingHome(_that);
+      case SuccessHome() when successHome != null:
+        return successHome(_that);
+      case ErrorHome() when errorHome != null:
+        return errorHome(_that);
+      case Loadingsearch() when loadingsearch != null:
+        return loadingsearch(_that);
+      case SuccessSearch() when successSearch != null:
+        return successSearch(_that);
+      case ErrorSearch() when errorSearch != null:
+        return errorSearch(_that);
+      case StateBottomNavigationBar() when stateBottomNavigationBar != null:
+        return stateBottomNavigationBar(_that);
+      case LoadinggetNotification() when loadinggetNotification != null:
+        return loadinggetNotification(_that);
+      case SuccessgetNotification() when successgetNotification != null:
+        return successgetNotification(_that);
+      case ErrorgetNotification() when errorgetNotification != null:
+        return errorgetNotification(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
@@ -81,8 +121,48 @@ mixin _$HomeState {
     required TResult Function(SuccessgetNotification value)
         successgetNotification,
     required TResult Function(ErrorgetNotification value) errorgetNotification,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial():
+        return initial(_that);
+      case LoadingHome():
+        return loadingHome(_that);
+      case SuccessHome():
+        return successHome(_that);
+      case ErrorHome():
+        return errorHome(_that);
+      case Loadingsearch():
+        return loadingsearch(_that);
+      case SuccessSearch():
+        return successSearch(_that);
+      case ErrorSearch():
+        return errorSearch(_that);
+      case StateBottomNavigationBar():
+        return stateBottomNavigationBar(_that);
+      case LoadinggetNotification():
+        return loadinggetNotification(_that);
+      case SuccessgetNotification():
+        return successgetNotification(_that);
+      case ErrorgetNotification():
+        return errorgetNotification(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
@@ -96,392 +176,305 @@ mixin _$HomeState {
     TResult? Function(LoadinggetNotification value)? loadinggetNotification,
     TResult? Function(SuccessgetNotification value)? successgetNotification,
     TResult? Function(ErrorgetNotification value)? errorgetNotification,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial(_that);
+      case LoadingHome() when loadingHome != null:
+        return loadingHome(_that);
+      case SuccessHome() when successHome != null:
+        return successHome(_that);
+      case ErrorHome() when errorHome != null:
+        return errorHome(_that);
+      case Loadingsearch() when loadingsearch != null:
+        return loadingsearch(_that);
+      case SuccessSearch() when successSearch != null:
+        return successSearch(_that);
+      case ErrorSearch() when errorSearch != null:
+        return errorSearch(_that);
+      case StateBottomNavigationBar() when stateBottomNavigationBar != null:
+        return stateBottomNavigationBar(_that);
+      case LoadinggetNotification() when loadinggetNotification != null:
+        return loadinggetNotification(_that);
+      case SuccessgetNotification() when successgetNotification != null:
+        return successgetNotification(_that);
+      case ErrorgetNotification() when errorgetNotification != null:
+        return errorgetNotification(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingHome value)? loadingHome,
-    TResult Function(SuccessHome value)? successHome,
-    TResult Function(ErrorHome value)? errorHome,
-    TResult Function(Loadingsearch value)? loadingsearch,
-    TResult Function(SuccessSearch value)? successSearch,
-    TResult Function(ErrorSearch value)? errorSearch,
-    TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
-    TResult Function(LoadinggetNotification value)? loadinggetNotification,
-    TResult Function(SuccessgetNotification value)? successgetNotification,
-    TResult Function(ErrorgetNotification value)? errorgetNotification,
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingHome,
+    TResult Function(ResponseHome responseHome)? successHome,
+    TResult Function(String erorr)? errorHome,
+    TResult Function()? loadingsearch,
+    TResult Function(Item1view responseItems)? successSearch,
+    TResult Function(String erorr)? errorSearch,
+    TResult Function(int page)? stateBottomNavigationBar,
+    TResult Function()? loadinggetNotification,
+    TResult Function(ResponseNotification responseItems)?
+        successgetNotification,
+    TResult Function(String erorr)? errorgetNotification,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial();
+      case LoadingHome() when loadingHome != null:
+        return loadingHome();
+      case SuccessHome() when successHome != null:
+        return successHome(_that.responseHome);
+      case ErrorHome() when errorHome != null:
+        return errorHome(_that.erorr);
+      case Loadingsearch() when loadingsearch != null:
+        return loadingsearch();
+      case SuccessSearch() when successSearch != null:
+        return successSearch(_that.responseItems);
+      case ErrorSearch() when errorSearch != null:
+        return errorSearch(_that.erorr);
+      case StateBottomNavigationBar() when stateBottomNavigationBar != null:
+        return stateBottomNavigationBar(_that.page);
+      case LoadinggetNotification() when loadinggetNotification != null:
+        return loadinggetNotification();
+      case SuccessgetNotification() when successgetNotification != null:
+        return successgetNotification(_that.responseItems);
+      case ErrorgetNotification() when errorgetNotification != null:
+        return errorgetNotification(_that.erorr);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingHome,
+    required TResult Function(ResponseHome responseHome) successHome,
+    required TResult Function(String erorr) errorHome,
+    required TResult Function() loadingsearch,
+    required TResult Function(Item1view responseItems) successSearch,
+    required TResult Function(String erorr) errorSearch,
+    required TResult Function(int page) stateBottomNavigationBar,
+    required TResult Function() loadinggetNotification,
+    required TResult Function(ResponseNotification responseItems)
+        successgetNotification,
+    required TResult Function(String erorr) errorgetNotification,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial():
+        return initial();
+      case LoadingHome():
+        return loadingHome();
+      case SuccessHome():
+        return successHome(_that.responseHome);
+      case ErrorHome():
+        return errorHome(_that.erorr);
+      case Loadingsearch():
+        return loadingsearch();
+      case SuccessSearch():
+        return successSearch(_that.responseItems);
+      case ErrorSearch():
+        return errorSearch(_that.erorr);
+      case StateBottomNavigationBar():
+        return stateBottomNavigationBar(_that.page);
+      case LoadinggetNotification():
+        return loadinggetNotification();
+      case SuccessgetNotification():
+        return successgetNotification(_that.responseItems);
+      case ErrorgetNotification():
+        return errorgetNotification(_that.erorr);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingHome,
+    TResult? Function(ResponseHome responseHome)? successHome,
+    TResult? Function(String erorr)? errorHome,
+    TResult? Function()? loadingsearch,
+    TResult? Function(Item1view responseItems)? successSearch,
+    TResult? Function(String erorr)? errorSearch,
+    TResult? Function(int page)? stateBottomNavigationBar,
+    TResult? Function()? loadinggetNotification,
+    TResult? Function(ResponseNotification responseItems)?
+        successgetNotification,
+    TResult? Function(String erorr)? errorgetNotification,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial();
+      case LoadingHome() when loadingHome != null:
+        return loadingHome();
+      case SuccessHome() when successHome != null:
+        return successHome(_that.responseHome);
+      case ErrorHome() when errorHome != null:
+        return errorHome(_that.erorr);
+      case Loadingsearch() when loadingsearch != null:
+        return loadingsearch();
+      case SuccessSearch() when successSearch != null:
+        return successSearch(_that.responseItems);
+      case ErrorSearch() when errorSearch != null:
+        return errorSearch(_that.erorr);
+      case StateBottomNavigationBar() when stateBottomNavigationBar != null:
+        return stateBottomNavigationBar(_that.page);
+      case LoadinggetNotification() when loadinggetNotification != null:
+        return loadinggetNotification();
+      case SuccessgetNotification() when successgetNotification != null:
+        return successgetNotification(_that.responseItems);
+      case ErrorgetNotification() when errorgetNotification != null:
+        return errorgetNotification(_that.erorr);
+      case _:
+        return null;
+    }
+  }
 }
 
 /// @nodoc
-abstract class $HomeStateCopyWith<$Res> {
-  factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) =
-      _$HomeStateCopyWithImpl<$Res, HomeState>;
-}
 
-/// @nodoc
-class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
-    implements $HomeStateCopyWith<$Res> {
-  _$HomeStateCopyWithImpl(this._value, this._then);
+class _Initial implements HomeState {
+  const _Initial();
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-}
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _Initial);
+  }
 
-/// @nodoc
-abstract class _$$InitialImplCopyWith<$Res> {
-  factory _$$InitialImplCopyWith(
-          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
-      __$$InitialImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$InitialImplCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$InitialImpl>
-    implements _$$InitialImplCopyWith<$Res> {
-  __$$InitialImplCopyWithImpl(
-      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$InitialImpl implements _Initial {
-  const _$InitialImpl();
+  @override
+  int get hashCode => runtimeType.hashCode;
 
   @override
   String toString() {
     return 'HomeState.initial()';
   }
+}
+
+/// @nodoc
+
+class LoadingHome implements HomeState {
+  const LoadingHome();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InitialImpl);
+        (other.runtimeType == runtimeType && other is LoadingHome);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingHome,
-    required TResult Function(ResponseHome responseHome) successHome,
-    required TResult Function(String erorr) errorHome,
-    required TResult Function() loadingsearch,
-    required TResult Function(Item1view responseItems) successSearch,
-    required TResult Function(String erorr) errorSearch,
-    required TResult Function(int page) stateBottomNavigationBar,
-    required TResult Function() loadinggetNotification,
-    required TResult Function(ResponseNotification responseItems)
-        successgetNotification,
-    required TResult Function(String erorr) errorgetNotification,
-  }) {
-    return initial();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingHome,
-    TResult? Function(ResponseHome responseHome)? successHome,
-    TResult? Function(String erorr)? errorHome,
-    TResult? Function()? loadingsearch,
-    TResult? Function(Item1view responseItems)? successSearch,
-    TResult? Function(String erorr)? errorSearch,
-    TResult? Function(int page)? stateBottomNavigationBar,
-    TResult? Function()? loadinggetNotification,
-    TResult? Function(ResponseNotification responseItems)?
-        successgetNotification,
-    TResult? Function(String erorr)? errorgetNotification,
-  }) {
-    return initial?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingHome,
-    TResult Function(ResponseHome responseHome)? successHome,
-    TResult Function(String erorr)? errorHome,
-    TResult Function()? loadingsearch,
-    TResult Function(Item1view responseItems)? successSearch,
-    TResult Function(String erorr)? errorSearch,
-    TResult Function(int page)? stateBottomNavigationBar,
-    TResult Function()? loadinggetNotification,
-    TResult Function(ResponseNotification responseItems)?
-        successgetNotification,
-    TResult Function(String erorr)? errorgetNotification,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingHome value) loadingHome,
-    required TResult Function(SuccessHome value) successHome,
-    required TResult Function(ErrorHome value) errorHome,
-    required TResult Function(Loadingsearch value) loadingsearch,
-    required TResult Function(SuccessSearch value) successSearch,
-    required TResult Function(ErrorSearch value) errorSearch,
-    required TResult Function(StateBottomNavigationBar value)
-        stateBottomNavigationBar,
-    required TResult Function(LoadinggetNotification value)
-        loadinggetNotification,
-    required TResult Function(SuccessgetNotification value)
-        successgetNotification,
-    required TResult Function(ErrorgetNotification value) errorgetNotification,
-  }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingHome value)? loadingHome,
-    TResult? Function(SuccessHome value)? successHome,
-    TResult? Function(ErrorHome value)? errorHome,
-    TResult? Function(Loadingsearch value)? loadingsearch,
-    TResult? Function(SuccessSearch value)? successSearch,
-    TResult? Function(ErrorSearch value)? errorSearch,
-    TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
-    TResult? Function(LoadinggetNotification value)? loadinggetNotification,
-    TResult? Function(SuccessgetNotification value)? successgetNotification,
-    TResult? Function(ErrorgetNotification value)? errorgetNotification,
-  }) {
-    return initial?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingHome value)? loadingHome,
-    TResult Function(SuccessHome value)? successHome,
-    TResult Function(ErrorHome value)? errorHome,
-    TResult Function(Loadingsearch value)? loadingsearch,
-    TResult Function(SuccessSearch value)? successSearch,
-    TResult Function(ErrorSearch value)? errorSearch,
-    TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
-    TResult Function(LoadinggetNotification value)? loadinggetNotification,
-    TResult Function(SuccessgetNotification value)? successgetNotification,
-    TResult Function(ErrorgetNotification value)? errorgetNotification,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Initial implements HomeState {
-  const factory _Initial() = _$InitialImpl;
-}
-
-/// @nodoc
-abstract class _$$LoadingHomeImplCopyWith<$Res> {
-  factory _$$LoadingHomeImplCopyWith(
-          _$LoadingHomeImpl value, $Res Function(_$LoadingHomeImpl) then) =
-      __$$LoadingHomeImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$LoadingHomeImplCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$LoadingHomeImpl>
-    implements _$$LoadingHomeImplCopyWith<$Res> {
-  __$$LoadingHomeImplCopyWithImpl(
-      _$LoadingHomeImpl _value, $Res Function(_$LoadingHomeImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$LoadingHomeImpl implements LoadingHome {
-  const _$LoadingHomeImpl();
 
   @override
   String toString() {
     return 'HomeState.loadingHome()';
   }
+}
+
+/// @nodoc
+
+class SuccessHome implements HomeState {
+  const SuccessHome({required this.responseHome});
+
+  final ResponseHome responseHome;
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SuccessHomeCopyWith<SuccessHome> get copyWith =>
+      _$SuccessHomeCopyWithImpl<SuccessHome>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingHomeImpl);
+        (other.runtimeType == runtimeType &&
+            other is SuccessHome &&
+            (identical(other.responseHome, responseHome) ||
+                other.responseHome == responseHome));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, responseHome);
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingHome,
-    required TResult Function(ResponseHome responseHome) successHome,
-    required TResult Function(String erorr) errorHome,
-    required TResult Function() loadingsearch,
-    required TResult Function(Item1view responseItems) successSearch,
-    required TResult Function(String erorr) errorSearch,
-    required TResult Function(int page) stateBottomNavigationBar,
-    required TResult Function() loadinggetNotification,
-    required TResult Function(ResponseNotification responseItems)
-        successgetNotification,
-    required TResult Function(String erorr) errorgetNotification,
-  }) {
-    return loadingHome();
+  String toString() {
+    return 'HomeState.successHome(responseHome: $responseHome)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingHome,
-    TResult? Function(ResponseHome responseHome)? successHome,
-    TResult? Function(String erorr)? errorHome,
-    TResult? Function()? loadingsearch,
-    TResult? Function(Item1view responseItems)? successSearch,
-    TResult? Function(String erorr)? errorSearch,
-    TResult? Function(int page)? stateBottomNavigationBar,
-    TResult? Function()? loadinggetNotification,
-    TResult? Function(ResponseNotification responseItems)?
-        successgetNotification,
-    TResult? Function(String erorr)? errorgetNotification,
-  }) {
-    return loadingHome?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingHome,
-    TResult Function(ResponseHome responseHome)? successHome,
-    TResult Function(String erorr)? errorHome,
-    TResult Function()? loadingsearch,
-    TResult Function(Item1view responseItems)? successSearch,
-    TResult Function(String erorr)? errorSearch,
-    TResult Function(int page)? stateBottomNavigationBar,
-    TResult Function()? loadinggetNotification,
-    TResult Function(ResponseNotification responseItems)?
-        successgetNotification,
-    TResult Function(String erorr)? errorgetNotification,
-    required TResult orElse(),
-  }) {
-    if (loadingHome != null) {
-      return loadingHome();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingHome value) loadingHome,
-    required TResult Function(SuccessHome value) successHome,
-    required TResult Function(ErrorHome value) errorHome,
-    required TResult Function(Loadingsearch value) loadingsearch,
-    required TResult Function(SuccessSearch value) successSearch,
-    required TResult Function(ErrorSearch value) errorSearch,
-    required TResult Function(StateBottomNavigationBar value)
-        stateBottomNavigationBar,
-    required TResult Function(LoadinggetNotification value)
-        loadinggetNotification,
-    required TResult Function(SuccessgetNotification value)
-        successgetNotification,
-    required TResult Function(ErrorgetNotification value) errorgetNotification,
-  }) {
-    return loadingHome(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingHome value)? loadingHome,
-    TResult? Function(SuccessHome value)? successHome,
-    TResult? Function(ErrorHome value)? errorHome,
-    TResult? Function(Loadingsearch value)? loadingsearch,
-    TResult? Function(SuccessSearch value)? successSearch,
-    TResult? Function(ErrorSearch value)? errorSearch,
-    TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
-    TResult? Function(LoadinggetNotification value)? loadinggetNotification,
-    TResult? Function(SuccessgetNotification value)? successgetNotification,
-    TResult? Function(ErrorgetNotification value)? errorgetNotification,
-  }) {
-    return loadingHome?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingHome value)? loadingHome,
-    TResult Function(SuccessHome value)? successHome,
-    TResult Function(ErrorHome value)? errorHome,
-    TResult Function(Loadingsearch value)? loadingsearch,
-    TResult Function(SuccessSearch value)? successSearch,
-    TResult Function(ErrorSearch value)? errorSearch,
-    TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
-    TResult Function(LoadinggetNotification value)? loadinggetNotification,
-    TResult Function(SuccessgetNotification value)? successgetNotification,
-    TResult Function(ErrorgetNotification value)? errorgetNotification,
-    required TResult orElse(),
-  }) {
-    if (loadingHome != null) {
-      return loadingHome(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class LoadingHome implements HomeState {
-  const factory LoadingHome() = _$LoadingHomeImpl;
 }
 
 /// @nodoc
-abstract class _$$SuccessHomeImplCopyWith<$Res> {
-  factory _$$SuccessHomeImplCopyWith(
-          _$SuccessHomeImpl value, $Res Function(_$SuccessHomeImpl) then) =
-      __$$SuccessHomeImplCopyWithImpl<$Res>;
+abstract mixin class $SuccessHomeCopyWith<$Res>
+    implements $HomeStateCopyWith<$Res> {
+  factory $SuccessHomeCopyWith(
+          SuccessHome value, $Res Function(SuccessHome) _then) =
+      _$SuccessHomeCopyWithImpl;
   @useResult
   $Res call({ResponseHome responseHome});
 }
 
 /// @nodoc
-class __$$SuccessHomeImplCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$SuccessHomeImpl>
-    implements _$$SuccessHomeImplCopyWith<$Res> {
-  __$$SuccessHomeImplCopyWithImpl(
-      _$SuccessHomeImpl _value, $Res Function(_$SuccessHomeImpl) _then)
-      : super(_value, _then);
+class _$SuccessHomeCopyWithImpl<$Res> implements $SuccessHomeCopyWith<$Res> {
+  _$SuccessHomeCopyWithImpl(this._self, this._then);
 
+  final SuccessHome _self;
+  final $Res Function(SuccessHome) _then;
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? responseHome = null,
   }) {
-    return _then(_$SuccessHomeImpl(
+    return _then(SuccessHome(
       responseHome: null == responseHome
-          ? _value.responseHome
+          ? _self.responseHome
           : responseHome // ignore: cast_nullable_to_non_nullable
               as ResponseHome,
     ));
@@ -490,193 +483,60 @@ class __$$SuccessHomeImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SuccessHomeImpl implements SuccessHome {
-  const _$SuccessHomeImpl({required this.responseHome});
+class ErrorHome implements HomeState {
+  const ErrorHome({required this.erorr});
 
-  @override
-  final ResponseHome responseHome;
+  final String erorr;
 
-  @override
-  String toString() {
-    return 'HomeState.successHome(responseHome: $responseHome)';
-  }
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ErrorHomeCopyWith<ErrorHome> get copyWith =>
+      _$ErrorHomeCopyWithImpl<ErrorHome>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SuccessHomeImpl &&
-            (identical(other.responseHome, responseHome) ||
-                other.responseHome == responseHome));
+            other is ErrorHome &&
+            (identical(other.erorr, erorr) || other.erorr == erorr));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, responseHome);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SuccessHomeImplCopyWith<_$SuccessHomeImpl> get copyWith =>
-      __$$SuccessHomeImplCopyWithImpl<_$SuccessHomeImpl>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, erorr);
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingHome,
-    required TResult Function(ResponseHome responseHome) successHome,
-    required TResult Function(String erorr) errorHome,
-    required TResult Function() loadingsearch,
-    required TResult Function(Item1view responseItems) successSearch,
-    required TResult Function(String erorr) errorSearch,
-    required TResult Function(int page) stateBottomNavigationBar,
-    required TResult Function() loadinggetNotification,
-    required TResult Function(ResponseNotification responseItems)
-        successgetNotification,
-    required TResult Function(String erorr) errorgetNotification,
-  }) {
-    return successHome(responseHome);
+  String toString() {
+    return 'HomeState.errorHome(erorr: $erorr)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingHome,
-    TResult? Function(ResponseHome responseHome)? successHome,
-    TResult? Function(String erorr)? errorHome,
-    TResult? Function()? loadingsearch,
-    TResult? Function(Item1view responseItems)? successSearch,
-    TResult? Function(String erorr)? errorSearch,
-    TResult? Function(int page)? stateBottomNavigationBar,
-    TResult? Function()? loadinggetNotification,
-    TResult? Function(ResponseNotification responseItems)?
-        successgetNotification,
-    TResult? Function(String erorr)? errorgetNotification,
-  }) {
-    return successHome?.call(responseHome);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingHome,
-    TResult Function(ResponseHome responseHome)? successHome,
-    TResult Function(String erorr)? errorHome,
-    TResult Function()? loadingsearch,
-    TResult Function(Item1view responseItems)? successSearch,
-    TResult Function(String erorr)? errorSearch,
-    TResult Function(int page)? stateBottomNavigationBar,
-    TResult Function()? loadinggetNotification,
-    TResult Function(ResponseNotification responseItems)?
-        successgetNotification,
-    TResult Function(String erorr)? errorgetNotification,
-    required TResult orElse(),
-  }) {
-    if (successHome != null) {
-      return successHome(responseHome);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingHome value) loadingHome,
-    required TResult Function(SuccessHome value) successHome,
-    required TResult Function(ErrorHome value) errorHome,
-    required TResult Function(Loadingsearch value) loadingsearch,
-    required TResult Function(SuccessSearch value) successSearch,
-    required TResult Function(ErrorSearch value) errorSearch,
-    required TResult Function(StateBottomNavigationBar value)
-        stateBottomNavigationBar,
-    required TResult Function(LoadinggetNotification value)
-        loadinggetNotification,
-    required TResult Function(SuccessgetNotification value)
-        successgetNotification,
-    required TResult Function(ErrorgetNotification value) errorgetNotification,
-  }) {
-    return successHome(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingHome value)? loadingHome,
-    TResult? Function(SuccessHome value)? successHome,
-    TResult? Function(ErrorHome value)? errorHome,
-    TResult? Function(Loadingsearch value)? loadingsearch,
-    TResult? Function(SuccessSearch value)? successSearch,
-    TResult? Function(ErrorSearch value)? errorSearch,
-    TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
-    TResult? Function(LoadinggetNotification value)? loadinggetNotification,
-    TResult? Function(SuccessgetNotification value)? successgetNotification,
-    TResult? Function(ErrorgetNotification value)? errorgetNotification,
-  }) {
-    return successHome?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingHome value)? loadingHome,
-    TResult Function(SuccessHome value)? successHome,
-    TResult Function(ErrorHome value)? errorHome,
-    TResult Function(Loadingsearch value)? loadingsearch,
-    TResult Function(SuccessSearch value)? successSearch,
-    TResult Function(ErrorSearch value)? errorSearch,
-    TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
-    TResult Function(LoadinggetNotification value)? loadinggetNotification,
-    TResult Function(SuccessgetNotification value)? successgetNotification,
-    TResult Function(ErrorgetNotification value)? errorgetNotification,
-    required TResult orElse(),
-  }) {
-    if (successHome != null) {
-      return successHome(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class SuccessHome implements HomeState {
-  const factory SuccessHome({required final ResponseHome responseHome}) =
-      _$SuccessHomeImpl;
-
-  ResponseHome get responseHome;
-  @JsonKey(ignore: true)
-  _$$SuccessHomeImplCopyWith<_$SuccessHomeImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$ErrorHomeImplCopyWith<$Res> {
-  factory _$$ErrorHomeImplCopyWith(
-          _$ErrorHomeImpl value, $Res Function(_$ErrorHomeImpl) then) =
-      __$$ErrorHomeImplCopyWithImpl<$Res>;
+abstract mixin class $ErrorHomeCopyWith<$Res>
+    implements $HomeStateCopyWith<$Res> {
+  factory $ErrorHomeCopyWith(ErrorHome value, $Res Function(ErrorHome) _then) =
+      _$ErrorHomeCopyWithImpl;
   @useResult
   $Res call({String erorr});
 }
 
 /// @nodoc
-class __$$ErrorHomeImplCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$ErrorHomeImpl>
-    implements _$$ErrorHomeImplCopyWith<$Res> {
-  __$$ErrorHomeImplCopyWithImpl(
-      _$ErrorHomeImpl _value, $Res Function(_$ErrorHomeImpl) _then)
-      : super(_value, _then);
+class _$ErrorHomeCopyWithImpl<$Res> implements $ErrorHomeCopyWith<$Res> {
+  _$ErrorHomeCopyWithImpl(this._self, this._then);
 
+  final ErrorHome _self;
+  final $Res Function(ErrorHome) _then;
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? erorr = null,
   }) {
-    return _then(_$ErrorHomeImpl(
+    return _then(ErrorHome(
       erorr: null == erorr
-          ? _value.erorr
+          ? _self.erorr
           : erorr // ignore: cast_nullable_to_non_nullable
               as String,
     ));
@@ -685,353 +545,83 @@ class __$$ErrorHomeImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErrorHomeImpl implements ErrorHome {
-  const _$ErrorHomeImpl({required this.erorr});
-
-  @override
-  final String erorr;
-
-  @override
-  String toString() {
-    return 'HomeState.errorHome(erorr: $erorr)';
-  }
+class Loadingsearch implements HomeState {
+  const Loadingsearch();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ErrorHomeImpl &&
-            (identical(other.erorr, erorr) || other.erorr == erorr));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, erorr);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ErrorHomeImplCopyWith<_$ErrorHomeImpl> get copyWith =>
-      __$$ErrorHomeImplCopyWithImpl<_$ErrorHomeImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingHome,
-    required TResult Function(ResponseHome responseHome) successHome,
-    required TResult Function(String erorr) errorHome,
-    required TResult Function() loadingsearch,
-    required TResult Function(Item1view responseItems) successSearch,
-    required TResult Function(String erorr) errorSearch,
-    required TResult Function(int page) stateBottomNavigationBar,
-    required TResult Function() loadinggetNotification,
-    required TResult Function(ResponseNotification responseItems)
-        successgetNotification,
-    required TResult Function(String erorr) errorgetNotification,
-  }) {
-    return errorHome(erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingHome,
-    TResult? Function(ResponseHome responseHome)? successHome,
-    TResult? Function(String erorr)? errorHome,
-    TResult? Function()? loadingsearch,
-    TResult? Function(Item1view responseItems)? successSearch,
-    TResult? Function(String erorr)? errorSearch,
-    TResult? Function(int page)? stateBottomNavigationBar,
-    TResult? Function()? loadinggetNotification,
-    TResult? Function(ResponseNotification responseItems)?
-        successgetNotification,
-    TResult? Function(String erorr)? errorgetNotification,
-  }) {
-    return errorHome?.call(erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingHome,
-    TResult Function(ResponseHome responseHome)? successHome,
-    TResult Function(String erorr)? errorHome,
-    TResult Function()? loadingsearch,
-    TResult Function(Item1view responseItems)? successSearch,
-    TResult Function(String erorr)? errorSearch,
-    TResult Function(int page)? stateBottomNavigationBar,
-    TResult Function()? loadinggetNotification,
-    TResult Function(ResponseNotification responseItems)?
-        successgetNotification,
-    TResult Function(String erorr)? errorgetNotification,
-    required TResult orElse(),
-  }) {
-    if (errorHome != null) {
-      return errorHome(erorr);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingHome value) loadingHome,
-    required TResult Function(SuccessHome value) successHome,
-    required TResult Function(ErrorHome value) errorHome,
-    required TResult Function(Loadingsearch value) loadingsearch,
-    required TResult Function(SuccessSearch value) successSearch,
-    required TResult Function(ErrorSearch value) errorSearch,
-    required TResult Function(StateBottomNavigationBar value)
-        stateBottomNavigationBar,
-    required TResult Function(LoadinggetNotification value)
-        loadinggetNotification,
-    required TResult Function(SuccessgetNotification value)
-        successgetNotification,
-    required TResult Function(ErrorgetNotification value) errorgetNotification,
-  }) {
-    return errorHome(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingHome value)? loadingHome,
-    TResult? Function(SuccessHome value)? successHome,
-    TResult? Function(ErrorHome value)? errorHome,
-    TResult? Function(Loadingsearch value)? loadingsearch,
-    TResult? Function(SuccessSearch value)? successSearch,
-    TResult? Function(ErrorSearch value)? errorSearch,
-    TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
-    TResult? Function(LoadinggetNotification value)? loadinggetNotification,
-    TResult? Function(SuccessgetNotification value)? successgetNotification,
-    TResult? Function(ErrorgetNotification value)? errorgetNotification,
-  }) {
-    return errorHome?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingHome value)? loadingHome,
-    TResult Function(SuccessHome value)? successHome,
-    TResult Function(ErrorHome value)? errorHome,
-    TResult Function(Loadingsearch value)? loadingsearch,
-    TResult Function(SuccessSearch value)? successSearch,
-    TResult Function(ErrorSearch value)? errorSearch,
-    TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
-    TResult Function(LoadinggetNotification value)? loadinggetNotification,
-    TResult Function(SuccessgetNotification value)? successgetNotification,
-    TResult Function(ErrorgetNotification value)? errorgetNotification,
-    required TResult orElse(),
-  }) {
-    if (errorHome != null) {
-      return errorHome(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class ErrorHome implements HomeState {
-  const factory ErrorHome({required final String erorr}) = _$ErrorHomeImpl;
-
-  String get erorr;
-  @JsonKey(ignore: true)
-  _$$ErrorHomeImplCopyWith<_$ErrorHomeImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$LoadingsearchImplCopyWith<$Res> {
-  factory _$$LoadingsearchImplCopyWith(
-          _$LoadingsearchImpl value, $Res Function(_$LoadingsearchImpl) then) =
-      __$$LoadingsearchImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$LoadingsearchImplCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$LoadingsearchImpl>
-    implements _$$LoadingsearchImplCopyWith<$Res> {
-  __$$LoadingsearchImplCopyWithImpl(
-      _$LoadingsearchImpl _value, $Res Function(_$LoadingsearchImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$LoadingsearchImpl implements Loadingsearch {
-  const _$LoadingsearchImpl();
-
-  @override
-  String toString() {
-    return 'HomeState.loadingsearch()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingsearchImpl);
+        (other.runtimeType == runtimeType && other is Loadingsearch);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingHome,
-    required TResult Function(ResponseHome responseHome) successHome,
-    required TResult Function(String erorr) errorHome,
-    required TResult Function() loadingsearch,
-    required TResult Function(Item1view responseItems) successSearch,
-    required TResult Function(String erorr) errorSearch,
-    required TResult Function(int page) stateBottomNavigationBar,
-    required TResult Function() loadinggetNotification,
-    required TResult Function(ResponseNotification responseItems)
-        successgetNotification,
-    required TResult Function(String erorr) errorgetNotification,
-  }) {
-    return loadingsearch();
+  String toString() {
+    return 'HomeState.loadingsearch()';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingHome,
-    TResult? Function(ResponseHome responseHome)? successHome,
-    TResult? Function(String erorr)? errorHome,
-    TResult? Function()? loadingsearch,
-    TResult? Function(Item1view responseItems)? successSearch,
-    TResult? Function(String erorr)? errorSearch,
-    TResult? Function(int page)? stateBottomNavigationBar,
-    TResult? Function()? loadinggetNotification,
-    TResult? Function(ResponseNotification responseItems)?
-        successgetNotification,
-    TResult? Function(String erorr)? errorgetNotification,
-  }) {
-    return loadingsearch?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingHome,
-    TResult Function(ResponseHome responseHome)? successHome,
-    TResult Function(String erorr)? errorHome,
-    TResult Function()? loadingsearch,
-    TResult Function(Item1view responseItems)? successSearch,
-    TResult Function(String erorr)? errorSearch,
-    TResult Function(int page)? stateBottomNavigationBar,
-    TResult Function()? loadinggetNotification,
-    TResult Function(ResponseNotification responseItems)?
-        successgetNotification,
-    TResult Function(String erorr)? errorgetNotification,
-    required TResult orElse(),
-  }) {
-    if (loadingsearch != null) {
-      return loadingsearch();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingHome value) loadingHome,
-    required TResult Function(SuccessHome value) successHome,
-    required TResult Function(ErrorHome value) errorHome,
-    required TResult Function(Loadingsearch value) loadingsearch,
-    required TResult Function(SuccessSearch value) successSearch,
-    required TResult Function(ErrorSearch value) errorSearch,
-    required TResult Function(StateBottomNavigationBar value)
-        stateBottomNavigationBar,
-    required TResult Function(LoadinggetNotification value)
-        loadinggetNotification,
-    required TResult Function(SuccessgetNotification value)
-        successgetNotification,
-    required TResult Function(ErrorgetNotification value) errorgetNotification,
-  }) {
-    return loadingsearch(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingHome value)? loadingHome,
-    TResult? Function(SuccessHome value)? successHome,
-    TResult? Function(ErrorHome value)? errorHome,
-    TResult? Function(Loadingsearch value)? loadingsearch,
-    TResult? Function(SuccessSearch value)? successSearch,
-    TResult? Function(ErrorSearch value)? errorSearch,
-    TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
-    TResult? Function(LoadinggetNotification value)? loadinggetNotification,
-    TResult? Function(SuccessgetNotification value)? successgetNotification,
-    TResult? Function(ErrorgetNotification value)? errorgetNotification,
-  }) {
-    return loadingsearch?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingHome value)? loadingHome,
-    TResult Function(SuccessHome value)? successHome,
-    TResult Function(ErrorHome value)? errorHome,
-    TResult Function(Loadingsearch value)? loadingsearch,
-    TResult Function(SuccessSearch value)? successSearch,
-    TResult Function(ErrorSearch value)? errorSearch,
-    TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
-    TResult Function(LoadinggetNotification value)? loadinggetNotification,
-    TResult Function(SuccessgetNotification value)? successgetNotification,
-    TResult Function(ErrorgetNotification value)? errorgetNotification,
-    required TResult orElse(),
-  }) {
-    if (loadingsearch != null) {
-      return loadingsearch(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class Loadingsearch implements HomeState {
-  const factory Loadingsearch() = _$LoadingsearchImpl;
 }
 
 /// @nodoc
-abstract class _$$SuccessSearchImplCopyWith<$Res> {
-  factory _$$SuccessSearchImplCopyWith(
-          _$SuccessSearchImpl value, $Res Function(_$SuccessSearchImpl) then) =
-      __$$SuccessSearchImplCopyWithImpl<$Res>;
+
+class SuccessSearch implements HomeState {
+  const SuccessSearch({required this.responseItems});
+
+  final Item1view responseItems;
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SuccessSearchCopyWith<SuccessSearch> get copyWith =>
+      _$SuccessSearchCopyWithImpl<SuccessSearch>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is SuccessSearch &&
+            (identical(other.responseItems, responseItems) ||
+                other.responseItems == responseItems));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, responseItems);
+
+  @override
+  String toString() {
+    return 'HomeState.successSearch(responseItems: $responseItems)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $SuccessSearchCopyWith<$Res>
+    implements $HomeStateCopyWith<$Res> {
+  factory $SuccessSearchCopyWith(
+          SuccessSearch value, $Res Function(SuccessSearch) _then) =
+      _$SuccessSearchCopyWithImpl;
   @useResult
   $Res call({Item1view responseItems});
 }
 
 /// @nodoc
-class __$$SuccessSearchImplCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$SuccessSearchImpl>
-    implements _$$SuccessSearchImplCopyWith<$Res> {
-  __$$SuccessSearchImplCopyWithImpl(
-      _$SuccessSearchImpl _value, $Res Function(_$SuccessSearchImpl) _then)
-      : super(_value, _then);
+class _$SuccessSearchCopyWithImpl<$Res>
+    implements $SuccessSearchCopyWith<$Res> {
+  _$SuccessSearchCopyWithImpl(this._self, this._then);
 
+  final SuccessSearch _self;
+  final $Res Function(SuccessSearch) _then;
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? responseItems = null,
   }) {
-    return _then(_$SuccessSearchImpl(
+    return _then(SuccessSearch(
       responseItems: null == responseItems
-          ? _value.responseItems
+          ? _self.responseItems
           : responseItems // ignore: cast_nullable_to_non_nullable
               as Item1view,
     ));
@@ -1040,193 +630,61 @@ class __$$SuccessSearchImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SuccessSearchImpl implements SuccessSearch {
-  const _$SuccessSearchImpl({required this.responseItems});
+class ErrorSearch implements HomeState {
+  const ErrorSearch({required this.erorr});
 
-  @override
-  final Item1view responseItems;
+  final String erorr;
 
-  @override
-  String toString() {
-    return 'HomeState.successSearch(responseItems: $responseItems)';
-  }
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ErrorSearchCopyWith<ErrorSearch> get copyWith =>
+      _$ErrorSearchCopyWithImpl<ErrorSearch>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SuccessSearchImpl &&
-            (identical(other.responseItems, responseItems) ||
-                other.responseItems == responseItems));
+            other is ErrorSearch &&
+            (identical(other.erorr, erorr) || other.erorr == erorr));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, responseItems);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SuccessSearchImplCopyWith<_$SuccessSearchImpl> get copyWith =>
-      __$$SuccessSearchImplCopyWithImpl<_$SuccessSearchImpl>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, erorr);
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingHome,
-    required TResult Function(ResponseHome responseHome) successHome,
-    required TResult Function(String erorr) errorHome,
-    required TResult Function() loadingsearch,
-    required TResult Function(Item1view responseItems) successSearch,
-    required TResult Function(String erorr) errorSearch,
-    required TResult Function(int page) stateBottomNavigationBar,
-    required TResult Function() loadinggetNotification,
-    required TResult Function(ResponseNotification responseItems)
-        successgetNotification,
-    required TResult Function(String erorr) errorgetNotification,
-  }) {
-    return successSearch(responseItems);
+  String toString() {
+    return 'HomeState.errorSearch(erorr: $erorr)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingHome,
-    TResult? Function(ResponseHome responseHome)? successHome,
-    TResult? Function(String erorr)? errorHome,
-    TResult? Function()? loadingsearch,
-    TResult? Function(Item1view responseItems)? successSearch,
-    TResult? Function(String erorr)? errorSearch,
-    TResult? Function(int page)? stateBottomNavigationBar,
-    TResult? Function()? loadinggetNotification,
-    TResult? Function(ResponseNotification responseItems)?
-        successgetNotification,
-    TResult? Function(String erorr)? errorgetNotification,
-  }) {
-    return successSearch?.call(responseItems);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingHome,
-    TResult Function(ResponseHome responseHome)? successHome,
-    TResult Function(String erorr)? errorHome,
-    TResult Function()? loadingsearch,
-    TResult Function(Item1view responseItems)? successSearch,
-    TResult Function(String erorr)? errorSearch,
-    TResult Function(int page)? stateBottomNavigationBar,
-    TResult Function()? loadinggetNotification,
-    TResult Function(ResponseNotification responseItems)?
-        successgetNotification,
-    TResult Function(String erorr)? errorgetNotification,
-    required TResult orElse(),
-  }) {
-    if (successSearch != null) {
-      return successSearch(responseItems);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingHome value) loadingHome,
-    required TResult Function(SuccessHome value) successHome,
-    required TResult Function(ErrorHome value) errorHome,
-    required TResult Function(Loadingsearch value) loadingsearch,
-    required TResult Function(SuccessSearch value) successSearch,
-    required TResult Function(ErrorSearch value) errorSearch,
-    required TResult Function(StateBottomNavigationBar value)
-        stateBottomNavigationBar,
-    required TResult Function(LoadinggetNotification value)
-        loadinggetNotification,
-    required TResult Function(SuccessgetNotification value)
-        successgetNotification,
-    required TResult Function(ErrorgetNotification value) errorgetNotification,
-  }) {
-    return successSearch(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingHome value)? loadingHome,
-    TResult? Function(SuccessHome value)? successHome,
-    TResult? Function(ErrorHome value)? errorHome,
-    TResult? Function(Loadingsearch value)? loadingsearch,
-    TResult? Function(SuccessSearch value)? successSearch,
-    TResult? Function(ErrorSearch value)? errorSearch,
-    TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
-    TResult? Function(LoadinggetNotification value)? loadinggetNotification,
-    TResult? Function(SuccessgetNotification value)? successgetNotification,
-    TResult? Function(ErrorgetNotification value)? errorgetNotification,
-  }) {
-    return successSearch?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingHome value)? loadingHome,
-    TResult Function(SuccessHome value)? successHome,
-    TResult Function(ErrorHome value)? errorHome,
-    TResult Function(Loadingsearch value)? loadingsearch,
-    TResult Function(SuccessSearch value)? successSearch,
-    TResult Function(ErrorSearch value)? errorSearch,
-    TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
-    TResult Function(LoadinggetNotification value)? loadinggetNotification,
-    TResult Function(SuccessgetNotification value)? successgetNotification,
-    TResult Function(ErrorgetNotification value)? errorgetNotification,
-    required TResult orElse(),
-  }) {
-    if (successSearch != null) {
-      return successSearch(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class SuccessSearch implements HomeState {
-  const factory SuccessSearch({required final Item1view responseItems}) =
-      _$SuccessSearchImpl;
-
-  Item1view get responseItems;
-  @JsonKey(ignore: true)
-  _$$SuccessSearchImplCopyWith<_$SuccessSearchImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$ErrorSearchImplCopyWith<$Res> {
-  factory _$$ErrorSearchImplCopyWith(
-          _$ErrorSearchImpl value, $Res Function(_$ErrorSearchImpl) then) =
-      __$$ErrorSearchImplCopyWithImpl<$Res>;
+abstract mixin class $ErrorSearchCopyWith<$Res>
+    implements $HomeStateCopyWith<$Res> {
+  factory $ErrorSearchCopyWith(
+          ErrorSearch value, $Res Function(ErrorSearch) _then) =
+      _$ErrorSearchCopyWithImpl;
   @useResult
   $Res call({String erorr});
 }
 
 /// @nodoc
-class __$$ErrorSearchImplCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$ErrorSearchImpl>
-    implements _$$ErrorSearchImplCopyWith<$Res> {
-  __$$ErrorSearchImplCopyWithImpl(
-      _$ErrorSearchImpl _value, $Res Function(_$ErrorSearchImpl) _then)
-      : super(_value, _then);
+class _$ErrorSearchCopyWithImpl<$Res> implements $ErrorSearchCopyWith<$Res> {
+  _$ErrorSearchCopyWithImpl(this._self, this._then);
 
+  final ErrorSearch _self;
+  final $Res Function(ErrorSearch) _then;
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? erorr = null,
   }) {
-    return _then(_$ErrorSearchImpl(
+    return _then(ErrorSearch(
       erorr: null == erorr
-          ? _value.erorr
+          ? _self.erorr
           : erorr // ignore: cast_nullable_to_non_nullable
               as String,
     ));
@@ -1235,193 +693,63 @@ class __$$ErrorSearchImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErrorSearchImpl implements ErrorSearch {
-  const _$ErrorSearchImpl({required this.erorr});
+class StateBottomNavigationBar implements HomeState {
+  const StateBottomNavigationBar({required this.page});
 
-  @override
-  final String erorr;
+  final int page;
 
-  @override
-  String toString() {
-    return 'HomeState.errorSearch(erorr: $erorr)';
-  }
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $StateBottomNavigationBarCopyWith<StateBottomNavigationBar> get copyWith =>
+      _$StateBottomNavigationBarCopyWithImpl<StateBottomNavigationBar>(
+          this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ErrorSearchImpl &&
-            (identical(other.erorr, erorr) || other.erorr == erorr));
+            other is StateBottomNavigationBar &&
+            (identical(other.page, page) || other.page == page));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, erorr);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ErrorSearchImplCopyWith<_$ErrorSearchImpl> get copyWith =>
-      __$$ErrorSearchImplCopyWithImpl<_$ErrorSearchImpl>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, page);
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingHome,
-    required TResult Function(ResponseHome responseHome) successHome,
-    required TResult Function(String erorr) errorHome,
-    required TResult Function() loadingsearch,
-    required TResult Function(Item1view responseItems) successSearch,
-    required TResult Function(String erorr) errorSearch,
-    required TResult Function(int page) stateBottomNavigationBar,
-    required TResult Function() loadinggetNotification,
-    required TResult Function(ResponseNotification responseItems)
-        successgetNotification,
-    required TResult Function(String erorr) errorgetNotification,
-  }) {
-    return errorSearch(erorr);
+  String toString() {
+    return 'HomeState.stateBottomNavigationBar(page: $page)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingHome,
-    TResult? Function(ResponseHome responseHome)? successHome,
-    TResult? Function(String erorr)? errorHome,
-    TResult? Function()? loadingsearch,
-    TResult? Function(Item1view responseItems)? successSearch,
-    TResult? Function(String erorr)? errorSearch,
-    TResult? Function(int page)? stateBottomNavigationBar,
-    TResult? Function()? loadinggetNotification,
-    TResult? Function(ResponseNotification responseItems)?
-        successgetNotification,
-    TResult? Function(String erorr)? errorgetNotification,
-  }) {
-    return errorSearch?.call(erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingHome,
-    TResult Function(ResponseHome responseHome)? successHome,
-    TResult Function(String erorr)? errorHome,
-    TResult Function()? loadingsearch,
-    TResult Function(Item1view responseItems)? successSearch,
-    TResult Function(String erorr)? errorSearch,
-    TResult Function(int page)? stateBottomNavigationBar,
-    TResult Function()? loadinggetNotification,
-    TResult Function(ResponseNotification responseItems)?
-        successgetNotification,
-    TResult Function(String erorr)? errorgetNotification,
-    required TResult orElse(),
-  }) {
-    if (errorSearch != null) {
-      return errorSearch(erorr);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingHome value) loadingHome,
-    required TResult Function(SuccessHome value) successHome,
-    required TResult Function(ErrorHome value) errorHome,
-    required TResult Function(Loadingsearch value) loadingsearch,
-    required TResult Function(SuccessSearch value) successSearch,
-    required TResult Function(ErrorSearch value) errorSearch,
-    required TResult Function(StateBottomNavigationBar value)
-        stateBottomNavigationBar,
-    required TResult Function(LoadinggetNotification value)
-        loadinggetNotification,
-    required TResult Function(SuccessgetNotification value)
-        successgetNotification,
-    required TResult Function(ErrorgetNotification value) errorgetNotification,
-  }) {
-    return errorSearch(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingHome value)? loadingHome,
-    TResult? Function(SuccessHome value)? successHome,
-    TResult? Function(ErrorHome value)? errorHome,
-    TResult? Function(Loadingsearch value)? loadingsearch,
-    TResult? Function(SuccessSearch value)? successSearch,
-    TResult? Function(ErrorSearch value)? errorSearch,
-    TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
-    TResult? Function(LoadinggetNotification value)? loadinggetNotification,
-    TResult? Function(SuccessgetNotification value)? successgetNotification,
-    TResult? Function(ErrorgetNotification value)? errorgetNotification,
-  }) {
-    return errorSearch?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingHome value)? loadingHome,
-    TResult Function(SuccessHome value)? successHome,
-    TResult Function(ErrorHome value)? errorHome,
-    TResult Function(Loadingsearch value)? loadingsearch,
-    TResult Function(SuccessSearch value)? successSearch,
-    TResult Function(ErrorSearch value)? errorSearch,
-    TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
-    TResult Function(LoadinggetNotification value)? loadinggetNotification,
-    TResult Function(SuccessgetNotification value)? successgetNotification,
-    TResult Function(ErrorgetNotification value)? errorgetNotification,
-    required TResult orElse(),
-  }) {
-    if (errorSearch != null) {
-      return errorSearch(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class ErrorSearch implements HomeState {
-  const factory ErrorSearch({required final String erorr}) = _$ErrorSearchImpl;
-
-  String get erorr;
-  @JsonKey(ignore: true)
-  _$$ErrorSearchImplCopyWith<_$ErrorSearchImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$StateBottomNavigationBarImplCopyWith<$Res> {
-  factory _$$StateBottomNavigationBarImplCopyWith(
-          _$StateBottomNavigationBarImpl value,
-          $Res Function(_$StateBottomNavigationBarImpl) then) =
-      __$$StateBottomNavigationBarImplCopyWithImpl<$Res>;
+abstract mixin class $StateBottomNavigationBarCopyWith<$Res>
+    implements $HomeStateCopyWith<$Res> {
+  factory $StateBottomNavigationBarCopyWith(StateBottomNavigationBar value,
+          $Res Function(StateBottomNavigationBar) _then) =
+      _$StateBottomNavigationBarCopyWithImpl;
   @useResult
   $Res call({int page});
 }
 
 /// @nodoc
-class __$$StateBottomNavigationBarImplCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$StateBottomNavigationBarImpl>
-    implements _$$StateBottomNavigationBarImplCopyWith<$Res> {
-  __$$StateBottomNavigationBarImplCopyWithImpl(
-      _$StateBottomNavigationBarImpl _value,
-      $Res Function(_$StateBottomNavigationBarImpl) _then)
-      : super(_value, _then);
+class _$StateBottomNavigationBarCopyWithImpl<$Res>
+    implements $StateBottomNavigationBarCopyWith<$Res> {
+  _$StateBottomNavigationBarCopyWithImpl(this._self, this._then);
 
+  final StateBottomNavigationBar _self;
+  final $Res Function(StateBottomNavigationBar) _then;
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? page = null,
   }) {
-    return _then(_$StateBottomNavigationBarImpl(
+    return _then(StateBottomNavigationBar(
       page: null == page
-          ? _value.page
+          ? _self.page
           : page // ignore: cast_nullable_to_non_nullable
               as int,
     ));
@@ -1430,360 +758,84 @@ class __$$StateBottomNavigationBarImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$StateBottomNavigationBarImpl implements StateBottomNavigationBar {
-  const _$StateBottomNavigationBarImpl({required this.page});
-
-  @override
-  final int page;
-
-  @override
-  String toString() {
-    return 'HomeState.stateBottomNavigationBar(page: $page)';
-  }
+class LoadinggetNotification implements HomeState {
+  const LoadinggetNotification();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$StateBottomNavigationBarImpl &&
-            (identical(other.page, page) || other.page == page));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, page);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$StateBottomNavigationBarImplCopyWith<_$StateBottomNavigationBarImpl>
-      get copyWith => __$$StateBottomNavigationBarImplCopyWithImpl<
-          _$StateBottomNavigationBarImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingHome,
-    required TResult Function(ResponseHome responseHome) successHome,
-    required TResult Function(String erorr) errorHome,
-    required TResult Function() loadingsearch,
-    required TResult Function(Item1view responseItems) successSearch,
-    required TResult Function(String erorr) errorSearch,
-    required TResult Function(int page) stateBottomNavigationBar,
-    required TResult Function() loadinggetNotification,
-    required TResult Function(ResponseNotification responseItems)
-        successgetNotification,
-    required TResult Function(String erorr) errorgetNotification,
-  }) {
-    return stateBottomNavigationBar(page);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingHome,
-    TResult? Function(ResponseHome responseHome)? successHome,
-    TResult? Function(String erorr)? errorHome,
-    TResult? Function()? loadingsearch,
-    TResult? Function(Item1view responseItems)? successSearch,
-    TResult? Function(String erorr)? errorSearch,
-    TResult? Function(int page)? stateBottomNavigationBar,
-    TResult? Function()? loadinggetNotification,
-    TResult? Function(ResponseNotification responseItems)?
-        successgetNotification,
-    TResult? Function(String erorr)? errorgetNotification,
-  }) {
-    return stateBottomNavigationBar?.call(page);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingHome,
-    TResult Function(ResponseHome responseHome)? successHome,
-    TResult Function(String erorr)? errorHome,
-    TResult Function()? loadingsearch,
-    TResult Function(Item1view responseItems)? successSearch,
-    TResult Function(String erorr)? errorSearch,
-    TResult Function(int page)? stateBottomNavigationBar,
-    TResult Function()? loadinggetNotification,
-    TResult Function(ResponseNotification responseItems)?
-        successgetNotification,
-    TResult Function(String erorr)? errorgetNotification,
-    required TResult orElse(),
-  }) {
-    if (stateBottomNavigationBar != null) {
-      return stateBottomNavigationBar(page);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingHome value) loadingHome,
-    required TResult Function(SuccessHome value) successHome,
-    required TResult Function(ErrorHome value) errorHome,
-    required TResult Function(Loadingsearch value) loadingsearch,
-    required TResult Function(SuccessSearch value) successSearch,
-    required TResult Function(ErrorSearch value) errorSearch,
-    required TResult Function(StateBottomNavigationBar value)
-        stateBottomNavigationBar,
-    required TResult Function(LoadinggetNotification value)
-        loadinggetNotification,
-    required TResult Function(SuccessgetNotification value)
-        successgetNotification,
-    required TResult Function(ErrorgetNotification value) errorgetNotification,
-  }) {
-    return stateBottomNavigationBar(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingHome value)? loadingHome,
-    TResult? Function(SuccessHome value)? successHome,
-    TResult? Function(ErrorHome value)? errorHome,
-    TResult? Function(Loadingsearch value)? loadingsearch,
-    TResult? Function(SuccessSearch value)? successSearch,
-    TResult? Function(ErrorSearch value)? errorSearch,
-    TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
-    TResult? Function(LoadinggetNotification value)? loadinggetNotification,
-    TResult? Function(SuccessgetNotification value)? successgetNotification,
-    TResult? Function(ErrorgetNotification value)? errorgetNotification,
-  }) {
-    return stateBottomNavigationBar?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingHome value)? loadingHome,
-    TResult Function(SuccessHome value)? successHome,
-    TResult Function(ErrorHome value)? errorHome,
-    TResult Function(Loadingsearch value)? loadingsearch,
-    TResult Function(SuccessSearch value)? successSearch,
-    TResult Function(ErrorSearch value)? errorSearch,
-    TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
-    TResult Function(LoadinggetNotification value)? loadinggetNotification,
-    TResult Function(SuccessgetNotification value)? successgetNotification,
-    TResult Function(ErrorgetNotification value)? errorgetNotification,
-    required TResult orElse(),
-  }) {
-    if (stateBottomNavigationBar != null) {
-      return stateBottomNavigationBar(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class StateBottomNavigationBar implements HomeState {
-  const factory StateBottomNavigationBar({required final int page}) =
-      _$StateBottomNavigationBarImpl;
-
-  int get page;
-  @JsonKey(ignore: true)
-  _$$StateBottomNavigationBarImplCopyWith<_$StateBottomNavigationBarImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$LoadinggetNotificationImplCopyWith<$Res> {
-  factory _$$LoadinggetNotificationImplCopyWith(
-          _$LoadinggetNotificationImpl value,
-          $Res Function(_$LoadinggetNotificationImpl) then) =
-      __$$LoadinggetNotificationImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$LoadinggetNotificationImplCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$LoadinggetNotificationImpl>
-    implements _$$LoadinggetNotificationImplCopyWith<$Res> {
-  __$$LoadinggetNotificationImplCopyWithImpl(
-      _$LoadinggetNotificationImpl _value,
-      $Res Function(_$LoadinggetNotificationImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$LoadinggetNotificationImpl implements LoadinggetNotification {
-  const _$LoadinggetNotificationImpl();
-
-  @override
-  String toString() {
-    return 'HomeState.loadinggetNotification()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$LoadinggetNotificationImpl);
+        (other.runtimeType == runtimeType && other is LoadinggetNotification);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingHome,
-    required TResult Function(ResponseHome responseHome) successHome,
-    required TResult Function(String erorr) errorHome,
-    required TResult Function() loadingsearch,
-    required TResult Function(Item1view responseItems) successSearch,
-    required TResult Function(String erorr) errorSearch,
-    required TResult Function(int page) stateBottomNavigationBar,
-    required TResult Function() loadinggetNotification,
-    required TResult Function(ResponseNotification responseItems)
-        successgetNotification,
-    required TResult Function(String erorr) errorgetNotification,
-  }) {
-    return loadinggetNotification();
+  String toString() {
+    return 'HomeState.loadinggetNotification()';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingHome,
-    TResult? Function(ResponseHome responseHome)? successHome,
-    TResult? Function(String erorr)? errorHome,
-    TResult? Function()? loadingsearch,
-    TResult? Function(Item1view responseItems)? successSearch,
-    TResult? Function(String erorr)? errorSearch,
-    TResult? Function(int page)? stateBottomNavigationBar,
-    TResult? Function()? loadinggetNotification,
-    TResult? Function(ResponseNotification responseItems)?
-        successgetNotification,
-    TResult? Function(String erorr)? errorgetNotification,
-  }) {
-    return loadinggetNotification?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingHome,
-    TResult Function(ResponseHome responseHome)? successHome,
-    TResult Function(String erorr)? errorHome,
-    TResult Function()? loadingsearch,
-    TResult Function(Item1view responseItems)? successSearch,
-    TResult Function(String erorr)? errorSearch,
-    TResult Function(int page)? stateBottomNavigationBar,
-    TResult Function()? loadinggetNotification,
-    TResult Function(ResponseNotification responseItems)?
-        successgetNotification,
-    TResult Function(String erorr)? errorgetNotification,
-    required TResult orElse(),
-  }) {
-    if (loadinggetNotification != null) {
-      return loadinggetNotification();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingHome value) loadingHome,
-    required TResult Function(SuccessHome value) successHome,
-    required TResult Function(ErrorHome value) errorHome,
-    required TResult Function(Loadingsearch value) loadingsearch,
-    required TResult Function(SuccessSearch value) successSearch,
-    required TResult Function(ErrorSearch value) errorSearch,
-    required TResult Function(StateBottomNavigationBar value)
-        stateBottomNavigationBar,
-    required TResult Function(LoadinggetNotification value)
-        loadinggetNotification,
-    required TResult Function(SuccessgetNotification value)
-        successgetNotification,
-    required TResult Function(ErrorgetNotification value) errorgetNotification,
-  }) {
-    return loadinggetNotification(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingHome value)? loadingHome,
-    TResult? Function(SuccessHome value)? successHome,
-    TResult? Function(ErrorHome value)? errorHome,
-    TResult? Function(Loadingsearch value)? loadingsearch,
-    TResult? Function(SuccessSearch value)? successSearch,
-    TResult? Function(ErrorSearch value)? errorSearch,
-    TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
-    TResult? Function(LoadinggetNotification value)? loadinggetNotification,
-    TResult? Function(SuccessgetNotification value)? successgetNotification,
-    TResult? Function(ErrorgetNotification value)? errorgetNotification,
-  }) {
-    return loadinggetNotification?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingHome value)? loadingHome,
-    TResult Function(SuccessHome value)? successHome,
-    TResult Function(ErrorHome value)? errorHome,
-    TResult Function(Loadingsearch value)? loadingsearch,
-    TResult Function(SuccessSearch value)? successSearch,
-    TResult Function(ErrorSearch value)? errorSearch,
-    TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
-    TResult Function(LoadinggetNotification value)? loadinggetNotification,
-    TResult Function(SuccessgetNotification value)? successgetNotification,
-    TResult Function(ErrorgetNotification value)? errorgetNotification,
-    required TResult orElse(),
-  }) {
-    if (loadinggetNotification != null) {
-      return loadinggetNotification(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class LoadinggetNotification implements HomeState {
-  const factory LoadinggetNotification() = _$LoadinggetNotificationImpl;
 }
 
 /// @nodoc
-abstract class _$$SuccessgetNotificationImplCopyWith<$Res> {
-  factory _$$SuccessgetNotificationImplCopyWith(
-          _$SuccessgetNotificationImpl value,
-          $Res Function(_$SuccessgetNotificationImpl) then) =
-      __$$SuccessgetNotificationImplCopyWithImpl<$Res>;
+
+class SuccessgetNotification implements HomeState {
+  const SuccessgetNotification({required this.responseItems});
+
+  final ResponseNotification responseItems;
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SuccessgetNotificationCopyWith<SuccessgetNotification> get copyWith =>
+      _$SuccessgetNotificationCopyWithImpl<SuccessgetNotification>(
+          this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is SuccessgetNotification &&
+            (identical(other.responseItems, responseItems) ||
+                other.responseItems == responseItems));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, responseItems);
+
+  @override
+  String toString() {
+    return 'HomeState.successgetNotification(responseItems: $responseItems)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $SuccessgetNotificationCopyWith<$Res>
+    implements $HomeStateCopyWith<$Res> {
+  factory $SuccessgetNotificationCopyWith(SuccessgetNotification value,
+          $Res Function(SuccessgetNotification) _then) =
+      _$SuccessgetNotificationCopyWithImpl;
   @useResult
   $Res call({ResponseNotification responseItems});
 }
 
 /// @nodoc
-class __$$SuccessgetNotificationImplCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$SuccessgetNotificationImpl>
-    implements _$$SuccessgetNotificationImplCopyWith<$Res> {
-  __$$SuccessgetNotificationImplCopyWithImpl(
-      _$SuccessgetNotificationImpl _value,
-      $Res Function(_$SuccessgetNotificationImpl) _then)
-      : super(_value, _then);
+class _$SuccessgetNotificationCopyWithImpl<$Res>
+    implements $SuccessgetNotificationCopyWith<$Res> {
+  _$SuccessgetNotificationCopyWithImpl(this._self, this._then);
 
+  final SuccessgetNotification _self;
+  final $Res Function(SuccessgetNotification) _then;
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? responseItems = null,
   }) {
-    return _then(_$SuccessgetNotificationImpl(
+    return _then(SuccessgetNotification(
       responseItems: null == responseItems
-          ? _value.responseItems
+          ? _self.responseItems
           : responseItems // ignore: cast_nullable_to_non_nullable
               as ResponseNotification,
     ));
@@ -1792,362 +844,67 @@ class __$$SuccessgetNotificationImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SuccessgetNotificationImpl implements SuccessgetNotification {
-  const _$SuccessgetNotificationImpl({required this.responseItems});
+class ErrorgetNotification implements HomeState {
+  const ErrorgetNotification({required this.erorr});
 
-  @override
-  final ResponseNotification responseItems;
-
-  @override
-  String toString() {
-    return 'HomeState.successgetNotification(responseItems: $responseItems)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$SuccessgetNotificationImpl &&
-            (identical(other.responseItems, responseItems) ||
-                other.responseItems == responseItems));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, responseItems);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SuccessgetNotificationImplCopyWith<_$SuccessgetNotificationImpl>
-      get copyWith => __$$SuccessgetNotificationImplCopyWithImpl<
-          _$SuccessgetNotificationImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingHome,
-    required TResult Function(ResponseHome responseHome) successHome,
-    required TResult Function(String erorr) errorHome,
-    required TResult Function() loadingsearch,
-    required TResult Function(Item1view responseItems) successSearch,
-    required TResult Function(String erorr) errorSearch,
-    required TResult Function(int page) stateBottomNavigationBar,
-    required TResult Function() loadinggetNotification,
-    required TResult Function(ResponseNotification responseItems)
-        successgetNotification,
-    required TResult Function(String erorr) errorgetNotification,
-  }) {
-    return successgetNotification(responseItems);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingHome,
-    TResult? Function(ResponseHome responseHome)? successHome,
-    TResult? Function(String erorr)? errorHome,
-    TResult? Function()? loadingsearch,
-    TResult? Function(Item1view responseItems)? successSearch,
-    TResult? Function(String erorr)? errorSearch,
-    TResult? Function(int page)? stateBottomNavigationBar,
-    TResult? Function()? loadinggetNotification,
-    TResult? Function(ResponseNotification responseItems)?
-        successgetNotification,
-    TResult? Function(String erorr)? errorgetNotification,
-  }) {
-    return successgetNotification?.call(responseItems);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingHome,
-    TResult Function(ResponseHome responseHome)? successHome,
-    TResult Function(String erorr)? errorHome,
-    TResult Function()? loadingsearch,
-    TResult Function(Item1view responseItems)? successSearch,
-    TResult Function(String erorr)? errorSearch,
-    TResult Function(int page)? stateBottomNavigationBar,
-    TResult Function()? loadinggetNotification,
-    TResult Function(ResponseNotification responseItems)?
-        successgetNotification,
-    TResult Function(String erorr)? errorgetNotification,
-    required TResult orElse(),
-  }) {
-    if (successgetNotification != null) {
-      return successgetNotification(responseItems);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingHome value) loadingHome,
-    required TResult Function(SuccessHome value) successHome,
-    required TResult Function(ErrorHome value) errorHome,
-    required TResult Function(Loadingsearch value) loadingsearch,
-    required TResult Function(SuccessSearch value) successSearch,
-    required TResult Function(ErrorSearch value) errorSearch,
-    required TResult Function(StateBottomNavigationBar value)
-        stateBottomNavigationBar,
-    required TResult Function(LoadinggetNotification value)
-        loadinggetNotification,
-    required TResult Function(SuccessgetNotification value)
-        successgetNotification,
-    required TResult Function(ErrorgetNotification value) errorgetNotification,
-  }) {
-    return successgetNotification(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingHome value)? loadingHome,
-    TResult? Function(SuccessHome value)? successHome,
-    TResult? Function(ErrorHome value)? errorHome,
-    TResult? Function(Loadingsearch value)? loadingsearch,
-    TResult? Function(SuccessSearch value)? successSearch,
-    TResult? Function(ErrorSearch value)? errorSearch,
-    TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
-    TResult? Function(LoadinggetNotification value)? loadinggetNotification,
-    TResult? Function(SuccessgetNotification value)? successgetNotification,
-    TResult? Function(ErrorgetNotification value)? errorgetNotification,
-  }) {
-    return successgetNotification?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingHome value)? loadingHome,
-    TResult Function(SuccessHome value)? successHome,
-    TResult Function(ErrorHome value)? errorHome,
-    TResult Function(Loadingsearch value)? loadingsearch,
-    TResult Function(SuccessSearch value)? successSearch,
-    TResult Function(ErrorSearch value)? errorSearch,
-    TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
-    TResult Function(LoadinggetNotification value)? loadinggetNotification,
-    TResult Function(SuccessgetNotification value)? successgetNotification,
-    TResult Function(ErrorgetNotification value)? errorgetNotification,
-    required TResult orElse(),
-  }) {
-    if (successgetNotification != null) {
-      return successgetNotification(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class SuccessgetNotification implements HomeState {
-  const factory SuccessgetNotification(
-          {required final ResponseNotification responseItems}) =
-      _$SuccessgetNotificationImpl;
-
-  ResponseNotification get responseItems;
-  @JsonKey(ignore: true)
-  _$$SuccessgetNotificationImplCopyWith<_$SuccessgetNotificationImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$ErrorgetNotificationImplCopyWith<$Res> {
-  factory _$$ErrorgetNotificationImplCopyWith(_$ErrorgetNotificationImpl value,
-          $Res Function(_$ErrorgetNotificationImpl) then) =
-      __$$ErrorgetNotificationImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String erorr});
-}
-
-/// @nodoc
-class __$$ErrorgetNotificationImplCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$ErrorgetNotificationImpl>
-    implements _$$ErrorgetNotificationImplCopyWith<$Res> {
-  __$$ErrorgetNotificationImplCopyWithImpl(_$ErrorgetNotificationImpl _value,
-      $Res Function(_$ErrorgetNotificationImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? erorr = null,
-  }) {
-    return _then(_$ErrorgetNotificationImpl(
-      erorr: null == erorr
-          ? _value.erorr
-          : erorr // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$ErrorgetNotificationImpl implements ErrorgetNotification {
-  const _$ErrorgetNotificationImpl({required this.erorr});
-
-  @override
   final String erorr;
 
-  @override
-  String toString() {
-    return 'HomeState.errorgetNotification(erorr: $erorr)';
-  }
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ErrorgetNotificationCopyWith<ErrorgetNotification> get copyWith =>
+      _$ErrorgetNotificationCopyWithImpl<ErrorgetNotification>(
+          this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ErrorgetNotificationImpl &&
+            other is ErrorgetNotification &&
             (identical(other.erorr, erorr) || other.erorr == erorr));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, erorr);
 
-  @JsonKey(ignore: true)
   @override
+  String toString() {
+    return 'HomeState.errorgetNotification(erorr: $erorr)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $ErrorgetNotificationCopyWith<$Res>
+    implements $HomeStateCopyWith<$Res> {
+  factory $ErrorgetNotificationCopyWith(ErrorgetNotification value,
+          $Res Function(ErrorgetNotification) _then) =
+      _$ErrorgetNotificationCopyWithImpl;
+  @useResult
+  $Res call({String erorr});
+}
+
+/// @nodoc
+class _$ErrorgetNotificationCopyWithImpl<$Res>
+    implements $ErrorgetNotificationCopyWith<$Res> {
+  _$ErrorgetNotificationCopyWithImpl(this._self, this._then);
+
+  final ErrorgetNotification _self;
+  final $Res Function(ErrorgetNotification) _then;
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  _$$ErrorgetNotificationImplCopyWith<_$ErrorgetNotificationImpl>
-      get copyWith =>
-          __$$ErrorgetNotificationImplCopyWithImpl<_$ErrorgetNotificationImpl>(
-              this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingHome,
-    required TResult Function(ResponseHome responseHome) successHome,
-    required TResult Function(String erorr) errorHome,
-    required TResult Function() loadingsearch,
-    required TResult Function(Item1view responseItems) successSearch,
-    required TResult Function(String erorr) errorSearch,
-    required TResult Function(int page) stateBottomNavigationBar,
-    required TResult Function() loadinggetNotification,
-    required TResult Function(ResponseNotification responseItems)
-        successgetNotification,
-    required TResult Function(String erorr) errorgetNotification,
+  $Res call({
+    Object? erorr = null,
   }) {
-    return errorgetNotification(erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingHome,
-    TResult? Function(ResponseHome responseHome)? successHome,
-    TResult? Function(String erorr)? errorHome,
-    TResult? Function()? loadingsearch,
-    TResult? Function(Item1view responseItems)? successSearch,
-    TResult? Function(String erorr)? errorSearch,
-    TResult? Function(int page)? stateBottomNavigationBar,
-    TResult? Function()? loadinggetNotification,
-    TResult? Function(ResponseNotification responseItems)?
-        successgetNotification,
-    TResult? Function(String erorr)? errorgetNotification,
-  }) {
-    return errorgetNotification?.call(erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingHome,
-    TResult Function(ResponseHome responseHome)? successHome,
-    TResult Function(String erorr)? errorHome,
-    TResult Function()? loadingsearch,
-    TResult Function(Item1view responseItems)? successSearch,
-    TResult Function(String erorr)? errorSearch,
-    TResult Function(int page)? stateBottomNavigationBar,
-    TResult Function()? loadinggetNotification,
-    TResult Function(ResponseNotification responseItems)?
-        successgetNotification,
-    TResult Function(String erorr)? errorgetNotification,
-    required TResult orElse(),
-  }) {
-    if (errorgetNotification != null) {
-      return errorgetNotification(erorr);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingHome value) loadingHome,
-    required TResult Function(SuccessHome value) successHome,
-    required TResult Function(ErrorHome value) errorHome,
-    required TResult Function(Loadingsearch value) loadingsearch,
-    required TResult Function(SuccessSearch value) successSearch,
-    required TResult Function(ErrorSearch value) errorSearch,
-    required TResult Function(StateBottomNavigationBar value)
-        stateBottomNavigationBar,
-    required TResult Function(LoadinggetNotification value)
-        loadinggetNotification,
-    required TResult Function(SuccessgetNotification value)
-        successgetNotification,
-    required TResult Function(ErrorgetNotification value) errorgetNotification,
-  }) {
-    return errorgetNotification(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingHome value)? loadingHome,
-    TResult? Function(SuccessHome value)? successHome,
-    TResult? Function(ErrorHome value)? errorHome,
-    TResult? Function(Loadingsearch value)? loadingsearch,
-    TResult? Function(SuccessSearch value)? successSearch,
-    TResult? Function(ErrorSearch value)? errorSearch,
-    TResult? Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
-    TResult? Function(LoadinggetNotification value)? loadinggetNotification,
-    TResult? Function(SuccessgetNotification value)? successgetNotification,
-    TResult? Function(ErrorgetNotification value)? errorgetNotification,
-  }) {
-    return errorgetNotification?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingHome value)? loadingHome,
-    TResult Function(SuccessHome value)? successHome,
-    TResult Function(ErrorHome value)? errorHome,
-    TResult Function(Loadingsearch value)? loadingsearch,
-    TResult Function(SuccessSearch value)? successSearch,
-    TResult Function(ErrorSearch value)? errorSearch,
-    TResult Function(StateBottomNavigationBar value)? stateBottomNavigationBar,
-    TResult Function(LoadinggetNotification value)? loadinggetNotification,
-    TResult Function(SuccessgetNotification value)? successgetNotification,
-    TResult Function(ErrorgetNotification value)? errorgetNotification,
-    required TResult orElse(),
-  }) {
-    if (errorgetNotification != null) {
-      return errorgetNotification(this);
-    }
-    return orElse();
+    return _then(ErrorgetNotification(
+      erorr: null == erorr
+          ? _self.erorr
+          : erorr // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
   }
 }
 
-abstract class ErrorgetNotification implements HomeState {
-  const factory ErrorgetNotification({required final String erorr}) =
-      _$ErrorgetNotificationImpl;
-
-  String get erorr;
-  @JsonKey(ignore: true)
-  _$$ErrorgetNotificationImplCopyWith<_$ErrorgetNotificationImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
+// dart format on

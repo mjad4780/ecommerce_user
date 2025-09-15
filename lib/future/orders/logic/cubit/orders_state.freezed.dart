@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,114 +9,45 @@ part of 'orders_state.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$OrdersState {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseOrders orderResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrdelete,
-    required TResult Function() loadingDetails,
-    required TResult Function(ResponseDetails responseDetails) successDetails,
-    required TResult Function(String erorr) erorrDetails,
-    required TResult Function() loadingPeinding,
-    required TResult Function(PendingResponse pendingResponse) successPeinding,
-    required TResult Function(String erorr) erorrPeinding,
-    required TResult Function() updateStatus,
-    required TResult Function() updatePayment,
-    required TResult Function() updateType,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseOrders orderResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrdelete,
-    TResult? Function()? loadingDetails,
-    TResult? Function(ResponseDetails responseDetails)? successDetails,
-    TResult? Function(String erorr)? erorrDetails,
-    TResult? Function()? loadingPeinding,
-    TResult? Function(PendingResponse pendingResponse)? successPeinding,
-    TResult? Function(String erorr)? erorrPeinding,
-    TResult? Function()? updateStatus,
-    TResult? Function()? updatePayment,
-    TResult? Function()? updateType,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseOrders orderResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrdelete,
-    TResult Function()? loadingDetails,
-    TResult Function(ResponseDetails responseDetails)? successDetails,
-    TResult Function(String erorr)? erorrDetails,
-    TResult Function()? loadingPeinding,
-    TResult Function(PendingResponse pendingResponse)? successPeinding,
-    TResult Function(String erorr)? erorrPeinding,
-    TResult Function()? updateStatus,
-    TResult Function()? updatePayment,
-    TResult Function()? updateType,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(Erorrdelete value) erorrdelete,
-    required TResult Function(LoadingDetails value) loadingDetails,
-    required TResult Function(SuccessDetails value) successDetails,
-    required TResult Function(ErorrDetails value) erorrDetails,
-    required TResult Function(LoadingPeinding value) loadingPeinding,
-    required TResult Function(SuccessPeinding value) successPeinding,
-    required TResult Function(ErorrPeinding value) erorrPeinding,
-    required TResult Function(UpdateStatus value) updateStatus,
-    required TResult Function(UpdatePayment value) updatePayment,
-    required TResult Function(UpdateType value) updateType,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(Erorrdelete value)? erorrdelete,
-    TResult? Function(LoadingDetails value)? loadingDetails,
-    TResult? Function(SuccessDetails value)? successDetails,
-    TResult? Function(ErorrDetails value)? erorrDetails,
-    TResult? Function(LoadingPeinding value)? loadingPeinding,
-    TResult? Function(SuccessPeinding value)? successPeinding,
-    TResult? Function(ErorrPeinding value)? erorrPeinding,
-    TResult? Function(UpdateStatus value)? updateStatus,
-    TResult? Function(UpdatePayment value)? updatePayment,
-    TResult? Function(UpdateType value)? updateType,
-  }) =>
-      throw _privateConstructorUsedError;
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is OrdersState);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'OrdersState()';
+  }
+}
+
+/// @nodoc
+class $OrdersStateCopyWith<$Res> {
+  $OrdersStateCopyWith(OrdersState _, $Res Function(OrdersState) __);
+}
+
+/// Adds pattern-matching-related methods to [OrdersState].
+extension OrdersStatePatterns on OrdersState {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
@@ -136,425 +67,498 @@ mixin _$OrdersState {
     TResult Function(UpdatePayment value)? updatePayment,
     TResult Function(UpdateType value)? updateType,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial(_that);
+      case LoadingGet() when loadingGet != null:
+        return loadingGet(_that);
+      case SuccessGet() when successGet != null:
+        return successGet(_that);
+      case ErorrGet() when erorrGet != null:
+        return erorrGet(_that);
+      case LoadingDelete() when loadingDelete != null:
+        return loadingDelete(_that);
+      case Successdelete() when successdelete != null:
+        return successdelete(_that);
+      case Erorrdelete() when erorrdelete != null:
+        return erorrdelete(_that);
+      case LoadingDetails() when loadingDetails != null:
+        return loadingDetails(_that);
+      case SuccessDetails() when successDetails != null:
+        return successDetails(_that);
+      case ErorrDetails() when erorrDetails != null:
+        return erorrDetails(_that);
+      case LoadingPeinding() when loadingPeinding != null:
+        return loadingPeinding(_that);
+      case SuccessPeinding() when successPeinding != null:
+        return successPeinding(_that);
+      case ErorrPeinding() when erorrPeinding != null:
+        return erorrPeinding(_that);
+      case UpdateStatus() when updateStatus != null:
+        return updateStatus(_that);
+      case UpdatePayment() when updatePayment != null:
+        return updatePayment(_that);
+      case UpdateType() when updateType != null:
+        return updateType(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(LoadingGet value) loadingGet,
+    required TResult Function(SuccessGet value) successGet,
+    required TResult Function(ErorrGet value) erorrGet,
+    required TResult Function(LoadingDelete value) loadingDelete,
+    required TResult Function(Successdelete value) successdelete,
+    required TResult Function(Erorrdelete value) erorrdelete,
+    required TResult Function(LoadingDetails value) loadingDetails,
+    required TResult Function(SuccessDetails value) successDetails,
+    required TResult Function(ErorrDetails value) erorrDetails,
+    required TResult Function(LoadingPeinding value) loadingPeinding,
+    required TResult Function(SuccessPeinding value) successPeinding,
+    required TResult Function(ErorrPeinding value) erorrPeinding,
+    required TResult Function(UpdateStatus value) updateStatus,
+    required TResult Function(UpdatePayment value) updatePayment,
+    required TResult Function(UpdateType value) updateType,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial():
+        return initial(_that);
+      case LoadingGet():
+        return loadingGet(_that);
+      case SuccessGet():
+        return successGet(_that);
+      case ErorrGet():
+        return erorrGet(_that);
+      case LoadingDelete():
+        return loadingDelete(_that);
+      case Successdelete():
+        return successdelete(_that);
+      case Erorrdelete():
+        return erorrdelete(_that);
+      case LoadingDetails():
+        return loadingDetails(_that);
+      case SuccessDetails():
+        return successDetails(_that);
+      case ErorrDetails():
+        return erorrDetails(_that);
+      case LoadingPeinding():
+        return loadingPeinding(_that);
+      case SuccessPeinding():
+        return successPeinding(_that);
+      case ErorrPeinding():
+        return erorrPeinding(_that);
+      case UpdateStatus():
+        return updateStatus(_that);
+      case UpdatePayment():
+        return updatePayment(_that);
+      case UpdateType():
+        return updateType(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(LoadingGet value)? loadingGet,
+    TResult? Function(SuccessGet value)? successGet,
+    TResult? Function(ErorrGet value)? erorrGet,
+    TResult? Function(LoadingDelete value)? loadingDelete,
+    TResult? Function(Successdelete value)? successdelete,
+    TResult? Function(Erorrdelete value)? erorrdelete,
+    TResult? Function(LoadingDetails value)? loadingDetails,
+    TResult? Function(SuccessDetails value)? successDetails,
+    TResult? Function(ErorrDetails value)? erorrDetails,
+    TResult? Function(LoadingPeinding value)? loadingPeinding,
+    TResult? Function(SuccessPeinding value)? successPeinding,
+    TResult? Function(ErorrPeinding value)? erorrPeinding,
+    TResult? Function(UpdateStatus value)? updateStatus,
+    TResult? Function(UpdatePayment value)? updatePayment,
+    TResult? Function(UpdateType value)? updateType,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial(_that);
+      case LoadingGet() when loadingGet != null:
+        return loadingGet(_that);
+      case SuccessGet() when successGet != null:
+        return successGet(_that);
+      case ErorrGet() when erorrGet != null:
+        return erorrGet(_that);
+      case LoadingDelete() when loadingDelete != null:
+        return loadingDelete(_that);
+      case Successdelete() when successdelete != null:
+        return successdelete(_that);
+      case Erorrdelete() when erorrdelete != null:
+        return erorrdelete(_that);
+      case LoadingDetails() when loadingDetails != null:
+        return loadingDetails(_that);
+      case SuccessDetails() when successDetails != null:
+        return successDetails(_that);
+      case ErorrDetails() when erorrDetails != null:
+        return erorrDetails(_that);
+      case LoadingPeinding() when loadingPeinding != null:
+        return loadingPeinding(_that);
+      case SuccessPeinding() when successPeinding != null:
+        return successPeinding(_that);
+      case ErorrPeinding() when erorrPeinding != null:
+        return erorrPeinding(_that);
+      case UpdateStatus() when updateStatus != null:
+        return updateStatus(_that);
+      case UpdatePayment() when updatePayment != null:
+        return updatePayment(_that);
+      case UpdateType() when updateType != null:
+        return updateType(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingGet,
+    TResult Function(ResponseOrders orderResponse)? successGet,
+    TResult Function(String erorr)? erorrGet,
+    TResult Function()? loadingDelete,
+    TResult Function()? successdelete,
+    TResult Function(String erorr)? erorrdelete,
+    TResult Function()? loadingDetails,
+    TResult Function(ResponseDetails responseDetails)? successDetails,
+    TResult Function(String erorr)? erorrDetails,
+    TResult Function()? loadingPeinding,
+    TResult Function(PendingResponse pendingResponse)? successPeinding,
+    TResult Function(String erorr)? erorrPeinding,
+    TResult Function()? updateStatus,
+    TResult Function()? updatePayment,
+    TResult Function()? updateType,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial();
+      case LoadingGet() when loadingGet != null:
+        return loadingGet();
+      case SuccessGet() when successGet != null:
+        return successGet(_that.orderResponse);
+      case ErorrGet() when erorrGet != null:
+        return erorrGet(_that.erorr);
+      case LoadingDelete() when loadingDelete != null:
+        return loadingDelete();
+      case Successdelete() when successdelete != null:
+        return successdelete();
+      case Erorrdelete() when erorrdelete != null:
+        return erorrdelete(_that.erorr);
+      case LoadingDetails() when loadingDetails != null:
+        return loadingDetails();
+      case SuccessDetails() when successDetails != null:
+        return successDetails(_that.responseDetails);
+      case ErorrDetails() when erorrDetails != null:
+        return erorrDetails(_that.erorr);
+      case LoadingPeinding() when loadingPeinding != null:
+        return loadingPeinding();
+      case SuccessPeinding() when successPeinding != null:
+        return successPeinding(_that.pendingResponse);
+      case ErorrPeinding() when erorrPeinding != null:
+        return erorrPeinding(_that.erorr);
+      case UpdateStatus() when updateStatus != null:
+        return updateStatus();
+      case UpdatePayment() when updatePayment != null:
+        return updatePayment();
+      case UpdateType() when updateType != null:
+        return updateType();
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingGet,
+    required TResult Function(ResponseOrders orderResponse) successGet,
+    required TResult Function(String erorr) erorrGet,
+    required TResult Function() loadingDelete,
+    required TResult Function() successdelete,
+    required TResult Function(String erorr) erorrdelete,
+    required TResult Function() loadingDetails,
+    required TResult Function(ResponseDetails responseDetails) successDetails,
+    required TResult Function(String erorr) erorrDetails,
+    required TResult Function() loadingPeinding,
+    required TResult Function(PendingResponse pendingResponse) successPeinding,
+    required TResult Function(String erorr) erorrPeinding,
+    required TResult Function() updateStatus,
+    required TResult Function() updatePayment,
+    required TResult Function() updateType,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial():
+        return initial();
+      case LoadingGet():
+        return loadingGet();
+      case SuccessGet():
+        return successGet(_that.orderResponse);
+      case ErorrGet():
+        return erorrGet(_that.erorr);
+      case LoadingDelete():
+        return loadingDelete();
+      case Successdelete():
+        return successdelete();
+      case Erorrdelete():
+        return erorrdelete(_that.erorr);
+      case LoadingDetails():
+        return loadingDetails();
+      case SuccessDetails():
+        return successDetails(_that.responseDetails);
+      case ErorrDetails():
+        return erorrDetails(_that.erorr);
+      case LoadingPeinding():
+        return loadingPeinding();
+      case SuccessPeinding():
+        return successPeinding(_that.pendingResponse);
+      case ErorrPeinding():
+        return erorrPeinding(_that.erorr);
+      case UpdateStatus():
+        return updateStatus();
+      case UpdatePayment():
+        return updatePayment();
+      case UpdateType():
+        return updateType();
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingGet,
+    TResult? Function(ResponseOrders orderResponse)? successGet,
+    TResult? Function(String erorr)? erorrGet,
+    TResult? Function()? loadingDelete,
+    TResult? Function()? successdelete,
+    TResult? Function(String erorr)? erorrdelete,
+    TResult? Function()? loadingDetails,
+    TResult? Function(ResponseDetails responseDetails)? successDetails,
+    TResult? Function(String erorr)? erorrDetails,
+    TResult? Function()? loadingPeinding,
+    TResult? Function(PendingResponse pendingResponse)? successPeinding,
+    TResult? Function(String erorr)? erorrPeinding,
+    TResult? Function()? updateStatus,
+    TResult? Function()? updatePayment,
+    TResult? Function()? updateType,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial();
+      case LoadingGet() when loadingGet != null:
+        return loadingGet();
+      case SuccessGet() when successGet != null:
+        return successGet(_that.orderResponse);
+      case ErorrGet() when erorrGet != null:
+        return erorrGet(_that.erorr);
+      case LoadingDelete() when loadingDelete != null:
+        return loadingDelete();
+      case Successdelete() when successdelete != null:
+        return successdelete();
+      case Erorrdelete() when erorrdelete != null:
+        return erorrdelete(_that.erorr);
+      case LoadingDetails() when loadingDetails != null:
+        return loadingDetails();
+      case SuccessDetails() when successDetails != null:
+        return successDetails(_that.responseDetails);
+      case ErorrDetails() when erorrDetails != null:
+        return erorrDetails(_that.erorr);
+      case LoadingPeinding() when loadingPeinding != null:
+        return loadingPeinding();
+      case SuccessPeinding() when successPeinding != null:
+        return successPeinding(_that.pendingResponse);
+      case ErorrPeinding() when erorrPeinding != null:
+        return erorrPeinding(_that.erorr);
+      case UpdateStatus() when updateStatus != null:
+        return updateStatus();
+      case UpdatePayment() when updatePayment != null:
+        return updatePayment();
+      case UpdateType() when updateType != null:
+        return updateType();
+      case _:
+        return null;
+    }
+  }
 }
 
 /// @nodoc
-abstract class $OrdersStateCopyWith<$Res> {
-  factory $OrdersStateCopyWith(
-          OrdersState value, $Res Function(OrdersState) then) =
-      _$OrdersStateCopyWithImpl<$Res, OrdersState>;
-}
 
-/// @nodoc
-class _$OrdersStateCopyWithImpl<$Res, $Val extends OrdersState>
-    implements $OrdersStateCopyWith<$Res> {
-  _$OrdersStateCopyWithImpl(this._value, this._then);
+class _Initial implements OrdersState {
+  const _Initial();
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-}
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _Initial);
+  }
 
-/// @nodoc
-abstract class _$$InitialImplCopyWith<$Res> {
-  factory _$$InitialImplCopyWith(
-          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
-      __$$InitialImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$InitialImplCopyWithImpl<$Res>
-    extends _$OrdersStateCopyWithImpl<$Res, _$InitialImpl>
-    implements _$$InitialImplCopyWith<$Res> {
-  __$$InitialImplCopyWithImpl(
-      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$InitialImpl implements _Initial {
-  const _$InitialImpl();
+  @override
+  int get hashCode => runtimeType.hashCode;
 
   @override
   String toString() {
     return 'OrdersState.initial()';
   }
+}
+
+/// @nodoc
+
+class LoadingGet implements OrdersState {
+  const LoadingGet();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InitialImpl);
+        (other.runtimeType == runtimeType && other is LoadingGet);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseOrders orderResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrdelete,
-    required TResult Function() loadingDetails,
-    required TResult Function(ResponseDetails responseDetails) successDetails,
-    required TResult Function(String erorr) erorrDetails,
-    required TResult Function() loadingPeinding,
-    required TResult Function(PendingResponse pendingResponse) successPeinding,
-    required TResult Function(String erorr) erorrPeinding,
-    required TResult Function() updateStatus,
-    required TResult Function() updatePayment,
-    required TResult Function() updateType,
-  }) {
-    return initial();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseOrders orderResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrdelete,
-    TResult? Function()? loadingDetails,
-    TResult? Function(ResponseDetails responseDetails)? successDetails,
-    TResult? Function(String erorr)? erorrDetails,
-    TResult? Function()? loadingPeinding,
-    TResult? Function(PendingResponse pendingResponse)? successPeinding,
-    TResult? Function(String erorr)? erorrPeinding,
-    TResult? Function()? updateStatus,
-    TResult? Function()? updatePayment,
-    TResult? Function()? updateType,
-  }) {
-    return initial?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseOrders orderResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrdelete,
-    TResult Function()? loadingDetails,
-    TResult Function(ResponseDetails responseDetails)? successDetails,
-    TResult Function(String erorr)? erorrDetails,
-    TResult Function()? loadingPeinding,
-    TResult Function(PendingResponse pendingResponse)? successPeinding,
-    TResult Function(String erorr)? erorrPeinding,
-    TResult Function()? updateStatus,
-    TResult Function()? updatePayment,
-    TResult Function()? updateType,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(Erorrdelete value) erorrdelete,
-    required TResult Function(LoadingDetails value) loadingDetails,
-    required TResult Function(SuccessDetails value) successDetails,
-    required TResult Function(ErorrDetails value) erorrDetails,
-    required TResult Function(LoadingPeinding value) loadingPeinding,
-    required TResult Function(SuccessPeinding value) successPeinding,
-    required TResult Function(ErorrPeinding value) erorrPeinding,
-    required TResult Function(UpdateStatus value) updateStatus,
-    required TResult Function(UpdatePayment value) updatePayment,
-    required TResult Function(UpdateType value) updateType,
-  }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(Erorrdelete value)? erorrdelete,
-    TResult? Function(LoadingDetails value)? loadingDetails,
-    TResult? Function(SuccessDetails value)? successDetails,
-    TResult? Function(ErorrDetails value)? erorrDetails,
-    TResult? Function(LoadingPeinding value)? loadingPeinding,
-    TResult? Function(SuccessPeinding value)? successPeinding,
-    TResult? Function(ErorrPeinding value)? erorrPeinding,
-    TResult? Function(UpdateStatus value)? updateStatus,
-    TResult? Function(UpdatePayment value)? updatePayment,
-    TResult? Function(UpdateType value)? updateType,
-  }) {
-    return initial?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingGet value)? loadingGet,
-    TResult Function(SuccessGet value)? successGet,
-    TResult Function(ErorrGet value)? erorrGet,
-    TResult Function(LoadingDelete value)? loadingDelete,
-    TResult Function(Successdelete value)? successdelete,
-    TResult Function(Erorrdelete value)? erorrdelete,
-    TResult Function(LoadingDetails value)? loadingDetails,
-    TResult Function(SuccessDetails value)? successDetails,
-    TResult Function(ErorrDetails value)? erorrDetails,
-    TResult Function(LoadingPeinding value)? loadingPeinding,
-    TResult Function(SuccessPeinding value)? successPeinding,
-    TResult Function(ErorrPeinding value)? erorrPeinding,
-    TResult Function(UpdateStatus value)? updateStatus,
-    TResult Function(UpdatePayment value)? updatePayment,
-    TResult Function(UpdateType value)? updateType,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Initial implements OrdersState {
-  const factory _Initial() = _$InitialImpl;
-}
-
-/// @nodoc
-abstract class _$$LoadingGetImplCopyWith<$Res> {
-  factory _$$LoadingGetImplCopyWith(
-          _$LoadingGetImpl value, $Res Function(_$LoadingGetImpl) then) =
-      __$$LoadingGetImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$LoadingGetImplCopyWithImpl<$Res>
-    extends _$OrdersStateCopyWithImpl<$Res, _$LoadingGetImpl>
-    implements _$$LoadingGetImplCopyWith<$Res> {
-  __$$LoadingGetImplCopyWithImpl(
-      _$LoadingGetImpl _value, $Res Function(_$LoadingGetImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$LoadingGetImpl implements LoadingGet {
-  const _$LoadingGetImpl();
 
   @override
   String toString() {
     return 'OrdersState.loadingGet()';
   }
+}
+
+/// @nodoc
+
+class SuccessGet implements OrdersState {
+  const SuccessGet(this.orderResponse);
+
+  final ResponseOrders orderResponse;
+
+  /// Create a copy of OrdersState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SuccessGetCopyWith<SuccessGet> get copyWith =>
+      _$SuccessGetCopyWithImpl<SuccessGet>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingGetImpl);
+        (other.runtimeType == runtimeType &&
+            other is SuccessGet &&
+            (identical(other.orderResponse, orderResponse) ||
+                other.orderResponse == orderResponse));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, orderResponse);
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseOrders orderResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrdelete,
-    required TResult Function() loadingDetails,
-    required TResult Function(ResponseDetails responseDetails) successDetails,
-    required TResult Function(String erorr) erorrDetails,
-    required TResult Function() loadingPeinding,
-    required TResult Function(PendingResponse pendingResponse) successPeinding,
-    required TResult Function(String erorr) erorrPeinding,
-    required TResult Function() updateStatus,
-    required TResult Function() updatePayment,
-    required TResult Function() updateType,
-  }) {
-    return loadingGet();
+  String toString() {
+    return 'OrdersState.successGet(orderResponse: $orderResponse)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseOrders orderResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrdelete,
-    TResult? Function()? loadingDetails,
-    TResult? Function(ResponseDetails responseDetails)? successDetails,
-    TResult? Function(String erorr)? erorrDetails,
-    TResult? Function()? loadingPeinding,
-    TResult? Function(PendingResponse pendingResponse)? successPeinding,
-    TResult? Function(String erorr)? erorrPeinding,
-    TResult? Function()? updateStatus,
-    TResult? Function()? updatePayment,
-    TResult? Function()? updateType,
-  }) {
-    return loadingGet?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseOrders orderResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrdelete,
-    TResult Function()? loadingDetails,
-    TResult Function(ResponseDetails responseDetails)? successDetails,
-    TResult Function(String erorr)? erorrDetails,
-    TResult Function()? loadingPeinding,
-    TResult Function(PendingResponse pendingResponse)? successPeinding,
-    TResult Function(String erorr)? erorrPeinding,
-    TResult Function()? updateStatus,
-    TResult Function()? updatePayment,
-    TResult Function()? updateType,
-    required TResult orElse(),
-  }) {
-    if (loadingGet != null) {
-      return loadingGet();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(Erorrdelete value) erorrdelete,
-    required TResult Function(LoadingDetails value) loadingDetails,
-    required TResult Function(SuccessDetails value) successDetails,
-    required TResult Function(ErorrDetails value) erorrDetails,
-    required TResult Function(LoadingPeinding value) loadingPeinding,
-    required TResult Function(SuccessPeinding value) successPeinding,
-    required TResult Function(ErorrPeinding value) erorrPeinding,
-    required TResult Function(UpdateStatus value) updateStatus,
-    required TResult Function(UpdatePayment value) updatePayment,
-    required TResult Function(UpdateType value) updateType,
-  }) {
-    return loadingGet(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(Erorrdelete value)? erorrdelete,
-    TResult? Function(LoadingDetails value)? loadingDetails,
-    TResult? Function(SuccessDetails value)? successDetails,
-    TResult? Function(ErorrDetails value)? erorrDetails,
-    TResult? Function(LoadingPeinding value)? loadingPeinding,
-    TResult? Function(SuccessPeinding value)? successPeinding,
-    TResult? Function(ErorrPeinding value)? erorrPeinding,
-    TResult? Function(UpdateStatus value)? updateStatus,
-    TResult? Function(UpdatePayment value)? updatePayment,
-    TResult? Function(UpdateType value)? updateType,
-  }) {
-    return loadingGet?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingGet value)? loadingGet,
-    TResult Function(SuccessGet value)? successGet,
-    TResult Function(ErorrGet value)? erorrGet,
-    TResult Function(LoadingDelete value)? loadingDelete,
-    TResult Function(Successdelete value)? successdelete,
-    TResult Function(Erorrdelete value)? erorrdelete,
-    TResult Function(LoadingDetails value)? loadingDetails,
-    TResult Function(SuccessDetails value)? successDetails,
-    TResult Function(ErorrDetails value)? erorrDetails,
-    TResult Function(LoadingPeinding value)? loadingPeinding,
-    TResult Function(SuccessPeinding value)? successPeinding,
-    TResult Function(ErorrPeinding value)? erorrPeinding,
-    TResult Function(UpdateStatus value)? updateStatus,
-    TResult Function(UpdatePayment value)? updatePayment,
-    TResult Function(UpdateType value)? updateType,
-    required TResult orElse(),
-  }) {
-    if (loadingGet != null) {
-      return loadingGet(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class LoadingGet implements OrdersState {
-  const factory LoadingGet() = _$LoadingGetImpl;
 }
 
 /// @nodoc
-abstract class _$$SuccessGetImplCopyWith<$Res> {
-  factory _$$SuccessGetImplCopyWith(
-          _$SuccessGetImpl value, $Res Function(_$SuccessGetImpl) then) =
-      __$$SuccessGetImplCopyWithImpl<$Res>;
+abstract mixin class $SuccessGetCopyWith<$Res>
+    implements $OrdersStateCopyWith<$Res> {
+  factory $SuccessGetCopyWith(
+          SuccessGet value, $Res Function(SuccessGet) _then) =
+      _$SuccessGetCopyWithImpl;
   @useResult
   $Res call({ResponseOrders orderResponse});
 }
 
 /// @nodoc
-class __$$SuccessGetImplCopyWithImpl<$Res>
-    extends _$OrdersStateCopyWithImpl<$Res, _$SuccessGetImpl>
-    implements _$$SuccessGetImplCopyWith<$Res> {
-  __$$SuccessGetImplCopyWithImpl(
-      _$SuccessGetImpl _value, $Res Function(_$SuccessGetImpl) _then)
-      : super(_value, _then);
+class _$SuccessGetCopyWithImpl<$Res> implements $SuccessGetCopyWith<$Res> {
+  _$SuccessGetCopyWithImpl(this._self, this._then);
 
+  final SuccessGet _self;
+  final $Res Function(SuccessGet) _then;
+
+  /// Create a copy of OrdersState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? orderResponse = null,
   }) {
-    return _then(_$SuccessGetImpl(
+    return _then(SuccessGet(
       null == orderResponse
-          ? _value.orderResponse
+          ? _self.orderResponse
           : orderResponse // ignore: cast_nullable_to_non_nullable
               as ResponseOrders,
     ));
@@ -563,806 +567,60 @@ class __$$SuccessGetImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SuccessGetImpl implements SuccessGet {
-  const _$SuccessGetImpl(this.orderResponse);
+class ErorrGet implements OrdersState {
+  const ErorrGet({required this.erorr});
 
-  @override
-  final ResponseOrders orderResponse;
+  final String erorr;
 
-  @override
-  String toString() {
-    return 'OrdersState.successGet(orderResponse: $orderResponse)';
-  }
+  /// Create a copy of OrdersState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ErorrGetCopyWith<ErorrGet> get copyWith =>
+      _$ErorrGetCopyWithImpl<ErorrGet>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SuccessGetImpl &&
-            (identical(other.orderResponse, orderResponse) ||
-                other.orderResponse == orderResponse));
+            other is ErorrGet &&
+            (identical(other.erorr, erorr) || other.erorr == erorr));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, orderResponse);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SuccessGetImplCopyWith<_$SuccessGetImpl> get copyWith =>
-      __$$SuccessGetImplCopyWithImpl<_$SuccessGetImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseOrders orderResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrdelete,
-    required TResult Function() loadingDetails,
-    required TResult Function(ResponseDetails responseDetails) successDetails,
-    required TResult Function(String erorr) erorrDetails,
-    required TResult Function() loadingPeinding,
-    required TResult Function(PendingResponse pendingResponse) successPeinding,
-    required TResult Function(String erorr) erorrPeinding,
-    required TResult Function() updateStatus,
-    required TResult Function() updatePayment,
-    required TResult Function() updateType,
-  }) {
-    return successGet(orderResponse);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseOrders orderResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrdelete,
-    TResult? Function()? loadingDetails,
-    TResult? Function(ResponseDetails responseDetails)? successDetails,
-    TResult? Function(String erorr)? erorrDetails,
-    TResult? Function()? loadingPeinding,
-    TResult? Function(PendingResponse pendingResponse)? successPeinding,
-    TResult? Function(String erorr)? erorrPeinding,
-    TResult? Function()? updateStatus,
-    TResult? Function()? updatePayment,
-    TResult? Function()? updateType,
-  }) {
-    return successGet?.call(orderResponse);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseOrders orderResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrdelete,
-    TResult Function()? loadingDetails,
-    TResult Function(ResponseDetails responseDetails)? successDetails,
-    TResult Function(String erorr)? erorrDetails,
-    TResult Function()? loadingPeinding,
-    TResult Function(PendingResponse pendingResponse)? successPeinding,
-    TResult Function(String erorr)? erorrPeinding,
-    TResult Function()? updateStatus,
-    TResult Function()? updatePayment,
-    TResult Function()? updateType,
-    required TResult orElse(),
-  }) {
-    if (successGet != null) {
-      return successGet(orderResponse);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(Erorrdelete value) erorrdelete,
-    required TResult Function(LoadingDetails value) loadingDetails,
-    required TResult Function(SuccessDetails value) successDetails,
-    required TResult Function(ErorrDetails value) erorrDetails,
-    required TResult Function(LoadingPeinding value) loadingPeinding,
-    required TResult Function(SuccessPeinding value) successPeinding,
-    required TResult Function(ErorrPeinding value) erorrPeinding,
-    required TResult Function(UpdateStatus value) updateStatus,
-    required TResult Function(UpdatePayment value) updatePayment,
-    required TResult Function(UpdateType value) updateType,
-  }) {
-    return successGet(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(Erorrdelete value)? erorrdelete,
-    TResult? Function(LoadingDetails value)? loadingDetails,
-    TResult? Function(SuccessDetails value)? successDetails,
-    TResult? Function(ErorrDetails value)? erorrDetails,
-    TResult? Function(LoadingPeinding value)? loadingPeinding,
-    TResult? Function(SuccessPeinding value)? successPeinding,
-    TResult? Function(ErorrPeinding value)? erorrPeinding,
-    TResult? Function(UpdateStatus value)? updateStatus,
-    TResult? Function(UpdatePayment value)? updatePayment,
-    TResult? Function(UpdateType value)? updateType,
-  }) {
-    return successGet?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingGet value)? loadingGet,
-    TResult Function(SuccessGet value)? successGet,
-    TResult Function(ErorrGet value)? erorrGet,
-    TResult Function(LoadingDelete value)? loadingDelete,
-    TResult Function(Successdelete value)? successdelete,
-    TResult Function(Erorrdelete value)? erorrdelete,
-    TResult Function(LoadingDetails value)? loadingDetails,
-    TResult Function(SuccessDetails value)? successDetails,
-    TResult Function(ErorrDetails value)? erorrDetails,
-    TResult Function(LoadingPeinding value)? loadingPeinding,
-    TResult Function(SuccessPeinding value)? successPeinding,
-    TResult Function(ErorrPeinding value)? erorrPeinding,
-    TResult Function(UpdateStatus value)? updateStatus,
-    TResult Function(UpdatePayment value)? updatePayment,
-    TResult Function(UpdateType value)? updateType,
-    required TResult orElse(),
-  }) {
-    if (successGet != null) {
-      return successGet(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class SuccessGet implements OrdersState {
-  const factory SuccessGet(final ResponseOrders orderResponse) =
-      _$SuccessGetImpl;
-
-  ResponseOrders get orderResponse;
-  @JsonKey(ignore: true)
-  _$$SuccessGetImplCopyWith<_$SuccessGetImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$ErorrGetImplCopyWith<$Res> {
-  factory _$$ErorrGetImplCopyWith(
-          _$ErorrGetImpl value, $Res Function(_$ErorrGetImpl) then) =
-      __$$ErorrGetImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String erorr});
-}
-
-/// @nodoc
-class __$$ErorrGetImplCopyWithImpl<$Res>
-    extends _$OrdersStateCopyWithImpl<$Res, _$ErorrGetImpl>
-    implements _$$ErorrGetImplCopyWith<$Res> {
-  __$$ErorrGetImplCopyWithImpl(
-      _$ErorrGetImpl _value, $Res Function(_$ErorrGetImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? erorr = null,
-  }) {
-    return _then(_$ErorrGetImpl(
-      erorr: null == erorr
-          ? _value.erorr
-          : erorr // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$ErorrGetImpl implements ErorrGet {
-  const _$ErorrGetImpl({required this.erorr});
-
-  @override
-  final String erorr;
+  int get hashCode => Object.hash(runtimeType, erorr);
 
   @override
   String toString() {
     return 'OrdersState.erorrGet(erorr: $erorr)';
   }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ErorrGetImpl &&
-            (identical(other.erorr, erorr) || other.erorr == erorr));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, erorr);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ErorrGetImplCopyWith<_$ErorrGetImpl> get copyWith =>
-      __$$ErorrGetImplCopyWithImpl<_$ErorrGetImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseOrders orderResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrdelete,
-    required TResult Function() loadingDetails,
-    required TResult Function(ResponseDetails responseDetails) successDetails,
-    required TResult Function(String erorr) erorrDetails,
-    required TResult Function() loadingPeinding,
-    required TResult Function(PendingResponse pendingResponse) successPeinding,
-    required TResult Function(String erorr) erorrPeinding,
-    required TResult Function() updateStatus,
-    required TResult Function() updatePayment,
-    required TResult Function() updateType,
-  }) {
-    return erorrGet(erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseOrders orderResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrdelete,
-    TResult? Function()? loadingDetails,
-    TResult? Function(ResponseDetails responseDetails)? successDetails,
-    TResult? Function(String erorr)? erorrDetails,
-    TResult? Function()? loadingPeinding,
-    TResult? Function(PendingResponse pendingResponse)? successPeinding,
-    TResult? Function(String erorr)? erorrPeinding,
-    TResult? Function()? updateStatus,
-    TResult? Function()? updatePayment,
-    TResult? Function()? updateType,
-  }) {
-    return erorrGet?.call(erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseOrders orderResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrdelete,
-    TResult Function()? loadingDetails,
-    TResult Function(ResponseDetails responseDetails)? successDetails,
-    TResult Function(String erorr)? erorrDetails,
-    TResult Function()? loadingPeinding,
-    TResult Function(PendingResponse pendingResponse)? successPeinding,
-    TResult Function(String erorr)? erorrPeinding,
-    TResult Function()? updateStatus,
-    TResult Function()? updatePayment,
-    TResult Function()? updateType,
-    required TResult orElse(),
-  }) {
-    if (erorrGet != null) {
-      return erorrGet(erorr);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(Erorrdelete value) erorrdelete,
-    required TResult Function(LoadingDetails value) loadingDetails,
-    required TResult Function(SuccessDetails value) successDetails,
-    required TResult Function(ErorrDetails value) erorrDetails,
-    required TResult Function(LoadingPeinding value) loadingPeinding,
-    required TResult Function(SuccessPeinding value) successPeinding,
-    required TResult Function(ErorrPeinding value) erorrPeinding,
-    required TResult Function(UpdateStatus value) updateStatus,
-    required TResult Function(UpdatePayment value) updatePayment,
-    required TResult Function(UpdateType value) updateType,
-  }) {
-    return erorrGet(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(Erorrdelete value)? erorrdelete,
-    TResult? Function(LoadingDetails value)? loadingDetails,
-    TResult? Function(SuccessDetails value)? successDetails,
-    TResult? Function(ErorrDetails value)? erorrDetails,
-    TResult? Function(LoadingPeinding value)? loadingPeinding,
-    TResult? Function(SuccessPeinding value)? successPeinding,
-    TResult? Function(ErorrPeinding value)? erorrPeinding,
-    TResult? Function(UpdateStatus value)? updateStatus,
-    TResult? Function(UpdatePayment value)? updatePayment,
-    TResult? Function(UpdateType value)? updateType,
-  }) {
-    return erorrGet?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingGet value)? loadingGet,
-    TResult Function(SuccessGet value)? successGet,
-    TResult Function(ErorrGet value)? erorrGet,
-    TResult Function(LoadingDelete value)? loadingDelete,
-    TResult Function(Successdelete value)? successdelete,
-    TResult Function(Erorrdelete value)? erorrdelete,
-    TResult Function(LoadingDetails value)? loadingDetails,
-    TResult Function(SuccessDetails value)? successDetails,
-    TResult Function(ErorrDetails value)? erorrDetails,
-    TResult Function(LoadingPeinding value)? loadingPeinding,
-    TResult Function(SuccessPeinding value)? successPeinding,
-    TResult Function(ErorrPeinding value)? erorrPeinding,
-    TResult Function(UpdateStatus value)? updateStatus,
-    TResult Function(UpdatePayment value)? updatePayment,
-    TResult Function(UpdateType value)? updateType,
-    required TResult orElse(),
-  }) {
-    if (erorrGet != null) {
-      return erorrGet(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class ErorrGet implements OrdersState {
-  const factory ErorrGet({required final String erorr}) = _$ErorrGetImpl;
-
-  String get erorr;
-  @JsonKey(ignore: true)
-  _$$ErorrGetImplCopyWith<_$ErorrGetImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$LoadingDeleteImplCopyWith<$Res> {
-  factory _$$LoadingDeleteImplCopyWith(
-          _$LoadingDeleteImpl value, $Res Function(_$LoadingDeleteImpl) then) =
-      __$$LoadingDeleteImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$LoadingDeleteImplCopyWithImpl<$Res>
-    extends _$OrdersStateCopyWithImpl<$Res, _$LoadingDeleteImpl>
-    implements _$$LoadingDeleteImplCopyWith<$Res> {
-  __$$LoadingDeleteImplCopyWithImpl(
-      _$LoadingDeleteImpl _value, $Res Function(_$LoadingDeleteImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$LoadingDeleteImpl implements LoadingDelete {
-  const _$LoadingDeleteImpl();
-
-  @override
-  String toString() {
-    return 'OrdersState.loadingDelete()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingDeleteImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseOrders orderResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrdelete,
-    required TResult Function() loadingDetails,
-    required TResult Function(ResponseDetails responseDetails) successDetails,
-    required TResult Function(String erorr) erorrDetails,
-    required TResult Function() loadingPeinding,
-    required TResult Function(PendingResponse pendingResponse) successPeinding,
-    required TResult Function(String erorr) erorrPeinding,
-    required TResult Function() updateStatus,
-    required TResult Function() updatePayment,
-    required TResult Function() updateType,
-  }) {
-    return loadingDelete();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseOrders orderResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrdelete,
-    TResult? Function()? loadingDetails,
-    TResult? Function(ResponseDetails responseDetails)? successDetails,
-    TResult? Function(String erorr)? erorrDetails,
-    TResult? Function()? loadingPeinding,
-    TResult? Function(PendingResponse pendingResponse)? successPeinding,
-    TResult? Function(String erorr)? erorrPeinding,
-    TResult? Function()? updateStatus,
-    TResult? Function()? updatePayment,
-    TResult? Function()? updateType,
-  }) {
-    return loadingDelete?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseOrders orderResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrdelete,
-    TResult Function()? loadingDetails,
-    TResult Function(ResponseDetails responseDetails)? successDetails,
-    TResult Function(String erorr)? erorrDetails,
-    TResult Function()? loadingPeinding,
-    TResult Function(PendingResponse pendingResponse)? successPeinding,
-    TResult Function(String erorr)? erorrPeinding,
-    TResult Function()? updateStatus,
-    TResult Function()? updatePayment,
-    TResult Function()? updateType,
-    required TResult orElse(),
-  }) {
-    if (loadingDelete != null) {
-      return loadingDelete();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(Erorrdelete value) erorrdelete,
-    required TResult Function(LoadingDetails value) loadingDetails,
-    required TResult Function(SuccessDetails value) successDetails,
-    required TResult Function(ErorrDetails value) erorrDetails,
-    required TResult Function(LoadingPeinding value) loadingPeinding,
-    required TResult Function(SuccessPeinding value) successPeinding,
-    required TResult Function(ErorrPeinding value) erorrPeinding,
-    required TResult Function(UpdateStatus value) updateStatus,
-    required TResult Function(UpdatePayment value) updatePayment,
-    required TResult Function(UpdateType value) updateType,
-  }) {
-    return loadingDelete(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(Erorrdelete value)? erorrdelete,
-    TResult? Function(LoadingDetails value)? loadingDetails,
-    TResult? Function(SuccessDetails value)? successDetails,
-    TResult? Function(ErorrDetails value)? erorrDetails,
-    TResult? Function(LoadingPeinding value)? loadingPeinding,
-    TResult? Function(SuccessPeinding value)? successPeinding,
-    TResult? Function(ErorrPeinding value)? erorrPeinding,
-    TResult? Function(UpdateStatus value)? updateStatus,
-    TResult? Function(UpdatePayment value)? updatePayment,
-    TResult? Function(UpdateType value)? updateType,
-  }) {
-    return loadingDelete?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingGet value)? loadingGet,
-    TResult Function(SuccessGet value)? successGet,
-    TResult Function(ErorrGet value)? erorrGet,
-    TResult Function(LoadingDelete value)? loadingDelete,
-    TResult Function(Successdelete value)? successdelete,
-    TResult Function(Erorrdelete value)? erorrdelete,
-    TResult Function(LoadingDetails value)? loadingDetails,
-    TResult Function(SuccessDetails value)? successDetails,
-    TResult Function(ErorrDetails value)? erorrDetails,
-    TResult Function(LoadingPeinding value)? loadingPeinding,
-    TResult Function(SuccessPeinding value)? successPeinding,
-    TResult Function(ErorrPeinding value)? erorrPeinding,
-    TResult Function(UpdateStatus value)? updateStatus,
-    TResult Function(UpdatePayment value)? updatePayment,
-    TResult Function(UpdateType value)? updateType,
-    required TResult orElse(),
-  }) {
-    if (loadingDelete != null) {
-      return loadingDelete(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class LoadingDelete implements OrdersState {
-  const factory LoadingDelete() = _$LoadingDeleteImpl;
-}
-
-/// @nodoc
-abstract class _$$SuccessdeleteImplCopyWith<$Res> {
-  factory _$$SuccessdeleteImplCopyWith(
-          _$SuccessdeleteImpl value, $Res Function(_$SuccessdeleteImpl) then) =
-      __$$SuccessdeleteImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$SuccessdeleteImplCopyWithImpl<$Res>
-    extends _$OrdersStateCopyWithImpl<$Res, _$SuccessdeleteImpl>
-    implements _$$SuccessdeleteImplCopyWith<$Res> {
-  __$$SuccessdeleteImplCopyWithImpl(
-      _$SuccessdeleteImpl _value, $Res Function(_$SuccessdeleteImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$SuccessdeleteImpl implements Successdelete {
-  const _$SuccessdeleteImpl();
-
-  @override
-  String toString() {
-    return 'OrdersState.successdelete()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SuccessdeleteImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseOrders orderResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrdelete,
-    required TResult Function() loadingDetails,
-    required TResult Function(ResponseDetails responseDetails) successDetails,
-    required TResult Function(String erorr) erorrDetails,
-    required TResult Function() loadingPeinding,
-    required TResult Function(PendingResponse pendingResponse) successPeinding,
-    required TResult Function(String erorr) erorrPeinding,
-    required TResult Function() updateStatus,
-    required TResult Function() updatePayment,
-    required TResult Function() updateType,
-  }) {
-    return successdelete();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseOrders orderResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrdelete,
-    TResult? Function()? loadingDetails,
-    TResult? Function(ResponseDetails responseDetails)? successDetails,
-    TResult? Function(String erorr)? erorrDetails,
-    TResult? Function()? loadingPeinding,
-    TResult? Function(PendingResponse pendingResponse)? successPeinding,
-    TResult? Function(String erorr)? erorrPeinding,
-    TResult? Function()? updateStatus,
-    TResult? Function()? updatePayment,
-    TResult? Function()? updateType,
-  }) {
-    return successdelete?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseOrders orderResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrdelete,
-    TResult Function()? loadingDetails,
-    TResult Function(ResponseDetails responseDetails)? successDetails,
-    TResult Function(String erorr)? erorrDetails,
-    TResult Function()? loadingPeinding,
-    TResult Function(PendingResponse pendingResponse)? successPeinding,
-    TResult Function(String erorr)? erorrPeinding,
-    TResult Function()? updateStatus,
-    TResult Function()? updatePayment,
-    TResult Function()? updateType,
-    required TResult orElse(),
-  }) {
-    if (successdelete != null) {
-      return successdelete();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(Erorrdelete value) erorrdelete,
-    required TResult Function(LoadingDetails value) loadingDetails,
-    required TResult Function(SuccessDetails value) successDetails,
-    required TResult Function(ErorrDetails value) erorrDetails,
-    required TResult Function(LoadingPeinding value) loadingPeinding,
-    required TResult Function(SuccessPeinding value) successPeinding,
-    required TResult Function(ErorrPeinding value) erorrPeinding,
-    required TResult Function(UpdateStatus value) updateStatus,
-    required TResult Function(UpdatePayment value) updatePayment,
-    required TResult Function(UpdateType value) updateType,
-  }) {
-    return successdelete(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(Erorrdelete value)? erorrdelete,
-    TResult? Function(LoadingDetails value)? loadingDetails,
-    TResult? Function(SuccessDetails value)? successDetails,
-    TResult? Function(ErorrDetails value)? erorrDetails,
-    TResult? Function(LoadingPeinding value)? loadingPeinding,
-    TResult? Function(SuccessPeinding value)? successPeinding,
-    TResult? Function(ErorrPeinding value)? erorrPeinding,
-    TResult? Function(UpdateStatus value)? updateStatus,
-    TResult? Function(UpdatePayment value)? updatePayment,
-    TResult? Function(UpdateType value)? updateType,
-  }) {
-    return successdelete?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingGet value)? loadingGet,
-    TResult Function(SuccessGet value)? successGet,
-    TResult Function(ErorrGet value)? erorrGet,
-    TResult Function(LoadingDelete value)? loadingDelete,
-    TResult Function(Successdelete value)? successdelete,
-    TResult Function(Erorrdelete value)? erorrdelete,
-    TResult Function(LoadingDetails value)? loadingDetails,
-    TResult Function(SuccessDetails value)? successDetails,
-    TResult Function(ErorrDetails value)? erorrDetails,
-    TResult Function(LoadingPeinding value)? loadingPeinding,
-    TResult Function(SuccessPeinding value)? successPeinding,
-    TResult Function(ErorrPeinding value)? erorrPeinding,
-    TResult Function(UpdateStatus value)? updateStatus,
-    TResult Function(UpdatePayment value)? updatePayment,
-    TResult Function(UpdateType value)? updateType,
-    required TResult orElse(),
-  }) {
-    if (successdelete != null) {
-      return successdelete(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class Successdelete implements OrdersState {
-  const factory Successdelete() = _$SuccessdeleteImpl;
-}
-
-/// @nodoc
-abstract class _$$ErorrdeleteImplCopyWith<$Res> {
-  factory _$$ErorrdeleteImplCopyWith(
-          _$ErorrdeleteImpl value, $Res Function(_$ErorrdeleteImpl) then) =
-      __$$ErorrdeleteImplCopyWithImpl<$Res>;
+abstract mixin class $ErorrGetCopyWith<$Res>
+    implements $OrdersStateCopyWith<$Res> {
+  factory $ErorrGetCopyWith(ErorrGet value, $Res Function(ErorrGet) _then) =
+      _$ErorrGetCopyWithImpl;
   @useResult
   $Res call({String erorr});
 }
 
 /// @nodoc
-class __$$ErorrdeleteImplCopyWithImpl<$Res>
-    extends _$OrdersStateCopyWithImpl<$Res, _$ErorrdeleteImpl>
-    implements _$$ErorrdeleteImplCopyWith<$Res> {
-  __$$ErorrdeleteImplCopyWithImpl(
-      _$ErorrdeleteImpl _value, $Res Function(_$ErorrdeleteImpl) _then)
-      : super(_value, _then);
+class _$ErorrGetCopyWithImpl<$Res> implements $ErorrGetCopyWith<$Res> {
+  _$ErorrGetCopyWithImpl(this._self, this._then);
 
+  final ErorrGet _self;
+  final $Res Function(ErorrGet) _then;
+
+  /// Create a copy of OrdersState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? erorr = null,
   }) {
-    return _then(_$ErorrdeleteImpl(
+    return _then(ErorrGet(
       erorr: null == erorr
-          ? _value.erorr
+          ? _self.erorr
           : erorr // ignore: cast_nullable_to_non_nullable
               as String,
     ));
@@ -1371,401 +629,186 @@ class __$$ErorrdeleteImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErorrdeleteImpl implements Erorrdelete {
-  const _$ErorrdeleteImpl({required this.erorr});
-
-  @override
-  final String erorr;
-
-  @override
-  String toString() {
-    return 'OrdersState.erorrdelete(erorr: $erorr)';
-  }
+class LoadingDelete implements OrdersState {
+  const LoadingDelete();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ErorrdeleteImpl &&
-            (identical(other.erorr, erorr) || other.erorr == erorr));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, erorr);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ErorrdeleteImplCopyWith<_$ErorrdeleteImpl> get copyWith =>
-      __$$ErorrdeleteImplCopyWithImpl<_$ErorrdeleteImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseOrders orderResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrdelete,
-    required TResult Function() loadingDetails,
-    required TResult Function(ResponseDetails responseDetails) successDetails,
-    required TResult Function(String erorr) erorrDetails,
-    required TResult Function() loadingPeinding,
-    required TResult Function(PendingResponse pendingResponse) successPeinding,
-    required TResult Function(String erorr) erorrPeinding,
-    required TResult Function() updateStatus,
-    required TResult Function() updatePayment,
-    required TResult Function() updateType,
-  }) {
-    return erorrdelete(erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseOrders orderResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrdelete,
-    TResult? Function()? loadingDetails,
-    TResult? Function(ResponseDetails responseDetails)? successDetails,
-    TResult? Function(String erorr)? erorrDetails,
-    TResult? Function()? loadingPeinding,
-    TResult? Function(PendingResponse pendingResponse)? successPeinding,
-    TResult? Function(String erorr)? erorrPeinding,
-    TResult? Function()? updateStatus,
-    TResult? Function()? updatePayment,
-    TResult? Function()? updateType,
-  }) {
-    return erorrdelete?.call(erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseOrders orderResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrdelete,
-    TResult Function()? loadingDetails,
-    TResult Function(ResponseDetails responseDetails)? successDetails,
-    TResult Function(String erorr)? erorrDetails,
-    TResult Function()? loadingPeinding,
-    TResult Function(PendingResponse pendingResponse)? successPeinding,
-    TResult Function(String erorr)? erorrPeinding,
-    TResult Function()? updateStatus,
-    TResult Function()? updatePayment,
-    TResult Function()? updateType,
-    required TResult orElse(),
-  }) {
-    if (erorrdelete != null) {
-      return erorrdelete(erorr);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(Erorrdelete value) erorrdelete,
-    required TResult Function(LoadingDetails value) loadingDetails,
-    required TResult Function(SuccessDetails value) successDetails,
-    required TResult Function(ErorrDetails value) erorrDetails,
-    required TResult Function(LoadingPeinding value) loadingPeinding,
-    required TResult Function(SuccessPeinding value) successPeinding,
-    required TResult Function(ErorrPeinding value) erorrPeinding,
-    required TResult Function(UpdateStatus value) updateStatus,
-    required TResult Function(UpdatePayment value) updatePayment,
-    required TResult Function(UpdateType value) updateType,
-  }) {
-    return erorrdelete(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(Erorrdelete value)? erorrdelete,
-    TResult? Function(LoadingDetails value)? loadingDetails,
-    TResult? Function(SuccessDetails value)? successDetails,
-    TResult? Function(ErorrDetails value)? erorrDetails,
-    TResult? Function(LoadingPeinding value)? loadingPeinding,
-    TResult? Function(SuccessPeinding value)? successPeinding,
-    TResult? Function(ErorrPeinding value)? erorrPeinding,
-    TResult? Function(UpdateStatus value)? updateStatus,
-    TResult? Function(UpdatePayment value)? updatePayment,
-    TResult? Function(UpdateType value)? updateType,
-  }) {
-    return erorrdelete?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingGet value)? loadingGet,
-    TResult Function(SuccessGet value)? successGet,
-    TResult Function(ErorrGet value)? erorrGet,
-    TResult Function(LoadingDelete value)? loadingDelete,
-    TResult Function(Successdelete value)? successdelete,
-    TResult Function(Erorrdelete value)? erorrdelete,
-    TResult Function(LoadingDetails value)? loadingDetails,
-    TResult Function(SuccessDetails value)? successDetails,
-    TResult Function(ErorrDetails value)? erorrDetails,
-    TResult Function(LoadingPeinding value)? loadingPeinding,
-    TResult Function(SuccessPeinding value)? successPeinding,
-    TResult Function(ErorrPeinding value)? erorrPeinding,
-    TResult Function(UpdateStatus value)? updateStatus,
-    TResult Function(UpdatePayment value)? updatePayment,
-    TResult Function(UpdateType value)? updateType,
-    required TResult orElse(),
-  }) {
-    if (erorrdelete != null) {
-      return erorrdelete(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class Erorrdelete implements OrdersState {
-  const factory Erorrdelete({required final String erorr}) = _$ErorrdeleteImpl;
-
-  String get erorr;
-  @JsonKey(ignore: true)
-  _$$ErorrdeleteImplCopyWith<_$ErorrdeleteImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$LoadingDetailsImplCopyWith<$Res> {
-  factory _$$LoadingDetailsImplCopyWith(_$LoadingDetailsImpl value,
-          $Res Function(_$LoadingDetailsImpl) then) =
-      __$$LoadingDetailsImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$LoadingDetailsImplCopyWithImpl<$Res>
-    extends _$OrdersStateCopyWithImpl<$Res, _$LoadingDetailsImpl>
-    implements _$$LoadingDetailsImplCopyWith<$Res> {
-  __$$LoadingDetailsImplCopyWithImpl(
-      _$LoadingDetailsImpl _value, $Res Function(_$LoadingDetailsImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$LoadingDetailsImpl implements LoadingDetails {
-  const _$LoadingDetailsImpl();
-
-  @override
-  String toString() {
-    return 'OrdersState.loadingDetails()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingDetailsImpl);
+        (other.runtimeType == runtimeType && other is LoadingDelete);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseOrders orderResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrdelete,
-    required TResult Function() loadingDetails,
-    required TResult Function(ResponseDetails responseDetails) successDetails,
-    required TResult Function(String erorr) erorrDetails,
-    required TResult Function() loadingPeinding,
-    required TResult Function(PendingResponse pendingResponse) successPeinding,
-    required TResult Function(String erorr) erorrPeinding,
-    required TResult Function() updateStatus,
-    required TResult Function() updatePayment,
-    required TResult Function() updateType,
-  }) {
-    return loadingDetails();
+  String toString() {
+    return 'OrdersState.loadingDelete()';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseOrders orderResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrdelete,
-    TResult? Function()? loadingDetails,
-    TResult? Function(ResponseDetails responseDetails)? successDetails,
-    TResult? Function(String erorr)? erorrDetails,
-    TResult? Function()? loadingPeinding,
-    TResult? Function(PendingResponse pendingResponse)? successPeinding,
-    TResult? Function(String erorr)? erorrPeinding,
-    TResult? Function()? updateStatus,
-    TResult? Function()? updatePayment,
-    TResult? Function()? updateType,
-  }) {
-    return loadingDetails?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseOrders orderResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrdelete,
-    TResult Function()? loadingDetails,
-    TResult Function(ResponseDetails responseDetails)? successDetails,
-    TResult Function(String erorr)? erorrDetails,
-    TResult Function()? loadingPeinding,
-    TResult Function(PendingResponse pendingResponse)? successPeinding,
-    TResult Function(String erorr)? erorrPeinding,
-    TResult Function()? updateStatus,
-    TResult Function()? updatePayment,
-    TResult Function()? updateType,
-    required TResult orElse(),
-  }) {
-    if (loadingDetails != null) {
-      return loadingDetails();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(Erorrdelete value) erorrdelete,
-    required TResult Function(LoadingDetails value) loadingDetails,
-    required TResult Function(SuccessDetails value) successDetails,
-    required TResult Function(ErorrDetails value) erorrDetails,
-    required TResult Function(LoadingPeinding value) loadingPeinding,
-    required TResult Function(SuccessPeinding value) successPeinding,
-    required TResult Function(ErorrPeinding value) erorrPeinding,
-    required TResult Function(UpdateStatus value) updateStatus,
-    required TResult Function(UpdatePayment value) updatePayment,
-    required TResult Function(UpdateType value) updateType,
-  }) {
-    return loadingDetails(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(Erorrdelete value)? erorrdelete,
-    TResult? Function(LoadingDetails value)? loadingDetails,
-    TResult? Function(SuccessDetails value)? successDetails,
-    TResult? Function(ErorrDetails value)? erorrDetails,
-    TResult? Function(LoadingPeinding value)? loadingPeinding,
-    TResult? Function(SuccessPeinding value)? successPeinding,
-    TResult? Function(ErorrPeinding value)? erorrPeinding,
-    TResult? Function(UpdateStatus value)? updateStatus,
-    TResult? Function(UpdatePayment value)? updatePayment,
-    TResult? Function(UpdateType value)? updateType,
-  }) {
-    return loadingDetails?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingGet value)? loadingGet,
-    TResult Function(SuccessGet value)? successGet,
-    TResult Function(ErorrGet value)? erorrGet,
-    TResult Function(LoadingDelete value)? loadingDelete,
-    TResult Function(Successdelete value)? successdelete,
-    TResult Function(Erorrdelete value)? erorrdelete,
-    TResult Function(LoadingDetails value)? loadingDetails,
-    TResult Function(SuccessDetails value)? successDetails,
-    TResult Function(ErorrDetails value)? erorrDetails,
-    TResult Function(LoadingPeinding value)? loadingPeinding,
-    TResult Function(SuccessPeinding value)? successPeinding,
-    TResult Function(ErorrPeinding value)? erorrPeinding,
-    TResult Function(UpdateStatus value)? updateStatus,
-    TResult Function(UpdatePayment value)? updatePayment,
-    TResult Function(UpdateType value)? updateType,
-    required TResult orElse(),
-  }) {
-    if (loadingDetails != null) {
-      return loadingDetails(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class LoadingDetails implements OrdersState {
-  const factory LoadingDetails() = _$LoadingDetailsImpl;
 }
 
 /// @nodoc
-abstract class _$$SuccessDetailsImplCopyWith<$Res> {
-  factory _$$SuccessDetailsImplCopyWith(_$SuccessDetailsImpl value,
-          $Res Function(_$SuccessDetailsImpl) then) =
-      __$$SuccessDetailsImplCopyWithImpl<$Res>;
+
+class Successdelete implements OrdersState {
+  const Successdelete();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is Successdelete);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'OrdersState.successdelete()';
+  }
+}
+
+/// @nodoc
+
+class Erorrdelete implements OrdersState {
+  const Erorrdelete({required this.erorr});
+
+  final String erorr;
+
+  /// Create a copy of OrdersState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ErorrdeleteCopyWith<Erorrdelete> get copyWith =>
+      _$ErorrdeleteCopyWithImpl<Erorrdelete>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Erorrdelete &&
+            (identical(other.erorr, erorr) || other.erorr == erorr));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, erorr);
+
+  @override
+  String toString() {
+    return 'OrdersState.erorrdelete(erorr: $erorr)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $ErorrdeleteCopyWith<$Res>
+    implements $OrdersStateCopyWith<$Res> {
+  factory $ErorrdeleteCopyWith(
+          Erorrdelete value, $Res Function(Erorrdelete) _then) =
+      _$ErorrdeleteCopyWithImpl;
+  @useResult
+  $Res call({String erorr});
+}
+
+/// @nodoc
+class _$ErorrdeleteCopyWithImpl<$Res> implements $ErorrdeleteCopyWith<$Res> {
+  _$ErorrdeleteCopyWithImpl(this._self, this._then);
+
+  final Erorrdelete _self;
+  final $Res Function(Erorrdelete) _then;
+
+  /// Create a copy of OrdersState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? erorr = null,
+  }) {
+    return _then(Erorrdelete(
+      erorr: null == erorr
+          ? _self.erorr
+          : erorr // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class LoadingDetails implements OrdersState {
+  const LoadingDetails();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is LoadingDetails);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'OrdersState.loadingDetails()';
+  }
+}
+
+/// @nodoc
+
+class SuccessDetails implements OrdersState {
+  const SuccessDetails({required this.responseDetails});
+
+  final ResponseDetails responseDetails;
+
+  /// Create a copy of OrdersState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SuccessDetailsCopyWith<SuccessDetails> get copyWith =>
+      _$SuccessDetailsCopyWithImpl<SuccessDetails>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is SuccessDetails &&
+            (identical(other.responseDetails, responseDetails) ||
+                other.responseDetails == responseDetails));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, responseDetails);
+
+  @override
+  String toString() {
+    return 'OrdersState.successDetails(responseDetails: $responseDetails)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $SuccessDetailsCopyWith<$Res>
+    implements $OrdersStateCopyWith<$Res> {
+  factory $SuccessDetailsCopyWith(
+          SuccessDetails value, $Res Function(SuccessDetails) _then) =
+      _$SuccessDetailsCopyWithImpl;
   @useResult
   $Res call({ResponseDetails responseDetails});
 }
 
 /// @nodoc
-class __$$SuccessDetailsImplCopyWithImpl<$Res>
-    extends _$OrdersStateCopyWithImpl<$Res, _$SuccessDetailsImpl>
-    implements _$$SuccessDetailsImplCopyWith<$Res> {
-  __$$SuccessDetailsImplCopyWithImpl(
-      _$SuccessDetailsImpl _value, $Res Function(_$SuccessDetailsImpl) _then)
-      : super(_value, _then);
+class _$SuccessDetailsCopyWithImpl<$Res>
+    implements $SuccessDetailsCopyWith<$Res> {
+  _$SuccessDetailsCopyWithImpl(this._self, this._then);
 
+  final SuccessDetails _self;
+  final $Res Function(SuccessDetails) _then;
+
+  /// Create a copy of OrdersState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? responseDetails = null,
   }) {
-    return _then(_$SuccessDetailsImpl(
+    return _then(SuccessDetails(
       responseDetails: null == responseDetails
-          ? _value.responseDetails
+          ? _self.responseDetails
           : responseDetails // ignore: cast_nullable_to_non_nullable
               as ResponseDetails,
     ));
@@ -1774,218 +817,61 @@ class __$$SuccessDetailsImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SuccessDetailsImpl implements SuccessDetails {
-  const _$SuccessDetailsImpl({required this.responseDetails});
+class ErorrDetails implements OrdersState {
+  const ErorrDetails({required this.erorr});
 
-  @override
-  final ResponseDetails responseDetails;
+  final String erorr;
 
-  @override
-  String toString() {
-    return 'OrdersState.successDetails(responseDetails: $responseDetails)';
-  }
+  /// Create a copy of OrdersState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ErorrDetailsCopyWith<ErorrDetails> get copyWith =>
+      _$ErorrDetailsCopyWithImpl<ErorrDetails>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SuccessDetailsImpl &&
-            (identical(other.responseDetails, responseDetails) ||
-                other.responseDetails == responseDetails));
+            other is ErorrDetails &&
+            (identical(other.erorr, erorr) || other.erorr == erorr));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, responseDetails);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SuccessDetailsImplCopyWith<_$SuccessDetailsImpl> get copyWith =>
-      __$$SuccessDetailsImplCopyWithImpl<_$SuccessDetailsImpl>(
-          this, _$identity);
+  int get hashCode => Object.hash(runtimeType, erorr);
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseOrders orderResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrdelete,
-    required TResult Function() loadingDetails,
-    required TResult Function(ResponseDetails responseDetails) successDetails,
-    required TResult Function(String erorr) erorrDetails,
-    required TResult Function() loadingPeinding,
-    required TResult Function(PendingResponse pendingResponse) successPeinding,
-    required TResult Function(String erorr) erorrPeinding,
-    required TResult Function() updateStatus,
-    required TResult Function() updatePayment,
-    required TResult Function() updateType,
-  }) {
-    return successDetails(responseDetails);
+  String toString() {
+    return 'OrdersState.erorrDetails(erorr: $erorr)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseOrders orderResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrdelete,
-    TResult? Function()? loadingDetails,
-    TResult? Function(ResponseDetails responseDetails)? successDetails,
-    TResult? Function(String erorr)? erorrDetails,
-    TResult? Function()? loadingPeinding,
-    TResult? Function(PendingResponse pendingResponse)? successPeinding,
-    TResult? Function(String erorr)? erorrPeinding,
-    TResult? Function()? updateStatus,
-    TResult? Function()? updatePayment,
-    TResult? Function()? updateType,
-  }) {
-    return successDetails?.call(responseDetails);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseOrders orderResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrdelete,
-    TResult Function()? loadingDetails,
-    TResult Function(ResponseDetails responseDetails)? successDetails,
-    TResult Function(String erorr)? erorrDetails,
-    TResult Function()? loadingPeinding,
-    TResult Function(PendingResponse pendingResponse)? successPeinding,
-    TResult Function(String erorr)? erorrPeinding,
-    TResult Function()? updateStatus,
-    TResult Function()? updatePayment,
-    TResult Function()? updateType,
-    required TResult orElse(),
-  }) {
-    if (successDetails != null) {
-      return successDetails(responseDetails);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(Erorrdelete value) erorrdelete,
-    required TResult Function(LoadingDetails value) loadingDetails,
-    required TResult Function(SuccessDetails value) successDetails,
-    required TResult Function(ErorrDetails value) erorrDetails,
-    required TResult Function(LoadingPeinding value) loadingPeinding,
-    required TResult Function(SuccessPeinding value) successPeinding,
-    required TResult Function(ErorrPeinding value) erorrPeinding,
-    required TResult Function(UpdateStatus value) updateStatus,
-    required TResult Function(UpdatePayment value) updatePayment,
-    required TResult Function(UpdateType value) updateType,
-  }) {
-    return successDetails(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(Erorrdelete value)? erorrdelete,
-    TResult? Function(LoadingDetails value)? loadingDetails,
-    TResult? Function(SuccessDetails value)? successDetails,
-    TResult? Function(ErorrDetails value)? erorrDetails,
-    TResult? Function(LoadingPeinding value)? loadingPeinding,
-    TResult? Function(SuccessPeinding value)? successPeinding,
-    TResult? Function(ErorrPeinding value)? erorrPeinding,
-    TResult? Function(UpdateStatus value)? updateStatus,
-    TResult? Function(UpdatePayment value)? updatePayment,
-    TResult? Function(UpdateType value)? updateType,
-  }) {
-    return successDetails?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingGet value)? loadingGet,
-    TResult Function(SuccessGet value)? successGet,
-    TResult Function(ErorrGet value)? erorrGet,
-    TResult Function(LoadingDelete value)? loadingDelete,
-    TResult Function(Successdelete value)? successdelete,
-    TResult Function(Erorrdelete value)? erorrdelete,
-    TResult Function(LoadingDetails value)? loadingDetails,
-    TResult Function(SuccessDetails value)? successDetails,
-    TResult Function(ErorrDetails value)? erorrDetails,
-    TResult Function(LoadingPeinding value)? loadingPeinding,
-    TResult Function(SuccessPeinding value)? successPeinding,
-    TResult Function(ErorrPeinding value)? erorrPeinding,
-    TResult Function(UpdateStatus value)? updateStatus,
-    TResult Function(UpdatePayment value)? updatePayment,
-    TResult Function(UpdateType value)? updateType,
-    required TResult orElse(),
-  }) {
-    if (successDetails != null) {
-      return successDetails(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class SuccessDetails implements OrdersState {
-  const factory SuccessDetails(
-      {required final ResponseDetails responseDetails}) = _$SuccessDetailsImpl;
-
-  ResponseDetails get responseDetails;
-  @JsonKey(ignore: true)
-  _$$SuccessDetailsImplCopyWith<_$SuccessDetailsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$ErorrDetailsImplCopyWith<$Res> {
-  factory _$$ErorrDetailsImplCopyWith(
-          _$ErorrDetailsImpl value, $Res Function(_$ErorrDetailsImpl) then) =
-      __$$ErorrDetailsImplCopyWithImpl<$Res>;
+abstract mixin class $ErorrDetailsCopyWith<$Res>
+    implements $OrdersStateCopyWith<$Res> {
+  factory $ErorrDetailsCopyWith(
+          ErorrDetails value, $Res Function(ErorrDetails) _then) =
+      _$ErorrDetailsCopyWithImpl;
   @useResult
   $Res call({String erorr});
 }
 
 /// @nodoc
-class __$$ErorrDetailsImplCopyWithImpl<$Res>
-    extends _$OrdersStateCopyWithImpl<$Res, _$ErorrDetailsImpl>
-    implements _$$ErorrDetailsImplCopyWith<$Res> {
-  __$$ErorrDetailsImplCopyWithImpl(
-      _$ErorrDetailsImpl _value, $Res Function(_$ErorrDetailsImpl) _then)
-      : super(_value, _then);
+class _$ErorrDetailsCopyWithImpl<$Res> implements $ErorrDetailsCopyWith<$Res> {
+  _$ErorrDetailsCopyWithImpl(this._self, this._then);
 
+  final ErorrDetails _self;
+  final $Res Function(ErorrDetails) _then;
+
+  /// Create a copy of OrdersState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? erorr = null,
   }) {
-    return _then(_$ErorrDetailsImpl(
+    return _then(ErorrDetails(
       erorr: null == erorr
-          ? _value.erorr
+          ? _self.erorr
           : erorr // ignore: cast_nullable_to_non_nullable
               as String,
     ));
@@ -1994,402 +880,83 @@ class __$$ErorrDetailsImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErorrDetailsImpl implements ErorrDetails {
-  const _$ErorrDetailsImpl({required this.erorr});
-
-  @override
-  final String erorr;
-
-  @override
-  String toString() {
-    return 'OrdersState.erorrDetails(erorr: $erorr)';
-  }
+class LoadingPeinding implements OrdersState {
+  const LoadingPeinding();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ErorrDetailsImpl &&
-            (identical(other.erorr, erorr) || other.erorr == erorr));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, erorr);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ErorrDetailsImplCopyWith<_$ErorrDetailsImpl> get copyWith =>
-      __$$ErorrDetailsImplCopyWithImpl<_$ErorrDetailsImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseOrders orderResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrdelete,
-    required TResult Function() loadingDetails,
-    required TResult Function(ResponseDetails responseDetails) successDetails,
-    required TResult Function(String erorr) erorrDetails,
-    required TResult Function() loadingPeinding,
-    required TResult Function(PendingResponse pendingResponse) successPeinding,
-    required TResult Function(String erorr) erorrPeinding,
-    required TResult Function() updateStatus,
-    required TResult Function() updatePayment,
-    required TResult Function() updateType,
-  }) {
-    return erorrDetails(erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseOrders orderResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrdelete,
-    TResult? Function()? loadingDetails,
-    TResult? Function(ResponseDetails responseDetails)? successDetails,
-    TResult? Function(String erorr)? erorrDetails,
-    TResult? Function()? loadingPeinding,
-    TResult? Function(PendingResponse pendingResponse)? successPeinding,
-    TResult? Function(String erorr)? erorrPeinding,
-    TResult? Function()? updateStatus,
-    TResult? Function()? updatePayment,
-    TResult? Function()? updateType,
-  }) {
-    return erorrDetails?.call(erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseOrders orderResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrdelete,
-    TResult Function()? loadingDetails,
-    TResult Function(ResponseDetails responseDetails)? successDetails,
-    TResult Function(String erorr)? erorrDetails,
-    TResult Function()? loadingPeinding,
-    TResult Function(PendingResponse pendingResponse)? successPeinding,
-    TResult Function(String erorr)? erorrPeinding,
-    TResult Function()? updateStatus,
-    TResult Function()? updatePayment,
-    TResult Function()? updateType,
-    required TResult orElse(),
-  }) {
-    if (erorrDetails != null) {
-      return erorrDetails(erorr);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(Erorrdelete value) erorrdelete,
-    required TResult Function(LoadingDetails value) loadingDetails,
-    required TResult Function(SuccessDetails value) successDetails,
-    required TResult Function(ErorrDetails value) erorrDetails,
-    required TResult Function(LoadingPeinding value) loadingPeinding,
-    required TResult Function(SuccessPeinding value) successPeinding,
-    required TResult Function(ErorrPeinding value) erorrPeinding,
-    required TResult Function(UpdateStatus value) updateStatus,
-    required TResult Function(UpdatePayment value) updatePayment,
-    required TResult Function(UpdateType value) updateType,
-  }) {
-    return erorrDetails(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(Erorrdelete value)? erorrdelete,
-    TResult? Function(LoadingDetails value)? loadingDetails,
-    TResult? Function(SuccessDetails value)? successDetails,
-    TResult? Function(ErorrDetails value)? erorrDetails,
-    TResult? Function(LoadingPeinding value)? loadingPeinding,
-    TResult? Function(SuccessPeinding value)? successPeinding,
-    TResult? Function(ErorrPeinding value)? erorrPeinding,
-    TResult? Function(UpdateStatus value)? updateStatus,
-    TResult? Function(UpdatePayment value)? updatePayment,
-    TResult? Function(UpdateType value)? updateType,
-  }) {
-    return erorrDetails?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingGet value)? loadingGet,
-    TResult Function(SuccessGet value)? successGet,
-    TResult Function(ErorrGet value)? erorrGet,
-    TResult Function(LoadingDelete value)? loadingDelete,
-    TResult Function(Successdelete value)? successdelete,
-    TResult Function(Erorrdelete value)? erorrdelete,
-    TResult Function(LoadingDetails value)? loadingDetails,
-    TResult Function(SuccessDetails value)? successDetails,
-    TResult Function(ErorrDetails value)? erorrDetails,
-    TResult Function(LoadingPeinding value)? loadingPeinding,
-    TResult Function(SuccessPeinding value)? successPeinding,
-    TResult Function(ErorrPeinding value)? erorrPeinding,
-    TResult Function(UpdateStatus value)? updateStatus,
-    TResult Function(UpdatePayment value)? updatePayment,
-    TResult Function(UpdateType value)? updateType,
-    required TResult orElse(),
-  }) {
-    if (erorrDetails != null) {
-      return erorrDetails(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class ErorrDetails implements OrdersState {
-  const factory ErorrDetails({required final String erorr}) =
-      _$ErorrDetailsImpl;
-
-  String get erorr;
-  @JsonKey(ignore: true)
-  _$$ErorrDetailsImplCopyWith<_$ErorrDetailsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$LoadingPeindingImplCopyWith<$Res> {
-  factory _$$LoadingPeindingImplCopyWith(_$LoadingPeindingImpl value,
-          $Res Function(_$LoadingPeindingImpl) then) =
-      __$$LoadingPeindingImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$LoadingPeindingImplCopyWithImpl<$Res>
-    extends _$OrdersStateCopyWithImpl<$Res, _$LoadingPeindingImpl>
-    implements _$$LoadingPeindingImplCopyWith<$Res> {
-  __$$LoadingPeindingImplCopyWithImpl(
-      _$LoadingPeindingImpl _value, $Res Function(_$LoadingPeindingImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$LoadingPeindingImpl implements LoadingPeinding {
-  const _$LoadingPeindingImpl();
-
-  @override
-  String toString() {
-    return 'OrdersState.loadingPeinding()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingPeindingImpl);
+        (other.runtimeType == runtimeType && other is LoadingPeinding);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseOrders orderResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrdelete,
-    required TResult Function() loadingDetails,
-    required TResult Function(ResponseDetails responseDetails) successDetails,
-    required TResult Function(String erorr) erorrDetails,
-    required TResult Function() loadingPeinding,
-    required TResult Function(PendingResponse pendingResponse) successPeinding,
-    required TResult Function(String erorr) erorrPeinding,
-    required TResult Function() updateStatus,
-    required TResult Function() updatePayment,
-    required TResult Function() updateType,
-  }) {
-    return loadingPeinding();
+  String toString() {
+    return 'OrdersState.loadingPeinding()';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseOrders orderResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrdelete,
-    TResult? Function()? loadingDetails,
-    TResult? Function(ResponseDetails responseDetails)? successDetails,
-    TResult? Function(String erorr)? erorrDetails,
-    TResult? Function()? loadingPeinding,
-    TResult? Function(PendingResponse pendingResponse)? successPeinding,
-    TResult? Function(String erorr)? erorrPeinding,
-    TResult? Function()? updateStatus,
-    TResult? Function()? updatePayment,
-    TResult? Function()? updateType,
-  }) {
-    return loadingPeinding?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseOrders orderResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrdelete,
-    TResult Function()? loadingDetails,
-    TResult Function(ResponseDetails responseDetails)? successDetails,
-    TResult Function(String erorr)? erorrDetails,
-    TResult Function()? loadingPeinding,
-    TResult Function(PendingResponse pendingResponse)? successPeinding,
-    TResult Function(String erorr)? erorrPeinding,
-    TResult Function()? updateStatus,
-    TResult Function()? updatePayment,
-    TResult Function()? updateType,
-    required TResult orElse(),
-  }) {
-    if (loadingPeinding != null) {
-      return loadingPeinding();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(Erorrdelete value) erorrdelete,
-    required TResult Function(LoadingDetails value) loadingDetails,
-    required TResult Function(SuccessDetails value) successDetails,
-    required TResult Function(ErorrDetails value) erorrDetails,
-    required TResult Function(LoadingPeinding value) loadingPeinding,
-    required TResult Function(SuccessPeinding value) successPeinding,
-    required TResult Function(ErorrPeinding value) erorrPeinding,
-    required TResult Function(UpdateStatus value) updateStatus,
-    required TResult Function(UpdatePayment value) updatePayment,
-    required TResult Function(UpdateType value) updateType,
-  }) {
-    return loadingPeinding(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(Erorrdelete value)? erorrdelete,
-    TResult? Function(LoadingDetails value)? loadingDetails,
-    TResult? Function(SuccessDetails value)? successDetails,
-    TResult? Function(ErorrDetails value)? erorrDetails,
-    TResult? Function(LoadingPeinding value)? loadingPeinding,
-    TResult? Function(SuccessPeinding value)? successPeinding,
-    TResult? Function(ErorrPeinding value)? erorrPeinding,
-    TResult? Function(UpdateStatus value)? updateStatus,
-    TResult? Function(UpdatePayment value)? updatePayment,
-    TResult? Function(UpdateType value)? updateType,
-  }) {
-    return loadingPeinding?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingGet value)? loadingGet,
-    TResult Function(SuccessGet value)? successGet,
-    TResult Function(ErorrGet value)? erorrGet,
-    TResult Function(LoadingDelete value)? loadingDelete,
-    TResult Function(Successdelete value)? successdelete,
-    TResult Function(Erorrdelete value)? erorrdelete,
-    TResult Function(LoadingDetails value)? loadingDetails,
-    TResult Function(SuccessDetails value)? successDetails,
-    TResult Function(ErorrDetails value)? erorrDetails,
-    TResult Function(LoadingPeinding value)? loadingPeinding,
-    TResult Function(SuccessPeinding value)? successPeinding,
-    TResult Function(ErorrPeinding value)? erorrPeinding,
-    TResult Function(UpdateStatus value)? updateStatus,
-    TResult Function(UpdatePayment value)? updatePayment,
-    TResult Function(UpdateType value)? updateType,
-    required TResult orElse(),
-  }) {
-    if (loadingPeinding != null) {
-      return loadingPeinding(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class LoadingPeinding implements OrdersState {
-  const factory LoadingPeinding() = _$LoadingPeindingImpl;
 }
 
 /// @nodoc
-abstract class _$$SuccessPeindingImplCopyWith<$Res> {
-  factory _$$SuccessPeindingImplCopyWith(_$SuccessPeindingImpl value,
-          $Res Function(_$SuccessPeindingImpl) then) =
-      __$$SuccessPeindingImplCopyWithImpl<$Res>;
+
+class SuccessPeinding implements OrdersState {
+  const SuccessPeinding(this.pendingResponse);
+
+  final PendingResponse pendingResponse;
+
+  /// Create a copy of OrdersState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SuccessPeindingCopyWith<SuccessPeinding> get copyWith =>
+      _$SuccessPeindingCopyWithImpl<SuccessPeinding>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is SuccessPeinding &&
+            (identical(other.pendingResponse, pendingResponse) ||
+                other.pendingResponse == pendingResponse));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, pendingResponse);
+
+  @override
+  String toString() {
+    return 'OrdersState.successPeinding(pendingResponse: $pendingResponse)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $SuccessPeindingCopyWith<$Res>
+    implements $OrdersStateCopyWith<$Res> {
+  factory $SuccessPeindingCopyWith(
+          SuccessPeinding value, $Res Function(SuccessPeinding) _then) =
+      _$SuccessPeindingCopyWithImpl;
   @useResult
   $Res call({PendingResponse pendingResponse});
 }
 
 /// @nodoc
-class __$$SuccessPeindingImplCopyWithImpl<$Res>
-    extends _$OrdersStateCopyWithImpl<$Res, _$SuccessPeindingImpl>
-    implements _$$SuccessPeindingImplCopyWith<$Res> {
-  __$$SuccessPeindingImplCopyWithImpl(
-      _$SuccessPeindingImpl _value, $Res Function(_$SuccessPeindingImpl) _then)
-      : super(_value, _then);
+class _$SuccessPeindingCopyWithImpl<$Res>
+    implements $SuccessPeindingCopyWith<$Res> {
+  _$SuccessPeindingCopyWithImpl(this._self, this._then);
 
+  final SuccessPeinding _self;
+  final $Res Function(SuccessPeinding) _then;
+
+  /// Create a copy of OrdersState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? pendingResponse = null,
   }) {
-    return _then(_$SuccessPeindingImpl(
+    return _then(SuccessPeinding(
       null == pendingResponse
-          ? _value.pendingResponse
+          ? _self.pendingResponse
           : pendingResponse // ignore: cast_nullable_to_non_nullable
               as PendingResponse,
     ));
@@ -2398,218 +965,62 @@ class __$$SuccessPeindingImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SuccessPeindingImpl implements SuccessPeinding {
-  const _$SuccessPeindingImpl(this.pendingResponse);
+class ErorrPeinding implements OrdersState {
+  const ErorrPeinding({required this.erorr});
 
-  @override
-  final PendingResponse pendingResponse;
+  final String erorr;
 
-  @override
-  String toString() {
-    return 'OrdersState.successPeinding(pendingResponse: $pendingResponse)';
-  }
+  /// Create a copy of OrdersState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ErorrPeindingCopyWith<ErorrPeinding> get copyWith =>
+      _$ErorrPeindingCopyWithImpl<ErorrPeinding>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SuccessPeindingImpl &&
-            (identical(other.pendingResponse, pendingResponse) ||
-                other.pendingResponse == pendingResponse));
+            other is ErorrPeinding &&
+            (identical(other.erorr, erorr) || other.erorr == erorr));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, pendingResponse);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SuccessPeindingImplCopyWith<_$SuccessPeindingImpl> get copyWith =>
-      __$$SuccessPeindingImplCopyWithImpl<_$SuccessPeindingImpl>(
-          this, _$identity);
+  int get hashCode => Object.hash(runtimeType, erorr);
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseOrders orderResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrdelete,
-    required TResult Function() loadingDetails,
-    required TResult Function(ResponseDetails responseDetails) successDetails,
-    required TResult Function(String erorr) erorrDetails,
-    required TResult Function() loadingPeinding,
-    required TResult Function(PendingResponse pendingResponse) successPeinding,
-    required TResult Function(String erorr) erorrPeinding,
-    required TResult Function() updateStatus,
-    required TResult Function() updatePayment,
-    required TResult Function() updateType,
-  }) {
-    return successPeinding(pendingResponse);
+  String toString() {
+    return 'OrdersState.erorrPeinding(erorr: $erorr)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseOrders orderResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrdelete,
-    TResult? Function()? loadingDetails,
-    TResult? Function(ResponseDetails responseDetails)? successDetails,
-    TResult? Function(String erorr)? erorrDetails,
-    TResult? Function()? loadingPeinding,
-    TResult? Function(PendingResponse pendingResponse)? successPeinding,
-    TResult? Function(String erorr)? erorrPeinding,
-    TResult? Function()? updateStatus,
-    TResult? Function()? updatePayment,
-    TResult? Function()? updateType,
-  }) {
-    return successPeinding?.call(pendingResponse);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseOrders orderResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrdelete,
-    TResult Function()? loadingDetails,
-    TResult Function(ResponseDetails responseDetails)? successDetails,
-    TResult Function(String erorr)? erorrDetails,
-    TResult Function()? loadingPeinding,
-    TResult Function(PendingResponse pendingResponse)? successPeinding,
-    TResult Function(String erorr)? erorrPeinding,
-    TResult Function()? updateStatus,
-    TResult Function()? updatePayment,
-    TResult Function()? updateType,
-    required TResult orElse(),
-  }) {
-    if (successPeinding != null) {
-      return successPeinding(pendingResponse);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(Erorrdelete value) erorrdelete,
-    required TResult Function(LoadingDetails value) loadingDetails,
-    required TResult Function(SuccessDetails value) successDetails,
-    required TResult Function(ErorrDetails value) erorrDetails,
-    required TResult Function(LoadingPeinding value) loadingPeinding,
-    required TResult Function(SuccessPeinding value) successPeinding,
-    required TResult Function(ErorrPeinding value) erorrPeinding,
-    required TResult Function(UpdateStatus value) updateStatus,
-    required TResult Function(UpdatePayment value) updatePayment,
-    required TResult Function(UpdateType value) updateType,
-  }) {
-    return successPeinding(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(Erorrdelete value)? erorrdelete,
-    TResult? Function(LoadingDetails value)? loadingDetails,
-    TResult? Function(SuccessDetails value)? successDetails,
-    TResult? Function(ErorrDetails value)? erorrDetails,
-    TResult? Function(LoadingPeinding value)? loadingPeinding,
-    TResult? Function(SuccessPeinding value)? successPeinding,
-    TResult? Function(ErorrPeinding value)? erorrPeinding,
-    TResult? Function(UpdateStatus value)? updateStatus,
-    TResult? Function(UpdatePayment value)? updatePayment,
-    TResult? Function(UpdateType value)? updateType,
-  }) {
-    return successPeinding?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingGet value)? loadingGet,
-    TResult Function(SuccessGet value)? successGet,
-    TResult Function(ErorrGet value)? erorrGet,
-    TResult Function(LoadingDelete value)? loadingDelete,
-    TResult Function(Successdelete value)? successdelete,
-    TResult Function(Erorrdelete value)? erorrdelete,
-    TResult Function(LoadingDetails value)? loadingDetails,
-    TResult Function(SuccessDetails value)? successDetails,
-    TResult Function(ErorrDetails value)? erorrDetails,
-    TResult Function(LoadingPeinding value)? loadingPeinding,
-    TResult Function(SuccessPeinding value)? successPeinding,
-    TResult Function(ErorrPeinding value)? erorrPeinding,
-    TResult Function(UpdateStatus value)? updateStatus,
-    TResult Function(UpdatePayment value)? updatePayment,
-    TResult Function(UpdateType value)? updateType,
-    required TResult orElse(),
-  }) {
-    if (successPeinding != null) {
-      return successPeinding(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class SuccessPeinding implements OrdersState {
-  const factory SuccessPeinding(final PendingResponse pendingResponse) =
-      _$SuccessPeindingImpl;
-
-  PendingResponse get pendingResponse;
-  @JsonKey(ignore: true)
-  _$$SuccessPeindingImplCopyWith<_$SuccessPeindingImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$ErorrPeindingImplCopyWith<$Res> {
-  factory _$$ErorrPeindingImplCopyWith(
-          _$ErorrPeindingImpl value, $Res Function(_$ErorrPeindingImpl) then) =
-      __$$ErorrPeindingImplCopyWithImpl<$Res>;
+abstract mixin class $ErorrPeindingCopyWith<$Res>
+    implements $OrdersStateCopyWith<$Res> {
+  factory $ErorrPeindingCopyWith(
+          ErorrPeinding value, $Res Function(ErorrPeinding) _then) =
+      _$ErorrPeindingCopyWithImpl;
   @useResult
   $Res call({String erorr});
 }
 
 /// @nodoc
-class __$$ErorrPeindingImplCopyWithImpl<$Res>
-    extends _$OrdersStateCopyWithImpl<$Res, _$ErorrPeindingImpl>
-    implements _$$ErorrPeindingImplCopyWith<$Res> {
-  __$$ErorrPeindingImplCopyWithImpl(
-      _$ErorrPeindingImpl _value, $Res Function(_$ErorrPeindingImpl) _then)
-      : super(_value, _then);
+class _$ErorrPeindingCopyWithImpl<$Res>
+    implements $ErorrPeindingCopyWith<$Res> {
+  _$ErorrPeindingCopyWithImpl(this._self, this._then);
 
+  final ErorrPeinding _self;
+  final $Res Function(ErorrPeinding) _then;
+
+  /// Create a copy of OrdersState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? erorr = null,
   }) {
-    return _then(_$ErorrPeindingImpl(
+    return _then(ErorrPeinding(
       erorr: null == erorr
-          ? _value.erorr
+          ? _self.erorr
           : erorr // ignore: cast_nullable_to_non_nullable
               as String,
     ));
@@ -2618,745 +1029,62 @@ class __$$ErorrPeindingImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErorrPeindingImpl implements ErorrPeinding {
-  const _$ErorrPeindingImpl({required this.erorr});
-
-  @override
-  final String erorr;
-
-  @override
-  String toString() {
-    return 'OrdersState.erorrPeinding(erorr: $erorr)';
-  }
+class UpdateStatus implements OrdersState {
+  const UpdateStatus();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ErorrPeindingImpl &&
-            (identical(other.erorr, erorr) || other.erorr == erorr));
+        (other.runtimeType == runtimeType && other is UpdateStatus);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, erorr);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ErorrPeindingImplCopyWith<_$ErorrPeindingImpl> get copyWith =>
-      __$$ErorrPeindingImplCopyWithImpl<_$ErorrPeindingImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseOrders orderResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrdelete,
-    required TResult Function() loadingDetails,
-    required TResult Function(ResponseDetails responseDetails) successDetails,
-    required TResult Function(String erorr) erorrDetails,
-    required TResult Function() loadingPeinding,
-    required TResult Function(PendingResponse pendingResponse) successPeinding,
-    required TResult Function(String erorr) erorrPeinding,
-    required TResult Function() updateStatus,
-    required TResult Function() updatePayment,
-    required TResult Function() updateType,
-  }) {
-    return erorrPeinding(erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseOrders orderResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrdelete,
-    TResult? Function()? loadingDetails,
-    TResult? Function(ResponseDetails responseDetails)? successDetails,
-    TResult? Function(String erorr)? erorrDetails,
-    TResult? Function()? loadingPeinding,
-    TResult? Function(PendingResponse pendingResponse)? successPeinding,
-    TResult? Function(String erorr)? erorrPeinding,
-    TResult? Function()? updateStatus,
-    TResult? Function()? updatePayment,
-    TResult? Function()? updateType,
-  }) {
-    return erorrPeinding?.call(erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseOrders orderResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrdelete,
-    TResult Function()? loadingDetails,
-    TResult Function(ResponseDetails responseDetails)? successDetails,
-    TResult Function(String erorr)? erorrDetails,
-    TResult Function()? loadingPeinding,
-    TResult Function(PendingResponse pendingResponse)? successPeinding,
-    TResult Function(String erorr)? erorrPeinding,
-    TResult Function()? updateStatus,
-    TResult Function()? updatePayment,
-    TResult Function()? updateType,
-    required TResult orElse(),
-  }) {
-    if (erorrPeinding != null) {
-      return erorrPeinding(erorr);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(Erorrdelete value) erorrdelete,
-    required TResult Function(LoadingDetails value) loadingDetails,
-    required TResult Function(SuccessDetails value) successDetails,
-    required TResult Function(ErorrDetails value) erorrDetails,
-    required TResult Function(LoadingPeinding value) loadingPeinding,
-    required TResult Function(SuccessPeinding value) successPeinding,
-    required TResult Function(ErorrPeinding value) erorrPeinding,
-    required TResult Function(UpdateStatus value) updateStatus,
-    required TResult Function(UpdatePayment value) updatePayment,
-    required TResult Function(UpdateType value) updateType,
-  }) {
-    return erorrPeinding(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(Erorrdelete value)? erorrdelete,
-    TResult? Function(LoadingDetails value)? loadingDetails,
-    TResult? Function(SuccessDetails value)? successDetails,
-    TResult? Function(ErorrDetails value)? erorrDetails,
-    TResult? Function(LoadingPeinding value)? loadingPeinding,
-    TResult? Function(SuccessPeinding value)? successPeinding,
-    TResult? Function(ErorrPeinding value)? erorrPeinding,
-    TResult? Function(UpdateStatus value)? updateStatus,
-    TResult? Function(UpdatePayment value)? updatePayment,
-    TResult? Function(UpdateType value)? updateType,
-  }) {
-    return erorrPeinding?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingGet value)? loadingGet,
-    TResult Function(SuccessGet value)? successGet,
-    TResult Function(ErorrGet value)? erorrGet,
-    TResult Function(LoadingDelete value)? loadingDelete,
-    TResult Function(Successdelete value)? successdelete,
-    TResult Function(Erorrdelete value)? erorrdelete,
-    TResult Function(LoadingDetails value)? loadingDetails,
-    TResult Function(SuccessDetails value)? successDetails,
-    TResult Function(ErorrDetails value)? erorrDetails,
-    TResult Function(LoadingPeinding value)? loadingPeinding,
-    TResult Function(SuccessPeinding value)? successPeinding,
-    TResult Function(ErorrPeinding value)? erorrPeinding,
-    TResult Function(UpdateStatus value)? updateStatus,
-    TResult Function(UpdatePayment value)? updatePayment,
-    TResult Function(UpdateType value)? updateType,
-    required TResult orElse(),
-  }) {
-    if (erorrPeinding != null) {
-      return erorrPeinding(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class ErorrPeinding implements OrdersState {
-  const factory ErorrPeinding({required final String erorr}) =
-      _$ErorrPeindingImpl;
-
-  String get erorr;
-  @JsonKey(ignore: true)
-  _$$ErorrPeindingImplCopyWith<_$ErorrPeindingImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$UpdateStatusImplCopyWith<$Res> {
-  factory _$$UpdateStatusImplCopyWith(
-          _$UpdateStatusImpl value, $Res Function(_$UpdateStatusImpl) then) =
-      __$$UpdateStatusImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$UpdateStatusImplCopyWithImpl<$Res>
-    extends _$OrdersStateCopyWithImpl<$Res, _$UpdateStatusImpl>
-    implements _$$UpdateStatusImplCopyWith<$Res> {
-  __$$UpdateStatusImplCopyWithImpl(
-      _$UpdateStatusImpl _value, $Res Function(_$UpdateStatusImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$UpdateStatusImpl implements UpdateStatus {
-  const _$UpdateStatusImpl();
+  int get hashCode => runtimeType.hashCode;
 
   @override
   String toString() {
     return 'OrdersState.updateStatus()';
   }
+}
+
+/// @nodoc
+
+class UpdatePayment implements OrdersState {
+  const UpdatePayment();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$UpdateStatusImpl);
+        (other.runtimeType == runtimeType && other is UpdatePayment);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseOrders orderResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrdelete,
-    required TResult Function() loadingDetails,
-    required TResult Function(ResponseDetails responseDetails) successDetails,
-    required TResult Function(String erorr) erorrDetails,
-    required TResult Function() loadingPeinding,
-    required TResult Function(PendingResponse pendingResponse) successPeinding,
-    required TResult Function(String erorr) erorrPeinding,
-    required TResult Function() updateStatus,
-    required TResult Function() updatePayment,
-    required TResult Function() updateType,
-  }) {
-    return updateStatus();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseOrders orderResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrdelete,
-    TResult? Function()? loadingDetails,
-    TResult? Function(ResponseDetails responseDetails)? successDetails,
-    TResult? Function(String erorr)? erorrDetails,
-    TResult? Function()? loadingPeinding,
-    TResult? Function(PendingResponse pendingResponse)? successPeinding,
-    TResult? Function(String erorr)? erorrPeinding,
-    TResult? Function()? updateStatus,
-    TResult? Function()? updatePayment,
-    TResult? Function()? updateType,
-  }) {
-    return updateStatus?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseOrders orderResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrdelete,
-    TResult Function()? loadingDetails,
-    TResult Function(ResponseDetails responseDetails)? successDetails,
-    TResult Function(String erorr)? erorrDetails,
-    TResult Function()? loadingPeinding,
-    TResult Function(PendingResponse pendingResponse)? successPeinding,
-    TResult Function(String erorr)? erorrPeinding,
-    TResult Function()? updateStatus,
-    TResult Function()? updatePayment,
-    TResult Function()? updateType,
-    required TResult orElse(),
-  }) {
-    if (updateStatus != null) {
-      return updateStatus();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(Erorrdelete value) erorrdelete,
-    required TResult Function(LoadingDetails value) loadingDetails,
-    required TResult Function(SuccessDetails value) successDetails,
-    required TResult Function(ErorrDetails value) erorrDetails,
-    required TResult Function(LoadingPeinding value) loadingPeinding,
-    required TResult Function(SuccessPeinding value) successPeinding,
-    required TResult Function(ErorrPeinding value) erorrPeinding,
-    required TResult Function(UpdateStatus value) updateStatus,
-    required TResult Function(UpdatePayment value) updatePayment,
-    required TResult Function(UpdateType value) updateType,
-  }) {
-    return updateStatus(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(Erorrdelete value)? erorrdelete,
-    TResult? Function(LoadingDetails value)? loadingDetails,
-    TResult? Function(SuccessDetails value)? successDetails,
-    TResult? Function(ErorrDetails value)? erorrDetails,
-    TResult? Function(LoadingPeinding value)? loadingPeinding,
-    TResult? Function(SuccessPeinding value)? successPeinding,
-    TResult? Function(ErorrPeinding value)? erorrPeinding,
-    TResult? Function(UpdateStatus value)? updateStatus,
-    TResult? Function(UpdatePayment value)? updatePayment,
-    TResult? Function(UpdateType value)? updateType,
-  }) {
-    return updateStatus?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingGet value)? loadingGet,
-    TResult Function(SuccessGet value)? successGet,
-    TResult Function(ErorrGet value)? erorrGet,
-    TResult Function(LoadingDelete value)? loadingDelete,
-    TResult Function(Successdelete value)? successdelete,
-    TResult Function(Erorrdelete value)? erorrdelete,
-    TResult Function(LoadingDetails value)? loadingDetails,
-    TResult Function(SuccessDetails value)? successDetails,
-    TResult Function(ErorrDetails value)? erorrDetails,
-    TResult Function(LoadingPeinding value)? loadingPeinding,
-    TResult Function(SuccessPeinding value)? successPeinding,
-    TResult Function(ErorrPeinding value)? erorrPeinding,
-    TResult Function(UpdateStatus value)? updateStatus,
-    TResult Function(UpdatePayment value)? updatePayment,
-    TResult Function(UpdateType value)? updateType,
-    required TResult orElse(),
-  }) {
-    if (updateStatus != null) {
-      return updateStatus(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class UpdateStatus implements OrdersState {
-  const factory UpdateStatus() = _$UpdateStatusImpl;
-}
-
-/// @nodoc
-abstract class _$$UpdatePaymentImplCopyWith<$Res> {
-  factory _$$UpdatePaymentImplCopyWith(
-          _$UpdatePaymentImpl value, $Res Function(_$UpdatePaymentImpl) then) =
-      __$$UpdatePaymentImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$UpdatePaymentImplCopyWithImpl<$Res>
-    extends _$OrdersStateCopyWithImpl<$Res, _$UpdatePaymentImpl>
-    implements _$$UpdatePaymentImplCopyWith<$Res> {
-  __$$UpdatePaymentImplCopyWithImpl(
-      _$UpdatePaymentImpl _value, $Res Function(_$UpdatePaymentImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$UpdatePaymentImpl implements UpdatePayment {
-  const _$UpdatePaymentImpl();
 
   @override
   String toString() {
     return 'OrdersState.updatePayment()';
   }
+}
+
+/// @nodoc
+
+class UpdateType implements OrdersState {
+  const UpdateType();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$UpdatePaymentImpl);
+        (other.runtimeType == runtimeType && other is UpdateType);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseOrders orderResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrdelete,
-    required TResult Function() loadingDetails,
-    required TResult Function(ResponseDetails responseDetails) successDetails,
-    required TResult Function(String erorr) erorrDetails,
-    required TResult Function() loadingPeinding,
-    required TResult Function(PendingResponse pendingResponse) successPeinding,
-    required TResult Function(String erorr) erorrPeinding,
-    required TResult Function() updateStatus,
-    required TResult Function() updatePayment,
-    required TResult Function() updateType,
-  }) {
-    return updatePayment();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseOrders orderResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrdelete,
-    TResult? Function()? loadingDetails,
-    TResult? Function(ResponseDetails responseDetails)? successDetails,
-    TResult? Function(String erorr)? erorrDetails,
-    TResult? Function()? loadingPeinding,
-    TResult? Function(PendingResponse pendingResponse)? successPeinding,
-    TResult? Function(String erorr)? erorrPeinding,
-    TResult? Function()? updateStatus,
-    TResult? Function()? updatePayment,
-    TResult? Function()? updateType,
-  }) {
-    return updatePayment?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseOrders orderResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrdelete,
-    TResult Function()? loadingDetails,
-    TResult Function(ResponseDetails responseDetails)? successDetails,
-    TResult Function(String erorr)? erorrDetails,
-    TResult Function()? loadingPeinding,
-    TResult Function(PendingResponse pendingResponse)? successPeinding,
-    TResult Function(String erorr)? erorrPeinding,
-    TResult Function()? updateStatus,
-    TResult Function()? updatePayment,
-    TResult Function()? updateType,
-    required TResult orElse(),
-  }) {
-    if (updatePayment != null) {
-      return updatePayment();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(Erorrdelete value) erorrdelete,
-    required TResult Function(LoadingDetails value) loadingDetails,
-    required TResult Function(SuccessDetails value) successDetails,
-    required TResult Function(ErorrDetails value) erorrDetails,
-    required TResult Function(LoadingPeinding value) loadingPeinding,
-    required TResult Function(SuccessPeinding value) successPeinding,
-    required TResult Function(ErorrPeinding value) erorrPeinding,
-    required TResult Function(UpdateStatus value) updateStatus,
-    required TResult Function(UpdatePayment value) updatePayment,
-    required TResult Function(UpdateType value) updateType,
-  }) {
-    return updatePayment(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(Erorrdelete value)? erorrdelete,
-    TResult? Function(LoadingDetails value)? loadingDetails,
-    TResult? Function(SuccessDetails value)? successDetails,
-    TResult? Function(ErorrDetails value)? erorrDetails,
-    TResult? Function(LoadingPeinding value)? loadingPeinding,
-    TResult? Function(SuccessPeinding value)? successPeinding,
-    TResult? Function(ErorrPeinding value)? erorrPeinding,
-    TResult? Function(UpdateStatus value)? updateStatus,
-    TResult? Function(UpdatePayment value)? updatePayment,
-    TResult? Function(UpdateType value)? updateType,
-  }) {
-    return updatePayment?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingGet value)? loadingGet,
-    TResult Function(SuccessGet value)? successGet,
-    TResult Function(ErorrGet value)? erorrGet,
-    TResult Function(LoadingDelete value)? loadingDelete,
-    TResult Function(Successdelete value)? successdelete,
-    TResult Function(Erorrdelete value)? erorrdelete,
-    TResult Function(LoadingDetails value)? loadingDetails,
-    TResult Function(SuccessDetails value)? successDetails,
-    TResult Function(ErorrDetails value)? erorrDetails,
-    TResult Function(LoadingPeinding value)? loadingPeinding,
-    TResult Function(SuccessPeinding value)? successPeinding,
-    TResult Function(ErorrPeinding value)? erorrPeinding,
-    TResult Function(UpdateStatus value)? updateStatus,
-    TResult Function(UpdatePayment value)? updatePayment,
-    TResult Function(UpdateType value)? updateType,
-    required TResult orElse(),
-  }) {
-    if (updatePayment != null) {
-      return updatePayment(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class UpdatePayment implements OrdersState {
-  const factory UpdatePayment() = _$UpdatePaymentImpl;
-}
-
-/// @nodoc
-abstract class _$$UpdateTypeImplCopyWith<$Res> {
-  factory _$$UpdateTypeImplCopyWith(
-          _$UpdateTypeImpl value, $Res Function(_$UpdateTypeImpl) then) =
-      __$$UpdateTypeImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$UpdateTypeImplCopyWithImpl<$Res>
-    extends _$OrdersStateCopyWithImpl<$Res, _$UpdateTypeImpl>
-    implements _$$UpdateTypeImplCopyWith<$Res> {
-  __$$UpdateTypeImplCopyWithImpl(
-      _$UpdateTypeImpl _value, $Res Function(_$UpdateTypeImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$UpdateTypeImpl implements UpdateType {
-  const _$UpdateTypeImpl();
 
   @override
   String toString() {
     return 'OrdersState.updateType()';
   }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$UpdateTypeImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingGet,
-    required TResult Function(ResponseOrders orderResponse) successGet,
-    required TResult Function(String erorr) erorrGet,
-    required TResult Function() loadingDelete,
-    required TResult Function() successdelete,
-    required TResult Function(String erorr) erorrdelete,
-    required TResult Function() loadingDetails,
-    required TResult Function(ResponseDetails responseDetails) successDetails,
-    required TResult Function(String erorr) erorrDetails,
-    required TResult Function() loadingPeinding,
-    required TResult Function(PendingResponse pendingResponse) successPeinding,
-    required TResult Function(String erorr) erorrPeinding,
-    required TResult Function() updateStatus,
-    required TResult Function() updatePayment,
-    required TResult Function() updateType,
-  }) {
-    return updateType();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingGet,
-    TResult? Function(ResponseOrders orderResponse)? successGet,
-    TResult? Function(String erorr)? erorrGet,
-    TResult? Function()? loadingDelete,
-    TResult? Function()? successdelete,
-    TResult? Function(String erorr)? erorrdelete,
-    TResult? Function()? loadingDetails,
-    TResult? Function(ResponseDetails responseDetails)? successDetails,
-    TResult? Function(String erorr)? erorrDetails,
-    TResult? Function()? loadingPeinding,
-    TResult? Function(PendingResponse pendingResponse)? successPeinding,
-    TResult? Function(String erorr)? erorrPeinding,
-    TResult? Function()? updateStatus,
-    TResult? Function()? updatePayment,
-    TResult? Function()? updateType,
-  }) {
-    return updateType?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingGet,
-    TResult Function(ResponseOrders orderResponse)? successGet,
-    TResult Function(String erorr)? erorrGet,
-    TResult Function()? loadingDelete,
-    TResult Function()? successdelete,
-    TResult Function(String erorr)? erorrdelete,
-    TResult Function()? loadingDetails,
-    TResult Function(ResponseDetails responseDetails)? successDetails,
-    TResult Function(String erorr)? erorrDetails,
-    TResult Function()? loadingPeinding,
-    TResult Function(PendingResponse pendingResponse)? successPeinding,
-    TResult Function(String erorr)? erorrPeinding,
-    TResult Function()? updateStatus,
-    TResult Function()? updatePayment,
-    TResult Function()? updateType,
-    required TResult orElse(),
-  }) {
-    if (updateType != null) {
-      return updateType();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingGet value) loadingGet,
-    required TResult Function(SuccessGet value) successGet,
-    required TResult Function(ErorrGet value) erorrGet,
-    required TResult Function(LoadingDelete value) loadingDelete,
-    required TResult Function(Successdelete value) successdelete,
-    required TResult Function(Erorrdelete value) erorrdelete,
-    required TResult Function(LoadingDetails value) loadingDetails,
-    required TResult Function(SuccessDetails value) successDetails,
-    required TResult Function(ErorrDetails value) erorrDetails,
-    required TResult Function(LoadingPeinding value) loadingPeinding,
-    required TResult Function(SuccessPeinding value) successPeinding,
-    required TResult Function(ErorrPeinding value) erorrPeinding,
-    required TResult Function(UpdateStatus value) updateStatus,
-    required TResult Function(UpdatePayment value) updatePayment,
-    required TResult Function(UpdateType value) updateType,
-  }) {
-    return updateType(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingGet value)? loadingGet,
-    TResult? Function(SuccessGet value)? successGet,
-    TResult? Function(ErorrGet value)? erorrGet,
-    TResult? Function(LoadingDelete value)? loadingDelete,
-    TResult? Function(Successdelete value)? successdelete,
-    TResult? Function(Erorrdelete value)? erorrdelete,
-    TResult? Function(LoadingDetails value)? loadingDetails,
-    TResult? Function(SuccessDetails value)? successDetails,
-    TResult? Function(ErorrDetails value)? erorrDetails,
-    TResult? Function(LoadingPeinding value)? loadingPeinding,
-    TResult? Function(SuccessPeinding value)? successPeinding,
-    TResult? Function(ErorrPeinding value)? erorrPeinding,
-    TResult? Function(UpdateStatus value)? updateStatus,
-    TResult? Function(UpdatePayment value)? updatePayment,
-    TResult? Function(UpdateType value)? updateType,
-  }) {
-    return updateType?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingGet value)? loadingGet,
-    TResult Function(SuccessGet value)? successGet,
-    TResult Function(ErorrGet value)? erorrGet,
-    TResult Function(LoadingDelete value)? loadingDelete,
-    TResult Function(Successdelete value)? successdelete,
-    TResult Function(Erorrdelete value)? erorrdelete,
-    TResult Function(LoadingDetails value)? loadingDetails,
-    TResult Function(SuccessDetails value)? successDetails,
-    TResult Function(ErorrDetails value)? erorrDetails,
-    TResult Function(LoadingPeinding value)? loadingPeinding,
-    TResult Function(SuccessPeinding value)? successPeinding,
-    TResult Function(ErorrPeinding value)? erorrPeinding,
-    TResult Function(UpdateStatus value)? updateStatus,
-    TResult Function(UpdatePayment value)? updatePayment,
-    TResult Function(UpdateType value)? updateType,
-    required TResult orElse(),
-  }) {
-    if (updateType != null) {
-      return updateType(this);
-    }
-    return orElse();
-  }
 }
 
-abstract class UpdateType implements OrdersState {
-  const factory UpdateType() = _$UpdateTypeImpl;
-}
+// dart format on

@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:ecommerce_user/future/archive/data/repo.dart';
 import 'package:flutter/material.dart';
+import 'package:ecommerce_user/core/networking/api_result.dart';
 
 import 'archive_state.dart';
 
@@ -15,7 +16,7 @@ class ArchiveCubit extends Cubit<ArchiveState> {
     response.when(success: (responsehome) {
       emit(ArchiveState.success(pendingResponse: responsehome));
     }, failure: (error) {
-      emit(ArchiveState.erorr(erorr: error.apiErrorModel.messege ?? ''));
+      emit(ArchiveState.erorr(erorr: error.messege ?? ''));
     });
   }
 
@@ -26,7 +27,7 @@ class ArchiveCubit extends Cubit<ArchiveState> {
     response.when(success: (responsehome) {
       emit(const ArchiveState.successRating());
     }, failure: (error) {
-      emit(ArchiveState.erorrRating(erorr: error.apiErrorModel.messege ?? ''));
+      emit(ArchiveState.erorrRating(erorr: error.messege ?? ''));
     });
   }
 }

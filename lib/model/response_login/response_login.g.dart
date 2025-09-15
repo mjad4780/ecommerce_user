@@ -9,6 +9,7 @@ part of 'response_login.dart';
 ResponseLogin _$ResponseLoginFromJson(Map<String, dynamic> json) =>
     ResponseLogin(
       status: json['status'] as String?,
+      messege: json['messege'] as String?,
       data: json['data'] == null
           ? null
           : Data.fromJson(json['data'] as Map<String, dynamic>),

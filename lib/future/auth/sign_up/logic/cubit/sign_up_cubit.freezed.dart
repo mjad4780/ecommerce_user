@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,59 +9,45 @@ part of 'sign_up_cubit.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$SignUpState {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() laoding,
-    required TResult Function() success,
-    required TResult Function(String error) error,
-    required TResult Function() obscureText,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? laoding,
-    TResult? Function()? success,
-    TResult? Function(String error)? error,
-    TResult? Function()? obscureText,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? laoding,
-    TResult Function()? success,
-    TResult Function(String error)? error,
-    TResult Function()? obscureText,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Laoding value) laoding,
-    required TResult Function(Success value) success,
-    required TResult Function(Error value) error,
-    required TResult Function(ObscureText value) obscureText,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Laoding value)? laoding,
-    TResult? Function(Success value)? success,
-    TResult? Function(Error value)? error,
-    TResult? Function(ObscureText value)? obscureText,
-  }) =>
-      throw _privateConstructorUsedError;
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is SignUpState);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'SignUpState()';
+  }
+}
+
+/// @nodoc
+class $SignUpStateCopyWith<$Res> {
+  $SignUpStateCopyWith(SignUpState _, $Res Function(SignUpState) __);
+}
+
+/// Adds pattern-matching-related methods to [SignUpState].
+extension SignUpStatePatterns on SignUpState {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
@@ -70,413 +56,329 @@ mixin _$SignUpState {
     TResult Function(Error value)? error,
     TResult Function(ObscureText value)? obscureText,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial(_that);
+      case Laoding() when laoding != null:
+        return laoding(_that);
+      case Success() when success != null:
+        return success(_that);
+      case Error() when error != null:
+        return error(_that);
+      case ObscureText() when obscureText != null:
+        return obscureText(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Laoding value) laoding,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(ObscureText value) obscureText,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial():
+        return initial(_that);
+      case Laoding():
+        return laoding(_that);
+      case Success():
+        return success(_that);
+      case Error():
+        return error(_that);
+      case ObscureText():
+        return obscureText(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Laoding value)? laoding,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(ObscureText value)? obscureText,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial(_that);
+      case Laoding() when laoding != null:
+        return laoding(_that);
+      case Success() when success != null:
+        return success(_that);
+      case Error() when error != null:
+        return error(_that);
+      case ObscureText() when obscureText != null:
+        return obscureText(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? laoding,
+    TResult Function()? success,
+    TResult Function(String error)? error,
+    TResult Function()? obscureText,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial();
+      case Laoding() when laoding != null:
+        return laoding();
+      case Success() when success != null:
+        return success();
+      case Error() when error != null:
+        return error(_that.error);
+      case ObscureText() when obscureText != null:
+        return obscureText();
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() laoding,
+    required TResult Function() success,
+    required TResult Function(String error) error,
+    required TResult Function() obscureText,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial():
+        return initial();
+      case Laoding():
+        return laoding();
+      case Success():
+        return success();
+      case Error():
+        return error(_that.error);
+      case ObscureText():
+        return obscureText();
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? laoding,
+    TResult? Function()? success,
+    TResult? Function(String error)? error,
+    TResult? Function()? obscureText,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial();
+      case Laoding() when laoding != null:
+        return laoding();
+      case Success() when success != null:
+        return success();
+      case Error() when error != null:
+        return error(_that.error);
+      case ObscureText() when obscureText != null:
+        return obscureText();
+      case _:
+        return null;
+    }
+  }
 }
 
 /// @nodoc
-abstract class $SignUpStateCopyWith<$Res> {
-  factory $SignUpStateCopyWith(
-          SignUpState value, $Res Function(SignUpState) then) =
-      _$SignUpStateCopyWithImpl<$Res, SignUpState>;
-}
 
-/// @nodoc
-class _$SignUpStateCopyWithImpl<$Res, $Val extends SignUpState>
-    implements $SignUpStateCopyWith<$Res> {
-  _$SignUpStateCopyWithImpl(this._value, this._then);
+class _Initial implements SignUpState {
+  const _Initial();
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-}
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _Initial);
+  }
 
-/// @nodoc
-abstract class _$$InitialImplCopyWith<$Res> {
-  factory _$$InitialImplCopyWith(
-          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
-      __$$InitialImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$InitialImplCopyWithImpl<$Res>
-    extends _$SignUpStateCopyWithImpl<$Res, _$InitialImpl>
-    implements _$$InitialImplCopyWith<$Res> {
-  __$$InitialImplCopyWithImpl(
-      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$InitialImpl implements _Initial {
-  const _$InitialImpl();
+  @override
+  int get hashCode => runtimeType.hashCode;
 
   @override
   String toString() {
     return 'SignUpState.initial()';
   }
+}
+
+/// @nodoc
+
+class Laoding implements SignUpState {
+  const Laoding();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InitialImpl);
+        (other.runtimeType == runtimeType && other is Laoding);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() laoding,
-    required TResult Function() success,
-    required TResult Function(String error) error,
-    required TResult Function() obscureText,
-  }) {
-    return initial();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? laoding,
-    TResult? Function()? success,
-    TResult? Function(String error)? error,
-    TResult? Function()? obscureText,
-  }) {
-    return initial?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? laoding,
-    TResult Function()? success,
-    TResult Function(String error)? error,
-    TResult Function()? obscureText,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Laoding value) laoding,
-    required TResult Function(Success value) success,
-    required TResult Function(Error value) error,
-    required TResult Function(ObscureText value) obscureText,
-  }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Laoding value)? laoding,
-    TResult? Function(Success value)? success,
-    TResult? Function(Error value)? error,
-    TResult? Function(ObscureText value)? obscureText,
-  }) {
-    return initial?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Laoding value)? laoding,
-    TResult Function(Success value)? success,
-    TResult Function(Error value)? error,
-    TResult Function(ObscureText value)? obscureText,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Initial implements SignUpState {
-  const factory _Initial() = _$InitialImpl;
-}
-
-/// @nodoc
-abstract class _$$LaodingImplCopyWith<$Res> {
-  factory _$$LaodingImplCopyWith(
-          _$LaodingImpl value, $Res Function(_$LaodingImpl) then) =
-      __$$LaodingImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$LaodingImplCopyWithImpl<$Res>
-    extends _$SignUpStateCopyWithImpl<$Res, _$LaodingImpl>
-    implements _$$LaodingImplCopyWith<$Res> {
-  __$$LaodingImplCopyWithImpl(
-      _$LaodingImpl _value, $Res Function(_$LaodingImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$LaodingImpl implements Laoding {
-  const _$LaodingImpl();
 
   @override
   String toString() {
     return 'SignUpState.laoding()';
   }
+}
+
+/// @nodoc
+
+class Success implements SignUpState {
+  const Success();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LaodingImpl);
+        (other.runtimeType == runtimeType && other is Success);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() laoding,
-    required TResult Function() success,
-    required TResult Function(String error) error,
-    required TResult Function() obscureText,
-  }) {
-    return laoding();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? laoding,
-    TResult? Function()? success,
-    TResult? Function(String error)? error,
-    TResult? Function()? obscureText,
-  }) {
-    return laoding?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? laoding,
-    TResult Function()? success,
-    TResult Function(String error)? error,
-    TResult Function()? obscureText,
-    required TResult orElse(),
-  }) {
-    if (laoding != null) {
-      return laoding();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Laoding value) laoding,
-    required TResult Function(Success value) success,
-    required TResult Function(Error value) error,
-    required TResult Function(ObscureText value) obscureText,
-  }) {
-    return laoding(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Laoding value)? laoding,
-    TResult? Function(Success value)? success,
-    TResult? Function(Error value)? error,
-    TResult? Function(ObscureText value)? obscureText,
-  }) {
-    return laoding?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Laoding value)? laoding,
-    TResult Function(Success value)? success,
-    TResult Function(Error value)? error,
-    TResult Function(ObscureText value)? obscureText,
-    required TResult orElse(),
-  }) {
-    if (laoding != null) {
-      return laoding(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class Laoding implements SignUpState {
-  const factory Laoding() = _$LaodingImpl;
-}
-
-/// @nodoc
-abstract class _$$SuccessImplCopyWith<$Res> {
-  factory _$$SuccessImplCopyWith(
-          _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
-      __$$SuccessImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$SuccessImplCopyWithImpl<$Res>
-    extends _$SignUpStateCopyWithImpl<$Res, _$SuccessImpl>
-    implements _$$SuccessImplCopyWith<$Res> {
-  __$$SuccessImplCopyWithImpl(
-      _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$SuccessImpl implements Success {
-  const _$SuccessImpl();
 
   @override
   String toString() {
     return 'SignUpState.success()';
   }
+}
+
+/// @nodoc
+
+class Error implements SignUpState {
+  const Error({required this.error});
+
+  final String error;
+
+  /// Create a copy of SignUpState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ErrorCopyWith<Error> get copyWith =>
+      _$ErrorCopyWithImpl<Error>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SuccessImpl);
+        (other.runtimeType == runtimeType &&
+            other is Error &&
+            (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, error);
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() laoding,
-    required TResult Function() success,
-    required TResult Function(String error) error,
-    required TResult Function() obscureText,
-  }) {
-    return success();
+  String toString() {
+    return 'SignUpState.error(error: $error)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? laoding,
-    TResult? Function()? success,
-    TResult? Function(String error)? error,
-    TResult? Function()? obscureText,
-  }) {
-    return success?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? laoding,
-    TResult Function()? success,
-    TResult Function(String error)? error,
-    TResult Function()? obscureText,
-    required TResult orElse(),
-  }) {
-    if (success != null) {
-      return success();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Laoding value) laoding,
-    required TResult Function(Success value) success,
-    required TResult Function(Error value) error,
-    required TResult Function(ObscureText value) obscureText,
-  }) {
-    return success(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Laoding value)? laoding,
-    TResult? Function(Success value)? success,
-    TResult? Function(Error value)? error,
-    TResult? Function(ObscureText value)? obscureText,
-  }) {
-    return success?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Laoding value)? laoding,
-    TResult Function(Success value)? success,
-    TResult Function(Error value)? error,
-    TResult Function(ObscureText value)? obscureText,
-    required TResult orElse(),
-  }) {
-    if (success != null) {
-      return success(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class Success implements SignUpState {
-  const factory Success() = _$SuccessImpl;
 }
 
 /// @nodoc
-abstract class _$$ErrorImplCopyWith<$Res> {
-  factory _$$ErrorImplCopyWith(
-          _$ErrorImpl value, $Res Function(_$ErrorImpl) then) =
-      __$$ErrorImplCopyWithImpl<$Res>;
+abstract mixin class $ErrorCopyWith<$Res>
+    implements $SignUpStateCopyWith<$Res> {
+  factory $ErrorCopyWith(Error value, $Res Function(Error) _then) =
+      _$ErrorCopyWithImpl;
   @useResult
   $Res call({String error});
 }
 
 /// @nodoc
-class __$$ErrorImplCopyWithImpl<$Res>
-    extends _$SignUpStateCopyWithImpl<$Res, _$ErrorImpl>
-    implements _$$ErrorImplCopyWith<$Res> {
-  __$$ErrorImplCopyWithImpl(
-      _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
-      : super(_value, _then);
+class _$ErrorCopyWithImpl<$Res> implements $ErrorCopyWith<$Res> {
+  _$ErrorCopyWithImpl(this._self, this._then);
 
+  final Error _self;
+  final $Res Function(Error) _then;
+
+  /// Create a copy of SignUpState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? error = null,
   }) {
-    return _then(_$ErrorImpl(
+    return _then(Error(
       error: null == error
-          ? _value.error
+          ? _self.error
           : error // ignore: cast_nullable_to_non_nullable
               as String,
     ));
@@ -485,240 +387,22 @@ class __$$ErrorImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErrorImpl implements Error {
-  const _$ErrorImpl({required this.error});
-
-  @override
-  final String error;
-
-  @override
-  String toString() {
-    return 'SignUpState.error(error: $error)';
-  }
+class ObscureText implements SignUpState {
+  const ObscureText();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ErrorImpl &&
-            (identical(other.error, error) || other.error == error));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, error);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
-      __$$ErrorImplCopyWithImpl<_$ErrorImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() laoding,
-    required TResult Function() success,
-    required TResult Function(String error) error,
-    required TResult Function() obscureText,
-  }) {
-    return error(this.error);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? laoding,
-    TResult? Function()? success,
-    TResult? Function(String error)? error,
-    TResult? Function()? obscureText,
-  }) {
-    return error?.call(this.error);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? laoding,
-    TResult Function()? success,
-    TResult Function(String error)? error,
-    TResult Function()? obscureText,
-    required TResult orElse(),
-  }) {
-    if (error != null) {
-      return error(this.error);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Laoding value) laoding,
-    required TResult Function(Success value) success,
-    required TResult Function(Error value) error,
-    required TResult Function(ObscureText value) obscureText,
-  }) {
-    return error(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Laoding value)? laoding,
-    TResult? Function(Success value)? success,
-    TResult? Function(Error value)? error,
-    TResult? Function(ObscureText value)? obscureText,
-  }) {
-    return error?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Laoding value)? laoding,
-    TResult Function(Success value)? success,
-    TResult Function(Error value)? error,
-    TResult Function(ObscureText value)? obscureText,
-    required TResult orElse(),
-  }) {
-    if (error != null) {
-      return error(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class Error implements SignUpState {
-  const factory Error({required final String error}) = _$ErrorImpl;
-
-  String get error;
-  @JsonKey(ignore: true)
-  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$ObscureTextImplCopyWith<$Res> {
-  factory _$$ObscureTextImplCopyWith(
-          _$ObscureTextImpl value, $Res Function(_$ObscureTextImpl) then) =
-      __$$ObscureTextImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$ObscureTextImplCopyWithImpl<$Res>
-    extends _$SignUpStateCopyWithImpl<$Res, _$ObscureTextImpl>
-    implements _$$ObscureTextImplCopyWith<$Res> {
-  __$$ObscureTextImplCopyWithImpl(
-      _$ObscureTextImpl _value, $Res Function(_$ObscureTextImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$ObscureTextImpl implements ObscureText {
-  const _$ObscureTextImpl();
-
-  @override
-  String toString() {
-    return 'SignUpState.obscureText()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$ObscureTextImpl);
+        (other.runtimeType == runtimeType && other is ObscureText);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() laoding,
-    required TResult Function() success,
-    required TResult Function(String error) error,
-    required TResult Function() obscureText,
-  }) {
-    return obscureText();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? laoding,
-    TResult? Function()? success,
-    TResult? Function(String error)? error,
-    TResult? Function()? obscureText,
-  }) {
-    return obscureText?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? laoding,
-    TResult Function()? success,
-    TResult Function(String error)? error,
-    TResult Function()? obscureText,
-    required TResult orElse(),
-  }) {
-    if (obscureText != null) {
-      return obscureText();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Laoding value) laoding,
-    required TResult Function(Success value) success,
-    required TResult Function(Error value) error,
-    required TResult Function(ObscureText value) obscureText,
-  }) {
-    return obscureText(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Laoding value)? laoding,
-    TResult? Function(Success value)? success,
-    TResult? Function(Error value)? error,
-    TResult? Function(ObscureText value)? obscureText,
-  }) {
-    return obscureText?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Laoding value)? laoding,
-    TResult Function(Success value)? success,
-    TResult Function(Error value)? error,
-    TResult Function(ObscureText value)? obscureText,
-    required TResult orElse(),
-  }) {
-    if (obscureText != null) {
-      return obscureText(this);
-    }
-    return orElse();
+  String toString() {
+    return 'SignUpState.obscureText()';
   }
 }
 
-abstract class ObscureText implements SignUpState {
-  const factory ObscureText() = _$ObscureTextImpl;
-}
+// dart format on

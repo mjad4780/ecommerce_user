@@ -22,6 +22,7 @@ class FavoriteRepo {
       };
 
       final response = await _apiService.getFavorite(formDataPost(map));
+
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ErrorHandler.handle(e));
@@ -40,6 +41,7 @@ class FavoriteRepo {
 
     try {
       final response = await _apiService.addFavorite(formDataPost(map));
+
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ErrorHandler.handle(e));
@@ -56,6 +58,7 @@ class FavoriteRepo {
         "userid": getIt<CacheHelper>().getData(key: 'id'),
       };
       final response = await _apiService.deletefavorite(formDataPost(map));
+
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ErrorHandler.handle(e));

@@ -5,6 +5,7 @@ import '../../../../core/function/formDataPost.dart';
 import '../../../../core/networking/api_error_handler.dart';
 import '../../../../core/networking/api_result.dart';
 import '../../../../core/networking/api_service.dart';
+import '../../../core/networking/api_error_model.dart';
 import '../../../model/adress_response/adress_response.dart';
 import '../../../model/response_status/response_status.dart';
 
@@ -22,6 +23,10 @@ class AdressRepo {
       };
 
       final response = await _apiService.getAdress(formDataPost(map));
+      if (response.status == "fail") {
+        return ApiResult.failure(
+            ApiErrorModel(status: response.status, messege: response.messege));
+      }
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ErrorHandler.handle(e));
@@ -48,6 +53,10 @@ class AdressRepo {
 
     try {
       final response = await _apiService.addAdress(formDataPost(map));
+      if (response.status == "fail") {
+        return ApiResult.failure(
+            ApiErrorModel(status: response.status, messege: response.messege));
+      }
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ErrorHandler.handle(e));
@@ -60,6 +69,10 @@ class AdressRepo {
       Map<String, dynamic> map = {"id": id};
 
       final response = await _apiService.deleteAdress(formDataPost(map));
+      if (response.status == "fail") {
+        return ApiResult.failure(
+            ApiErrorModel(status: response.status, messege: response.messege));
+      }
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ErrorHandler.handle(e));
@@ -88,6 +101,10 @@ class AdressRepo {
       };
 
       final response = await _apiService.editAdress(formDataPost(map));
+      if (response.status == "fail") {
+        return ApiResult.failure(
+            ApiErrorModel(status: response.status, messege: response.messege));
+      }
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ErrorHandler.handle(e));

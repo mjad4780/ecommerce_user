@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,69 +9,45 @@ part of 'archive_state.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$ArchiveState {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(PendingResponse pendingResponse) success,
-    required TResult Function(String erorr) erorr,
-    required TResult Function() loadingRating,
-    required TResult Function() successRating,
-    required TResult Function(String erorr) erorrRating,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(PendingResponse pendingResponse)? success,
-    TResult? Function(String erorr)? erorr,
-    TResult? Function()? loadingRating,
-    TResult? Function()? successRating,
-    TResult? Function(String erorr)? erorrRating,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(PendingResponse pendingResponse)? success,
-    TResult Function(String erorr)? erorr,
-    TResult Function()? loadingRating,
-    TResult Function()? successRating,
-    TResult Function(String erorr)? erorrRating,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Success value) success,
-    required TResult Function(Erorr value) erorr,
-    required TResult Function(LoadingRating value) loadingRating,
-    required TResult Function(SuccessRating value) successRating,
-    required TResult Function(ErorrRating value) erorrRating,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Success value)? success,
-    TResult? Function(Erorr value)? erorr,
-    TResult? Function(LoadingRating value)? loadingRating,
-    TResult? Function(SuccessRating value)? successRating,
-    TResult? Function(ErorrRating value)? erorrRating,
-  }) =>
-      throw _privateConstructorUsedError;
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is ArchiveState);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'ArchiveState()';
+  }
+}
+
+/// @nodoc
+class $ArchiveStateCopyWith<$Res> {
+  $ArchiveStateCopyWith(ArchiveState _, $Res Function(ArchiveState) __);
+}
+
+/// Adds pattern-matching-related methods to [ArchiveState].
+extension ArchiveStatePatterns on ArchiveState {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
@@ -82,317 +58,344 @@ mixin _$ArchiveState {
     TResult Function(SuccessRating value)? successRating,
     TResult Function(ErorrRating value)? erorrRating,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial(_that);
+      case Loading() when loading != null:
+        return loading(_that);
+      case Success() when success != null:
+        return success(_that);
+      case Erorr() when erorr != null:
+        return erorr(_that);
+      case LoadingRating() when loadingRating != null:
+        return loadingRating(_that);
+      case SuccessRating() when successRating != null:
+        return successRating(_that);
+      case ErorrRating() when erorrRating != null:
+        return erorrRating(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Erorr value) erorr,
+    required TResult Function(LoadingRating value) loadingRating,
+    required TResult Function(SuccessRating value) successRating,
+    required TResult Function(ErorrRating value) erorrRating,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial():
+        return initial(_that);
+      case Loading():
+        return loading(_that);
+      case Success():
+        return success(_that);
+      case Erorr():
+        return erorr(_that);
+      case LoadingRating():
+        return loadingRating(_that);
+      case SuccessRating():
+        return successRating(_that);
+      case ErorrRating():
+        return erorrRating(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Erorr value)? erorr,
+    TResult? Function(LoadingRating value)? loadingRating,
+    TResult? Function(SuccessRating value)? successRating,
+    TResult? Function(ErorrRating value)? erorrRating,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial(_that);
+      case Loading() when loading != null:
+        return loading(_that);
+      case Success() when success != null:
+        return success(_that);
+      case Erorr() when erorr != null:
+        return erorr(_that);
+      case LoadingRating() when loadingRating != null:
+        return loadingRating(_that);
+      case SuccessRating() when successRating != null:
+        return successRating(_that);
+      case ErorrRating() when erorrRating != null:
+        return erorrRating(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(PendingResponse pendingResponse)? success,
+    TResult Function(String erorr)? erorr,
+    TResult Function()? loadingRating,
+    TResult Function()? successRating,
+    TResult Function(String erorr)? erorrRating,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial();
+      case Loading() when loading != null:
+        return loading();
+      case Success() when success != null:
+        return success(_that.pendingResponse);
+      case Erorr() when erorr != null:
+        return erorr(_that.erorr);
+      case LoadingRating() when loadingRating != null:
+        return loadingRating();
+      case SuccessRating() when successRating != null:
+        return successRating();
+      case ErorrRating() when erorrRating != null:
+        return erorrRating(_that.erorr);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(PendingResponse pendingResponse) success,
+    required TResult Function(String erorr) erorr,
+    required TResult Function() loadingRating,
+    required TResult Function() successRating,
+    required TResult Function(String erorr) erorrRating,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial():
+        return initial();
+      case Loading():
+        return loading();
+      case Success():
+        return success(_that.pendingResponse);
+      case Erorr():
+        return erorr(_that.erorr);
+      case LoadingRating():
+        return loadingRating();
+      case SuccessRating():
+        return successRating();
+      case ErorrRating():
+        return erorrRating(_that.erorr);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(PendingResponse pendingResponse)? success,
+    TResult? Function(String erorr)? erorr,
+    TResult? Function()? loadingRating,
+    TResult? Function()? successRating,
+    TResult? Function(String erorr)? erorrRating,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial();
+      case Loading() when loading != null:
+        return loading();
+      case Success() when success != null:
+        return success(_that.pendingResponse);
+      case Erorr() when erorr != null:
+        return erorr(_that.erorr);
+      case LoadingRating() when loadingRating != null:
+        return loadingRating();
+      case SuccessRating() when successRating != null:
+        return successRating();
+      case ErorrRating() when erorrRating != null:
+        return erorrRating(_that.erorr);
+      case _:
+        return null;
+    }
+  }
 }
 
 /// @nodoc
-abstract class $ArchiveStateCopyWith<$Res> {
-  factory $ArchiveStateCopyWith(
-          ArchiveState value, $Res Function(ArchiveState) then) =
-      _$ArchiveStateCopyWithImpl<$Res, ArchiveState>;
-}
 
-/// @nodoc
-class _$ArchiveStateCopyWithImpl<$Res, $Val extends ArchiveState>
-    implements $ArchiveStateCopyWith<$Res> {
-  _$ArchiveStateCopyWithImpl(this._value, this._then);
+class _Initial implements ArchiveState {
+  const _Initial();
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-}
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _Initial);
+  }
 
-/// @nodoc
-abstract class _$$InitialImplCopyWith<$Res> {
-  factory _$$InitialImplCopyWith(
-          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
-      __$$InitialImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$InitialImplCopyWithImpl<$Res>
-    extends _$ArchiveStateCopyWithImpl<$Res, _$InitialImpl>
-    implements _$$InitialImplCopyWith<$Res> {
-  __$$InitialImplCopyWithImpl(
-      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$InitialImpl implements _Initial {
-  const _$InitialImpl();
+  @override
+  int get hashCode => runtimeType.hashCode;
 
   @override
   String toString() {
     return 'ArchiveState.initial()';
   }
+}
+
+/// @nodoc
+
+class Loading implements ArchiveState {
+  const Loading();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InitialImpl);
+        (other.runtimeType == runtimeType && other is Loading);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(PendingResponse pendingResponse) success,
-    required TResult Function(String erorr) erorr,
-    required TResult Function() loadingRating,
-    required TResult Function() successRating,
-    required TResult Function(String erorr) erorrRating,
-  }) {
-    return initial();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(PendingResponse pendingResponse)? success,
-    TResult? Function(String erorr)? erorr,
-    TResult? Function()? loadingRating,
-    TResult? Function()? successRating,
-    TResult? Function(String erorr)? erorrRating,
-  }) {
-    return initial?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(PendingResponse pendingResponse)? success,
-    TResult Function(String erorr)? erorr,
-    TResult Function()? loadingRating,
-    TResult Function()? successRating,
-    TResult Function(String erorr)? erorrRating,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Success value) success,
-    required TResult Function(Erorr value) erorr,
-    required TResult Function(LoadingRating value) loadingRating,
-    required TResult Function(SuccessRating value) successRating,
-    required TResult Function(ErorrRating value) erorrRating,
-  }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Success value)? success,
-    TResult? Function(Erorr value)? erorr,
-    TResult? Function(LoadingRating value)? loadingRating,
-    TResult? Function(SuccessRating value)? successRating,
-    TResult? Function(ErorrRating value)? erorrRating,
-  }) {
-    return initial?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loading value)? loading,
-    TResult Function(Success value)? success,
-    TResult Function(Erorr value)? erorr,
-    TResult Function(LoadingRating value)? loadingRating,
-    TResult Function(SuccessRating value)? successRating,
-    TResult Function(ErorrRating value)? erorrRating,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Initial implements ArchiveState {
-  const factory _Initial() = _$InitialImpl;
-}
-
-/// @nodoc
-abstract class _$$LoadingImplCopyWith<$Res> {
-  factory _$$LoadingImplCopyWith(
-          _$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
-      __$$LoadingImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$LoadingImplCopyWithImpl<$Res>
-    extends _$ArchiveStateCopyWithImpl<$Res, _$LoadingImpl>
-    implements _$$LoadingImplCopyWith<$Res> {
-  __$$LoadingImplCopyWithImpl(
-      _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$LoadingImpl implements Loading {
-  const _$LoadingImpl();
 
   @override
   String toString() {
     return 'ArchiveState.loading()';
   }
+}
+
+/// @nodoc
+
+class Success implements ArchiveState {
+  const Success({required this.pendingResponse});
+
+  final PendingResponse pendingResponse;
+
+  /// Create a copy of ArchiveState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SuccessCopyWith<Success> get copyWith =>
+      _$SuccessCopyWithImpl<Success>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingImpl);
+        (other.runtimeType == runtimeType &&
+            other is Success &&
+            (identical(other.pendingResponse, pendingResponse) ||
+                other.pendingResponse == pendingResponse));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, pendingResponse);
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(PendingResponse pendingResponse) success,
-    required TResult Function(String erorr) erorr,
-    required TResult Function() loadingRating,
-    required TResult Function() successRating,
-    required TResult Function(String erorr) erorrRating,
-  }) {
-    return loading();
+  String toString() {
+    return 'ArchiveState.success(pendingResponse: $pendingResponse)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(PendingResponse pendingResponse)? success,
-    TResult? Function(String erorr)? erorr,
-    TResult? Function()? loadingRating,
-    TResult? Function()? successRating,
-    TResult? Function(String erorr)? erorrRating,
-  }) {
-    return loading?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(PendingResponse pendingResponse)? success,
-    TResult Function(String erorr)? erorr,
-    TResult Function()? loadingRating,
-    TResult Function()? successRating,
-    TResult Function(String erorr)? erorrRating,
-    required TResult orElse(),
-  }) {
-    if (loading != null) {
-      return loading();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Success value) success,
-    required TResult Function(Erorr value) erorr,
-    required TResult Function(LoadingRating value) loadingRating,
-    required TResult Function(SuccessRating value) successRating,
-    required TResult Function(ErorrRating value) erorrRating,
-  }) {
-    return loading(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Success value)? success,
-    TResult? Function(Erorr value)? erorr,
-    TResult? Function(LoadingRating value)? loadingRating,
-    TResult? Function(SuccessRating value)? successRating,
-    TResult? Function(ErorrRating value)? erorrRating,
-  }) {
-    return loading?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loading value)? loading,
-    TResult Function(Success value)? success,
-    TResult Function(Erorr value)? erorr,
-    TResult Function(LoadingRating value)? loadingRating,
-    TResult Function(SuccessRating value)? successRating,
-    TResult Function(ErorrRating value)? erorrRating,
-    required TResult orElse(),
-  }) {
-    if (loading != null) {
-      return loading(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class Loading implements ArchiveState {
-  const factory Loading() = _$LoadingImpl;
 }
 
 /// @nodoc
-abstract class _$$SuccessImplCopyWith<$Res> {
-  factory _$$SuccessImplCopyWith(
-          _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
-      __$$SuccessImplCopyWithImpl<$Res>;
+abstract mixin class $SuccessCopyWith<$Res>
+    implements $ArchiveStateCopyWith<$Res> {
+  factory $SuccessCopyWith(Success value, $Res Function(Success) _then) =
+      _$SuccessCopyWithImpl;
   @useResult
   $Res call({PendingResponse pendingResponse});
 }
 
 /// @nodoc
-class __$$SuccessImplCopyWithImpl<$Res>
-    extends _$ArchiveStateCopyWithImpl<$Res, _$SuccessImpl>
-    implements _$$SuccessImplCopyWith<$Res> {
-  __$$SuccessImplCopyWithImpl(
-      _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
-      : super(_value, _then);
+class _$SuccessCopyWithImpl<$Res> implements $SuccessCopyWith<$Res> {
+  _$SuccessCopyWithImpl(this._self, this._then);
 
+  final Success _self;
+  final $Res Function(Success) _then;
+
+  /// Create a copy of ArchiveState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? pendingResponse = null,
   }) {
-    return _then(_$SuccessImpl(
+    return _then(Success(
       pendingResponse: null == pendingResponse
-          ? _value.pendingResponse
+          ? _self.pendingResponse
           : pendingResponse // ignore: cast_nullable_to_non_nullable
               as PendingResponse,
     ));
@@ -401,590 +404,60 @@ class __$$SuccessImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SuccessImpl implements Success {
-  const _$SuccessImpl({required this.pendingResponse});
+class Erorr implements ArchiveState {
+  const Erorr({required this.erorr});
 
-  @override
-  final PendingResponse pendingResponse;
+  final String erorr;
 
-  @override
-  String toString() {
-    return 'ArchiveState.success(pendingResponse: $pendingResponse)';
-  }
+  /// Create a copy of ArchiveState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ErorrCopyWith<Erorr> get copyWith =>
+      _$ErorrCopyWithImpl<Erorr>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SuccessImpl &&
-            (identical(other.pendingResponse, pendingResponse) ||
-                other.pendingResponse == pendingResponse));
+            other is Erorr &&
+            (identical(other.erorr, erorr) || other.erorr == erorr));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, pendingResponse);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
-      __$$SuccessImplCopyWithImpl<_$SuccessImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(PendingResponse pendingResponse) success,
-    required TResult Function(String erorr) erorr,
-    required TResult Function() loadingRating,
-    required TResult Function() successRating,
-    required TResult Function(String erorr) erorrRating,
-  }) {
-    return success(pendingResponse);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(PendingResponse pendingResponse)? success,
-    TResult? Function(String erorr)? erorr,
-    TResult? Function()? loadingRating,
-    TResult? Function()? successRating,
-    TResult? Function(String erorr)? erorrRating,
-  }) {
-    return success?.call(pendingResponse);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(PendingResponse pendingResponse)? success,
-    TResult Function(String erorr)? erorr,
-    TResult Function()? loadingRating,
-    TResult Function()? successRating,
-    TResult Function(String erorr)? erorrRating,
-    required TResult orElse(),
-  }) {
-    if (success != null) {
-      return success(pendingResponse);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Success value) success,
-    required TResult Function(Erorr value) erorr,
-    required TResult Function(LoadingRating value) loadingRating,
-    required TResult Function(SuccessRating value) successRating,
-    required TResult Function(ErorrRating value) erorrRating,
-  }) {
-    return success(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Success value)? success,
-    TResult? Function(Erorr value)? erorr,
-    TResult? Function(LoadingRating value)? loadingRating,
-    TResult? Function(SuccessRating value)? successRating,
-    TResult? Function(ErorrRating value)? erorrRating,
-  }) {
-    return success?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loading value)? loading,
-    TResult Function(Success value)? success,
-    TResult Function(Erorr value)? erorr,
-    TResult Function(LoadingRating value)? loadingRating,
-    TResult Function(SuccessRating value)? successRating,
-    TResult Function(ErorrRating value)? erorrRating,
-    required TResult orElse(),
-  }) {
-    if (success != null) {
-      return success(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class Success implements ArchiveState {
-  const factory Success({required final PendingResponse pendingResponse}) =
-      _$SuccessImpl;
-
-  PendingResponse get pendingResponse;
-  @JsonKey(ignore: true)
-  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$ErorrImplCopyWith<$Res> {
-  factory _$$ErorrImplCopyWith(
-          _$ErorrImpl value, $Res Function(_$ErorrImpl) then) =
-      __$$ErorrImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String erorr});
-}
-
-/// @nodoc
-class __$$ErorrImplCopyWithImpl<$Res>
-    extends _$ArchiveStateCopyWithImpl<$Res, _$ErorrImpl>
-    implements _$$ErorrImplCopyWith<$Res> {
-  __$$ErorrImplCopyWithImpl(
-      _$ErorrImpl _value, $Res Function(_$ErorrImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? erorr = null,
-  }) {
-    return _then(_$ErorrImpl(
-      erorr: null == erorr
-          ? _value.erorr
-          : erorr // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$ErorrImpl implements Erorr {
-  const _$ErorrImpl({required this.erorr});
-
-  @override
-  final String erorr;
+  int get hashCode => Object.hash(runtimeType, erorr);
 
   @override
   String toString() {
     return 'ArchiveState.erorr(erorr: $erorr)';
   }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ErorrImpl &&
-            (identical(other.erorr, erorr) || other.erorr == erorr));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, erorr);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ErorrImplCopyWith<_$ErorrImpl> get copyWith =>
-      __$$ErorrImplCopyWithImpl<_$ErorrImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(PendingResponse pendingResponse) success,
-    required TResult Function(String erorr) erorr,
-    required TResult Function() loadingRating,
-    required TResult Function() successRating,
-    required TResult Function(String erorr) erorrRating,
-  }) {
-    return erorr(this.erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(PendingResponse pendingResponse)? success,
-    TResult? Function(String erorr)? erorr,
-    TResult? Function()? loadingRating,
-    TResult? Function()? successRating,
-    TResult? Function(String erorr)? erorrRating,
-  }) {
-    return erorr?.call(this.erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(PendingResponse pendingResponse)? success,
-    TResult Function(String erorr)? erorr,
-    TResult Function()? loadingRating,
-    TResult Function()? successRating,
-    TResult Function(String erorr)? erorrRating,
-    required TResult orElse(),
-  }) {
-    if (erorr != null) {
-      return erorr(this.erorr);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Success value) success,
-    required TResult Function(Erorr value) erorr,
-    required TResult Function(LoadingRating value) loadingRating,
-    required TResult Function(SuccessRating value) successRating,
-    required TResult Function(ErorrRating value) erorrRating,
-  }) {
-    return erorr(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Success value)? success,
-    TResult? Function(Erorr value)? erorr,
-    TResult? Function(LoadingRating value)? loadingRating,
-    TResult? Function(SuccessRating value)? successRating,
-    TResult? Function(ErorrRating value)? erorrRating,
-  }) {
-    return erorr?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loading value)? loading,
-    TResult Function(Success value)? success,
-    TResult Function(Erorr value)? erorr,
-    TResult Function(LoadingRating value)? loadingRating,
-    TResult Function(SuccessRating value)? successRating,
-    TResult Function(ErorrRating value)? erorrRating,
-    required TResult orElse(),
-  }) {
-    if (erorr != null) {
-      return erorr(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class Erorr implements ArchiveState {
-  const factory Erorr({required final String erorr}) = _$ErorrImpl;
-
-  String get erorr;
-  @JsonKey(ignore: true)
-  _$$ErorrImplCopyWith<_$ErorrImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$LoadingRatingImplCopyWith<$Res> {
-  factory _$$LoadingRatingImplCopyWith(
-          _$LoadingRatingImpl value, $Res Function(_$LoadingRatingImpl) then) =
-      __$$LoadingRatingImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$LoadingRatingImplCopyWithImpl<$Res>
-    extends _$ArchiveStateCopyWithImpl<$Res, _$LoadingRatingImpl>
-    implements _$$LoadingRatingImplCopyWith<$Res> {
-  __$$LoadingRatingImplCopyWithImpl(
-      _$LoadingRatingImpl _value, $Res Function(_$LoadingRatingImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$LoadingRatingImpl implements LoadingRating {
-  const _$LoadingRatingImpl();
-
-  @override
-  String toString() {
-    return 'ArchiveState.loadingRating()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingRatingImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(PendingResponse pendingResponse) success,
-    required TResult Function(String erorr) erorr,
-    required TResult Function() loadingRating,
-    required TResult Function() successRating,
-    required TResult Function(String erorr) erorrRating,
-  }) {
-    return loadingRating();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(PendingResponse pendingResponse)? success,
-    TResult? Function(String erorr)? erorr,
-    TResult? Function()? loadingRating,
-    TResult? Function()? successRating,
-    TResult? Function(String erorr)? erorrRating,
-  }) {
-    return loadingRating?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(PendingResponse pendingResponse)? success,
-    TResult Function(String erorr)? erorr,
-    TResult Function()? loadingRating,
-    TResult Function()? successRating,
-    TResult Function(String erorr)? erorrRating,
-    required TResult orElse(),
-  }) {
-    if (loadingRating != null) {
-      return loadingRating();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Success value) success,
-    required TResult Function(Erorr value) erorr,
-    required TResult Function(LoadingRating value) loadingRating,
-    required TResult Function(SuccessRating value) successRating,
-    required TResult Function(ErorrRating value) erorrRating,
-  }) {
-    return loadingRating(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Success value)? success,
-    TResult? Function(Erorr value)? erorr,
-    TResult? Function(LoadingRating value)? loadingRating,
-    TResult? Function(SuccessRating value)? successRating,
-    TResult? Function(ErorrRating value)? erorrRating,
-  }) {
-    return loadingRating?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loading value)? loading,
-    TResult Function(Success value)? success,
-    TResult Function(Erorr value)? erorr,
-    TResult Function(LoadingRating value)? loadingRating,
-    TResult Function(SuccessRating value)? successRating,
-    TResult Function(ErorrRating value)? erorrRating,
-    required TResult orElse(),
-  }) {
-    if (loadingRating != null) {
-      return loadingRating(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class LoadingRating implements ArchiveState {
-  const factory LoadingRating() = _$LoadingRatingImpl;
-}
-
-/// @nodoc
-abstract class _$$SuccessRatingImplCopyWith<$Res> {
-  factory _$$SuccessRatingImplCopyWith(
-          _$SuccessRatingImpl value, $Res Function(_$SuccessRatingImpl) then) =
-      __$$SuccessRatingImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$SuccessRatingImplCopyWithImpl<$Res>
-    extends _$ArchiveStateCopyWithImpl<$Res, _$SuccessRatingImpl>
-    implements _$$SuccessRatingImplCopyWith<$Res> {
-  __$$SuccessRatingImplCopyWithImpl(
-      _$SuccessRatingImpl _value, $Res Function(_$SuccessRatingImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$SuccessRatingImpl implements SuccessRating {
-  const _$SuccessRatingImpl();
-
-  @override
-  String toString() {
-    return 'ArchiveState.successRating()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SuccessRatingImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(PendingResponse pendingResponse) success,
-    required TResult Function(String erorr) erorr,
-    required TResult Function() loadingRating,
-    required TResult Function() successRating,
-    required TResult Function(String erorr) erorrRating,
-  }) {
-    return successRating();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(PendingResponse pendingResponse)? success,
-    TResult? Function(String erorr)? erorr,
-    TResult? Function()? loadingRating,
-    TResult? Function()? successRating,
-    TResult? Function(String erorr)? erorrRating,
-  }) {
-    return successRating?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(PendingResponse pendingResponse)? success,
-    TResult Function(String erorr)? erorr,
-    TResult Function()? loadingRating,
-    TResult Function()? successRating,
-    TResult Function(String erorr)? erorrRating,
-    required TResult orElse(),
-  }) {
-    if (successRating != null) {
-      return successRating();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Success value) success,
-    required TResult Function(Erorr value) erorr,
-    required TResult Function(LoadingRating value) loadingRating,
-    required TResult Function(SuccessRating value) successRating,
-    required TResult Function(ErorrRating value) erorrRating,
-  }) {
-    return successRating(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Success value)? success,
-    TResult? Function(Erorr value)? erorr,
-    TResult? Function(LoadingRating value)? loadingRating,
-    TResult? Function(SuccessRating value)? successRating,
-    TResult? Function(ErorrRating value)? erorrRating,
-  }) {
-    return successRating?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loading value)? loading,
-    TResult Function(Success value)? success,
-    TResult Function(Erorr value)? erorr,
-    TResult Function(LoadingRating value)? loadingRating,
-    TResult Function(SuccessRating value)? successRating,
-    TResult Function(ErorrRating value)? erorrRating,
-    required TResult orElse(),
-  }) {
-    if (successRating != null) {
-      return successRating(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class SuccessRating implements ArchiveState {
-  const factory SuccessRating() = _$SuccessRatingImpl;
-}
-
-/// @nodoc
-abstract class _$$ErorrRatingImplCopyWith<$Res> {
-  factory _$$ErorrRatingImplCopyWith(
-          _$ErorrRatingImpl value, $Res Function(_$ErorrRatingImpl) then) =
-      __$$ErorrRatingImplCopyWithImpl<$Res>;
+abstract mixin class $ErorrCopyWith<$Res>
+    implements $ArchiveStateCopyWith<$Res> {
+  factory $ErorrCopyWith(Erorr value, $Res Function(Erorr) _then) =
+      _$ErorrCopyWithImpl;
   @useResult
   $Res call({String erorr});
 }
 
 /// @nodoc
-class __$$ErorrRatingImplCopyWithImpl<$Res>
-    extends _$ArchiveStateCopyWithImpl<$Res, _$ErorrRatingImpl>
-    implements _$$ErorrRatingImplCopyWith<$Res> {
-  __$$ErorrRatingImplCopyWithImpl(
-      _$ErorrRatingImpl _value, $Res Function(_$ErorrRatingImpl) _then)
-      : super(_value, _then);
+class _$ErorrCopyWithImpl<$Res> implements $ErorrCopyWith<$Res> {
+  _$ErorrCopyWithImpl(this._self, this._then);
 
+  final Erorr _self;
+  final $Res Function(Erorr) _then;
+
+  /// Create a copy of ArchiveState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? erorr = null,
   }) {
-    return _then(_$ErorrRatingImpl(
+    return _then(Erorr(
       erorr: null == erorr
-          ? _value.erorr
+          ? _self.erorr
           : erorr // ignore: cast_nullable_to_non_nullable
               as String,
     ));
@@ -993,132 +466,105 @@ class __$$ErorrRatingImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErorrRatingImpl implements ErorrRating {
-  const _$ErorrRatingImpl({required this.erorr});
+class LoadingRating implements ArchiveState {
+  const LoadingRating();
 
   @override
-  final String erorr;
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is LoadingRating);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
 
   @override
   String toString() {
-    return 'ArchiveState.erorrRating(erorr: $erorr)';
+    return 'ArchiveState.loadingRating()';
   }
+}
+
+/// @nodoc
+
+class SuccessRating implements ArchiveState {
+  const SuccessRating();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is SuccessRating);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'ArchiveState.successRating()';
+  }
+}
+
+/// @nodoc
+
+class ErorrRating implements ArchiveState {
+  const ErorrRating({required this.erorr});
+
+  final String erorr;
+
+  /// Create a copy of ArchiveState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ErorrRatingCopyWith<ErorrRating> get copyWith =>
+      _$ErorrRatingCopyWithImpl<ErorrRating>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ErorrRatingImpl &&
+            other is ErorrRating &&
             (identical(other.erorr, erorr) || other.erorr == erorr));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, erorr);
 
-  @JsonKey(ignore: true)
   @override
+  String toString() {
+    return 'ArchiveState.erorrRating(erorr: $erorr)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $ErorrRatingCopyWith<$Res>
+    implements $ArchiveStateCopyWith<$Res> {
+  factory $ErorrRatingCopyWith(
+          ErorrRating value, $Res Function(ErorrRating) _then) =
+      _$ErorrRatingCopyWithImpl;
+  @useResult
+  $Res call({String erorr});
+}
+
+/// @nodoc
+class _$ErorrRatingCopyWithImpl<$Res> implements $ErorrRatingCopyWith<$Res> {
+  _$ErorrRatingCopyWithImpl(this._self, this._then);
+
+  final ErorrRating _self;
+  final $Res Function(ErorrRating) _then;
+
+  /// Create a copy of ArchiveState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  _$$ErorrRatingImplCopyWith<_$ErorrRatingImpl> get copyWith =>
-      __$$ErorrRatingImplCopyWithImpl<_$ErorrRatingImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(PendingResponse pendingResponse) success,
-    required TResult Function(String erorr) erorr,
-    required TResult Function() loadingRating,
-    required TResult Function() successRating,
-    required TResult Function(String erorr) erorrRating,
+  $Res call({
+    Object? erorr = null,
   }) {
-    return erorrRating(this.erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(PendingResponse pendingResponse)? success,
-    TResult? Function(String erorr)? erorr,
-    TResult? Function()? loadingRating,
-    TResult? Function()? successRating,
-    TResult? Function(String erorr)? erorrRating,
-  }) {
-    return erorrRating?.call(this.erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(PendingResponse pendingResponse)? success,
-    TResult Function(String erorr)? erorr,
-    TResult Function()? loadingRating,
-    TResult Function()? successRating,
-    TResult Function(String erorr)? erorrRating,
-    required TResult orElse(),
-  }) {
-    if (erorrRating != null) {
-      return erorrRating(this.erorr);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Success value) success,
-    required TResult Function(Erorr value) erorr,
-    required TResult Function(LoadingRating value) loadingRating,
-    required TResult Function(SuccessRating value) successRating,
-    required TResult Function(ErorrRating value) erorrRating,
-  }) {
-    return erorrRating(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Success value)? success,
-    TResult? Function(Erorr value)? erorr,
-    TResult? Function(LoadingRating value)? loadingRating,
-    TResult? Function(SuccessRating value)? successRating,
-    TResult? Function(ErorrRating value)? erorrRating,
-  }) {
-    return erorrRating?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loading value)? loading,
-    TResult Function(Success value)? success,
-    TResult Function(Erorr value)? erorr,
-    TResult Function(LoadingRating value)? loadingRating,
-    TResult Function(SuccessRating value)? successRating,
-    TResult Function(ErorrRating value)? erorrRating,
-    required TResult orElse(),
-  }) {
-    if (erorrRating != null) {
-      return erorrRating(this);
-    }
-    return orElse();
+    return _then(ErorrRating(
+      erorr: null == erorr
+          ? _self.erorr
+          : erorr // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
   }
 }
 
-abstract class ErorrRating implements ArchiveState {
-  const factory ErorrRating({required final String erorr}) = _$ErorrRatingImpl;
-
-  String get erorr;
-  @JsonKey(ignore: true)
-  _$$ErorrRatingImplCopyWith<_$ErorrRatingImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+// dart format on

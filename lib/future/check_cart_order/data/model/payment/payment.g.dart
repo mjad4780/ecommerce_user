@@ -11,8 +11,13 @@ Payment _$PaymentFromJson(Map<String, dynamic> json) => Payment(
       object: json['object'] as String?,
       amount: (json['amount'] as num?)?.toInt(),
       amountCapturable: (json['amount_capturable'] as num?)?.toInt(),
+      amountReceived: (json['amount_details'] as num?)?.toInt(),
       application: json['application'],
       applicationFeeAmount: json['application_fee_amount'],
+      automaticPaymentMethods: json['automatic_payment_methods'] == null
+          ? null
+          : AutomaticPaymentMethods.fromJson(
+              json['automatic_payment_methods'] as Map<String, dynamic>),
       canceledAt: json['canceled_at'],
       cancellationReason: json['cancellation_reason'],
       captureMethod: json['capture_method'] as String?,
@@ -31,6 +36,13 @@ Payment _$PaymentFromJson(Map<String, dynamic> json) => Payment(
       paymentMethod: json['payment_method'],
       paymentMethodConfigurationDetails:
           json['payment_method_configuration_details'],
+      paymentMethodOptions: json['payment_method_options'] == null
+          ? null
+          : PaymentMethodOptions.fromJson(
+              json['payment_method_options'] as Map<String, dynamic>),
+      paymentMethodTypes: (json['payment_method_types'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
       processing: json['processing'],
       receiptEmail: json['receipt_email'],
       review: json['review'],

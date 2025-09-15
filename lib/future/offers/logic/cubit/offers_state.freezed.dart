@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,54 +9,45 @@ part of 'offers_state.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$OffersState {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingoffers,
-    required TResult Function(Item1view responseItems) successoffers,
-    required TResult Function(String erorr) erroroffers,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingoffers,
-    TResult? Function(Item1view responseItems)? successoffers,
-    TResult? Function(String erorr)? erroroffers,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingoffers,
-    TResult Function(Item1view responseItems)? successoffers,
-    TResult Function(String erorr)? erroroffers,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loadingoffers value) loadingoffers,
-    required TResult Function(Successoffers value) successoffers,
-    required TResult Function(Erroroffers value) erroroffers,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loadingoffers value)? loadingoffers,
-    TResult? Function(Successoffers value)? successoffers,
-    TResult? Function(Erroroffers value)? erroroffers,
-  }) =>
-      throw _privateConstructorUsedError;
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is OffersState);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'OffersState()';
+  }
+}
+
+/// @nodoc
+class $OffersStateCopyWith<$Res> {
+  $OffersStateCopyWith(OffersState _, $Res Function(OffersState) __);
+}
+
+/// Adds pattern-matching-related methods to [OffersState].
+extension OffersStatePatterns on OffersState {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
@@ -64,281 +55,295 @@ mixin _$OffersState {
     TResult Function(Successoffers value)? successoffers,
     TResult Function(Erroroffers value)? erroroffers,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial(_that);
+      case Loadingoffers() when loadingoffers != null:
+        return loadingoffers(_that);
+      case Successoffers() when successoffers != null:
+        return successoffers(_that);
+      case Erroroffers() when erroroffers != null:
+        return erroroffers(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loadingoffers value) loadingoffers,
+    required TResult Function(Successoffers value) successoffers,
+    required TResult Function(Erroroffers value) erroroffers,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial():
+        return initial(_that);
+      case Loadingoffers():
+        return loadingoffers(_that);
+      case Successoffers():
+        return successoffers(_that);
+      case Erroroffers():
+        return erroroffers(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loadingoffers value)? loadingoffers,
+    TResult? Function(Successoffers value)? successoffers,
+    TResult? Function(Erroroffers value)? erroroffers,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial(_that);
+      case Loadingoffers() when loadingoffers != null:
+        return loadingoffers(_that);
+      case Successoffers() when successoffers != null:
+        return successoffers(_that);
+      case Erroroffers() when erroroffers != null:
+        return erroroffers(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingoffers,
+    TResult Function(Item1view responseItems)? successoffers,
+    TResult Function(String erorr)? erroroffers,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial();
+      case Loadingoffers() when loadingoffers != null:
+        return loadingoffers();
+      case Successoffers() when successoffers != null:
+        return successoffers(_that.responseItems);
+      case Erroroffers() when erroroffers != null:
+        return erroroffers(_that.erorr);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingoffers,
+    required TResult Function(Item1view responseItems) successoffers,
+    required TResult Function(String erorr) erroroffers,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial():
+        return initial();
+      case Loadingoffers():
+        return loadingoffers();
+      case Successoffers():
+        return successoffers(_that.responseItems);
+      case Erroroffers():
+        return erroroffers(_that.erorr);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingoffers,
+    TResult? Function(Item1view responseItems)? successoffers,
+    TResult? Function(String erorr)? erroroffers,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Initial() when initial != null:
+        return initial();
+      case Loadingoffers() when loadingoffers != null:
+        return loadingoffers();
+      case Successoffers() when successoffers != null:
+        return successoffers(_that.responseItems);
+      case Erroroffers() when erroroffers != null:
+        return erroroffers(_that.erorr);
+      case _:
+        return null;
+    }
+  }
 }
 
 /// @nodoc
-abstract class $OffersStateCopyWith<$Res> {
-  factory $OffersStateCopyWith(
-          OffersState value, $Res Function(OffersState) then) =
-      _$OffersStateCopyWithImpl<$Res, OffersState>;
-}
 
-/// @nodoc
-class _$OffersStateCopyWithImpl<$Res, $Val extends OffersState>
-    implements $OffersStateCopyWith<$Res> {
-  _$OffersStateCopyWithImpl(this._value, this._then);
+class _Initial implements OffersState {
+  const _Initial();
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-}
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _Initial);
+  }
 
-/// @nodoc
-abstract class _$$InitialImplCopyWith<$Res> {
-  factory _$$InitialImplCopyWith(
-          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
-      __$$InitialImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$InitialImplCopyWithImpl<$Res>
-    extends _$OffersStateCopyWithImpl<$Res, _$InitialImpl>
-    implements _$$InitialImplCopyWith<$Res> {
-  __$$InitialImplCopyWithImpl(
-      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$InitialImpl implements _Initial {
-  const _$InitialImpl();
+  @override
+  int get hashCode => runtimeType.hashCode;
 
   @override
   String toString() {
     return 'OffersState.initial()';
   }
+}
+
+/// @nodoc
+
+class Loadingoffers implements OffersState {
+  const Loadingoffers();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InitialImpl);
+        (other.runtimeType == runtimeType && other is Loadingoffers);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingoffers,
-    required TResult Function(Item1view responseItems) successoffers,
-    required TResult Function(String erorr) erroroffers,
-  }) {
-    return initial();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingoffers,
-    TResult? Function(Item1view responseItems)? successoffers,
-    TResult? Function(String erorr)? erroroffers,
-  }) {
-    return initial?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingoffers,
-    TResult Function(Item1view responseItems)? successoffers,
-    TResult Function(String erorr)? erroroffers,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loadingoffers value) loadingoffers,
-    required TResult Function(Successoffers value) successoffers,
-    required TResult Function(Erroroffers value) erroroffers,
-  }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loadingoffers value)? loadingoffers,
-    TResult? Function(Successoffers value)? successoffers,
-    TResult? Function(Erroroffers value)? erroroffers,
-  }) {
-    return initial?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loadingoffers value)? loadingoffers,
-    TResult Function(Successoffers value)? successoffers,
-    TResult Function(Erroroffers value)? erroroffers,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Initial implements OffersState {
-  const factory _Initial() = _$InitialImpl;
-}
-
-/// @nodoc
-abstract class _$$LoadingoffersImplCopyWith<$Res> {
-  factory _$$LoadingoffersImplCopyWith(
-          _$LoadingoffersImpl value, $Res Function(_$LoadingoffersImpl) then) =
-      __$$LoadingoffersImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$LoadingoffersImplCopyWithImpl<$Res>
-    extends _$OffersStateCopyWithImpl<$Res, _$LoadingoffersImpl>
-    implements _$$LoadingoffersImplCopyWith<$Res> {
-  __$$LoadingoffersImplCopyWithImpl(
-      _$LoadingoffersImpl _value, $Res Function(_$LoadingoffersImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$LoadingoffersImpl implements Loadingoffers {
-  const _$LoadingoffersImpl();
 
   @override
   String toString() {
     return 'OffersState.loadingoffers()';
   }
+}
+
+/// @nodoc
+
+class Successoffers implements OffersState {
+  const Successoffers({required this.responseItems});
+
+  final Item1view responseItems;
+
+  /// Create a copy of OffersState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SuccessoffersCopyWith<Successoffers> get copyWith =>
+      _$SuccessoffersCopyWithImpl<Successoffers>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingoffersImpl);
+        (other.runtimeType == runtimeType &&
+            other is Successoffers &&
+            (identical(other.responseItems, responseItems) ||
+                other.responseItems == responseItems));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, responseItems);
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingoffers,
-    required TResult Function(Item1view responseItems) successoffers,
-    required TResult Function(String erorr) erroroffers,
-  }) {
-    return loadingoffers();
+  String toString() {
+    return 'OffersState.successoffers(responseItems: $responseItems)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingoffers,
-    TResult? Function(Item1view responseItems)? successoffers,
-    TResult? Function(String erorr)? erroroffers,
-  }) {
-    return loadingoffers?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingoffers,
-    TResult Function(Item1view responseItems)? successoffers,
-    TResult Function(String erorr)? erroroffers,
-    required TResult orElse(),
-  }) {
-    if (loadingoffers != null) {
-      return loadingoffers();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loadingoffers value) loadingoffers,
-    required TResult Function(Successoffers value) successoffers,
-    required TResult Function(Erroroffers value) erroroffers,
-  }) {
-    return loadingoffers(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loadingoffers value)? loadingoffers,
-    TResult? Function(Successoffers value)? successoffers,
-    TResult? Function(Erroroffers value)? erroroffers,
-  }) {
-    return loadingoffers?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loadingoffers value)? loadingoffers,
-    TResult Function(Successoffers value)? successoffers,
-    TResult Function(Erroroffers value)? erroroffers,
-    required TResult orElse(),
-  }) {
-    if (loadingoffers != null) {
-      return loadingoffers(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class Loadingoffers implements OffersState {
-  const factory Loadingoffers() = _$LoadingoffersImpl;
 }
 
 /// @nodoc
-abstract class _$$SuccessoffersImplCopyWith<$Res> {
-  factory _$$SuccessoffersImplCopyWith(
-          _$SuccessoffersImpl value, $Res Function(_$SuccessoffersImpl) then) =
-      __$$SuccessoffersImplCopyWithImpl<$Res>;
+abstract mixin class $SuccessoffersCopyWith<$Res>
+    implements $OffersStateCopyWith<$Res> {
+  factory $SuccessoffersCopyWith(
+          Successoffers value, $Res Function(Successoffers) _then) =
+      _$SuccessoffersCopyWithImpl;
   @useResult
   $Res call({Item1view responseItems});
 }
 
 /// @nodoc
-class __$$SuccessoffersImplCopyWithImpl<$Res>
-    extends _$OffersStateCopyWithImpl<$Res, _$SuccessoffersImpl>
-    implements _$$SuccessoffersImplCopyWith<$Res> {
-  __$$SuccessoffersImplCopyWithImpl(
-      _$SuccessoffersImpl _value, $Res Function(_$SuccessoffersImpl) _then)
-      : super(_value, _then);
+class _$SuccessoffersCopyWithImpl<$Res>
+    implements $SuccessoffersCopyWith<$Res> {
+  _$SuccessoffersCopyWithImpl(this._self, this._then);
 
+  final Successoffers _self;
+  final $Res Function(Successoffers) _then;
+
+  /// Create a copy of OffersState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? responseItems = null,
   }) {
-    return _then(_$SuccessoffersImpl(
+    return _then(Successoffers(
       responseItems: null == responseItems
-          ? _value.responseItems
+          ? _self.responseItems
           : responseItems // ignore: cast_nullable_to_non_nullable
               as Item1view,
     ));
@@ -347,261 +352,65 @@ class __$$SuccessoffersImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SuccessoffersImpl implements Successoffers {
-  const _$SuccessoffersImpl({required this.responseItems});
+class Erroroffers implements OffersState {
+  const Erroroffers({required this.erorr});
 
-  @override
-  final Item1view responseItems;
-
-  @override
-  String toString() {
-    return 'OffersState.successoffers(responseItems: $responseItems)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$SuccessoffersImpl &&
-            (identical(other.responseItems, responseItems) ||
-                other.responseItems == responseItems));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, responseItems);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SuccessoffersImplCopyWith<_$SuccessoffersImpl> get copyWith =>
-      __$$SuccessoffersImplCopyWithImpl<_$SuccessoffersImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingoffers,
-    required TResult Function(Item1view responseItems) successoffers,
-    required TResult Function(String erorr) erroroffers,
-  }) {
-    return successoffers(responseItems);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingoffers,
-    TResult? Function(Item1view responseItems)? successoffers,
-    TResult? Function(String erorr)? erroroffers,
-  }) {
-    return successoffers?.call(responseItems);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingoffers,
-    TResult Function(Item1view responseItems)? successoffers,
-    TResult Function(String erorr)? erroroffers,
-    required TResult orElse(),
-  }) {
-    if (successoffers != null) {
-      return successoffers(responseItems);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loadingoffers value) loadingoffers,
-    required TResult Function(Successoffers value) successoffers,
-    required TResult Function(Erroroffers value) erroroffers,
-  }) {
-    return successoffers(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loadingoffers value)? loadingoffers,
-    TResult? Function(Successoffers value)? successoffers,
-    TResult? Function(Erroroffers value)? erroroffers,
-  }) {
-    return successoffers?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loadingoffers value)? loadingoffers,
-    TResult Function(Successoffers value)? successoffers,
-    TResult Function(Erroroffers value)? erroroffers,
-    required TResult orElse(),
-  }) {
-    if (successoffers != null) {
-      return successoffers(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class Successoffers implements OffersState {
-  const factory Successoffers({required final Item1view responseItems}) =
-      _$SuccessoffersImpl;
-
-  Item1view get responseItems;
-  @JsonKey(ignore: true)
-  _$$SuccessoffersImplCopyWith<_$SuccessoffersImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$ErroroffersImplCopyWith<$Res> {
-  factory _$$ErroroffersImplCopyWith(
-          _$ErroroffersImpl value, $Res Function(_$ErroroffersImpl) then) =
-      __$$ErroroffersImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String erorr});
-}
-
-/// @nodoc
-class __$$ErroroffersImplCopyWithImpl<$Res>
-    extends _$OffersStateCopyWithImpl<$Res, _$ErroroffersImpl>
-    implements _$$ErroroffersImplCopyWith<$Res> {
-  __$$ErroroffersImplCopyWithImpl(
-      _$ErroroffersImpl _value, $Res Function(_$ErroroffersImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? erorr = null,
-  }) {
-    return _then(_$ErroroffersImpl(
-      erorr: null == erorr
-          ? _value.erorr
-          : erorr // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$ErroroffersImpl implements Erroroffers {
-  const _$ErroroffersImpl({required this.erorr});
-
-  @override
   final String erorr;
 
-  @override
-  String toString() {
-    return 'OffersState.erroroffers(erorr: $erorr)';
-  }
+  /// Create a copy of OffersState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ErroroffersCopyWith<Erroroffers> get copyWith =>
+      _$ErroroffersCopyWithImpl<Erroroffers>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ErroroffersImpl &&
+            other is Erroroffers &&
             (identical(other.erorr, erorr) || other.erorr == erorr));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, erorr);
 
-  @JsonKey(ignore: true)
   @override
+  String toString() {
+    return 'OffersState.erroroffers(erorr: $erorr)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $ErroroffersCopyWith<$Res>
+    implements $OffersStateCopyWith<$Res> {
+  factory $ErroroffersCopyWith(
+          Erroroffers value, $Res Function(Erroroffers) _then) =
+      _$ErroroffersCopyWithImpl;
+  @useResult
+  $Res call({String erorr});
+}
+
+/// @nodoc
+class _$ErroroffersCopyWithImpl<$Res> implements $ErroroffersCopyWith<$Res> {
+  _$ErroroffersCopyWithImpl(this._self, this._then);
+
+  final Erroroffers _self;
+  final $Res Function(Erroroffers) _then;
+
+  /// Create a copy of OffersState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  _$$ErroroffersImplCopyWith<_$ErroroffersImpl> get copyWith =>
-      __$$ErroroffersImplCopyWithImpl<_$ErroroffersImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loadingoffers,
-    required TResult Function(Item1view responseItems) successoffers,
-    required TResult Function(String erorr) erroroffers,
+  $Res call({
+    Object? erorr = null,
   }) {
-    return erroroffers(erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loadingoffers,
-    TResult? Function(Item1view responseItems)? successoffers,
-    TResult? Function(String erorr)? erroroffers,
-  }) {
-    return erroroffers?.call(erorr);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loadingoffers,
-    TResult Function(Item1view responseItems)? successoffers,
-    TResult Function(String erorr)? erroroffers,
-    required TResult orElse(),
-  }) {
-    if (erroroffers != null) {
-      return erroroffers(erorr);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loadingoffers value) loadingoffers,
-    required TResult Function(Successoffers value) successoffers,
-    required TResult Function(Erroroffers value) erroroffers,
-  }) {
-    return erroroffers(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loadingoffers value)? loadingoffers,
-    TResult? Function(Successoffers value)? successoffers,
-    TResult? Function(Erroroffers value)? erroroffers,
-  }) {
-    return erroroffers?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loadingoffers value)? loadingoffers,
-    TResult Function(Successoffers value)? successoffers,
-    TResult Function(Erroroffers value)? erroroffers,
-    required TResult orElse(),
-  }) {
-    if (erroroffers != null) {
-      return erroroffers(this);
-    }
-    return orElse();
+    return _then(Erroroffers(
+      erorr: null == erorr
+          ? _self.erorr
+          : erorr // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
   }
 }
 
-abstract class Erroroffers implements OffersState {
-  const factory Erroroffers({required final String erorr}) = _$ErroroffersImpl;
-
-  String get erorr;
-  @JsonKey(ignore: true)
-  _$$ErroroffersImplCopyWith<_$ErroroffersImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+// dart format on

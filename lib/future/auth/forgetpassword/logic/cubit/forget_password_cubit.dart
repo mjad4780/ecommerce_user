@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:ecommerce_user/core/networking/api_result.dart';
 
 import '../../../../../core/theming/styles.dart';
 import '../../data/for_get_password.dart';
@@ -28,8 +29,7 @@ class ForgetPasswordCubit extends Cubit<ForgetPasswordState> {
       response.when(success: (loginResponse) {
         emit(const ForgetPasswordState.successCheck());
       }, failure: (error) {
-        emit(ForgetPasswordState.errorCheck(
-            erorr: error.apiErrorModel.messege ?? ''));
+        emit(ForgetPasswordState.errorCheck(erorr: error.messege ?? ''));
       });
     } else {
       autovalidateMode = AutovalidateMode.always;
@@ -47,8 +47,7 @@ class ForgetPasswordCubit extends Cubit<ForgetPasswordState> {
       response.when(success: (loginResponse) {
         emit(const ForgetPasswordState.successrepassword());
       }, failure: (error) {
-        emit(ForgetPasswordState.errorrepassword(
-            erorr: error.apiErrorModel.messege ?? ''));
+        emit(ForgetPasswordState.errorrepassword(erorr: error.messege ?? ''));
       });
     } else {
       autovalidateMode = AutovalidateMode.always;
@@ -63,8 +62,7 @@ class ForgetPasswordCubit extends Cubit<ForgetPasswordState> {
     response.when(success: (loginResponse) {
       emit(const ForgetPasswordState.successveryfycode());
     }, failure: (error) {
-      emit(ForgetPasswordState.errorveryfycode(
-          erorr: error.apiErrorModel.messege ?? ''));
+      emit(ForgetPasswordState.errorveryfycode(erorr: error.messege ?? ''));
     });
   }
 

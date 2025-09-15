@@ -43,7 +43,7 @@ class _OnbordingScreenState extends State<OnbordingScreen> {
         child: Column(
           children: [
             Expanded(
-                flex: 3,
+                flex: 5,
                 child: PageBuilder(
                   pagecontroller: pageController,
                   onPageChanged: (int i) {

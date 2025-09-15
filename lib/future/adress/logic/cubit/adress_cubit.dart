@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:latlong2/latlong.dart';
+import 'package:ecommerce_user/core/networking/api_result.dart';
 
 import '../../../../model/adress_response/datum.dart';
 import 'adress_state.dart';
@@ -30,7 +31,7 @@ class AdressCubit extends Cubit<AdressState> {
       response.when(success: (responsehome) {
         emit(const AdressState.successAdd());
       }, failure: (error) {
-        emit(AdressState.errorAdd(erorr: error.apiErrorModel.messege ?? ''));
+        emit(AdressState.errorAdd(erorr: error.messege ?? ''));
       });
     }
   }
@@ -42,7 +43,7 @@ class AdressCubit extends Cubit<AdressState> {
     response.when(success: (loginResponse) {
       emit(AdressState.successGet(adressResponse: loginResponse));
     }, failure: (error) {
-      emit(AdressState.errorget(erorr: error.apiErrorModel.messege ?? ''));
+      emit(AdressState.errorget(erorr: error.messege ?? ''));
     });
   }
 
@@ -54,7 +55,7 @@ class AdressCubit extends Cubit<AdressState> {
     response.when(success: (loginResponse) {
       emit(const AdressState.successedit());
     }, failure: (error) {
-      emit(AdressState.erroredit(erorr: error.apiErrorModel.messege ?? ''));
+      emit(AdressState.erroredit(erorr: error.messege ?? ''));
     });
   }
 
@@ -66,7 +67,7 @@ class AdressCubit extends Cubit<AdressState> {
 
       emit(const AdressState.successdelete());
     }, failure: (error) {
-      emit(AdressState.errordelete(erorr: error.apiErrorModel.messege ?? ''));
+      emit(AdressState.errordelete(erorr: error.messege ?? ''));
     });
   }
 

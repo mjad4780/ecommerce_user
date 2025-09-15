@@ -3,7 +3,7 @@ part 'response_status.g.dart';
 
 @JsonSerializable()
 class ResponseStatus {
-  final int? status;
+  final String? status;
   final String? messege;
   ResponseStatus({
     required this.status,

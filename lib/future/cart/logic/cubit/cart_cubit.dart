@@ -1,3 +1,4 @@
+import 'package:ecommerce_user/core/networking/api_result.dart';
 import 'package:ecommerce_user/future/cart/data/repo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -27,7 +28,7 @@ class CartCubit extends Cubit<CartState> {
 
       emit(const CartState.successAdd());
     }, failure: (error) {
-      emit(CartState.errorAdd(erorr: error.apiErrorModel.messege ?? ''));
+      emit(CartState.errorAdd(erorr: error.messege ?? ''));
     });
   }
 
@@ -38,7 +39,7 @@ class CartCubit extends Cubit<CartState> {
     response.when(success: (responsehome) {
       emit(CartState.successGet(responsehome));
     }, failure: (error) {
-      emit(CartState.erorrGet(erorr: error.apiErrorModel.messege ?? ''));
+      emit(CartState.erorrGet(erorr: error.messege ?? ''));
     });
   }
 
@@ -51,7 +52,7 @@ class CartCubit extends Cubit<CartState> {
       await emitGetCart();
       emit(const CartState.successdelete());
     }, failure: (error) {
-      emit(CartState.erorrDelete(erorr: error.apiErrorModel.messege ?? ''));
+      emit(CartState.erorrDelete(erorr: error.messege ?? ''));
     });
   }
 

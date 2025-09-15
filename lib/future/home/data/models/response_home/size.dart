@@ -5,9 +5,9 @@ part 'size.g.dart';
 
 @JsonSerializable()
 class Size {
-  int? id;
+  String? id;
   String? size;
-  int? quantity;
+  String? quantity;
   String? color;
 
   Size({this.id, this.size, this.quantity, this.color});

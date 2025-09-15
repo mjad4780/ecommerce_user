@@ -1,6 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../data/repo.dart';
 import 'favorite_state.dart';
+import 'package:ecommerce_user/core/networking/api_result.dart';
 
 class FavoriteCubit extends Cubit<FavoriteState> {
   FavoriteCubit(this._favoriteRepo) : super(const FavoriteState.initial());
@@ -14,7 +15,7 @@ class FavoriteCubit extends Cubit<FavoriteState> {
     response.when(success: (responsehome) {
       emit(const FavoriteState.successAdd());
     }, failure: (error) {
-      emit(FavoriteState.erorrAdd(erorr: error.apiErrorModel.messege ?? ''));
+      emit(FavoriteState.erorrAdd(erorr: error.messege ?? ''));
     });
   }
 
@@ -25,7 +26,7 @@ class FavoriteCubit extends Cubit<FavoriteState> {
     response.when(success: (responsehome) {
       emit(FavoriteState.successGet(responsehome.item1view!));
     }, failure: (error) {
-      emit(FavoriteState.erorrGet(erorr: error.apiErrorModel.messege ?? ''));
+      emit(FavoriteState.erorrGet(erorr: error.messege ?? ''));
     });
   } //:deleteFavorite
 
@@ -36,7 +37,7 @@ class FavoriteCubit extends Cubit<FavoriteState> {
     response.when(success: (responsehome) async {
       emit(const FavoriteState.successDelete());
     }, failure: (error) {
-      emit(FavoriteState.erorrDelete(erorr: error.apiErrorModel.messege ?? ''));
+      emit(FavoriteState.erorrDelete(erorr: error.messege ?? ''));
     });
   }
 }

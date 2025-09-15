@@ -4,7 +4,6 @@ import 'package:ecommerce_user/future/auth/sign_up/logic/cubit/sign_up_cubit.dar
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/function/alert_dialog.dart';
 import '../../../../core/theming/styles.dart';
 
 class SignUpBlocListener extends StatelessWidget {
@@ -29,7 +28,6 @@ class SignUpBlocListener extends StatelessWidget {
           },
           success: () {
             context.pop();
-            showSuccessDialog(context, 'Signup Successful');
             context.push('/VerfyCodeScrean', arguments: {
               'email': context.read<SignUpCubit>().emailSignUp.text
             });

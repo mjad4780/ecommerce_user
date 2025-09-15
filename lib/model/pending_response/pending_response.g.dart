@@ -9,6 +9,7 @@ part of 'pending_response.dart';
 PendingResponse _$PendingResponseFromJson(Map<String, dynamic> json) =>
     PendingResponse(
       status: json['status'] as String?,
+      messege: json['messege'] as String?,
       data: (json['data'] as List<dynamic>?)
           ?.map((e) => Datum.fromJson(e as Map<String, dynamic>))
           .toList(),

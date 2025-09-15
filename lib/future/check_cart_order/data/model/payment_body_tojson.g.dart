@@ -15,7 +15,7 @@ PaymentBodyTojson _$PaymentBodyTojsonFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$PaymentBodyTojsonToJson(PaymentBodyTojson instance) =>
     <String, dynamic>{
-      'amount': '${instance.amount}00',
+      'amount': instance.amount,
       'currency': instance.currency,
       'customer': instance.customer,
     };

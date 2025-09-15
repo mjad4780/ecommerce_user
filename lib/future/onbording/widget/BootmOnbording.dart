@@ -16,7 +16,6 @@ class BootmOnbording extends StatelessWidget {
         FadeInDown(
           delay: const Duration(seconds: 1),
           child: SizedBox(
-            width: MediaQuery.sizeOf(context).width * 0.29,
             child: ElevatedButton(
                 onPressed: onPressed,
                 style: ElevatedButton.styleFrom(
@@ -25,7 +24,6 @@ class BootmOnbording extends StatelessWidget {
                   children: [
                     Text(
                       'Next',
-                      style: TextStyle(),
                     ),
                     Icon(Icons.keyboard_arrow_right)
                   ],

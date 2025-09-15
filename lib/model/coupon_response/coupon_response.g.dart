@@ -8,7 +8,7 @@ part of 'coupon_response.dart';
 
 CouponResponse _$CouponResponseFromJson(Map<String, dynamic> json) =>
     CouponResponse(
-      totalprice: (json['TotalPrice'] as num?)?.toInt(),
+      totalprice: (json['totalprice'] as num?)?.toInt(),
       data: json['data'] == null
           ? null
           : Data.fromJson(json['data'] as Map<String, dynamic>),

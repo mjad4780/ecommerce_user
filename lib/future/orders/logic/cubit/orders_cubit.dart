@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'package:ecommerce_user/core/networking/api_result.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -21,7 +22,7 @@ class OrdersCubit extends Cubit<OrdersState> {
     response.when(success: (responsehome) {
       emit(OrdersState.successGet(responsehome));
     }, failure: (error) {
-      emit(OrdersState.erorrGet(erorr: error.apiErrorModel.messege ?? ''));
+      emit(OrdersState.erorrGet(erorr: error.messege ?? ''));
     });
   }
 
@@ -32,7 +33,7 @@ class OrdersCubit extends Cubit<OrdersState> {
     response.when(success: (responsehome) {
       emit(OrdersState.successDetails(responseDetails: responsehome));
     }, failure: (error) {
-      emit(OrdersState.erorrDetails(erorr: error.apiErrorModel.messege ?? ''));
+      emit(OrdersState.erorrDetails(erorr: error.messege ?? ''));
     });
   } //:deleteOrders
 
@@ -43,7 +44,7 @@ class OrdersCubit extends Cubit<OrdersState> {
       await emitGetOrders();
       emit(const OrdersState.successdelete());
     }, failure: (error) {
-      emit(OrdersState.erorrdelete(erorr: error.apiErrorModel.messege ?? ''));
+      emit(OrdersState.erorrdelete(erorr: error.messege ?? ''));
     });
   } //:GetPeinding
 
@@ -53,7 +54,7 @@ class OrdersCubit extends Cubit<OrdersState> {
     response.when(success: (responsehome) {
       emit(OrdersState.successPeinding(responsehome));
     }, failure: (error) {
-      emit(OrdersState.erorrPeinding(erorr: error.apiErrorModel.messege ?? ''));
+      emit(OrdersState.erorrPeinding(erorr: error.messege ?? ''));
     });
   }
 }

@@ -37,7 +37,7 @@ class AdressState with _$AdressState {
   const factory AdressState.addMarker({required List<Marker> markers}) =
       AddMarker;
 
-  const factory AdressState.pushEdit() = pushEdit;
+  const factory AdressState.pushEdit() = PushEdit;
 
   ///:update latlng
   const factory AdressState.updateLatlng() = UpdateLatlng;

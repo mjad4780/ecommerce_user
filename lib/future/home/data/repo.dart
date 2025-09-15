@@ -22,6 +22,7 @@ class HomeRepo {
         "id": getIt<CacheHelper>().getData(key: 'id'),
       };
       final response = await _apiService.home(formDataPost(map));
+
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ErrorHandler.handle(e));
@@ -39,6 +40,7 @@ class HomeRepo {
 
     try {
       final response = await _apiService.search(formDataPost(map));
+
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ErrorHandler.handle(e));
@@ -53,6 +55,7 @@ class HomeRepo {
 
     try {
       final response = await _apiService.getNotification(formDataPost(map));
+
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ErrorHandler.handle(e));
@@ -63,6 +66,7 @@ class HomeRepo {
   Future<ApiResult<Item1view>> offers() async {
     try {
       final response = await _apiService.offers();
+
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ErrorHandler.handle(e));

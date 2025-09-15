@@ -1,3 +1,4 @@
+import 'package:ecommerce_user/core/networking/api_result.dart';
 import 'package:ecommerce_user/future/Book/data/repo/repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -17,7 +18,7 @@ class GetBooKCubit extends Cubit<GetBooKState> {
     response.when(success: (book) {
       emit(GetBooKState.ucces(book: book));
     }, failure: (error) {
-      emit(GetBooKState.erorr(erorr: error.apiErrorModel.messege ?? ''));
+      emit(GetBooKState.erorr(erorr: error.messege ?? ''));
     });
   }
 }

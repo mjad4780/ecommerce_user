@@ -32,7 +32,7 @@ class CustomItemCategories extends StatelessWidget {
                   style: TextStyles.textItemCategories,
                 )),
             BlocConsumer<ItemCategoriesCubit, ItemCategoriesState>(
-              buildWhen: (previous, current) => current is selectCategories,
+              buildWhen: (previous, current) => current is SelectCategories,
               listener: (context, state) {},
               builder: (context, state) {
                 return SliverPadding(
@@ -50,7 +50,7 @@ class CustomItemCategories extends StatelessWidget {
                           context
                               .read<ItemCategoriesCubit>()
                               .emitItemCategories(
-                                val.categoriesId!,
+                                int.parse(val.categoriesId!),
                               );
                         },
                       ),

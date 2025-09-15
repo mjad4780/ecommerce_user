@@ -60,9 +60,9 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
       child: Column(
         children: [
           AppTextFormField(
-            // autofillHints: const [
-            //   AutofillHints.email,
-            // ],
+            autofillHints: const [
+              AutofillHints.email,
+            ],
             hintText: 'Email',
             validator: (value) {
               if (value == null ||
@@ -75,9 +75,9 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
           ),
           verticalSpace(18),
           AppTextFormField(
-            // autofillHints: const [
-            //   AutofillHints.password,
-            // ],
+            autofillHints: const [
+              AutofillHints.password,
+            ],
             controller: passwordController,
             hintText: 'Password',
             isObscureText: isObscureText,
