@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:ecommerce_user/core/class/cache_helper.dart';
+import 'package:ecommerce_user/core/helpers/cache_helper.dart';
 import 'package:ecommerce_user/core/get_it/get_it.dart';
 
 import '../../model/message.dart';

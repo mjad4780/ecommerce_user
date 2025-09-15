@@ -14,32 +14,27 @@ class ProductGridView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverPadding(
-      padding: const EdgeInsets.all(10),
-      sliver: SliverGrid(
-        delegate: SliverChildBuilderDelegate(
-          (context, index) {
-            final product = items[index];
-            return GestureDetector(
-              onTap: () => Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => ProductDetailScreen(product),
-                ),
-              ),
-              child: ProductGridTile(
-                product: product,
-                index: index,
-              ),
-            );
-          },
-          childCount: items.length,
-        ),
+    return Padding(
+      padding: const EdgeInsets.all(11),
+      child: GridView.builder(
+        itemCount: items.length,
+        shrinkWrap: true,
+        physics: const ScrollPhysics(),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           childAspectRatio: 10 / 16,
           crossAxisCount: 2,
           mainAxisSpacing: 10,
           crossAxisSpacing: 10,
         ),
+        itemBuilder: (__, index) {
+          return GestureDetector(
+              onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => ProductDetailScreen(items[index]))),
+              child: ProductGridTile(
+                product: items[index],
+                index: index,
+              ));
+        },
       ),
     );
   }

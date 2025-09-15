@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dio/dio.dart';
-import 'package:ecommerce_user/future/book/data/repo/repo.dart';
-import 'package:ecommerce_user/future/book/logic/cubit/get_book_cubit.dart';
+import 'package:ecommerce_user/future/Book/data/repo/repo.dart';
 import 'package:ecommerce_user/future/archive/logic/cubit/archive_cubit.dart';
 import 'package:ecommerce_user/future/auth/sign_up/logic/cubit/sign_up_cubit.dart';
 import 'package:ecommerce_user/future/auth/verfyCode/data/data_verfycode.dart';
@@ -17,6 +16,7 @@ import 'package:get_it/get_it.dart';
 
 import '../../core/networking/api_service.dart';
 import '../../core/networking/dio_factory.dart';
+import '../../future/Book/logic/cubit/get_book_cubit.dart';
 import '../../future/adress/data/repo.dart';
 import '../../future/adress/logic/cubit/adress_cubit.dart';
 import '../../future/archive/data/repo.dart';
@@ -36,7 +36,7 @@ import '../../future/item_categories/logic/cubit/item_categories_cubit.dart';
 import '../../future/offers/data/repo.dart';
 import '../../future/orders/data/repo.dart';
 import '../../future/orders/logic/cubit/orders_cubit.dart';
-import '../class/cache_helper.dart';
+import '../helpers/cache_helper.dart';
 
 final getIt = GetIt.instance;
 void setupServise() {

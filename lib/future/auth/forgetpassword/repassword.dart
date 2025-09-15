@@ -1,6 +1,6 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:ecommerce_user/core/theming/colors.dart';
-import 'package:ecommerce_user/core/theming/styles.dart';
+import 'package:ecommerce_user/core/theming/theme/colors.dart';
+import 'package:ecommerce_user/core/theming/theme/styles.dart';
 import 'package:ecommerce_user/future/auth/forgetpassword/logic/cubit/forget_password_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

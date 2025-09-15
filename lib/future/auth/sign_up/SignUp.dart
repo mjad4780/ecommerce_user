@@ -6,7 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/helpers/spacing.dart';
-import '../../../core/theming/styles.dart';
+import '../../../core/theming/theme/styles.dart';
 import '../../../core/widgets/app_text_button.dart';
 import 'widget/emailAndPassword.dart';
 import 'widget/sign_up_bloc_listener.dart';

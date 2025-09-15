@@ -51,7 +51,7 @@ class _ViewBookBlocBuilderState extends State<ViewBookBlocBuilder> {
         } else if (state is Erorr) {
           return Text(state.erorr);
         } else {
-          return const CircularProgressIndicator();
+          return const Center(child: CircularProgressIndicator());
         }
       },
     );

@@ -4,12 +4,12 @@ import 'package:ecommerce_user/future/cart/logic/cubit/cart_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../core/function/function_api/ssend_list_api.dart';
-import '../../../core/theming/colors.dart';
+import '../../../core/function/ssend_list_api.dart';
+import '../../../core/theming/theme/colors.dart';
 import '../data/models/response_home/response_home.dart';
-import '../../../widget/carousel_slider.dart';
-import '../../../widget/horizondal_list.dart';
-import '../../../widget/product_rating_section.dart';
+import '../../../core/widgets/carousel_slider.dart';
+import '../../../core/widgets/horizondal_list.dart';
+import '../../../core/widgets/product_rating_section.dart';
 import '../../item_categories/widget/page_wrapper.dart';
 
 class ProductDetailScreen extends StatelessWidget {
@@ -161,8 +161,7 @@ class ProductDetailScreen extends StatelessWidget {
                                       await context
                                           .read<CartCubit>()
                                           .emitAddCart(
-                                              int.parse(product.itemId!),
-                                              context);
+                                              product.itemId!, context);
                                     }
                                   : null,
                               child: const Text("Add to cart",

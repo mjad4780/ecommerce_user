@@ -3,7 +3,7 @@ import 'package:ecommerce_user/future/home/logic/cubit/home_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/theming/colors.dart';
+import '../../../core/theming/theme/colors.dart';
 
 class CategoriesBlocBuilder extends StatelessWidget {
   const CategoriesBlocBuilder({super.key});

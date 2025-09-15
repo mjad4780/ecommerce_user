@@ -1,4 +1,4 @@
-import 'package:ecommerce_user/core/theming/colors.dart';
+import 'package:ecommerce_user/core/theming/theme/colors.dart';
 import 'package:flutter/material.dart';
 
 class ApplyCouponButton extends StatelessWidget {

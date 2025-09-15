@@ -1,4 +1,4 @@
-import '../../../../core/function/formDataPost.dart';
+import '../../../../core/function/send_form_map_post.dart';
 import '../../../../core/networking/api_error_handler.dart';
 import '../../../../core/networking/api_error_model.dart';
 import '../../../../core/networking/api_result.dart';

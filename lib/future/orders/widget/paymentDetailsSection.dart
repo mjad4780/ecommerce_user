@@ -1,9 +1,7 @@
-import '../../../core/theming/styles.dart';
+import '../../../core/theming/theme/styles.dart';
 import '../data/response_orders/datum.dart';
 import 'FormRow.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../utility/constants.dart';
 
 class PaymentDetailsSection extends StatelessWidget {
   const PaymentDetailsSection({super.key, required this.order});
@@ -12,7 +10,7 @@ class PaymentDetailsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(top: 20),
-      padding: const EdgeInsets.all(defaultPadding),
+      padding: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
         // color: secondaryColor,
         border: Border.all(color: Colors.blueAccent),

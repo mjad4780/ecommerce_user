@@ -1,13 +1,13 @@
 import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
 import 'package:ecommerce_user/core/get_it/get_it.dart';
-import 'package:ecommerce_user/core/theming/colors.dart';
+import 'package:ecommerce_user/core/theming/theme/colors.dart';
 import 'package:ecommerce_user/future/auth/Login/logic/cubit/login_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/helpers/spacing.dart';
-import '../../../core/theming/styles.dart';
+import '../../../core/theming/theme/styles.dart';
 import '../../../core/widgets/app_text_button.dart';
 
 import 'widget/emailAndPassword.dart';

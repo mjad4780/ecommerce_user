@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../core/animation/open_container_wrapper.dart';
-import '../../../core/theming/colors.dart';
+import '../../../core/theming/theme/colors.dart';
 import '../../item_categories/widget/app_bar_action_button.dart';
 import 'custom_search_bar.dart';
 import 'view_notification.dart';

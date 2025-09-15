@@ -1,4 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../../home/data/models/response_home/response_home.dart';
 import '../../data/repo.dart';
 import 'favorite_state.dart';
 import 'package:ecommerce_user/core/networking/api_result.dart';
@@ -6,7 +7,7 @@ import 'package:ecommerce_user/core/networking/api_result.dart';
 class FavoriteCubit extends Cubit<FavoriteState> {
   FavoriteCubit(this._favoriteRepo) : super(const FavoriteState.initial());
   final FavoriteRepo _favoriteRepo;
-  List itemid = [];
+  List<Item> favorites = [];
 
 //:AddFavorite
   emitAddFavorite(int id) async {
@@ -22,8 +23,11 @@ class FavoriteCubit extends Cubit<FavoriteState> {
   //:getFavorite
   emitgetFavorite() async {
     emit(const FavoriteState.loadingGet());
+    await Future.delayed(const Duration(seconds: 3));
+
     final response = await _favoriteRepo.getFavorite();
     response.when(success: (responsehome) {
+      favorites = responsehome.item1view?.data ?? [];
       emit(FavoriteState.successGet(responsehome.item1view!));
     }, failure: (error) {
       emit(FavoriteState.erorrGet(erorr: error.messege ?? ''));
@@ -31,6 +35,11 @@ class FavoriteCubit extends Cubit<FavoriteState> {
   } //:deleteFavorite
 
   emitdeleteFavorite(int id) async {
+    // final oldList = List<Item>.from(favorites);
+
+    // شيل المنتج مؤقتاً من الليست (Optimistic Update)
+    favorites.removeWhere((item) => item.itemId == id);
+    emit(SuccessGet(Item1view(data: favorites)));
     emit(const FavoriteState.loadingDelete());
     final response = await _favoriteRepo.deleteFavorite(id);
 

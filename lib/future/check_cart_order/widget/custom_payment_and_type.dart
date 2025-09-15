@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../widget/custom_dropdown.dart';
+import '../../../core/widgets/custom_dropdown.dart';
 import '../logic/cubit/check_cart_cubit.dart';
 import '../logic/cubit/check_cart_state.dart';
 

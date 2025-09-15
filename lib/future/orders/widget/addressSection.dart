@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/theming/styles.dart';
-import '../../../../utility/constants.dart';
+import '../../../core/theming/theme/styles.dart';
 import '../data/response_orders/datum.dart';
 import 'FormRow.dart';
 
@@ -12,7 +11,7 @@ class AddressSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(top: 20),
-      padding: const EdgeInsets.all(defaultPadding),
+      padding: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(

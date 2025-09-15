@@ -5,8 +5,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../core/helpers/spacing.dart';
 
-import '../../../../utility/constants.dart';
-
 import 'package:flutter/material.dart';
 
 import 'FormRow.dart';
@@ -24,7 +22,7 @@ class CustemSubmint extends StatelessWidget {
     return SingleChildScrollView(
       child: Container(
           color: Colors.white,
-          padding: const EdgeInsets.all(defaultPadding),
+          padding: const EdgeInsets.all(16.0),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [

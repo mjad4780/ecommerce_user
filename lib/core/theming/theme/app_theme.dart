@@ -1,9 +1,9 @@
-import 'package:ecommerce_user/core/theming/colors.dart';
+import 'package:ecommerce_user/core/theming/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../colors_dark.dart';
-import '../colors_light.dart';
+import '../../util/colors_dark.dart';
+import '../../util/colors_light.dart';
 import 'color_extension.dart';
 
 ThemeData themeDark() {
@@ -35,6 +35,7 @@ ThemeData themeLight() {
         fontWeight: FontWeight.bold,
       ),
     ),
+    // primaryColor: ColorsLight.mainColor,
     scaffoldBackgroundColor: ColorsLight.mainColor,
     extensions: const <ThemeExtension<dynamic>>[
       MyColors.light,

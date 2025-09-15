@@ -1,7 +1,7 @@
 import 'package:ecommerce_user/future/onbording/widget/page_builder.dart';
 import 'package:flutter/material.dart';
 
-import '../../core/class/cache_helper.dart';
+import '../../core/helpers/cache_helper.dart';
 import '../../core/extensions/extention_navigator.dart';
 import '../../core/get_it/get_it.dart';
 import '../../model/onbording.dart';

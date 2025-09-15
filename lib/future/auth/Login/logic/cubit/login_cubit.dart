@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../../../core/class/cache_helper.dart';
+import '../../../../../core/helpers/cache_helper.dart';
 import '../../../../../core/get_it/get_it.dart';
 import '../../data/data_login.dart';
 

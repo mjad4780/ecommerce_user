@@ -1,3 +1,4 @@
+import 'package:ecommerce_user/core/theming/theme/colors.dart';
 import 'package:flutter/material.dart';
 
 class FailerWidget extends StatelessWidget {
@@ -20,7 +21,7 @@ class FailerWidget extends StatelessWidget {
         children: [
           Icon(
             icon,
-            color: Colors.blueAccent,
+            color: AppColor.darkOrange,
             size: 90,
           ),
           const SizedBox(height: 16),
@@ -28,7 +29,7 @@ class FailerWidget extends StatelessWidget {
             messege,
             style: const TextStyle(
               fontSize: 24,
-              color: Colors.blueAccent,
+              color: AppColor.darkOrange,
             ),
             textAlign: TextAlign.center,
           ),
@@ -43,7 +44,7 @@ class FailerWidget extends StatelessWidget {
                   ),
                   label: const Text('Try Again'),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blueAccent,
+                    backgroundColor: AppColor.darkOrange,
                     foregroundColor: Colors.white,
                     padding: const EdgeInsets.symmetric(
                       horizontal: 24,

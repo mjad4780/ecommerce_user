@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/class/cache_helper.dart';
+import '../../../../core/helpers/cache_helper.dart';
 import '../../../../core/get_it/get_it.dart';
 import 'chat_bubble.dart';
 

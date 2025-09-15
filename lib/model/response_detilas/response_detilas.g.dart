@@ -13,7 +13,6 @@ ResponseDetails _$ResponseDetailsFromJson(Map<String, dynamic> json) =>
       data: (json['data'] as List<dynamic>?)
           ?.map((e) => DataDetails.fromJson(e as Map<String, dynamic>))
           .toList(),
-      messege: json['messege'] as String?,
     );
 
 Map<String, dynamic> _$ResponseDetailsToJson(ResponseDetails instance) =>

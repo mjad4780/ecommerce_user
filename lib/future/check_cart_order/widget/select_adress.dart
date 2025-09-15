@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../core/get_it/get_it.dart';
-import '../../../core/theming/colors.dart';
+import '../../../core/theming/theme/colors.dart';
 import '../../../model/adress_response/datum.dart';
-import '../../../widget/custom_dropdown.dart';
+import '../../../core/widgets/custom_dropdown.dart';
 import '../../adress/logic/cubit/adress_cubit.dart';
 import '../../adress/logic/cubit/adress_state.dart';
 import '../logic/cubit/check_cart_cubit.dart';

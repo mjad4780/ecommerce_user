@@ -13,7 +13,6 @@ ResponseOrders _$ResponseOrdersFromJson(Map<String, dynamic> json) =>
       data: (json['data'] as List<dynamic>?)
           ?.map((e) => Datum.fromJson(e as Map<String, dynamic>))
           .toList(),
-      messege: json['messege'] as String?,
     );
 
 Map<String, dynamic> _$ResponseOrdersToJson(ResponseOrders instance) =>

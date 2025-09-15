@@ -1,5 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:ecommerce_user/core/theming/colors.dart';
+import 'package:ecommerce_user/core/theming/theme/colors.dart';
 import 'package:ecommerce_user/future/favorite/logic/cubit/favorite_cubit.dart';
 import 'package:ecommerce_user/future/favorite/logic/cubit/favorite_state.dart';
 import 'package:flutter/material.dart';
@@ -130,9 +130,23 @@ class IconFavorite extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<FavoriteCubit, FavoriteState>(
+      listenWhen: (previous, current) =>
+          current is SuccessDelete ||
+          current is SuccessAdd ||
+          current is ErorrAdd ||
+          current is ErorrDelete,
+      listener: (context, state) {
+        if (state is ErorrDelete || state is ErorrAdd) {
+          // لو حصل فشل رجّع التغيير
+          product.favorite = product.favorite == 1 ? 0 : 1;
+
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text("حدث خطأ، حاول مرة أخرى")),
+          );
+        }
+      },
       buildWhen: (previous, current) =>
           current is SuccessDelete || current is SuccessAdd,
-      listener: (context, state) {},
       builder: (context, state) {
         return IconButton(
           icon: Icon(
@@ -141,24 +155,22 @@ class IconFavorite extends StatelessWidget {
                 product.favorite == 1 ? AppColor.red : const Color(0xFFA6A3A0),
           ),
           onPressed: () {
-            selectFsavorite(context);
+            _toggleFavorite(context);
           },
         );
       },
     );
   }
 
-  void selectFsavorite(BuildContext context) async {
-    //   if (product.favorite == 1) {
-    //     await context.read<FavoriteCubit>().emitdeleteFavorite(product.itemId!);
-    //     product.favorite = 0;
-    //     if (product.notfavorite == 1) {
-    //       // ignore: use_build_context_synchronously
-    //       context.read<FavoriteCubit>().emitgetFavorite();
-    //     }
-    //   } else {
-    //     context.read<FavoriteCubit>().emitAddFavorite(product.itemId!);
-    //     product.favorite = 1;
-    //   }
+  void _toggleFavorite(BuildContext context) {
+    if (product.favorite == 1) {
+      // Optimistic update
+      product.favorite = 0;
+      context.read<FavoriteCubit>().emitdeleteFavorite(product.itemId!);
+    } else {
+      // Optimistic update
+      product.favorite = 1;
+      context.read<FavoriteCubit>().emitAddFavorite(product.itemId!);
+    }
   }
 }

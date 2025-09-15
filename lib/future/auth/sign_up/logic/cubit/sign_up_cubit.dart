@@ -5,7 +5,7 @@ import 'package:ecommerce_user/core/networking/api_result.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../../../core/class/cache_helper.dart';
+import '../../../../../core/helpers/cache_helper.dart';
 import '../../../../../core/get_it/get_it.dart';
 import '../../data/data_sigin_up.dart';
 

@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
 
-import '../../../widget/compleate_order_button.dart';
-import '../../../widget/custom_text_field.dart';
+import '../../../core/widgets/compleate_order_button.dart';
+import '../../../core/widgets/custom_text_field.dart';
 import '../data/model/payment_body_tojson.dart';
 import '../logic/cubit/check_cart_cubit.dart';
 import '../logic/cubit/check_cart_state.dart';

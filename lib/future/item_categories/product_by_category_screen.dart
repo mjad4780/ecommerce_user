@@ -22,7 +22,7 @@ class ProductByCategoryScreen extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) => getIt<ItemCategoriesCubit>()
-            ..emitItemCategories(int.parse(category.categoriesId!))
+            ..emitItemCategories(category.categoriesId!)
             ..selectitemCategories(category),
         ),
         BlocProvider(

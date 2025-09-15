@@ -1,4 +1,4 @@
-import 'package:ecommerce_user/core/errors/failer_widget.dart';
+import 'package:ecommerce_user/core/widgets/failer_widget.dart';
 import 'package:ecommerce_user/core/widgets/loading.dart';
 import 'package:ecommerce_user/future/home/logic/cubit/home_cubit.dart';
 import 'package:ecommerce_user/future/home/logic/cubit/home_state.dart';
@@ -41,19 +41,18 @@ class HomeBlocBuilder extends StatelessWidget {
   // Helper methods for cleaner widget building
 
   Widget _buildSkeleton() {
-    return const Center(
-      child: CircularProgressIndicator(),
-    ); //  LoadingWidget(
-    //   child: SuccessDataApi(
-    //       responseHome: ResponseHome(
-    //           item1view: Item1view(data: [Item(), Item(), Item(), Item()]),
-    //           setting: SettingResponse(data: [
-    //             Setting(),
-    //             Setting(),
-    //             Setting(),
-    //           ]),
-    //           categories: CategoriesResponse(
-    //               data: [Category(), Category(), Category()]))),
-    // );
+    return LoadingWidget(
+      child: SuccessDataApi(
+          isloading: true,
+          responseHome: ResponseHome(
+              item1view: Item1view(data: [Item(), Item(), Item(), Item()]),
+              setting: SettingResponse(data: [
+                Setting(),
+                Setting(),
+                Setting(),
+              ]),
+              categories: CategoriesResponse(
+                  data: [Category(), Category(), Category()]))),
+    );
   }
 }

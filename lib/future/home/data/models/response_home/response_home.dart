@@ -124,38 +124,48 @@ class Item1view {
 
   Item1view({this.data});
 
-  factory Item1view.fromJson(Map<String, dynamic> json) {
-    return Item1view(
-      data: json['data'] != null
-          ? (json['data'] as List<dynamic>)
-              .map((e) => Item.fromJson(e))
-              .toList()
-          : null,
-    );
+  factory Item1view.fromJson(dynamic json) {
+    // هنا بنشيك لو json عبارة عن List
+    if (json is List) {
+      return Item1view(
+        data: json.map((e) => Item.fromJson(e)).toList(),
+      );
+    } else {
+      return Item1view(
+        data: json['data'] != null
+            ? (json['data'] as List<dynamic>)
+                .map((e) => Item.fromJson(e))
+                .toList()
+            : null,
+      );
+    }
   }
 }
 
 class Item {
-  final int? itemId;
-  final String? itemName;
-  final String? itemNameAr;
-  final String? itemDecs;
-  final String? itemDecsAr;
-  final String? itemImage;
-  final int? itemCount;
-  final int? itemActive;
-  final int? itemPrice;
-  final int? itemDiscount;
-  final String? itemData;
-  final int? itemCategories;
-  final int? favorite;
-  final int? categoriesId;
-  final String? categoriesName;
-  final int? itempriceDiscount;
-  final List<String>? images;
-  final List<Size>? size;
+  int? itemId;
+  String? itemName;
+  String? itemNameAr;
+  String? itemDecs;
+  String? itemDecsAr;
+  String? itemImage;
+  int? itemCount;
+  int? itemActive;
+  int? itemPrice;
+  int? itemDiscount;
+  String? itemData;
+  int? itemCategories;
+  int? favorite;
+  int? notFavorite;
+
+  int? categoriesId;
+  String? categoriesName;
+  int? itempriceDiscount;
+  List<String>? images;
+  List<Size>? size;
 
   Item({
+    this.notFavorite,
     this.itemId,
     this.itemName,
     this.itemNameAr,
@@ -191,6 +201,7 @@ class Item {
       itemData: json['item_data'],
       itemCategories: json['item_categories'],
       favorite: json['favorite'],
+      notFavorite: json['not_favorite'],
       categoriesId: json['categories_id'],
       categoriesName: json['categories_name'],
       itempriceDiscount: json['itemprice_discount'],

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../../utility/constants.dart';
 import '../../../model/response_detilas/datum.dart';
 
 class ItemSection extends StatelessWidget {
@@ -16,7 +15,7 @@ class ItemSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(top: 20),
-      padding: const EdgeInsets.all(defaultPadding),
+      padding: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
         // color: secondaryColor,
         border: Border.all(color: Colors.blueAccent),

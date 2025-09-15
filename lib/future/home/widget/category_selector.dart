@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:ecommerce_user/core/helpers/spacing.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/animation/open_container_wrapper.dart';
@@ -16,73 +17,71 @@ class CategorySelector extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverToBoxAdapter(
-      child: SizedBox(
-        height: MediaQuery.of(context).size.height * 0.12,
-        child: ListView.builder(
-          scrollDirection: Axis.horizontal,
-          itemCount: categories.length,
-          itemBuilder: (context, index) {
-            final category = categories[index];
+    return SizedBox(
+      height: MediaQuery.of(context).size.height * 0.11,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: categories.length,
+        itemBuilder: (context, index) {
+          final category = categories[index];
 
-            return AnimatedContainer(
-              duration: const Duration(milliseconds: 400),
-              curve: Curves.easeOut,
-              margin: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
-              child: OpenContainerWrapper(
-                nextScresan: ProductByCategoryScreen(
-                  category: category,
-                  listCategories: categories,
+          return AnimatedContainer(
+            duration: const Duration(milliseconds: 400),
+            curve: Curves.easeOut,
+            margin: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
+            child: OpenContainerWrapper(
+              nextScresan: ProductByCategoryScreen(
+                category: category,
+                listCategories: categories,
+              ),
+              child: Container(
+                width: width(context) / 6,
+                margin: const EdgeInsets.symmetric(horizontal: 8),
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                decoration: BoxDecoration(
+                  // color: Colors.white,
+                  borderRadius: BorderRadius.circular(14),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.white.withOpacity(0.2),
+                      blurRadius: 6,
+                      offset: const Offset(2, 4),
+                    ),
+                  ],
                 ),
-                child: Container(
-                  width: 80,
-                  margin: const EdgeInsets.symmetric(horizontal: 8),
-                  padding: const EdgeInsets.symmetric(vertical: 10),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(14),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
-                        blurRadius: 6,
-                        offset: const Offset(2, 4),
-                      ),
-                    ],
-                  ),
-                  alignment: Alignment.center,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      if (category.categoriesImage != null)
-                        Expanded(
-                          child: Hero(
-                            tag: "cat_${category.categoriesId}",
-                            child: CachedNetworkImage(
-                              imageUrl:
-                                  '${ApiConstants.imageCat}/${category.categoriesImage}',
-                              width: 60,
-                              height: 60,
-                              fit: BoxFit.contain,
-                            ),
+                alignment: Alignment.center,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    if (category.categoriesImage != null)
+                      Expanded(
+                        child: Hero(
+                          tag: "cat_${category.categoriesId}",
+                          child: CachedNetworkImage(
+                            imageUrl:
+                                '${ApiConstants.imageCat}/${category.categoriesImage}',
+                            width: 60,
+                            height: 60,
+                            fit: BoxFit.contain,
                           ),
                         ),
-                      const SizedBox(height: 4),
-                      Text(
-                        category.categoriesName ?? '',
-                        style: const TextStyle(
-                          color: Colors.black87,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w500,
-                        ),
-                        overflow: TextOverflow.ellipsis,
                       ),
-                    ],
-                  ),
+                    const SizedBox(height: 4),
+                    Text(
+                      category.categoriesName ?? '',
+                      style: const TextStyle(
+                        color: Colors.black87,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ],
                 ),
               ),
-            );
-          },
-        ),
+            ),
+          );
+        },
       ),
     );
   }

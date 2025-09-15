@@ -52,17 +52,20 @@ class _FeaturedBooksListViewState extends State<FeaturedBooksListView> {
     return SizedBox(
       height: MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width / 1.5,
-      child: ListView.builder(
-        controller: _scrollController,
-        itemCount: widget.books.length,
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 15),
-            child: CustomBookImage(
-              image: widget.books[index].image ?? '',
-            ),
-          );
-        },
+      child: RefreshIndicator(
+        onRefresh: () => context.read<GetBooKCubit>().emitLoginStates(0),
+        child: ListView.builder(
+          controller: _scrollController,
+          itemCount: widget.books.length,
+          itemBuilder: (context, index) {
+            return Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 15),
+              child: CustomBookImage(
+                image: widget.books[index].image ?? '',
+              ),
+            );
+          },
+        ),
       ),
     );
   }

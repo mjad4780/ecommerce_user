@@ -1,3 +1,4 @@
+import 'package:ecommerce_user/core/widgets/loading.dart';
 import 'package:flutter/material.dart';
 
 import '../data/models/response_home/response_home.dart';
@@ -10,69 +11,91 @@ class SuccessDataApi extends StatelessWidget {
   const SuccessDataApi({
     super.key,
     required this.responseHome,
+    this.isloading = false,
   });
-
+  final bool isloading;
   final ResponseHome responseHome;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: CustomScrollView(slivers: [
+    return CustomScrollView(
+      slivers: [
         SliverToBoxAdapter(
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "Hi",
-                  style: Theme.of(context).textTheme.displayLarge,
-                ),
-                const SizedBox(height: 8),
-                Text(
-                  "Let’s get something?",
-                  style: Theme.of(context).textTheme.headlineSmall,
-                ),
-              ],
+          child: LoadingWidget(
+            isloading: isloading,
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Hi",
+                    style: Theme.of(context).textTheme.displayLarge,
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    "Let’s get something?",
+                    style: Theme.of(context).textTheme.headlineSmall,
+                  ),
+                ],
+              ),
             ),
           ),
         ),
 
-        const SliverToBoxAdapter(child: CustomAppBar()),
+        SliverToBoxAdapter(
+            child: LoadingWidget(
+                isloading: isloading, child: const CustomAppBar())),
         // Poster Section
-        PosterSection(
-          posters: responseHome.setting?.data ?? [],
+        SliverToBoxAdapter(
+          child: LoadingWidget(
+              isloading: isloading,
+              child: PosterSection(
+                isloading: isloading,
+                posters: responseHome.setting?.data ?? [],
+              )),
         ),
 
         // Top Categories
         SliverToBoxAdapter(
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Text(
-              "Top Categories",
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ),
+          child: LoadingWidget(
+              isloading: isloading,
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Text(
+                  "Top Categories",
+                  style: Theme.of(context).textTheme.headlineMedium,
+                ),
+              )),
         ),
-        CategorySelector(
-          categories: responseHome.categories?.data ?? [],
+        SliverToBoxAdapter(
+          child: LoadingWidget(
+              isloading: isloading,
+              child: CategorySelector(
+                categories: responseHome.categories?.data ?? [],
+              )),
         ),
 
         // Top Products
         SliverToBoxAdapter(
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Text(
-              "Top Products",
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ),
+          child: LoadingWidget(
+              isloading: isloading,
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Text(
+                  "Top Products",
+                  style: Theme.of(context).textTheme.headlineMedium,
+                ),
+              )),
         ),
 
-        ProductGridView(
-          items: responseHome.item1view?.data ?? [],
-        ),
-      ]),
+        SliverToBoxAdapter(
+            child: LoadingWidget(
+                isloading: isloading,
+                child: ProductGridView(
+                  items: responseHome.item1view?.data ?? [],
+                ))),
+      ],
     );
   }
 }

@@ -1,4 +1,4 @@
-import 'package:ecommerce_user/core/theming/colors.dart';
+import 'package:ecommerce_user/core/theming/theme/colors.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -9,6 +9,12 @@ class TextStyles {
   static TextStyle textStyle18 = const TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.w600,
+  );
+
+  static TextStyle textStyleAppBar = const TextStyle(
+    color: AppColor.darkOrange,
+    fontSize: 22,
+    fontWeight: FontWeight.bold,
   );
   static TextStyle textStyle20 = const TextStyle(
     fontSize: 20,

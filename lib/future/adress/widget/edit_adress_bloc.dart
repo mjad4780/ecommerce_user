@@ -4,7 +4,7 @@ import 'package:ecommerce_user/future/adress/logic/cubit/adress_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/theming/styles.dart';
+import '../../../core/theming/theme/styles.dart';
 
 class EditAdressBlocListener extends StatelessWidget {
   const EditAdressBlocListener({super.key});

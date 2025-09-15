@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ecommerce_user/future/orders/logic/cubit/orders_cubit.dart';
 import 'package:ecommerce_user/future/orders/logic/cubit/orders_state.dart';
 
-import '../../../../core/theming/colors.dart';
+import '../../../core/theming/theme/colors.dart';
 import 'itemsSection.dart';
 
 class DetailsBlocBuilder extends StatelessWidget {

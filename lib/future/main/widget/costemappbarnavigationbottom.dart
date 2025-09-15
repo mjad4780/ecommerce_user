@@ -1,48 +1,48 @@
-import 'package:ecommerce_user/future/home/logic/cubit/home_state.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../home/logic/cubit/home_cubit.dart';
 import '../model/modelBottomNavigation.dart';
 import 'CostemBottomNavigation.dart';
 
-class CustemAppbarNavigationBottom extends StatelessWidget {
-  const CustemAppbarNavigationBottom({super.key});
+class CustemAppbarNavigationBottom extends StatefulWidget {
+  const CustemAppbarNavigationBottom({super.key, required this.onItemTapped});
+  final ValueChanged<int> onItemTapped;
+
+  @override
+  State<CustemAppbarNavigationBottom> createState() =>
+      _CustemAppbarNavigationBottomState();
+}
+
+class _CustemAppbarNavigationBottomState
+    extends State<CustemAppbarNavigationBottom> {
+  int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
       padding: const EdgeInsets.all(3.5),
-      height: 70,
+      height: 60,
       shape: const CircularNotchedRectangle(),
-      notchMargin: 5,
+      notchMargin: 8,
       surfaceTintColor: Colors.black,
       child: Row(
         children: [
-          ...List.generate(context.read<HomeCubit>().buttompage.length + 1,
-              (index) {
+          ...List.generate(5, (index) {
             int i = index > 2 ? index - 1 : index;
             return index == 2
                 ? const Spacer()
-                : BlocBuilder<HomeCubit, HomeState>(builder: (context, state) {
-                    return state is StateBottomNavigationBar
-                        ? custembutom(
-                            i, context, context.read<HomeCubit>().currentPage)
-                        : custembutom(i, context, 0);
-                  });
+                : CostemBottomNavigation(
+                    iconData: bottomNavigation[i].iconData,
+                    text: bottomNavigation[i].title,
+                    onPressed: () {
+                      setState(() {
+                        selectedIndex = i; // ✅ هنا التعديل
+                      });
+                      widget.onItemTapped(selectedIndex);
+                    },
+                    active: selectedIndex == i ? true : false);
           })
         ],
       ),
     );
-  }
-
-  CostemBottomNavigation custembutom(int i, BuildContext context, int page) {
-    return CostemBottomNavigation(
-        iconData: bottomNavigation[i].iconData,
-        text: bottomNavigation[i].title,
-        onPressed: () {
-          context.read<HomeCubit>().emitCurrentPage(i);
-        },
-        active: page == i ? true : false);
   }
 }

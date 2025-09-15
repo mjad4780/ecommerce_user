@@ -7,8 +7,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // import 'package:flutter_stripe/flutter_stripe.dart';
 
 // import 'package:onesignal_flutter/onesignal_flutter.dart';
-import 'core/class/cache_helper.dart';
-import 'core/class/observer.dart';
+import 'core/helpers/cache_helper.dart';
+import 'core/helpers/observer.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'core/get_it/get_it.dart';
 import 'app/ecommerce.dart';

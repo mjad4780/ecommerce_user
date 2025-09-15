@@ -3,7 +3,7 @@ import 'package:ecommerce_user/future/orders/logic/cubit/orders_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/theming/colors.dart';
+import '../../../core/theming/theme/colors.dart';
 import 'custom_product_orders.dart';
 
 class OrdersBlocBuilder extends StatelessWidget {
