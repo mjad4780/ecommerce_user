@@ -839,7 +839,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/get_notification.php',
+            'http://10.0.2.2/e-ecommerse/admin/notification/get_notification.php',
             queryParameters: queryParameters,
             data: _data,
           )

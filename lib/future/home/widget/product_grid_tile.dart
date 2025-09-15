@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
 import 'package:ecommerce_user/core/theming/theme/colors.dart';
 import 'package:ecommerce_user/future/favorite/logic/cubit/favorite_cubit.dart';
 import 'package:ecommerce_user/future/favorite/logic/cubit/favorite_state.dart';
@@ -41,9 +42,10 @@ class ProductGridTile extends StatelessWidget {
                 ),
               ),
             ),
-            IconFavorite(
-              product: product,
-            )
+            context.currentRoute == '/Search' ||
+                    context.currentRoute.startsWith('/Search')
+                ? const SizedBox.shrink()
+                : IconFavorite(product: product)
           ],
         ),
       ),

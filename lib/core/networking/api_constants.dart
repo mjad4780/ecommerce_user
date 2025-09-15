@@ -58,7 +58,8 @@ class ApiConstants {
       'https://www.googleapis.com/books/v1/volumes?Filtering=free-ebooks&q=programming&startIndex={pageNumber * 10}';
 
   ////////////////admin////////////
-  static const String getnotification = '$baseUrl/get_notification.php';
+  static const String getnotification =
+      '$baseUrl/admin/notification/get_notification.php';
 
   ////////////////payment////////////
 

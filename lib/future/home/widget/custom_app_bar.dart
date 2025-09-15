@@ -1,13 +1,10 @@
 import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
 
-import 'package:ecommerce_user/future/home/logic/cubit/home_cubit.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../core/animation/open_container_wrapper.dart';
 import '../../../core/theming/theme/colors.dart';
 import '../../item_categories/widget/app_bar_action_button.dart';
-import 'custom_search_bar.dart';
 import 'view_notification.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -22,12 +19,46 @@ class CustomAppBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Expanded(
-            child: CustomSearchBar(
-              controller: context.read<HomeCubit>().search,
-              onChanged: (val) {
-                context.read<HomeCubit>().emitSearch();
-              },
+            child: GestureDetector(
+              onTap: () => context.push('/Search'),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.grey[200],
+                ),
+                height: 50,
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: FocusScope(
+                  node: FocusScopeNode(),
+                  child: const Row(
+                    children: [
+                      Icon(Icons.search),
+                      SizedBox(width: 10),
+                      Text('Search...')
+                      // Expanded(
+                      //   child: TextField(
+                      //     focusNode: _focusNode,
+                      //     controller: widget.controller,
+                      //     decoration: const InputDecoration(
+                      //       hintText: 'Search...',
+                      //       border: InputBorder.none,
+                      //     ),
+                      //     autofocus: false,
+                      //     onChanged: widget.onChanged,
+                      //   ),
+                      // ),
+                    ],
+                  ),
+                ),
+              ),
             ),
+
+            //  CustomSearchBar(
+            //   controller: context.read<HomeCubit>().search,
+            //   onChanged: (val) {
+            //     context.read<HomeCubit>().emitSearch();
+            //   },
+            // ),
           ),
           AppBarActionButton(
             icon: Icons.chat,

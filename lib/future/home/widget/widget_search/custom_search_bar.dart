@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 class CustomSearchBar extends StatefulWidget {
+  final TextEditingController controller;
   final void Function(String)? onChanged;
 
   const CustomSearchBar({
     super.key,
+    required this.controller,
     this.onChanged,
   });
 
@@ -15,12 +17,10 @@ class CustomSearchBar extends StatefulWidget {
 class CustomSearchBarState extends State<CustomSearchBar> {
   bool isExpanded = false;
   final FocusNode _focusNode = FocusNode();
-  TextEditingController controller = TextEditingController();
 
   @override
   void dispose() {
     _focusNode.dispose();
-    controller.dispose();
     super.dispose();
   }
 
@@ -51,7 +51,7 @@ class CustomSearchBarState extends State<CustomSearchBar> {
               Expanded(
                 child: TextField(
                   focusNode: _focusNode,
-                  controller: controller,
+                  controller: widget.controller,
                   decoration: const InputDecoration(
                     hintText: 'Search...',
                     border: InputBorder.none,
@@ -62,7 +62,7 @@ class CustomSearchBarState extends State<CustomSearchBar> {
               ),
               GestureDetector(
                 onTap: () {
-                  controller.clear();
+                  widget.controller.clear();
                   _focusNode.unfocus();
                 },
                 child: const Icon(Icons.close),

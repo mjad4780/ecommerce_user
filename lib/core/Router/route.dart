@@ -1,5 +1,6 @@
 import 'package:ecommerce_user/future/auth/forgetpassword/check_email.dart';
 import 'package:ecommerce_user/future/home/home.dart';
+import 'package:ecommerce_user/future/home/search_screen.dart';
 import 'package:go_router/go_router.dart';
 import '../../future/main/main_screan.dart';
 import '../../future/adress/adress.dart';
@@ -64,6 +65,10 @@ final GoRouter router = GoRouter(routes: [
       path: "/Cart",
       pageBuilder: (context, state) =>
           myCustomtransitionPage(const Cart(), state)),
+  GoRoute(
+      path: "/Search",
+      pageBuilder: (context, state) =>
+          myCustomtransitionPage(const SearchScreen(), state)),
   GoRoute(
       path: "/MyAddressPage",
       pageBuilder: (context, state) =>

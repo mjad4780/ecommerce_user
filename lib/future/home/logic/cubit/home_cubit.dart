@@ -1,3 +1,4 @@
+import 'package:ecommerce_user/future/home/data/models/response_home/response_home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
@@ -38,9 +39,11 @@ class HomeCubit extends Cubit<HomeState> {
   }
 
   ///:search
-  emitSearch() async {
+  emitSearch(String query) async {
     emit(const HomeState.loadingsearch());
-    final response = await homeRepo.search(search.text);
+    await Future.delayed(const Duration(seconds: 3)); // Mock API Delay
+
+    final response = await homeRepo.search(query);
     response.when(success: (loginResponse) {
       emit(HomeState.successSearch(responseItems: loginResponse));
     }, failure: (error) {
@@ -71,5 +74,9 @@ class HomeCubit extends Cubit<HomeState> {
     }
 
     return await Geolocator.getCurrentPosition();
+  }
+
+  void clearSearchResults() {
+    emit(HomeState.successSearch(responseItems: Item1view(data: [])));
   }
 }

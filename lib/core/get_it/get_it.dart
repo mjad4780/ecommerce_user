@@ -85,11 +85,11 @@ void setupServise() {
 
   // Favorite
   getIt.registerLazySingleton<FavoriteRepo>(() => FavoriteRepo(getIt()));
-  getIt.registerFactory<FavoriteCubit>(() => FavoriteCubit(getIt()));
+  getIt.registerLazySingleton<FavoriteCubit>(() => FavoriteCubit(getIt()));
 
   // home
   getIt.registerLazySingleton<HomeRepo>(() => HomeRepo(getIt()));
-  getIt.registerFactory<HomeCubit>(() => HomeCubit(getIt()));
+  getIt.registerLazySingleton<HomeCubit>(() => HomeCubit(getIt()));
   // itemCategories
   getIt.registerLazySingleton<ItemCategoriesRepo>(
       () => ItemCategoriesRepo(getIt()));
