@@ -2,7 +2,7 @@ import 'package:ecommerce_user/future/item_categories/logic/cubit/item_categorie
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../core/theming/theme/styles.dart';
+import '../../../core/theme/styles.dart';
 import '../../../core/widgets/horizondal_list.dart';
 import '../../home/data/models/response_home/response_home.dart';
 import '../logic/cubit/item_categories_cubit.dart';

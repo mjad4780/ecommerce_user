@@ -1,4 +1,6 @@
+import 'package:ecommerce_user/future/chat/cubit/chat_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../pages/chat_page.dart';
 import 'my_textfield.dart';
@@ -35,8 +37,9 @@ class BuildUserInput extends StatelessWidget {
             child: IconButton(
                 onPressed: () async {
                   if (_messagecontroller.text.isNotEmpty) {
-                    await widget.chatService
-                        .sendmessage(_messagecontroller.text, widget.sendemil);
+                    await context
+                        .read<ChatCubit>()
+                        .sendMessage(_messagecontroller.text, widget.sendemil);
 
                     _messagecontroller.clear();
                   }

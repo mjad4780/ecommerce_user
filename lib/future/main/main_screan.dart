@@ -8,7 +8,7 @@ import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../core/function/alert_dialog.dart';
-import '../../core/theming/theme/colors.dart';
+import '../../core/theme/colors.dart';
 import 'widget/costemappbarnavigationbottom.dart';
 import 'widget/main_view_body.dart';
 

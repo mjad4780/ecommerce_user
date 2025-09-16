@@ -1,8 +1,8 @@
-import 'package:ecommerce_user/core/theming/theme/colors.dart';
+import 'package:ecommerce_user/core/theme/colors.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/helpers/spacing.dart';
-import '../../../../core/theming/theme/styles.dart';
+import '../../../../core/theme/styles.dart';
 
 class PasswordValidations extends StatelessWidget {
   final bool hasLowerCase;

@@ -4,7 +4,7 @@ import 'package:ecommerce_user/future/check_cart_order/logic/cubit/check_cart_st
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../core/theming/theme/styles.dart';
+import '../../../core/theme/styles.dart';
 
 class CheckCartBlocListener extends StatelessWidget {
   const CheckCartBlocListener({super.key});

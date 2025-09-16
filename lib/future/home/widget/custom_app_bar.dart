@@ -3,9 +3,9 @@ import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/animation/open_container_wrapper.dart';
-import '../../../core/theming/theme/colors.dart';
+import '../../../core/theme/colors.dart';
 import '../../item_categories/widget/app_bar_action_button.dart';
-import 'view_notification.dart';
+import '../view_notification.dart';
 
 class CustomAppBar extends StatelessWidget {
   @override
@@ -35,35 +35,16 @@ class CustomAppBar extends StatelessWidget {
                       Icon(Icons.search),
                       SizedBox(width: 10),
                       Text('Search...')
-                      // Expanded(
-                      //   child: TextField(
-                      //     focusNode: _focusNode,
-                      //     controller: widget.controller,
-                      //     decoration: const InputDecoration(
-                      //       hintText: 'Search...',
-                      //       border: InputBorder.none,
-                      //     ),
-                      //     autofocus: false,
-                      //     onChanged: widget.onChanged,
-                      //   ),
-                      // ),
                     ],
                   ),
                 ),
               ),
             ),
-
-            //  CustomSearchBar(
-            //   controller: context.read<HomeCubit>().search,
-            //   onChanged: (val) {
-            //     context.read<HomeCubit>().emitSearch();
-            //   },
-            // ),
           ),
           AppBarActionButton(
             icon: Icons.chat,
             onPressed: () {
-              context.push('/HomePage');
+              context.push('/ScreenChat');
             },
           ),
           OpenContainerWrapper(

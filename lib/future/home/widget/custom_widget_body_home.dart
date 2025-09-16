@@ -7,8 +7,8 @@ import 'custom_app_bar.dart';
 import 'poster_section.dart';
 import 'product_grid_view.dart';
 
-class SuccessDataApi extends StatelessWidget {
-  const SuccessDataApi({
+class CustomWidgetBodyHome extends StatelessWidget {
+  const CustomWidgetBodyHome({
     super.key,
     required this.responseHome,
     this.isloading = false,

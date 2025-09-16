@@ -18,7 +18,7 @@ class BuildItems extends StatelessWidget {
       crossAxisAlignment:
           isCurrentUser ? CrossAxisAlignment.end : CrossAxisAlignment.start,
       children: [
-        ChatBubble(isCurrentUser: isCurrentUser, message: doc["message"]),
+        ChatBubble(isCurrentUser: isCurrentUser, message: doc["message"] ?? ''),
       ],
     );
   }

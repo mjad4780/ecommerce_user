@@ -3,7 +3,7 @@ import 'package:ecommerce_user/future/cart/logic/cubit/cart_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../core/theming/theme/colors.dart';
+import '../../../core/theme/colors.dart';
 
 import 'custom_body_cart.dart';
 

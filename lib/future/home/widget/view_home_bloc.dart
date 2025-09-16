@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../data/models/response_home/response_home.dart';
-import 'success_data_api.dart';
+import 'custom_widget_body_home.dart';
 
 class HomeBlocBuilder extends StatelessWidget {
   const HomeBlocBuilder({super.key});
@@ -28,7 +28,7 @@ class HomeBlocBuilder extends StatelessWidget {
                 context.read<HomeCubit>().emitHome();
               });
         } else if (state is SuccessHome) {
-          return SuccessDataApi(
+          return CustomWidgetBodyHome(
             responseHome: state.responseHome,
           );
         }
@@ -42,7 +42,7 @@ class HomeBlocBuilder extends StatelessWidget {
 
   Widget _buildSkeleton() {
     return LoadingWidget(
-      child: SuccessDataApi(
+      child: CustomWidgetBodyHome(
           isloading: true,
           responseHome: ResponseHome(
               item1view: Item1view(data: [Item(), Item(), Item(), Item()]),

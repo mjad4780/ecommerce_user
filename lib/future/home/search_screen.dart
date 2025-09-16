@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../core/get_it/get_it.dart';
-import '../../core/theming/theme/colors.dart';
+import '../../core/theme/colors.dart';
 import 'widget/custom_search_bar.dart';
 
 // -------------------- Search Screen --------------------

@@ -1,6 +1,10 @@
+import 'package:ecommerce_user/core/get_it/get_it.dart';
+import 'package:ecommerce_user/future/chat/cubit/chat_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
-import '../../data/services/chats/chat_services.dart';
+import '../../../../core/theme/colors.dart';
 import '../components/buid_message_item.dart';
 import '../components/build_user_input.dart';
 
@@ -8,10 +12,8 @@ class ChatPage extends StatefulWidget {
   const ChatPage({
     super.key,
     required this.sendemil,
-    required this.chatService,
   });
   final String sendemil;
-  final ChatServiceCustomer chatService;
   @override
   State<ChatPage> createState() => _ChatPageState();
 }
@@ -50,28 +52,32 @@ class _ChatPageState extends State<ChatPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Admin",
-          style: TextStyle(
-            color: Theme.of(context).colorScheme.primary,
-          ),
+    return BlocProvider(
+      create: (context) =>
+          getIt<ChatCubit>()..initializeMessagesStream(widget.sendemil),
+      child: Scaffold(
+        appBar: AppBar(
+            title: const Text("🔍 Admin"),
+            centerTitle: true,
+            elevation: 0,
+            leading: GestureDetector(
+              onTap: () => context.pop(),
+              child: const Icon(Icons.arrow_back_ios,
+                  size: 25, color: AppColor.darkOrange),
+            )),
+        body: Column(
+          children: [
+            Expanded(
+                child: BuildMessageItem(
+              scrollController: _scrollController,
+              sendEmail: widget.sendemil,
+            )),
+            BuildUserInput(
+                messagecontroller: _messagecontroller,
+                myfocusnode: myfocusnode,
+                widget: widget)
+          ],
         ),
-      ),
-      body: Column(
-        children: [
-          Expanded(
-              child: BuidMessageItem(
-            scrollController: _scrollController,
-            chatService: widget.chatService,
-            sendemil: widget.sendemil,
-          )),
-          BuildUserInput(
-              messagecontroller: _messagecontroller,
-              myfocusnode: myfocusnode,
-              widget: widget)
-        ],
       ),
     );
   }

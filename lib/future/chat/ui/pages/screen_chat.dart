@@ -1,26 +1,12 @@
-import 'package:ecommerce_user/core/get_it/get_it.dart';
 import 'package:flutter/material.dart';
 
-import '../../data/services/chats/chat_services.dart';
 import '../components/user_tile.dart';
 import 'chat_page.dart';
 
-class HomePageChat extends StatefulWidget {
-  const HomePageChat({
+class ScreenChat extends StatelessWidget {
+  const ScreenChat({
     super.key,
   });
-
-  @override
-  State<HomePageChat> createState() => _HomePageChatState();
-}
-
-class _HomePageChatState extends State<HomePageChat> {
-  ChatServiceCustomer? chatService;
-  @override
-  void initState() {
-    super.initState();
-    chatService = getIt<ChatServiceCustomer>();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +14,7 @@ class _HomePageChatState extends State<HomePageChat> {
         backgroundColor: Theme.of(context).colorScheme.surface,
         appBar: AppBar(
           title: Text(
-            'Home Page',
+            'Chat',
             style: TextStyle(
               color: Theme.of(context).colorScheme.primary,
             ),
@@ -39,9 +25,8 @@ class _HomePageChatState extends State<HomePageChat> {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ChatPage(
+                    builder: (context) => const ChatPage(
                       sendemil: 'mjad377@gmail.com',
-                      chatService: chatService!,
                     ),
                   ));
             },

@@ -27,6 +27,7 @@ import '../../future/auth/forgetpassword/logic/cubit/forget_password_cubit.dart'
 import '../../future/auth/sign_up/data/data_sigin_up.dart';
 import '../../future/auth/verfyCode/logic/cubit/verfy_code_cubit.dart';
 import '../../future/cart/data/repo.dart';
+import '../../future/chat/cubit/chat_cubit.dart';
 import '../../future/chat/data/services/chats/chat_services.dart';
 import '../../future/check_cart_order/data/repo.dart';
 import '../../future/check_cart_order/data/repo_payment.dart';
@@ -41,7 +42,7 @@ import '../helpers/cache_helper.dart';
 final getIt = GetIt.instance;
 void setupServise() {
   Dio dio = DioFactory.getDio();
-  FirebaseFirestore firestore = FirebaseFirestore.instance;
+  // FirebaseFirestore firestore = FirebaseFirestore.instance;
   getIt.registerLazySingleton<ApiService>(() => ApiService(dio));
 
   getIt.registerSingleton<CacheHelper>(CacheHelper());
@@ -105,7 +106,19 @@ void setupServise() {
   // Book
   getIt.registerLazySingleton<GetBookRepo>(() => GetBookRepo(getIt()));
   getIt.registerFactory<GetBooKCubit>(() => GetBooKCubit(getIt()));
-  //App
-  getIt.registerLazySingleton<ChatServiceCustomer>(
-      () => ChatServiceCustomer(firestore: firestore));
+  //App chat
+
+  getIt.registerLazySingleton<FirebaseFirestore>(
+      () => FirebaseFirestore.instance);
+
+  getIt.registerLazySingleton<ChatService>(
+      () => ChatService(firestore: getIt<FirebaseFirestore>()));
+
+  // Chat Cubit
+
+  getIt.registerFactory<ChatCubit>(
+      () => ChatCubit(chatService: getIt<ChatService>()));
+
+  // getIt.registerLazySingleton<ChatServiceCustomer>(
+  //     () => ChatServiceCustomer(firestore: firestore));
 }

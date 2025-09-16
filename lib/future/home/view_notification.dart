@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../core/theming/theme/colors.dart';
-import 'get_notification_bloc.dart';
+import '../../core/theme/colors.dart';
+import 'widget/widget_notification/get_notification_bloc.dart';
 
 class ViewNotification extends StatelessWidget {
   const ViewNotification({super.key, required this.contexter});

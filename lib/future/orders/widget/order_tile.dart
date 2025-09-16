@@ -2,7 +2,7 @@ import 'package:ecommerce_user/future/orders/logic/cubit/orders_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../core/theming/theme/colors.dart';
+import '../../../core/theme/colors.dart';
 import 'function_update_orders.dart';
 
 class OrderTile extends StatelessWidget {

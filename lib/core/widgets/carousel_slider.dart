@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../networking/api_constants.dart';
-import '../theming/theme/colors.dart';
+import '../theme/colors.dart';
 import 'custom_network_image.dart';
 
 class CarouselSlider extends StatefulWidget {

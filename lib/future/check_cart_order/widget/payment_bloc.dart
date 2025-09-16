@@ -1,11 +1,11 @@
 import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
-import 'package:ecommerce_user/core/theming/theme/colors.dart';
+import 'package:ecommerce_user/core/theme/colors.dart';
 import 'package:ecommerce_user/future/check_cart_order/logic/cubit/check_cart_cubit.dart';
 import 'package:ecommerce_user/future/check_cart_order/logic/cubit/check_cart_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../core/theming/theme/styles.dart';
+import '../../../core/theme/styles.dart';
 
 class PaymentBlocListener extends StatelessWidget {
   const PaymentBlocListener({super.key});

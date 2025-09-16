@@ -6,7 +6,7 @@ import 'package:ecommerce_user/future/home/data/models/response_home/response_ho
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../core/theming/theme/styles.dart';
+import '../../../core/theme/styles.dart';
 import '../../home/widget/product_grid_view.dart';
 import 'product_grid_view_favorite.dart';
 

@@ -1,4 +1,4 @@
-import 'package:ecommerce_user/core/theming/theme/styles.dart';
+import 'package:ecommerce_user/core/theme/styles.dart';
 import 'package:flutter/material.dart';
 
 void setupErrorState(BuildContext context, String error) {

@@ -1,5 +1,5 @@
 import 'package:ecommerce_user/core/get_it/get_it.dart';
-import 'package:ecommerce_user/core/theming/theme/colors.dart';
+import 'package:ecommerce_user/core/theme/colors.dart';
 import 'package:ecommerce_user/future/auth/forgetpassword/logic/cubit/forget_password_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -7,7 +7,7 @@ import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/helpers/spacing.dart';
-import '../../../core/theming/theme/styles.dart';
+import '../../../core/theme/styles.dart';
 import 'widget/check_code_bloc_listener.dart';
 
 class CheckCodeForgetPassword extends StatelessWidget {

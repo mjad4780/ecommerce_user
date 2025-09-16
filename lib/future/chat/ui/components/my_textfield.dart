@@ -22,17 +22,12 @@ class MyTextfield extends StatelessWidget {
         controller: controller,
         focusNode: focusNode,
         decoration: InputDecoration(
-          enabledBorder: OutlineInputBorder(
-            borderSide:
-                BorderSide(color: Theme.of(context).colorScheme.tertiary),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderSide:
-                BorderSide(color: Theme.of(context).colorScheme.primary),
-          ),
           fillColor: Theme.of(context).colorScheme.secondary,
           filled: true,
           hintText: hinttext,
+          hintStyle: const TextStyle(
+            color: Colors.white,
+          ),
         ),
         obscureText: obscure,
       ),

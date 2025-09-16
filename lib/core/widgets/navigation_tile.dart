@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../theming/theme/colors.dart';
+import '../theme/colors.dart';
 
 class NavigationTile extends StatelessWidget {
   final IconData? icon;

@@ -3,7 +3,7 @@ import 'package:ecommerce_user/future/item_categories/logic/cubit/item_categorie
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../core/theming/theme/colors.dart';
+import '../../../core/theme/colors.dart';
 import '../../home/widget/product_grid_view.dart';
 
 class ItemCategoriesBlocBuilder extends StatelessWidget {

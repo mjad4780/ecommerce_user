@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ecommerce_user/core/networking/api_result.dart';
 
-import '../../../../../core/theming/theme/styles.dart';
+import '../../../../../core/theme/styles.dart';
 import '../../data/for_get_password.dart';
 import 'forget_password_state.dart';
 

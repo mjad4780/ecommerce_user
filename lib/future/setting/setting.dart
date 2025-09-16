@@ -6,7 +6,7 @@ import '../../core/animation/open_container_wrapper.dart';
 import '../../core/helpers/cache_helper.dart';
 
 import '../../core/get_it/get_it.dart';
-import '../../core/theming/theme/colors.dart';
+import '../../core/theme/colors.dart';
 import '../../core/widgets/navigation_tile.dart';
 import '../adress/adress.dart';
 
