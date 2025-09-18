@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../data/response_cart/response_cart.dart';
+import '../../data/response_cart.dart';
 
 part 'cart_state.freezed.dart';
 
@@ -15,7 +15,7 @@ class CartState with _$CartState {
 
   ///:getCart
   const factory CartState.loadingGet() = LoadingGet;
-  const factory CartState.successGet(ResponseCart cartResponse) = SuccessGet;
+  factory CartState.successGet(ResponseCart cartResponse) = SuccessGet;
   const factory CartState.erorrGet({required String erorr}) = ErorrGet;
 
   ///:deleteCart
@@ -24,6 +24,12 @@ class CartState with _$CartState {
   const factory CartState.erorrDelete({required String erorr}) = ErorrDelete;
 
   ///:select
-  const factory CartState.selectColor() = LoadingCoupon;
-  const factory CartState.selectsize() = SuccessCoupon;
+
+  factory CartState.colorSelected(String color) = ColorSelected;
+  factory CartState.sizeSelected(String size) = SizeSelected;
+
+  ///:updateCart
+  const factory CartState.loadingUpdate() = LoadingUpdate;
+  const factory CartState.successUpdate() = SuccessUpdate;
+  const factory CartState.errorUpdate({required String erorr}) = ErrorUpdate;
 }

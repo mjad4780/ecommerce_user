@@ -27,6 +27,7 @@ class ItemCategoriesBlocBuilder extends StatelessWidget {
           },
           success: (products) {
             return ProductGridView(
+              location: '/item',
               items: products.data ?? [],
             );
           },

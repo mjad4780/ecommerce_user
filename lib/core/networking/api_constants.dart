@@ -26,7 +26,7 @@ class ApiConstants {
   static const String addfavorite = "$baseUrl/favorite/addfavorite.php";
   static const String getfavorite = "$baseUrl/favorite/get_favorite.php";
 ///////////cart////////////////
-  static const String getCurrentCart = "$baseUrl/cart/get_count_cart.php";
+  static const String updateCart = "$baseUrl/cart/update_cart.php";
   static const String addCart = "$baseUrl/cart/add_cart.php";
   static const String deleteCart = "$baseUrl/cart/delete_cart.php";
   static const String getcart = "$baseUrl/cart/getcart.php";

@@ -479,25 +479,25 @@ class _ApiService implements ApiService {
   }
 
   @override
-  Future<GetCurrentCart> getCurrentCart(dynamic body) async {
+  Future<ResponseStatus> updateCart(dynamic body) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = body;
-    final _options = _setStreamType<GetCurrentCart>(
+    final _options = _setStreamType<ResponseStatus>(
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/cart/get_count_cart.php',
+            'http://10.0.2.2/e-ecommerse/cart/update_cart.php',
             queryParameters: queryParameters,
             data: _data,
           )
           .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
     );
     final _result = await _dio.fetch(_options);
-    late GetCurrentCart _value;
+    late ResponseStatus _value;
     try {
-      _value = GetCurrentCart.fromJson(jsonDecode(_result.data!));
+      _value = ResponseStatus.fromJson(jsonDecode(_result.data!));
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;

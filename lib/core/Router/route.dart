@@ -1,6 +1,7 @@
 import 'package:ecommerce_user/future/auth/forgetpassword/check_email.dart';
 import 'package:ecommerce_user/future/home/home.dart';
 import 'package:ecommerce_user/future/home/search_screen.dart';
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../future/main/main_screan.dart';
 import '../../future/adress/adress.dart';
@@ -73,10 +74,10 @@ final GoRouter router = GoRouter(routes: [
       path: "/MyAddressPage",
       pageBuilder: (context, state) =>
           myCustomtransitionPage(const MyAddressPage(), state)),
-  // GoRoute(
-  //     path: "/ViewNotification",
-  //     pageBuilder: (context, state) =>
-  //         myCustomtransitionPage(const ViewNotification(), state)),
+  GoRoute(
+      path: "/item",
+      pageBuilder: (context, state) =>
+          myCustomtransitionPage(const Scaffold(), state)),
   GoRoute(
       path: "/TrackOrders",
       pageBuilder: (context, state) =>

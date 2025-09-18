@@ -16,9 +16,9 @@ class AdressData {
   @JsonKey(name: 'adress_street')
   final String? adressStreet;
   @JsonKey(name: 'adress_lat')
-  final String? adressLat;
+  final double? adressLat;
   @JsonKey(name: 'adress_long')
-  final String? adressLong;
+  final double? adressLong;
 
   const AdressData({
     this.adressId,

@@ -1,3 +1,4 @@
+import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
 import 'package:ecommerce_user/core/widgets/failer_widget.dart';
 import 'package:ecommerce_user/core/widgets/loading.dart';
 import 'package:ecommerce_user/future/favorite/logic/cubit/favorite_cubit.dart';
@@ -25,8 +26,9 @@ class GetFavoriteBlocBuilder extends StatelessWidget {
           loadingGet: () {
             return LoadingWidget(
                 isloading: true,
-                child:
-                    ProductGridView(items: [Item(), Item(), Item(), Item()]));
+                child: ProductGridView(
+                    location: context.currentRoute,
+                    items: [Item(), Item(), Item(), Item()]));
           },
           successGet: (products) {
             final favorites = context.read<FavoriteCubit>().favorites;
@@ -37,7 +39,8 @@ class GetFavoriteBlocBuilder extends StatelessWidget {
                       style: TextStyles.textStyleAppBar));
             }
 
-            return ProductGridViewFavorite(items: favorites);
+            return ProductGridViewFavorite(
+                location: context.currentRoute, items: favorites);
           },
           erorrGet: (error) {
             return FailerWidget(

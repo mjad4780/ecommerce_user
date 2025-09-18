@@ -1,3 +1,4 @@
+import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
 import 'package:flutter/material.dart';
 
 import '../../data/models/response_home/response_home.dart';
@@ -27,6 +28,7 @@ class ProductGridViewSearch extends StatelessWidget {
             onTap: () => Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) => ProductDetailScreen(items[index]))),
             child: ProductGridTile(
+              location: context.currentRoute,
               product: items[index],
               index: index,
             ));

@@ -1,9 +1,10 @@
+import 'package:ecommerce_user/core/helpers/spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../core/networking/api_constants.dart';
 import '../../../core/widgets/custom_network_image.dart';
-import '../data/response_cart/datacart.dart';
+import '../data/response_cart.dart';
 import '../logic/cubit/cart_cubit.dart';
 
 class CustomProductCart extends StatelessWidget {
@@ -16,7 +17,7 @@ class CustomProductCart extends StatelessWidget {
     return Container(
         width: double.infinity,
         margin: const EdgeInsets.all(7),
-        padding: const EdgeInsets.all(15),
+        padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
           color: Colors.grey[200]?.withOpacity(0.6),
           borderRadius: BorderRadius.circular(10),
@@ -46,27 +47,31 @@ class CustomProductCart extends StatelessWidget {
                 ),
               ),
             ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  cartItem.itemName ?? '',
-                  overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 14,
+            horizontalSpace(3),
+            Expanded(
+              flex: 2,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    cartItem.itemName,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                    ),
                   ),
-                ),
-                const SizedBox(height: 5),
-                const SizedBox(height: 5),
-                Text(
-                  "\$${cartItem.itempriceDiscount}",
-                  style: const TextStyle(
-                    fontWeight: FontWeight.w900,
-                    fontSize: 23,
+                  const SizedBox(height: 5),
+                  const SizedBox(height: 5),
+                  Text(
+                    "\$${cartItem.itemTotalPrice}",
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w900,
+                      fontSize: 23,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             // Add and remove cart item
             Container(
@@ -81,8 +86,8 @@ class CustomProductCart extends StatelessWidget {
                   IconButton(
                     splashRadius: 10.0,
                     onPressed: () {
-                      context.read<CartCubit>().emitdeleteCart(
-                            cartItem.cartItemid!,
+                      context.read<CartCubit>().decrementQuantity(
+                            cartItem.cartId,
                           );
                     },
                     icon: const Icon(
@@ -91,7 +96,7 @@ class CustomProductCart extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    '${cartItem.countitems!}',
+                    '${cartItem.cartQuantity}',
                     style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w700,
@@ -100,13 +105,9 @@ class CustomProductCart extends StatelessWidget {
                   IconButton(
                     splashRadius: 10.0,
                     onPressed: () {
-                      context.read<CartCubit>().selectColor =
-                          cartItem.cartColor;
-                      context.read<CartCubit>().selectSize = cartItem.cartSize;
-
-                      context
-                          .read<CartCubit>()
-                          .emitAddCart(cartItem.cartItemid!, context);
+                      context.read<CartCubit>().incrementQuantity(
+                            cartItem.cartId,
+                          );
                     },
                     icon: const Icon(Icons.add, color: Color(0xFFEC6813)),
                   ),

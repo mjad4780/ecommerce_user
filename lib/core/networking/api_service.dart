@@ -7,14 +7,13 @@ import 'package:ecommerce_user/model/pending_response/pending_response.dart';
 
 import 'package:retrofit/retrofit.dart';
 
-import '../../future/cart/data/response_cart/response_cart.dart';
+import '../../future/cart/data/response_cart.dart';
 import '../../future/check_cart_order/data/model/elphon/elphon.dart';
 import '../../future/check_cart_order/data/model/payment_body_tojson.dart';
 import '../../future/home/data/models/response_notification/response_notification.dart';
 import '../../future/orders/data/response_orders/response_orders.dart';
 import '../../model/adress_response/adress_response.dart';
 import '../../model/coupon_response/coupon_response.dart';
-import '../../model/get_current_cart/get_current_cart.dart';
 import '../../model/response_detilas/response_detilas.dart';
 import '../../model/response_login/response_login.dart';
 import '../../model/response_status/response_status.dart';
@@ -79,8 +78,8 @@ abstract class ApiService {
   @POST(ApiConstants.deleteCart)
   Future<ResponseStatus> deleteCart(@Body() dynamic body);
 
-  @POST(ApiConstants.getCurrentCart)
-  Future<GetCurrentCart> getCurrentCart(@Body() dynamic body);
+  @POST(ApiConstants.updateCart)
+  Future<ResponseStatus> updateCart(@Body() dynamic body);
   @POST(ApiConstants.getcart)
   Future<ResponseCart> getCart(@Body() dynamic body);
 

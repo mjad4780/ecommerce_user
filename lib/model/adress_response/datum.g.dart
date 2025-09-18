@@ -12,8 +12,8 @@ AdressData _$AdressDataFromJson(Map<String, dynamic> json) => AdressData(
       adressCity: json['adress_city'] as String?,
       adressName: json['adress_name'] as String?,
       adressStreet: json['adress_street'] as String?,
-      adressLat: json['adress_lat'] as String?,
-      adressLong: json['adress_long'] as String?,
+      adressLat: (json['adress_lat'] as num?)?.toDouble(),
+      adressLong: (json['adress_long'] as num?)?.toDouble(),
     );
 
 Map<String, dynamic> _$AdressDataToJson(AdressData instance) =>

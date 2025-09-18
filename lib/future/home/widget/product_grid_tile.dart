@@ -1,5 +1,4 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
 import 'package:ecommerce_user/core/theme/colors.dart';
 import 'package:ecommerce_user/future/favorite/logic/cubit/favorite_cubit.dart';
 import 'package:ecommerce_user/future/favorite/logic/cubit/favorite_state.dart';
@@ -12,15 +11,18 @@ import '../data/models/response_home/response_home.dart';
 class ProductGridTile extends StatelessWidget {
   final Item product;
   final int index;
+  final String location;
 
   const ProductGridTile({
     super.key,
     required this.product,
     required this.index,
+    required this.location,
   });
 
   @override
   Widget build(BuildContext context) {
+    // var location = GoRouterState.of(context).uri.path;
     return GridTile(
       header: Padding(
         padding: const EdgeInsets.all(10.0),
@@ -42,8 +44,7 @@ class ProductGridTile extends StatelessWidget {
                 ),
               ),
             ),
-            context.currentRoute == '/Search' ||
-                    context.currentRoute.startsWith('/Search')
+            location == '/Search' || location.startsWith('/Search')
                 ? const SizedBox.shrink()
                 : IconFavorite(product: product)
           ],

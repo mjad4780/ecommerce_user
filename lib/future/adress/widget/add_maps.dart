@@ -24,15 +24,19 @@ class FlutterMaps extends StatelessWidget {
             return Stack(
               alignment: Alignment.center,
               children: [
-                const Center(child: Text('add new address')),
+                if (context.read<AdressCubit>().latLng == null)
+                  const Center(child: Text('add new address')),
                 if (context.read<AdressCubit>().latLng != null)
                   BlocConsumer<AdressCubit, AdressState>(
-                    buildWhen: (previous, current) =>
-                        current is PushEdit || current is AddMarker,
+                    // buildWhen: (previous, current) =>
+                    // current is PushEdit || current is AddMarker,
                     listener: (context, state) {},
                     builder: (context, state) {
                       return FlutterMap(
+                        mapController:
+                            context.read<AdressCubit>().mapController,
                         options: MapOptions(
+                          // keepAlive: true,
                           onTap: (tapPosition, point) {
                             context.read<AdressCubit>().addmarker(point);
                           },
@@ -41,12 +45,27 @@ class FlutterMaps extends StatelessWidget {
                         ),
                         children: [
                           TileLayer(
+                            additionalOptions: const {
+                              'key': 'UGpoQ5rEygtz3BdzV1xB', // استبدلها بمفتاحك
+                            },
                             urlTemplate:
-                                'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-                            userAgentPackageName: 'com.example.app',
+                                "https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=UGpoQ5rEygtz3BdzV1xB",
+
+                            // 'https://api.maptiler.com/maps/basic-v2/?key=UGpoQ5rEygtz3BdzV1xB.png',
+                            userAgentPackageName: 'com.example.ecommerce_user',
                           ),
+
                           MarkerLayer(
-                              markers: context.read<AdressCubit>().markers)
+                              markers: context.read<AdressCubit>().markers),
+                          //                              RichAttributionWidget( // Include a stylish prebuilt attribution widget that meets all requirments
+                          //   attributions: [
+                          //     TextSourceAttribution(
+                          //       'OpenStreetMap contributors',
+                          //       onTap: () => launchUrl(Uri.parse('https://openstreetmap.org/copyright')), // (external)
+                          //     ),
+                          //     // Also add images...
+                          //   ],
+                          // ),
                         ],
                       );
                     },

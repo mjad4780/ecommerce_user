@@ -29,7 +29,7 @@ class ProductDetailScreen extends StatelessWidget {
             elevation: 0,
             leading: IconButton(
               onPressed: () => Navigator.pop(context),
-              icon: const Icon(Icons.arrow_back, color: Colors.black),
+              icon: const Icon(Icons.arrow_back_ios, color: Colors.black),
             ),
           ),
           body: SingleChildScrollView(
@@ -105,8 +105,8 @@ class ProductDetailScreen extends StatelessWidget {
 
                         BlocConsumer<CartCubit, CartState>(
                           buildWhen: (previous, current) =>
-                              current is LoadingCoupon ||
-                              current is SuccessCoupon,
+                              current is SizeSelected ||
+                              current is ColorSelected,
                           listener: (context, state) {},
                           builder: (context, state) {
                             return Column(
@@ -118,9 +118,7 @@ class ProductDetailScreen extends StatelessWidget {
                                   selected:
                                       context.read<CartCubit>().selectSize,
                                   onSelect: (val) {
-                                    context
-                                        .read<CartCubit>()
-                                        .selectsize(val ?? '');
+                                    context.read<CartCubit>().selectsize(val!);
                                   },
                                 ),
                                 HorizontalList(
@@ -130,9 +128,7 @@ class ProductDetailScreen extends StatelessWidget {
                                   selected:
                                       context.read<CartCubit>().selectColor,
                                   onSelect: (val) {
-                                    context
-                                        .read<CartCubit>()
-                                        .selectcolor(val ?? '');
+                                    context.read<CartCubit>().selectcolor(val!);
                                   },
                                 ),
                               ],
@@ -160,8 +156,8 @@ class ProductDetailScreen extends StatelessWidget {
                                   ? () async {
                                       await context
                                           .read<CartCubit>()
-                                          .emitAddCart(
-                                              product.itemId!, context);
+                                          .emitAddCart(product.itemId!, context,
+                                              '/ProductDetailScreen');
                                     }
                                   : null,
                               child: const Text("Add to cart",

@@ -36,7 +36,7 @@ ThemeData themeLight() {
       ),
     ),
     // primaryColor: ColorsLight.mainColor,
-    scaffoldBackgroundColor: ColorsLight.mainColor,
+    scaffoldBackgroundColor: AppColor.lightGrey,
     extensions: const <ThemeExtension<dynamic>>[
       MyColors.light,
     ],

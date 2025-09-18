@@ -1,13 +1,15 @@
+import 'dart:developer';
+
 import 'package:ecommerce_user/core/helpers/cache_helper.dart';
 import 'package:ecommerce_user/core/get_it/get_it.dart';
+import 'package:ecommerce_user/core/networking/api_error_model.dart';
 
 import '../../../core/function/send_form_map_post.dart';
 import '../../../../core/networking/api_error_handler.dart';
 import '../../../../core/networking/api_result.dart';
 import '../../../../core/networking/api_service.dart';
-import '../../../model/get_current_cart/get_current_cart.dart';
 import '../../../model/response_status/response_status.dart';
-import 'response_cart/response_cart.dart';
+import 'response_cart.dart';
 
 class CartRepo {
   final ApiService _apiService;
@@ -34,6 +36,7 @@ class CartRepo {
 
   Future<ApiResult<ResponseStatus>> addCart(
       int itemid, String color, String size) async {
+    log('itemid: $itemid, color: $color, size: $size, userid: ${getIt<CacheHelper>().getData(key: 'id')}');
     Map<String, dynamic> map = {
       "color": color,
       "size": size,
@@ -66,18 +69,21 @@ class CartRepo {
 
   /// :getCountCart
 
-  Future<ApiResult<GetCurrentCart>> getCountCart(
-    int itemid,
+  Future<ApiResult<ResponseStatus>> updateCart(
+    updates,
   ) async {
     try {
       Map<String, dynamic> map = {
-        "itemid": itemid,
+        "updates": updates,
         "userid": getIt<CacheHelper>().getData(key: 'id'),
       };
 
-      final response = await _apiService.getCurrentCart(formDataPost(map));
-
-      return ApiResult.success(response);
+      final response = await _apiService.updateCart(formDataPost(map));
+      if (response.status == "error") {
+        return ApiResult.failure(ApiErrorModel(messege: response.messege));
+      } else {
+        return ApiResult.success(response);
+      }
     } catch (e) {
       return ApiResult.failure(ErrorHandler.handle(e));
     }

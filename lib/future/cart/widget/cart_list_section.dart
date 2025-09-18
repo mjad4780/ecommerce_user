@@ -3,7 +3,7 @@ import 'package:ecommerce_user/future/cart/logic/cubit/cart_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../data/response_cart/response_cart.dart';
+import '../data/response_cart.dart';
 import 'custom_product_cart.dart';
 
 class CartListSection extends StatelessWidget {
@@ -22,9 +22,9 @@ class CartListSection extends StatelessWidget {
           return SizedBox(
               height: MediaQuery.of(context).size.height * 0.78,
               child: ListView.builder(
-                  itemCount: cartProducts.datacart!.length,
+                  itemCount: cartProducts.datacart.length,
                   itemBuilder: (context, index) => CustomProductCart(
-                        cartItem: cartProducts.datacart![index],
+                        cartItem: cartProducts.datacart[index],
                         index: index,
                       )));
         });

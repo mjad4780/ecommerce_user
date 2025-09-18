@@ -8,8 +8,9 @@ class ProductGridView extends StatelessWidget {
   const ProductGridView({
     super.key,
     required this.items,
+    required this.location,
   });
-
+  final String location;
   final List<Item> items;
 
   @override
@@ -31,6 +32,7 @@ class ProductGridView extends StatelessWidget {
               onTap: () => Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => ProductDetailScreen(items[index]))),
               child: ProductGridTile(
+                location: location,
                 product: items[index],
                 index: index,
               ));

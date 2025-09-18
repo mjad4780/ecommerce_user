@@ -8,9 +8,11 @@ class ProductGridViewFavorite extends StatelessWidget {
   const ProductGridViewFavorite({
     super.key,
     required this.items,
+    required this.location,
   });
 
   final List<Item> items;
+  final String location;
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +29,7 @@ class ProductGridViewFavorite extends StatelessWidget {
             onTap: () => Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) => ProductDetailScreen(items[index]))),
             child: ProductGridTile(
+              location: location,
               product: items[index],
               index: index,
             ));

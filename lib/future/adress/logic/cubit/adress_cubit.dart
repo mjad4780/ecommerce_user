@@ -1,3 +1,4 @@
+import 'package:ecommerce_user/core/theme/colors.dart';
 import 'package:ecommerce_user/future/adress/data/repo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -75,8 +76,8 @@ class AdressCubit extends Cubit<AdressState> {
     name.text = data.adressName ?? '';
     city.text = data.adressCity ?? '';
     street.text = data.adressStreet ?? '';
-    latLng =
-        LatLng(double.parse(data.adressLat!), double.parse(data.adressLong!));
+    latLng = LatLng(data.adressLat!, data.adressLong!);
+
     emit(const AdressState.pushEdit());
   }
 
@@ -85,8 +86,14 @@ class AdressCubit extends Cubit<AdressState> {
 
   addmarker(LatLng point) {
     markers.clear();
-    markers.add(Marker(point: point, child: const Icon(Icons.pin_drop)));
+    markers.add(Marker(
+        point: point,
+        child: const Icon(
+          Icons.location_on,
+          color: AppColor.red,
+        )));
     latLng = point;
+
     emit(AdressState.addMarker(markers: markers));
   }
 
@@ -95,8 +102,13 @@ class AdressCubit extends Cubit<AdressState> {
     Position position;
     position = await Geolocator.getCurrentPosition();
     latLng = LatLng(position.latitude, position.longitude);
-    markers
-        .add(Marker(point: latLng!, child: const Icon(Icons.pin_drop_rounded)));
+    markers.add(Marker(
+        point: latLng!,
+        child: const Icon(
+          Icons.location_on,
+          color: AppColor.red,
+        )));
+
     emit(const AdressState.successMaps());
   }
 
@@ -104,6 +116,16 @@ class AdressCubit extends Cubit<AdressState> {
 
   updateLating(LatLng lating) {
     latLng = lating;
+
     emit(const AdressState.updateLatlng());
+  }
+
+  @override
+  Future<void> close() {
+    name.dispose();
+    city.dispose();
+    street.dispose();
+    mapController.dispose();
+    return super.close();
   }
 }

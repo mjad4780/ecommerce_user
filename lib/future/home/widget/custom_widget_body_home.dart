@@ -1,3 +1,4 @@
+import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
 import 'package:ecommerce_user/core/widgets/loading.dart';
 import 'package:flutter/material.dart';
 
@@ -93,6 +94,7 @@ class CustomWidgetBodyHome extends StatelessWidget {
             child: LoadingWidget(
                 isloading: isloading,
                 child: ProductGridView(
+                  location: context.currentRoute,
                   items: responseHome.item1view?.data ?? [],
                 ))),
       ],

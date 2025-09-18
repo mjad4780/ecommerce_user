@@ -60,8 +60,11 @@ extension CartStatePatterns on CartState {
     TResult Function(LoadingDelete value)? loadingDelete,
     TResult Function(Successdelete value)? successdelete,
     TResult Function(ErorrDelete value)? erorrDelete,
-    TResult Function(LoadingCoupon value)? selectColor,
-    TResult Function(SuccessCoupon value)? selectsize,
+    TResult Function(ColorSelected value)? colorSelected,
+    TResult Function(SizeSelected value)? sizeSelected,
+    TResult Function(LoadingUpdate value)? loadingUpdate,
+    TResult Function(SuccessUpdate value)? successUpdate,
+    TResult Function(ErrorUpdate value)? errorUpdate,
     required TResult orElse(),
   }) {
     final _that = this;
@@ -86,10 +89,16 @@ extension CartStatePatterns on CartState {
         return successdelete(_that);
       case ErorrDelete() when erorrDelete != null:
         return erorrDelete(_that);
-      case LoadingCoupon() when selectColor != null:
-        return selectColor(_that);
-      case SuccessCoupon() when selectsize != null:
-        return selectsize(_that);
+      case ColorSelected() when colorSelected != null:
+        return colorSelected(_that);
+      case SizeSelected() when sizeSelected != null:
+        return sizeSelected(_that);
+      case LoadingUpdate() when loadingUpdate != null:
+        return loadingUpdate(_that);
+      case SuccessUpdate() when successUpdate != null:
+        return successUpdate(_that);
+      case ErrorUpdate() when errorUpdate != null:
+        return errorUpdate(_that);
       case _:
         return orElse();
     }
@@ -120,8 +129,11 @@ extension CartStatePatterns on CartState {
     required TResult Function(LoadingDelete value) loadingDelete,
     required TResult Function(Successdelete value) successdelete,
     required TResult Function(ErorrDelete value) erorrDelete,
-    required TResult Function(LoadingCoupon value) selectColor,
-    required TResult Function(SuccessCoupon value) selectsize,
+    required TResult Function(ColorSelected value) colorSelected,
+    required TResult Function(SizeSelected value) sizeSelected,
+    required TResult Function(LoadingUpdate value) loadingUpdate,
+    required TResult Function(SuccessUpdate value) successUpdate,
+    required TResult Function(ErrorUpdate value) errorUpdate,
   }) {
     final _that = this;
     switch (_that) {
@@ -145,10 +157,16 @@ extension CartStatePatterns on CartState {
         return successdelete(_that);
       case ErorrDelete():
         return erorrDelete(_that);
-      case LoadingCoupon():
-        return selectColor(_that);
-      case SuccessCoupon():
-        return selectsize(_that);
+      case ColorSelected():
+        return colorSelected(_that);
+      case SizeSelected():
+        return sizeSelected(_that);
+      case LoadingUpdate():
+        return loadingUpdate(_that);
+      case SuccessUpdate():
+        return successUpdate(_that);
+      case ErrorUpdate():
+        return errorUpdate(_that);
       case _:
         throw StateError('Unexpected subclass');
     }
@@ -178,8 +196,11 @@ extension CartStatePatterns on CartState {
     TResult? Function(LoadingDelete value)? loadingDelete,
     TResult? Function(Successdelete value)? successdelete,
     TResult? Function(ErorrDelete value)? erorrDelete,
-    TResult? Function(LoadingCoupon value)? selectColor,
-    TResult? Function(SuccessCoupon value)? selectsize,
+    TResult? Function(ColorSelected value)? colorSelected,
+    TResult? Function(SizeSelected value)? sizeSelected,
+    TResult? Function(LoadingUpdate value)? loadingUpdate,
+    TResult? Function(SuccessUpdate value)? successUpdate,
+    TResult? Function(ErrorUpdate value)? errorUpdate,
   }) {
     final _that = this;
     switch (_that) {
@@ -203,10 +224,16 @@ extension CartStatePatterns on CartState {
         return successdelete(_that);
       case ErorrDelete() when erorrDelete != null:
         return erorrDelete(_that);
-      case LoadingCoupon() when selectColor != null:
-        return selectColor(_that);
-      case SuccessCoupon() when selectsize != null:
-        return selectsize(_that);
+      case ColorSelected() when colorSelected != null:
+        return colorSelected(_that);
+      case SizeSelected() when sizeSelected != null:
+        return sizeSelected(_that);
+      case LoadingUpdate() when loadingUpdate != null:
+        return loadingUpdate(_that);
+      case SuccessUpdate() when successUpdate != null:
+        return successUpdate(_that);
+      case ErrorUpdate() when errorUpdate != null:
+        return errorUpdate(_that);
       case _:
         return null;
     }
@@ -236,8 +263,11 @@ extension CartStatePatterns on CartState {
     TResult Function()? loadingDelete,
     TResult Function()? successdelete,
     TResult Function(String erorr)? erorrDelete,
-    TResult Function()? selectColor,
-    TResult Function()? selectsize,
+    TResult Function(String color)? colorSelected,
+    TResult Function(String size)? sizeSelected,
+    TResult Function()? loadingUpdate,
+    TResult Function()? successUpdate,
+    TResult Function(String erorr)? errorUpdate,
     required TResult orElse(),
   }) {
     final _that = this;
@@ -262,10 +292,16 @@ extension CartStatePatterns on CartState {
         return successdelete();
       case ErorrDelete() when erorrDelete != null:
         return erorrDelete(_that.erorr);
-      case LoadingCoupon() when selectColor != null:
-        return selectColor();
-      case SuccessCoupon() when selectsize != null:
-        return selectsize();
+      case ColorSelected() when colorSelected != null:
+        return colorSelected(_that.color);
+      case SizeSelected() when sizeSelected != null:
+        return sizeSelected(_that.size);
+      case LoadingUpdate() when loadingUpdate != null:
+        return loadingUpdate();
+      case SuccessUpdate() when successUpdate != null:
+        return successUpdate();
+      case ErrorUpdate() when errorUpdate != null:
+        return errorUpdate(_that.erorr);
       case _:
         return orElse();
     }
@@ -296,8 +332,11 @@ extension CartStatePatterns on CartState {
     required TResult Function() loadingDelete,
     required TResult Function() successdelete,
     required TResult Function(String erorr) erorrDelete,
-    required TResult Function() selectColor,
-    required TResult Function() selectsize,
+    required TResult Function(String color) colorSelected,
+    required TResult Function(String size) sizeSelected,
+    required TResult Function() loadingUpdate,
+    required TResult Function() successUpdate,
+    required TResult Function(String erorr) errorUpdate,
   }) {
     final _that = this;
     switch (_that) {
@@ -321,10 +360,16 @@ extension CartStatePatterns on CartState {
         return successdelete();
       case ErorrDelete():
         return erorrDelete(_that.erorr);
-      case LoadingCoupon():
-        return selectColor();
-      case SuccessCoupon():
-        return selectsize();
+      case ColorSelected():
+        return colorSelected(_that.color);
+      case SizeSelected():
+        return sizeSelected(_that.size);
+      case LoadingUpdate():
+        return loadingUpdate();
+      case SuccessUpdate():
+        return successUpdate();
+      case ErrorUpdate():
+        return errorUpdate(_that.erorr);
       case _:
         throw StateError('Unexpected subclass');
     }
@@ -354,8 +399,11 @@ extension CartStatePatterns on CartState {
     TResult? Function()? loadingDelete,
     TResult? Function()? successdelete,
     TResult? Function(String erorr)? erorrDelete,
-    TResult? Function()? selectColor,
-    TResult? Function()? selectsize,
+    TResult? Function(String color)? colorSelected,
+    TResult? Function(String size)? sizeSelected,
+    TResult? Function()? loadingUpdate,
+    TResult? Function()? successUpdate,
+    TResult? Function(String erorr)? errorUpdate,
   }) {
     final _that = this;
     switch (_that) {
@@ -379,10 +427,16 @@ extension CartStatePatterns on CartState {
         return successdelete();
       case ErorrDelete() when erorrDelete != null:
         return erorrDelete(_that.erorr);
-      case LoadingCoupon() when selectColor != null:
-        return selectColor();
-      case SuccessCoupon() when selectsize != null:
-        return selectsize();
+      case ColorSelected() when colorSelected != null:
+        return colorSelected(_that.color);
+      case SizeSelected() when sizeSelected != null:
+        return sizeSelected(_that.size);
+      case LoadingUpdate() when loadingUpdate != null:
+        return loadingUpdate();
+      case SuccessUpdate() when successUpdate != null:
+        return successUpdate();
+      case ErrorUpdate() when errorUpdate != null:
+        return errorUpdate(_that.erorr);
       case _:
         return null;
     }
@@ -762,33 +816,140 @@ class _$ErorrDeleteCopyWithImpl<$Res> implements $ErorrDeleteCopyWith<$Res> {
 
 /// @nodoc
 
-class LoadingCoupon implements CartState {
-  const LoadingCoupon();
+class ColorSelected implements CartState {
+  ColorSelected(this.color);
+
+  final String color;
+
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ColorSelectedCopyWith<ColorSelected> get copyWith =>
+      _$ColorSelectedCopyWithImpl<ColorSelected>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is LoadingCoupon);
+        (other.runtimeType == runtimeType &&
+            other is ColorSelected &&
+            (identical(other.color, color) || other.color == color));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, color);
 
   @override
   String toString() {
-    return 'CartState.selectColor()';
+    return 'CartState.colorSelected(color: $color)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $ColorSelectedCopyWith<$Res>
+    implements $CartStateCopyWith<$Res> {
+  factory $ColorSelectedCopyWith(
+          ColorSelected value, $Res Function(ColorSelected) _then) =
+      _$ColorSelectedCopyWithImpl;
+  @useResult
+  $Res call({String color});
+}
+
+/// @nodoc
+class _$ColorSelectedCopyWithImpl<$Res>
+    implements $ColorSelectedCopyWith<$Res> {
+  _$ColorSelectedCopyWithImpl(this._self, this._then);
+
+  final ColorSelected _self;
+  final $Res Function(ColorSelected) _then;
+
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? color = null,
+  }) {
+    return _then(ColorSelected(
+      null == color
+          ? _self.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
   }
 }
 
 /// @nodoc
 
-class SuccessCoupon implements CartState {
-  const SuccessCoupon();
+class SizeSelected implements CartState {
+  SizeSelected(this.size);
+
+  final String size;
+
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SizeSelectedCopyWith<SizeSelected> get copyWith =>
+      _$SizeSelectedCopyWithImpl<SizeSelected>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is SuccessCoupon);
+        (other.runtimeType == runtimeType &&
+            other is SizeSelected &&
+            (identical(other.size, size) || other.size == size));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, size);
+
+  @override
+  String toString() {
+    return 'CartState.sizeSelected(size: $size)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $SizeSelectedCopyWith<$Res>
+    implements $CartStateCopyWith<$Res> {
+  factory $SizeSelectedCopyWith(
+          SizeSelected value, $Res Function(SizeSelected) _then) =
+      _$SizeSelectedCopyWithImpl;
+  @useResult
+  $Res call({String size});
+}
+
+/// @nodoc
+class _$SizeSelectedCopyWithImpl<$Res> implements $SizeSelectedCopyWith<$Res> {
+  _$SizeSelectedCopyWithImpl(this._self, this._then);
+
+  final SizeSelected _self;
+  final $Res Function(SizeSelected) _then;
+
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? size = null,
+  }) {
+    return _then(SizeSelected(
+      null == size
+          ? _self.size
+          : size // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class LoadingUpdate implements CartState {
+  const LoadingUpdate();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is LoadingUpdate);
   }
 
   @override
@@ -796,7 +957,90 @@ class SuccessCoupon implements CartState {
 
   @override
   String toString() {
-    return 'CartState.selectsize()';
+    return 'CartState.loadingUpdate()';
+  }
+}
+
+/// @nodoc
+
+class SuccessUpdate implements CartState {
+  const SuccessUpdate();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is SuccessUpdate);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'CartState.successUpdate()';
+  }
+}
+
+/// @nodoc
+
+class ErrorUpdate implements CartState {
+  const ErrorUpdate({required this.erorr});
+
+  final String erorr;
+
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ErrorUpdateCopyWith<ErrorUpdate> get copyWith =>
+      _$ErrorUpdateCopyWithImpl<ErrorUpdate>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is ErrorUpdate &&
+            (identical(other.erorr, erorr) || other.erorr == erorr));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, erorr);
+
+  @override
+  String toString() {
+    return 'CartState.errorUpdate(erorr: $erorr)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $ErrorUpdateCopyWith<$Res>
+    implements $CartStateCopyWith<$Res> {
+  factory $ErrorUpdateCopyWith(
+          ErrorUpdate value, $Res Function(ErrorUpdate) _then) =
+      _$ErrorUpdateCopyWithImpl;
+  @useResult
+  $Res call({String erorr});
+}
+
+/// @nodoc
+class _$ErrorUpdateCopyWithImpl<$Res> implements $ErrorUpdateCopyWith<$Res> {
+  _$ErrorUpdateCopyWithImpl(this._self, this._then);
+
+  final ErrorUpdate _self;
+  final $Res Function(ErrorUpdate) _then;
+
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? erorr = null,
+  }) {
+    return _then(ErrorUpdate(
+      erorr: null == erorr
+          ? _self.erorr
+          : erorr // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
   }
 }
 
