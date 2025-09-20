@@ -15,7 +15,7 @@ Datum _$DatumFromJson(Map<String, dynamic> json) => Datum(
       ordersPricedelivery: (json['orders_pricedelivery'] as num?)?.toInt(),
       ordersPrice: (json['orders_price'] as num?)?.toInt(),
       ordersCoupon: (json['orders_coupon'] as num?)?.toInt(),
-      orderToatalprice: (json['order_Toatalprice'] as num?)?.toInt(),
+      orderToatalprice: (json['order_Toatalprice'] as num?)?.toDouble(),
       ordersRating: (json['orders_rating'] as num?)?.toInt(),
       ordersRatingCommint: json['orders_rating_commint'] as String?,
       ordersDatetime: json['orders_datetime'] as String?,
@@ -27,8 +27,8 @@ Datum _$DatumFromJson(Map<String, dynamic> json) => Datum(
       adressCity: json['adress_city'] as String?,
       adressName: json['adress_name'] as String?,
       adressStreet: json['adress_street'] as String?,
-      adressLat: json['adress_lat'] as String?,
-      adressLong: json['adress_long'] as String?,
+      adressLat: (json['adress_lat'] as num?)?.toDouble(),
+      adressLong: (json['adress_long'] as num?)?.toDouble(),
     );
 
 Map<String, dynamic> _$DatumToJson(Datum instance) => <String, dynamic>{

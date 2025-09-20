@@ -1,3 +1,4 @@
+import 'package:ecommerce_user/core/widgets/failer_widget.dart';
 import 'package:ecommerce_user/future/Book/logic/cubit/get_book_cubit.dart';
 import 'package:ecommerce_user/future/Book/logic/cubit/get_book_state.dart';
 
@@ -49,7 +50,11 @@ class _ViewBookBlocBuilderState extends State<ViewBookBlocBuilder> {
             ],
           );
         } else if (state is Erorr) {
-          return Text(state.erorr);
+          return FailerWidget(
+              messege: state.erorr,
+              onPressed: () {
+                context.read<GetBooKCubit>().emitgetBook(0);
+              });
         } else {
           return const Center(child: CircularProgressIndicator());
         }

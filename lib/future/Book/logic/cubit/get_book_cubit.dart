@@ -8,7 +8,7 @@ class GetBooKCubit extends Cubit<GetBooKState> {
   GetBooKCubit(this._bookRepo) : super(const GetBooKState.initial());
 
   final GetBookRepo _bookRepo;
-  emitLoginStates(int pageNumber) async {
+  emitgetBook(int pageNumber) async {
     if (pageNumber == 0) {
       emit(const GetBooKState.loading());
     } else {

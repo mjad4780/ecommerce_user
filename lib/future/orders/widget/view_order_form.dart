@@ -1,22 +1,21 @@
 import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
-import 'package:ecommerce_user/core/get_it/get_it.dart';
-import 'package:ecommerce_user/future/orders/logic/cubit/orders_cubit.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../core/helpers/spacing.dart';
 
 import 'package:flutter/material.dart';
 
+import '../../../model/response_detilas/datum.dart';
 import 'FormRow.dart';
 import 'addressSection.dart';
-import 'details_orders_bloc.dart';
+import 'itemsSection.dart';
 import 'paymentDetailsSection.dart';
 
 class CustemSubmint extends StatelessWidget {
   const CustemSubmint({
     super.key,
+    required this.details,
   });
-
+  final List<DataDetails> details;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -46,13 +45,15 @@ class CustemSubmint extends StatelessWidget {
                   ],
                 ),
               ),
-              BlocProvider(
-                  create: (contextt) => getIt<OrdersCubit>()
-                    ..emitGetDetails(context.argument()['data'].ordersId),
-                  child: DetailsBlocBuilder(
-                    tatalPrice:
-                        context.argument()['data'].orderToatalprice ?? 0,
-                  )),
+
+              ItemSection(
+                details: details,
+                totalPrice: context.argument()['data'].orderToatalprice ?? 0.0,
+              ),
+              // DetailsBlocBuilder(
+              //   orderId: context.argument()['data'].ordersUserid,
+              //   tatalPrice: context.argument()['data'].orderToatalprice ?? 0.0,
+              // ),
               AddressSection(order: context.argument()['data']),
               verticalSpace(10),
               PaymentDetailsSection(

@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:ecommerce_user/core/networking/api_result.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -16,45 +15,54 @@ class OrdersCubit extends Cubit<OrdersState> {
 
 //:GetOrders
   emitGetOrders() async {
-    log('message');
-    emit(const OrdersState.loadingGet());
+    if (!isClosed) emit(const OrdersState.loadingGet());
+    await Future.delayed(const Duration(seconds: 3));
     final response = await _checkCartOrder.getOrders();
     response.when(success: (responsehome) {
-      emit(OrdersState.successGet(responsehome));
+      if (!isClosed) emit(OrdersState.successGet(responsehome));
     }, failure: (error) {
-      emit(OrdersState.erorrGet(erorr: error.messege ?? ''));
+      if (!isClosed) emit(OrdersState.erorrGet(erorr: error.messege ?? ''));
     });
   }
 
   //:Details
   emitGetDetails(int id) async {
-    emit(const OrdersState.loadingDetails());
+    if (!isClosed) emit(const OrdersState.loadingDetails());
+    await Future.delayed(const Duration(seconds: 7));
+
     final response = await _checkCartOrder.getDetailas(id);
     response.when(success: (responsehome) {
-      emit(OrdersState.successDetails(responseDetails: responsehome));
+      // emit(const OrdersState.loadingDetails());
+
+      if (!isClosed)
+        emit(OrdersState.successDetails(responseDetails: responsehome));
     }, failure: (error) {
-      emit(OrdersState.erorrDetails(erorr: error.messege ?? ''));
+      if (!isClosed) emit(OrdersState.erorrDetails(erorr: error.messege ?? ''));
     });
   } //:deleteOrders
 
   emitdeleteOrders(int id) async {
-    emit(const OrdersState.loadingDelete());
+    if (!isClosed) emit(const OrdersState.loadingDelete());
+    await Future.delayed(const Duration(seconds: 3));
+
     final response = await _checkCartOrder.deleteOrders(id);
     response.when(success: (responsehome) async {
       await emitGetOrders();
-      emit(const OrdersState.successdelete());
+      if (!isClosed) emit(const OrdersState.successdelete());
     }, failure: (error) {
-      emit(OrdersState.erorrdelete(erorr: error.messege ?? ''));
+      if (!isClosed) emit(OrdersState.erorrdelete(erorr: error.messege ?? ''));
     });
   } //:GetPeinding
 
-  emitGetPeinding() async {
-    emit(const OrdersState.loadingPeinding());
-    final response = await _checkCartOrder.pending();
-    response.when(success: (responsehome) {
-      emit(OrdersState.successPeinding(responsehome));
-    }, failure: (error) {
-      emit(OrdersState.erorrPeinding(erorr: error.messege ?? ''));
-    });
-  }
+  // emitGetPeinding() async {
+  //   emit(const OrdersState.loadingPeinding());
+  //   Future.delayed(const Duration(seconds: 3));
+
+  //   final response = await _checkCartOrder.pending();
+  //   response.when(success: (responsehome) {
+  //     emit(OrdersState.successPeinding(responsehome));
+  //   }, failure: (error) {
+  //     emit(OrdersState.erorrPeinding(erorr: error.messege ?? ''));
+  //   });
+  // }
 }

@@ -19,7 +19,7 @@ class Book extends StatelessWidget {
           Dio(),
         ),
       ))
-        ..emitLoginStates(0),
+        ..emitgetBook(0),
       child: const ViewBookBlocBuilder(),
     );
   }

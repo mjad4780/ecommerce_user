@@ -1,3 +1,4 @@
+import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
 import 'package:ecommerce_user/core/get_it/get_it.dart';
 import 'package:ecommerce_user/future/orders/logic/cubit/orders_cubit.dart';
 import 'package:flutter/material.dart';
@@ -15,14 +16,15 @@ class MyOrderScreen extends StatelessWidget {
       create: (context) => getIt<OrdersCubit>()..emitGetOrders(),
       child: Scaffold(
           appBar: AppBar(
-            title: const Text(
-              "My Orders",
-              style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: AppColor.darkOrange),
-            ),
-          ),
+              backgroundColor: AppColor.lightGrey,
+              title: const Text("My Orders"),
+              centerTitle: true,
+              elevation: 0,
+              leading: GestureDetector(
+                onTap: () => context.pop(),
+                child: const Icon(Icons.arrow_back_ios,
+                    size: 25, color: AppColor.darkOrange),
+              )),
           body: const OrdersBlocBuilder()),
     );
   }

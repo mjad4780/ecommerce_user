@@ -20,7 +20,7 @@ class Datum {
   @JsonKey(name: 'orders_coupon')
   final int? ordersCoupon;
   @JsonKey(name: 'order_Toatalprice')
-  final int? orderToatalprice;
+  final double? orderToatalprice;
   @JsonKey(name: 'orders_rating')
   final int? ordersRating;
   @JsonKey(name: 'orders_rating_commint')
@@ -46,9 +46,9 @@ class Datum {
   @JsonKey(name: 'adress_street')
   final String? adressStreet;
   @JsonKey(name: 'adress_lat')
-  final String? adressLat;
+  final double? adressLat;
   @JsonKey(name: 'adress_long')
-  final String? adressLong;
+  final double? adressLong;
 
   const Datum({
     this.playerId,

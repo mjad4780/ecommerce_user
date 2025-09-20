@@ -19,7 +19,7 @@ class SearchScreen extends StatelessWidget {
       child: Builder(builder: (context) {
         return Scaffold(
           appBar: AppBar(
-              title: const Text("🔍 البحث"),
+              title: const Text("🔍 Search"),
               centerTitle: true,
               elevation: 0,
               leading: GestureDetector(

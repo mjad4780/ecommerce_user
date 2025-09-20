@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../core/theme/colors.dart';
+import 'delete_order_bloc_listener.dart';
 import 'function_update_orders.dart';
 
 class OrderTile extends StatelessWidget {
@@ -10,7 +11,7 @@ class OrderTile extends StatelessWidget {
   final String date;
   final VoidCallback? onTap;
   final int ordersId;
-  final int price;
+  final double price;
   const OrderTile({
     super.key,
     required this.items,
@@ -112,6 +113,7 @@ class OrderTile extends StatelessWidget {
                             ),
                           ),
                         ),
+                      const DeleteOrderBlocListener()
                     ],
                   ),
                 ),

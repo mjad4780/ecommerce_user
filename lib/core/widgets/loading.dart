@@ -11,3 +11,12 @@ class LoadingWidget extends StatelessWidget {
     return isloading ? Skeletonizer(enabled: true, child: child) : child;
   }
 }
+
+class LoadingWidget2 extends StatelessWidget {
+  const LoadingWidget2({super.key, required this.child});
+  final Widget child;
+  @override
+  Widget build(BuildContext context) {
+    return Skeletonizer(child: Skeleton.shade(shade: true, child: child));
+  }
+}

@@ -34,7 +34,7 @@ class _FeaturedBooksListViewState extends State<FeaturedBooksListView> {
       if (!isLoading) {
         isLoading = true;
 
-        await context.read<GetBooKCubit>().emitLoginStates(nextPage++);
+        await context.read<GetBooKCubit>().emitgetBook(nextPage++);
 
         isLoading = false;
       }
@@ -53,7 +53,7 @@ class _FeaturedBooksListViewState extends State<FeaturedBooksListView> {
       height: MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width / 1.5,
       child: RefreshIndicator(
-        onRefresh: () => context.read<GetBooKCubit>().emitLoginStates(0),
+        onRefresh: () => context.read<GetBooKCubit>().emitgetBook(0),
         child: ListView.builder(
           controller: _scrollController,
           itemCount: widget.books.length,

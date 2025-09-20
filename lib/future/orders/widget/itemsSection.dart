@@ -10,7 +10,7 @@ class ItemSection extends StatelessWidget {
   });
   final List<DataDetails> details;
 
-  final int totalPrice;
+  final double totalPrice;
   @override
   Widget build(BuildContext context) {
     return Container(

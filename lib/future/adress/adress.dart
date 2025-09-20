@@ -21,17 +21,14 @@ class MyAddressPage extends StatelessWidget {
           ..getLating(),
         child: Scaffold(
             appBar: AppBar(
-              backgroundColor: Colors.white,
-              title: const Center(
-                child: Text(
-                  "My Address     ",
-                  style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: AppColor.darkOrange),
-                ),
-              ),
-            ),
+                title: const Text("Adress"),
+                centerTitle: true,
+                elevation: 0,
+                leading: GestureDetector(
+                  onTap: () => context.pop(),
+                  child: const Icon(Icons.arrow_back_ios,
+                      size: 25, color: AppColor.darkOrange),
+                )),
             floatingActionButton: Builder(builder: (context) {
               return FloatingActionButton(
                   onPressed: () async {
