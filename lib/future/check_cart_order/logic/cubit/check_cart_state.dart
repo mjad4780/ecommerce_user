@@ -18,9 +18,10 @@ class CheckCartState with _$CheckCartState {
   const factory CheckCartState.erorrCoupon({required String erorr}) =
       ErorrCoupon;
 
-  const factory CheckCartState.selectAdress() = SelectAdress;
-  const factory CheckCartState.selectType() = SelectType;
-  const factory CheckCartState.selectPayment() = SelectPayment;
+  factory CheckCartState.selectAdress(String selectAdressIdS) = SelectAdress;
+  factory CheckCartState.selectType(String orderTypeS) = SelectType;
+  factory CheckCartState.selectPayment(String selectedPaymentOptionS) =
+      SelectPayment;
 
   const factory CheckCartState.loadingPayment() = LoadingPayment;
   const factory CheckCartState.uccessPayment() = SuccessPayment;

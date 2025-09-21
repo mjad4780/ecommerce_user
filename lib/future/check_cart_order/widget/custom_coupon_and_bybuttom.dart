@@ -73,12 +73,17 @@ class CustomCouponAndPyBottom extends StatelessWidget {
 
     var amount = context.read<CheckCartCubit>().grandTotalPrice ?? offers;
     if (context.read<CheckCartCubit>().selectedPaymentOption == 1) {
-      await context.read<CheckCartCubit>().greatePayment(PaymentBodyTojson(
-          amount: amount, currency: 'USD', customer: ApiConstants.customerId));
-      await context
-          .read<CheckCartCubit>()
-          .emitCheckCart(context, amount, id ?? 'id');
-      context.pop();
+      await context.read<CheckCartCubit>().greatePayment(
+          PaymentBodyTojson(
+              amount: amount,
+              currency: 'USD',
+              customer: ApiConstants.customerId),
+          context,
+          amount,
+          id ?? 'id');
+      if (context.mounted) {
+        context.pop();
+      }
     } else {
       context.read<CheckCartCubit>().emitCheckCart(context, amount, id ?? 'id');
     }

@@ -4,6 +4,7 @@ import 'package:ecommerce_user/future/check_cart_order/logic/cubit/check_cart_st
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../core/theme/colors.dart';
 import '../../../core/theme/styles.dart';
 
 class CheckCartBlocListener extends StatelessWidget {
@@ -17,20 +18,21 @@ class CheckCartBlocListener extends StatelessWidget {
       listener: (context, state) {
         state.whenOrNull(
           loading: () {
-            // showDialog(
-            //   context: context,
-            //   builder: (context) => const Center(
-            //     child: CircularProgressIndicator(
-            //       color: AppColor.mainBlue,
-            //     ),
-            //   ),
-            // );
+            showDialog(
+              context: context,
+              builder: (context) => const Center(
+                child: CircularProgressIndicator(
+                  color: AppColor.mainBlue,
+                ),
+              ),
+            );
           },
           success: () {
-            // context.pop();
+            context.pop();
             context.pushpushReplacement('/HomeScrean');
           },
           erorr: (error) {
+            context.pop();
             setupErrorState(context, error);
           },
         );

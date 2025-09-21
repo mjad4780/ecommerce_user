@@ -15,12 +15,11 @@ migrate_working_dir/
 *.ipr
 *.iws
 .idea/
-lib/core/networking/api_constants.dart
+.lib/core/networking/api_constants.dart
 # The .vscode folder contains launch configuration and tasks you configure in
 # VS Code which you may wish to be included in version control, so this line
 # is commented out by default.
 #.vscode/
-lib/core/networking/api_constants.dart
 # Flutter/Dart/Pub related
 
 **/doc/api/
@@ -31,6 +30,7 @@ lib/core/networking/api_constants.dart
 .pub-cache/
 .pub/
 /build/
+lib/core/networking/api_constants.dart
 
 # Symbolication related
 app.*.symbols

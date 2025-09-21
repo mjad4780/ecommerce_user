@@ -33,7 +33,7 @@ class PaymentBlocListener extends StatelessWidget {
           uccessPayment: () async {
             context.pop();
 
-            // context.pushpushReplacement('/HomeScrean');
+            context.pushpushReplacement('/HomeScrean');
           },
           erorrpayment: (error) {
             context.pop();

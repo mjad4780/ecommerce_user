@@ -12,7 +12,7 @@ class CheckCartCubit extends Cubit<CheckCartState> {
   CheckCartCubit(this._checkCartOrder, this.repoPayment)
       : super(const CheckCartState.initial());
   final RepoPayment repoPayment;
-  final CheckCartOrder _checkCartOrder;
+  final CheckCartOrderRepo _checkCartOrder;
   TextEditingController couponName = TextEditingController();
 
   int? selectadressId;
@@ -26,16 +26,24 @@ class CheckCartCubit extends Cubit<CheckCartState> {
 
 //:CheckCart
   emitCheckCart(BuildContext context, int orderprice, String playerId) async {
-    if (selectedPaymentOption == null &&
-        selectadressId == null &&
+    if (selectedPaymentOption == null ||
+        selectadressId == null ||
         orderType == null) {
       return testAlert(context, "erorr",
           "please choose Adress  and Orders Type and order Payment ");
     }
+    final request = CheckCartOrderRequest(
+      adressid: selectadressId!,
+      ordertype: orderType!,
+      orderprice: orderprice,
+      couponid: couponId,
+      paymentmethod: selectedPaymentOption!,
+      playerId: playerId,
+    );
 
     emit(const CheckCartState.loading());
-    final response = await _checkCartOrder.checkCartOrder(selectadressId!,
-        orderType!, orderprice, couponId, selectedPaymentOption!, playerId);
+    // await Future.delayed(const Duration(seconds: 3));
+    final response = await _checkCartOrder.checkCartOrder(request);
     response.when(success: (responsehome) {
       emit(const CheckCartState.success());
     }, failure: (error) {
@@ -47,7 +55,7 @@ class CheckCartCubit extends Cubit<CheckCartState> {
     selectadressId = selectAdressId;
     selectadressIdS = selectAdressIdS;
 
-    emit(const CheckCartState.selectAdress());
+    emit(CheckCartState.selectAdress(selectAdressIdS));
   }
 
   selectPyment(String selectPyments) {
@@ -59,7 +67,7 @@ class CheckCartCubit extends Cubit<CheckCartState> {
 
     selectedPaymentOptionS = selectPyments;
 
-    emit(const CheckCartState.selectPayment());
+    emit(CheckCartState.selectPayment(selectPyments));
   }
 
   selectType(String selectTypeS) {
@@ -69,7 +77,7 @@ class CheckCartCubit extends Cubit<CheckCartState> {
       orderType = 0;
     }
     orderTypeS = selectTypeS;
-    emit(const CheckCartState.selectType());
+    emit(CheckCartState.selectType(selectTypeS));
   }
 
   int? grandTotalPrice;
@@ -90,13 +98,32 @@ class CheckCartCubit extends Cubit<CheckCartState> {
   }
 
   //:greatePayment
-  greatePayment(PaymentBodyTojson data) async {
+  greatePayment(PaymentBodyTojson data, BuildContext context, int orderprice,
+      String playerId) async {
+    if (selectedPaymentOption == null ||
+        selectadressId == null ||
+        orderType == null) {
+      return testAlert(context, "erorr",
+          "please choose Adress  and Orders Type and order Payment ");
+    }
+    final request = CheckCartOrderRequest(
+      adressid: selectadressId!,
+      ordertype: orderType!,
+      orderprice: orderprice,
+      couponid: couponId,
+      paymentmethod: selectedPaymentOption!,
+      playerId: playerId,
+    );
     emit(const CheckCartState.loadingPayment());
-    final response = await repoPayment.greatePayment(data);
+    final response = await repoPayment.greatePayment(data, request);
     response.when(success: (couponData) {
       emit(const CheckCartState.uccessPayment());
     }, failure: (error) {
-      emit(CheckCartState.erorrpayment(erorr: error.messege ?? ''));
+      if (error.status?.toLowerCase() == 'canceled') {
+        emit(const CheckCartState.initial());
+      } else {
+        emit(CheckCartState.erorrpayment(erorr: error.messege ?? ''));
+      }
     });
   }
 }

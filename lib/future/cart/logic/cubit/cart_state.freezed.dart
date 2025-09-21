@@ -588,7 +588,7 @@ class LoadingGet implements CartState {
 /// @nodoc
 
 class SuccessGet implements CartState {
-  const SuccessGet(this.cartResponse);
+  SuccessGet(this.cartResponse);
 
   final ResponseCart cartResponse;
 

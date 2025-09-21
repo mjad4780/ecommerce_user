@@ -77,6 +77,7 @@ class ApiConstants {
       'be9810d404ebfab5e0d4cc172effff720a09b7cb5275281aa405721b3ef42e24';
   static const String chatId = 'chatId';
   static const String appIdOnesignal = '9c37a804-6bb8-4055-96f4-a56308ae8b63';
+  static const String appIdOnesignal2 = '9c37a804-6bb8-4055-96f4-a56308ae8b63';
 }
 
 class ApiErrors {

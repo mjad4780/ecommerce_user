@@ -10,10 +10,9 @@ class CustomTypeAndPyment extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<CheckCartCubit, CheckCartState>(
+    return BlocBuilder<CheckCartCubit, CheckCartState>(
       buildWhen: (previous, current) =>
           current is SelectPayment || current is SelectType,
-      listener: (context, state) {},
       builder: (context, state) {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -22,8 +21,9 @@ class CustomTypeAndPyment extends StatelessWidget {
 
             CustomDropdown<String>(
                 bgColor: Colors.white,
-                hintText:
-                    context.read<CheckCartCubit>().selectedPaymentOptionS ??
+                hintText: state is SelectPayment
+                    ? state.selectedPaymentOptionS
+                    : context.read<CheckCartCubit>().selectedPaymentOptionS ??
                         'choose Payment Orders',
                 items: const ['payment card', 'cash'],
                 onChanged: (val) {
@@ -36,8 +36,10 @@ class CustomTypeAndPyment extends StatelessWidget {
 
             CustomDropdown<String>(
                 bgColor: Colors.white,
-                hintText: context.read<CheckCartCubit>().orderTypeS ??
-                    'choose Type Orders',
+                hintText: state is SelectType
+                    ? state.orderTypeS
+                    : context.read<CheckCartCubit>().orderTypeS ??
+                        'choose Type Orders',
                 items: const ['recive', 'delviry'],
                 onChanged: (val) {
                   context.read<CheckCartCubit>().selectType(val ?? 'delviry');

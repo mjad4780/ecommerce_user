@@ -242,9 +242,9 @@ extension CheckCartStatePatterns on CheckCartState {
     TResult Function()? loadingCoupon,
     TResult Function(CouponResponse coupon)? successCoupon,
     TResult Function(String erorr)? erorrCoupon,
-    TResult Function()? selectAdress,
-    TResult Function()? selectType,
-    TResult Function()? selectPayment,
+    TResult Function(String selectAdressIdS)? selectAdress,
+    TResult Function(String orderTypeS)? selectType,
+    TResult Function(String selectedPaymentOptionS)? selectPayment,
     TResult Function()? loadingPayment,
     TResult Function()? uccessPayment,
     TResult Function(String erorr)? erorrpayment,
@@ -267,11 +267,11 @@ extension CheckCartStatePatterns on CheckCartState {
       case ErorrCoupon() when erorrCoupon != null:
         return erorrCoupon(_that.erorr);
       case SelectAdress() when selectAdress != null:
-        return selectAdress();
+        return selectAdress(_that.selectAdressIdS);
       case SelectType() when selectType != null:
-        return selectType();
+        return selectType(_that.orderTypeS);
       case SelectPayment() when selectPayment != null:
-        return selectPayment();
+        return selectPayment(_that.selectedPaymentOptionS);
       case LoadingPayment() when loadingPayment != null:
         return loadingPayment();
       case SuccessPayment() when uccessPayment != null:
@@ -305,9 +305,9 @@ extension CheckCartStatePatterns on CheckCartState {
     required TResult Function() loadingCoupon,
     required TResult Function(CouponResponse coupon) successCoupon,
     required TResult Function(String erorr) erorrCoupon,
-    required TResult Function() selectAdress,
-    required TResult Function() selectType,
-    required TResult Function() selectPayment,
+    required TResult Function(String selectAdressIdS) selectAdress,
+    required TResult Function(String orderTypeS) selectType,
+    required TResult Function(String selectedPaymentOptionS) selectPayment,
     required TResult Function() loadingPayment,
     required TResult Function() uccessPayment,
     required TResult Function(String erorr) erorrpayment,
@@ -329,11 +329,11 @@ extension CheckCartStatePatterns on CheckCartState {
       case ErorrCoupon():
         return erorrCoupon(_that.erorr);
       case SelectAdress():
-        return selectAdress();
+        return selectAdress(_that.selectAdressIdS);
       case SelectType():
-        return selectType();
+        return selectType(_that.orderTypeS);
       case SelectPayment():
-        return selectPayment();
+        return selectPayment(_that.selectedPaymentOptionS);
       case LoadingPayment():
         return loadingPayment();
       case SuccessPayment():
@@ -366,9 +366,9 @@ extension CheckCartStatePatterns on CheckCartState {
     TResult? Function()? loadingCoupon,
     TResult? Function(CouponResponse coupon)? successCoupon,
     TResult? Function(String erorr)? erorrCoupon,
-    TResult? Function()? selectAdress,
-    TResult? Function()? selectType,
-    TResult? Function()? selectPayment,
+    TResult? Function(String selectAdressIdS)? selectAdress,
+    TResult? Function(String orderTypeS)? selectType,
+    TResult? Function(String selectedPaymentOptionS)? selectPayment,
     TResult? Function()? loadingPayment,
     TResult? Function()? uccessPayment,
     TResult? Function(String erorr)? erorrpayment,
@@ -390,11 +390,11 @@ extension CheckCartStatePatterns on CheckCartState {
       case ErorrCoupon() when erorrCoupon != null:
         return erorrCoupon(_that.erorr);
       case SelectAdress() when selectAdress != null:
-        return selectAdress();
+        return selectAdress(_that.selectAdressIdS);
       case SelectType() when selectType != null:
-        return selectType();
+        return selectType(_that.orderTypeS);
       case SelectPayment() when selectPayment != null:
-        return selectPayment();
+        return selectPayment(_that.selectedPaymentOptionS);
       case LoadingPayment() when loadingPayment != null:
         return loadingPayment();
       case SuccessPayment() when uccessPayment != null:
@@ -679,60 +679,193 @@ class _$ErorrCouponCopyWithImpl<$Res> implements $ErorrCouponCopyWith<$Res> {
 /// @nodoc
 
 class SelectAdress implements CheckCartState {
-  const SelectAdress();
+  SelectAdress(this.selectAdressIdS);
+
+  final String selectAdressIdS;
+
+  /// Create a copy of CheckCartState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SelectAdressCopyWith<SelectAdress> get copyWith =>
+      _$SelectAdressCopyWithImpl<SelectAdress>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is SelectAdress);
+        (other.runtimeType == runtimeType &&
+            other is SelectAdress &&
+            (identical(other.selectAdressIdS, selectAdressIdS) ||
+                other.selectAdressIdS == selectAdressIdS));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, selectAdressIdS);
 
   @override
   String toString() {
-    return 'CheckCartState.selectAdress()';
+    return 'CheckCartState.selectAdress(selectAdressIdS: $selectAdressIdS)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $SelectAdressCopyWith<$Res>
+    implements $CheckCartStateCopyWith<$Res> {
+  factory $SelectAdressCopyWith(
+          SelectAdress value, $Res Function(SelectAdress) _then) =
+      _$SelectAdressCopyWithImpl;
+  @useResult
+  $Res call({String selectAdressIdS});
+}
+
+/// @nodoc
+class _$SelectAdressCopyWithImpl<$Res> implements $SelectAdressCopyWith<$Res> {
+  _$SelectAdressCopyWithImpl(this._self, this._then);
+
+  final SelectAdress _self;
+  final $Res Function(SelectAdress) _then;
+
+  /// Create a copy of CheckCartState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? selectAdressIdS = null,
+  }) {
+    return _then(SelectAdress(
+      null == selectAdressIdS
+          ? _self.selectAdressIdS
+          : selectAdressIdS // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
   }
 }
 
 /// @nodoc
 
 class SelectType implements CheckCartState {
-  const SelectType();
+  SelectType(this.orderTypeS);
+
+  final String orderTypeS;
+
+  /// Create a copy of CheckCartState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SelectTypeCopyWith<SelectType> get copyWith =>
+      _$SelectTypeCopyWithImpl<SelectType>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is SelectType);
+        (other.runtimeType == runtimeType &&
+            other is SelectType &&
+            (identical(other.orderTypeS, orderTypeS) ||
+                other.orderTypeS == orderTypeS));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, orderTypeS);
 
   @override
   String toString() {
-    return 'CheckCartState.selectType()';
+    return 'CheckCartState.selectType(orderTypeS: $orderTypeS)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $SelectTypeCopyWith<$Res>
+    implements $CheckCartStateCopyWith<$Res> {
+  factory $SelectTypeCopyWith(
+          SelectType value, $Res Function(SelectType) _then) =
+      _$SelectTypeCopyWithImpl;
+  @useResult
+  $Res call({String orderTypeS});
+}
+
+/// @nodoc
+class _$SelectTypeCopyWithImpl<$Res> implements $SelectTypeCopyWith<$Res> {
+  _$SelectTypeCopyWithImpl(this._self, this._then);
+
+  final SelectType _self;
+  final $Res Function(SelectType) _then;
+
+  /// Create a copy of CheckCartState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? orderTypeS = null,
+  }) {
+    return _then(SelectType(
+      null == orderTypeS
+          ? _self.orderTypeS
+          : orderTypeS // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
   }
 }
 
 /// @nodoc
 
 class SelectPayment implements CheckCartState {
-  const SelectPayment();
+  SelectPayment(this.selectedPaymentOptionS);
+
+  final String selectedPaymentOptionS;
+
+  /// Create a copy of CheckCartState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SelectPaymentCopyWith<SelectPayment> get copyWith =>
+      _$SelectPaymentCopyWithImpl<SelectPayment>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is SelectPayment);
+        (other.runtimeType == runtimeType &&
+            other is SelectPayment &&
+            (identical(other.selectedPaymentOptionS, selectedPaymentOptionS) ||
+                other.selectedPaymentOptionS == selectedPaymentOptionS));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, selectedPaymentOptionS);
 
   @override
   String toString() {
-    return 'CheckCartState.selectPayment()';
+    return 'CheckCartState.selectPayment(selectedPaymentOptionS: $selectedPaymentOptionS)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $SelectPaymentCopyWith<$Res>
+    implements $CheckCartStateCopyWith<$Res> {
+  factory $SelectPaymentCopyWith(
+          SelectPayment value, $Res Function(SelectPayment) _then) =
+      _$SelectPaymentCopyWithImpl;
+  @useResult
+  $Res call({String selectedPaymentOptionS});
+}
+
+/// @nodoc
+class _$SelectPaymentCopyWithImpl<$Res>
+    implements $SelectPaymentCopyWith<$Res> {
+  _$SelectPaymentCopyWithImpl(this._self, this._then);
+
+  final SelectPayment _self;
+  final $Res Function(SelectPayment) _then;
+
+  /// Create a copy of CheckCartState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? selectedPaymentOptionS = null,
+  }) {
+    return _then(SelectPayment(
+      null == selectedPaymentOptionS
+          ? _self.selectedPaymentOptionS
+          : selectedPaymentOptionS // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
   }
 }
 

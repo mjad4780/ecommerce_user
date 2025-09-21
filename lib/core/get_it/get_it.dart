@@ -79,8 +79,9 @@ void setupServise() {
       ));
 
   // CheckCartOrder
-  getIt.registerLazySingleton<CheckCartOrder>(() => CheckCartOrder(getIt()));
-  getIt.registerLazySingleton<RepoPayment>(() => RepoPayment(getIt()));
+  getIt.registerLazySingleton<CheckCartOrderRepo>(
+      () => CheckCartOrderRepo(getIt()));
+  getIt.registerLazySingleton<RepoPayment>(() => RepoPayment(getIt(), getIt()));
 
   getIt.registerFactory<CheckCartCubit>(() => CheckCartCubit(getIt(), getIt()));
 

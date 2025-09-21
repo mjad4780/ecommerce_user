@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'dart:io';
 
 import 'package:dio/dio.dart';
+import 'package:flutter_stripe/flutter_stripe.dart';
 
 import 'api_error_model.dart';
 
@@ -36,6 +37,18 @@ class ErrorHandler {
         case DioExceptionType.badCertificate:
           return ApiErrorModel(messege: "SSL certificate verification failed");
       }
+    } else if (error is StripeException) {
+      if (error.error.code == FailureCode.Canceled) {
+        return ApiErrorModel(
+          status: 'canceled',
+          messege: "User canceled the payment flow.",
+        );
+      } else {
+        return ApiErrorModel(
+          status: 'failed',
+          messege: error.error.localizedMessage ?? "Payment failed",
+        );
+      }
     } else {
       return ApiErrorModel(messege: "Unexpected error: ${error.toString()}");
     }
@@ -53,6 +66,14 @@ class ErrorHandler {
       return ApiErrorModel(messege: "HTTP protocol error");
     } else if (err is TimeoutException) {
       return ApiErrorModel(messege: "Connection timeout");
+    } else if (err is StripeException) {
+      if (err.error.code == FailureCode.Canceled) {
+        return ApiErrorModel(
+            status: 'canceled', messege: "User canceled the payment flow.");
+      } else {
+        return ApiErrorModel(
+            messege: "Payment failed: ${err.error.localizedMessage}");
+      }
     } else if (err is TlsException) {
       return ApiErrorModel(messege: "TLS/SSL communication error");
     } else if (err != null) {
