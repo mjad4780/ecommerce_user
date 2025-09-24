@@ -25,7 +25,7 @@ ThemeData themeDark() {
 ThemeData themeLight() {
   return ThemeData(
     appBarTheme: AppBarTheme(
-      backgroundColor: ColorsLight.mainColor,
+      // backgroundColor: ColorsLight.mainColor,
       iconTheme: const IconThemeData(color: ColorsLight.black),
       elevation: 0,
       centerTitle: true,
@@ -36,7 +36,7 @@ ThemeData themeLight() {
       ),
     ),
     // primaryColor: ColorsLight.mainColor,
-    scaffoldBackgroundColor: AppColor.lightGrey,
+    // scaffoldBackgroundColor: AppColor.lightGrey,
     extensions: const <ThemeExtension<dynamic>>[
       MyColors.light,
     ],

@@ -13,6 +13,7 @@ import 'package:ecommerce_user/future/item_categories/data/repo.dart';
 import 'package:ecommerce_user/future/offers/logic/cubit/offers_cubit.dart';
 
 import 'package:get_it/get_it.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../../core/networking/api_service.dart';
 import '../../core/networking/dio_factory.dart';
@@ -38,11 +39,18 @@ import '../../future/offers/data/repo.dart';
 import '../../future/orders/data/repo.dart';
 import '../../future/orders/logic/cubit/orders_cubit.dart';
 import '../helpers/cache_helper.dart';
+import '../service/supabase/supabase_service.dart';
 
 final getIt = GetIt.instance;
 void setupServise() {
   Dio dio = DioFactory.getDio();
   // FirebaseFirestore firestore = FirebaseFirestore.instance;
+
+//service supabase
+  getIt.registerLazySingleton<SupabaseClient>(() => Supabase.instance.client);
+  getIt.registerLazySingleton<SupabaseService>(
+      () => SupabaseService(getIt<SupabaseClient>()));
+
   getIt.registerLazySingleton<ApiService>(() => ApiService(dio));
 
   getIt.registerSingleton<CacheHelper>(CacheHelper());

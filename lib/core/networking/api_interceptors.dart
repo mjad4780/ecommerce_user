@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:ecommerce_user/core/networking/api_constants.dart';
+
+import '../../key.dart';
 
 class ApiInterceptor extends Interceptor {
   @override
@@ -7,10 +8,11 @@ class ApiInterceptor extends Interceptor {
 //options.queryParameters[]
 
     options.headers['Accept-Language'] = "en";
-    options.headers['Content-Type'] = "application/x-www-form-urlencoded";
-    // options.headers['Content-Type'] = "application/json";
-    options.headers['Stripe-Version'] = "2024-06-20";
-    options.headers['Authorization'] = 'Bearer ${ApiConstants.apikey}';
+    // options.headers['Content-Type'] = "application/x-www-form-urlencoded";
+    options.headers['Content-Type'] = "application/json";
+    // options.headers['Stripe-Version'] = "2024-06-20";
+    // options.headers['Authorization'] = 'Bearer ${ApiConstants.apikey}';
+    options.headers['Authorization'] = 'Bearer $supabaseKey';
 
     super.onRequest(options, handler);
   }

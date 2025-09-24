@@ -1,7 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-import '../../../core/networking/api_constants.dart';
 import '../data/models/response_home/response_home.dart';
 import '../../../core/util/app_data.dart';
 
@@ -80,8 +79,7 @@ class PosterSection extends StatelessWidget {
                       tag: "poster_${poster.settingId}",
                       child: CachedNetworkImage(
                         width: MediaQuery.of(context).size.width / 3,
-                        imageUrl:
-                            '${ApiConstants.imagePoster}/${poster.settingImage}',
+                        imageUrl: poster.settingImage!,
                         fit: BoxFit.contain,
                       ),
                     ),

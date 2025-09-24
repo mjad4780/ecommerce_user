@@ -18,9 +18,9 @@ class HomeRepo {
   Future<ApiResult<ResponseHome>> homeData() async {
     try {
       Map<String, dynamic> map = {
-        "id": getIt<CacheHelper>().getData(key: 'id'),
+        "userid": getIt<CacheHelper>().getData(key: 'id'),
       };
-      final response = await _apiService.home(formDataPost(map));
+      final response = await _apiService.home(map);
 
       return ApiResult.success(response);
     } catch (e) {

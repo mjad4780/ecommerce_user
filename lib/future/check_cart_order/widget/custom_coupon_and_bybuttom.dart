@@ -3,7 +3,6 @@ import 'package:ecommerce_user/core/networking/api_constants.dart';
 import 'package:ecommerce_user/future/check_cart_order/widget/payment_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:onesignal_flutter/onesignal_flutter.dart';
 
 import '../../../core/widgets/compleate_order_button.dart';
 import '../../../core/widgets/custom_text_field.dart';
@@ -69,8 +68,6 @@ class CustomCouponAndPyBottom extends StatelessWidget {
   }
 
   void newMethod(BuildContext context) async {
-    final id = OneSignal.User.pushSubscription.id;
-
     var amount = context.read<CheckCartCubit>().grandTotalPrice ?? offers;
     if (context.read<CheckCartCubit>().selectedPaymentOption == 1) {
       await context.read<CheckCartCubit>().greatePayment(
@@ -80,12 +77,12 @@ class CustomCouponAndPyBottom extends StatelessWidget {
               customer: ApiConstants.customerId),
           context,
           amount,
-          id ?? 'id');
+          'id');
       if (context.mounted) {
         context.pop();
       }
     } else {
-      context.read<CheckCartCubit>().emitCheckCart(context, amount, id ?? 'id');
+      context.read<CheckCartCubit>().emitCheckCart(context, amount, 'id');
     }
   }
 }

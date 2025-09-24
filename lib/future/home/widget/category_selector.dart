@@ -3,7 +3,6 @@ import 'package:ecommerce_user/core/helpers/spacing.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/animation/open_container_wrapper.dart';
-import '../../../core/networking/api_constants.dart';
 import '../data/models/response_home/response_home.dart';
 import '../../item_categories/product_by_category_screen.dart';
 
@@ -58,8 +57,7 @@ class CategorySelector extends StatelessWidget {
                         child: Hero(
                           tag: "cat_${category.categoriesId}",
                           child: CachedNetworkImage(
-                            imageUrl:
-                                '${ApiConstants.imageCat}/${category.categoriesImage}',
+                            imageUrl: category.categoriesImage!,
                             width: 60,
                             height: 60,
                             fit: BoxFit.contain,

@@ -10,7 +10,7 @@ part of 'api_service.dart';
 
 class _ApiService implements ApiService {
   _ApiService(this._dio, {this.baseUrl, this.errorLogger}) {
-    baseUrl ??= 'http://10.0.2.2/e-ecommerse';
+    baseUrl ??= 'http://www.myapiproject.rf.gd/e-ecommerse';
   }
 
   final Dio _dio;
@@ -29,7 +29,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/auth/login.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/auth/login.php',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -56,7 +56,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/auth/sign_up.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/auth/sign_up.php',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -83,7 +83,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/auth/verfycode.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/auth/verfycode.php',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -110,7 +110,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/auth/sendverfycode.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/auth/sendverfycode.php',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -137,7 +137,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/forget_password/check_email.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/forget_password/check_email.php',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -164,7 +164,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/forget_password/Repassword.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/forget_password/Repassword.php',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -191,7 +191,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/forget_password/verfycode_forget_password.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/forget_password/verfycode_forget_password.php',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -218,7 +218,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/home.php',
+            'https://iukfhdcintfcbfciawya.supabase.co/functions/v1/home',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -227,7 +227,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late ResponseHome _value;
     try {
-      _value = ResponseHome.fromJson(jsonDecode(_result.data!));
+      _value = ResponseHome.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -245,7 +245,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/items/search.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/items/search.php',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -272,7 +272,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/items/categories_item.php',
+            'https://iukfhdcintfcbfciawya.supabase.co/functions/v1/quick-responder',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -281,7 +281,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late Item1view _value;
     try {
-      _value = Item1view.fromJson(jsonDecode(_result.data!));
+      _value = Item1view.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -299,7 +299,7 @@ class _ApiService implements ApiService {
       Options(method: 'GET', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/items/offers.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/items/offers.php',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -326,7 +326,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/adress/add_adress.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/adress/add_adress.php',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -353,7 +353,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/adress/delete_adress.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/adress/delete_adress.php',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -380,7 +380,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/adress/edit_adress.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/adress/edit_adress.php',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -407,7 +407,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/adress/get_adress.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/adress/get_adress.php',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -434,7 +434,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/cart/add_cart.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/cart/add_cart.php',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -461,7 +461,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/cart/delete_cart.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/cart/delete_cart.php',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -488,7 +488,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/cart/update_cart.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/cart/update_cart.php',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -515,7 +515,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/cart/getcart.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/cart/getcart.php',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -542,7 +542,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/coupon/checkCoupon.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/coupon/checkCoupon.php',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -569,7 +569,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/favorite/addfavorite.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/favorite/addfavorite.php',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -596,7 +596,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/favorite/removefavorite.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/favorite/removefavorite.php',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -623,7 +623,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/favorite/get_favorite.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/favorite/get_favorite.php',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -650,7 +650,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/orders/Rating.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/orders/Rating.php',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -677,7 +677,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/orders/archive.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/orders/archive.php',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -704,7 +704,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/orders/checkout.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/orders/checkout.php',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -731,7 +731,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/orders/delete.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/orders/delete.php',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -758,7 +758,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/orders/details.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/orders/details.php',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -785,7 +785,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/orders/get_order.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/orders/get_order.php',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -812,7 +812,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/orders/pending.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/orders/pending.php',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -839,7 +839,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/admin/notification/get_notification.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/admin/notification/get_notification.php',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -867,7 +867,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://10.0.2.2/e-ecommerse/orders/payment.php',
+            'http://www.myapiproject.rf.gd/e-ecommerse/orders/payment.php',
             queryParameters: queryParameters,
             data: _data,
           )

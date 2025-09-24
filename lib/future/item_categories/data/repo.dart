@@ -1,7 +1,3 @@
-import 'package:ecommerce_user/core/helpers/cache_helper.dart';
-import 'package:ecommerce_user/core/get_it/get_it.dart';
-
-import '../../../core/function/send_form_map_post.dart';
 import '../../../../core/networking/api_error_handler.dart';
 import '../../../../core/networking/api_result.dart';
 import '../../../../core/networking/api_service.dart';
@@ -16,11 +12,14 @@ class ItemCategoriesRepo {
 
   Future<ApiResult<Item1view>> itemCategories(int categoriesid) async {
     try {
-      Map<String, dynamic> map = {
-        'id': categoriesid,
-        'userid': getIt<CacheHelper>().getData(key: 'id')
-      };
-      final response = await _apiService.itemCategories(formDataPost(map));
+      Map<String, dynamic> map =
+          // {
+          //   'id': categoriesid,
+          //   'userid': getIt<CacheHelper>().getData(key: 'id')
+          // };
+
+          {"userid": 1, "categoriesid": categoriesid};
+      final response = await _apiService.itemCategories(map);
 
       return ApiResult.success(response);
     } catch (e) {

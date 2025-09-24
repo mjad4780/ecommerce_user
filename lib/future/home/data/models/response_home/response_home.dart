@@ -113,8 +113,8 @@ class Category {
       categoriesId: json['categories_id'],
       categoriesName: json['categories_name'],
       categoriesNameAr: json['categories_name_ar'],
-      categoriesImage: json['categories_Image'],
-      categoriesData: json['categories_Data'],
+      categoriesImage: json['categories_image'],
+      categoriesData: json['categories_data'],
     );
   }
 }
@@ -150,12 +150,12 @@ class Item {
   String? itemDecsAr;
   String? itemImage;
   int? itemCount;
-  int? itemActive;
+  bool? itemActive;
   int? itemPrice;
   int? itemDiscount;
   String? itemData;
   int? itemCategories;
-  int? favorite;
+  bool? favorite;
   int? notFavorite;
 
   int? categoriesId;

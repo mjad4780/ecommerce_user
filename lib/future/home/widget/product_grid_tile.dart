@@ -5,7 +5,6 @@ import 'package:ecommerce_user/future/favorite/logic/cubit/favorite_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../core/networking/api_constants.dart';
 import '../data/models/response_home/response_home.dart';
 
 class ProductGridTile extends StatelessWidget {
@@ -118,7 +117,7 @@ class ProductGridTile extends StatelessWidget {
         ),
         child: product.itemImage != null
             ? CachedNetworkImage(
-                imageUrl: '${ApiConstants.imageItem}/${product.itemImage}',
+                imageUrl: product.itemImage!,
               )
             : const SizedBox.shrink(),
       ),
@@ -141,7 +140,7 @@ class IconFavorite extends StatelessWidget {
       listener: (context, state) {
         if (state is ErorrDelete || state is ErorrAdd) {
           // لو حصل فشل رجّع التغيير
-          product.favorite = product.favorite == 1 ? 0 : 1;
+          product.favorite = product.favorite == true ? false : true;
 
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(content: Text("حدث خطأ، حاول مرة أخرى")),
@@ -166,13 +165,13 @@ class IconFavorite extends StatelessWidget {
   }
 
   void _toggleFavorite(BuildContext context) {
-    if (product.favorite == 1) {
+    if (product.favorite == true) {
       // Optimistic update
-      product.favorite = 0;
+      product.favorite = false;
       context.read<FavoriteCubit>().emitdeleteFavorite(product.itemId!);
     } else {
       // Optimistic update
-      product.favorite = 1;
+      product.favorite = true;
       context.read<FavoriteCubit>().emitAddFavorite(product.itemId!);
     }
   }

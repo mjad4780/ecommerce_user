@@ -2,6 +2,7 @@ import 'package:ecommerce_user/future/item_categories/logic/cubit/item_categorie
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../core/theme/colors.dart';
 import '../../../core/theme/styles.dart';
 import '../../../core/widgets/horizondal_list.dart';
 import '../../home/data/models/response_home/response_home.dart';
@@ -25,12 +26,20 @@ class CustomItemCategories extends StatelessWidget {
         child: CustomScrollView(
           slivers: [
             SliverAppBar(
-                floating: true,
-                snap: true,
-                title: Text(
-                  'Item Categories',
-                  style: TextStyles.textItemCategories,
-                )),
+              floating: true,
+              snap: true,
+              title: Text(
+                'Item Categories',
+                style: TextStyles.textItemCategories,
+              ),
+              leading: IconButton(
+                icon: const Icon(Icons.arrow_back_ios,
+                    size: 25, color: AppColor.darkOrange),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            ),
             BlocConsumer<ItemCategoriesCubit, ItemCategoriesState>(
               buildWhen: (previous, current) => current is SelectCategories,
               listener: (context, state) {},
