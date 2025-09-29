@@ -2,7 +2,8 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 
-void testAlert(BuildContext context, String title, String body) {
+void testAlert(BuildContext context, String title, String body,
+    [Function()? onPressed]) {
   var alert = AlertDialog(
     // backgroundColor: Colors.white,
     // elevation: 10,
@@ -18,12 +19,10 @@ void testAlert(BuildContext context, String title, String body) {
     ),
     actions: <Widget>[
       TextButton(
+        onPressed: onPressed,
         child: const Text(
           'Okey',
         ),
-        onPressed: () {
-          Navigator.of(context).pop(false);
-        },
       ),
     ],
   );

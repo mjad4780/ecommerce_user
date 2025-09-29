@@ -29,7 +29,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://www.myapiproject.rf.gd/e-ecommerse/auth/login.php',
+            'https://iukfhdcintfcbfciawya.supabase.co/functions/v1/login',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -38,7 +38,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late ResponseLogin _value;
     try {
-      _value = ResponseLogin.fromJson(jsonDecode(_result.data!));
+      _value = ResponseLogin.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -56,7 +56,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://www.myapiproject.rf.gd/e-ecommerse/auth/sign_up.php',
+            'https://iukfhdcintfcbfciawya.supabase.co/functions/v1/sign_up',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -65,7 +65,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late ResponseStatus _value;
     try {
-      _value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+      _value = ResponseStatus.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -83,7 +83,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://www.myapiproject.rf.gd/e-ecommerse/auth/verfycode.php',
+            'https://iukfhdcintfcbfciawya.supabase.co/functions/v1/check_code',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -92,7 +92,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late ResponseStatus _value;
     try {
-      _value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+      _value = ResponseStatus.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -110,7 +110,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://www.myapiproject.rf.gd/e-ecommerse/auth/sendverfycode.php',
+            'https://iukfhdcintfcbfciawya.supabase.co/functions/v1/send_code',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -119,7 +119,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late ResponseStatus _value;
     try {
-      _value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+      _value = ResponseStatus.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -137,7 +137,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://www.myapiproject.rf.gd/e-ecommerse/forget_password/check_email.php',
+            'https://iukfhdcintfcbfciawya.supabase.co/functions/v1/check_email',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -146,7 +146,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late ResponseStatus _value;
     try {
-      _value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+      _value = ResponseStatus.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -164,7 +164,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://www.myapiproject.rf.gd/e-ecommerse/forget_password/Repassword.php',
+            'https://iukfhdcintfcbfciawya.supabase.co/functions/v1/repassword',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -173,7 +173,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late ResponseStatus _value;
     try {
-      _value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+      _value = ResponseStatus.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -191,7 +191,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://www.myapiproject.rf.gd/e-ecommerse/forget_password/verfycode_forget_password.php',
+            'https://iukfhdcintfcbfciawya.supabase.co/functions/v1/check_code_forget_password',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -200,7 +200,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late ResponseStatus _value;
     try {
-      _value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+      _value = ResponseStatus.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -245,7 +245,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://www.myapiproject.rf.gd/e-ecommerse/items/search.php',
+            'https://iukfhdcintfcbfciawya.supabase.co/functions/v1/search',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -254,7 +254,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late Item1view _value;
     try {
-      _value = Item1view.fromJson(jsonDecode(_result.data!));
+      _value = Item1view.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -308,7 +308,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late Item1view _value;
     try {
-      _value = Item1view.fromJson(jsonDecode(_result.data!));
+      _value = Item1view.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -326,7 +326,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://www.myapiproject.rf.gd/e-ecommerse/adress/add_adress.php',
+            'https://iukfhdcintfcbfciawya.supabase.co/functions/v1/add_adress',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -335,7 +335,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late ResponseStatus _value;
     try {
-      _value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+      _value = ResponseStatus.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -353,7 +353,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://www.myapiproject.rf.gd/e-ecommerse/adress/delete_adress.php',
+            'https://iukfhdcintfcbfciawya.supabase.co/functions/v1/delete_adress',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -362,7 +362,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late ResponseStatus _value;
     try {
-      _value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+      _value = ResponseStatus.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -380,7 +380,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://www.myapiproject.rf.gd/e-ecommerse/adress/edit_adress.php',
+            'https://iukfhdcintfcbfciawya.supabase.co/functions/v1/edit_adress',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -389,7 +389,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late ResponseStatus _value;
     try {
-      _value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+      _value = ResponseStatus.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -407,7 +407,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://www.myapiproject.rf.gd/e-ecommerse/adress/get_adress.php',
+            'https://iukfhdcintfcbfciawya.supabase.co/functions/v1/get_adress',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -416,7 +416,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late AdressResponse _value;
     try {
-      _value = AdressResponse.fromJson(jsonDecode(_result.data!));
+      _value = AdressResponse.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -434,7 +434,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://www.myapiproject.rf.gd/e-ecommerse/cart/add_cart.php',
+            'https://iukfhdcintfcbfciawya.supabase.co/functions/v1/add_cart',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -443,7 +443,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late ResponseStatus _value;
     try {
-      _value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+      _value = ResponseStatus.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -461,7 +461,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://www.myapiproject.rf.gd/e-ecommerse/cart/delete_cart.php',
+            'https://iukfhdcintfcbfciawya.supabase.co/functions/v1/delete_cart',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -470,7 +470,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late ResponseStatus _value;
     try {
-      _value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+      _value = ResponseStatus.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -488,7 +488,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://www.myapiproject.rf.gd/e-ecommerse/cart/update_cart.php',
+            'https://iukfhdcintfcbfciawya.supabase.co/functions/v1/update_cart',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -497,7 +497,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late ResponseStatus _value;
     try {
-      _value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+      _value = ResponseStatus.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -515,7 +515,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://www.myapiproject.rf.gd/e-ecommerse/cart/getcart.php',
+            'https://iukfhdcintfcbfciawya.supabase.co/functions/v1/get_cart',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -524,7 +524,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late ResponseCart _value;
     try {
-      _value = ResponseCart.fromJson(jsonDecode(_result.data!));
+      _value = ResponseCart.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -551,7 +551,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late CouponResponse _value;
     try {
-      _value = CouponResponse.fromJson(jsonDecode(_result.data!));
+      _value = CouponResponse.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -569,7 +569,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://www.myapiproject.rf.gd/e-ecommerse/favorite/addfavorite.php',
+            'https://iukfhdcintfcbfciawya.supabase.co/functions/v1/add_favorite',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -578,7 +578,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late ResponseStatus _value;
     try {
-      _value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+      _value = ResponseStatus.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -596,7 +596,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://www.myapiproject.rf.gd/e-ecommerse/favorite/removefavorite.php',
+            'https://iukfhdcintfcbfciawya.supabase.co/functions/v1/hyper-processor',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -605,7 +605,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late ResponseStatus _value;
     try {
-      _value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+      _value = ResponseStatus.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -623,7 +623,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://www.myapiproject.rf.gd/e-ecommerse/favorite/get_favorite.php',
+            'https://iukfhdcintfcbfciawya.supabase.co/functions/v1/get_favorite',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -632,7 +632,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late ResponseHome _value;
     try {
-      _value = ResponseHome.fromJson(jsonDecode(_result.data!));
+      _value = ResponseHome.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -650,7 +650,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://www.myapiproject.rf.gd/e-ecommerse/orders/Rating.php',
+            'https://iukfhdcintfcbfciawya.supabase.co/functions/v1/rating',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -659,7 +659,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late ResponseStatus _value;
     try {
-      _value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+      _value = ResponseStatus.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -686,7 +686,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late PendingResponse _value;
     try {
-      _value = PendingResponse.fromJson(jsonDecode(_result.data!));
+      _value = PendingResponse.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -704,7 +704,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://www.myapiproject.rf.gd/e-ecommerse/orders/checkout.php',
+            'https://iukfhdcintfcbfciawya.supabase.co/functions/v1/checkout',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -713,7 +713,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late ResponseStatus _value;
     try {
-      _value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+      _value = ResponseStatus.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -731,7 +731,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://www.myapiproject.rf.gd/e-ecommerse/orders/delete.php',
+            'https://iukfhdcintfcbfciawya.supabase.co/functions/v1/delete_orders',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -740,7 +740,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late ResponseStatus _value;
     try {
-      _value = ResponseStatus.fromJson(jsonDecode(_result.data!));
+      _value = ResponseStatus.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -758,7 +758,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://www.myapiproject.rf.gd/e-ecommerse/orders/details.php',
+            'https://iukfhdcintfcbfciawya.supabase.co/functions/v1/detailas',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -767,7 +767,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late ResponseDetails _value;
     try {
-      _value = ResponseDetails.fromJson(jsonDecode(_result.data!));
+      _value = ResponseDetails.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -785,7 +785,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://www.myapiproject.rf.gd/e-ecommerse/orders/get_order.php',
+            'https://iukfhdcintfcbfciawya.supabase.co/functions/v1/get_orders',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -794,7 +794,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late ResponseOrders _value;
     try {
-      _value = ResponseOrders.fromJson(jsonDecode(_result.data!));
+      _value = ResponseOrders.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -812,7 +812,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://www.myapiproject.rf.gd/e-ecommerse/orders/pending.php',
+            'https://iukfhdcintfcbfciawya.supabase.co/functions/v1/pending',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -821,7 +821,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late PendingResponse _value;
     try {
-      _value = PendingResponse.fromJson(jsonDecode(_result.data!));
+      _value = PendingResponse.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -839,7 +839,7 @@ class _ApiService implements ApiService {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://www.myapiproject.rf.gd/e-ecommerse/admin/notification/get_notification.php',
+            'https://iukfhdcintfcbfciawya.supabase.co/functions/v1/get_notification',
             queryParameters: queryParameters,
             data: _data,
           )
@@ -848,7 +848,7 @@ class _ApiService implements ApiService {
     final _result = await _dio.fetch(_options);
     late ResponseNotification _value;
     try {
-      _value = ResponseNotification.fromJson(jsonDecode(_result.data!));
+      _value = ResponseNotification.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -857,26 +857,33 @@ class _ApiService implements ApiService {
   }
 
   @override
-  Future<Payment> greatePayment(PaymentBodyTojson body) async {
+  Future<Payment> greatePayment(PaymentBodyTojson body, String apiKey) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
-    final _headers = <String, dynamic>{};
-    final _data = <String, dynamic>{};
-    _data.addAll(body.toJson());
+    final _headers = <String, dynamic>{
+      r'Authorization': '$apiKey', // تأكد من إضافة Bearer
+      'Content-Type': 'application/x-www-form-urlencoded', // مهم لـ Stripe
+    };
+    _headers.removeWhere((k, v) => v == null);
+
+    // تحويل البيانات إلى format الذي يتوقعه Stripe
+    final _data = body.toJson();
+
     final _options = _setStreamType<Payment>(
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            'http://www.myapiproject.rf.gd/e-ecommerse/orders/payment.php',
+            'https://api.stripe.com/v1/payment_intents', // استخدم المسار النسبي فقط
             queryParameters: queryParameters,
             data: _data,
           )
           .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
     );
-    final _result = await _dio.fetch(_options);
+
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late Payment _value;
     try {
-      _value = Payment.fromJson(jsonDecode(_result.data!));
+      _value = Payment.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
@@ -912,10 +919,11 @@ class _ApiService implements ApiService {
   }
 
   @override
-  Future<Elphon> ephemeral(Map<String, dynamic> body) async {
+  Future<Elphon> ephemeral(Map<String, dynamic> body, String apiKey) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
-    final _headers = <String, dynamic>{};
+    final _headers = <String, dynamic>{r'Authorization': apiKey};
+    _headers.removeWhere((k, v) => v == null);
     final _data = <String, dynamic>{};
     _data.addAll(body);
     final _options = _setStreamType<Elphon>(
@@ -928,7 +936,7 @@ class _ApiService implements ApiService {
           )
           .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
     );
-    final _result = await _dio.fetch(_options);
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late Elphon _value;
     try {
       _value = Elphon.fromJson(_result.data!);
@@ -966,3 +974,5 @@ class _ApiService implements ApiService {
     return Uri.parse(dioBaseUrl).resolveUri(url).toString();
   }
 }
+
+// dart format on

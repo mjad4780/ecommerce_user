@@ -3,6 +3,7 @@ import 'package:flutter_stripe/flutter_stripe.dart';
 import '../../../core/networking/api_error_handler.dart';
 import '../../../core/networking/api_result.dart';
 import '../../../core/networking/api_service.dart';
+import '../../../key.dart';
 import 'model/payment/payment.dart';
 import 'model/payment_body_tojson.dart';
 import 'repo.dart';
@@ -15,7 +16,8 @@ class RepoPayment {
   Future<ApiResult<void>> greatePayment(
       PaymentBodyTojson data, CheckCartOrderRequest reqest) async {
     try {
-      Payment? response = await _apiService.greatePayment(data);
+      Payment? response = await _apiService.greatePayment(
+          data, 'Bearer ${ApiConstants.apikey}');
       await initPaymentSheet(response.clientSecret, data.customer);
 
       await Stripe.instance.presentPaymentSheet();

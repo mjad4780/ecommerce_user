@@ -2,7 +2,7 @@ import 'package:ecommerce_user/core/helpers/spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../core/widgets/custom_network_image.dart';
+import '../../../core/widgets/custom_cache_networking_image.dart';
 import '../data/response_cart.dart';
 import '../logic/cubit/cart_cubit.dart';
 
@@ -36,7 +36,7 @@ class CustomProductCart extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   child: Padding(
                     padding: const EdgeInsets.all(5),
-                    child: CustomNetworkImage(
+                    child: CustomCachedNetworkImage(
                       width: MediaQuery.of(context).size.width / 4.5,
                       height: MediaQuery.of(context).size.height / 10.5,
                       imageUrl: cartItem.itemImage,

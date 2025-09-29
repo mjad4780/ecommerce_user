@@ -26,9 +26,52 @@ class OrdersBlocBuilder extends StatelessWidget {
                 ));
           },
           successGet: (products) {
-            return CustomProductOrders(
-              data: products.data ?? [],
-            );
+            final items = products.data ?? [];
+
+            return AnimatedSwitcher(
+                duration: const Duration(milliseconds: 400),
+                child: items.isEmpty
+                    ? Center(
+                        key: const ValueKey('empty'),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            TweenAnimationBuilder<double>(
+                              tween: Tween(begin: 0.8, end: 1.2),
+                              duration: const Duration(seconds: 1),
+                              curve: Curves.easeInOut,
+                              builder: (context, value, child) {
+                                return Transform.scale(
+                                  scale: value,
+                                  child: child,
+                                );
+                              },
+                              onEnd: () {
+                                // إعادة تشغيل الأنيميشن بشكل مستمر
+                              },
+                              child: const Icon(
+                                Icons.shopping_bag_outlined,
+                                size: 100,
+                                color: Colors.grey,
+                              ),
+                            ),
+                            const SizedBox(height: 20),
+                            Text(
+                              'No Orders Yet',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .titleMedium
+                                  ?.copyWith(
+                                    color: Colors.grey[600],
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                            ),
+                          ],
+                        ),
+                      )
+                    : CustomProductOrders(
+                        data: products.data ?? [],
+                      ));
           },
           erorrGet: (error) {
             return FailerWidget(

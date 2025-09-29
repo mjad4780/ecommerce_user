@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:dio/dio.dart';
 import 'package:ecommerce_user/future/check_cart_order/data/model/payment/payment.dart';
 import 'package:ecommerce_user/future/home/data/models/response_home/response_home.dart';
@@ -12,12 +10,12 @@ import '../../future/check_cart_order/data/model/elphon/elphon.dart';
 import '../../future/check_cart_order/data/model/payment_body_tojson.dart';
 import '../../future/home/data/models/response_notification/response_notification.dart';
 import '../../future/orders/data/response_orders/response_orders.dart';
+import '../../key.dart';
 import '../../model/adress_response/adress_response.dart';
 import '../../model/coupon_response/coupon_response.dart';
 import '../../model/response_detilas/response_detilas.dart';
 import '../../model/response_login/response_login.dart';
 import '../../model/response_status/response_status.dart';
-import 'api_constants.dart';
 
 part 'api_service.g.dart';
 
@@ -126,7 +124,10 @@ abstract class ApiService {
 
   ///:add payment
   @POST(ApiConstants.payment)
-  Future<Payment> greatePayment(@Body() PaymentBodyTojson body);
+  Future<Payment> greatePayment(
+    @Body() PaymentBodyTojson body,
+    @Header('Authorization') String apiKey, // إضافة API key ك header
+  );
 
   ///:getBook
 
@@ -136,5 +137,7 @@ abstract class ApiService {
 
   ///:add ephemeral
   @POST(ApiConstants.ephemeral)
-  Future<Elphon> ephemeral(@Body() Map<String, dynamic> body);
+  Future<Elphon> ephemeral(@Body() Map<String, dynamic> body,
+      @Header('Authorization') String apiKey // إضافة API key ك header
+      );
 }

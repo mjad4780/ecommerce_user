@@ -25,7 +25,9 @@ class SelectAdressCart extends StatelessWidget {
             current is SuccessGet || current is ErrorGet,
         builder: (context, state) {
           return state.maybeWhen(
-              successGet: (adressResponse) => adressResponse.data != null
+              successGet: (adressResponse) => adressResponse.data != [] &&
+                      adressResponse.data != null &&
+                      adressResponse.data!.isNotEmpty
                   ? BlocConsumer<CheckCartCubit, CheckCartState>(
                       listener: (context, state) {},
                       builder: (context, state) {

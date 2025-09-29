@@ -16,7 +16,7 @@ class OrdersCubit extends Cubit<OrdersState> {
 //:GetOrders
   emitGetOrders() async {
     if (!isClosed) emit(const OrdersState.loadingGet());
-    await Future.delayed(const Duration(seconds: 3));
+
     final response = await _checkCartOrder.getOrders();
     response.when(success: (responsehome) {
       if (!isClosed) emit(OrdersState.successGet(responsehome));
@@ -28,7 +28,6 @@ class OrdersCubit extends Cubit<OrdersState> {
   //:Details
   emitGetDetails(int id) async {
     if (!isClosed) emit(const OrdersState.loadingDetails());
-    await Future.delayed(const Duration(seconds: 7));
 
     final response = await _checkCartOrder.getDetailas(id);
     response.when(success: (responsehome) {
@@ -43,12 +42,12 @@ class OrdersCubit extends Cubit<OrdersState> {
 
   emitdeleteOrders(int id) async {
     if (!isClosed) emit(const OrdersState.loadingDelete());
-    await Future.delayed(const Duration(seconds: 3));
 
     final response = await _checkCartOrder.deleteOrders(id);
     response.when(success: (responsehome) async {
+      emit(const OrdersState.successdelete());
+
       await emitGetOrders();
-      if (!isClosed) emit(const OrdersState.successdelete());
     }, failure: (error) {
       if (!isClosed) emit(OrdersState.erorrdelete(erorr: error.messege ?? ''));
     });

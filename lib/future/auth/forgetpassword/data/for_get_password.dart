@@ -1,4 +1,3 @@
-import '../../../../core/function/send_form_map_post.dart';
 import '../../../../core/networking/api_error_handler.dart';
 import '../../../../core/networking/api_error_model.dart';
 import '../../../../core/networking/api_result.dart';
@@ -20,7 +19,7 @@ class ForgetPassword {
     };
 
     try {
-      final response = await _apiService.checkEmail(formDataPost(map));
+      final response = await _apiService.checkEmail(map);
       if (response.status == "fail") {
         return ApiResult.failure(
             ApiErrorModel(status: response.status, messege: response.messege));
@@ -38,7 +37,7 @@ class ForgetPassword {
     Map<String, dynamic> map = {"email": email, 'password': password};
 
     try {
-      final response = await _apiService.repassword(formDataPost(map));
+      final response = await _apiService.repassword(map);
       if (response.status == "fail") {
         return ApiResult.failure(
             ApiErrorModel(status: response.status, messege: response.messege));
@@ -55,8 +54,7 @@ class ForgetPassword {
     Map<String, dynamic> map = {"email": email, 'verfycode': verfycode};
 
     try {
-      final response =
-          await _apiService.verfCodeForgertPassword(formDataPost(map));
+      final response = await _apiService.verfCodeForgertPassword(map);
       if (response.status == "fail") {
         return ApiResult.failure(
             ApiErrorModel(status: response.status, messege: response.messege));

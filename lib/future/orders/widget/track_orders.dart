@@ -20,7 +20,7 @@ class TrackOrders extends StatelessWidget {
       value: (context.argument()['cubit']) as OrdersCubit,
       child: Scaffold(
         appBar: AppBar(
-            backgroundColor: AppColor.lightGrey,
+            // backgroundColor: AppColor.lightGrey,
             title: const Text("My Detalias"),
             centerTitle: true,
             elevation: 0,
@@ -57,7 +57,7 @@ class CustomBodyWidgetDetailasOrders extends StatelessWidget {
         )),
         SliverToBoxAdapter(
           child: Container(
-            color: AppColor.textWhite,
+            // color: AppColor.textWhite,
             child: Stepper(
               physics: const NeverScrollableScrollPhysics(),
               currentStep: context.argument()['step'],

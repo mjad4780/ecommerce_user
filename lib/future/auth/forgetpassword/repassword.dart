@@ -17,8 +17,8 @@ class RepasswordScrean extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => getIt<ForgetPasswordCubit>(),
+    return BlocProvider.value(
+      value: getIt<ForgetPasswordCubit>(),
       child: Scaffold(
           body: SafeArea(
         child: Padding(

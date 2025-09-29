@@ -74,7 +74,6 @@ class CartCubit extends Cubit<CartState> {
   ) async {
     emit(const CartState.loadingDelete());
 
-    Future.delayed(const Duration(seconds: 3));
     final response = await _cartRepo.deleteCart(itemid);
 
     response.when(success: (responsehome) async {
@@ -98,7 +97,7 @@ class CartCubit extends Cubit<CartState> {
 
     log('Sending updates: ${json.encode(updates)}'); // أضف هذا للتحقق
 
-    final response = await _cartRepo.updateCart(json.encode(updates));
+    final response = await _cartRepo.updateCart(updates);
 
     response.when(success: (_) {
       isUpdating = false;
@@ -157,7 +156,7 @@ class CartCubit extends Cubit<CartState> {
           'quantity': quantity
         } // تأكد من أن المفتاح هو 'itemid'
       ];
-      await Future.delayed(const Duration(seconds: 3));
+
       var response = await _cartRepo.updateCart(json.encode(updates));
       response.when(success: (_) {
         isUpdating = false;

@@ -2,8 +2,8 @@ import 'package:ecommerce_user/future/home/logic/cubit/home_cubit.dart';
 import 'package:ecommerce_user/future/home/logic/cubit/home_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:skeletonizer/skeletonizer.dart';
 
-import '../../../../core/theme/colors.dart';
 import 'date_notification.dart';
 
 class GetNotificationBlocBuilder extends StatelessWidget {
@@ -21,11 +21,27 @@ class GetNotificationBlocBuilder extends StatelessWidget {
       builder: (context, state) {
         return state.maybeWhen(
           loadinggetNotification: () {
-            return const Center(
-              child: CircularProgressIndicator(
-                color: AppColor.mainBlue,
-              ),
-            );
+            return Skeletonizer(
+                enabled: true,
+                child: ListView.builder(
+                  itemCount: 6,
+                  itemBuilder: (context, index) => ListTile(
+                    leading: CircleAvatar(
+                      radius: 30,
+                      backgroundColor: Colors.grey[300],
+                    ),
+                    title: Container(
+                      height: 10,
+                      width: 100,
+                      color: Colors.grey[300],
+                    ),
+                    subtitle: Container(
+                      height: 10,
+                      width: 150,
+                      color: Colors.grey[300],
+                    ),
+                  ),
+                ));
           },
           successgetNotification: (products) {
             return DataNotification(

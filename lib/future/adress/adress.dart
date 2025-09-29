@@ -16,9 +16,7 @@ class MyAddressPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-        create: (contextt) => getIt<AdressCubit>()
-          ..emitgetAdress()
-          ..getLating(),
+        create: (contextt) => getIt<AdressCubit>()..emitgetAdress(),
         child: Scaffold(
             appBar: AppBar(
                 title: const Text("Adress"),
@@ -36,6 +34,8 @@ class MyAddressPage extends StatelessWidget {
                   },
                   child: const Icon(Icons.add));
             }),
-            body: const GetAdressBlocBuilder()));
+            body: RefreshIndicator(
+                onRefresh: () => context.read<AdressCubit>().emitgetAdress(),
+                child: const GetAdressBlocBuilder())));
   }
 }

@@ -17,13 +17,13 @@ class HomeCubit extends Cubit<HomeState> {
 
 //:home
   emitHome() async {
-    emit(const HomeState.loadingHome());
-    await Future.delayed(const Duration(seconds: 3));
+    if (!isClosed) emit(const HomeState.loadingHome());
+
     final response = await homeRepo.homeData();
     response.when(success: (responsehome) {
-      emit(HomeState.successHome(responseHome: responsehome));
+      if (!isClosed) emit(HomeState.successHome(responseHome: responsehome));
     }, failure: (error) {
-      emit(HomeState.errorHome(erorr: error.messege ?? ''));
+      if (!isClosed) emit(HomeState.errorHome(erorr: error.messege ?? ''));
     });
   }
 
@@ -41,7 +41,7 @@ class HomeCubit extends Cubit<HomeState> {
   ///:search
   emitSearch(String query) async {
     emit(const HomeState.loadingsearch());
-    await Future.delayed(const Duration(seconds: 3)); // Mock API Delay
+    // Mock API Delay
 
     final response = await homeRepo.search(query);
     response.when(success: (loginResponse) {

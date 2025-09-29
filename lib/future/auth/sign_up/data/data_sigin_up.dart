@@ -1,6 +1,5 @@
 import 'package:ecommerce_user/model/response_status/response_status.dart';
 
-import '../../../../core/function/send_form_map_post.dart';
 import '../../../../core/networking/api_error_handler.dart';
 import '../../../../core/networking/api_error_model.dart';
 import '../../../../core/networking/api_result.dart';
@@ -20,7 +19,7 @@ class SignUpDate {
       "password": password
     };
     try {
-      final response = await _api.signUp(formDataPost(map));
+      final response = await _api.signUp(map);
       if (response.status == "fail") {
         return ApiResult.failure(
             ApiErrorModel(status: response.status, messege: response.messege));

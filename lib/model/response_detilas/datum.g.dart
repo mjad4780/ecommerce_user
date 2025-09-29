@@ -15,7 +15,6 @@ DataDetails _$DataDetailsFromJson(Map<String, dynamic> json) => DataDetails(
       itemDecsAr: json['item_decs_ar'] as String?,
       itemImage: json['item_image'] as String?,
       itemCount: (json['item_count'] as num?)?.toInt(),
-      itemActive: (json['item_active'] as num?)?.toInt(),
       itemPrice: (json['item_price'] as num?)?.toInt(),
       itemDiscount: (json['item_discount'] as num?)?.toInt(),
       itemData: json['item_data'] as String?,

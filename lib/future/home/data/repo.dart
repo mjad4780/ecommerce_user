@@ -1,6 +1,5 @@
 import 'package:ecommerce_user/future/home/data/models/response_notification/response_notification.dart';
 
-import '../../../core/function/send_form_map_post.dart';
 import '../../../../core/networking/api_error_handler.dart';
 import '../../../../core/networking/api_result.dart';
 import '../../../../core/networking/api_service.dart';
@@ -38,7 +37,7 @@ class HomeRepo {
     };
 
     try {
-      final response = await _apiService.search(formDataPost(map));
+      final response = await _apiService.search(map);
 
       return ApiResult.success(response);
     } catch (e) {
@@ -49,11 +48,11 @@ class HomeRepo {
   ///:getNotification
   Future<ApiResult<ResponseNotification>> getNotification() async {
     Map<String, dynamic> map = {
-      "id": getIt<CacheHelper>().getData(key: 'id'),
+      "userid": getIt<CacheHelper>().getData(key: 'id'),
     };
 
     try {
-      final response = await _apiService.getNotification(formDataPost(map));
+      final response = await _apiService.getNotification(map);
 
       return ApiResult.success(response);
     } catch (e) {

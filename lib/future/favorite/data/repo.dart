@@ -1,10 +1,8 @@
-import 'package:ecommerce_user/core/helpers/cache_helper.dart';
-import 'package:ecommerce_user/core/get_it/get_it.dart';
-
-import '../../../core/function/send_form_map_post.dart';
 import '../../../../core/networking/api_error_handler.dart';
 import '../../../../core/networking/api_result.dart';
 import '../../../../core/networking/api_service.dart';
+import '../../../core/get_it/get_it.dart';
+import '../../../core/helpers/cache_helper.dart';
 import '../../home/data/models/response_home/response_home.dart';
 import '../../../model/response_status/response_status.dart';
 
@@ -21,7 +19,7 @@ class FavoriteRepo {
         "id": getIt<CacheHelper>().getData(key: 'id')
       };
 
-      final response = await _apiService.getFavorite(formDataPost(map));
+      final response = await _apiService.getFavorite(map);
 
       return ApiResult.success(response);
     } catch (e) {
@@ -40,7 +38,7 @@ class FavoriteRepo {
     };
 
     try {
-      final response = await _apiService.addFavorite(formDataPost(map));
+      final response = await _apiService.addFavorite(map);
 
       return ApiResult.success(response);
     } catch (e) {
@@ -57,7 +55,7 @@ class FavoriteRepo {
         "id": itemid,
         "userid": getIt<CacheHelper>().getData(key: 'id'),
       };
-      final response = await _apiService.deletefavorite(formDataPost(map));
+      final response = await _apiService.deletefavorite(map);
 
       return ApiResult.success(response);
     } catch (e) {

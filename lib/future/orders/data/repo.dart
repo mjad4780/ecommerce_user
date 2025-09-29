@@ -1,10 +1,11 @@
-import 'package:ecommerce_user/core/helpers/cache_helper.dart';
-import 'package:ecommerce_user/core/get_it/get_it.dart';
+// import 'package:ecommerce_user/core/helpers/cache_helper.dart';
+// import 'package:ecommerce_user/core/get_it/get_it.dart';
 
-import '../../../core/function/send_form_map_post.dart';
 import '../../../../core/networking/api_error_handler.dart';
 import '../../../../core/networking/api_result.dart';
 import '../../../../core/networking/api_service.dart';
+import '../../../core/get_it/get_it.dart';
+import '../../../core/helpers/cache_helper.dart';
 import '../../../core/networking/api_error_model.dart';
 import '../../../model/pending_response/pending_response.dart';
 import '../../../model/response_detilas/response_detilas.dart';
@@ -24,7 +25,7 @@ class OrdersRepo {
         "id": getIt<CacheHelper>().getData(key: 'id')
       };
 
-      final response = await _apiService.getorder(formDataPost(map));
+      final response = await _apiService.getorder(map);
       if (response.status == "fail") {
         return ApiResult.failure(
             ApiErrorModel(status: response.status, messege: response.messege));
@@ -45,7 +46,7 @@ class OrdersRepo {
     };
 
     try {
-      final response = await _apiService.detailsOrders(formDataPost(map));
+      final response = await _apiService.detailsOrders(map);
       if (response.status == "fail") {
         return ApiResult.failure(
             ApiErrorModel(status: response.status, messege: response.messege));
@@ -64,7 +65,7 @@ class OrdersRepo {
         "userid": getIt<CacheHelper>().getData(key: 'id')
       };
 
-      final response = await _apiService.deleteOrders(formDataPost(map));
+      final response = await _apiService.deleteOrders(map);
       if (response.status == "fail") {
         return ApiResult.failure(
             ApiErrorModel(status: response.status, messege: response.messege));
@@ -83,7 +84,7 @@ class OrdersRepo {
         "id": getIt<CacheHelper>().getData(key: 'id')
       };
 
-      final response = await _apiService.pending(formDataPost(map));
+      final response = await _apiService.pending(map);
       if (response.status == "fail") {
         return ApiResult.failure(
             ApiErrorModel(status: response.status, messege: response.messege));

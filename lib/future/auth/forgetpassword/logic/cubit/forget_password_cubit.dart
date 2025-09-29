@@ -54,17 +54,17 @@ class ForgetPasswordCubit extends Cubit<ForgetPasswordState> {
     }
   }
 
-  ///:veryfycode
-  veryfycode(String veryfycode) async {
-    emit(const ForgetPasswordState.loadingveryfycode());
-    final response =
-        await forgetPassword.verfyCodeForget(email.text, veryfycode);
-    response.when(success: (loginResponse) {
-      emit(const ForgetPasswordState.successveryfycode());
-    }, failure: (error) {
-      emit(ForgetPasswordState.errorveryfycode(erorr: error.messege ?? ''));
-    });
-  }
+  // // /:veryfycode
+  // veryfycode(String veryfycode) async {
+  //   emit(const ForgetPasswordState.loadingveryfycode());
+  //   final response =
+  //       await forgetPassword.verfyCodeForget(email.text, veryfycode);
+  //   response.when(success: (loginResponse) {
+  //     emit(const ForgetPasswordState.successveryfycode());
+  //   }, failure: (error) {
+  //     emit(ForgetPasswordState.errorveryfycode(erorr: error.messege ?? ''));
+  //   });
+  // }
 
   repasswords(BuildContext context) {
     if (password.text != rePassword.text) {

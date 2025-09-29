@@ -1,5 +1,4 @@
 import 'package:ecommerce_user/future/auth/forgetpassword/check_email.dart';
-import 'package:ecommerce_user/future/home/home.dart';
 import 'package:ecommerce_user/future/home/search_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -7,7 +6,6 @@ import '../../future/main/main_screan.dart';
 import '../../future/adress/adress.dart';
 
 import '../../future/auth/Login/login_screen.dart';
-import '../../future/auth/forgetpassword/ceck_code.dart';
 import '../../future/auth/forgetpassword/repassword.dart';
 import '../../future/auth/sign_up/SignUp.dart';
 import '../../future/auth/verfyCode/verfy_code.dart';
@@ -51,17 +49,9 @@ final GoRouter router = GoRouter(routes: [
       pageBuilder: (context, state) =>
           myCustomtransitionPage(const RepasswordScrean(), state)),
   GoRoute(
-      path: "/CheckCodeForgetPassword",
-      pageBuilder: (context, state) =>
-          myCustomtransitionPage(const CheckCodeForgetPassword(), state)),
-  GoRoute(
       path: "/HomeScrean",
       pageBuilder: (context, state) =>
           myCustomtransitionPage(const MainScrean(), state)),
-  GoRoute(
-      path: "/Home",
-      pageBuilder: (context, state) =>
-          myCustomtransitionPage(const Home(), state)),
   GoRoute(
       path: "/Cart",
       pageBuilder: (context, state) =>

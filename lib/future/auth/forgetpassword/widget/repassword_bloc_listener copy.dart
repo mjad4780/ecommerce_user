@@ -31,7 +31,9 @@ class RepasswordBlocListener extends StatelessWidget {
           },
           successCheck: () {
             context.pop();
-            context.push('/CheckCodeForgetPassword');
+            context.pushReplacementNamed(
+              '/Login',
+            );
           },
           errorCheck: (error) {
             setupErrorState(context, error);

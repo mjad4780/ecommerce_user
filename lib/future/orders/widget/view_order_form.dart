@@ -20,7 +20,7 @@ class CustemSubmint extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Container(
-          color: Colors.white,
+          // color: Colors.white,
           padding: const EdgeInsets.all(16.0),
           child: Column(
             mainAxisSize: MainAxisSize.min,

@@ -156,7 +156,7 @@ class Item {
   String? itemData;
   int? itemCategories;
   bool? favorite;
-  int? notFavorite;
+  bool? notFavorite;
 
   int? categoriesId;
   String? categoriesName;
@@ -195,7 +195,6 @@ class Item {
       itemDecsAr: json['item_decs_ar'],
       itemImage: json['item_image'],
       itemCount: json['item_count'],
-      itemActive: json['item_active'],
       itemPrice: json['item_price'],
       itemDiscount: json['item_discount'],
       itemData: json['item_data'],

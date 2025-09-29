@@ -1,3 +1,4 @@
+import 'package:ecommerce_user/core/helpers/spacing.dart';
 import 'package:ecommerce_user/future/onbording/widget/page_builder.dart';
 import 'package:flutter/material.dart';
 
@@ -43,29 +44,27 @@ class _OnbordingScreenState extends State<OnbordingScreen> {
         child: Column(
           children: [
             Expanded(
-                flex: 5,
-                child: PageBuilder(
-                  pagecontroller: pageController,
-                  onPageChanged: (int i) {
-                    onpagechanged(i);
-                  },
-                )),
-            Expanded(
-                flex: 1,
-                child: BootmOnbording(
-                  onPressed: () {
-                    if (current == onbordingData.length - 1) {
-                      getIt<CacheHelper>()
-                          .saveData(key: 'onbourding', value: true);
-                      Navigation(context).pushpushReplacement('/Login');
-                    } else {
-                      current++;
-                      pageController.animateToPage(current,
-                          duration: const Duration(milliseconds: 550),
-                          curve: Curves.ease);
-                    }
-                  },
-                ))
+              child: PageBuilder(
+                pagecontroller: pageController,
+                onPageChanged: (int i) {
+                  onpagechanged(i);
+                },
+              ),
+            ),
+            BootmOnbording(
+              onPressed: () {
+                if (current == onbordingData.length - 1) {
+                  getIt<CacheHelper>().saveData(key: 'onbourding', value: true);
+                  Navigation(context).pushpushReplacement('/Login');
+                } else {
+                  current++;
+                  pageController.animateToPage(current,
+                      duration: const Duration(milliseconds: 550),
+                      curve: Curves.ease);
+                }
+              },
+            ),
+            verticalSpace(40),
           ],
         ),
       ),

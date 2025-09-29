@@ -26,9 +26,13 @@ class LoginBlocListener extends StatelessWidget {
               ),
             );
           },
-          success: () {
+          success: () async {
             context.pop();
-            context.push('/HomeScrean');
+            Future.delayed(const Duration(milliseconds: 500), () {
+              if (context.mounted) {
+                context.pushpushReplacement('/HomeScrean');
+              }
+            });
           },
           error: (error) {
             setupErrorState(context, error);

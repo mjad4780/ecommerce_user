@@ -1,4 +1,5 @@
 import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
+import 'package:ecommerce_user/core/helpers/spacing.dart';
 import 'package:ecommerce_user/core/widgets/failer_widget.dart';
 import 'package:ecommerce_user/core/widgets/loading.dart';
 import 'package:ecommerce_user/future/favorite/logic/cubit/favorite_cubit.dart';
@@ -34,9 +35,21 @@ class GetFavoriteBlocBuilder extends StatelessWidget {
             final favorites = context.read<FavoriteCubit>().favorites;
 
             if (favorites.isEmpty) {
-              return Center(
-                  child: Text("There are no products in Favorites",
-                      style: TextStyles.textStyleAppBar));
+              return CustomScrollView(
+                slivers: [
+                  SliverToBoxAdapter(
+                    child: SizedBox(height: height(context) / 2.5),
+                  ),
+                  SliverToBoxAdapter(
+                      child: Center(
+                    child: Text("There are no products in Favorites",
+                        style: TextStyles.textStyleAppBar),
+                  )),
+                  SliverToBoxAdapter(
+                    child: SizedBox(height: height(context) / 2),
+                  ),
+                ],
+              );
             }
 
             return ProductGridViewFavorite(

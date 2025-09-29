@@ -59,7 +59,7 @@ class ErrorHandler {
     if (err is SocketException) {
       return ApiErrorModel(messege: "No internet connection");
     } else if (err is HandshakeException) {
-      return ApiErrorModel(messege: "SSL handshake failed");
+      return ApiErrorModel(messege: "Connection terminated during handshake");
     } else if (err is FormatException) {
       return ApiErrorModel(messege: "Data format error");
     } else if (err is HttpException) {

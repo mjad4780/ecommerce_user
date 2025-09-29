@@ -1,9 +1,11 @@
+import 'package:ecommerce_user/core/widgets/failer_widget.dart';
 import 'package:ecommerce_user/future/adress/logic/cubit/adress_cubit.dart';
 import 'package:ecommerce_user/future/adress/logic/cubit/adress_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:skeletonizer/skeletonizer.dart';
 
-import '../../../core/theme/colors.dart';
+import '../../../model/adress_response/datum.dart';
 import 'custom_data_adress.dart';
 
 class GetAdressBlocBuilder extends StatelessWidget {
@@ -19,11 +21,14 @@ class GetAdressBlocBuilder extends StatelessWidget {
       builder: (context, state) {
         return state.maybeWhen(
           loadingGet: () {
-            return const Center(
-              child: CircularProgressIndicator(
-                color: AppColor.mainBlue,
-              ),
-            );
+            return const Skeletonizer(
+                enabled: true,
+                child: CustomDataAdress(data: [
+                  AdressData(),
+                  AdressData(),
+                  AdressData(),
+                  AdressData()
+                ]));
           },
           successGet: (products) {
             return products.data != null
@@ -33,7 +38,12 @@ class GetAdressBlocBuilder extends StatelessWidget {
                   );
           },
           errorget: (error) {
-            return const Center(child: Text('Sorry! no Items......'));
+            return FailerWidget(
+              onPressed: () {
+                context.read<AdressCubit>().emitgetAdress();
+              },
+              messege: error,
+            );
           },
           orElse: () {
             return const SizedBox.shrink();

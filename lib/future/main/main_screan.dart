@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:animations/animations.dart';
 import 'package:ecommerce_user/core/get_it/get_it.dart';
 import 'package:ecommerce_user/future/favorite/logic/cubit/favorite_cubit.dart';
@@ -58,7 +60,15 @@ class _MainScreanState extends State<MainScrean> {
             body: PopScope(
                 canPop: false,
                 onPopInvoked: (didPop) {
-                  testAlert(context, 'warning', "Do you went to exit the app");
+                  testAlert(
+                    context,
+                    'warning',
+                    "Do you went to exit the app",
+                    () {
+                      Navigator.of(context).pop();
+                      exit(0); // يغلق التطبيق تماماً
+                    },
+                  );
                 },
                 child: PageTransitionSwitcher(
                   duration: const Duration(seconds: 1),

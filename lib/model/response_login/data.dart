@@ -3,8 +3,7 @@ class Data {
   final String userName;
   final String userEmail;
   final int userPhone;
-  final int userVeryMyCode;
-  final int userImprove;
+  final bool userImprove;
   final String userCreate;
   final String password;
 
@@ -13,7 +12,6 @@ class Data {
     required this.userName,
     required this.userEmail,
     required this.userPhone,
-    required this.userVeryMyCode,
     required this.userImprove,
     required this.userCreate,
     required this.password,
@@ -22,12 +20,11 @@ class Data {
   // تحويل JSON إلى Object
   factory Data.fromJson(Map<String, dynamic> json) {
     return Data(
-      userId: json['user_id'] ?? '',
+      userId: json['user_id'] ?? 0,
       userName: json['user_name'] ?? '',
       userEmail: json['user_email'] ?? '',
-      userPhone: json['user_phone'] ?? '',
-      userVeryMyCode: json['user_verymycode'] ?? '',
-      userImprove: json['user_improve'] ?? '',
+      userPhone: json['user_phone'] ?? 0,
+      userImprove: json['user_improve'] ?? false,
       userCreate: json['user_create'] ?? '',
       password: json['password'] ?? '',
     );
@@ -40,7 +37,6 @@ class Data {
       'user_name': userName,
       'user_email': userEmail,
       'user_phone': userPhone,
-      'user_verymycode': userVeryMyCode,
       'user_improve': userImprove,
       'user_create': userCreate,
       'password': password,

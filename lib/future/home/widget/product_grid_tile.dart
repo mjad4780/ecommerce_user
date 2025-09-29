@@ -147,14 +147,15 @@ class IconFavorite extends StatelessWidget {
           );
         }
       },
-      buildWhen: (previous, current) =>
-          current is SuccessDelete || current is SuccessAdd,
+      // buildWhen: (previous, current) =>
+      //     current is SuccessDelete || current is SuccessAdd,
       builder: (context, state) {
         return IconButton(
           icon: Icon(
             Icons.favorite,
-            color:
-                product.favorite == 1 ? AppColor.red : const Color(0xFFA6A3A0),
+            color: product.favorite == true
+                ? AppColor.red
+                : const Color(0xFFA6A3A0),
           ),
           onPressed: () {
             _toggleFavorite(context);

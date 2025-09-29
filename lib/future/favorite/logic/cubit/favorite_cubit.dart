@@ -23,7 +23,6 @@ class FavoriteCubit extends Cubit<FavoriteState> {
   //:getFavorite
   emitgetFavorite() async {
     emit(const FavoriteState.loadingGet());
-    await Future.delayed(const Duration(seconds: 3));
 
     final response = await _favoriteRepo.getFavorite();
     response.when(success: (responsehome) {

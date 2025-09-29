@@ -42,7 +42,7 @@ class CheckCartCubit extends Cubit<CheckCartState> {
     );
 
     emit(const CheckCartState.loading());
-    // await Future.delayed(const Duration(seconds: 3));
+    //
     final response = await _checkCartOrder.checkCartOrder(request);
     response.when(success: (responsehome) {
       emit(const CheckCartState.success());
@@ -103,8 +103,9 @@ class CheckCartCubit extends Cubit<CheckCartState> {
     if (selectedPaymentOption == null ||
         selectadressId == null ||
         orderType == null) {
-      return testAlert(context, "erorr",
+      testAlert(context, "erorr",
           "please choose Adress  and Orders Type and order Payment ");
+      return; // 🔑 إضافة return هنا لوقف التنفيذ
     }
     final request = CheckCartOrderRequest(
       adressid: selectadressId!,

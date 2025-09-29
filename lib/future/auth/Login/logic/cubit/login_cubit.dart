@@ -24,18 +24,18 @@ class LoginCubit extends Cubit<LoginState> {
       final response =
           await _loginRepo.login(emailController.text, passwordController.text);
       response.when(success: (loginResponse) {
-        if (loginResponse.data!.userImprove == 0) {
+        if (loginResponse.data!.userImprove == false) {
           context.push('/VerfyCodeScrean',
               arguments: {'email': loginResponse.data!.userEmail});
         } else {
           getIt<CacheHelper>()
               .saveData(key: 'id', value: loginResponse.data!.userId);
           getIt<CacheHelper>()
-              .saveData(key: 'id', value: loginResponse.data!.userEmail);
+              .saveData(key: 'email', value: loginResponse.data!.userEmail);
           getIt<CacheHelper>()
               .saveData(key: 'name', value: loginResponse.data!.userName);
 
-          emit(const LoginState.success());
+          if (!isClosed) emit(const LoginState.success());
         }
       }, failure: (error) {
         emit(LoginState.error(error: error.messege ?? ''));

@@ -1,5 +1,3 @@
-import '../../../../core/function/send_form_map_post.dart';
-
 import '../../../../core/networking/api_error_handler.dart';
 import '../../../../core/networking/api_error_model.dart';
 import '../../../../core/networking/api_result.dart';
@@ -12,10 +10,10 @@ class LoginRepo {
   LoginRepo(this._apiService);
 
   Future<ApiResult<ResponseLogin>> login(String email, String password) async {
-    Map<String, dynamic> ff = {"email": email, "password": password};
+    Map<String, dynamic> map = {"email": email, "password": password};
 
     try {
-      final response = await _apiService.login(formDataPost(ff));
+      final response = await _apiService.login(map);
 
       if (response.status == "fail") {
         return ApiResult.failure(

@@ -68,8 +68,8 @@ void setupServise() {
 
   // ForgetPassword
   getIt.registerLazySingleton<ForgetPassword>(() => ForgetPassword(getIt()));
-  getIt
-      .registerFactory<ForgetPasswordCubit>(() => ForgetPasswordCubit(getIt()));
+  getIt.registerLazySingleton<ForgetPasswordCubit>(
+      () => ForgetPasswordCubit(getIt()));
 
   // Adress
   getIt.registerLazySingleton<AdressRepo>(() => AdressRepo(getIt()));

@@ -4,11 +4,14 @@ import '../theme/colors.dart';
 
 class NavigationTile extends StatelessWidget {
   final IconData? icon;
+  final Color? iconcolor;
+
   final String title;
 
   const NavigationTile({
     super.key,
     this.icon,
+    this.iconcolor,
     required this.title,
   });
 
@@ -26,10 +29,10 @@ class NavigationTile extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(5),
                 decoration: BoxDecoration(
-                  color: AppColor.darkOrange,
+                  // color: AppColor.darkOrange,
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: Icon(icon, size: 30, color: Colors.white),
+                child: Icon(icon, size: 30, color: iconcolor ?? Colors.black87),
               ),
               const SizedBox(width: 20),
               Expanded(

@@ -28,10 +28,9 @@ class CustomBodyCart extends StatelessWidget {
                   children: [
                     IconButton(
                         onPressed: () => context.pop(),
-                        icon: const Icon(Icons.arrow_back_ios)),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width / 3,
-                    ),
+                        icon: const Icon(Icons.arrow_back_ios,
+                            color: AppColor.darkOrange)),
+                    const Spacer(),
                     const Center(
                       child: Text(
                         "My Cart    ",
@@ -41,6 +40,7 @@ class CustomBodyCart extends StatelessWidget {
                             color: AppColor.darkOrange),
                       ),
                     ),
+                    const Spacer(),
                   ],
                 ),
                 // ? total price section

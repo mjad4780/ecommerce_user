@@ -1,5 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';
 
 import '../../../model/onbording.dart';
@@ -30,30 +31,30 @@ class PageBuilder extends StatelessWidget {
                   child: FadeInDown(
                     child: Lottie.asset(
                       onbordingData[index].path,
-                      width: MediaQuery.sizeOf(context).width * 0.8,
-                      height: MediaQuery.sizeOf(context).width * 0.8,
+                      width: MediaQuery.sizeOf(context).width,
+                      height: MediaQuery.sizeOf(context).width * 0.68,
                     ),
                   ),
                 ),
-                const Spacer(),
                 FadeInDown(
                     delay: const Duration(milliseconds: 500),
                     child: Text(onbordingData[index].title,
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: MediaQuery.sizeOf(context).width * 0.09,
+                          fontSize: 30.sp,
                         ))),
                 const SizedBox(
-                  height: 10,
+                  height: 5,
                 ),
                 FadeInRight(
                     delay: const Duration(milliseconds: 750),
                     child: Text(
                       onbordingData[index].des,
                       style: TextStyle(
-                        fontSize: MediaQuery.sizeOf(context).width * 0.05,
+                        fontSize: 20.sp,
                       ),
                     )),
+                const Spacer(),
               ]));
         });
   }

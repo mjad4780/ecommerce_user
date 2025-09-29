@@ -1,10 +1,8 @@
-import 'package:ecommerce_user/core/helpers/cache_helper.dart';
-import 'package:ecommerce_user/core/get_it/get_it.dart';
-
-import '../../../core/function/send_form_map_post.dart';
 import '../../../../core/networking/api_error_handler.dart';
 import '../../../../core/networking/api_result.dart';
 import '../../../../core/networking/api_service.dart';
+import '../../../core/get_it/get_it.dart';
+import '../../../core/helpers/cache_helper.dart';
 import '../../../core/networking/api_error_model.dart';
 import '../../../model/adress_response/adress_response.dart';
 import '../../../model/response_status/response_status.dart';
@@ -22,7 +20,7 @@ class AdressRepo {
         "userid": getIt<CacheHelper>().getData(key: 'id')
       };
 
-      final response = await _apiService.getAdress(formDataPost(map));
+      final response = await _apiService.getAdress(map);
       if (response.status == "fail") {
         return ApiResult.failure(
             ApiErrorModel(status: response.status, messege: response.messege));
@@ -52,7 +50,7 @@ class AdressRepo {
     };
 
     try {
-      final response = await _apiService.addAdress(formDataPost(map));
+      final response = await _apiService.addAdress(map);
       if (response.status == "fail") {
         return ApiResult.failure(
             ApiErrorModel(status: response.status, messege: response.messege));
@@ -68,7 +66,7 @@ class AdressRepo {
     try {
       Map<String, dynamic> map = {"id": id};
 
-      final response = await _apiService.deleteAdress(formDataPost(map));
+      final response = await _apiService.deleteAdress(map);
       if (response.status == "fail") {
         return ApiResult.failure(
             ApiErrorModel(status: response.status, messege: response.messege));
@@ -100,7 +98,7 @@ class AdressRepo {
         "userid": getIt<CacheHelper>().getData(key: 'id'),
       };
 
-      final response = await _apiService.editAdress(formDataPost(map));
+      final response = await _apiService.editAdress(map);
       if (response.status == "fail") {
         return ApiResult.failure(
             ApiErrorModel(status: response.status, messege: response.messege));

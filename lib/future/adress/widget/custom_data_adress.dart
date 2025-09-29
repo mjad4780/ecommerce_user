@@ -32,11 +32,13 @@ class CustomDataAdress extends StatelessWidget {
               children: [
                 OpenContainerWrapper(
                   nextScresan: EditAdress(
-                    id: data[index].adressId!,
+                    id: data[index].adressId ?? 0,
                     data: data[index],
                     contextt: context,
                   ),
                   child: NavigationTile(
+                    icon: Icons.location_on_outlined,
+                    iconcolor: Colors.red,
                     title: data[index].adressName ?? '',
                   ),
                 ),
@@ -47,7 +49,7 @@ class CustomDataAdress extends StatelessWidget {
                       iconSize: 30,
                       onPressed: () => context
                           .read<AdressCubit>()
-                          .emitdeleteAdress(data[index].adressId!),
+                          .emitdeleteAdress(data[index].adressId ?? 0),
                       icon: const Icon(
                         Icons.delete,
                       ),

@@ -21,10 +21,9 @@ class ProductByCategoryScreen extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => getIt<ItemCategoriesCubit>()
-            ..emitItemCategories(category.categoriesId!)
-            ..selectitemCategories(category),
-        ),
+            create: (context) => getIt<ItemCategoriesCubit>()
+              ..selectitemCategories(category)
+              ..emitItemCategories(category.categoriesId!)),
         BlocProvider(
           create: (context) => getIt<FavoriteCubit>(),
         ),

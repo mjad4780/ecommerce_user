@@ -35,7 +35,7 @@ class CheckCodeBlocListener extends StatelessWidget {
             showSuccessDialog(
                 context, 'your password has been modified Successful');
 
-            context.push(
+            context.pushReplacementNamed(
               '/Login',
             );
           },

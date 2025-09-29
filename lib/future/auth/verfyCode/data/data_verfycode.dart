@@ -1,4 +1,3 @@
-import '../../../../core/function/send_form_map_post.dart';
 import '../../../../core/networking/api_error_handler.dart';
 import '../../../../core/networking/api_error_model.dart';
 import '../../../../core/networking/api_result.dart';
@@ -18,7 +17,7 @@ class VerfyCodeDate {
       "verfycode": veryfycode,
     };
     try {
-      final response = await _api.verfCode(formDataPost(map));
+      final response = await _api.verfCode(map);
       if (response.status == "fail") {
         return ApiResult.failure(
             ApiErrorModel(status: response.status, messege: response.messege));
@@ -38,7 +37,7 @@ class VerfyCodeDate {
       "email": email,
     };
     try {
-      final response = await _api.sendVerfCode(formDataPost(map));
+      final response = await _api.sendVerfCode(map);
       if (response.status == "fail") {
         return ApiResult.failure(
             ApiErrorModel(status: response.status, messege: response.messege));

@@ -16,7 +16,7 @@ class MyOrderScreen extends StatelessWidget {
       create: (context) => getIt<OrdersCubit>()..emitGetOrders(),
       child: Scaffold(
           appBar: AppBar(
-              backgroundColor: AppColor.lightGrey,
+              // backgroundColor: AppColor.lightGrey,
               title: const Text("My Orders"),
               centerTitle: true,
               elevation: 0,
