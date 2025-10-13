@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:ecommerce_user/future/home/data/models/response_notification/response_notification.dart';
 
 import '../../../../core/networking/api_error_handler.dart';
@@ -15,6 +17,7 @@ class HomeRepo {
   /// :homeData
 
   Future<ApiResult<ResponseHome>> homeData() async {
+    log(getIt<CacheHelper>().getData(key: 'id').toString());
     try {
       Map<String, dynamic> map = {
         "userid": getIt<CacheHelper>().getData(key: 'id'),

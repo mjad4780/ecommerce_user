@@ -28,9 +28,11 @@ class SignUpBlocListener extends StatelessWidget {
           },
           success: () {
             context.pop();
-            context.push('/VerfyCodeScrean', arguments: {
-              'email': context.read<SignUpCubit>().emailSignUp.text
-            });
+            context.pop();
+
+            // context.push('/VerfyCodeScrean', arguments: {
+            //   'email': context.read<SignUpCubit>().emailSignUp.text
+            // });
           },
           error: (error) {
             setupErrorState(context, error);

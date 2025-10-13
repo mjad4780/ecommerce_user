@@ -1,4 +1,5 @@
 {
     "java.configuration.updateBuildConfiguration": "automatic",
-    "editor.defaultFoldingRangeProvider": null
+    "editor.defaultFoldingRangeProvider": null,
+    "cmake.sourceDirectory": "D:/Flutter Projects/Projects me/ecommerce_user/linux"
 }

@@ -1,4 +1,3 @@
-import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
 import 'package:ecommerce_user/core/networking/api_result.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -24,16 +23,14 @@ class LoginCubit extends Cubit<LoginState> {
       final response =
           await _loginRepo.login(emailController.text, passwordController.text);
       response.when(success: (loginResponse) {
-        if (loginResponse.data!.userImprove == false) {
-          context.push('/VerfyCodeScrean',
-              arguments: {'email': loginResponse.data!.userEmail});
-        } else {
+        if (loginResponse.status == "success") {
           getIt<CacheHelper>()
-              .saveData(key: 'id', value: loginResponse.data!.userId);
+              .saveData(key: 'id', value: loginResponse.data?.user?.id);
           getIt<CacheHelper>()
-              .saveData(key: 'email', value: loginResponse.data!.userEmail);
-          getIt<CacheHelper>()
-              .saveData(key: 'name', value: loginResponse.data!.userName);
+              .saveData(key: 'email', value: loginResponse.data?.user?.email);
+          getIt<CacheHelper>().saveData(
+              key: 'name',
+              value: loginResponse.data?.user?.userMetadata?.username);
 
           if (!isClosed) emit(const LoginState.success());
         }

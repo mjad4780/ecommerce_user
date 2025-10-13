@@ -34,7 +34,7 @@ class LoginScreen extends StatelessWidget {
           Align(
               alignment: AlignmentDirectional.centerEnd,
               child: GestureDetector(
-                onTap: () => context.push('/CheckEmail'),
+                // onTap: () => context.push('/CheckEmail'),
                 child: Text(
                   'Forgot Password?',
                   style: TextStyles.font13BlueRegular,

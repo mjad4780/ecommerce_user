@@ -40,7 +40,7 @@ class DataDetails {
   @JsonKey(name: 'cart_itemid')
   int? cartItemid;
   @JsonKey(name: 'cart_userid')
-  int? cartUserid;
+  String? cartUserid;
   @JsonKey(name: 'cart_orders')
   int? cartOrders;
   @JsonKey(name: 'cart_size')

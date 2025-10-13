@@ -1,7 +1,7 @@
 class Datacart {
   final int cartId;
   final int itemId;
-  final int userId;
+  final String userId;
   final String cartColor;
   final String cartSize;
   final int cartQuantity;
@@ -37,7 +37,7 @@ class Datacart {
     return Datacart(
       cartId: json['cart_id'] ?? 0,
       itemId: json['item_id'] ?? 0,
-      userId: json['cart_userid'] ?? 0,
+      userId: json['cart_userid'] ?? '',
       cartColor: json['cart_color'] ?? '',
       cartSize: json['cart_size'] ?? '',
       cartQuantity: json['cart_quantity'] ?? 0,

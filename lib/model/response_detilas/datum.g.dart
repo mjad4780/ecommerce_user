@@ -24,7 +24,7 @@ DataDetails _$DataDetailsFromJson(Map<String, dynamic> json) => DataDetails(
       countitems: (json['countitems'] as num?)?.toInt(),
       cartId: (json['cart_id'] as num?)?.toInt(),
       cartItemid: (json['cart_itemid'] as num?)?.toInt(),
-      cartUserid: (json['cart_userid'] as num?)?.toInt(),
+      cartUserid: json['cart_userid'] as String,
       cartOrders: (json['cart_orders'] as num?)?.toInt(),
       cartColor: json['cart_color'] as String?,
       cartSize: json['cart_size'] as String?,

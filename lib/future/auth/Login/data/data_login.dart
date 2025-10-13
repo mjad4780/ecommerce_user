@@ -17,7 +17,7 @@ class LoginRepo {
 
       if (response.status == "fail") {
         return ApiResult.failure(
-            ApiErrorModel(status: response.status, messege: response.messege));
+            ApiErrorModel(status: response.status, messege: response.message));
       }
 
       return ApiResult.success(response);

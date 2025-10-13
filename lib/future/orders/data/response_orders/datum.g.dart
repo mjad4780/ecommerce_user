@@ -9,7 +9,7 @@ part of 'datum.dart';
 Datum _$DatumFromJson(Map<String, dynamic> json) => Datum(
       playerId: json['player_id'] as String?,
       ordersId: (json['orders_id'] as num?)?.toInt(),
-      ordersUserid: (json['orders_userid'] as num?)?.toInt(),
+      ordersUserid: json['orders_userid'] as String,
       ordersAdress: (json['orders_adress'] as num?)?.toInt(),
       ordersType: (json['orders_type'] as num?)?.toInt(),
       ordersPricedelivery: (json['orders_pricedelivery'] as num?)?.toInt(),
@@ -23,7 +23,7 @@ Datum _$DatumFromJson(Map<String, dynamic> json) => Datum(
       ordersStatus: (json['orders_status'] as num?)?.toInt(),
       ordersDelivery: (json['orders_delivery'] as num?)?.toInt(),
       adressId: (json['adress_id'] as num?)?.toInt(),
-      adressUserid: (json['adress_userid'] as num?)?.toInt(),
+      adressUserid: json['adress_userid'] as String,
       adressCity: json['adress_city'] as String?,
       adressName: json['adress_name'] as String?,
       adressStreet: json['adress_street'] as String?,

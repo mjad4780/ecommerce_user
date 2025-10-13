@@ -19,10 +19,10 @@ class _CustemAppbarNavigationBottomState
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
-      padding: const EdgeInsets.all(3.5),
-      height: 60,
+      padding: const EdgeInsets.all(2),
+      height: 50,
       shape: const CircularNotchedRectangle(),
-      notchMargin: 8,
+      notchMargin: 7,
       surfaceTintColor: Colors.black,
       child: Row(
         children: [

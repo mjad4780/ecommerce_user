@@ -1,3 +1,5 @@
+import 'package:ecommerce_user/core/helpers/inherted_data.dart';
+import 'package:ecommerce_user/future/home/data/models/response_home/response_home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
@@ -9,6 +11,13 @@ extension Navigation on BuildContext {
   }
 
   String get currentRoute => GoRouterState.of(this).uri.path;
+
+  // extension  inherited data class
+  ResponseHome? get provider => DataProvider.of<ResponseHome>(this);
+
+  T? off<T>(BuildContext context) {
+    return DataProvider.of<T>(context);
+  }
 
   // Future<dynamic> pushReplacementNamed(String routeName, {Object? arguments}) {
   //   return Navigator.of(this)

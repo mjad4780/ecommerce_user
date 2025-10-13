@@ -19,14 +19,12 @@ class CartListSection extends StatelessWidget {
     return BlocConsumer<CartCubit, CartState>(
         listener: (context, state) {},
         builder: (context, state) {
-          return SizedBox(
-              height: MediaQuery.of(context).size.height * 0.78,
-              child: ListView.builder(
-                  itemCount: cartProducts.datacart.length,
-                  itemBuilder: (context, index) => CustomProductCart(
-                        cartItem: cartProducts.datacart[index],
-                        index: index,
-                      )));
+          return ListView.builder(
+              itemCount: cartProducts.datacart.length,
+              itemBuilder: (context, index) => CustomProductCart(
+                    cartItem: cartProducts.datacart[index],
+                    index: index,
+                  ));
         });
   }
 }

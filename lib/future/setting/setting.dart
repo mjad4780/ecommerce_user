@@ -1,6 +1,7 @@
 import 'package:ecommerce_user/core/extensions/extention_navigator.dart';
 import 'package:ecommerce_user/future/orders/ui/my_order_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../../core/animation/open_container_wrapper.dart';
 import '../../core/helpers/cache_helper.dart';
@@ -75,8 +76,11 @@ class Setting extends StatelessWidget {
                   borderRadius: BorderRadius.circular(30)),
             ),
             onPressed: () async {
+              await getIt<SupabaseClient>().auth.signOut();
               getIt<CacheHelper>().clearData();
-              context.pushpushReplacement('/OnbordingScreen');
+              if (context.mounted) {
+                context.pushpushReplacement('/OnbordingScreen');
+              }
             },
             child: const Text('Logout', style: TextStyle(fontSize: 18)),
           ),

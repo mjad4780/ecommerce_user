@@ -19,7 +19,7 @@ class RepasswordBlocListener extends StatelessWidget {
           current is Errorrepassword,
       listener: (context, state) {
         state.whenOrNull(
-          loadingCheck: () {
+          loadingrepassword: () {
             showDialog(
               context: context,
               builder: (context) => const Center(
@@ -29,13 +29,13 @@ class RepasswordBlocListener extends StatelessWidget {
               ),
             );
           },
-          successCheck: () {
+          successrepassword: () {
             context.pop();
             context.pushReplacementNamed(
               '/Login',
             );
           },
-          errorCheck: (error) {
+          errorrepassword: (error) {
             setupErrorState(context, error);
           },
         );

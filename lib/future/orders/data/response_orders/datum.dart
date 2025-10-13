@@ -8,7 +8,7 @@ class Datum {
   @JsonKey(name: 'orders_id')
   final int? ordersId;
   @JsonKey(name: 'orders_userid')
-  final int? ordersUserid;
+  final String? ordersUserid;
   @JsonKey(name: 'orders_adress')
   final int? ordersAdress;
   @JsonKey(name: 'orders_type')
@@ -38,7 +38,7 @@ class Datum {
   @JsonKey(name: 'adress_id')
   final int? adressId;
   @JsonKey(name: 'adress_userid')
-  final int? adressUserid;
+  final String? adressUserid;
   @JsonKey(name: 'adress_city')
   final String? adressCity;
   @JsonKey(name: 'adress_name')

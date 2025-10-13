@@ -8,7 +8,7 @@ class AdressData {
   @JsonKey(name: 'adress_id')
   final int? adressId;
   @JsonKey(name: 'adress_userid')
-  final int? adressUserid;
+  final String? adressUserid;
   @JsonKey(name: 'adress_city')
   final String? adressCity;
   @JsonKey(name: 'adress_name')

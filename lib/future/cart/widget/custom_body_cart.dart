@@ -20,100 +20,97 @@ class CustomBodyCart extends StatelessWidget {
   Widget build(BuildContext context) {
     return responseCart.datacart.isEmpty
         ? const EmptyCart()
-        : SingleChildScrollView(
-            child: Column(
-              children: [
-                verticalSpace(30),
-                Row(
-                  children: [
-                    IconButton(
-                        onPressed: () => context.pop(),
-                        icon: const Icon(Icons.arrow_back_ios,
-                            color: AppColor.darkOrange)),
-                    const Spacer(),
-                    const Center(
-                      child: Text(
-                        "My Cart    ",
-                        style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: AppColor.darkOrange),
-                      ),
+        : Column(
+            children: [
+              verticalSpace(30),
+              Row(
+                children: [
+                  IconButton(
+                      onPressed: () => context.pop(),
+                      icon: const Icon(Icons.arrow_back_ios,
+                          color: AppColor.darkOrange)),
+                  const Spacer(),
+                  const Center(
+                    child: Text(
+                      "My Cart    ",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: AppColor.darkOrange),
                     ),
-                    const Spacer(),
+                  ),
+                  const Spacer(),
+                ],
+              ),
+              // ? total price section
+              Expanded(child: CartListSection(cartProducts: responseCart)),
+              Container(
+                margin: const EdgeInsets.only(bottom: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text(
+                      "Total",
+                      style:
+                          TextStyle(fontSize: 22, fontWeight: FontWeight.w400),
+                    ),
+                    AnimatedSwitcherWrapper(
+                      child: Text(
+                        "\$${responseCart.totalPriceOffers}",
+                        style: const TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.w900,
+                          color: Color(0xFFEC6813),
+                        ),
+                      ),
+                    )
                   ],
                 ),
-                // ? total price section
-                CartListSection(cartProducts: responseCart),
+              ),
 
-                Container(
-                  margin: const EdgeInsets.only(bottom: 15),
-                  padding: const EdgeInsets.symmetric(horizontal: 30),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Text(
-                        "Total",
-                        style: TextStyle(
-                            fontSize: 22, fontWeight: FontWeight.w400),
+              BlocConsumer<CartCubit, CartState>(
+                listener: (context, state) {},
+                builder: (context, state) => SizedBox(
+                  width: double.infinity,
+                  child: Padding(
+                    padding:
+                        const EdgeInsets.only(left: 30, right: 30, bottom: 10),
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        padding: const EdgeInsets.all(20),
+                        backgroundColor: responseCart.datacart == []
+                            ? Colors.white
+                            : AppColor.primaryColor,
                       ),
-                      AnimatedSwitcherWrapper(
-                        child: Text(
-                          "\$${responseCart.totalPriceOffers}",
-                          style: const TextStyle(
-                            fontSize: 25,
-                            fontWeight: FontWeight.w900,
-                            color: Color(0xFFEC6813),
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-
-                BlocConsumer<CartCubit, CartState>(
-                  listener: (context, state) {},
-                  builder: (context, state) => SizedBox(
-                    width: double.infinity,
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                          left: 30, right: 30, bottom: 53),
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          padding: const EdgeInsets.all(20),
-                          backgroundColor: responseCart.datacart == []
-                              ? Colors.white
-                              : AppColor.primaryColor,
-                        ),
-                        onPressed: responseCart.datacart == []
-                            ? null
-                            : context.read<CartCubit>().isUpdating
-                                ? () {
-                                    context
-                                        .read<CartCubit>()
-                                        .updateQuantity(context);
-                                  }
-                                : () {
-                                    showCustomBottomSheet(
-                                        context,
-                                        responseCart.totalPrice.toInt(),
-                                        responseCart.totalPriceOffers.toInt());
-                                  },
-                        child: Text(
-                            context.read<CartCubit>().isUpdating
-                                ? "Update Cart"
-                                : "Buy Now",
-                            style: TextStyle(
-                                color: responseCart.datacart == []
-                                    ? AppColor.primaryColor
-                                    : Colors.white)),
-                      ),
+                      onPressed: responseCart.datacart == []
+                          ? null
+                          : context.read<CartCubit>().isUpdating
+                              ? () {
+                                  context
+                                      .read<CartCubit>()
+                                      .updateQuantity(context);
+                                }
+                              : () {
+                                  showCustomBottomSheet(
+                                      context,
+                                      responseCart.totalPrice.toInt(),
+                                      responseCart.totalPriceOffers.toInt());
+                                },
+                      child: Text(
+                          context.read<CartCubit>().isUpdating
+                              ? "Update Cart"
+                              : "Buy Now",
+                          style: TextStyle(
+                              color: responseCart.datacart == []
+                                  ? AppColor.primaryColor
+                                  : Colors.white)),
                     ),
                   ),
                 ),
-                const UpdateCartBlocListener()
-              ],
-            ),
+              ),
+              const UpdateCartBlocListener()
+            ],
           );
   }
 }

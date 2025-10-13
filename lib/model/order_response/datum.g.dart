@@ -8,7 +8,7 @@ part of 'datum.dart';
 
 Datum _$DatumFromJson(Map<String, dynamic> json) => Datum(
       ordersId: (json['orders_id'] as num?)?.toInt(),
-      ordersUserid: (json['orders_userid'] as num?)?.toInt(),
+      ordersUserid: json['orders_userid'] as String,
       ordersAdress: (json['orders_adress'] as num?)?.toInt(),
       ordersType: (json['orders_type'] as num?)?.toInt(),
       ordersPricedelivery: (json['orders_pricedelivery'] as num?)?.toInt(),

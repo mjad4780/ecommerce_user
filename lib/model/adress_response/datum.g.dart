@@ -8,7 +8,7 @@ part of 'datum.dart';
 
 AdressData _$AdressDataFromJson(Map<String, dynamic> json) => AdressData(
       adressId: (json['adress_id'] as num?)?.toInt(),
-      adressUserid: (json['adress_userid'] as num?)?.toInt(),
+      adressUserid: json['adress_userid'] as String,
       adressCity: json['adress_city'] as String?,
       adressName: json['adress_name'] as String?,
       adressStreet: json['adress_street'] as String?,

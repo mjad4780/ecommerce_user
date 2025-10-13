@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dio/dio.dart';
 import 'package:ecommerce_user/future/Book/data/repo/repo.dart';
-import 'package:ecommerce_user/future/archive/logic/cubit/archive_cubit.dart';
 import 'package:ecommerce_user/future/auth/sign_up/logic/cubit/sign_up_cubit.dart';
 import 'package:ecommerce_user/future/auth/verfyCode/data/data_verfycode.dart';
 import 'package:ecommerce_user/future/cart/logic/cubit/cart_cubit.dart';
@@ -20,12 +19,11 @@ import '../../core/networking/dio_factory.dart';
 import '../../future/Book/logic/cubit/get_book_cubit.dart';
 import '../../future/adress/data/repo.dart';
 import '../../future/adress/logic/cubit/adress_cubit.dart';
-import '../../future/archive/data/repo.dart';
 import '../../future/auth/Login/data/data_login.dart';
 import '../../future/auth/Login/logic/cubit/login_cubit.dart';
 import '../../future/auth/forgetpassword/data/for_get_password.dart';
 import '../../future/auth/forgetpassword/logic/cubit/forget_password_cubit.dart';
-import '../../future/auth/sign_up/data/data_sigin_up.dart';
+import '../../future/auth/sign_up/data/data_sigin_up_repo.dart';
 import '../../future/auth/verfyCode/logic/cubit/verfy_code_cubit.dart';
 import '../../future/cart/data/repo.dart';
 import '../../future/chat/cubit/chat_cubit.dart';
@@ -39,7 +37,6 @@ import '../../future/offers/data/repo.dart';
 import '../../future/orders/data/repo.dart';
 import '../../future/orders/logic/cubit/orders_cubit.dart';
 import '../helpers/cache_helper.dart';
-import '../service/supabase/supabase_service.dart';
 
 final getIt = GetIt.instance;
 void setupServise() {
@@ -48,8 +45,6 @@ void setupServise() {
 
 //service supabase
   getIt.registerLazySingleton<SupabaseClient>(() => Supabase.instance.client);
-  getIt.registerLazySingleton<SupabaseService>(
-      () => SupabaseService(getIt<SupabaseClient>()));
 
   getIt.registerLazySingleton<ApiService>(() => ApiService(dio));
 
@@ -74,10 +69,6 @@ void setupServise() {
   // Adress
   getIt.registerLazySingleton<AdressRepo>(() => AdressRepo(getIt()));
   getIt.registerFactory<AdressCubit>(() => AdressCubit(getIt()));
-
-  // OrderArchive
-  getIt.registerLazySingleton<OrderArchive>(() => OrderArchive(getIt()));
-  getIt.registerFactory<ArchiveCubit>(() => ArchiveCubit(getIt()));
 
   // Cart
 
