@@ -1,15 +1,15 @@
 import 'package:dio/dio.dart';
-import 'package:ecommerce_user/future/check_cart_order/data/model/payment/payment.dart';
-import 'package:ecommerce_user/future/home/data/models/response_home/response_home.dart';
+import 'package:ecommerce_user/features/check_cart_order/data/model/payment/payment.dart';
+import 'package:ecommerce_user/features/home/data/models/response_home/response_home.dart';
 import 'package:ecommerce_user/model/pending_response/pending_response.dart';
 
 import 'package:retrofit/retrofit.dart';
 
-import '../../future/cart/data/response_cart.dart';
-import '../../future/check_cart_order/data/model/elphon/elphon.dart';
-import '../../future/check_cart_order/data/model/payment_body_tojson.dart';
-import '../../future/home/data/models/response_notification/response_notification.dart';
-import '../../future/orders/data/response_orders/response_orders.dart';
+import '../../features/cart/data/response_cart.dart';
+import '../../features/check_cart_order/data/model/elphon/elphon.dart';
+import '../../features/check_cart_order/data/model/payment_body_tojson.dart';
+import '../../features/home/data/models/response_notification/response_notification.dart';
+import '../../features/orders/data/response_orders/response_orders.dart';
 import '../../key.dart';
 import '../../model/adress_response/adress_response.dart';
 import '../../model/coupon_response/coupon_response.dart';

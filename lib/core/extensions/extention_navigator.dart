@@ -1,5 +1,5 @@
 import 'package:ecommerce_user/core/helpers/inherted_data.dart';
-import 'package:ecommerce_user/future/home/data/models/response_home/response_home.dart';
+import 'package:ecommerce_user/features/home/data/models/response_home/response_home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';

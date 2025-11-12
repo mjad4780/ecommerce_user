@@ -1,19 +1,19 @@
-import 'package:ecommerce_user/future/auth/forgetpassword/check_email.dart';
-import 'package:ecommerce_user/future/home/search_screen.dart';
+import 'package:ecommerce_user/features/auth/forgetpassword/check_email.dart';
+import 'package:ecommerce_user/features/home/search_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../../future/main/main_screan.dart';
-import '../../future/adress/adress.dart';
+import '../../features/main/main_screan.dart';
+import '../../features/adress/adress.dart';
 
-import '../../future/auth/Login/login_screen.dart';
-import '../../future/auth/forgetpassword/repassword.dart';
-import '../../future/auth/sign_up/SignUp.dart';
-import '../../future/auth/verfyCode/verfy_code.dart';
-import '../../future/cart/cart.dart';
+import '../../features/auth/Login/login_screen.dart';
+import '../../features/auth/forgetpassword/repassword.dart';
+import '../../features/auth/sign_up/SignUp.dart';
+import '../../features/auth/verfyCode/verfy_code.dart';
+import '../../features/cart/cart.dart';
 
-import '../../future/chat/ui/pages/screen_chat.dart';
-import '../../future/onbording/onbordingScreen.dart';
-import '../../future/orders/widget/track_orders.dart';
+import '../../features/chat/ui/pages/screen_chat.dart';
+import '../../features/onbording/onbordingScreen.dart';
+import '../../features/orders/widget/track_orders.dart';
 import '../helpers/cache_helper.dart';
 import 'animation_page.dart';
 import '../get_it/get_it.dart';

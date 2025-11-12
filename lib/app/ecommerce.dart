@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../core/Router/route.dart';
 import '../core/helpers/connectivity_controller.dart';
 import '../core/theme/app_theme.dart';
-import '../future/home/widget/no_network_screen.dart';
+import '../features/home/widget/no_network_screen.dart';
 
 class Ecommerce extends StatelessWidget {
   const Ecommerce({super.key});
