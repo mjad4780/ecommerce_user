@@ -11,6 +11,7 @@ import '../../../core/widgets/carousel_slider.dart';
 import '../../../core/widgets/horizondal_list.dart';
 import '../../../core/widgets/product_rating_section.dart';
 import '../../item_categories/widget/page_wrapper.dart';
+import 'add_cart_buttom.dart';
 
 class ProductDetailScreen extends StatelessWidget {
   final Item product;
@@ -144,27 +145,10 @@ class ProductDetailScreen extends StatelessWidget {
                         Text("${product.itemDecs}"),
                         const SizedBox(height: 40),
                         //? add to cart button
-                        Builder(builder: (context) {
-                          return SizedBox(
-                            width: double.infinity,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                padding: const EdgeInsets.all(20),
-                                backgroundColor: AppColor.primaryColor,
-                              ),
-                              onPressed: product.itemCount != 0
-                                  ? () async {
-                                      await context
-                                          .read<CartCubit>()
-                                          .emitAddCart(product.itemId!, context,
-                                              '/ProductDetailScreen');
-                                    }
-                                  : null,
-                              child: const Text("Add to cart",
-                                  style: TextStyle(color: Colors.white)),
-                            ),
-                          );
-                        })
+                        AddToCartButton(
+                          itemCount: product.itemCount!,
+                          itemId: product.itemId!,
+                        )
                       ],
                     ),
                   )

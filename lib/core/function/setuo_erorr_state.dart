@@ -1,10 +1,12 @@
 import 'package:ecommerce_user/core/theme/styles.dart';
 import 'package:flutter/material.dart';
 
-void setupErrorState(BuildContext context, String error) {
+void setupErrorState(BuildContext context, String error, [bool canPop = true]) {
   // يقفل أي Dialog مفتوح قبل
   if (Navigator.of(context).canPop()) {
-    Navigator.of(context).pop();
+    if (canPop) {
+      Navigator.of(context).pop();
+    }
   }
 
   showDialog(
