@@ -5,6 +5,3 @@ formDataPost(Map<String, dynamic> map) {
   return dd;
 }
 
-
-// Map<String, dynamic> map = {
-//       "id": getIt<CacheHelper>().getData(key: 'id'),
